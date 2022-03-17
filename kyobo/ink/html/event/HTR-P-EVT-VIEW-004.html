@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<title>이벤트 기획전</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+</head>
+
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#f4f4f4;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:87px;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">
+        <section class="breadcrumb_wrap">
+			<div class="breadcrumb_inner">
+				<ol class="breadcrumb_list">
+					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">CD/LP</a>
+						<!-- DESC : 서브메뉴 갯수에 따라 col이 나눠지는 경우, div.sub_depth_box 영역에 multiclass 부여 필요
+							1단 : default(multi class 없음) / 2단 : col2 / 3단 : col3
+							-->
+						<div class="sub_depth_grid">
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item active"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+		
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap">
+            <!-- 상단 메뉴-->  
+            <div class="ht_cont"> 
+                <div class="contents_inner">
+                    <h1 class="ht_tit_big03">당첨 결과 보기</h1>
+
+
+                    <!--게시글 타이틀-->
+                    <article class="evt_description_title">
+                        <div class="category_area">음반/영상</div>
+                        <div class="list_title_area">빅톤 1ST CONCERT [NEW WORLD]DVD 발매기념 상영회 초대 이벤트 진행 안내 </div>
+                        <div class="list_date_area">2021.11.08</div>
+                    </article>
+                    <!--//게시글 타이틀-->
+
+
+                    <!--게시글 본문-->
+                    <div class="evt_description_content">
+                        안녕하세요 고객님, 핫트랙스입니다.<br><br>
+                        지난 2020년 진행 예정이었으나 코로나19 상황 악화로 인해 연기 되었던
+                        빅톤 1ST CONCERT [NEW WORLD] DVD 발매 기념 상영회 진행 안내 드립니다.<br><br>
+                        당첨자분들께서는 아래 내용 확인 후 참여에 어려움 없으시길 바랍니다.<br><br>
+                        본 행사는 아티스트 및 참여하시는 모든 분들의 코로나19 확산 방지를 위해 사회적 거리두기 및 방역수칙을 철저하게 준수하여 진행 예정이오니 사전 안내드리는 주의 사항 및 현장 진행 스태프의 안내에 협조 부탁드리겠습니다.<br><br>            
+                        [이벤트 진행 일시 및 장소]<br>  
+                        1) 진행 일시 : 2021년 12월 11일 (토) 오후 1시 ~<br>  
+                        * 본 행사는 아티스트 무대 인사 + DVD 상영시간 포함 약 2시간 30분 정도 진행 예정입니다.<br>  
+                        * 아티스트 무대 인사는 DVD 상영 전 오후 1시부터 약 20분간 진행됩니다.<br><br>  
+                        2) 진행 장소 : 당첨자 별도 안내<br>  
+                        ※ 코로나 19 확산 예방을 위해 문진표 작성과 발열 체크, 손 소독제 사용 및 마스크 착용 후 입장 가능합니다.<br>  
+                        ※ 코로나 19 예방을 위해 이벤트 참여 시 KF94 마스크를 꼭 착용 후 입장해 주시기 바랍니다. 미 착용 시 입장이 불가할 수 있습니다.<br>  
+                        ※ 이벤트 진행 방법은 사회적 거리두기 단계에 따라 변동될 수 있습니다.<br><br>  
+                        [이벤트 참여 기준 안내]<br>
+                        ※ 본 이벤트는 코로나19 백신 접종 완료자 한정으로 참여하실 수 있습니다. (2차 접종 14일 이후 기준, 1차만 접종한 경우 해당되지 않음) 이벤트 당일 현장에서 모바일 인증 및 예방 접종 증명서로 확인 예정이며, 
+                        접종 예외자의 경우PCR음성확인서(24시간 유효)를 지참하셔야 이벤트 참여가 가능합니다.<br><br>
+                        당첨자분들께서는 아래 내용 확인 후 참여에 어려움 없으시길 바랍니다.<br><br>
+                        본 행사는 아티스트 및 참여하시는 모든 분들의 코로나19 확산 방지를 위해 사회적 거리두기 및 방역수칙을 철저하게 준수하여 진행 예정이오니 사전 안내드리는 주의 사항 및 현장 진행 스태프의 안내에 협조 부탁드리겠습니다.<br><br>
+                        [이벤트 관련 문의]<br>
+                        - 이벤트 관련 사항은 핫트랙스 온라인몰 1661-1112(AM 9시~PM 6시까지/평일)로 문의하여 주시기 바랍니다.<br><br>
+                        사전 기대평 이벤트 당첨자<br>
+                        '스타벅스 아메리카노 기프티콘'!<br>
+                        (*핫트랙스 ID)<br><br>
+                        <hr class="evt_hr">
+                        triple10** 님<br>
+                        ryzh9** 님<br>
+                        daze07** 님<br>
+                        kyj82** 님<br>
+                        soranosi** 님<br><br>
+        
+                        축하드립니다! <br>
+                        핫트랙스 몰에 가입하신 휴대전화번호로 약속한 선물 보내드리도록 하겠습니다 :D<br><br>
+        
+                        * 사은품 발급을 위한 개인정보 수신 동의가 필요합니다.<br>
+                        <hr class="evt_hr">
+                    </div>
+                     <!--//게시글 본문-->
+
+
+                    <!--버튼-->
+                    <div class="evt_winner_btn_area">
+                        <button class="btn_lg btn_primary">내 당첨 결과 확인</button>
+                        <button class="btn_lg btn_line_gray">목록</button>
+                    </div>
+                    <!--//버튼-->
+                   
+                </div>
+            
+            </div>  
+            <!-- //상단 메뉴-->  
+
+
+        </section>
+        <!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+
+
+	<!-- Footer -->
+	<footer class="footer_wrapper" style="height:205px;background-color:#f7f7f7;color:#000;font-size:20px;font-weight:700;line-height:205px;text-align:center;">
+		Footer
+	</footer>
+	<!-- //Footer -->
+
+
+	<!-- 윙배너 -->
+	<section class="fly_menu_wrapper sps">
+	</section>
+	<!-- // 윙배너 -->
+
+
+	<!-- 탑버튼 -->
+	<div class="floating_wrapper">
+	</div>
+	<!-- //탑버튼 -->
+</div>
+<!-- // wrapper -->
+</body>
+</html>

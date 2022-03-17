@@ -1,0 +1,394 @@
+/*=============================================== HTR-P-EVT-LIST-000.html =============================================*/
+.top_evt_area {
+    margin-top:60px;
+    padding-bottom:0;
+
+}
+//상단 메뉴
+.evt_menu{
+    position:relative;
+    z-index:3;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-bottom:15px;
+    .left_txt_sum {
+        flex-shrink: 0;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+        color:#292929;
+    }
+    a:last-of-type:after {
+        display: none;
+    }
+}
+//소팅메뉴
+.sort_tab {
+    display: flex;
+    margin-bottom: 20px;
+    padding:0;
+    overflow: hidden;
+    justify-content: flex-end;
+    margin:0;
+    & > a{
+        position: relative;
+        padding:0 9px;
+        font-size: 14px;
+        color:#595959;
+        &:last-of-type{
+            padding-right:0;
+        }
+        &:after {
+            content: '';
+            display: block;
+            background-color: rgb(213, 213, 213);
+            width:1px;
+            height:6px;
+            position: absolute;
+            right: -1px;
+            top:5px;
+        }
+    }
+    .active {
+        font-weight: 500;
+        color:#000;
+    }
+}
+
+//마감임박, 반응최고 영역
+.dead_line_wrap,
+.best_react_wrap {
+    position:relative;
+    background-color: #FFF4F1;
+    padding-top:60px;
+    margin-bottom:60px;
+    .heart_emoji {
+        width:35px;
+        height:35px;
+        display: inline-block;
+        margin-left:5px;
+        margin-bottom:-8px;
+        background:url(../images/guide/heart_emoji.svg) no-repeat center/31px;
+    }
+    .deadline_bubble {
+        width:0;
+        height:0;
+        padding:0;
+        font-size: 0;
+        background-color: none;
+        border:none;
+        position: absolute;
+        top:-47px;
+        right:135px;
+        z-index:2;
+        color:rgba(0,0,0,0);
+        transition: width .2s, height .1s;
+        &:after,
+        &:before {
+            width:0;
+            height:0;
+            border:none;
+        }
+        &.highlight {
+        width:341px;
+        height:auto;
+        padding:14px 34px;
+        font-size: 16px;
+        background-color: #D4FF1A;
+        border: 3px solid #000;
+        border-radius:40px;
+        color:rgba(0,0,0,1);
+        .txt {
+            font-size: 16px;
+            height:48px;
+        }
+        &:after {
+            content: '';
+            border-color: #000 transparent;
+            border-style: solid;
+            border-width: 0 10px 10px 5px;
+            display: block;
+            position: absolute;
+            top:50%;
+            margin-top:-6px;
+            right: -12px;
+            width: 0;
+            z-index: 0;
+            transform: rotate(-25deg);
+            }
+        &:before {
+            content:"";
+            position: absolute;
+            border-top: 9px solid transparent;
+            border-left: 0 solid transparent;
+            border-right: 12px solid #D4FF1A;
+            border-bottom: 9px solid transparent;
+            z-index: 5;
+            top:50%;
+            margin-top:-9px;
+            right: -2px;
+            transform: rotate( 60deg);
+        }
+        }
+        .txt {
+            width:100%;
+            height:0;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: -0.12px;
+            font-size: 0;
+            overflow: hidden;
+        }
+    }
+    .deadline_character_area {
+        display: block;
+        position: absolute;	
+        width:100%; 
+        top:0;
+        left:0;
+        right:0;
+        z-index: 1;
+        .deadline_character {
+            position: absolute;
+            width:96px;
+            height:110px;
+            right:35px;
+            top:-33px;
+            img{
+                width:100%;
+            }
+        }
+    }
+    .evt_swiper  {
+        margin: 0 -18px;
+        overflow: hidden;
+    }
+    .swiper-wrapper.evt_list {
+        flex-wrap: nowrap;
+        &>li {
+            margin:0 18px;
+        }
+    }
+}
+.best_react_wrap {
+    background-color: #E1F7E5;
+}
+//오늘만 특가
+.hot_deal_wrap {   
+    .hotdeal_shine {
+        width:35px;
+        height:35px;
+        display: inline-block;
+        margin-left:5px;
+        margin-bottom:-8px;   
+        background:url(../images/guide/hotdeal_shine.svg) no-repeat center/31px;
+    }
+    .timer_area {
+        position:absolute;
+        right:0;
+        top:-5px;
+        z-index: 1;
+        display: inline-block;
+        padding:14px 9px 9px 48px;
+        background-color:  #D4FF1A;
+        border-radius: 35px;
+        &:before {
+            content:"";
+            width:62px;
+            height:65px;
+            position:absolute;
+            left:7px;
+            top:-23px;
+            z-index: 2;
+            background:url(../images/guide/timer_bomb.svg) no-repeat center/61px;
+        }
+        .timer {
+            line-height:23px; 
+            font-size: 20px;
+            font-weight: 700;
+            font-family:'Gmarket Sans'; 
+        }
+    }
+}
+    
+//이벤트 목록 없음
+.no_evt_list_wrap {
+    padding:200px 0;
+    position:relative;
+    background:url(../images/guide/no_search_data_icon.svg) no-repeat center 40% /60px;
+    .txt {
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        font-size: 16px;
+        color:#767676;
+        margin-top:25px;
+    }
+}  
+
+//이벤트 당첨자 발표
+.evt_winner_list {
+    border-top:1px solid #000; 
+    .evt_winner_item {
+        padding:20px 0;
+        overflow: hidden;
+        border-bottom:1px solid #EAEAEA;
+    }
+    .list_num {
+        width:30px;
+        float:left;
+        margin-right:10px;
+        line-height:19px;
+        font-size: 13px;
+        text-align: center; 
+    }
+    .list_cate {
+        width:100px;
+        float:left;
+        margin-right:10px;
+        line-height:19px;
+        font-size: 13px; 
+        text-align: center;
+        color:#767676;
+    }
+    .title {
+        float:left;
+        line-height:19px;
+        &.status_new {
+            position: relative;
+            &:before {
+                content:"";
+                position: absolute;
+                width:20px;
+                height:20px;
+                right:  -25px;
+                top:-1px;
+                background:url(../images/guide/new_post.svg) no-repeat center center /18px;;
+            }
+        } 
+    }
+    .date {
+        width:65px;
+        float:right;
+        line-height:19px;
+        font-size: 13px;
+        text-align: center;
+        letter-spacing: -0.01em; 
+    }
+}
+//당첨 결과 보기
+.evt_description_title {
+	padding:20px 4px;
+    border-top:1px solid #000;
+	border-bottom:1px solid #eaeaea;
+	.category_area {
+		line-height:18px;
+        letter-spacing: -0.01em;
+		color:#767676;
+        margin-bottom:10px;
+	}
+	.list_title_area {
+		font-weight:700;
+		line-height:40px;
+        font-size: 24px;
+		letter-spacing: -0.01em;
+        margin-bottom:10px;
+	}
+	.list_date_area {
+        line-height: 19px;
+		font-size: 14px;
+		color:#767676;
+        letter-spacing: -0.01em;
+	}
+}
+.evt_description_content {
+	  padding:40px 4px 25px 4px;
+      border-bottom:1px solid #eaeaea;
+    .category_area{
+	  line-height:18px;
+    }
+    .list_title_area {
+	  white-space: normal;
+	  font-weight: 700;;
+     }
+    .list_date_area {
+		line-height:19px;
+     }
+	.evt_hr {
+		display: block;
+		width:100%;
+		height:1px;
+		border:none;
+		border-top:1px dashed #000;
+        margin:15px 0;
+	}
+}
+.evt_winner_btn_area {
+    margin-top:30px;
+    text-align: center;
+}
+/*================================ 레이어 팝업 =============================*/
+.dialog_wrapper .ui-dialog .dialog_wrap  {
+    .dialog_header.evt_title_header{
+        padding-bottom:18px;
+    }
+    .dialog_contents.evt_pop_cotent{
+        color:#595959;
+        line-height:22px;
+        letter-spacing:-0.14px;
+        text-align: center;
+        margin:0;  
+        padding:32px 20px;    
+    }
+    .dialog_contents.evt_cotent{
+        margin:0;
+        padding:48px 0 32px 0;
+        .evt_pop_img{
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            img{
+                max-width:33%;
+            }
+        }
+        .sub_txt{
+            width:100%;
+            margin-top:12px;
+            line-height:19px;
+            text-align: center;
+            color:#595959;
+        }
+        .main_msg{
+            font-size: 20px;
+            font-weight:700;
+            line-height:32px;  
+            text-align: center;
+            letter-spacing: -0.2px;
+        }
+    }
+    .dialog_contents.evt_full_img{
+        position:relative;
+        min-width:335px;
+        height:0;
+        margin:0;
+        padding-top:203px;
+        img{
+            position:absolute;
+            width:100%;
+            top:0;
+            left:50%;
+            right:0;
+            transform: translateX(-50%);
+        }
+    }
+    .dialog_footer.evt_pop_footer{
+        margin:0;
+        &>.secondary{
+            background-color: #d53020;
+        }
+    
+    }
+}

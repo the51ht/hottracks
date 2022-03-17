@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+<meta name="Author" content="SEO 기획 정의 내용 반영" />
+<meta name="keywords" content="SEO 기획 정의 내용 반영" />
+<meta name="description" content="SEO 기획 정의 내용 반영" />
+<meta name="subject" content="SEO 기획 정의 내용 반영" />
+<!-- DESC : 성인컨텐츠인 경우 추가하는 meta tag -->
+<!--<meta name="rating" content="adult" />-->
+
+<meta name="Robots" content="noindex, nofollow" />
+<meta name="msapplication-TileColor" content="#000000">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/guide/sns.jpg">
+<link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
+<title>선물추천</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/swiper-7.2.0/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css" />
+<!-- // Plug-In css -->
+
+<!-- font css -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
+<!-- // font css -->
+
+<!-- ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+<link rel="stylesheet" href="../../css/ht_css_mok.css">
+<link rel="stylesheet" href="../../css/ht_template_mok.css">
+<!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script src="../../vendors/lib/swiper-7.2.0/js/swiper-bundle.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/vanillajs-scrollspy/vanillajs-scrollspy.min.js"></script>
+<!-- // Plug-In javascript -->
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
+<script src="../../js/front_bak.js"></script>
+<script src="../../js/mok.ui.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
+</head>
+
+<body>
+ <!-- SkipNav -->
+ <div class="skip_nav_wrap">
+    <a href="#headerWrapper">메뉴 바로가기</a>
+    <a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //SkipNav -->
+
+<!-- wrapper -->
+<div class="ht_ wrapper">
+    <!-- header -->
+    <header id="headerWrapper" class="ht_ header_wrapper">
+        <div class="header_left">
+            <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
+            <a href="../main/HTR-M-WEL-MAIN-000.html" class="btn_header_home"><span class="hidden">홈으로</span></a>
+        </div>
+        <div class="header_center">
+            <div class="page_title prod_detail"></div>
+        </div>
+        <div class="header_right">
+            <!-- DESC : 상품정보 부터 검색버튼 비활성화 -->
+            <a href="#" class="btn_header_search"><span class="hidden">검색</span></a>
+            <a href="#" class="btn_header_cart">
+                <span class="hidden">장바구니</span>
+                <!-- DESC :: 0개인경우 count 영역 미노출 / 최대 99 -->
+                <span class="count">99</span>
+            </a>
+        </div>
+    </header>
+    <!-- //header -->
+
+
+    <!-- 선물추천 컨텐츠 -->
+    <div class="wel_main_wrap">
+        <h1 class="mc_tit02 pad">선물추천</h1>
+        <!-- ctg_topMenu -->
+        <div class="ctg_topMenu cus_sv_tab">
+            <div class="inner_wrap">
+                <a href="#gif_sv01" class="active">인기추천</a>
+                <a href="#gif_sv02">핫트추천</a>
+                <a href="#gif_sv03">선물고민</a>
+            </div>
+            <a href="#" class="btn_line_round"><span>선물내역</span></a>
+        </div>
+        <!-- //ctg_topMenu -->
+
+
+<script src="../../js/jquery.ui.touch-punch.min.js"></script><!-- 모바일 슬라이드 : 해당페이지에만 사용 -->
+<script>
+/* 탭선택 */
+$(function() {
+    if(!$('.gft_main_tab').length) return;
+    $('.gft_main_tab li').each(function (index, element) {
+        var $tar = $(this);
+        $tar.addClass('idx_tab_' + index);
+        var currentNum = 1;
+
+        $('.idx_tab_' + index + ' input').click(function(){ 
+            $(this).closest('li').find('p').removeClass('on');
+            $(this).closest('li').find('input').prop('checked', false);
+            currentNum++;
+
+            if(currentNum > $('.idx_tab_' + index + ' p').length){
+                currentNum = 1;
+            }
+            $(this).closest('li').find('p').eq(currentNum - 1).addClass('on');
+            $(this).closest('li').find('p').eq(currentNum - 1).find('input').prop('checked', true);
+        });
+	});
+});
+
+/* 슬라이드 선택 */
+$(function() {
+    $('.gft_main_slider').slider({
+        range:'max',
+        min: 1,
+        max: 4,
+        value: 1,
+        slide: function(event, ui) {
+
+            if(ui.value == 1) {
+                len = 4
+            }else if(ui.value == 2){
+                len = 3
+            }else if(ui.value == 3){
+                len = 2
+            }else if(ui.value == 4){
+                len = 1
+            }
+
+            $('.gft_slide_view').removeClass('len4').removeClass('len3').removeClass('len2').removeClass('len1');
+            setTimeout(function(){
+                $('.gft_slide_view').addClass('len' +  len);
+            }, 50);
+            console.log(len);
+        }
+    });
+    console.log($('.gft_main_slider').slider('value'));
+    $('.gft_slide_view').addClass('len4');
+
+/*
+# 4행씩 노출
+1단 : 4개 -  1*4
+2단 : 8개    2*4
+3단 : 12개   3* 4
+4단 : 16개    4*4
+
+최소 노출  갯수 24개
+빈공간 없이 노출 12배수!
+(24 / 36/ 48/ 60 ..........)
+
+*/
+});
+</script>
+
+        <!-- 선물추천 목록 : gft_main -->
+        <div class="mc_cont gft_main cus_cont_view" id="gif_sv01">
+            <h2 class="mc_tit"><img src="../../images/main/tit_gft_main.svg" alt=""></h2>
+            <!-- gft_main_select -->
+            <div class="gft_main_select">
+                <!-- gft_main_msg -->
+                <div class="gft_main_msg">
+                    <p>누르면 다른 기준으로 볼 수 있어요! </p>
+                </div>
+                <!-- //gft_main_msg -->
+
+                <!-- gft_main_tab -->
+                <ul class="gft_main_tab">
+                    <li>
+                        <p class="on">
+                            <input type="radio" name="gft_ty01" checked>
+                            <i><img src="../../images/main/ico_gft_main_tab01_1.svg" alt=""></i>
+                            <span>모든성별</span>
+                        </p>
+                        <p>
+                            <input type="radio" name="gft_ty01">
+                            <i><img src="../../images/main/ico_gft_main_tab01_2.svg" alt=""></i>
+                            <span>여성</span>
+                        </p>
+                        <p>
+                            <input type="radio" name="gft_ty01">
+                            <i><img src="../../images/main/ico_gft_main_tab01_3.svg" alt=""></i>
+                            <span>남성</span>
+                        </p> 
+                    </li>
+                    <li>
+                        <p class="on">
+                            <input type="radio" name="gft_ty02" checked>
+                            <i><img src="../../images/main/ico_gft_main_tab02_1.svg" alt=""></i>
+                            <span>모든연령</span>
+                        </p>
+                        <p>
+                            <input type="radio" name="gft_ty02">
+                            <i><img src="../../images/main/ico_gft_main_tab02_2.svg" alt=""></i>
+                            <span>유아</span>
+                        </p>
+                        <p>
+                            <input type="radio" name="gft_ty02">
+                            <i><img src="../../images/main/ico_gft_main_tab02_3.svg" alt=""></i>
+                            <span>10대</span>
+                        </p> 
+                        <p>
+                            <input type="radio" name="gft_ty02">
+                            <i><img src="../../images/main/ico_gft_main_tab02_4.svg" alt=""></i>
+                            <span>20대</span>
+                        </p>
+                        <p>
+                            <input type="radio" name="gft_ty02">
+                            <i><img src="../../images/main/ico_gft_main_tab02_5.svg" alt=""></i>
+                            <span>30대</span>
+                        </p> 
+                        <p>
+                            <input type="radio" name="gft_ty02">
+                            <i><img src="../../images/main/ico_gft_main_tab02_6.svg" alt=""></i>
+                            <span>40대 이상</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="on">
+                            <input type="radio" name="gft_ty03" checked>
+                            <i><img src="../../images/main/ico_gft_main_tab03_1.svg" alt=""></i>
+                            <span>1만원 미만</span>
+                        </p>
+                        <p>
+                            <input type="radio" name="gft_ty03">
+                            <i><img src="../../images/main/ico_gft_main_tab03_2.svg" alt=""></i>
+                            <span>1~2만원</span>
+                        </p>
+                        <p>
+                            <input type="radio" name="gft_ty03">
+                            <i><img src="../../images/main/ico_gft_main_tab03_3.svg" alt=""></i>
+                            <span>3~4만원</span>
+                        </p> 
+                        <p>
+                            <input type="radio" name="gft_ty03">
+                            <i><img src="../../images/main/ico_gft_main_tab03_4.svg" alt=""></i>
+                            <span>5만원 이상</span>
+                        </p>
+                    </li>
+                </ul>
+                <!-- //gft_main_tab -->
+
+                <!-- gft_main_slider -->
+                <div class="gft_main_slider_wrap" style="display:none;">
+                    <div class="gft_main_slider"></div>
+                </div>
+                <!-- //gft_main_slider -->
+            </div>
+            <!-- //gft_main_select -->
+
+            <!-- gft_slide_view -->  
+            <div class="gft_slide_view len4" style="display:none;">
+                <!-- prod_list -->
+                <ul class="prod_list">
+                    <!-- .li 반복 -->
+                    <li class="li">
+                        <div class="img">
+                            <a href="#n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+                            <button class="prod_like_count active"><span>999+</span></button><!-- 좋아요 활성화 class="active" -->
+                        </div>
+                        <ul class="txt">
+                            <!--<li class="s0">dretec</li>-->
+                            <li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+                            <li class="s2">
+                                <strong>50%</strong>
+                                <span>134,000</span>
+                                <em>129,000</em>
+                            </li>
+                            <!--<li class="ico_marker_area">
+                                <span class="ico_marker on">쿠폰</span>
+                                <span class="ico_marker">사은품</span>
+                                <span class="ico_marker">무료배송</span>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <!-- //.li 반복 -->
+
+                    <li class="li">
+                        <div class="img">
+                            <a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+                            <button class="prod_like_count"><span>999+</span></button>
+                        </div>
+                        <ul class="txt">
+                            <!--<li class="s0">dretec</li>-->
+                            <li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+                            <li class="s2">
+                                <strong>50%</strong>
+                                <span>134,000</span>
+                                <em>129,000</em>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="li">
+                        <div class="img">
+                            <a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+                            <button class="prod_like_count"><span>999+</span></button>
+                        </div>
+                        <ul class="txt">
+                            <!--<li class="s0">dretec</li>-->
+                            <li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+                            <li class="s2">
+                                <strong>50%</strong>
+                                <span>134,000</span>
+                                <em>129,000</em>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="li">
+                        <div class="img">
+                            <a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+                            <button class="prod_like_count"><span>999+</span></button>
+                        </div>
+                        <ul class="txt">
+                            <!--<li class="s0">dretec</li>-->
+                            <li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+                            <li class="s2">
+                                <strong>50%</strong>
+                                <span>134,000</span>
+                                <em>129,000</em>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="li">
+                        <div class="img">
+                            <a href="#n"><img src="../../images/temp/@img_prod05.jpg" alt=""></a>
+                            <button class="prod_like_count"><span>999+</span></button>
+                        </div>
+                        <ul class="txt">
+                            <!--<li class="s0">dretec</li>-->
+                            <li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+                            <li class="s2">
+                                <strong>50%</strong>
+                                <span>134,000</span>
+                                <em>129,000</em>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="li">
+                        <div class="img">
+                            <a href="#n"><img src="../../images/temp/@img_prod06.jpg" alt=""></a>
+                            <button class="prod_like_count"><span>999+</span></button>
+                        </div>
+                        <ul class="txt">
+                            <!--<li class="s0">dretec</li>-->
+                            <li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+                            <li class="s2">
+                                <strong>50%</strong>
+                                <span>134,000</span>
+                                <em>129,000</em>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="li">
+                        <div class="img">
+                            <a href="#n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+                            <button class="prod_like_count"><span>999+</span></button>
+                        </div>
+                        <ul class="txt">
+                            <!--<li class="s0">dretec</li>-->
+                            <li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+                            <li class="s2">
+                                <strong>50%</strong>
+                                <span>134,000</span>
+                                <em>129,000</em>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="li">
+                        <div class="img">
+                            <a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+                            <button class="prod_like_count"><span>999+</span></button>
+                        </div>
+                        <ul class="txt">
+                            <!--<li class="s0">dretec</li>-->
+                            <li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+                            <li class="s2">
+                                <strong>50%</strong>
+                                <span>134,000</span>
+                                <em>129,000</em>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- //prod_list  -->
+            </div>
+            <!-- //gft_slide_view -->
+
+            <div class="emp">
+                <p>항목이 없습니다.</p>
+            </div>
+
+            <button class="btn_more_view" style="display:none;"><span>더보기</span></button>
+        </div>
+        <!-- //선물추천 목록 : gft_main -->
+
+    </div>
+    <!-- //선물추천 컨텐츠 -->
+
+
+    <!-- 푸터 -->
+    <footer class="footer_wrapper">
+        <div class="notice_wrap">
+            <span class="notice_text">공지사항</span>
+            <a href="#" class="notice_link">교보문고 개인정보 처리방침 개정안내</a>
+        </div>
+
+        <div class="footer_body">
+            <div class="logo_box">
+                <a href="#" class="logo_link">
+                    <img src="../../images/guide/ico_logo.svg" alt="핫트랙스">
+                </a>
+            </div>
+
+            <div class="footer_info_box">
+                <div class="info_text_multi">
+                    <span class="info_text">대표이사 : 김상훈</span>
+                    <span class="gap">|</span>
+                    <address class="info_text">경기도 파주시 회동길 78(출판단지내)</address>
+                </div>
+                <span class="info_text">사업자등록번호 : 102-81-29258</span>
+                <span class="info_text">개인정보보호책임자 : 김상훈</span>
+                <span class="info_text"><span class="text_inner">통신판매업신고번호 : 제 2012-경기파주-3911호</span><a href="#" class="btn_footer_link">사업자정보확인</a></span>
+            </div>
+
+            <div class="footer_menu_box">
+                <ul class="footer_menu_list">
+                    <li class="footer_menu_item"><a href="#" class="footer_menu_link">핫트합니다</a></li>
+                    <li class="footer_menu_item"><a href="#" class="footer_menu_link">공지사항</a></li>
+                    <li class="footer_menu_item privacy"><a href="#" class="footer_menu_link">개인정보처리방침</a></li>
+                    <li class="footer_menu_item"><a href="#" class="footer_menu_link">이용약관</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_call_box"><span class="call_text">대표전화</span><span class="call_num"><a href="tel:16661112">1666-1112</a></span> <br><span class="call_text_sm">(평일 09:00~18:00 점심시간 12:00~13:00 )</span></div>
+
+            <div class="copyright_box">
+                <div class="copyright">@Hottracks Centre</div>
+                <div class="sns_share_box">
+                    <a href="#" class="btn_sns_share insta"><span class="hidden">instagram 공유</span></a>
+                    <a href="#" class="btn_sns_share fb"><span class="hidden">facebook 공유</span></a>
+                    <a href="#" class="btn_sns_share youtube"><span class="hidden">youtube 공유</span></a>
+                    <a href="#" class="btn_sns_share twt"><span class="hidden">twitter 공유</span></a>
+                    <a href="#" class="btn_sns_share blog"><span class="hidden">blog 공유</span></a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- // 푸터 --> 
+</div>   
+<!-- //wrapper -->
+</body>
+</html>

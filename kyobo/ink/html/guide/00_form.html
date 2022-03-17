@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>핫트랙스</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+</head>
+
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#f4f4f4;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">
+		<!-- breadcrumb_wrap -->
+		<section class="breadcrumb_wrap">
+			<div class="breadcrumb_inner">
+				<ol class="breadcrumb_list">
+					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
+				</ol>
+			</div>
+		</section>
+		<!-- //breadcrumb_wrap -->
+		
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap">
+
+
+			<!-- ht_cont -->
+			<div class="ht_cont">
+				<div class="contents_inner">
+					<h1 class="ht_tit02">TAB</h1>
+					<h2 class="ht_tit04">TAB - 가운데 정렬</h2>
+
+					<!-- tab_center -->
+					<div class="tab_ty tab_center tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul>
+							<li>
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<span>남다른</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //tab_center -->
+					<br>
+
+
+					<h2 class="ht_tit04">TAB - 기본</h2>
+					<!-- tab_ty -->
+					<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<img src="../../images/temp/@img_prod01.jpg" alt="">
+									<span>남다른</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>
+
+
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //tab_ty -->
+					<br><br>
+
+
+					<h2 class="ht_tit04">TAB - 기본 2줄</h2>
+					<!-- tab_ty -->
+					<div class="tab_swiper tab_ty ty02 tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<span>Frederic Chopin<br>(쇼팽)</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>Johann Sebastian Bach<br>(바흐)</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>Claude Debussy<br>(드뷔시)</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>Ludwig Van Beethoven<br>(베토벤)</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //tab_ty -->
+					<br><br>
+
+
+					<h2 class="ht_tit04">TAB - 텍스트</h2>
+					<!-- tab_txt -->
+					<div class="tab_txt tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul>
+							<ul>
+								<li>
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
+										<span>#덕후템</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>#20대가 받고싶은</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>#남자가 받고싶은</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>#쓸모없는</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>#한정템</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>#미식가</span>
+									</a>
+								</li>
+							</ul>
+						</ul>
+					</div>
+					<!-- //tab_txt -->  
+					<br><br>
+
+
+					<h2 class="ht_tit04">TAB - 기본 + 텍스트</h2>
+					<!-- tab_ty -->
+					<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<!--<img src="../../images/temp/@img_prod01.jpg" alt="">-->
+									<span>남다른</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //tab_ty -->
+
+					<!-- tab_txt : 하단 border - tab_under -->
+					<div class="tab_txt tab_under tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul>
+							<li>
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<span>#덕후템</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#20대가 받고싶은</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#남자가 받고싶은</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#쓸모없는</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#한정템</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#미식가</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //tab_txt : 하단 border - tab_under -->  
+					<br><br>
+
+
+					<h2 class="ht_tit04">TAB - 텍스트2</h2>
+					<!-- tab_txt -->
+					<div class="tab_txt ty02 tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul>
+							<ul>
+								<li>
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
+										<span>예약상품</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>베스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>신상품</span>
+									</a>
+								</li>
+							</ul>
+						</ul>
+					</div>
+					<!-- //tab_txt -->  
+					<br><br>
+
+
+					<h2 class="ht_tit04">TAB - Box type</h2>
+					<!-- tab_box -->
+					<div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul>
+							<ul>
+								<li>
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
+										<span>예약상품</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>베스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>신상품</span>
+									</a>
+								</li>
+							</ul>
+						</ul>
+					</div>
+					<!-- //tab_box -->  
+					<br><br>
+
+					<!-- tab_box -->
+					<div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul>
+							<ul>
+								<li>
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
+										<span>순간을 장면으로<br>기록하세요</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>베스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>신상품</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>신상품</span>
+									</a>
+								</li>
+							</ul>
+						</ul>
+					</div>
+					<!-- //tab_box -->  
+					<br><br>
+				</div>
+			</div>
+			<!-- //ht_cont -->
+
+
+			<!-- ht_cont -->
+			<div class="ht_cont ht_dep">
+				<div class="contents_inner">
+					<h1 class="ht_tit04"><span class="ht_tit02">Form</span> : 버튼색, 라디오, 체크박스 색 추후 일괄 변경 예정!!!!!</h1>
+
+ 
+ 
+<!-- form_sel -->
+<div class="form_sel">
+	<select title="타이틀">
+		<option>옵션 1</option>
+		<option>옵션 2 값이 너무 길어질 경우 옵션 2 값이 너무 길어질 경우 옵션 2 값이 너무 길어질 경우 옵션 2 값이 너무 길어질 경우</option>
+		<option>옵션 3</option>
+		<option>옵션 4</option>
+		<option disabled>옵션 5</option>
+	</select>
+</div>
+<!-- //form_sel -->
+
+<br><br>
+<!-- form_sel -->
+<div class="form_sel">
+	<select title="타이틀" disabled>
+		<option>옵션 1</option>
+		<option>옵션 2</option>
+		<option>옵션 3</option>
+		<option>옵션 4</option>
+		<option>옵션 5</option>
+	</select>
+</div>
+<!-- //form_sel -->
+
+<br><br>
+<!-- form_sel -->
+<div class="form_sel w_full">
+	<select title="타이틀">
+		<option>옵션 1</option>
+		<option>옵션 2</option>
+		<option>옵션 3</option>
+		<option>옵션 4</option>
+		<option disabled>옵션 5</option>
+	</select>
+</div>
+<!-- //form_sel -->	
+
+<br><br>
+
+<button type="button" class="btn_md btn_primary" onclick="testOptionAppend();"><span class="text">option append test</span></button>
+<button type="button" class="btn_md btn_primary" onclick="testOptionSelectedAppend();"><span class="text">선택된 option append test</span></button>
+<button type="button" class="btn_md btn_primary" onclick="testOptionDisabledAppend();"><span class="text">비활성화 option append test</span></button>
+
+<br><br>
+    
+<!-- form_chk -->
+<span class="form_chk">
+	<input id="exChk01" type="checkbox" checked />
+	<label for="exChk01">체크박스(checkbox)</label>
+</span>
+<!-- //form_chk -->
+<!-- form_chk -->
+<span class="form_chk">
+	<input id="exChkDisabled01" type="checkbox" />
+	<label for="exChkDisabled01">체크박스(checkbox)</label>
+</span>
+<!-- //form_chk -->
+<!-- form_chk -->
+<span class="form_chk">
+	<input id="exChk02" type="checkbox" disabled />
+	<label for="exChk02">체크박스(checkbox)</label>
+</span>
+<!-- //form_chk -->
+<!-- form_chk -->
+<span class="form_chk">
+	<input id="exChkDisabled02" type="checkbox" checked disabled />
+	<label for="exChkDisabled02">체크박스(checkbox)</label>
+</span>
+<!-- //form_chk -->
+
+<br><br>
+
+<!-- form_rdo -->
+<span class="form_rdo">
+	<input id="exRdo01" type="radio" name="exRdoName01" checked />
+	<label for="exRdo01">라디오 버튼(radio)</label>
+</span>
+<!-- //form_rdo -->
+<!-- form_rdo -->
+<span class="form_rdo">
+	<input id="exRdo02" type="radio" name="exRdoName01" />
+	<label for="exRdo02">라디오 버튼(radio)</label>
+</span>
+<!-- //form_rdo -->
+
+<!-- form_rdo -->
+<span class="form_rdo">
+	<input id="exRdo03" type="radio" name="exRdoName02" disabled />
+	<label for="exRdo03">라디오 버튼(radio)</label>
+</span>
+<!-- //form_rdo -->
+
+<!-- form_rdo -->
+<span class="form_rdo">
+	<input id="exRdo04" type="radio" name="exRdoName03" checked disabled />
+	<label for="exRdo04">라디오 버튼(radio)</label>
+</span>
+<!-- //form_rdo -->
+					<div class="btn_area">
+						<a href="http://image.kyobobook.co.kr/ink/html/ux/next/ink/html/ink/pc_guide/03_components_05_form.html" target="_blank" class="btn_more_view_box ty02"><strong>교보가이드 Form<em></em></strong></a>
+					</div>
+				</div>
+			</div>
+			<!-- //ht_cont -->
+
+		</section>
+		<!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+
+
+	<!-- Footer -->
+	<footer class="footer_wrapper" style="height:205px;background-color:#f7f7f7;color:#000;font-size:20px;font-weight:700;line-height:205px;text-align:center;">
+		Footer
+	</footer>
+	<!-- //Footer -->
+
+
+	<!-- 윙배너 -->
+	<section class="fly_menu_wrapper sps">
+	</section>
+	<!-- // 윙배너 -->
+
+
+	<!-- 탑버튼 -->
+	<div class="floating_wrapper">
+	</div>
+	<!-- //탑버튼 -->
+</div>
+<!-- // wrapper -->
+</script>
+</body>
+</html>

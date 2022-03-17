@@ -1,0 +1,164 @@
+/*===============  카테고리 메인 브랜드 골라보기 ==================*/
+.bd_img { border-radius: 12px; }
+.brand_search_wrap {
+    //검색창 영역
+	.search_area{
+		position:relative;
+		padding:15px 46px 15px 14px;
+		border:1px solid #d5d5d5;
+		border-radius: 4px;
+		input{
+			outline: none;
+			width:100%;
+		}
+		.search{
+			display: block;;
+			position: absolute;
+			width:20px;
+			height:20px;
+			right:14px;
+			top:50%;
+            margin-top:-10px;
+			background:url(../images/guide/ico_search_icon.svg) no-repeat center center  / 16px;
+		}
+	}
+	.no_search_data{
+		height:470px;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		span{
+			display: block;
+		}
+	}
+	.no_search_data_icon{
+		width:60px;
+		height:60px;
+		margin: 0 auto;
+		background:url(../images/guide/no_search_data_icon.svg) no-repeat center center  / cover;
+	}
+	.no_search_data_txt{
+		text-align: center;
+		margin-top:16px;
+		color:#767676;
+        font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.01em;
+	}
+    .cks_list {
+        min-height:450px;
+        .cks_item {
+            margin-bottom:20px;
+            &:last-of-type {
+                margin-bottom:0;
+            }
+        }
+        .form_chk>label {
+            font-size: 13px;
+            color:#595959;
+        }
+    }
+    .dialog_footer{
+        padding:0px; 
+        padding-top:30px;
+        margin:0 !important;
+        &.search{
+            .btn_reset {
+                width:44px;
+                height:44px;
+                margin-right:5px;
+                border:1px solid #000;
+                flex:1 0 auto;
+                background:url(../images/guide/ico_rest.svg) no-repeat center / 18px;
+            }
+            .btn-secondary {
+                background-color: #292929;
+                color:#fff;
+                flex:2 1 auto !important;
+                &:hover {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
+.custom_scroll_wrap.ck_type {
+    margin-top:20px;
+    max-height: 450px !important;
+}
+
+/*================  카테고리 메인 만년필이 궁금하세요 ==================*/
+.pen_pop_wrap {
+    .tab_menu {
+        display: flex;
+        flex-flow: row nowrap;
+         .tab_menu_item {
+            position:relative;
+            line-height: 44px;
+            width:25%;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            border-top:1px solid #D5D5D5;
+            border-left:1px solid #D5D5D5;
+            cursor: pointer;
+            &:last-of-type {
+                border-right: 1px solid #D5D5D5;
+            }
+            &:before {
+                content:"";
+                position:absolute;
+                width:calc( 100% + 2px);
+                height:2px;
+                background-color:#000;
+                left:-1px;
+                bottom:0px;
+                z-index:2;
+            }
+            & > a {display:block; width:100%; line-height: 44px;letter-spacing: -0.01em; text-align: center; color:#767676; }
+         }
+         .tab_menu_item.on {
+             border:2px solid #000;
+             border-bottom:none;
+             & > a {color:#000; font-weight: 700;}
+             & + .tab_menu_item {
+                 border-left:none;
+             } 
+             &:before {
+                width:calc( 100% );
+                left:0px;
+                height:1px;
+                background-color:#D5D5D5;
+             }
+         }
+    }
+    .tab_pen_content {
+        min-height:400px;
+        .tab_pen_item {
+            display: none;
+            &.on{
+                display: block;
+            }
+        }
+        .pen_title {
+            line-height: 20px;
+            letter-spacing: -0.01em;
+            color:#595959;
+            &+.pen_sub_menu_wrap {
+                padding-top:20px;
+            }
+        }
+        .pen_sub_menu_wrap {
+            margin:0;
+            padding-bottom:20px;
+
+        }
+    }
+    //교보 http://www.hottracks.co.kr/ht/fountainPen?type=1
+    .mgt10 { margin-top:10px !important } 
+}
+
+
+
+
