@@ -1013,7 +1013,16 @@
         }
     }
     .txt_value {
-        display:block;width:35px;margin-left:12px;font-size:13px;font-weight:700;text-align:end;
+        display:block;width:35px;margin-left:12px;font-size:13px;font-weight:400;text-align:right;
+    }
+}
+.rating_row {
+    &.chk {
+        .progress_container{
+            .txt_value {
+                color:#da2128;font-weight:700;
+            }
+        }
     }
 }
 
@@ -1044,16 +1053,16 @@
                     }
                 }
                 .font_num {
-                    height:19px;padding:0 7px;background:#7a7dc3;border-radius:10px;color:#fff;font-weight:500;line-height:19px;
+                    height:19px;padding:0 7px;background:#7a7dc3;border-radius:10px;color:#fff;font-weight:400;line-height:19px;
                     &:before {
-                        position:absolute;left:50%;top:11px;width:10px;height:10px;background:#7a7dc3;border-radius:2px;transform:translateX(-50%) rotate(45deg);content:"";
+                        position:absolute;left:50%;top:11px;width:10px;height:10px;background:#7a7dc3;border-radius:2px;transform:translateX(-50%) rotate(45deg);content:"";;font-weight:500;
                     }
                 }
             }
 
         }
         .txt_msg {
-            display:block;margin-top:8px;color:#595959;font-size:12px;line-height:18px;
+            display:block;margin-top:8px;color:#595959;font-size:12px;font-weight:400;line-height:18px;
         }
         .txt_per {
             position:relative;width:6px;height:60px;margin:0 auto;background:#eaeaea;border-radius:3px;overflow:hidden;

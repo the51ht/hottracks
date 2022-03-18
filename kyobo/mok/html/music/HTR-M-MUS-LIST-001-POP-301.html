@@ -110,20 +110,19 @@ $(function(){
                 };
                 });
             }
-
+            /*2021-03-18 new Swiper 옵션 - 한 항목씩만 노출되도록 수정*/ 
             var chartSwiper = new Swiper(this, {
                 direction: "vertical",
-                loop:true,
                 slidesPerView: 5,
-                initialSlide: initNum,
+                spaceBetween: 0,
                 centeredSlides: true,
-                centeredSlidesBounds: true,
                 observer: true,
                 observeParents: true,
+                initialSlide: initNum,
                 on:{
                     observerUpdate:setTitle,
                     slideChangeTransitionEnd:setTitle,
-                    }
+                },
             });
             function setTitle() {        
                 //해당 팝업 안의 날짜 선택 스왑 개수      

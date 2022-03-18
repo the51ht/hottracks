@@ -50,7 +50,6 @@ $(function(){
 });
 
 $(function(){
-    console.log($('.swiper.evt_swiper').length );
     // 마감임박, 반응최고 스와이프
     //상품 개수 2개이하일때 ul class="evt_slider nonswipe"로 설정
     if ($('.swiper.evt_swiper').length == 0 ) return; 
@@ -121,12 +120,14 @@ $(function(){
 /*이벤트 기획전 말풍선*/
 $(function(){
     if($('.deadline_bubble').length < 1) return;
-    window.addEventListener('scroll', function(){
+
+    function bubble_binding(){
         var evt_bubs = document.querySelectorAll('.deadline_bubble');
         for(var bub_num = 0; bub_num  < evt_bubs.length;  bub_num ++) {
            bubbleHighLight(evt_bubs[bub_num]);
         }
-    });
+    }
+
     function bubbleHighLight (elem){
         var headerHeight = $('header').height();
        if( $(window).scrollTop() > $(elem).offset().top -  headerHeight - 400) {
@@ -136,6 +137,12 @@ $(function(){
        };
 
     } 
+
+    bubble_binding()
+    window.addEventListener('scroll', function(){
+        bubble_binding();
+    });
+
 });
 
 
