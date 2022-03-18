@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=1600">
-<title>카테고리메인</title>
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>카테고리 메인 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -14,7 +21,6 @@
 <!-- // Plug-In css -->
 
 
-
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
@@ -22,7 +28,6 @@
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
-
 
 
 <!-- Polyfill javascript -->
@@ -74,7 +79,7 @@
 		<!-- header_inner -->
 		<div class="header_inner">
 			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
-			<nav class="gnb_wrap" style="height:87px;"></nav>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
 		</div>
 		<!-- //header_inner -->
 	</header>
@@ -126,11 +131,10 @@
 					<!-- ht_lnb_cont -->
 					<ul class="ht_lnb_cont">
 						<li class="view_all"><button class="lnb_1dep">전체보기</button></li>
-						<!--DESC : 활성화 클래스 on 추가-->
-						<li class="on"><button class="lnb_1dep">포장/데코용품</button>
+
+						<li class="on"><button class="lnb_1dep">다이어리/스케줄러</button><!-- 활성화 class="on" -->
 							<ul class="dep2">
-								<!--DESC : 활성화 클래스 on 추가-->
-								<li><button class="lnb_2dep">모양펀치</button>
+								<li><button class="lnb_2dep">날짜형 다이어리 </button><!-- 활성화 class="on" -->
 									 <ul class="dep3">
 										<li><button class="lnb_3dep">심플/기능성</button></li>
 										<li><button class="lnb_3dep">캐릭터/일러스트</button></li>
@@ -138,7 +142,7 @@
 										<li><button class="lnb_3dep">포토/여행</button></li>
 									 </ul>
 								</li>
-								<li><button class="lnb_2dep">포장박스</button>
+								<li><button class="lnb_2dep">만년다이어리</button>
 									<ul class="dep3">
 										<li><button class="lnb_3dep">심플/기능성</button></li>
 										<li><button class="lnb_3dep">캐릭터/일러스트</button></li>
@@ -146,7 +150,7 @@
 										<li><button class="lnb_3dep">포토/여행</button></li>
 									 </ul>
 								</li>
-								<li><button class="lnb_2dep">포장지</button>
+								<li><button class="lnb_2dep">날짜형 스케줄러</button>
 									<ul class="dep3">
 										<li><button class="lnb_3dep">심플/기능성</button></li>
 										<li><button class="lnb_3dep">캐릭터/일러스트</button></li>
@@ -215,18 +219,19 @@
 					</ul>
 					<!-- //ht_lnb_cont -->
 
-					<!--상세 검색 버튼-->
+					<!-- 상세 검색 버튼 -->
 					<div class="search_btn_area">
-						<button class="search_btn"><span class="search_icon"></span>브랜드 골라보기</button>
+						<button class="search_btn" data-role="btn-dialog" data-target="#popbrand_search"><span class="search_icon"></span>브랜드 골라보기</button>
+						<button class="search_btn" data-role="btn-dialog" data-target="#popbrand_search"><span class="search_icon"></span>브랜드 골라보기<em class="brand_count">3</em></button>
+						<button class="search_btn"><span class="pen_icon"></span>만년필이 궁금하세요?</button>
 					</div>
-				    <!--//상세 검색 버튼-->
+				    <!-- //상세 검색 버튼 -->
 				</nav>
 				<!-- LNB -->
 
 				<!-- ht_sub_area -->
 				<section class="ht_sub_area">
 					<h1 class="ht_tit">디자인 문구</h1>
-
 
 					<!-- ht_cont : 상단배너 - ht_top_banner -->
 					<div class="ht_cont ht_top_banner">
@@ -286,7 +291,7 @@
 					<!-- //ht_cont : 상단배너 - ht_top_banner -->
 
 
-					<!-- ht_cont -->
+					<!-- ht_cont : MD 추천 / 베스트 -->
 					<div class="ht_cont" >
 						<!-- tab_txt -->
 						<div class="tab_txt ty02 tab_link" ><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
@@ -414,20 +419,19 @@
 						</div>
 						<!-- //thumb4_banner -->
 					</div>	
-					<!-- ht_cont -->
+					<!-- //ht_cont : MD 추천 / 베스트 -->
+
+
+					<!-- ht_cont : 상품 -->
 					<div class="ht_cont">
-						<!--상품 정렬 방식 선택-->
+						<!-- 상품 정렬 방식 선택 -->
 						<div class="prod_sort_wrap">
-							<!--체크박스 리스트-->
+							<!-- 체크박스 리스트 -->
 							<ul class="prod_ck_lists">
-								<!--form_chk 반복-->
 								<li class="form_chk">
 									<input id="prod0" type="checkbox">
 									<label for="prod0">할인</label>
 								</li>
-								<!--//form_chk 반복-->
-
-								
 								<li class="form_chk">
 									<input id="prodChk1" type="checkbox">
 									<label for="prodChk1">쿠폰</label>
@@ -445,14 +449,14 @@
 									<label for="prodChk4">품절포함</label>
 								</li>
 							</ul>
-							<!--//체크박스 리스트-->
+							<!-- //체크박스 리스트 -->
 
 							<div class="prod_type_selec_area">
 								<!-- form_sel -->
 								<div class="form_sel" data-val="test">
 									<!--id 값으로 ui select vlaue 읽을 수 있도록 스크립트 작업-->
 									<select title="타이틀" id="selecMy">
-										<option value ="opt1">신상품순</option>
+										<option value="opt1">신상품순</option>
 										<option value="opt2">판매인기순</option>
 										<option value="opt3">낮은 가격순</option>
 										<option value="opt4">높은 가격순</option>
@@ -465,35 +469,34 @@
 								<button class="list_view_type_btn"></button>
 							</div>
 						</div>
-						<!--//상품 정렬 방식 선택-->
+						<!-- //상품 정렬 방식 선택 -->
 
 
-
+						<!-- evt_prod_list_wrap -->
 					    <div class="evt_prod_list_wrap">
 							<!-- 상품 리스트 -->
 							<ul class="evt_products"><!-- row_dir : row type -->
 								<!-- prod_item 반복 -->
 								<li class="prod_item">
 									<div class="product_pic">
+										<img src="../../images/temp/@img_prod01.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
 										<button class="evt_good_count active">
 											<div class="icon"></div>
 											<div class="txt">999+</div>
 										</button>
-										<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
 
 										<!-- 19세 상품 항목
-										<a href="javascript:alert('19세 이상');">
-											<div class="adult_block">
-												<div>19세 이상만<br>구매 가능해요.</div>
-											</div>
-										</a>
+										<img src="../../images/guide/img_19.svg" alt="">
+										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 										//19세 상품 항목 -->
 
 										<!-- 대체/품절 상품
 										<div class="show_replace">
 											<div>
 												<div>아쉽지만!<br>품절이예요</div>
-												<button type="button" class="replace_prod_btn">대체상품</button>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
 											</div>
 										</div>
 										//대체/품절 상품 -->
@@ -518,17 +521,9 @@
 								<!-- 19세 상품 -->
 								<li class="prod_item">
 									<div class="product_pic">
-										<button class="evt_good_count">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-
 										<!-- 19세 상품 항목 -->
-										<a href="javascript:alert('19세 이상');">
-											<div class="adult_block">
-												<div>19세 이상만<br>구매 가능해요.</div>
-											</div>
-										</a>
+										<img src="../../images/guide/img_19.svg" alt="">
+										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 										<!-- //19세 상품 항목 -->
 									</div>
 									<div class="product_info">
@@ -551,17 +546,20 @@
 								<!-- 대체 상품 -->
 								<li class="prod_item">
 									<div class="product_pic">
+										<img src="../../images/temp/@img_prod03.jpg" alt="">
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
 										<!--<button class="evt_good_count active">
 											<div class="icon"></div>
 											<div class="txt">999+</div>
 										</button>-->
-										<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+
 
 										<!-- 대체/품절 상품 -->
 										<div class="show_replace">
 											<div>
 												<div>아쉽지만!<br>품절이예요</div>
-												<button type="button" class="replace_prod_btn"  data-role="btn-dialog" data-target="#replace_prod">대체상품</button>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
 											</div>
 										</div>
 										<!-- //대체/품절 상품 -->
@@ -586,17 +584,19 @@
 								<!-- 품절 상품 -->
 								<li class="prod_item">
 									<div class="product_pic">
+										<img src="../../images/temp/@img_prod04.jpg" alt="">
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
 										<!--<button class="evt_good_count active">
 											<div class="icon"></div>
 											<div class="txt">999+</div>
 										</button>-->
-										<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
 
 										<!-- 대체/품절 상품 -->
 										<div class="show_replace">
 											<div>
 												<div>아쉽지만!<br>품절이예요</div>
-												<!--<button type="button" class="replace_prod_btn">대체상품</button>-->
+												<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
 											</div>
 										</div>
 										<!-- //대체/품절 상품 -->
@@ -616,54 +616,7 @@
 										</div>
 									</div>
 								</li>
-								<!-- //품절 상품 -->
-
-								<li class="prod_item">
-									<div class="product_pic">
-										<button class="evt_good_count active">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-										<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod05.jpg" alt=""></a>
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<li class="prod_item">
-									<div class="product_pic">
-										<button class="evt_good_count active">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-										<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod06.jpg" alt=""></a>
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
+								<!-- //품절 상품 -->				
 
 								<!-- 상품배너 : 16개(8줄) 마다 노출 : 만약 li 안으로 들어가야 할경우
 								<li class="prod_resp">
@@ -685,64 +638,15 @@
 
 							<!-- 상품 리스트 -->
 							<ul class="evt_products"><!-- row type : class="row_dir" -->
-								<!-- prod_item 반복 -->
 								<li class="prod_item">
 									<div class="product_pic">
-										<button class="evt_good_count active">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-										<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+										<img src="../../images/temp/@img_prod05.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
 
-										<!-- 19세 상품 항목
-										<a href="javascript:alert('19세 이상');">
-											<div class="adult_block">
-												<div>19세 이상만<br>구매 가능해요.</div>
-											</div>
-										</a>
-										//19세 상품 항목 -->
-
-										<!-- 대체/품절 상품
-										<div class="show_replace">
-											<div>
-												<div>아쉽지만!<br>품절이예요</div>
-												<button type="button" class="replace_prod_btn">대체상품</button>
-											</div>
-										</div>
-										//대체/품절 상품 -->
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<!-- //prod_item 반복 -->
-
-								<!-- 19세 상품 -->
-								<li class="prod_item">
-									<div class="product_pic">
 										<button class="evt_good_count">
 											<div class="icon"></div>
 											<div class="txt">999+</div>
 										</button>
-
-										<!-- 19세 상품 항목 -->
-										<a href="javascript:alert('19세 이상');">
-											<div class="adult_block">
-												<div>19세 이상만<br>구매 가능해요.</div>
-											</div>
-										</a>
-										<!-- //19세 상품 항목 -->
 									</div>
 									<div class="product_info">
 										<div class="company">dretec</div>
@@ -759,25 +663,15 @@
 										</div>
 									</div>
 								</li>
-								<!-- //19세 상품 -->
-
-								<!-- 대체 상품 -->
 								<li class="prod_item">
 									<div class="product_pic">
-										<!--<button class="evt_good_count active">
+										<img src="../../images/temp/@img_prod06.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+										<button class="evt_good_count">
 											<div class="icon"></div>
 											<div class="txt">999+</div>
-										</button>-->
-										<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
-
-										<!-- 대체/품절 상품 -->
-										<div class="show_replace">
-											<div>
-												<div>아쉽지만!<br>품절이예요</div>
-												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#replace_prod">대체상품</button>
-											</div>
-										</div>
-										<!-- //대체/품절 상품 -->
+										</button>
 									</div>
 									<div class="product_info">
 										<div class="company">dretec</div>
@@ -794,25 +688,15 @@
 										</div>
 									</div>
 								</li>
-								<!-- //대체 상품 -->
-
-								<!-- 품절 상품 -->
 								<li class="prod_item">
 									<div class="product_pic">
-										<!--<button class="evt_good_count active">
+										<img src="../../images/temp/@img_prod01.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+										<button class="evt_good_count">
 											<div class="icon"></div>
 											<div class="txt">999+</div>
-										</button>-->
-										<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
-
-										<!-- 대체/품절 상품 -->
-										<div class="show_replace">
-											<div>
-												<div>아쉽지만!<br>품절이예요</div>
-												<!--<button type="button" class="replace_prod_btn">대체상품</button>-->
-											</div>
-										</div>
-										<!-- //대체/품절 상품 -->
+										</button>
 									</div>
 									<div class="product_info">
 										<div class="company">dretec</div>
@@ -829,10 +713,35 @@
 										</div>
 									</div>
 								</li>
-								<!-- //품절 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod02.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+										<button class="evt_good_count">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
 							</ul>
 							<!-- //상품 리스트-->
 						</div>
+						<!-- //evt_prod_list_wrap -->
 
 
 						<!-- pagination -->
@@ -855,7 +764,7 @@
 						</div>
 						<!-- //pagination -->
 					</div>
-					<!-- //ht_cont -->
+					<!-- //ht_cont : 상품 -->
 
 				</section>
 				<!-- //ht_sub_area -->
@@ -866,7 +775,6 @@
 			<!-- ht_cont : 기획전 3단 -->
 			<div class="ht_cont">
 				<div class="contents_inner">
-
 					<!-- evt_list -->
 					<ul class="evt_list type3"><!-- 3단 class="type3" -->
 						<!-- li 반복 -->
@@ -986,5 +894,86 @@
 	<!-- //탑버튼 -->
 </div>
 <!-- // wrapper -->
+
+
+<!-- 브랜드 골라보기 : id="popbrand_search" --> 
+<div id="popbrand_search" class="dialog_wrap" data-class="dialog_sm">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_header -->
+    <div class="dialog_header none_bd">
+        <div class="dialog_title">브랜드 골라 보기</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents brand_search_wrap">
+		<!-- form_search_box -->
+		<div class="form_search_box">
+			<!-- form_ip_search -->
+			<div class="form_ip_search">
+				<input type="search" class="form_ip" placeholder="브랜드명 검색">
+				<button type="button" class="btn_ip_clear"><span class="hidden">초기화</span></button>
+			</div>
+			<!-- //form_ip_search -->
+			<button type="button" class="btn_ip_search"><span class="hidden">검색</span></button>
+		</div>
+		<!-- //form_search_box -->
+
+		<!-- 스크롤 영역 -->
+		<div class="custom_scroll_wrap sc_pop_btn">
+			<!--브랜드 체크 리스트-->
+			<ul class="cks_list">
+				<li class="cks_item">
+					<span class="form_chk">
+						<input id="exChk01" type="checkbox">
+						<label for="exChk01">키스맥</label>
+					</span>
+				</li>
+				<li class="cks_item">
+					<span class="form_chk">
+						<input id="exChk02" type="checkbox">
+						<label for="exChk02">꾸밈</label>
+					</span>
+				</li>
+				<li class="cks_item">
+					<span class="form_chk">
+						<input id="exChk03" type="checkbox">
+						<label for="exChk03">탑탑리빙</label>
+					</span>
+				</li>
+				<li class="cks_item">
+					<span class="form_chk">
+						<input id="exChk04" type="checkbox">
+						<label for="exChk04">러브미모어</label>
+					</span>
+				</li>
+				<li class="cks_item">
+					<span class="form_chk">
+						<input id="exChk05" type="checkbox">
+						<label for="exChk05">제이밀크</label>
+					</span>
+				</li>
+
+				<!-- 검색결과 없는 경우 -->
+				<div class="emp">
+					<span>검색 결과가 없습니다.</span>
+				</div>
+				<!-- //검색결과 없는 경우 -->
+			</ul>
+			<!-- //브랜드 체크 리스트-->
+		</div>
+		<!-- //스크롤 영역-->
+
+		<!-- btn_area -->
+		<div class="btn_area">
+			<button type="button" class="btn_md btn_wish btn_reset"><span class="hidden">초기화</span></button>
+			<button type="text" class="btn_md btn_black"><span>상품보기</span></button>
+		</div>
+		<!-- //btn_area -->
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //브랜드 골라보기 : id="popbrand_search" --> 
 </body>
 </html>
