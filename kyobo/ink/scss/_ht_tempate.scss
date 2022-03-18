@@ -110,10 +110,31 @@
 }
 
 /* tab_swiper */
-.tab_swiper {
+.tab_swiper{
     overflow:hidden;
     .swiper-slide {
         width:auto;
+    }
+    .swiper_control {
+        .swiper-button-prev, .swiper-button-next{
+            position:absolute;
+            &.swiper-button-disabled{
+                display:none;
+            }
+        }
+        .swiper-button-prev{
+            top:-67px;left:0;
+        }
+        .swiper-button-next{
+            right:0;top: -67px;left:initial;
+        }
+    }
+    &.ty02{
+        .swiper_control {
+            .swiper-button-prev, .swiper-button-next{
+                top:-80px;
+            }
+        }
     }
 }
 

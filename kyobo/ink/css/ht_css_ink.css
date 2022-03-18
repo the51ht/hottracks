@@ -1207,17 +1207,40 @@ button.btn_lg {
   left: 0;
   top: 0;
   margin: 0;
-  background-image: url("../images/guide/btn_banner_pagn.svg");
+  background: none;
+  border-radius: 0;
+}
+
+.swiper_control .swiper-button-next:before,
+.swiper_control .swiper-button-prev:before {
+  position: absolute;
+  top: -20px;
+  width: 50%;
+  height: 64px;
   background-color: #fff;
+  content: "";
+}
+
+.swiper_control .swiper-button-next:after,
+.swiper_control .swiper-button-prev:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff url("../images/guide/btn_banner_pagn.svg") center no-repeat;
   border: 1px solid #ccc;
   border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   vertical-align: top;
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
+  content: "";
 }
 
-.swiper_control .swiper-button-next:hover,
-.swiper_control .swiper-button-prev:hover {
+.swiper_control .swiper-button-next:hover:after,
+.swiper_control .swiper-button-prev:hover:after {
   background-color: #f4f4f4;
 }
 
@@ -2168,6 +2191,29 @@ body {
 
 .tab_swiper .swiper-slide {
   width: auto;
+}
+
+.tab_swiper .swiper_control .swiper-button-prev, .tab_swiper .swiper_control .swiper-button-next {
+  position: absolute;
+}
+
+.tab_swiper .swiper_control .swiper-button-prev.swiper-button-disabled, .tab_swiper .swiper_control .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+
+.tab_swiper .swiper_control .swiper-button-prev {
+  top: -67px;
+  left: 0;
+}
+
+.tab_swiper .swiper_control .swiper-button-next {
+  right: 0;
+  top: -67px;
+  left: initial;
+}
+
+.tab_swiper.ty02 .swiper_control .swiper-button-prev, .tab_swiper.ty02 .swiper_control .swiper-button-next {
+  top: -80px;
 }
 
 /* tab_cont */

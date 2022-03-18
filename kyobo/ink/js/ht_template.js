@@ -368,28 +368,59 @@ $(function(){
 
 
 
-
-
-
-
 /* Tab */
 function tabSwiper(){
     var $target = $('.tab_swiper');
-    var slideOption = {
-        slidesPerView: 'auto',
-        spaceBetween: 0,
-        freeMode: true,
-        observer: true,
-        observeParents: true,
-        speed:300,
-    };
-    tabSwiperCont = new Swiper($target.get(), slideOption);
+    $target.each(function (index, element) {
+        var $parent = $(this);
+        $parent.addClass('t_idx_' + index);
+        
+        var slideOption = {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            loop: false,
+            loopsSlide: 1,
+            spaceBetween:0,
+            speed: 700,
+            navigation: {
+                nextEl: ('.t_idx_' + index + ' .swiper-button-next'),
+                prevEl: ('.t_idx_' + index + ' .swiper-button-prev'),
+            },
+            pagination: false
+        };
+        /* 탭 넓이가 1200px 이상일때 실행 */
+        var tabListWidthTotal = 0,
+            tabList = $('.t_idx_' + index + ' .swiper-slide');
+        for(var i = 0; i < tabList.length; i++ ){
+            tabListWidthTotal += tabList.eq(i).width();
+        };
+        
+        if(tabListWidthTotal > 1200){
+            tabSwiperCont = new Swiper(this, slideOption);
+        }
+
+
+        //if($parent.find('.swiper-slide').length > 4) {
+           
+        //}
+	});
 }
 
 $(function(){
     if(!$('.tab_swiper').length) return;
     tabSwiper();
 });
+
+
+
+
+
+
+
+
+
 
 $(function(){
     $.fn.tabTy = function(){

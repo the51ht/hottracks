@@ -1,10 +1,5 @@
 
 /****  음반  ****/
-$(function(){
-    if(!$('.wel_hero_banner').length) return;
-    $('.wel_hero_banner').find('.s1, .s2').lettering('lines');
-});
-
 
 
 /* 예약상품 */

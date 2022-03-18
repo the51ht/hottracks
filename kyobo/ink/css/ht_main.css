@@ -1,1 +1,466 @@
-/* No CSS */
+@charset "UTF-8";
+/***** * 웰컴메인 * *****/
+/*** 히어로 배너 : .wel_hero ***/
+.wel_hero {
+  position: relative;
+  padding: 0;
+}
+
+/* wel_hero_banner */
+.wel_hero_banner .option_box {
+  display: none;
+  position: absolute;
+  right: calc(50% - 600px);
+  bottom: 20px;
+  z-index: 1;
+}
+
+.wel_hero_banner .option_box .btn_all {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background: url(../images/guide/ico_plus_w.svg) no-repeat 50%/11px;
+  z-index: 10;
+}
+
+.wel_hero_banner .swiper-pagination.swiper-pagination-fraction {
+  position: static;
+  height: 36px;
+  padding: 0 40px 0 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.wel_hero_banner .swiper-pagination.swiper-pagination-fraction .swiper-pagination-current,
+.wel_hero_banner .swiper-pagination.swiper-pagination-fraction .swiper-pagination-total {
+  font-size: 16px;
+  line-height: 37px;
+}
+
+.wel_hero_banner .play_pause_box {
+  margin-right: 4px;
+}
+
+.wel_hero_banner .play_pause_box [class^=btn_] {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.wel_hero_banner .play_pause_box .btn_play {
+  background: rgba(0, 0, 0, 0.3) url(../images/guide/ico_play.svg) no-repeat 50%/8px;
+}
+
+.wel_hero_banner .play_pause_box .btn_pause {
+  background: rgba(0, 0, 0, 0.3) url(../images/guide/ico_pause.svg) no-repeat 50%/6px;
+}
+
+.wel_hero_banner .play_pause_box.play .btn_play {
+  display: none;
+}
+
+.wel_hero_banner .play_pause_box.play .btn_pause {
+  display: block;
+}
+
+.wel_hero_banner .play_pause_box.pause .btn_play {
+  display: block;
+}
+
+.wel_hero_banner .play_pause_box.pause .btn_pause {
+  display: none;
+}
+
+.wel_hero_banner .swiper_control {
+  position: static;
+  margin: 0;
+}
+
+.wel_hero_banner .swiper_control .swiper-button-next,
+.wel_hero_banner .swiper_control .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  z-index: 10;
+}
+
+.wel_hero_banner .swiper_control .swiper-button-next {
+  right: calc(50% - 670px);
+  left: initial;
+}
+
+.wel_hero_banner .swiper_control .swiper-button-prev {
+  left: calc(50% - 670px);
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .s1 span {
+  -webkit-animation: txtTop both 0.4s 0.4s;
+          animation: txtTop both 0.4s 0.4s;
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .s1 span:nth-child(2) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .s2 span {
+  -webkit-animation: fade both 0.4s 0.8s;
+          animation: fade both 0.4s 0.8s;
+}
+
+.wel_hero_banner .swiper-slide:first-child:nth-last-child(1) .hero_banner_box .txt .s1 span {
+  -webkit-animation: txtTop both 0.4s 0.4s;
+          animation: txtTop both 0.4s 0.4s;
+}
+
+.wel_hero_banner .swiper-slide:first-child:nth-last-child(1) .hero_banner_box .txt .s1 span:nth-child(2) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.wel_hero_banner .swiper-slide:first-child:nth-last-child(1) .hero_banner_box .txt .s2 span {
+  -webkit-animation: fade both 0.4s 0.8s;
+          animation: fade both 0.4s 0.8s;
+}
+
+.hero_banner_box {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero_banner_box a {
+  display: block;
+  position: relative;
+}
+
+.hero_banner_box .img {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.hero_banner_box .img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  max-width: 1920px;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hero_banner_box .txt {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1200px;
+  height: 100%;
+  margin-left: -600px;
+}
+
+.hero_banner_box .txt ul {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  width: calc(100% - 60px);
+  color: #fff;
+  letter-spacing: -1px;
+  -webkit-transform: translateY(-53%);
+          transform: translateY(-53%);
+}
+
+.hero_banner_box .txt span {
+  display: block;
+  position: relative;
+  opacity: 0;
+}
+
+.hero_banner_box .txt .s1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.hero_banner_box .txt .s2 {
+  margin-top: 14px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  opacity: 0.8;
+}
+
+/* 히어로 팝업 */
+.pop_hero {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.pop_hero:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.pop_hero.on {
+  display: block;
+}
+
+.pop_hero.on:before {
+  opacity: 1;
+}
+
+.pop_hero.on .pop_hero_cont {
+  -webkit-animation: pop_hero_op both 0.5s 0.2s;
+          animation: pop_hero_op both 0.5s 0.2s;
+}
+
+.pop_hero.off {
+  display: block;
+}
+
+.pop_hero.off:before {
+  opacity: 0;
+}
+
+.pop_hero.off .pop_hero_cont {
+  -webkit-animation: pop_hero_cl both 0.5s 0s;
+          animation: pop_hero_cl both 0.5s 0s;
+}
+
+.pop_hero_cont {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 750px;
+  height: calc(100% - 128px);
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (min-width: 750px) {
+  .pop_hero_cont {
+    left: 50%;
+    margin-left: -375px;
+  }
+}
+
+.pop_hero_inner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 20px);
+  padding-bottom: 78px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.pop_hero_inner .hero_banner_box > li {
+  margin: 0 20px 12px 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.pop_hero_inner .txt span {
+  display: block;
+  position: relative;
+  opacity: 1;
+}
+
+.btn_pop_hero_cl {
+  position: absolute;
+  left: 50%;
+  top: -51px;
+  width: 36px;
+  height: 36px;
+  margin-left: -18px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.btn_pop_hero_cl span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 19px;
+  height: 19px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn_pop_hero_cl span:before {
+  position: absolute;
+  left: 9px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: #fff;
+  content: "";
+  z-index: 1;
+}
+
+.btn_pop_hero_cl span:after {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  content: "";
+  z-index: 1;
+}
+
+@-webkit-keyframes pop_hero_op {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pop_hero_op {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pop_hero_cl {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes pop_hero_cl {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+/*** 퀵메뉴 : wel_quick_menu ***/
+.wel_quick_menu {
+  padding-top: 40px;
+}
+
+/* wel_quick_menu_cont */
+.wel_quick_menu_cont {
+  position: relative;
+  font-size: 0;
+  text-align: center;
+}
+
+.wel_quick_menu_cont li {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  padding: 0 4px;
+  vertical-align: top;
+}
+
+.wel_quick_menu_cont li:before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 40px;
+  margin-top: -20px;
+  border-left: 1px dashed #eaeaea;
+  content: "";
+}
+
+.wel_quick_menu_cont li:first-child:before {
+  display: none;
+}
+
+.wel_quick_menu_cont li a {
+  display: block;
+  text-align: center;
+}
+
+.wel_quick_menu_cont li .ico {
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.wel_quick_menu_cont li .ico img {
+  width: 60px;
+  height: 60px;
+}
+
+.wel_quick_menu_cont li .txt {
+  display: inline-block;
+  position: relative;
+  margin-top: 6px;
+  color: #000;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.wel_quick_menu_cont li .marker {
+  position: relative;
+}
+
+.wel_quick_menu_cont li .marker:after {
+  position: absolute;
+  right: -7px;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #da2128;
+  content: "";
+}
+
+/***** * 음반메인 * *****/

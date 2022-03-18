@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/***** * 웰컴메인 * *****/
+/*** 히어로 배너 : .wel_hero ***/
+.wel_hero {
+    position:relative;padding:0;
+}
+
+/* wel_hero_banner */
+.wel_hero_banner {
+    .option_box {display:none;position:absolute;right:calc(50% - 600px);bottom:20px;z-index:1;
+        .btn_all {
+            display:block;position:absolute;right:5px;top:0;width:36px;height:36px;background:url(../images/guide/ico_plus_w.svg) no-repeat 50%/ 11px;z-index:10;
+        }
+    }
+    .swiper-pagination.swiper-pagination-fraction {
+        position:static;height:36px;padding:0 40px 0 20px;background-color:rgba(0,0,0,0.3);transform:translateX(0);
+        .swiper-pagination-current,
+        .swiper-pagination-total {
+            font-size:16px;line-height:37px;
+        }
+    }
+    .play_pause_box {
+        margin-right:4px;
+        [class^=btn_] {
+            display:block;width:36px;height:36px;border-radius:50%;
+        }
+        .btn_play {
+            background:rgba(0,0,0,.3) url(../images/guide/ico_play.svg) no-repeat 50% / 8px;
+        }
+        .btn_pause {
+            background:rgba(0,0,0,.3) url(../images/guide/ico_pause.svg) no-repeat 50% / 6px;
+        }
+        &.play {
+            .btn_play {
+                display:none;
+            }
+            .btn_pause {
+                display:block;
+            }
+        }
+        &.pause {
+            .btn_play {
+                display:block;
+            }
+            .btn_pause {
+                display:none;
+            }
+        }
+    }
+
+    .swiper_control {
+        position:static;margin:0;
+    }
+    .swiper_control .swiper-button-next,
+    .swiper_control .swiper-button-prev {
+        position:absolute;top:50%;margin-top:-22px;z-index:10;
+    }
+    .swiper_control .swiper-button-next {
+        right:calc(50% - 670px);left:initial;
+    }
+    .swiper_control .swiper-button-prev {
+        left:calc(50% - 670px);
+    }
+
+    .swiper-slide-active {
+        .hero_banner_box {
+            .txt {
+                .s1 span {
+                    animation:txtTop both 0.4s 0.4s;
+                    &:nth-child(2) {
+                        animation-delay:0.6s;
+                    }
+                }
+                .s2 span {
+                    animation:fade both 0.4s 0.8s;
+                }
+            }
+        }
+    }
+    .swiper-slide:first-child:nth-last-child(1) {
+        .hero_banner_box {
+            .txt {
+            .s1 span {
+                animation:txtTop both 0.4s 0.4s;
+                &:nth-child(2) {
+                animation-delay:0.6s;
+                }
+            }
+            .s2 span {
+                animation:fade both 0.4s 0.8s;
+            }
+            }
+        }
+    }
+}
+.hero_banner_box {
+    position:relative;overflow:hidden;
+    a {
+        display:block;position:relative;
+    }
+    .img {
+        position:relative;width:100%;height:600px;background:#fff;overflow:hidden;
+        img {
+            position:absolute;left:50%;top:50%;max-width:1920px;height:auto;transform:translate(-50%,-50%);
+        }
+    }
+    .txt {
+        position:absolute;left:50%;top:0;width:1200px;height:100%;margin-left:-600px;
+        ul {
+            position:absolute;left:30px;top:50%;width:calc(100% - 60px);color:#fff;letter-spacing:-1px;transform:translateY(-53%);
+        }  
+        span {
+            display:block;position:relative;opacity:0;
+        }
+        .s1 {
+            font-size:44px;font-weight:700;line-height:64px;
+        }
+        .s2 {
+            margin-top:14px;font-size:24px;font-weight:500;line-height:34px;opacity:0.8;
+        }
+    }
+}
+
+/* 히어로 팝업 */
+.pop_hero {
+    display:none;position:fixed;left:0;bottom:0;width:100%;height:100%;z-index:100;
+    &:before {
+        position:absolute;left:0;top:0;width:100%;height:120%;background:rgba(0,0,0,0.5);content:"";opacity:0;transition:opacity 0.6s;
+    }
+    &.on {
+        display:block;
+        &:before {
+            opacity:1;
+        }
+        .pop_hero_cont {
+            animation:pop_hero_op both 0.5s 0.2s;
+        }
+    }
+    &.off {
+        display:block;
+        &:before {
+            opacity:0;
+        }
+        .pop_hero_cont {
+            animation:pop_hero_cl both 0.5s 0s;
+        }
+    }
+}
+.pop_hero_cont {
+    position:absolute;left:0;bottom:0;width:100%;max-width:750px;height:calc(100% - 128px);background:#fff;box-sizing:border-box;
+}
+@media only screen and (min-width:750px) {
+    .pop_hero_cont {
+        left:50%;margin-left:-375px;
+    }
+}
+.pop_hero_inner {
+    position:absolute;left:0;bottom:0;width:100%;height:calc(100% - 20px);padding-bottom:78px;box-sizing:border-box;overflow-y:auto;
+    .hero_banner_box {
+        > li {
+            margin:0 20px 12px 20px;border-radius:4px;overflow:hidden;
+        }
+    }
+    .txt {
+        span {
+            display:block;position:relative;opacity:1;
+        }
+    }
+}
+.btn_pop_hero_cl {
+    position:absolute;left:50%;top:-51px;width:36px;height:36px;margin-left:-18px;background:rgba(0,0,0,0.8);border-radius:50%;transform:rotate(45deg);
+    span {
+        position:absolute;left:50%;top:50%;width:19px;height:19px;transform:translate(-50%,-50%);
+        &:before {
+            position:absolute;left:9px;top:0;width:1px;height:100%;background:#fff;content:"";z-index:1;
+        }
+        &:after {
+            position:absolute;left:0;top:9px;width:100%;height:1px;background:#fff;content:"";z-index:1;
+        }
+    }
+}
+
+@keyframes pop_hero_op {
+0% {transform:translateY(100px);opacity:0;}
+100% {transform:translateY(0);opacity:1;}
+}
+@keyframes pop_hero_cl {
+0% {transform:translateY(0);opacity:1;}
+100% {transform:translateY(100px);opacity:0;}
+}
+
+
+
+/*** 퀵메뉴 : wel_quick_menu ***/
+.wel_quick_menu {
+    padding-top:40px;
+}
+
+/* wel_quick_menu_cont */
+.wel_quick_menu_cont {
+    position: relative;font-size:0;  text-align:center;
+    li {
+        display:inline-block;position:relative;width:120px;padding:0 4px;vertical-align:top;
+        &:before {
+            position:absolute;left:0;top:50%;width:1px;height:40px;margin-top:-20px;border-left:1px dashed #eaeaea;content:"";
+        }
+        &:first-child:before {
+            display:none;
+        }
+        a {
+            display:block;text-align:center;
+        }
+        .ico {
+            display:block;position:relative;width:60px;height:60px;margin:0 auto;
+            img {
+                width:60px;height:60px;
+            }
+        }
+        .txt {
+            display:inline-block;position:relative;margin-top:6px;color:#000;font-size:16px;line-height:19px;
+        }
+        .marker {
+            position:relative;
+            &:after {
+                position:absolute;right:-7px;top:0;width:4px;height:4px;border-radius:50%;background:#da2128;content:"";
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/***** * 음반메인 * *****/
+
+
+
+
+
+
+
+
+
+
