@@ -114,7 +114,7 @@ function thumb4banner(){
 
 $(function(){
     if(!$('.thumb4_banner').length) return;
-    thumb4banner();
+    //thumb4banner();
 });
 
 /*이벤트 기획전 말풍선*/
