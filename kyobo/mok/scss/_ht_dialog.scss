@@ -1873,6 +1873,7 @@ body.dialog_open {
     }
 }
 //공유하기 하단 팝업
+//[2022-03-18]공유하기 2가지 삭제되어 변경
 .share_sns_wrap{
 	padding:0 10px 30px 10px;
 	display:flex;
@@ -1880,8 +1881,8 @@ body.dialog_open {
 	justify-content: space-around;
 	span{
 		display: block;
-		width:25%;
-		@for $sns from 5 through 8 {
+		width:calc(100% / 3);
+		@for $sns from 4 through 6 {
 			&:nth-of-type(#{$sns}){
 				margin-top:20px;
 			}
