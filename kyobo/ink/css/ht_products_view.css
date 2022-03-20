@@ -14,14 +14,17 @@
 
 /*** 제품 이미지 .prod_view_img_cont  ***/
 .prod_view_img_cont {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 140px;
   float: left;
   width: 640px;
 }
 
 .prod_view_img_cont .swiper-button-prev,
 .prod_view_img_cont .swiper-button-next {
-  margin-top: -65px;
+  top: 298px;
+  margin-top: 0;
 }
 
 /* prod_view_img */
@@ -169,6 +172,14 @@
 
 .quick_area a:hover, .quick_area button:hover {
   background-color: #f2f2f2;
+}
+
+.quick_area.ty02 a:before {
+  background-image: url("../images/guide/ico_gomusic.svg");
+}
+
+.quick_area.ty03 a:before {
+  background-image: url("../images/guide/ico_gobluelay.svg");
 }
 
 /*** Magnify :제품상세 확대 ***/
@@ -571,9 +582,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.list_info dd p {
+  width: 100%;
 }
 
 .list_info .tooltip_wrap {

@@ -12,12 +12,23 @@ body {
 body {
     word-wrap:break-word;word-break:keep-all;white-space:normal;
 }
+.wrapper {
+    overflow:inherit;
+}
+.wrapper header {
+    position:relative;z-index:1001;;
+}
+.wrapper .container_wrapper {
+    min-height:500px;
+}
+
+
 
 .breadcrumb_wrap~.ht_contents_wrap {
     margin-top:42px;
 }
 .ht_contents_wrap {
-    position:relative;
+    position:relative;margin-top:42px;
     .contents_inner {
         position:relative;width:1200px;margin:0 auto;
     }
@@ -27,6 +38,9 @@ body {
 /***** Layout  *****/
 .ht_cont {
     position:relative;padding-bottom:60px;
+    &:last-child {
+        padding-bottom:0;
+    }
     &.ht_bg {
         padding:60px 0;
     }
@@ -55,12 +69,17 @@ body {
 }
 .ht_sub_area {
     position:relative;float:right;width:calc(100% - 206px);
+    .ht_cont {
+        &:last-child {
+            padding-bottom:60px;
+        }
+    }
 }
 
 
 /** LNB **/
 .ht_lnb {
-    position:relative;float:left;width:170px;
+    position:sticky;top:140px;float:left;width:170px;margin-bottom:60px;
     .tit {
         margin-bottom:28px;color:#000;font-size:20px;font-weight:700;line-height:30px;letter-spacing:-1px;
     }
