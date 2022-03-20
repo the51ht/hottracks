@@ -12,10 +12,10 @@
 
 /*** 제품 이미지 .prod_view_img_cont  ***/
 .prod_view_img_cont {
-    position:relative;float:left;width:640px;
+    position:sticky;top:140px;float:left;width:640px;
     .swiper-button-prev,
     .swiper-button-next {
-        margin-top:-65px;
+        top:298px;margin-top:0;
     }
 }
 
@@ -301,7 +301,10 @@
         width:105px;padding-right:15px;box-sizing:border-box;font-weight:700;
     }
     dd {
-        position:relative;width:calc(100% - 105px);padding-right:30px;box-sizing:border-box;display:flex;align-items:center;
+        position:relative;width:calc(100% - 105px);padding-right:30px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;
+        p {
+            width:100%;
+        }
     }
     .tooltip_wrap {
         position:absolute;right:0;top:-1px;

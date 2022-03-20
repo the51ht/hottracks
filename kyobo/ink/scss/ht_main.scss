@@ -149,11 +149,7 @@
 .pop_hero_cont {
     position:absolute;left:0;bottom:0;width:100%;max-width:750px;height:calc(100% - 128px);background:#fff;box-sizing:border-box;
 }
-@media only screen and (min-width:750px) {
-    .pop_hero_cont {
-        left:50%;margin-left:-375px;
-    }
-}
+
 .pop_hero_inner {
     position:absolute;left:0;bottom:0;width:100%;height:calc(100% - 20px);padding-bottom:78px;box-sizing:border-box;overflow-y:auto;
     .hero_banner_box {
@@ -237,6 +233,249 @@
 
 /***** * 음반메인 * *****/
 
+
+/*** 예약상품 : .mus_mc_reserved ***/
+.mus_mc_reserved {
+    .contents_inner {
+        width:100%;overflow:hidden;max-width:1800px;;
+    }
+    .ht_tit_big02 {
+        img {
+            position:relative;top:-5px;height:44px;margin-left:5px;;
+        }
+    }
+}
+
+/* .mus_mc_reserved_cont */
+.mus_mc_reserved_cont {
+    position:relative;margin:-100px auto 0 auto;width:1540px;
+    .star_fade_in{
+        img:nth-child(1){
+            position:absolute;right:50%;top:0;margin-right:-300px;
+        }
+        img:nth-child(2){
+            position:absolute;left:50%;bottom:90px;;margin-left:-290px;
+        }
+    }
+    .swiper-container {
+        padding-top:100px;overflow:inherit;
+    }
+    .swiper-wrapper {
+        margin-left:-178px;
+    }
+    .swiper-slide {
+        width:auto;
+        &.swiper-slide-active {
+            width:604px !important;z-index:2;
+            .product_pic {
+                margin-left:148px;
+                &:before {
+                    border-width:3px
+                }
+            }
+            &.zoom_in {
+                .product_pic {
+                    transform:scale(1);
+                }
+                .product_info {
+                    width:368px;margin-left:148px;opacity:1;transition-delay:0;
+                } 
+                .circle_txt {
+                    opacity:1;
+                    div {
+                        animation-name:rotate_txt, rotate_txt_loop;animation-fill-mode:forwards, forwards;animation-delay:0.1s, 1.5s;animation-duration:1.5s, 10s;animation-timing-function:ease-in-out, linear;animation-iteration-count:1, infinite;animation-direction:none;
+                    }
+                }  
+            }
+        }
+    }
+    a {
+        display:block;
+    }
+    .product_pic {
+        position:relative;width:368px;height:368px;padding:0;margin:0 auto;background:#f7f7f7;border-radius:12px;transform:scale(0.74);overflow:hidden;transition:transform 0.4s 0s;
+        img {
+            position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);
+        }
+        &:before {
+            position:absolute;left:0;top:0;width:100%;height:100%;border:4px solid #000;border-radius:12px;box-sizing:border-box;content:"";z-index:1;
+        }
+    }
+    .product_info {
+        position:relative;margin-top:22px;box-sizing:border-box;text-align:center;opacity:0;transition:opacity 0.6s 0.6s;
+        .s1 {
+            color:#595959;font-size:16px;line-height:24px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
+        }
+        .s2 {
+            margin-top:2px;color:#000;font-size:18px;margin-top:6px;font-weight:500;line-height:26px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
+        }
+        .badge_line {
+            margin-top:8px;
+        }
+    }
+    .circle_txt {
+        position:absolute;right:-160px;top:-15px;width:100%;height:100%;color:#fff;font-size:60px;font-weight:700;-webkit-text-stroke:0.2mm #000;text-stroke:0.2mm #000;letter-spacing:-2px;z-index:3;opacity:0;
+        div {
+            position:relative;opacity:0;
+        }
+        span:last-child {
+            opacity:0;
+        }
+    }
+    .swiper_control {
+        position:static;
+        .swiper-pagination {
+            height:14px !important;line-height:14px !important;
+            span {
+                line-height:14px !important;
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            position:absolute;top:262px;z-index:2;
+        }
+        .swiper-button-prev {
+            left:496px;
+        }
+        .swiper-button-next {
+            left:1000px;
+        }
+    }
+}
+@keyframes rotate_txt_loop {
+0% {transform:rotate(0deg);opacity:1;}
+100% {transform:rotate(360deg);opacity:1;}
+}
+@keyframes rotate_txt {
+0% {transform:rotate(180deg);opacity:0;}
+100% {transform:rotate(360deg);opacity:1;}
+}
+
+/* btn_mc_more */
+.btn_mc_more {
+    position:absolute;right:50%;top:4px;width:36px;height:36px;margin-right:-600px;
+    span {
+        position:absolute;left:50%;top:50%;width:25px;height:25px;margin:-12px 0 0 -12px;
+        &:before {
+            position:absolute;left:0;top:11px;width:100%;height:3px;background:#000;content:"";
+        }
+        &:after {
+            position:absolute;left:11px;top:0;width:3px;height:100%;background:#000;content:"";
+        }
+    }
+}
+
+
+
+/*** 주문 내역 : .mus_mc_order ***/
+.mus_mc_order {
+    padding:45px 0;background:#000;
+    .btn_more_view_box {
+        background:none !important;
+        strong {
+            color:#fff;
+            em:after {
+                border-color:#fff !important;
+            }
+        }
+    }
+}
+
+/* .mus_mc_order_cont */
+.mus_mc_order_cont {
+    position:relative;width:800px;margin:0 auto;
+    .swiper-slide {
+        width:800px;margin-right:20px;;
+        &:last-child {
+            margin-right:0;
+        }
+    }
+    a {
+        display:block;position:relative;
+    }
+    .swiper_control {
+        position:static;margin-top:0;
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;top:50%;margin-top:-22px;
+            &:after {
+                background:#000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;border-color:rgba(255,255,255,0.4);transition:all 0.4s;
+            }
+            &:hover:after {
+                background-color:rgba(255,255,255,0.3);border-color:rgba(255,255,255,0.8);
+            }
+        }
+        .swiper-button-prev {
+            left:-114px;
+        }
+        .swiper-button-next {
+            left:870px;
+        }
+    }
+}
+
+/* .mus_mc_order_box */
+.mus_mc_order_box {
+    position:relative;height:200px;padding:25px 40px;background:#c6fe00;border-radius:12px;box-sizing:border-box;
+    .img {
+        position:absolute;left:40px;top:25px;width:150px;height:150px;border-radius:50%;background:#f7f7f7;overflow:hidden;
+        img {
+            position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);
+        }
+        &:before {
+            position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);content:"";z-index:2;
+        }
+        .t1 {
+            position:absolute;left:0;top:50%;width:100%;transform:translateY(-40%);color:#fff;text-align:center;z-index:3;
+            strong {
+                display:block;width:100%;font-family:'Gmarket Sans';font-size:38px;font-weight:700;line-height:40px;letter-spacing:-2px;
+            }
+            span {
+                display:block;margin-top:-2px;width:100%;font-size:16px;font-weight:700;line-height:24px;
+            }
+        }
+    }
+    .txt {
+        position:relative;margin-left:190px;padding-top:5px;
+        li {
+            position:relative;color:#000;font-size:14px;font-weight:400;line-height:22px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
+        }
+        .s1 {
+            margin-top:3px;font-size:16px;font-weight:400;line-height:24px;
+        }
+        .s2 {
+            font-size:20px;font-weight:700;line-height:28px;
+        }
+        .s3 {
+            margin-top:10px;
+        }
+        .bar {
+            position:relative;height:35px;margin-top:5px;
+            p {
+                position:absolute;left:0;top:14px;width:405px;height:10px;background:rgba(0,0,0,0.2);border-radius:5px;
+                span {
+                    position:absolute;left:0;top:0;height:10px;background:#000;border-radius:5px;
+                    &:after {
+                        position:absolute;right:-6px;top:-11px;width:15px;height:31px;background:url('../images/main/ico_mus_mc_order.svg') center/100% no-repeat;content:"";
+                    }
+                }
+            }
+            strong {
+                position:absolute;left:428px;top:10px;
+            }
+        }
+    }
+}
+.swiper-slide-active {
+    .txt .bar span {
+        animation:mus_mc_order_box both 1.6s 1s;
+    }
+}
+@keyframes mus_mc_order_box {
+0% {opacity:0;transform:translateX(-100%);}
+10% {opacity:1;}
+100% {opacity:1;transform:translateX(0%);}
+}
 
 
 

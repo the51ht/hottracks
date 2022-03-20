@@ -15,11 +15,12 @@
 <link rel="apple-touch-icon" href="./images/layout/apple-touch-icon.png">
 <!-- front ui
 ================================================== -->
-<link rel="stylesheet" type="text/css" href="../mok/wsg/ia_resources/fonts/nanumsquare.css">
-<link rel="stylesheet" type="text/css" href="../mok/wsg/ia_resources/glim.css">
-<script src="../mok/wsg/ia_resources/jquery-3.6.0.min.js"></script>
-<script src="../mok/wsg/ia_resources/glim.js"></script>
+<link rel="stylesheet" type="text/css" href="../ink/wsg/ia_resources/fonts/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="../ink/wsg/ia_resources/glim.css">
+<script src="../ink/wsg/ia_resources/jquery-3.6.0.min.js"></script>
+<script src="../ink/wsg/ia_resources/glim.js"></script>
 <style>
+tr td:nth-child(2) {font-weight:700;}
 .point td {background-color:#fff4f1 !important}
 .point .col_date {color:#cb0000;font-weight:700;}
 .point .chk td {background-color:#fecabc !important}
@@ -38,7 +39,7 @@
 .point03 .chk td {background-color:#f4feb4 !important}
 
 .point05 td {background-color:#eee6ff !important}
-.point05 .col_date {color:#cb0000;font-weight:700;}
+
 
 .hid td {background-color:#eee !important}
 
@@ -67,10 +68,10 @@
 				<!--e : PC Case-->
 				<!--s : Mobile Case-->
 				<nav class="ia_header_guide_mobile" onclick="javascript:funcIAMenuDropdown();">
-					<button type="button" class="g_node_title">MOBILE-OOO</button>
+					<button type="button" class="g_node_title">PC</button>
 					<ul>
 						<li class="is_current">
-							<a href="../ink/index_ink.html">WeB-OOO</a>
+							<a href="../mok/index_mok.html">MOBILE</a>
 						</li>
 					</ul>
 				</nav>
@@ -225,10 +226,10 @@
 											<td class="col_memo" data-label="비고">
 											</td>
 										</tr>
-										<tr>
+										<tr class="point05">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"></td>
-											<td class="col_2depth" data-label="2Depth">제품목록</td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m5">COMMON</p>제품목록</td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
 												<a href="html/guide/00_products_list.html" target="_blank">html/guide/00_products_list.html</a>
@@ -255,7 +256,7 @@
 										<tr class="point05">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"></td>
-											<td class="col_2depth" data-label="2Depth">팝업</td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m5">POP</p>팝업</td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
 												<a href="./html/guide/00_pop_guide.html" target="_blank">/html/guide/00_pop_guide.html</a>
@@ -276,7 +277,7 @@
 					<!-- //Common -->
 
 					<!-- Main Layout -->
-					<section class="ia_section ia_section_list" style="display:none;">
+					<section class="ia_section ia_section_list">
 						<div class="ia_section_header">
 							<h2 class="ia_h2"><a href="#this" class="ui_accordion_toggle">Main Layout</a></h2>
 							<div class="ia_legend">
@@ -302,7 +303,8 @@
 											</th>
 										</tr>
 									</thead>
-									<tbody>
+									<!--<tbody>
+										
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth">스플래시</td>
@@ -363,7 +365,7 @@
 												<div class="col_memo_con"></div>
 											</td>
 										</tr>
-									</tbody>
+									</tbody>-->
 
 
 									<!-- 음반 -->
@@ -374,7 +376,7 @@
 											<td class="col_2depth" data-label="2Depth">음반메인</td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
-												<a href="html/music/HTR-M-MUS-MAIN-000.html" target="_blank">html/music/HTR-M-MUS-MAIN-000.html</a>
+												<a href="./html/music/HTR-P-MUS-MAIN-000.html" target="_blank">html/music/HTR-M-MUS-MAIN-000.html</a>
 											</td>
 											<td class="col_date" data-label="날짜">22-02-28</td>
 											<td class="col_complete" data-label="상태"></td>
@@ -382,7 +384,7 @@
 
 											</td>
 										</tr>
-										<tr>
+										<!--<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m3">JE</p></td>
 											<td class="col_2depth" data-label="2Depth"></td>
@@ -582,7 +584,7 @@
 											<td class="col_memo" data-label="비고">
 												AUDIOPHILE 페이지와 동일
 											</td>
-										</tr>
+										</tr>-->
 
 
 
@@ -618,8 +620,8 @@
 										</tr>-->
 									</tbody>
 
-
-									<tbody>
+									
+									<tbody style="display:none;">
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth">다이어리</td>
@@ -671,7 +673,7 @@
 									
 
 									<!-- 오늘만 특가 -->
-									<tbody class="point">
+									<tbody style="display:none;">
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p>오늘만 특가</td>
@@ -719,7 +721,7 @@
 
 
 									<!-- 베스트/신상품/무료배송 -->
-									<tbody class="point">
+									<tbody style="display:none;">
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p>베스트</td>
@@ -827,7 +829,7 @@
 
 
 									<!-- 브랜드샵 -->
-									<tbody class="point04">
+									<tbody style="display:none;">
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p>브랜드샵</td>
@@ -847,7 +849,7 @@
 
 
 									<!-- 선물추천 -->
-									<tbody class="point02">
+									<tbody style="display:none;">
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m2">BG</p>선물추천</td>
@@ -951,7 +953,7 @@
 
 									
 									<!-- 라이브 -->
-									<tbody class="point02">
+									<tbody style="display:none;">
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m2">BG</p>라이브</td>
@@ -1044,7 +1046,7 @@
 									<!-- //라이브 -->
 
 									<!-- 큐레이션 -->
-									<tbody class="point04">
+									<tbody style="display:none;">
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p>큐레이션</td>
@@ -1133,7 +1135,7 @@
 									<!-- //큐레이션 -->
 
 									<!-- ONLY핫트랙스 -->
-									<tbody>
+									<tbody style="display:none;">
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth">ONLY핫트랙스</td>
@@ -1497,8 +1499,8 @@
 									<body>
 										<tr class="point05">
 											<td class="col_num" data-label="번호"></td>
-											<td class="col_1depth" data-label="1Depth">상품상세</td>
-											<td class="col_2depth" data-label="2Depth">Template</td>
+											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p>상품상세</td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m5">COMMON</p>Template</td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
 												<a href="html/info/HTR-P-COM-VIEW-common.html" target="_blank">html/info/HTR-P-COM-VIEW-common.html</a>
@@ -1514,8 +1516,8 @@
 										</tr>
 										<tr class="point05">
 											<td class="col_num" data-label="번호"></td>
-											<td class="col_1depth" data-label="1Depth"></td>
-											<td class="col_2depth" data-label="2Depth">팝업</td>
+											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p></td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m5">POP</p>팝업</td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
 												<a href="html/info/HTR-P-COM-VIEW-pop.html" target="_blank">html/info/HTR-P-COM-VIEW-pop.html</a>
@@ -1528,7 +1530,7 @@
 												</ul>
 											</td>
 										</tr>
-										<tr class="point04">
+										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p></td>
 											<td class="col_2depth" data-label="2Depth">기본형</td>
@@ -1541,7 +1543,7 @@
 											<td class="col_memo" data-label="비고">
 											</td>
 										</tr>
-										<tr class="point03">
+										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m3">JE</p></td>
 											<td class="col_2depth" data-label="2Depth">음반</td>
@@ -1554,7 +1556,7 @@
 											<td class="col_memo" data-label="비고">
 											</td>
 										</tr>
-										<tr class="point04">
+										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p></td>
 											<td class="col_2depth" data-label="2Depth">영상</td>
@@ -1567,7 +1569,7 @@
 											<td class="col_memo" data-label="비고">
 											</td>
 										</tr>
-										<tr class="point04">
+										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p></td>
 											<td class="col_2depth" data-label="2Depth">음반공구</td>
@@ -2004,7 +2006,7 @@
 											</th>
 										</tr>
 									</thead>
-									<tbody class="point">
+									<tbody>
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p>카테고리 목록</td>
@@ -2050,7 +2052,7 @@
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p></td>
-											<td class="col_2depth" data-label="2Depth">팝업</td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m5">POP</p>팝업</td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
 												<a href="html/category/HTR-P-CTG-LIST-001-POP.html" target="_blank">html/category/HTR-P-CTG-LIST-001-POP.html</a>

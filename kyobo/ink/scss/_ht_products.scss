@@ -290,9 +290,12 @@
 
 /* 3단 */
 .evt_list.type3 {
-	 width:calc(100% + 36px);
+	 width:calc(100% + 36px);margin-top:0;
 	&> li {
 		width:376px;
+		&:nth-child(-n + 3) {
+			margin-top:0;
+		}
 	}
 	.discount_icon {
 		left:-9px;width:60px;height:60px;font-size:15px;line-height:60px;
@@ -343,7 +346,7 @@
 		width:calc(100% + 36px);margin-right:-36px;
 	}
 	.swiper-slide {
-		position:relative;width:calc(25% - 36px);margin-right:36px;box-sizing:border-box;box-sizing:border-box;border-radius:12px;
+		position:relative;width:calc(25% - 36px) !important;margin-right:36px;box-sizing:border-box;box-sizing:border-box;border-radius:12px;
 		&:before {
 			position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #000;box-sizing:border-box;border-radius:12px;content:"";
 		}
@@ -371,7 +374,7 @@
 .swiper_control {
 	display:none;position:relative;margin-top:20px;text-align:center;
 	.swiper-pagination.swiper-pagination-fraction {
-		display:inline-block;position:relative;left:0;bottom:0;min-width:65px;height:44px;background:none;transform:translateX(0);color:#767676;line-height:44px;vertical-align:top;
+		display:inline-block;position:relative;left:0;bottom:0;min-width:65px;height:44px;background:none;transform:translateX(0);color:#767676;line-height:44px;vertical-align:top;overflow:hidden;
 		span {
 			font-size:16px;line-height:44px !important;
 		}
@@ -384,10 +387,7 @@
 	}
 	.swiper-button-next,
 	.swiper-button-prev {
-		display:inline-block;position:relative;left:0;top:0;margin:0;background:none;border-radius:0;
-		&:before {
-			position:absolute;top:-20px;width:50%;height:64px;background-color:#fff;content:"";
-		}
+		display:inline-block;position:relative;left:0;top:0;margin:0;background:none;border-radius:0;;vertical-align:top;
 		&:after {
 			position:absolute;left:0;top:0;width:100%;height:100%;background:#fff url('../images/guide/btn_banner_pagn.svg') center no-repeat;border:1px solid #ccc;border-radius:50%;box-sizing:border-box;vertical-align:top;transition:background 0.4s;content:"";
 		}
@@ -414,6 +414,7 @@
     }
 }
 .swiper-on {
+	.swiper_control,
 	.swiper_control_bk {
 		display:block;
 	}
@@ -451,7 +452,7 @@
 			width:calc(100% + 30px);margin-right:-30px;
 		}
 		.swiper-slide {
-			width:calc(25% - 30px);margin-right:30px;
+			width:calc(25% - 30px) !important;margin-right:30px;
 		}
 		.product_info {
 			margin-top:10px;

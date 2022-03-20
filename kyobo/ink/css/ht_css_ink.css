@@ -1012,10 +1012,15 @@ button.btn_lg {
 /* 3단 */
 .evt_list.type3 {
   width: calc(100% + 36px);
+  margin-top: 0;
 }
 
 .evt_list.type3 > li {
   width: 376px;
+}
+
+.evt_list.type3 > li:nth-child(-n + 3) {
+  margin-top: 0;
 }
 
 .evt_list.type3 .discount_icon {
@@ -1136,7 +1141,7 @@ button.btn_lg {
 
 .thumb4_banner .swiper-slide {
   position: relative;
-  width: calc(25% - 36px);
+  width: calc(25% - 36px) !important;
   margin-right: 36px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1207,6 +1212,7 @@ button.btn_lg {
   color: #767676;
   line-height: 44px;
   vertical-align: top;
+  overflow: hidden;
 }
 
 .swiper_control .swiper-pagination.swiper-pagination-fraction span {
@@ -1232,16 +1238,7 @@ button.btn_lg {
   margin: 0;
   background: none;
   border-radius: 0;
-}
-
-.swiper_control .swiper-button-next:before,
-.swiper_control .swiper-button-prev:before {
-  position: absolute;
-  top: -20px;
-  width: 50%;
-  height: 64px;
-  background-color: #fff;
-  content: "";
+  vertical-align: top;
 }
 
 .swiper_control .swiper-button-next:after,
@@ -1285,6 +1282,7 @@ button.btn_lg {
   right: -22px;
 }
 
+.swiper-on .swiper_control,
 .swiper-on .swiper_control_bk {
   display: block;
 }
@@ -1342,7 +1340,7 @@ button.btn_lg {
 }
 
 .ht_sub_area .thumb4_banner .swiper-slide {
-  width: calc(25% - 30px);
+  width: calc(25% - 30px) !important;
   margin-right: 30px;
 }
 
@@ -1412,13 +1410,26 @@ body {
   white-space: normal;
 }
 
+.wrapper {
+  overflow: inherit;
+}
+
+.wrapper header {
+  position: relative;
+  z-index: 1001;
+}
+
+.wrapper .container_wrapper {
+  min-height: 500px;
+}
+
 .breadcrumb_wrap ~ .ht_contents_wrap {
   margin-top: 42px;
 }
 
 .ht_contents_wrap {
   position: relative;
-  padding-top: 60px;
+  margin-top: 42px;
 }
 
 .ht_contents_wrap .contents_inner {
@@ -1431,6 +1442,10 @@ body {
 .ht_cont {
   position: relative;
   padding-bottom: 60px;
+}
+
+.ht_cont:last-child {
+  padding-bottom: 0;
 }
 
 .ht_cont.ht_bg {
@@ -1481,11 +1496,18 @@ body {
   width: calc(100% - 206px);
 }
 
+.ht_sub_area .ht_cont:last-child {
+  padding-bottom: 60px;
+}
+
 /** LNB **/
 .ht_lnb {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 140px;
   float: left;
   width: 170px;
+  margin-bottom: 60px;
 }
 
 .ht_lnb .tit {
@@ -2089,9 +2111,23 @@ body {
   margin-bottom: 30px;
 }
 
+.tab_ty .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .tab_ty li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   width: auto;
+  height: auto;
   margin-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .tab_ty li:first-child {
@@ -2100,20 +2136,22 @@ body {
 
 .tab_ty a {
   display: block;
-  position: relative;
-  height: 50px;
-  padding: 0 20px;
+  padding: 13px 20px 11px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: #fff;
-  border-radius: 25px;
   color: #000;
   font-size: 16px;
   font-weight: 700;
-  line-height: 52px;
+  line-height: 26px;
   white-space: nowrap;
+  text-align: center;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+}
+
+.tab_ty a span {
+  position: relative;
+  z-index: 2;
 }
 
 .tab_ty a:before {
@@ -2122,27 +2160,30 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
+  background: #fff;
   border: 1px solid #ddd;
-  border-radius: 25px;
+  border-radius: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   content: "";
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .tab_ty a:first-child {
   margin-left: 0;
 }
 
-.tab_ty a:hover {
+.tab_ty a:hover:before {
   background-color: #f4f4f4;
 }
 
 .tab_ty a.on {
-  background: #000;
   color: #fff;
 }
 
 .tab_ty a.on:before {
+  background-color: #000;
   border-color: #000;
 }
 
@@ -2155,37 +2196,12 @@ body {
   overflow: hidden;
 }
 
-.tab_ty.ty02 a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: 76px;
-  padding: 10px 20px 9px 20px;
-  border-radius: 38px;
-  line-height: 26px;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.tab_ty.ty02 a:before {
-  border-radius: 38px;
-}
-
-/*tab_sm*/
+/* tab_sm */
 .tab_sm a {
   height: 33px;
-  line-height: 34px;
   padding: 0 14px;
   font-size: 12px;
-  letter-spacing: -0.01em;
+  line-height: 34px;
 }
 
 .tab_sm a:before {
@@ -2217,27 +2233,47 @@ body {
   width: auto;
 }
 
+.tab_swiper .swiper_control {
+  position: static;
+  margin-top: 0;
+}
+
 .tab_swiper .swiper_control .swiper-button-prev, .tab_swiper .swiper_control .swiper-button-next {
   position: absolute;
+  top: 50%;
+  margin-top: -22px;
+}
+
+.tab_swiper .swiper_control .swiper-button-prev:before, .tab_swiper .swiper_control .swiper-button-next:before {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 300%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(255, 255, 255, 0)), to(white));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, white 100%);
+  content: "";
+}
+
+.tab_swiper .swiper_control .swiper-button-prev:after, .tab_swiper .swiper_control .swiper-button-next:after {
+  border-color: #000;
 }
 
 .tab_swiper .swiper_control .swiper-button-prev.swiper-button-disabled, .tab_swiper .swiper_control .swiper-button-next.swiper-button-disabled {
   display: none;
 }
 
+.tab_swiper .swiper_control .swiper-button-prev:hover:after, .tab_swiper .swiper_control .swiper-button-next:hover:after {
+  background: #000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;
+}
+
 .tab_swiper .swiper_control .swiper-button-prev {
-  top: -67px;
   left: 0;
 }
 
 .tab_swiper .swiper_control .swiper-button-next {
-  right: 0;
-  top: -67px;
   left: initial;
-}
-
-.tab_swiper.ty02 .swiper_control .swiper-button-prev, .tab_swiper.ty02 .swiper_control .swiper-button-next {
-  top: -80px;
+  right: 0;
 }
 
 /* tab_cont */
@@ -2401,9 +2437,9 @@ body {
 .point_line:before {
   position: absolute;
   left: -2px;
-  top: 15px;
+  top: 26px;
   width: calc(100% + 4px);
-  height: 14px;
+  height: 24px;
   background: #bff06f;
   content: "";
   z-index: 0;
