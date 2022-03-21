@@ -94,6 +94,46 @@
 		<section class="ht_contents_wrap mus_main_warp">
 			<h1 class="hidden">음반</h1>
 
+			<script>
+				//배너 확인용
+				$(function(){
+					$(document).on('click', '.main_tab_menu a', function(){
+						$(this).addClass('active').siblings().removeClass('active');
+						$(this).parent().attr('class', 'main_tab_menu').addClass('active'+$(this).index());
+					});
+				});
+				</script>
+
+			<!-- 음반메인 컨텐츠 -->
+            <section class="main_cont_wrap cont_wrap" style="display:none">
+                <!-- 음반메인 탭 -->
+                <div class="main_tab_menu active0">
+                    <a href="#a" class="active">
+                        <em class="icon"></em>
+                        <span class="txt">음반</span>
+                    </a>
+                    <a href="#b">
+                        <em class="icon"></em>
+                        <span class="txt">DVD</span>
+                    </a>
+                    <a href="#c">
+                        <em class="icon"></em>
+                        <span class="txt">BLU-RAY</span>
+                    </a>
+                </div>       
+                <!-- //음반메인 탭 -->
+			</section>
+            <!-- //음반메인 컨텐츠 -->
+
+			<!-- mus_tit_nav -->
+			<nav class="mus_tit_nav">
+				<a href="#n"><span>음반</span></a>
+				<a href="#n"><span>DVD</span></a>
+				<a href="#n"><span>BLU-RAY</span></a>
+			</nav>
+			<!-- //mus_tit_nav -->
+
+
 			<!-- ht_cont : 히어로배너 -->
 			<div class="ht_cont wel_hero">
 				<h2 class="hidden">히어로배너</h2>
@@ -630,6 +670,7 @@
 
 			<!-- ht_cont : 실시간 차트 - .mus_mc_chart -->
 			<div class="ht_cont ht_bg ht_dep mus_mc_chart">
+				<!-- contents_inner -->
 				<div class="contents_inner">
 					<h2 class="ht_tit_big02"><strong class="point_line ty02"><em>실시간 차트<img src="../../../mok/images/main/tit_mus_mc_chart.svg" alt=""></em></strong>를 확인하세요</h2>
 
@@ -655,154 +696,172 @@
 					</div>
 					<!-- //tab_center -->
 				</div>
+				<!-- //contents_inner -->
+
+<script>
+var i = 0;
+setInterval(function(){
+if(i>4){
+    i = 0;
+    $(".mus_mc_chart_cont .li.active").removeClass("active");
+    $(".mus_mc_chart_cont .li").eq(i).addClass("active");
+}else{
+    $(".mus_mc_chart_cont .li.active").removeClass("active");
+    $(".mus_mc_chart_cont .li").eq(i).addClass("active");
+    i++;
+}
+}, 4000)
+</script>
 				
-					<!-- mus_mc_chart_cont -->
-					<ul class="mus_mc_chart_cont">
-						<!-- .li 반복 -->
-						<li class="li active"><!-- 활성화 class="active" -->
-							<div class="contents_inner">
-								<div class="rank_txt">
-									<span class="num">1</span>
-									<span class="fluctuation new">NEW</span>
-								</div>
-								<p class="img"><img src="../../../mok/images/temp/@img_mus_prod01.png" alt=""></p>
-								<ul class="txt">
-									<li class="s1">JEON SOMI(전소미)</li>
-									<li class="s2">THE FIRST ALBUM XOXO [키트]</li>
-									<li class="s3">
-										<strong>50%</strong>
-										<span>134,000</span>
-										<em>129,000</em>
-									</li>
-									<li class="ico_marker_area">
-										<span class="ico_marker on">포스터</span>
-										<span class="ico_marker">사은품</span>
-										<span class="ico_marker">수입</span>
-										<span class="ico_marker">예약</span>
-									</li>
-								</ul>
-								<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+				<!-- mus_mc_chart_cont -->
+				<ul class="mus_mc_chart_cont">
+					<!-- .li 반복 -->
+					<li class="li active"><!-- 활성화 class="active" -->
+						<div class="contents_inner">
+							<div class="rank_txt">
+								<span class="num">1</span>
+								<span class="fluctuation new">NEW</span>
 							</div>
-						</li>
-						<!-- //.li 반복 -->
+							<p class="img"><img src="../../images/temp/@img_mus_prod01.png" alt=""></p>
+							<ul class="txt">
+								<li class="s1">JEON SOMI(전소미)</li>
+								<li class="s2">THE FIRST ALBUM XOXO [키트]</li>
+								<li class="s3">
+									<strong>50%</strong>
+									<span>134,000</span>
+									<em>129,000</em>
+								</li>
+								<li class="ico_marker_area">
+									<div class="badge_line">
+										<span class="badge on">포스터</span>
+										<span class="badge">사은품</span>
+										<span class="badge">수입</span>
+										<span class="badge">예약</span>
+									</div>
+								</li>
+							</ul>
+							<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+						</div>
+					</li>
+					<!-- //.li 반복 -->
 
-						<li class="li">
-							<div class="contents_inner">
-								<div class="rank_txt">
-									<span class="num">2</span>
-									<span class="fluctuation down">1</span>
-								</div>
-								<p class="img"><img src="../../../mok/images/temp/@img_mus_prod02.png" alt=""></p>
-								<ul class="txt">
-									<li class="s1">JEON SOMI(전소미)</li>
-									<li class="s2">THE FIRST ALBUM XOXO THE FIRST ALBUM XOXO [키트]</li>
-									<li class="s3">
-										<strong>50%</strong>
-										<span>134,000</span>
-										<em>129,000</em>
-									</li>
-									<li class="ico_marker_area">
-										<span class="ico_marker on">포스터</span>
-										<span class="ico_marker">사은품</span>
-										<span class="ico_marker">수입</span>
-										<span class="ico_marker">예약</span>
-									</li>
-								</ul>
-								<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+					<li class="li">
+						<div class="contents_inner">
+							<div class="rank_txt">
+								<span class="num">2</span>
+								<span class="fluctuation down">1</span>
 							</div>
-						</li>
-						<li class="li">
-							<div class="contents_inner">
-								<div class="rank_txt">
-									<span class="num">3</span>
-									<span class="fluctuation up">7</span>
-								</div>
-								<p class="img"><img src="../../../mok/images/temp/@img_mus_prod03.png" alt=""></p>
-								<ul class="txt">
-									<li class="s1">JEON SOMI(전소미)</li>
-									<li class="s2">THE FIRST ALBUM XOXO [키트]</li>
-									<li class="s3">
-										<strong>50%</strong>
-										<span>134,000</span>
-										<em>129,000</em>
-									</li>
-									<li class="ico_marker_area">
-										<span class="ico_marker on">포스터</span>
-										<span class="ico_marker">사은품</span>
-										<span class="ico_marker">수입</span>
-										<span class="ico_marker">예약</span>
-									</li>
-								</ul>
-								<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+							<p class="img"><img src="../../images/temp/@img_mus_prod02.png" alt=""></p>
+							<ul class="txt">
+								<li class="s1">JEON SOMI(전소미)</li>
+								<li class="s2">THE FIRST ALBUM XOXO THE FIRST ALBUM XOXO [키트]</li>
+								<li class="s3">
+									<strong>50%</strong>
+									<span>134,000</span>
+									<em>129,000</em>
+								</li>
+								<li class="ico_marker_area">
+									<div class="badge_line">
+										<span class="badge on">포스터</span>
+										<span class="badge">사은품</span>
+										<span class="badge">수입</span>
+										<span class="badge">예약</span>
+									</div>
+								</li>
+							</ul>
+							<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+						</div>
+					</li>
+					<li class="li">
+						<div class="contents_inner">
+							<div class="rank_txt">
+								<span class="num">3</span>
+								<span class="fluctuation up">7</span>
 							</div>
-						</li>
-						<li class="li">
-							<div class="contents_inner">
-								<div class="rank_txt">
-									<span class="num">4</span>
-									<span class="fluctuation">-</span>
-								</div>
-								<p class="img"><img src="../../../mok/images/temp/@img_mus_prod04.png" alt=""></p>
-								<ul class="txt">
-									<li class="s1">JEON SOMI(전소미)</li>
-									<li class="s2">THE FIRST ALBUM XOXO [키트]</li>
-									<li class="s3">
-										<strong>50%</strong>
-										<span>134,000</span>
-										<em>129,000</em>
-									</li>
-									<li class="ico_marker_area">
-										<span class="ico_marker on">포스터</span>
-										<span class="ico_marker">사은품</span>
-										<span class="ico_marker">수입</span>
-										<span class="ico_marker">예약</span>
-									</li>
-								</ul>
-								<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+							<p class="img"><img src="../../images/temp/@img_mus_prod03.png" alt=""></p>
+							<ul class="txt">
+								<li class="s1">JEON SOMI(전소미)</li>
+								<li class="s2">THE FIRST ALBUM XOXO [키트]</li>
+								<li class="s3">
+									<strong>50%</strong>
+									<span>134,000</span>
+									<em>129,000</em>
+								</li>
+								<li class="ico_marker_area">
+									<div class="badge_line">
+										<span class="badge on">포스터</span>
+										<span class="badge">사은품</span>
+										<span class="badge">수입</span>
+										<span class="badge">예약</span>
+									</div>
+								</li>
+							</ul>
+							<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+						</div>
+					</li>
+					<li class="li">
+						<div class="contents_inner">
+							<div class="rank_txt">
+								<span class="num">4</span>
+								<span class="fluctuation">-</span>
 							</div>
-						</li>
-						<li class="li">
-							<div class="contents_inner">
-								<div class="rank_txt">
-									<span class="num">5</span>
-									<span class="fluctuation">-</span>
-								</div>
-								<p class="img"><img src="../../../mok/images/temp/@img_mus_prod03.png" alt=""></p>
-								<ul class="txt">
-									<li class="s1">JEON SOMI(전소미)</li>
-									<li class="s2">THE FIRST ALBUM XOXO [키트]</li>
-									<li class="s3">
-										<strong>50%</strong>
-										<span>134,000</span>
-										<em>129,000</em>
-									</li>
-									<li class="ico_marker_area">
-										<span class="ico_marker on">포스터</span>
-										<span class="ico_marker">사은품</span>
-										<span class="ico_marker">수입</span>
-										<span class="ico_marker">예약</span>
-									</li>
-								</ul>
-								<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+							<p class="img"><img src="../../images/temp/@img_mus_prod04.png" alt=""></p>
+							<ul class="txt">
+								<li class="s1">JEON SOMI(전소미)</li>
+								<li class="s2">THE FIRST ALBUM XOXO [키트]</li>
+								<li class="s3">
+									<strong>50%</strong>
+									<span>134,000</span>
+									<em>129,000</em>
+								</li>
+								<li class="ico_marker_area">
+									<div class="badge_line">
+										<span class="badge on">포스터</span>
+										<span class="badge">사은품</span>
+										<span class="badge">수입</span>
+										<span class="badge">예약</span>
+									</div>
+								</li>
+							</ul>
+							<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+						</div>
+					</li>
+					<li class="li">
+						<div class="contents_inner">
+							<div class="rank_txt">
+								<span class="num">5</span>
+								<span class="fluctuation">-</span>
 							</div>
-						</li>
-					</ul>
-					<!-- //mus_mc_chart_cont -->
-
+							<p class="img"><img src="../../images/temp/@img_mus_prod01.png" alt=""></p>
+							<ul class="txt">
+								<li class="s1">JEON SOMI(전소미)</li>
+								<li class="s2">THE FIRST ALBUM XOXO [키트]</li>
+								<li class="s3">
+									<strong>50%</strong>
+									<span>134,000</span>
+									<em>129,000</em>
+								</li>
+								<li class="ico_marker_area">
+									<div class="badge_line">
+										<span class="badge on">포스터</span>
+										<span class="badge">사은품</span>
+										<span class="badge">수입</span>
+										<span class="badge">예약</span>
+									</div>
+								</li>
+							</ul>
+							<button class="btn_chart_view"><span class="hidden">차트보기</span></button>
+						</div>
+					</li>
+				</ul>
+				<!-- //mus_mc_chart_cont -->
 			</div>
 			<!-- //ht_cont : 실시간 차트 -->
 
 
 
-
-
-
-
-
-			<p style="height:200px;background:#ddd  ;"></p>
-
 			<!-- ht_cont : 회원 추천 - .mus_mc_memb -->
-			<div class="ht_cont mus_mc_memb ht_bg" style="background-color:#E1F7E5;">
+			<div class="ht_cont mus_mc_memb ht_bg">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big02">김미미님을 위한 추천</h2>
 
@@ -817,22 +876,19 @@
 						<!-- prod_item 반복 -->
 						<li class="prod_item">
 							<div class="product_pic">
-								<img src="../../images/temp/guide/@tod_prod_sample1.svg" class="bd_img" alt="">
+								<img src="../../images/temp/@img_prod01.jpg" alt="">
 							</div>
 							<a href="javascript:alert('제품상세');">
 								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">9,234,000</span>
-										<span class="price_origin">9,200,000</span>
+									<div class="product_info_inner">
+										<div class="company">dretec</div>
+										<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">9,234,000</span>
+											<span class="price_origin">9,200,000</span>
+										</div>
 									</div>
-									<!--<div class="badge_line">
-										<span class="badge rounded badge_primary_evt">쿠폰</span>
-										<span class="badge rounded badge_default_evt">사은품</span>
-										<span class="badge rounded badge_default_evt">무료배송</span>
-									</div>-->
 								</div>
 							</a>
 						</li>
@@ -841,22 +897,19 @@
 						<!-- prod_item 반복 -->
 						<li class="prod_item">
 							<div class="product_pic">
-								<img src="../../images/temp/guide/@tod_prod_sample2.svg" class="bd_img" alt="">
+								<img src="../../images/temp/@img_prod02.jpg" alt="">
 							</div>
 							<a href="javascript:alert('제품상세');">
 								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">9,234,000</span>
-										<span class="price_origin">9,200,000</span>
+									<div class="product_info_inner">
+										<div class="company">dretec</div>
+										<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">9,234,000</span>
+											<span class="price_origin">9,200,000</span>
+										</div>
 									</div>
-									<!--<div class="badge_line">
-										<span class="badge rounded badge_primary_evt">쿠폰</span>
-										<span class="badge rounded badge_default_evt">사은품</span>
-										<span class="badge rounded badge_default_evt">무료배송</span>
-									</div>-->
 								</div>
 							</a>
 						</li>
@@ -864,22 +917,19 @@
 						<!-- prod_item 반복 -->
 						<li class="prod_item">
 							<div class="product_pic">
-								<img src="../../images/temp/guide/@tod_prod_sample3.svg" class="bd_img" alt="">
+								<img src="../../images/temp/@img_prod03.jpg" alt="">
 							</div>
 							<a href="javascript:alert('제품상세');">
 								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">9,234,000</span>
-										<span class="price_origin">9,200,000</span>
+									<div class="product_info_inner">
+										<div class="company">dretec</div>
+										<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">9,234,000</span>
+											<span class="price_origin">9,200,000</span>
+										</div>
 									</div>
-									<!--<div class="badge_line">
-										<span class="badge rounded badge_primary_evt">쿠폰</span>
-										<span class="badge rounded badge_default_evt">사은품</span>
-										<span class="badge rounded badge_default_evt">무료배송</span>
-									</div>-->
 								</div>
 							</a>
 						</li>
@@ -887,27 +937,23 @@
 						<!-- prod_item 반복 -->
 						<li class="prod_item">
 							<div class="product_pic">
-								<img src="../../images/temp/guide/@tod_prod_sample4.svg" class="bd_img" alt="">
+								<img src="../../images/temp/@img_prod04.jpg" alt="">
 							</div>
 							<a href="javascript:alert('제품상세');">
 								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">9,234,000</span>
-										<span class="price_origin">9,200,000</span>
+									<div class="product_info_inner">
+										<div class="company">dretec</div>
+										<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">9,234,000</span>
+											<span class="price_origin">9,200,000</span>
+										</div>
 									</div>
-									<!--<div class="badge_line">
-										<span class="badge rounded badge_primary_evt">쿠폰</span>
-										<span class="badge rounded badge_default_evt">사은품</span>
-										<span class="badge rounded badge_default_evt">무료배송</span>
-									</div>-->
 								</div>
 							</a>
 						</li>
 						<!-- //prod_item 반복 -->
-						
 					</ul>
 					<!-- //상품 리스트-->
 
@@ -922,12 +968,11 @@
 
 
 
-
 			<!-- ht_cont : 새로 나온 음반 - mus_mc_new_album  / function - musNewAlbum();-->
-			<div class="ht_cont mus_mc_new_album">
+			<div class="ht_cont ht_bg mus_mc_new_album">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big02">
-						<strong class="point_line ty09"><em><img src="../../images/temp/main/tit_mus_mc_new_album.svg" alt="">새로 나온 음반</em></strong>을 만나보세요
+						<strong class="point_line ty09"><em><img src="../../images/main/tit_mus_mc_new_album.svg" alt="">새로 나온 음반</em></strong>을 만나보세요
 					</h2>
 
 					<!-- tab_center -->
@@ -952,10 +997,6 @@
 					</div>
 					<!-- //tab_center -->
 
-
-
-					
-
 					<!-- mus_mc_new_album_cont -->
 					<div class="mus_mc_new_album_cont">
 						<!-- 상품 리스트 -->
@@ -964,12 +1005,10 @@
 								<!-- prod_item 반복 -->
 								<li class="swiper-slide">
 									<div class="evt_products row_dir">
-										<!-- prod_item 반복 -->
 										<div class="prod_item">
 											<div class="product_pic">
-												<img src="../../images/mus_main/img_mus_mc_new_album01.jpg" alt="">
+												<img src="../../images/temp/@img_prod01.jpg" alt="">
 												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
 											</div>
 											<div class="product_info">
 												<div class="company">RED VELVET</div>
@@ -987,12 +1026,10 @@
 	
 								<li class="swiper-slide">
 									<div class="evt_products row_dir">
-										<!-- prod_item 반복 -->
 										<div class="prod_item">
 											<div class="product_pic">
-												<img src="../../images/mus_main/img_mus_mc_new_album02.jpg" alt="">
+												<img src="../../images/temp/@img_prod02.jpg" alt="">
 												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
 											</div>
 											<div class="product_info">
 												<div class="company">RED VELVET</div>
@@ -1008,12 +1045,10 @@
 								</li>
 								<li class="swiper-slide">
 									<div class="evt_products row_dir">
-										<!-- prod_item 반복 -->
 										<div class="prod_item">
 											<div class="product_pic">
-												<img src="../../images/mus_main/img_mus_mc_new_album03.jpg" alt="">
+												<img src="../../images/temp/@img_prod03.jpg" alt="">
 												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
 											</div>
 											<div class="product_info">
 												<div class="company">RED VELVET</div>
@@ -1029,12 +1064,10 @@
 								</li>
 								<li class="swiper-slide">
 									<div class="evt_products row_dir">
-										<!-- prod_item 반복 -->
 										<div class="prod_item">
 											<div class="product_pic">
-												<img src="../../images/mus_main/img_mus_mc_new_album04.jpg" alt="">
+												<img src="../../images/temp/@img_prod04.jpg" alt="">
 												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
 											</div>
 											<div class="product_info">
 												<div class="company">RED VELVET</div>
@@ -1050,12 +1083,10 @@
 								</li>
 								<li class="swiper-slide">
 									<div class="evt_products row_dir">
-										<!-- prod_item 반복 -->
 										<div class="prod_item">
 											<div class="product_pic">
-												<img src="../../images/mus_main/img_mus_mc_new_album05.jpg" alt="">
+												<img src="../../images/temp/@img_prod05.jpg" alt="">
 												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
 											</div>
 											<div class="product_info">
 												<div class="company">RED VELVET</div>
@@ -1071,12 +1102,10 @@
 								</li>
 								<li class="swiper-slide">
 									<div class="evt_products row_dir">
-										<!-- prod_item 반복 -->
 										<div class="prod_item">
 											<div class="product_pic">
-												<img src="../../images/mus_main/img_mus_mc_new_album06.jpg" alt="">
+												<img src="../../images/temp/@img_prod06.jpg" alt="">
 												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
 											</div>
 											<div class="product_info">
 												<div class="company">RED VELVET</div>
@@ -1092,12 +1121,10 @@
 								</li>
 								<li class="swiper-slide">
 									<div class="evt_products row_dir">
-										<!-- prod_item 반복 -->
 										<div class="prod_item">
 											<div class="product_pic">
-												<img src="../../images/mus_main/img_mus_mc_new_album06.jpg" alt="">
+												<img src="../../images/temp/@img_prod07.jpg" alt="">
 												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
 											</div>
 											<div class="product_info">
 												<div class="company">RED VELVET</div>
@@ -1121,17 +1148,11 @@
 							</div>
 							<!-- //swiper_control -->
 						</div>
-						
-
-
-
-						
 					</div>
 					<!-- //mus_mc_new_album_cont -->
+
 					<!-- btn_area -->
-					<div class="btn_area">
-						<a href="#n" class="btn_mc_more"><span><em class="hidden">새로 나온 음반 더보기</em></span></a>
-					</div>
+					<a href="#n" class="btn_mc_more"><span><em class="hidden">새로 나온 음반 더보기</em></span></a>
 					<!-- //btn_area -->	
 				</div>
 			</div>
@@ -1140,84 +1161,80 @@
 
 
 			<!-- ht_cont : 팬사인회 소식 - mus_mc_fan  / function - musFan();-->
-			<div class="ht_cont mus_mc_fan ht_bg" style="background-color:#000;">
+			<div class="ht_cont mus_mc_fan ht_bg">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big02">팬사인회 소식을 확인하세요</h2>
 
 					<!-- mus_mc_fan_cont -->
 					<div class="mus_mc_fan_cont">
-						<!-- thumb4_banner : function - thumb4banner(); -->
-						<div class="thumb4_banner ht_today_banner"><!-- 오늘만 특가 class="ht_today_banner" -->
-							<div class="swiper-container">
-								<!-- swiper-wrapper -->
-								<ul class="swiper-wrapper">
-									<!-- swiper-slide 반복 -->
-									<li class="swiper-slide prod_item">
-										<div class="product_pic">
-											<img src="../../images/temp/@img_prod01.jpg" alt="">
-											<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+						<div class="swiper-container">
+							<!-- swiper-wrapper -->
+							<ul class="swiper-wrapper">
+								<!-- swiper-slide 반복 -->
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod01.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">[온라인몰] WOODZ(조승연) 3rd MINI ALBUM [ONLY LOVERS LEFT] 발매 기념 영상통화 사인회 이벤트</div>
+										<div class="date">
+											<span>2022년 01월 04일 ~ 2022년 01월 07일</span>
 										</div>
-										<div class="product_info">
-											<div class="title">[온라인몰] WOODZ(조승연) 3rd MINI ALBUM [ONLY LOVERS LEFT] 발매 기념 영상통화 사인회 이벤트</div>
-											<div class="date">
-												<span>2022년 01월 04일 ~ 2022년 01월 07일</span>
-											</div>
-										</div>
-									</li>
-									<!-- //swiper-slide 반복 -->
+									</div>
+								</li>
+								<!-- //swiper-slide 반복 -->
 
 
-									<li class="swiper-slide prod_item">
-										<div class="product_pic">
-											<img src="../../images/temp/@img_prod02.jpg" alt="">
-											<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod02.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">[온라인몰] WOODZ(조승연) 3rd MINI ALBUM [ONLY LOVERS LEFT] 발매 기념 영상통화 사인회 이벤트</div>
+										<div class="date">
+											<span>2022년 01월 04일 ~ 2022년 01월 07일</span>
 										</div>
-										<div class="product_info">
-											<div class="title">[온라인몰] WOODZ(조승연) 3rd MINI ALBUM [ONLY LOVERS LEFT] 발매 기념 영상통화 사인회 이벤트</div>
-											<div class="date">
-												<span>2022년 01월 04일 ~ 2022년 01월 07일</span>
-											</div>
-										</div>
-									</li>
+									</div>
+								</li>
 
-									<li class="swiper-slide prod_item">
-										<div class="product_pic">
-											<img src="../../images/temp/@img_prod03.jpg" alt="">
-											<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod03.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">[온라인몰] WOODZ(조승연) 3rd MINI ALBUM [ONLY LOVERS LEFT] 발매 기념 영상통화 사인회 이벤트</div>
+										<div class="date">
+											<span>2022년 01월 04일 ~ 2022년 01월 07일</span>
 										</div>
-										<div class="product_info">
-											<div class="title">[온라인몰] WOODZ(조승연) 3rd MINI ALBUM [ONLY LOVERS LEFT] 발매 기념 영상통화 사인회 이벤트</div>
-											<div class="date">
-												<span>2022년 01월 04일 ~ 2022년 01월 07일</span>
-											</div>
+									</div>
+								</li>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod04.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">[온라인몰] WOODZ(조승연) 3rd MINI ALBUM [ONLY LOVERS LEFT] 발매 기념 영상통화 사인회 이벤트</div>
+										<div class="date">
+											<span>2022년 01월 04일 ~ 2022년 01월 07일</span>
 										</div>
-									</li>
-									<li class="swiper-slide prod_item">
-										<div class="product_pic">
-											<img src="../../images/temp/@img_prod04.jpg" alt="">
-											<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-										</div>
-										<div class="product_info">
-											<div class="title">[온라인몰] WOODZ(조승연) 3rd MINI ALBUM [ONLY LOVERS LEFT] 발매 기념 영상통화 사인회 이벤트</div>
-											<div class="date">
-												<span>2022년 01월 04일 ~ 2022년 01월 07일</span>
-											</div>
-										</div>
-									</li>
+									</div>
+								</li>
 
-								</ul>
-								<!-- //swiper-wrapper -->
+							</ul>
+							<!-- //swiper-wrapper -->
 
-								<!-- swiper_control -->
-								<div class="swiper_control">
-									<div class="swiper-button-prev"></div>
-									<div class="swiper-pagination"></div>
-									<div class="swiper-button-next"></div>
-								</div>
-								<!-- //swiper_control -->
+							<!-- swiper_control -->
+							<div class="swiper_control">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-next"></div>
 							</div>
+							<!-- //swiper_control -->
 						</div>
-						<!-- //thumb4_banner -->
 					</div>
 					<!-- //mus_mc_fan_cont -->
 					<div class="mus_mc_fan_bg_images">
@@ -1234,43 +1251,44 @@
 			<!-- ht_cont : 영통팬사 준비 - mus_mc_fansign  / function - curProdSwiper();-->
 			<div class="ht_cont ht_bg mus_mc_fansign">
 				<div class="contents_inner">
-
-					<!-- cur_prod_img -->
+					<!-- evt_list -->
 					<ul class="evt_list">
 						<li>
 							<ul class="item_info">
 								<li class="title">영통팬사 준비<br>빠짐없이 하셨나요?</li>
-							</ul><div class="img_wrap">
+							</ul>
+							<div class="img_wrap">
 								<!-- small_pics_area -->
 								<ul class="small_pics_area">
 									<li>
-										<a href="n"><img src="../../images/mus_main/ico_mus_mc_fansign_thum01.jpg" alt=""></a>
+										<a href="#n"><img src="../../images/temp/@img_mus_prod01.png" alt=""></a>
 									</li>
 									<li>
-										<a href="#n"><img src="../../images/mus_main/ico_mus_mc_fansign_thum02.jpg" alt=""></a>
+										<a href="#n"><img src="../../images/temp/@img_mus_prod02.png" alt=""></a>
 									</li>
 									<li>
-										<a href="#n"><img src="../../images/mus_main/ico_mus_mc_fansign_thum03.jpg" alt=""></a>
+										<a href="#n"><img src="../../images/temp/@img_mus_prod03.png" alt=""></a>
 									</li>
 									<li>
-										<a href="#n"><img src="../../images/mus_main/ico_mus_mc_fansign_thum04.jpg" alt=""></a>
+										<a href="#n"><img src="../../images/temp/@img_mus_prod04.png" alt=""></a>
+
 										<button class="small_pics_more" onclick="alert('더보기')">
-												<a href="#n" class="btn_mc_more"><span><em class="hidden"></em></span></a>
+											<em class="btn_mc_more"><span></span></em>
 											<span>영통팬싸 준비물<br>모아보기</span>	
 										</button>
 									</li>
 								</ul>
-								<div class="mus_mc_fansign_bg_icon">
-									<img src="../../images/mus_main/icon_mus_mc_fansign01.svg" />
-									<img src="../../images/mus_main/icon_mus_mc_fansign02.svg" />
-								</div>
 								<!-- //small_pics_area -->
+								<!-- mus_mc_fansign_bg_icon -->
+								<div class="mus_mc_fansign_bg_icon">
+									<img src="../../images/mus_main/icon_mus_mc_fansign01.svg" alt="">
+									<img src="../../images/mus_main/icon_mus_mc_fansign02.svg" alt="">
+								</div>
+								<!-- //mus_mc_fansign_bg_icon -->
 							</div>
-							
 						</li>
-						
 					</ul>
-					<!-- //cur_prod_img -->
+					<!-- //evt_list -->
 				</div>
 			</div>
 			<!-- //ht_cont : 영통팬사 준비 -->
