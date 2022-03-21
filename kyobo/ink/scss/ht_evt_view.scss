@@ -449,6 +449,29 @@
         width:20px;height:20px;margin-top:0;background:url('../images/guide/btn_ht_share.svg') center/18px no-repeat;
     }
 }
+    //기획전 종료
+    .promotion_end {
+        border:1px solid red;
+        position:relative;
+        background-color: #fff;
+        z-index: 5;
+    }
+    .promotion_end:before {
+        content:"종료되었습니다.";
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background-color: rgba(0,0,0,0.6);
+        color:#fff;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: -1px;
+        z-index: 100;
+        padding-top:30vh;
+    }
 //moudule 003
 .mdl003_wrap {
     padding:120px 0;
