@@ -12,10 +12,10 @@ function musReserved(){
         centeredSlides: true,
         loop: true,
         spaceBetween: 0,
-        /*autoplay: {
+        autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-        },*/
+        },
 
         speed: 700,
 		pagination: {
@@ -86,7 +86,6 @@ function musOrder(){
         musOrderSwiper = new Swiper($target.get(), slideOption);
         $parent.addClass('swiper-on');
     }
-    
 }
 
 $(function(){
@@ -111,6 +110,7 @@ function btn_chart_view(val){
 }
     
 /* 실시간차트 4초 단위 롤링 */
+/*
     var i = 0;
     setInterval(function(){
     if(i>4){
@@ -123,7 +123,7 @@ function btn_chart_view(val){
         i++;
     }
     }, 4000)
-
+*/
     
 
 /* 새로 나온 음반 */
@@ -379,31 +379,31 @@ $(function(){
 /* 특별한 할인상품 스와이프 */
 function musSpecial(){
     var $target = $('.mus_mc_special_cont .swiper-container');
+    var $parent = $('.mus_mc_special_cont')
     saleListWrapInit = true;
     var slideOption = {
         observer: true,
         observeParents: true,
         slidesPerView: 3,
-        spaceBetween: 30,
-        slidesPerGroup: 1,
-        loop: true,
-        loopFillGroupWithBlank: true,
-        loopsSlide:1,
-        pagination: {
-            el: ('.mus_mc_special_cont .swiper-pagination'),
-        },
+        spaceBetween: 36,
+        slidesPerGroup: 3,
+        loop: false,
+        loopsSlide:3,
         navigation: {
             nextEl: '.mus_mc_special_cont .swiper-button-next',
             prevEl: '.mus_mc_special_cont .swiper-button-prev',
         },
+        speed: 700,
     };
-    musSpecialSwiper = new Swiper($target.get(), slideOption);
+    if($parent.find('.swiper-slide').length > 3) {
+        musSpecialSwiper = new Swiper($target.get(), slideOption);
+        $parent.addClass('swiper-on');
+    }
 }
 
 $(function(){
-    if($('.mus_mc_special_cont .swiper-slide').length > 3 ){
-        musSpecial();
-    }
+    if(!$('.mus_mc_special_cont').length) return;
+    musSpecial();
 });
 
 

@@ -1414,11 +1414,6 @@ body {
   overflow: inherit;
 }
 
-.wrapper header {
-  position: relative;
-  z-index: 1001;
-}
-
 .wrapper .container_wrapper {
   min-height: 500px;
 }
@@ -1857,6 +1852,11 @@ body {
   position: relative;
 }
 
+.ht_belt_banner.b_radius .swiper-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .ht_belt_banner .swiper-slide {
   position: relative;
 }
@@ -2115,6 +2115,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tab_ty li {
@@ -2139,7 +2142,7 @@ body {
   padding: 13px 20px 11px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #000;
+  color: #595959;
   font-size: 16px;
   font-weight: 700;
   line-height: 26px;

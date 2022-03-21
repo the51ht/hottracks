@@ -15,9 +15,6 @@ body {
 .wrapper {
     overflow:inherit;
 }
-.wrapper header {
-    position:relative;z-index:1001;;
-}
 .wrapper .container_wrapper {
     min-height:500px;
 }
@@ -243,6 +240,11 @@ body {
 /*** 광고배너 ***/
 .ht_belt_banner {
     position:relative;
+    &.b_radius {
+        .swiper-wrapper {
+            border-radius:12px;overflow:hidden;
+        }
+    }
     .swiper-slide {
         position:relative;
         img {
