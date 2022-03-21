@@ -107,6 +107,89 @@
     }
 }
 
+/*** 카테고리 메인 ***/
+/* 브랜드 골라보기 */
+.brand_search_wrap {
+    position:relative;margin-top:-1px !important;z-index:2;
+    .form_search_box {
+        margin-bottom:20px;
+    }
+    .cks_list {
+        .cks_item {
+            margin-bottom:20px;
+            &:last-of-type {
+                margin-bottom:0;
+            }
+        }
+        .form_chk>label {
+            color:#595959;font-size:13px;
+        }
+        .emp {
+            position: relative;padding:155px 10px 65px 10px;
+            color:#767676;font-size:16px;line-height:24px;text-align:center;
+            &:before {
+                position:absolute;left:50%;top:80px;width:60px;height:60px;margin-left:-30px;background:url(../images/guide/no_search_data_icon.svg) center/100% no-repeat;content:"";
+            }
+        }
+    }
+    .btn_area {
+        padding-left:49px;font-size:0;
+        button {
+            width:100%;
+        }
+        .btn_reset {
+            position:absolute;left:0;top:0;width:44px;min-width:auto;;height:44px;padding:0;background:url('../images/guide/ico_rest.svg') center / 18px no-repeat;border:1px solid #000;
+        }
+    }
+}
+
+
+/* 만년필이 궁금하세요 */
+.pen_pop_wrap {
+    margin-top:-1px !important;padding-top:1px;background:#fff;
+    .tab_menu_a {
+        display:table;width:100%;table-layout:fixed;height:42px;border-bottom:2px solid #000;margin-bottom:30px;
+        a {
+            position:relative;display:table-cell;padding:3px 0 0 0;color:#767676;text-align:center;vertical-align:middle;transition:all 0.4s;
+            &:before {
+                position:absolute;left:0;top:0;width:100%;height:100%;border:solid #d5d5d5;border-width:1px 0 0 1px;border-radius:6px 6px 0 0;box-sizing:border-box;content:"";
+            }
+            &:last-child:before {
+                border-width:1px 1px 0 1px;
+            }
+            &.on {
+                color:#000;font-weight:700;z-index:2;
+                &:before {
+                    border-color:#000;border-width:2px 2px 0 2px;
+                }
+                &:after {
+                    position:absolute;left:2px;bottom:-4px;width:calc(100% - 4px);height:10px;background-color:#fff;box-sizing:border-box;content:"";
+                }
+            }
+        }
+    }
+
+    .pen_title {
+        color:#595959;
+        &+.pen_sub_menu_wrap {
+            padding-top:20px;
+        }
+    }
+    .pen_sub_menu_wrap {
+        margin:0;padding-bottom:20px;
+
+    }
+    .sc_pop_btn {
+        min-height:calc(85vh - 200px) !important;
+    }
+
+    //교보 http://www.hottracks.co.kr/ht/fountainPen?type=1
+    .mgt10 { margin-top:10px !important } 
+}
+
+
+
+
 
 
 
