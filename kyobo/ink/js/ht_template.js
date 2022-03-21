@@ -838,6 +838,30 @@ $(function(){
        }else {
             $(this).parent('.mdl014_wrap').find('.btn_md.btn_black').addClass('disabled');
        }
+   });
+
+
+   /*mdl009-3 투표하기*/
+   //라디오 선택
+   $(document).on('click', '.evt_vote_list .evt_vote_radio', function(){
+       var $textArea = $(this).parents('.evt_vote_list').next().find('.cmt_textarea');
+       var target_btn = $(this).parents('.dialog_contents').find('.btn_md.btn_primary');
+       if($($textArea).val().length > 0) {
+            $( target_btn ).removeClass('disabled');
+       } else {
+            $( target_btn ).addClass('disabled');
+       }
+   });
+   //텍스트 입력
+   $(document).on('keyup', '.vote_cmt_box .cmt_textarea', function(){
+       var $cked_radio = $(this).parents('.dialog_contents').find('.evt_vote_list').find('.evt_vote_radio').is(':checked');
+       var target_btn = $(this).parents('.dialog_contents').find('.btn_md.btn_primary');
+
+       if($cked_radio && $(this).val().length > 0) {
+            $( target_btn ).removeClass('disabled');
+       } else {
+           $( target_btn ).addClass('disabled');
+       }
    })
 });
 
