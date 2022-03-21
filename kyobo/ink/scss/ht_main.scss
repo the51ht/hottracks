@@ -147,10 +147,10 @@
     }
 }
 .pop_hero_cont {
-    position:absolute;left:50%;bottom:0;width:860px;height:calc(100% - 80px);margin-left:-434px;box-sizing:border-box;
+    position:absolute;left:50%;top:10vh;width:860px;height:100%;margin-left:-434px;box-sizing:border-box;
 }
 .pop_hero_inner {
-    max-height:80vh !important;box-sizing:border-box;padding-right:10px !important;
+    max-height:80vh !important;box-sizing:border-box;padding-right:15px !important;
     .hero_banner_box {
         > li {
             margin-bottom:10px;border-radius:12px;overflow:hidden;
@@ -252,23 +252,27 @@
 
 
 
+
+
+
 /***** * 음반메인 * *****/
-/* mus_tit_nav : 상단 탭 */
+/*** mus_tit_nav : 상단 탭 ***/
 .mus_tit_nav {
     position:relative;margin-bottom:30px;font-size:0;text-align:center;
 }
 
+/* .mus_tit_nav_inner */
 .mus_tit_nav_inner {
     display:inline-block;position:relative;border:1px solid #ddd;border-radius:28px;vertical-align:top;
     &:before {
         position:absolute;left:0;top:-1px;width:155px;height:calc(100% + 1px);background-color:#000;border-radius:50px;box-sizing:content-box;transition: left .1s ease-in-out;content:"";
     }
     a {
-        display:inline-block; position:relative;width:155px;height:54px;color:#595959;font-size:20px;font-weight:500;line-height:54px;box-sizing:border-box;text-align:center;vertical-align:top;letter-spacing:-1px;transition:color 0.5s;
+        display:inline-block;position:relative;width:155px;height:54px;color:#595959;font-size:20px;font-weight:500;line-height:54px;box-sizing:border-box;text-align:center;vertical-align:top;letter-spacing:-1px;transition:color 0.5s;
         span {
             position:relative;padding-left:0;
             &:before {
-                position:absolute;left:0;top:-3px;width:30px;height:30px;background:center/30px no-repeat;content:"";opacity:0;;
+                position:absolute;left:0;top:-3px;width:30px;height:30px;background:center/30px no-repeat;content:"";opacity:0;
             }
         }
         &.active {
@@ -294,15 +298,12 @@
         left:0;
     }
     &.active1:before {
-        left:calc(100% / 3); 
+        left:calc(100% / 3);
     }
     &.active2:before {
         left:calc((100% / 3 ) * 2);
     }
 }
-
-
-
 
 
 
@@ -469,7 +470,7 @@
         position:static;margin-top:0;
         .swiper-button-prev,
         .swiper-button-next {
-            position: absolute;top:50%;margin-top:-22px;
+            position:absolute;top:50%;margin-top:-22px;
             &:after {
                 background:#000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;border-color:rgba(255,255,255,0.4);transition:all 0.4s;
             }
@@ -556,7 +557,7 @@
 .mus_mc_chart {
     .ht_tit_big02 {
         img {
-            display:inline-block;height:20px;margin:4px 4px 0 4px;vertical-align:top;height: 39px;margin: 0px 4px 0 4px;
+            display:inline-block;height:20px;margin:4px 4px 0 4px;vertical-align:top;height:39px;margin:0px 4px 0 4px;
         }
     }
 }
@@ -676,7 +677,7 @@
 .mus_mc_memb {
     background:#e1f7e5;
     .ht_tit_big02 {
-        margin-bottom:95px;;
+        margin-bottom:95px;
     }
     .btn_more_view_box {
         border:0;
@@ -711,15 +712,15 @@
 
 /* mus_mc_memb_msg */
 .mus_mc_memb_msg {
-    position:absolute;z-index:2;left: 50%;transform: translateX(-50%);top: 57px;
+    position:absolute;left:50%;top:57px;transform:translateX(-50%);z-index:2;
     p {
-        position:relative;right:11px;top:0;background:#d4ff1a;border:solid #000;border-width:2px 3px 3px 2px;border-radius:30px;color:#000;font-weight:500;line-height:18px;animation:musMembMsg both infinite 5s;font-size: 15px;padding: 15px 21px 13px 27px;
+        position:relative;right:11px;top:0;background:#d4ff1a;border:solid #000;border-width:2px 3px 3px 2px;border-radius:30px;color:#000;font-weight:500;line-height:18px;animation:musMembMsg both infinite 5s;font-size:15px;padding:15px 21px 13px 27px;
 
         &:before {
-            position:absolute;left: 50%;top:-8px;width:0;height:0;border-bottom:8px solid #000;border-left:8px solid transparent;border-right:8px solid transparent;content:"";z-index:2;
+            position:absolute;left:50%;top:-8px;width:0;height:0;border-bottom:8px solid #000;border-left:8px solid transparent;border-right:8px solid transparent;content:"";z-index:2;
         }
         &:after {
-            position:absolute;left: 50%;top:-5px;width:0;height:0;border-bottom:8px solid #d4ff1a;border-left:8px solid transparent;border-right:8px solid transparent;content:"";z-index:2;
+            position:absolute;left:50%;top:-5px;width:0;height:0;border-bottom:8px solid #d4ff1a;border-left:8px solid transparent;border-right:8px solid transparent;content:"";z-index:2;
         }
         em {
             display:inline-block;width:16px;height:17px;margin-left:4px;background:url('../../mok/images/main/ico_mus_mc_memb_msg.svg') center/ 100% no-repeat;vertical-align:top;
@@ -753,7 +754,7 @@
     .swiper-wrapper{
         margin-bottom:28px;
         .swiper-slide {
-            width:33.3%;  
+            width:33.3%;
             .evt_products{
                 margin:-40px -18px 0 -0;
                 &.row_dir .prod_item {
@@ -809,7 +810,7 @@
         width:calc(68.5% + 36px);margin:0 auto;position:initial;padding-top:80px;
         .swiper-slide{
             width:850px !important;margin:0 18px 0 18px;
-            padding:11px 19px 11px 11px; border: 3px solid rgba(255 ,255 ,255, 0.6);border-radius: 12px;box-sizing: border-box;
+            padding:11px 19px 11px 11px;border:3px solid rgba(255 ,255 ,255, 0.6);border-radius:12px;box-sizing:border-box;
         }
     }
     .product_pic{
@@ -841,12 +842,11 @@
         .swiper-button-next, .swiper-button-prev{
             &:hover{
                 &:after{
-                    background-color: rgba(255, 255, 255, 0.3);border-color: rgba(255, 255, 255, 0.8);
+                    background-color:rgba(255, 255, 255, 0.3);border-color:rgba(255, 255, 255, 0.8);
                 }
-                
             }
             &:after{
-                background: #000 url(../images/guide/btn_banner_pagn_w.svg) center no-repeat;border-color: rgba(255, 255, 255, 0.4);-webkit-transition: all 0.4s;transition: all 0.4s;
+                background:#000 url(../images/guide/btn_banner_pagn_w.svg) center no-repeat;border-color:rgba(255, 255, 255, 0.4);-webkit-transition:all 0.4s;transition:all 0.4s;
             }
         }
     }
@@ -884,7 +884,7 @@
 
 /* mus_mc_fan_cont */
 .mus_mc_fan_cont {
-    position:relative;margin: -72px -20px -10px -20px;
+    position:relative;margin:-72px -20px -10px -20px;
     .swiper-slide {
         width:72%;margin:0 0 30px 20px;
         &:after {
@@ -939,14 +939,6 @@
         position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #000;border-radius:8px;box-sizing:border-box;content:"";
     }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -1015,7 +1007,7 @@
                     
                 }
                 .btn_mc_more{
-                    display:inline-block;position:absolute;;left:49%;top:33%;width:21px;height:21px;
+                    display:inline-block;position:absolute;left:49%;top:33%;width:21px;height:21px;
                     span{
                         width:100%;height:100%;padding-right:0;
                     }
@@ -1060,10 +1052,6 @@
     .product_info {
         text-align:left;
     }
-    .swiper_control {
-        margin-top:0;
-    }
-
     .star_fade_in02 {
         img:nth-child(1){
             position:absolute;left:125px;top:420px;
@@ -1149,10 +1137,8 @@
 /* mus_mc_lpshop_cont */
 .mus_mc_lpshop_cont{
     position:relative;margin:0;
-    &.evt_plan_banner {
-        .swiper-container {
-            overflow:inherit;
-        }
+    .swiper-container {
+        overflow:inherit;
     }
     .swiper-pagination-progressbar-fill {
         transition-timing-function:linear;
@@ -1292,6 +1278,12 @@
         color:#d5d5d5;font-size:14px;
     }
 }
+
+
+
+
+
+
 
 
 

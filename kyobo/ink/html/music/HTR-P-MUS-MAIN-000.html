@@ -55,8 +55,6 @@
 <script src="../../js/ui_ink.js"></script>
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
-
-<script src="../../js/ht_music_new.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
 </head>
 
@@ -91,7 +89,7 @@
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">
 		<!-- ht_contents_wrap -->
-		<section class="ht_contents_wrap mus_main_warp">
+		<section class="ht_contents_wrap mus_main_warp"><!-- 음반메인 class="mus_main_warp" -->
 			<h1 class="hidden">음반</h1>
 
 <script>
@@ -413,7 +411,7 @@ $(function(){
 					<!-- //tab_center -->
 
 					<!-- mus_mc_reserved_cont -->
-					<div class="mus_mc_reserved_cont">
+					<div class="mus_mc_reserved_cont type5_banner01">
 						<div class="swiper-container">
 							<!-- swiper-wrapper -->
 							<div class="swiper-wrapper">
@@ -1230,7 +1228,6 @@ if(i>4){
 
 
 
-
 			<!-- ht_cont : 영통팬사 준비 - mus_mc_fansign  / function - curProdSwiper();-->
 			<div class="ht_cont ht_bg mus_mc_fansign">
 				<div class="contents_inner">
@@ -1345,7 +1342,7 @@ if(i>4){
 					<!-- //tab_center -->
 
 					<!-- mus_mc_reserved_cont -->
-					<div class="mus_mc_reserved_cont">
+					<div class="mus_mc_reserved_cont type5_banner02">
 						<div class="swiper-container">
 							<!-- swiper-wrapper -->
 							<div class="swiper-wrapper">
@@ -1493,7 +1490,8 @@ if(i>4){
 						<h2 class="ht_tit_big02"><strong class="point_line ty07"><em>한국인이 사랑<img src="../../images/main/tit_cur_brand_select.svg" alt=""></em></strong> 하는 클래식</h2>
 	
 						<!-- tab_ty -->
-						<div class="tab_swiper tab_ty tab_center tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+							<!-- swiper-wrapper -->
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide">
 									<a href="#n" class="on"><!-- 활성화  class="on" -->
@@ -1525,7 +1523,20 @@ if(i>4){
 										<span>Johannes Brahms<br>(브람스)</span>
 									</a>
 								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>Johannes Brahms<br>(브람스)</span>
+									</a>
+								</li>
 							</ul>
+							<!-- //swiper-wrapper -->
+
+							<!-- swiper_control -->
+							<div class="swiper_control">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+						<!-- //swiper_control -->
 						</div>
 						<!-- //tab_ty -->
 	
@@ -1702,10 +1713,10 @@ if(i>4){
 					<h2 class="ht_tit_big02"><strong class="point_line ty03"><em>음악을 소유하는 감성</em></strong>을 그대로 간직한 LP SHOP<img src="../../images/main/tit_mus_lpshop.svg" alt=""></h2>
 
 					<!-- mus_mc_lpshop_cont -->
-					<div class="mus_mc_lpshop_cont evt_plan_banner">
+					<div class="mus_mc_lpshop_cont">
 						<div class="swiper-container">
 							<!-- swiper-wrapper -->
-							<ul class="swiper-wrapper evt_list type3">
+							<ul class="swiper-wrapper">
 								<!-- swiper-slide 반복 -->
 								<li class="swiper-slide">
 									<div class="img_wrap">
