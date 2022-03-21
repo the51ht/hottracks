@@ -474,6 +474,10 @@
     }
 
 }
+//module004
+.wel_hero_banner .ty_mdl.swiper-pagination.swiper-pagination-fraction {
+    padding-right:20px !important;
+}
 //moudule 006, module007
 .mdl_prod_wrap {
     padding:60px 0;
@@ -513,18 +517,112 @@
 //moudule 014             
 .mdl014_wrap {
     padding :70px 0;
-
+    .btn_md  {
+        justify-content: center;
+        padding-left:40px;
+        position:relative;
+        &:before {
+            content:"";
+            position:absolute;
+            width:30px;
+            height:44px;
+            top:-3px;
+            left:20px;
+            background:url('../images/guide/ico_pencil_yellow.svg') no-repeat center /21px;
+        }
+        &.disabled:before {
+            background:url('../images/guide/ico_pencil_white.svg') no-repeat center /21px;
+        }
+    }
+    .cmt_info_area {
+        margin-top:40px;
+        overflow: hidden;
+        .cmt_total {
+            float: left;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        .count {
+            color:#DA2128;
+        }
+        .form_chk {
+            float: right;
+        }
+    }
+    .pagination {
+        border-top:none;
+    }
+    //댓글 아이콘 이미지
+    .cmt_emoji_list {
+       margin-top:10px;
+       height:24px;
+       clear:both;
+        .emoji {
+            width:24px;
+            height:24px;
+            border-radius: 50%;
+            position:relative;
+            float:left;
+            margin-right:10px;
+            cursor: pointer;
+            & > img{
+                width:100%;
+            }
+            &.off {
+                opacity:0.2;
+            }
+            &.on:before{
+                content:'';
+                position:absolute;
+                width:24px;
+                height:24px;
+                border-radius: 50%;
+                border:2px solid;
+                left:0;
+                top:0;
+                box-sizing: border-box;
+            }
+        }
+    }
+    //댓글 없는 경우
+    .no_cmt_box {
+        position: relative;
+        margin-top: 20px;
+        padding:100px 0 60px;
+        line-height: 19px;
+        text-align: center;
+        font-size: 13px;
+        color:#767676;
+        border-top: 1px solid;
+        border-bottom: 1px solid #EAEAEA;
+        &:before {
+            content:"";
+            width:30px;
+            height:30px;
+            position:absolute;
+            top:60px;
+            left:50%;
+            margin-left: -15px;
+            background:url(../images/guide/no_search_data_icon.svg) no-repeat center/30px
+        }
+    }
 }
+//textarea
 .cmt_box {
-    padding:12px 14px; 
+    padding:12px 14px 0 14px; 
     border:1px solid #D5D5D5;
     border-radius: 6px;
+    transition: border-color .2s;
+    &.on {
+        border-color:#000;
+    }
     .cmt_textarea { 
         width:100%;
         height:70px;
         border:none;
         resize:none;
-        background-color: pink;
         color:  #767676;
         font-size: 14px;
         line-height:22px;
@@ -533,15 +631,98 @@
         outline:0;
 
     }
+    .btn_wrap {
+        text-align: right;
+        .count_line{
+            margin-right:6px;
+        }
+    }
     .count_line {
         font-size: 12px;
-        line-height: 17px;
+        height:38px;
+        line-height: 38px;
         color:#767676;
         text-align: right;
     }
     .count {
-        margin-right:10px;
+        position:relative;
+        padding-right: 8px;
+        margin-right:3px;
         color:#000;
         font-style: normal;
+        &:before {
+            content:"/";
+            position:absolute;
+            width:5px;
+            height:38px;
+            top:-12px;
+            right:0px;
+            
+        }
+    }
+}
+
+.cmt_evt_list {
+    border-top: 1px solid;
+    margin-top: 20px;
+    .cmt_upper {
+        position: relative;
+        padding: 20px 0;
+        border-bottom: 1px solid #EAEAEA;
+    }
+    .cmt_writer_info {
+        margin-bottom: 15px;
+    }
+    .upper_item {
+        display: inline-block;
+        line-height: 16px;
+        position: relative;
+        font-size: 12px;
+        color: #767676;
+        margin-right:12px;
+        cursor: pointer;
+        &:before {
+            content :"|";
+            position: absolute;
+            width:16px;
+            height:16px;
+            text-align: center;
+            right:-16px;
+            top:0;
+        }
+        &:last-of-type {
+            margin-right:0;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .cmt_icon {
+        width:64px;
+        height:64px;
+        border-radius: 6px;
+        background-color: #F7F7F7;
+        float: right;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 64px;
+        position: absolute;
+        right:0;
+        top:50%;
+        margin-top:-32px;
+        img {
+          width:32px;
+        }
+        &+.cmt_title{
+            padding-right:124px;
+        }
+    }
+    .cmt_title {
+        line-height: 22px;
+        letter-spacing: -1px;
+    }
+
+    .cmt_box {
+        margin-top:20px;
     }
 }

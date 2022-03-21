@@ -777,6 +777,60 @@ $(function(){
 
 });
 
+/*이벤트 모듈 textarea*/
+$(function(){
+    //focus, blur
+    $(document).on('focus','.cmt_textarea', function(){
+       $(this).parent('.cmt_box').addClass('on');
+    });
+
+    $(document).on('blur','.cmt_textarea', function(){
+        $(this).parent('.cmt_box').removeClass('on');
+     });
+   
+   //등록하기 버튼  
+   $(document).on('keyup','.cmt_textarea', function(){
+       var is_emoji = $(this).parent().next().hasClass('cmt_emoji_list');
+       var target_btn =  $(this).parents('.mdl014_wrap').find('.btn_md.btn_black');
+
+       if(is_emoji){
+             //아이콘 이미지가 있는 경우 (textarea 입력 글자수 1글자 이상 + 이미지 선택하면 버튼 활성화)
+             if($(this).val().length > 0 && $(this).parent().next().find('.on').length) {
+                $(target_btn).removeClass('disabled');
+            } else {
+                $(target_btn).addClass('disabled');
+            }
+       } else {
+             //아이콘 이미지가 없는 경우(textarea 입력 글자수 1글자 이상이면 버튼 활성화
+            if($(this).val().length > 0) {
+                $(target_btn).removeClass('disabled');
+            } else {
+                $(target_btn).addClass('disabled');
+            }
+       }
+   });
+
+   //내가 쓴 댓글 수정버튼
+   $(document).on('click', '.cmt_evt_list .cmt_modify', function(){
+       $(this).parents('.cmt_upper').next().removeClass('hidden');
+       $(this).parents('.cmt_upper').next().children('.cmt_textarea').val('디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~').focus();
+   });
+
+
+   //댓글 이미지 선택(아이콘 형)
+   $(document).on('click', '.cmt_emoji_list .emoji', function(){
+       $(this).removeClass('off').addClass('on').siblings().addClass('off').removeClass('on');
+       console.log($(this).parent().prev().children('.cmt_textarea'))
+       var $tArea = $(this).parent().prev().children('.cmt_textarea');
+        
+       //댓글 입력 textarea 입력 글자수 1글자 이상일때 버튼 활성화
+       if($($tArea).val().length > 0) {
+            $(this).parents('.mdl014_wrap').find('.btn_md.btn_black').removeClass('disabled');
+       }else {
+            $(this).parent('.mdl014_wrap').find('.btn_md.btn_black').addClass('disabled');
+       }
+   })
+});
 
 
 
