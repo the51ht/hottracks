@@ -94,6 +94,46 @@
 		<section class="ht_contents_wrap mus_main_warp">
 			<h1 class="hidden">음반</h1>
 
+			<script>
+				//배너 확인용
+				$(function(){
+					$(document).on('click', '.main_tab_menu a', function(){
+						$(this).addClass('active').siblings().removeClass('active');
+						$(this).parent().attr('class', 'main_tab_menu').addClass('active'+$(this).index());
+					});
+				});
+				</script>
+
+			<!-- 음반메인 컨텐츠 -->
+            <section class="main_cont_wrap cont_wrap" style="display:none">
+                <!-- 음반메인 탭 -->
+                <div class="main_tab_menu active0">
+                    <a href="#a" class="active">
+                        <em class="icon"></em>
+                        <span class="txt">음반</span>
+                    </a>
+                    <a href="#b">
+                        <em class="icon"></em>
+                        <span class="txt">DVD</span>
+                    </a>
+                    <a href="#c">
+                        <em class="icon"></em>
+                        <span class="txt">BLU-RAY</span>
+                    </a>
+                </div>       
+                <!-- //음반메인 탭 -->
+			</section>
+            <!-- //음반메인 컨텐츠 -->
+
+			<!-- mus_tit_nav -->
+			<nav class="mus_tit_nav">
+				<a href="#n"><span>음반</span></a>
+				<a href="#n"><span>DVD</span></a>
+				<a href="#n"><span>BLU-RAY</span></a>
+			</nav>
+			<!-- //mus_tit_nav -->
+
+
 			<!-- ht_cont : 히어로배너 -->
 			<div class="ht_cont wel_hero">
 				<h2 class="hidden">히어로배너</h2>
