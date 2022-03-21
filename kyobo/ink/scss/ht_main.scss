@@ -149,7 +149,6 @@
 .pop_hero_cont {
     position:absolute;left:50%;bottom:0;width:860px;height:calc(100% - 80px);margin-left:-434px;box-sizing:border-box;
 }
-
 .pop_hero_inner {
     max-height:80vh !important;box-sizing:border-box;padding-right:10px !important;
     .hero_banner_box {
@@ -375,7 +374,7 @@
 
 /* btn_mc_more */
 .btn_mc_more {
-    position:absolute;right:50%;top:4px;width:36px;height:36px;margin-right:-600px;
+    position:absolute;right:50%;top:0;width:36px;height:36px;margin-right:-600px;
     span {
         position:absolute;left:50%;top:50%;width:25px;height:25px;margin:-12px 0 0 -12px;
         &:before {
@@ -502,12 +501,6 @@
 
 
 
-
-
-
-
-
-
 /*** 실시간 차트 : .mus_mc_chart ***/
 .mus_mc_chart {
     .ht_tit_big02 {
@@ -542,7 +535,7 @@
             color:#000;font-size:17px;font-weight:500;line-height:25px;
         }
         .s3 {
-            display:none;width:100%;margin-top:7px;font-size:0;font-weight:700;line-height:18px;animation:fade both 0.4s;
+            display:none;width:100%;margin-top:12px;font-size:0;font-weight:700;line-height:18px;animation:fade both 0.4s;
             strong {
                 padding-right:4px;color:#da2128;font-size:16px;
             }
@@ -553,13 +546,15 @@
                 display:inline-block;color:#767676;font-size:11px;text-decoration:line-through;
             }
         }
-
         .ico_marker_area {
-            display:none;width:100%;animation:fade both 0.4s;font-size: 12px;margin-top: 9px;  text-align:left;;
-            .ico_marker {
-                display: inline-block;height: 25px;padding: 2px 11px 0;background: #f5f5f5;border-radius: 14px;-webkit-box-sizing: border-box;box-sizing: border-box;color: #292929;font-size: 10px;line-height: 21px;text-align: center;margin-left: 3px;border: 1px solid #D5D5D5;
-                &.on {
-                    background: #fff4f1;color: #da2128;font-weight: 700;border: 1px solid #da2128;margin-left: 0;
+            display:none;width:100%;animation:fade both 0.4s;
+            .badge_line {
+                margin-top:8px;
+                .badge {
+                    border:1px solid #d5d5d5;
+                    &.on {
+                        border-color:#da2128;
+                    }
                 }
             }
         }
@@ -567,10 +562,10 @@
     .rank_txt {
         position:absolute;left:10px;top:17px;width:50px;height:50px;color:#000;text-align:center;
         .num {
-            display:block;font-size:15px;font-weight:700;line-height:18px;padding-top: 5px;
+            display:block;font-size:15px;font-weight:700;line-height:18px;padding-top:8px;
         }
         .fluctuation {
-            display:inline-block;position: relative;  font-size:12px;font-weight:700;line-height:16px;
+            display:inline-block;position:relative;font-size:12px;font-weight:700;line-height:16px;
             &.new {
                 color:#fc3f4b;
             }
@@ -582,9 +577,6 @@
             }
         }
     }
-
-
-
     .active {
         min-height:240px;background:#eee;margin-bottom:25px;padding-bottom:0;background:url('../images/main/mus_main_rank_active.jpg') center/cover no-repeat;
         &:last-child {
@@ -606,14 +598,6 @@
                 display:block;
             }
         }
-
-
-
-
-
-
-
-
         .rank_txt {
             top:50%;background:url('../images/guide/lank_hot.svg') center/50px no-repeat;color:#fff;transform:translateY(-50%);
         }
@@ -629,28 +613,11 @@
                 color:#fff;
             }
         }
-/*
-        .txt {
-            margin-left: 321px;margin-top: 24px;width: calc(100% - 225px + 58px); 
-            .s3 {
-                display:block;padding-top: 50px;
-            }
-            .ico_marker_area {
-                display:block;
-            }
-            .s1{
-                margin-top: 62px;
-            }
-        }*/
     }
-
     .btn_chart_view {
         display:block;position:absolute;left:0;top:0;width:100%;height:100%;opacity:0;
     }
 }
-
-
-
 
 
 
@@ -718,68 +685,59 @@
 
 
 
+
 /*** 새로 나온 음반 : .mus_mc_new_album ***/
 .mus_mc_new_album {
-    overflow:hidden;padding-top: 60px;
+    overflow:hidden;
     .ht_tit_big02 {
         img {
-            height:36px;margin-left:-12px;
+            height:58px;margin-top:-12px;
         }
     }
+}
 
-    .btn_area{
-        position: initial;
-        margin-top: 0;
-        .btn_mc_more{
-            right: -1px;top: 0px;
-            span{
-                width: 24px;height: 24px;
-            }
-        }
-    }
-    /* mus_mc_new_album_cont */
-    .mus_mc_new_album_cont {
-        margin:0;
-        .swiper-wrapper{
-            margin-bottom: 28px;
-            .swiper-slide {
-                width:33.3%;  
-                .evt_products{
-                    margin: -40px -18px 0 -0;
-                    &.row_dir .prod_item {
-                        width: 100%;
-                        .product_pic{
-                            width: 151px;padding-top: 150px;float: left;
+/* mus_mc_new_album_cont */
+.mus_mc_new_album_cont {
+    margin:0;
+    .swiper-wrapper{
+        margin-bottom:28px;
+        .swiper-slide {
+            width:33.3%;  
+            .evt_products{
+                margin:-40px -18px 0 -0;
+                &.row_dir .prod_item {
+                    width:100%;
+                    .product_pic{
+                        width:151px;padding-top:150px;float:left;
+                    }
+                    .product_info{
+                        float:left;width:calc(100% - 216px);margin-top:0;
+                        .company{
+                            margin-bottom:4px;
                         }
-                        .product_info{
-                            float: left;width: calc(100% - 216px);margin-top: 0;
-                            .company{
-                                margin-bottom: 4px;
-                            }
-                            .title{
-                                line-height: 26px;
-                            }
-                            .price_line{
-                                margin: 4px 0 -8px;font-size: 20px;
-                                span{
-                                    font-size: 14px;
-                                    &.price_origin{
-                                        font-size: 14px;
-                                    }
+                        .title{
+                            line-height:26px;
+                        }
+                        .price_line{
+                            margin:4px 0 -8px;font-size:20px;
+                            span{
+                                font-size:14px;
+                                &.price_origin{
+                                    font-size:14px;
                                 }
                             }
                         }
                     }
                 }
-                &:nth-child(n+4){
-                    margin-top: 0px;
-                }
             }
-            &.list_lenght_warp {
-                flex-wrap: wrap;
-                .swiper-slide:nth-child(n+4){
-                    margin-top: 30px;
-                }
+            &:nth-child(n+4){
+                margin-top:0px;
+            }
+        }
+        &.list_lenght_warp {
+            flex-wrap:wrap;
+            .swiper-slide:nth-child(n+4){
+                margin-top:30px;
             }
         }
     }
@@ -787,11 +745,9 @@
 
 
 
-
-
-/*** 팬사인회 소식 : .mus_mc_fan ***/
+/*** 팬사인회 소식 :.mus_mc_fan ***/
 .mus_mc_fan {
-    overflow:hidden;
+    background:#000;overflow:hidden;
     .ht_tit_big02 {
         color:#fff;
         img {
@@ -799,76 +755,76 @@
         }
     }
     .mus_mc_fan_cont .swiper-slide{
-        width: 850px !important;margin:0 18px 0 18px;padding: 12px 13px;
+        width:850px !important;margin:0 18px 0 18px;padding:12px 13px;
     }
     .thumb4_banner {
-        margin-top: -80px;
+        margin-top:-80px;
         .swiper-slide:before{
-            border: 3px solid rgba(255, 255, 255, 0.6);
+            border:3px solid rgba(255, 255, 255, 0.6);
         }
         &.ht_today_banner .product_info{
-            width: 51%;float: left;margin-left: 2%;position: absolute;right: 1%;top: 50%;transform: translateY(-50%);height: initial;
+            width:51%;float:left;margin-left:2%;position:absolute;right:1%;top:50%;transform:translateY(-50%);height:initial;
         }
         .swiper-container{
-            width: calc(68.5% + 36px);margin: 0 auto;position: initial;padding-top: 80px;
+            width:calc(68.5% + 36px);margin:0 auto;position:initial;padding-top:80px;
         }
     }
     .product_pic{
-        width: 45.74%;padding-top: 45.74%;float: left;border-radius: 12px;
+        width:45.74%;padding-top:45.74%;float:left;border-radius:12px;
         a:after{
             border:0;
         }
     }
     .product_info {
         .title{
-            font-size: 24px;color: #fff;line-height: 36px;-webkit-line-clamp: 8;
+            font-size:24px;color:#fff;line-height:36px;-webkit-line-clamp:8;
         }
         .date{
-            color: #EAEAEA;font-size: 16px;margin-top: 16px;
+            color:#EAEAEA;font-size:16px;margin-top:16px;
         }
     }
     .swiper-container-horizontal .swiper_control{
-        position: initial;
+        position:initial;
         .swiper-button-next{
-            right: 69px;left: initial;top: 45%;position: absolute;background: #000;border: 0;
+            right:69px;left:initial;top:45%;position:absolute;background:#000;border:0;
         } 
         .swiper-button-prev{
-            left: 69px;top: 47%;position: absolute;background: #000;border: 0;
+            left:69px;top:47%;position:absolute;background:#000;border:0;
         }
         .swiper-pagination-current {
-            color: #fff !important;font-weight: 700 !important;
+            color:#fff !important;font-weight:700 !important;
         }
         .swiper-button-next, .swiper-button-prev{
-            background-image: url(../../../assets/common/images/btn_swiper_arr_white.png) !important;
+            background-image:url(../../../assets/common/images/btn_swiper_arr_white.png) !important;
         }
     }
     .mus_mc_fan_cont {
         .swiper-pagination{
             &.swiper-pagination-fraction {
                 .swiper-pagination-total:before{
-                    color: #767676 !important;
+                    color:#767676 !important;
                 }
                 span{
-                    font-size: 12px;
+                    font-size:12px;
                 }
             }
         }
         .swiper-slide:after{
-            background: url(../images/mus_main/ico_mus_mc_fan_cont_ink.svg) center/100% no-repeat;right: -6px;bottom: 345px;width: 200px;height: 130px;
+            background:url(../images/mus_main/ico_mus_mc_fan_cont_ink.svg) center/100% no-repeat;right:-6px;bottom:345px;width:200px;height:130px;
         }
         a{
-            position: initial;
+            position:initial;
         }
     }
     .mus_mc_fan_bg_images {
         > img{
-            position: absolute;
-            z-index: 1;
+            position:absolute;
+            z-index:1;
             &:nth-child(1){
-                top: 123px;left: 115px;
+                top:123px;left:115px;
             }
             &:nth-child(2){
-                bottom: 112px;right: 130px;
+                bottom:112px;right:130px;
             }
         }
     }
@@ -928,7 +884,7 @@
         }
     }
     &:after {
-        position: absolute;left:0;top:0;width:100%;height:100%;border:2px solid #000;border-radius:8px;box-sizing:border-box;content:"";
+        position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #000;border-radius:8px;box-sizing:border-box;content:"";
     }
 }
 
