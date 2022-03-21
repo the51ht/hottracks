@@ -94,42 +94,25 @@
 		<section class="ht_contents_wrap mus_main_warp">
 			<h1 class="hidden">음반</h1>
 
-			<script>
-				//배너 확인용
-				$(function(){
-					$(document).on('click', '.main_tab_menu a', function(){
-						$(this).addClass('active').siblings().removeClass('active');
-						$(this).parent().attr('class', 'main_tab_menu').addClass('active'+$(this).index());
-					});
-				});
-				</script>
-
-			<!-- 음반메인 컨텐츠 -->
-            <section class="main_cont_wrap cont_wrap" style="display:none">
-                <!-- 음반메인 탭 -->
-                <div class="main_tab_menu active0">
-                    <a href="#a" class="active">
-                        <em class="icon"></em>
-                        <span class="txt">음반</span>
-                    </a>
-                    <a href="#b">
-                        <em class="icon"></em>
-                        <span class="txt">DVD</span>
-                    </a>
-                    <a href="#c">
-                        <em class="icon"></em>
-                        <span class="txt">BLU-RAY</span>
-                    </a>
-                </div>       
-                <!-- //음반메인 탭 -->
-			</section>
-            <!-- //음반메인 컨텐츠 -->
+<script>
+/* mus_tit_nav */
+$(function(){
+	$(document).on('click', '.mus_tit_nav_inner a', function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).parent().attr('class', 'mus_tit_nav_inner').addClass('active'+$(this).index());
+	});
+});
+</script>
 
 			<!-- mus_tit_nav -->
 			<nav class="mus_tit_nav">
-				<a href="#n"><span>음반</span></a>
-				<a href="#n"><span>DVD</span></a>
-				<a href="#n"><span>BLU-RAY</span></a>
+				<!-- mus_tit_nav_inner -->
+				<div class="mus_tit_nav_inner">
+					<a href="#n" class="active"><span>음반</span></a>
+					<a href="#n"><span>DVD</span></a>
+					<a href="#n"><span>BLU-RAY</span></a>
+				</div>
+				<!-- //mus_tit_nav_inner -->
 			</nav>
 			<!-- //mus_tit_nav -->
 
@@ -554,8 +537,8 @@
 
 						<!-- star_fade_in -->
 						<div class="star_fade_in">
-							<img src="../../images/mus_main/ico_mus_main_star1.svg" alt="">
-							<img src="../../images/mus_main/ico_mus_main_star2.svg" alt="">
+							<img src="../../images/main/ico_mus_main_star1.svg" alt="">
+							<img src="../../images/main/ico_mus_main_star2.svg" alt="">
 						</div>
 						<!-- //star_fade_in -->
 					</div>
@@ -1123,7 +1106,7 @@ if(i>4){
 									<div class="evt_products row_dir">
 										<div class="prod_item">
 											<div class="product_pic">
-												<img src="../../images/temp/@img_prod07.jpg" alt="">
+												<img src="../../images/temp/@img_prod01.jpg" alt="">
 												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
 											</div>
 											<div class="product_info">
@@ -1238,8 +1221,8 @@ if(i>4){
 					</div>
 					<!-- //mus_mc_fan_cont -->
 					<div class="mus_mc_fan_bg_images">
-						<img src="../../images/mus_main/ico_mus_mc_fan_heart01.svg" />
-						<img src="../../images/mus_main/ico_mus_mc_fan_heart02.svg" />
+						<img src="../../images/main/ico_mus_mc_fan_heart01.svg" />
+						<img src="../../images/main/ico_mus_mc_fan_heart02.svg" />
 					</div>
 				</div>
 			</div>
@@ -1281,8 +1264,8 @@ if(i>4){
 								<!-- //small_pics_area -->
 								<!-- mus_mc_fansign_bg_icon -->
 								<div class="mus_mc_fansign_bg_icon">
-									<img src="../../images/mus_main/icon_mus_mc_fansign01.svg" alt="">
-									<img src="../../images/mus_main/icon_mus_mc_fansign02.svg" alt="">
+									<img src="../../images/main/icon_mus_mc_fansign01.svg" alt="">
+									<img src="../../images/main/icon_mus_mc_fansign02.svg" alt="">
 								</div>
 								<!-- //mus_mc_fansign_bg_icon -->
 							</div>
@@ -1876,7 +1859,7 @@ if(i>4){
 			<!-- ht_cont : 특별한 할인상품 놓치지 마세요 - mus_mc_special  / function - musSpecial();-->
 			<div class="ht_cont ht_bg mus_mc_special">
 				<div class="contents_inner">
-					<h2 class="ht_tit_big02">특별한<img src="../../../ink/images/mus_main/ico_mus_mc_special.svg" alt=""> 할인상품 놓치지 마세요</h2>
+					<h2 class="ht_tit_big02">특별한<img src="../../../ink/images/main/ico_mus_mc_special.svg" alt=""> 할인상품 놓치지 마세요</h2>
 
 					<!-- tab_swiper -->
 					<div class="tab_swiper mus_tab_box tab_link"><!-- tab_link 확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
@@ -1998,9 +1981,9 @@ if(i>4){
 
 					<!-- icon_bg_wrap -->
 					<div class="icon_bg_wrap">
-						<img src="../../images/mus_main/ico_mus_mc_special_bg01.svg" alt="">
-						<img src="../../images/mus_main/ico_mus_mc_special_bg02.svg" alt="">
-						<img src="../../images/mus_main/ico_mus_mc_special_bg03.svg" alt="">
+						<img src="../../images/main/ico_mus_mc_special_bg01.svg" alt="">
+						<img src="../../images/main/ico_mus_mc_special_bg02.svg" alt="">
+						<img src="../../images/main/ico_mus_mc_special_bg03.svg" alt="">
 					</div>
 					<!-- //icon_bg_wrap -->
 				</div>
