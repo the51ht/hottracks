@@ -1684,8 +1684,16 @@
   font-weight: 700 !important;
 }
 
-.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-next, .mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-prev {
-  background-image: url(../../../assets/common/images/btn_swiper_arr_white.png) !important;
+.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-next:hover:after, .mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-prev:hover:after {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-next:after, .mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-prev:after {
+  background: #000 url(../images/guide/btn_banner_pagn_w.svg) center no-repeat;
+  border-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .mus_mc_fan .mus_mc_fan_cont .swiper-pagination.swiper-pagination-fraction .swiper-pagination-total:before {
