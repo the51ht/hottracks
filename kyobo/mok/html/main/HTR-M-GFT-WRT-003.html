@@ -295,14 +295,14 @@ $(function(){
 
 
 <script>
-/* 확인용 */
+/* 확인용 : 22.03.21 수정 */
 function chkAll(obj){
     $('.fixed_btn_select').addClass('on');
-    $('.fixed_select_cont').css('padding-bottom', $('.fixed_btn_select').innerHeight() - 70);
+    $('.gft_prod').css('padding-bottom', $('.fixed_btn_select').innerHeight() + 30);
 }
 function chkOutImg(){
     $('.fixed_btn_select').addClass('off');
-    $('.fixed_select_cont').css('padding-bottom', '0');
+    $('.gft_prod').css('padding-bottom', '');
     setTimeout(function(){
         $('.fixed_btn_select').removeClass('off').removeClass('on');
     }, 600);
