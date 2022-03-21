@@ -726,15 +726,6 @@
             height:36px;margin-left:-12px;
         }
     }
-    .product_info {
-        margin-top: 0;
-        .price_line span{
-            font-size: 18px;
-            &.price_origin{
-                font-size: 14px;
-            }
-        }
-    }
 
     .btn_area{
         position: initial;
@@ -746,30 +737,55 @@
             }
         }
     }
-}
-
-/* mus_mc_new_album_cont */
-.mus_mc_new_album_cont {
-    margin:0;
-    .swiper-slide {
-        width:33.3%;
-    }
-    .evt_products.row_dir .prod_item {
-        width: 100%;
-    }
-    .swiper-wrapper{
-        margin-bottom: 28px;
-        .swiper-slide:nth-child(n+4){
-            margin-top: 0px;
-        }
-        &.list_lenght_warp {
-            flex-wrap: wrap;
-            .swiper-slide:nth-child(n+4){
-                margin-top: 30px;
+    /* mus_mc_new_album_cont */
+    .mus_mc_new_album_cont {
+        margin:0;
+        .swiper-wrapper{
+            margin-bottom: 28px;
+            .swiper-slide {
+                width:33.3%;  
+                .evt_products{
+                    margin: -40px -18px 0 -0;
+                    &.row_dir .prod_item {
+                        width: 100%;
+                        .product_pic{
+                            width: 151px;padding-top: 150px;float: left;
+                        }
+                        .product_info{
+                            float: left;width: calc(100% - 216px);margin-top: 0;
+                            .company{
+                                margin-bottom: 4px;
+                            }
+                            .title{
+                                line-height: 26px;
+                            }
+                            .price_line{
+                                margin: 4px 0 -8px;font-size: 20px;
+                                span{
+                                    font-size: 14px;
+                                    &.price_origin{
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(n+4){
+                    margin-top: 0px;
+                }
+            }
+            &.list_lenght_warp {
+                flex-wrap: wrap;
+                .swiper-slide:nth-child(n+4){
+                    margin-top: 30px;
+                }
             }
         }
     }
 }
+
+
 
 
 
@@ -783,7 +799,7 @@
         }
     }
     .mus_mc_fan_cont .swiper-slide{
-        width: 850px;margin:0 18px 0 18px;padding: 14px;
+        width: 850px !important;margin:0 18px 0 18px;padding: 12px 13px;
     }
     .thumb4_banner {
         margin-top: -80px;
