@@ -874,13 +874,37 @@ $(function(){
 			
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-009-1(이미지형 / 009-3팝업 모듈 연동)</p>
 
-			<!--module009영역-->
+			<!--module009=영역-->
 			<div class="mdl_wrap" style="background-color: #FF8963;">
 				<div class="mdl_inner mdl009_wrap">
 					<a href="#none" class="mdl_img_btn" data-role="btn-dialog" data-target="#evtVotePop"><img src="../../images/temp/@mdl_img_btn.png" alt=""></a>
 				</div>
 			</div>
 			<!--//module009영역-->
+
+
+
+			
+			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-010(010-2 팝업 모듈 연동)</p>
+
+			<!--module010영역-->
+			<div class="mdl_wrap">
+				<div class="mdl_inner mdl009_wrap">
+					<button class="btn_xlg btn_black" data-role="btn-dialog" data-target="#evtApplyPop">응모하기</button>
+				</div>
+			</div>
+			<!--//module010영역-->
+
+			
+			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-010-1(이미지형 / 010-2 팝업 모듈 연동)</p>
+
+			<!--module010영역-->
+			<div class="mdl_wrap">
+				<div class="mdl_inner mdl009_wrap">
+					<a href="#none" class="mdl_img_btn" data-role="btn-dialog" data-target="#evtApplyPop"><img src="../../images/temp/@mdl_img_btn2.png" alt=""></a>
+				</div>
+			</div>
+			<!--//module010영역-->
 
 
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-014(수정 클릭: 내가 쓴 댓글 수정)</p>
@@ -1284,11 +1308,53 @@ $(function(){
 </div>
 <!-- //투표하기 : module 009-3 --> 
 
-<script>
-	$(function(){
-		$('#evtVotePop').dialog({
-			autoOpen: true
-		});
-	});
-	</script>
+
+<!-- 응모하기 : module 010-2--> 
+<div id="evtApplyPop" class="dialog_wrap" data-class="dialog_md">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">응모하기</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+		<!-- 스크롤 영역 -->
+		<div class="custom_scroll_wrap sc_pop_btn">
+			<!--폼 양식-->
+			<ul class="cm_form_list">
+				<li class="form_item">
+					<label for="" class="cm_lb">주문번호</label>
+					<input type="text" class="form_ip" disabled value="1234567">
+				</li>
+				<li class="form_item">
+					<label for="" class="cm_lb">이름</label>
+					<input type="text" class="form_ip" >
+				</li>
+				<li class="form_item">
+					<label for="" class="cm_lb">전화번호</label>
+					<input type="text" class="form_ip" >
+				</li>
+				<li class="form_item">
+					<label for="" class="cm_lb">생년월일</label>
+					<input type="text" class="form_ip">
+				</li>
+			</ul>
+			<!--//폼 양식-->
+		</div>
+		<!-- //스크롤 영역-->
+
+		<!-- btn_area -->
+		<div class="btn_area">
+			<!--버튼 비활성화 클래스 : disabled -->
+			<button type="text" class="btn_md btn_primary disabled"><span>응모하기</span></button>
+		</div>
+		<!-- //btn_area -->
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- // 응모하기 : module 010-2--> 
+
 </html>
