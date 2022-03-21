@@ -300,29 +300,74 @@
 /* .mus_mc_chart_cont */
 .mus_mc_chart_cont {
   position: relative;
-  margin: 0 -20px;
+  /*
+    .active {
+        background: url(../images/mus_main/mus_main_rank_active.jpg) no-repeat left center;opacity: 1; width: 1920px;left: -26.3%;padding: 24px 428px 24px 246px;-webkit-box-sizing: border-box;box-sizing: border-box;height: 240px;margin-bottom: 20px;
+
+        .img{
+            left:0;top:30px;width:180px;height:180px;
+        }
+
+
+
+
+
+
+
+
+
+        &:last-child {
+            margin-bottom:0;;padding-bottom:24px;
+        }
+        .rank_txt {
+            padding-top:7px;background:url('../images/guide/lank_hot.svg') center/50px no-repeat;color:#fff;
+            top:50%;left: 335px;transform: translateY(-50%);-o-transform: translateY(-50%);-ms-transform: translateY(-50%);-webkit-transform: translateY(-50%);
+        }
+        .fluctuation {
+            top:-5px;color:#fff;
+            &.new {
+                color:#fff;
+            }
+            &.up:before {
+                color:#fff;
+            }
+            &.down:before {
+                color:#fff;
+            }
+        }
+
+        .txt {
+            margin-left: 321px;margin-top: 24px;width: calc(100% - 225px + 58px); 
+            .s3 {
+                display:block;padding-top: 50px;
+            }
+            .ico_marker_area {
+                display:block;
+            }
+            .s1{
+                margin-top: 62px;
+            }
+        }
+    }
+    */
 }
 
 .mus_mc_chart_cont .li {
+  display: block;
+  width: 100%;
+  position: relative;
+  min-height: 80px;
+  padding-bottom: 25px;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  min-height: 73px;
-  padding: 0 20px 20px 20px;
-  -webkit-transition: background 0.4s;
-  transition: background 0.4s;
-  width: 100%;
-  display: inline-block;
 }
 
 .mus_mc_chart_cont .li:last-child {
   padding-bottom: 0;
-}
-
-.mus_mc_chart_cont .li .img {
-  margin-left: 30px;
 }
 
 .mus_mc_chart_cont .li .txt {
@@ -352,69 +397,17 @@
   width: 45%;
 }
 
-.mus_mc_chart_cont .rank_txt {
-  position: absolute;
-  left: 10px;
-  top: 17px;
-  width: 50px;
-  height: 50px;
-  color: #000;
-  text-align: center;
-}
-
-.mus_mc_chart_cont .rank_txt .num {
-  display: block;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 18px;
-  padding-top: 5px;
-}
-
-.mus_mc_chart_cont .rank_txt .fluctuation {
-  display: inline-block;
-  position: relative;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-}
-
-.mus_mc_chart_cont .rank_txt .fluctuation.new {
-  color: #fc3f4b;
-}
-
-.mus_mc_chart_cont .rank_txt .fluctuation.up:before {
-  display: inline-block;
-  margin: 1px 2px 0 0;
-  color: #fc3f4b;
-  font-size: 10px;
-  content: '▲';
-  vertical-align: top;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
-.mus_mc_chart_cont .rank_txt .fluctuation.down:before {
-  display: inline-block;
-  margin: 0 2px 0 0;
-  color: #000;
-  font-size: 10px;
-  content: '▼';
-  vertical-align: top;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
 .mus_mc_chart_cont .img {
   position: absolute;
-  left: 60px;
+  left: 80px;
   top: 0;
+  width: 80px;
+  height: 80px;
   background: #f7f7f7;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
   -webkit-animation: fade both 0.4s;
           animation: fade both 0.4s;
-  width: 80px;
-  height: 80px;
 }
 
 .mus_mc_chart_cont .img img {
@@ -432,8 +425,8 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  min-height: 73px;
-  padding-left: 130px;
+  min-height: 80px;
+  padding-left: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-orient: vertical;
@@ -518,77 +511,56 @@
   margin-left: 0;
 }
 
-.mus_mc_chart_cont .active {
-  background: url(../images/mus_main/mus_main_rank_active.jpg) no-repeat left center;
-  opacity: 1;
-  width: 1920px;
-  left: -26.3%;
-  padding: 24px 428px 24px 246px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 240px;
-  margin-bottom: 20px;
+.mus_mc_chart_cont .rank_txt {
+  position: absolute;
+  left: 10px;
+  top: 17px;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  text-align: center;
 }
 
-.mus_mc_chart_cont .active:last-child {
-  margin-bottom: 0;
-  padding-bottom: 24px;
+.mus_mc_chart_cont .rank_txt .num {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  padding-top: 5px;
 }
 
-.mus_mc_chart_cont .active .rank_txt {
-  padding-top: 7px;
-  background: url("../images/guide/lank_hot.svg") center/50px no-repeat;
-  color: #fff;
-  top: 50%;
-  left: 335px;
-  transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-}
-
-.mus_mc_chart_cont .active .fluctuation {
-  top: -5px;
-  color: #fff;
-}
-
-.mus_mc_chart_cont .active .fluctuation.new {
-  color: #fff;
-}
-
-.mus_mc_chart_cont .active .fluctuation.up:before {
-  color: #fff;
-}
-
-.mus_mc_chart_cont .active .fluctuation.down:before {
-  color: #fff;
-}
-
-.mus_mc_chart_cont .active .img {
+.mus_mc_chart_cont .rank_txt .fluctuation {
   display: inline-block;
-  width: 180px;
-  height: 180px;
-  top: 31px;
-  left: 385px;
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
 }
 
-.mus_mc_chart_cont .active .txt {
-  margin-left: 321px;
-  margin-top: 24px;
-  width: calc(100% - 225px + 58px);
+.mus_mc_chart_cont .rank_txt .fluctuation.new {
+  color: #fc3f4b;
 }
 
-.mus_mc_chart_cont .active .txt .s3 {
-  display: block;
-  padding-top: 50px;
+.mus_mc_chart_cont .rank_txt .fluctuation.up:before {
+  display: inline-block;
+  margin: 1px 2px 0 0;
+  color: #fc3f4b;
+  font-size: 10px;
+  content: '▲';
+  vertical-align: top;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
-.mus_mc_chart_cont .active .txt .ico_marker_area {
-  display: block;
-}
-
-.mus_mc_chart_cont .active .txt .s1 {
-  margin-top: 62px;
+.mus_mc_chart_cont .rank_txt .fluctuation.down:before {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  color: #000;
+  font-size: 10px;
+  content: '▼';
+  vertical-align: top;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .mus_mc_chart_cont .btn_chart_view {

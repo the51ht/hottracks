@@ -1079,62 +1079,155 @@
   position: relative;
 }
 
-.mus_mc_chart_cont .contents_inner {
-  height: 100%;
-}
-
 .mus_mc_chart_cont .li {
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: block;
+  width: 100%;
   position: relative;
-  min-height: 73px;
-  padding: 0 0 20px 0;
+  min-height: 80px;
+  padding-bottom: 25px;
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
-  width: 100%;
-  display: inline-block;
 }
 
 .mus_mc_chart_cont .li:last-child {
   padding-bottom: 0;
 }
 
-.mus_mc_chart_cont .li .img {
-  margin-left: 30px;
-}
-
-.mus_mc_chart_cont .li .txt {
-  margin-left: 61px;
-  display: inline-block;
-  width: 100%;
-}
-
-.mus_mc_chart_cont .li .txt .s1 {
-  float: right;
-  margin-top: 33px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  margin-right: 83px;
-}
-
-.mus_mc_chart_cont .li .txt .s2 {
-  font-size: 17px;
-  float: left;
-  margin-top: 33px;
-  display: -webkit-box;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+.mus_mc_chart_cont .img {
+  position: absolute;
+  left: 80px;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  background: #f7f7f7;
+  border-radius: 6px;
   overflow: hidden;
-  width: 45%;
+  -webkit-animation: fade both 0.4s;
+          animation: fade both 0.4s;
+}
+
+.mus_mc_chart_cont .img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mus_mc_chart_cont .txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 80px;
+  padding: 0 300px 0 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mus_mc_chart_cont .txt .s1 {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 300px;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: right;
+}
+
+.mus_mc_chart_cont .txt .s2 {
+  width: 100%;
+  color: #000;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.mus_mc_chart_cont .txt .s3 {
+  display: none;
+  width: 100%;
+  margin-top: 7px;
+  font-size: 0;
+  font-weight: 700;
+  line-height: 18px;
+  -webkit-animation: fade both 0.4s;
+          animation: fade both 0.4s;
+}
+
+.mus_mc_chart_cont .txt .s3 strong {
+  padding-right: 4px;
+  color: #da2128;
+  font-size: 16px;
+}
+
+.mus_mc_chart_cont .txt .s3 span {
+  padding-right: 4px;
+  font-size: 16px;
+}
+
+.mus_mc_chart_cont .txt .s3 em {
+  display: inline-block;
+  color: #767676;
+  font-size: 11px;
+  text-decoration: line-through;
+}
+
+.mus_mc_chart_cont .txt .ico_marker_area {
+  display: none;
+  width: 100%;
+  -webkit-animation: fade both 0.4s;
+          animation: fade both 0.4s;
+  font-size: 12px;
+  margin-top: 9px;
+  text-align: left;
+}
+
+.mus_mc_chart_cont .txt .ico_marker_area .ico_marker {
+  display: inline-block;
+  height: 25px;
+  padding: 2px 11px 0;
+  background: #f5f5f5;
+  border-radius: 14px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #292929;
+  font-size: 10px;
+  line-height: 21px;
+  text-align: center;
+  margin-left: 3px;
+  border: 1px solid #D5D5D5;
+}
+
+.mus_mc_chart_cont .txt .ico_marker_area .ico_marker.on {
+  background: #fff4f1;
+  color: #da2128;
+  font-weight: 700;
+  border: 1px solid #da2128;
+  margin-left: 0;
 }
 
 .mus_mc_chart_cont .rank_txt {
   position: absolute;
-  left: 0px;
+  left: 10px;
   top: 17px;
   width: 50px;
   height: 50px;
@@ -1184,146 +1277,60 @@
           transform: scale(0.8);
 }
 
-.mus_mc_chart_cont .img {
-  position: absolute;
-  left: 51px;
-  top: 0;
-  background: #f7f7f7;
-  border-radius: 8px;
-  overflow: hidden;
-  -webkit-animation: fade both 0.4s;
-          animation: fade both 0.4s;
-  width: 80px;
-  height: 80px;
-}
-
-.mus_mc_chart_cont .img img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100%;
-  height: auto;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.mus_mc_chart_cont .txt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  min-height: 73px;
-  padding-left: 130px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.mus_mc_chart_cont .txt .s1 {
-  color: #595959;
-  font-size: 12px;
-  line-height: 18px;
-}
-
-.mus_mc_chart_cont .txt .s2 {
-  color: #000;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 19px;
-}
-
-.mus_mc_chart_cont .txt .s3 {
-  display: none;
-  margin-top: 7px;
-  font-size: 0;
-  font-weight: 700;
-  line-height: 18px;
-  -webkit-animation: fade both 0.4s;
-          animation: fade both 0.4s;
-}
-
-.mus_mc_chart_cont .txt .s3 strong {
-  padding-right: 4px;
-  color: #da2128;
-  font-size: 16px;
-}
-
-.mus_mc_chart_cont .txt .s3 span {
-  padding-right: 4px;
-  font-size: 16px;
-}
-
-.mus_mc_chart_cont .txt .s3 em {
-  display: inline-block;
-  color: #767676;
-  font-size: 11px;
-  text-decoration: line-through;
-}
-
-.mus_mc_chart_cont .txt .ico_marker_area {
-  display: none;
-  -webkit-animation: fade both 0.4s;
-          animation: fade both 0.4s;
-  font-size: 12px;
-  margin-top: 9px;
-}
-
-.mus_mc_chart_cont .txt .ico_marker_area .ico_marker {
-  display: inline-block;
-  height: 25px;
-  padding: 2px 11px 0;
-  background: #f5f5f5;
-  border-radius: 14px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color: #292929;
-  font-size: 10px;
-  line-height: 21px;
-  text-align: center;
-  margin-left: 3px;
-  border: 1px solid #D5D5D5;
-}
-
-.mus_mc_chart_cont .txt .ico_marker_area .ico_marker.on {
-  background: #fff4f1;
-  color: #da2128;
-  font-weight: 700;
-  border: 1px solid #da2128;
-  margin-left: 0;
-}
-
 .mus_mc_chart_cont .active {
-  background: url(../images/mus_main/mus_main_rank_active.jpg) no-repeat left center;
-  background-size: 100% 100%;
-  opacity: 1;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 240px;
-  margin-bottom: 20px;
+  min-height: 240px;
+  background: #eee;
+  margin-bottom: 25px;
+  padding-bottom: 0;
+  background: url("../images/main/mus_main_rank_active.jpg") center/cover no-repeat;
+  /*
+        .txt {
+            margin-left: 321px;margin-top: 24px;width: calc(100% - 225px + 58px); 
+            .s3 {
+                display:block;padding-top: 50px;
+            }
+            .ico_marker_area {
+                display:block;
+            }
+            .s1{
+                margin-top: 62px;
+            }
+        }*/
 }
 
 .mus_mc_chart_cont .active:last-child {
   margin-bottom: 0;
-  padding-bottom: 24px;
+}
+
+.mus_mc_chart_cont .active .contents_inner {
+  padding: 30px 0;
+}
+
+.mus_mc_chart_cont .active .img {
+  top: 30px;
+  width: 180px;
+  height: 180px;
+}
+
+.mus_mc_chart_cont .active .txt {
+  min-height: 180px;
+  padding: 0 300px;
+}
+
+.mus_mc_chart_cont .active .txt .s3 {
+  display: block;
+}
+
+.mus_mc_chart_cont .active .txt .ico_marker_area {
+  display: block;
 }
 
 .mus_mc_chart_cont .active .rank_txt {
-  padding-top: 7px;
+  top: 50%;
   background: url("../images/guide/lank_hot.svg") center/50px no-repeat;
   color: #fff;
-  top: 50%;
-  left: 0px;
-  transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .mus_mc_chart_cont .active .fluctuation {
@@ -1343,34 +1350,6 @@
   color: #fff;
 }
 
-.mus_mc_chart_cont .active .img {
-  display: inline-block;
-  width: 180px;
-  height: 180px;
-  top: 31px;
-  left: 53px;
-}
-
-.mus_mc_chart_cont .active .txt {
-  margin-left: 182px;
-  margin-top: 45px;
-  width: calc(100% - 74px);
-}
-
-.mus_mc_chart_cont .active .txt .s3 {
-  display: block;
-  padding-top: 60px;
-}
-
-.mus_mc_chart_cont .active .txt .ico_marker_area {
-  display: block;
-}
-
-.mus_mc_chart_cont .active .txt .s1 {
-  margin-top: 62px;
-  margin-right: 129px;
-}
-
 .mus_mc_chart_cont .btn_chart_view {
   display: block;
   position: absolute;
@@ -1382,8 +1361,12 @@
 }
 
 /*** 회원 추천 : .mus_mc_memb ***/
+.mus_mc_memb {
+  background: #e1f7e5;
+}
+
 .mus_mc_memb .ht_tit_big02 {
-  margin-bottom: 70px;
+  margin-bottom: 95px;
 }
 
 .mus_mc_memb .btn_more_view_box {
@@ -1391,47 +1374,54 @@
 }
 
 .mus_mc_memb .product_info {
-  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.mus_mc_memb .product_info .product_info_inner {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  padding: 10px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.mus_mc_memb .product_info .company,
+.mus_mc_memb .product_info .title,
+.mus_mc_memb .product_info .price_line,
+.mus_mc_memb .product_info .discount_rate,
+.mus_mc_memb .product_info .price_origin {
+  color: #fff;
+}
+
+.mus_mc_memb .product_info .price_origin {
+  font-size: 15px;
 }
 
 .mus_mc_memb .prod_item:hover .product_info {
-  display: inline-block;
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  padding-left: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  cursor: pointer;
+  opacity: 1;
 }
 
-.mus_mc_memb .prod_item:hover .product_info .company {
-  color: #fff;
-  margin-bottom: 4px;
-  padding-top: 76px;
-}
-
-.mus_mc_memb .prod_item:hover .product_info .title {
-  color: #fff;
-}
-
-.mus_mc_memb .prod_item:hover .product_info .price_line {
-  color: #fff;
-}
-
-.mus_mc_memb .prod_item:hover .product_info .price_line .discount_rate, .mus_mc_memb .prod_item:hover .product_info .price_line .price_origin {
-  color: #fff;
-}
-
-.mus_mc_memb .ht_tit_big02 {
-  margin-bottom: 91px;
+.mus_mc_memb .prod_item:hover .product_info .product_info_inner {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 /* mus_mc_memb_msg */
@@ -1902,8 +1892,8 @@
 /*** 영통팬사 준비 : .mus_mc_fansign ***/
 /* .mus_mc_fansign */
 .mus_mc_fansign {
-  background: #f2f2f2;
   padding: 40px 0;
+  background: #f2f2f2;
 }
 
 .mus_mc_fansign .ht_tit_big02 img {
@@ -1941,29 +1931,28 @@
 }
 
 .mus_mc_fansign .evt_list .item_info {
-  width: 210px;
   float: left;
+  width: 210px;
   margin-top: 50px;
   margin-left: 87px;
 }
 
 .mus_mc_fansign .evt_list .item_info .title {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 38px;
   position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38px;
 }
 
 .mus_mc_fansign .evt_list .item_info .title:after {
-  content: "";
   display: inline-block;
-  width: 38px;
-  height: 38px;
   position: absolute;
   top: -2px;
   right: 34px;
-  background: url(../images/mus_main/ico_mus_mc_fansign_emo.svg) no-repeat;
-  background-size: contain;
+  width: 38px;
+  height: 38px;
+  background: url("../images/mus_main/ico_mus_mc_fansign_emo.svg") center/contain no-repeat;
+  content: "";
 }
 
 .mus_mc_fansign .evt_list .img_wrap {
@@ -1986,18 +1975,15 @@
 
 .mus_mc_fansign .evt_list .img_wrap .small_pics_area > li:last-child img {
   -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+          filter: blur(5px);
 }
 
 .mus_mc_fansign .evt_list .img_wrap .small_pics_area > li:last-child > button > span {
+  top: 59%;
+  width: 100%;
+  padding-right: 0;
   color: #fff;
   text-align: center;
-  padding-right: 0;
-  width: 100%;
-  top: 59%;
 }
 
 .mus_mc_fansign .evt_list .img_wrap .small_pics_area > li:last-child > button > span:after {
@@ -2005,15 +1991,15 @@
 }
 
 .mus_mc_fansign .evt_list .img_wrap .small_pics_area .small_pics_more {
-  background: #000000;
+  background: #000;
   opacity: 0.8;
 }
 
 .mus_mc_fansign .evt_list .img_wrap .small_pics_area .btn_mc_more {
   display: inline-block;
   position: absolute;
-  top: 33%;
   left: 49%;
+  top: 33%;
   width: 21px;
   height: 21px;
 }
@@ -2031,16 +2017,14 @@
 
 .mus_mc_fansign .evt_list .img_wrap .small_pics_area .btn_mc_more span:after {
   position: absolute;
-  content: "";
+  left: 50%;
   top: 0;
-  background: #fff;
   width: 2px;
   height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
+  background: #fff;
   -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "";
 }
 
 .mus_mc_fansign .evt_list .img_wrap .mus_mc_fansign_bg_icon {
@@ -2344,6 +2328,10 @@
 .mus_mc_lpshop_cont .product_info .discount_rate,
 .mus_mc_lpshop_cont .product_info .price_origin {
   color: #fff;
+}
+
+.mus_mc_lpshop_cont .product_info .price_origin {
+  font-size: 15px;
 }
 
 /*** 특별한 할인상품 놓치지 마세요 : .mus_mc_special ***/
