@@ -293,7 +293,7 @@
 					<!-- ht_cont : 예약상품 / 베스트 / 신상품 -->
 					<div class="ht_cont" >
 						<!-- tab_txt -->
-						<div class="tab_txt ty02 tab_link" ><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<div class="tab_txt ty02 tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
 							<ul>
 								<li>
 									<a href="#n" class="on"><!-- 활성화  class="on" -->
@@ -508,6 +508,21 @@
 								</li>
 							</ul>
 							<!-- //체크박스 리스트 -->
+
+<script>
+/* 
+교보 자체 내 select UI - jquery ui select
+
+https://jqueryui.com/selectmenu/#default
+*/
+$(function(){
+	$('#selecMy').selectmenu({
+		change:function(event, data){
+			console.log(data.item.value)
+		}
+	});
+});
+</script>
 
 							<div class="prod_type_selec_area">
 								<!-- form_sel -->

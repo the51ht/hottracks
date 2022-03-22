@@ -401,22 +401,6 @@ $(function(){
 });
 
 
-
-/*** Select ***/
-$(function(){
-    //커스텀 셀렉트 value 값 가져오기
-    $(document).on ('click', '.ui-selectmenu-menu', function(){
-        var customVal = $(this).find('.ui-menu').attr('aria-activedescendant');
-        var selecIndex =  customVal.split('-')[ customVal.split('-').length - 1] - 1;
-        var realSelecId  = $(this).find('.ui-menu').attr('aria-labelledby').split('-')[0]; 
-        var selectedVal = $('#'+realSelecId).children('option').eq(selecIndex).val();
-        $('#'+realSelecId).attr('value', selectedVal);
-            console.log(selectedVal);
-    });
-});
-
-
-
 /*** 상품 정렬 토글 버튼 ***/
 $(function(){
     $(document).on('click', '.list_view_type_btn', function(){
@@ -677,11 +661,10 @@ function musPop(){
             centeredSlides: true,
             loop: true,
             spaceBetween: 0,
-            /*autoplay: {
+            autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
             },
-    */
             speed: 700,
             pagination: {
                 el: ('.type5_banner02 .swiper-pagination'),
@@ -1042,6 +1025,7 @@ $(function () {
 $(function(){
     // 마감임박, 반응최고 스와이프
     //상품 개수 2개이하일때 ul class="evt_slider nonswipe"로 설정
+    /*
     if ($('.swiper.evt_swiper').length == 0 ) return; 
 
     $('.swiper.evt_swiper').each(function(i, ele){
@@ -1062,7 +1046,7 @@ $(function(){
            $(ele).find('.swiper-wrapper').removeClass('swiper-wrapper');
            $(this).removeClass('evt_swiper');
         }
-    });
+    });*/
 })
 
 

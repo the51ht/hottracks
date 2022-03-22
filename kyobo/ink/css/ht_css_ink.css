@@ -1274,6 +1274,11 @@ button.btn_lg {
   display: none;
 }
 
+.swiper_control_bk .swiper-button-prev,
+.swiper_control_bk .swiper-button-next {
+  background-image: url("../images/guide/btn_banner_pagn_w.svg");
+}
+
 .swiper_control_bk .swiper-button-prev {
   left: -22px;
 }
@@ -2238,32 +2243,39 @@ body {
   margin-top: 0;
 }
 
-.tab_swiper .swiper_control .swiper-button-prev, .tab_swiper .swiper_control .swiper-button-next {
+.tab_swiper .swiper_control .swiper-button-prev,
+.tab_swiper .swiper_control .swiper-button-next {
   position: absolute;
   top: 50%;
-  margin-top: -22px;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
 }
 
-.tab_swiper .swiper_control .swiper-button-prev:before, .tab_swiper .swiper_control .swiper-button-next:before {
+.tab_swiper .swiper_control .swiper-button-prev:before,
+.tab_swiper .swiper_control .swiper-button-next:before {
   position: absolute;
-  left: 0;
+  left: -10px;
   top: -100%;
-  width: 100%;
+  width: calc(100% + 10px);
   height: 300%;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(255, 255, 255, 0)), to(white));
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, white 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(255, 255, 255, 0)), color-stop(60%, white));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, white 60%);
   content: "";
 }
 
-.tab_swiper .swiper_control .swiper-button-prev:after, .tab_swiper .swiper_control .swiper-button-next:after {
+.tab_swiper .swiper_control .swiper-button-prev:after,
+.tab_swiper .swiper_control .swiper-button-next:after {
   border-color: #000;
 }
 
-.tab_swiper .swiper_control .swiper-button-prev.swiper-button-disabled, .tab_swiper .swiper_control .swiper-button-next.swiper-button-disabled {
+.tab_swiper .swiper_control .swiper-button-prev.swiper-button-disabled,
+.tab_swiper .swiper_control .swiper-button-next.swiper-button-disabled {
   display: none;
 }
 
-.tab_swiper .swiper_control .swiper-button-prev:hover:after, .tab_swiper .swiper_control .swiper-button-next:hover:after {
+.tab_swiper .swiper_control .swiper-button-prev:hover:after,
+.tab_swiper .swiper_control .swiper-button-next:hover:after {
   background: #000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;
 }
 
@@ -2342,16 +2354,32 @@ body {
   color: #000;
 }
 
-.tab_ty + .txt_swiper {
-  margin-top: -10px;
+.tab_swiper.tab_txt li {
+  height: 24px;
+}
+
+.tab_swiper.tab_txt a {
+  height: 24px;
+  line-height: 24px;
+}
+
+.tab_swiper.tab_txt .swiper_control .swiper-button-prev,
+.tab_swiper.tab_txt .swiper_control .swiper-button-next {
+  width: 24px !important;
+  height: 24px !important;
+  margin-top: -12px !important;
+}
+
+.tab_swiper.tab_txt .swiper_control .swiper-button-prev:after,
+.tab_swiper.tab_txt .swiper_control .swiper-button-next:after {
+  background-size: 24px;
+}
+
+.tab_ty + .tab_under {
+  margin-top: -15px;
 }
 
 /* tab_under */
-.tab_under {
-  padding-bottom: 28px;
-  border-bottom: 1px solid #eaeaea;
-}
-
 /** tab_box **/
 .tab_box {
   position: relative;
