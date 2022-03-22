@@ -12,6 +12,7 @@
     justify-content: space-between;
     font-size: 14px;
     padding-bottom:15px;
+    margin-bottom:0 !important;
     .left_txt_sum {
         flex-shrink: 0;
         line-height: 20px;
@@ -54,8 +55,18 @@
         color:#000;
     }
 }
-
+.evt_list_wrap {
+    &>.contents_inner {
+        margin-bottom:60px;
+    }
+    .pagination {
+        margin-top:-20px;
+    }
+}
 //마감임박, 반응최고 영역
+.dead_line_wrap {
+    padding-bottom:60px;
+}
 .dead_line_wrap,
 .best_react_wrap {
     position:relative;
@@ -121,7 +132,7 @@
         display: block;
         position: absolute;
         top:50%;
-        margin-top:-7.5px;
+        margin-top:-8px;
         right: -17px;
         width: 0;
         z-index: 0;
@@ -138,7 +149,7 @@
         top:50%;
         margin-top:-12px;
         right: -5px;
-        transform: rotate( 60deg);
+        transform: rotate( 63deg);
     }
     }
     .txt {
