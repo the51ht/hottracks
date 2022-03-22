@@ -401,22 +401,6 @@ $(function(){
 });
 
 
-
-/*** Select ***/
-$(function(){
-    //커스텀 셀렉트 value 값 가져오기
-    $(document).on ('click', '.ui-selectmenu-menu', function(){
-        var customVal = $(this).find('.ui-menu').attr('aria-activedescendant');
-        var selecIndex =  customVal.split('-')[ customVal.split('-').length - 1] - 1;
-        var realSelecId  = $(this).find('.ui-menu').attr('aria-labelledby').split('-')[0]; 
-        var selectedVal = $('#'+realSelecId).children('option').eq(selecIndex).val();
-        $('#'+realSelecId).attr('value', selectedVal);
-            console.log(selectedVal);
-    });
-});
-
-
-
 /*** 상품 정렬 토글 버튼 ***/
 $(function(){
     $(document).on('click', '.list_view_type_btn', function(){
