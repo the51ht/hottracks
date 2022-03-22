@@ -1,0 +1,277 @@
+.wel_tod_middle_wrap {
+    background:pink;
+    width:1460px !important;
+    margin:0 auto;
+    background:url(../images/guide/wel_tod_middle_bg.svg) no-repeat left top/ 100%;
+}
+.wel_today_time {
+    margin-bottom:24px;
+
+    .wel_today_time_inner {
+        width:402px;
+        height:186px;
+        margin:0 auto;
+        position:relative;
+        
+    }
+    .wel_tod_img {
+        position:absolute;
+        height:167px;
+        left:50px;
+        bottom:-3px;
+
+
+    }
+    .wel_tod_acc {
+        position:absolute;
+        height:122px;
+        overflow: hidden;
+        right:5px;
+        top:0;
+        &>img {
+            width:100%;
+            transform: translateY(-3px);
+        }
+    }
+    .time_bar {
+        position:absolute;
+        font-family: 'Gmarket Sans';
+        font-weight: 700;
+        font-size: 26px;
+        line-height:30px;
+        left:29%;
+        top:74%;
+        color:#fff;
+        width:118px;
+    }
+    .wel_today_balloon {
+        padding:14px 8px;
+        background-color: #FFEE24;
+        border:2px solid;
+        border-radius: 40px;
+        line-height:34px;
+        padding:0 14px;
+        position:absolute;
+        font-size: 15px;
+        letter-spacing: -1px;
+        font-weight: 500;
+        left:23%;
+        bottom:-41px;
+        z-index: 3;
+        &:after {
+            content: '';
+            border-color: #000 transparent;
+            border-style: solid;
+            border-width: 0 10px 10px 10px;
+            display: block;
+            position: absolute;
+            left:50%;
+            top:0px;
+            margin-left:-5px;
+            margin-top:-11px;
+            width: 0;
+            z-index: 0;
+            }
+        &:before {
+            content:"";
+            position: absolute;
+            border-top: 8px solid transparent;
+            border-left: 0 solid transparent;
+            border-right: 8px solid #FFEE24;
+            border-bottom: 8px solid transparent;
+            z-index: 5;
+            left:50%;
+            top:0;
+            margin-top:-12px;
+            margin-left: 2px;
+            transform: rotate( 90deg);
+        }
+    }
+}
+//배너 네비게이션
+.wel_tod_handle {
+    position:relative;
+    margin:0;
+    height:0;
+    ;
+    .swiper-button-prev {       
+        top:-235px ;
+        left:-590px;
+    }
+    .swiper-button-next {               
+        top:-235px;
+        left:550px;
+    }
+
+}
+// .thumb4_banner.wel_hot_banner {
+//    border:1x solid blue;
+//    overflow: visible;
+//    .swiper-container {
+//         overflow: hidden;
+//    }
+
+// }
+
+
+
+/*** 앵콜 특가 : .wel_encore ***/
+.wel_encore {
+    &:before {
+        content:"";
+        position:absolute;
+        width:220px;
+        height:255px;
+        background:url(../images/main/wel_encore_left_bg.svg) no-repeat right/ 100%;
+        left:50%;
+        margin-left:-800px;
+        top:100px;
+        z-index: 5;
+    }
+    &:after {
+        content :"";
+        position:absolute;
+        width:300px;
+        height:528px;
+        background:url(../images/main/wel_encore_right_bg.svg) no-repeat right/ 100%;
+        right:0;
+        bottom:0;
+
+    }
+    .mc_tit {
+        width:calc(100% + 40px);height:185px;margin:0 20px 0 -20px;
+        &:before {
+            position:absolute;left:50%;top:175px;margin-left:-165px;width:29px;height:25px;background:url('../images/main/tit_wel_encore_bg1.svg') center/ 100% no-repeat;transform:rotate(-10deg);content:"";
+        }
+        &:after {
+            position:absolute;left:50%;top:80px;margin-left:130px;width:29px;height:25px;background:url('../images/main/tit_wel_encore_bg2.svg') center/ 100% no-repeat;content:"";
+        }
+        img {
+            position:relative;width:320px;margin-top:15px;
+        }
+    }
+    .evt_products {
+        margin-top:0;
+    }
+}
+
+/* wel_encore_msg */
+.wel_encore_msg {
+    position:absolute;right:28px;top:48px;height:80px;width:70%;
+    &:after {
+        position:absolute;right:0;top:0;width:70px;height:80px;background:url('../images/main/img_wel_encore_msg.png') center/100% no-repeat;content:"";
+    }
+    .msg {
+        position:absolute;right:70px;top:0;display:inline-block;min-height:34px;padding:9px 15px 5px 15px;background:#ffc7b7;border-radius:17px;box-sizing:border-box;color:#000;font-size:12px;line-height:18px;z-index:2;
+        &:after {
+            position:absolute;right:-4px;bottom:4px;width:0;height:0;border-top:10px solid #ffc7b7;border-left:4px solid transparent;border-right:4px solid transparent;content:"";transform:rotate(-55deg);transform-origin:right bottom;
+        }
+    }
+}
+@keyframes wel_encore_msg1{
+0% {transform:translateX(10px);opacity:0;}
+100% {transform:translateX(0);opacity:1;}
+}
+@keyframes wel_encore_msg2{
+0% {transform:translate(8px,2px);opacity:0;}
+12% {transform:translate(0,0);opacity:1;}
+80% {transform:translate(0,0);opacity:1;}
+90% {opacity:0;}
+100% {opacity:0;}
+}
+
+
+/*** ONLY Hottracks : .wel_only ***/
+.wel_only {
+    padding:20px 0 45px 20px;
+    position:relative;
+    &:before {
+        content:"";
+        position:absolute;
+        width:130px;
+        height:144px;
+        left:50%;
+        margin-left:675px;
+        bottom:119px;
+        background:url('../images/main/wel_only_bg.svg') no-repeat center / 100%;
+
+    }
+    .mc_tit {
+        text-align:center;
+        img {
+            width:500px;height:auto;
+        }
+    }
+    .evt_products {
+        margin-top: -14px;
+    }
+    .mc_txt {
+        margin-top:10px;text-align:center;
+        a {
+            display:inline-block;position:relative;padding-right:10px;
+            &:after {
+                position:absolute;right:0;top:50%;width:8px;height:8px;margin-top:-5px;border:solid #767676;border-width:2px 2px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
+            } 
+        }
+    }
+}
+//기획전 배너
+.wel_exehibition {
+    padding-top:60px;
+     .evt_list {
+         margin:-40px 0 0 0;
+         display: flex;
+         flex-flow: row wrap;
+         justify-content: space-between;
+        & > li {
+            width:582px !important;
+            margin:40px 0 0 0 !important;
+        }
+        .img_wrap {
+            margin-top:0;
+        }
+        .item_info {
+            overflow: hidden;
+        }
+        .discount {
+            float:left;
+            margin-right:4px;
+            line-height: 30px;
+            letter-spacing: -1px;
+            font-weight: 500;
+            font-size: 20px;
+            color:#DA2128;
+        }
+     }
+}
+
+/*** 카테고리 : .wel_category_tab ***/
+.wel_category_tab {
+    position:relative;height:45px;z-index:10;
+    &.on{
+        .tab_sticky_swiper {
+            position:fixed;top:50px;width:calc(100% + 40px);max-width:750px;margin:0 -20px;padding:10px 56px 10px 20px;border:solid #d5d5d5;border-width:1px 0;box-sizing:border-box;
+        }
+    }
+}
+.wel_category {
+    padding-bottom:0;
+    .mc_tit {
+        margin-bottom:20px; 
+        img {
+            position:relative;margin-left:5px;width:36px;
+        }
+    }
+}
+.tab_sticky_swiper {
+    background:#fff;overflow:hidden;
+    .swiper-slide {
+        width:auto;
+        a {
+            margin:0;
+        }
+    } 
+}
+.sticky_cont{
+    margin-bottom:40px;
+}
