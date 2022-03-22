@@ -677,11 +677,10 @@ function musPop(){
             centeredSlides: true,
             loop: true,
             spaceBetween: 0,
-            /*autoplay: {
+            autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
             },
-    */
             speed: 700,
             pagination: {
                 el: ('.type5_banner02 .swiper-pagination'),
