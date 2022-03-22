@@ -11434,13 +11434,18 @@ body:before {
   height: 0;
   margin-bottom: 12px;
   cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .list_evt_area .thumnail_evt img {
   position: absolute;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .list_evt_area .promotion_status_txt {
@@ -11574,6 +11579,9 @@ body:before {
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .evt_slider .evt_item.more_items {

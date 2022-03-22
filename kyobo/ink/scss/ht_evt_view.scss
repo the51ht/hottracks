@@ -1,11 +1,21 @@
 /*=============================================== HTR-P-EVT-LIST-000.html =============================================*/
-.top_evt_area {
-    margin-top:60px;
-    padding-bottom:0;
 
+/***** 이벤트&기획전 *****/
+.evt_liar_area {
+    position:relative;
+    .pagination {
+        width:1200px;margin:-20px auto 0 auto;
+    }
 }
-//상단 메뉴
-.evt_menu{
+
+
+/** 상단메뉴 : top_evt_area **/
+.top_evt_area {
+    padding-bottom:0;
+}
+
+/* .evt_menu */
+.evt_menu {
     position:relative;
     z-index:3;
     display: flex;
@@ -23,7 +33,7 @@
         display: none;
     }
 }
-//소팅메뉴
+/* 소팅메뉴 */
 .sort_tab {
     display: flex;
     margin-bottom: 20px;
@@ -44,7 +54,7 @@
             display: block;
             background-color: rgb(213, 213, 213);
             width:1px;
-            height:6px;
+            height:8px;
             position: absolute;
             right: -1px;
             top:5px;
@@ -55,119 +65,65 @@
         color:#000;
     }
 }
-//마감임박, 반응최고 영역
+
+
+
+/** 마감임박 **/
 .dead_line_wrap {
-    padding-bottom:60px;
+    background-color:#fff4f1;
 }
-.dead_line_wrap,
-.best_react_wrap {
-    position:relative;
-    background-color: #FFF4F1;
-    padding-top:60px;
-    margin-bottom:60px;
-    .heart_emoji {
-        width:35px;
-        height:35px;
-        display: inline-block;
-        margin-left:5px;
-        margin-bottom:-8px;
-        background:url(../images/guide/heart_emoji.svg) no-repeat center/31px;
-    }
-}
+
+/* deadline_bubble */
 .deadline_bubble {
-    width:0;
-    height:0;
-    padding:0;
-    font-size: 0;
-    background-color: none;
-    border:none;
-    position: absolute;
-    top:-47px;
-    right:135px;
-    z-index:2;
-    color:rgba(0,0,0,0);
-    transition: width .2s, height .1s;
-    &:after,
-    &:before {
-        width:0;
-        height:0;
-        border:none;
-    }
-    &.highlight {
-    width:341px;
-    height:auto;
-    padding:14px 34px;
-    font-size: 16px;
-    background-color: #D4FF1A;
-    border: 3px solid #000;
-    border-radius:40px;
-    color:rgba(0,0,0,1);
+    display:inline-block;;position:relative;right:135px;top:-47px;padding:14px 34px;background-color:#d4ff1a;border:3px solid #000;box-sizing:border-box;border-radius:40px;text-align:left;color:#000;animation:evtMsg both infinite 5s;
     .txt {
-        font-size: 16px;
-        height:48px;
-    }
-    &:after {
-        content: '';
-        border-color: #000 transparent;
-        border-style: solid;
-        border-width: 0 14px 14px 7px;
-        display: block;
-        position: absolute;
-        top:50%;
-        margin-top:-8px;
-        right: -17px;
-        width: 0;
-        z-index: 0;
-        transform: rotate(-25deg);
+        font-size:16px;line-height:24px;font-weight:700;overflow:hidden;
+        &:before,
+        &:after {
+            display:block;position:absolute;top:50%;width:0;
+            content:"";
         }
-    &:before {
-        content:"";
-        position: absolute;
-        border-top: 12px solid transparent;
-        border-left: 0 solid transparent;
-        border-right: 15px solid #D4FF1A;
-        border-bottom: 12px solid transparent;
-        z-index: 5;
-        top:50%;
-        margin-top:-12px;
-        right: -5px;
-        transform: rotate( 63deg);
-    }
-    }
-    .txt {
-        width:100%;
-        height:0;
-        font-weight: 700;
-        line-height: 24px;
-        letter-spacing: -0.12px;
-        font-size: 0;
-        overflow: hidden;
+        &:after {
+            right:-17px;margin-top:-8px;border-color:#000 transparent;border-style:solid;border-width:0 14px 14px 7px;transform:rotate(-25deg);z-index:0;
+            }
+        &:before {
+            right:-5px;margin-top:-12px;border-top:12px solid transparent;border-right:15px solid #d4ff1a;border-bottom:12px solid transparent;border-left:0 solid transparent;transform:rotate(63deg);z-index:5;
+        }
     }
 }
 .deadline_character_area {
-    display: block;
-    position: absolute;	
-    width:100%; 
-    top:0;
-    left:0;
-    right:0;
-    z-index: 1;
+    display:block;position:absolute;right:0;top:0;width:100%;text-align:right;z-index:1;
     .deadline_character {
-        position: absolute;
-        width:96px;
-        height:110px;
-        right:35px;
-        top:-28px;
+        position:absolute;right:35px; top:-28px;width:96px;height:110px;
         img{
             width:100%;
         }
     }
 }
-.best_react_wrap {
-    background-color: #E1F7E5;
-    margin-bottom: 64px;
+@keyframes evtMsg{
+0% {opacity:0;transform:translateX(30%) scale(0.5);}
+10% {opacity:0;transform:translateX(30%) scale(0.5);}
+20% {opacity:1;transform:translateX(0%) scale(1);}
+95% {opacity:1;transform:translateX(0%) scale(1);}
+100% {opacity:0;transform:translateX(30%) scale(0.5);}
 }
-//오늘만 특가
+
+
+/** 반응최고 **/
+.best_react_wrap {
+    background-color:#e1f7e5;
+}
+.heart_emoji {
+    width:35px;
+    height:35px;
+    display: inline-block;
+    margin-left:5px;
+    margin-bottom:-8px;
+    background:url(../images/guide/heart_emoji.svg) no-repeat center/31px;
+}
+
+
+/** 오늘만 특가 **/
 .hot_deal_wrap {   
     .hotdeal_shine {
         width:35px;
@@ -204,6 +160,18 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
     
 //이벤트 목록 없음
 .no_evt_list_wrap {
@@ -220,7 +188,7 @@
     }
 }  
 
-//이벤트 당첨자 발표
+/** 이벤트 당첨자 발표 **/
 .evt_winner_list {
     border-top:1px solid #000; 
     .evt_winner_item {
@@ -271,9 +239,15 @@
         letter-spacing: -0.01em; 
     }
 }
-//당첨 결과 보기
+.evt_winner_list + .pagination {
+    margin-top:-1px;
+}
+
+
+
+/* 당첨 결과 보기 */
 .evt_description_title {
-	padding:20px 4px;
+	padding:24px 4px 20px 4px;
     border-top:1px solid #000;
 	border-bottom:1px solid #eaeaea;
 	.category_area {
@@ -287,9 +261,9 @@
 		line-height:40px;
         font-size: 24px;
 		letter-spacing: -0.01em;
-        margin-bottom:10px;
 	}
 	.list_date_area {
+        margin-top:5px;
         line-height: 19px;
 		font-size: 14px;
 		color:#767676;
@@ -297,7 +271,7 @@
 	}
 }
 .evt_description_content {
-        padding:40px 4px 25px 4px;
+        padding:40px 4px;
         border-bottom:1px solid #eaeaea;
         line-height: 22px;
     .category_area{
@@ -319,10 +293,7 @@
         margin:15px 0;
 	}
 }
-.evt_winner_btn_area {
-    margin-top:30px;
-    text-align: center;
-}
+
 /*================================ 레이어 팝업 =============================*/
 .dialog_wrapper .ui-dialog .dialog_wrap  {
     .dialog_header.evt_title_header{
