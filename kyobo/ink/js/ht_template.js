@@ -1052,6 +1052,11 @@ $(function(){
                 freeMode: true,
                 observer: true,
                 observeParents: true,
+                mousewheel: true,
+                pagination: {
+                    el: $(ele).find('.swiper-pagination')[0],
+                    type: "progressbar",
+                },
             });
         }else{
            $(ele).find('.swiper-wrapper').removeClass('swiper-wrapper');
