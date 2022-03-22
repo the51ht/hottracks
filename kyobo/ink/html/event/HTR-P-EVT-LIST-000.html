@@ -4,14 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=1600">
-<meta name="msapplication-TileColor" content="#da2128">
-<meta property="og:title" content="핫트랙스">
-<meta property="og:description" content="">
-<meta property="og:type" content="website">
-<meta property="og:image" content="../../images/layout/sns.jpg">
-<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
-<title>이벤트 : 핫트랙스</title>
+<title>이벤트 기획전</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -21,6 +14,7 @@
 <!-- // Plug-In css -->
 
 
+
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
@@ -28,6 +22,7 @@
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
+
 
 
 <!-- Polyfill javascript -->
@@ -51,6 +46,7 @@
 <!-- // Plug-In javascript -->
 
 
+
 <!-- ht_ Hottracks UI JavaScript : 공통작업 -->
 <script src="../../js/ui_ink.js"></script>
 <script src="../../js/ht_lib.js"></script>
@@ -69,7 +65,7 @@
 <!-- wrapper -->
 <div class="wrapper">
 	<!-- Header -->
-	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#f4f4f4;">
 		<!-- service_mall_wrap -->
 		<div class="service_mall_wrap">
 			<div class="service_mall_inner" style="height:42px;;"></div>
@@ -79,7 +75,7 @@
 		<!-- header_inner -->
 		<div class="header_inner">
 			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
-			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+			<nav class="gnb_wrap" style="height:87px;"></nav>
 		</div>
 		<!-- //header_inner -->
 	</header>
@@ -88,9 +84,10 @@
 
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">
+
+		
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap">
-
             <!-- 상단 메뉴-->  
             <div class="ht_cont top_evt_area"> 
                 <div class="contents_inner">
@@ -392,6 +389,13 @@
                                 </li> -->
                             </ul>
                             <!-- //evt_list-->
+
+                            <!-- swiper_control -->
+                            <div class="swiper_control">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <!-- //swiper_control -->
+
                          </div>
                         <!--//상품 스왑-->
                     </div>
@@ -529,7 +533,6 @@
 
             </div>
             <!--//이벤트 기획전 리스트-->
-
  
             <!--ht_cont:pagination-->
             <div class="ht_cont">
@@ -555,7 +558,7 @@
                     <!-- //pagination -->
                 </div>
             </div>
-            <!--//ht_cont:pagination-->
+            
 
 
             <!-- ht_cont : 반응최고-->
@@ -563,78 +566,64 @@
                 <div class="contents_inner">
                     <h2 class="ht_tit">반응최고<em class="heart_emoji"></em></h2>
 
-					<!-- evt_plan_banner : function - evtPlanBanner(); -->
-					<div class="evt_plan_banner">
-						<div class="swiper-container">
-							<!-- swiper-wrapper -->
-							<ul class="swiper-wrapper evt_list type3">
-								<!-- swiper-slide 반복 -->
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB1.jpg" alt=""></p></a>
-									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-										<!--<li class="date">2021.11.04~2021.11.17</li>-->
-									</ul>
-								</li>
-								<!-- //swiper-slide 반복 -->
+                   <!--상품 스왑-->
+                    <div class="swiper evt_swiper"><!--evt_swiper : 이벤트 기획전외 사용하지 말 것-->
+                        <!--상품 개수 3개이하일때 ul class=swiper-wrapper 삭제처리-->
+                        <!-- evt_list -->
+                        <ul class="swiper-wrapper evt_list type3">
+                            <!-- li 반복 -->
+                            <li class="swiper-slide">
+                                <div class="discount_icon">~25%</div> 
+                                <div class="img_wrap">
+                                    <a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB1.jpg" alt=""></p></a>
+                                </div>
+                                <ul class="item_info">
+                                    <li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
+                                    <li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+                                </ul>
+                            </li>
+                            <!-- //li 반복 -->
 
+                            <li class="swiper-slide">
+                                <div class="discount_icon">~25%</div> 
+                                <div class="img_wrap">
+                                    <a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB2.jpg" alt=""></p></a>
+                                </div>
+                                <ul class="item_info">
+                                    <li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
+                                    <li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+                                </ul>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="discount_icon">~25%</div> 
+                                <div class="img_wrap">
+                                    <a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB3.jpg" alt=""></p></a>
+                                </div>
+                                <ul class="item_info">
+                                    <li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
+                                    <li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+                                </ul>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="discount_icon">~25%</div> 
+                                <div class="img_wrap">
+                                    <a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB3.jpg" alt=""></p></a>
+                                </div>
+                                <ul class="item_info">
+                                    <li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
+                                    <li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>           
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- //evt_list-->
 
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB2.jpg" alt=""></p></a>
-									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-									</ul>
-								</li>
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB3.jpg" alt=""></p></a>
-									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-									</ul>
-								</li>
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB4.jpg" alt=""></p></a>
-									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-									</ul>
-								</li>
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB1.jpg" alt=""></p></a>
-									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-									</ul>
-								</li>
-
-							</ul>
-							<!-- //swiper-wrapper -->
-
-							<!-- swiper_control -->
-							<div class="swiper_control">
-								<div class="swiper-pagination"></div>
-							</div>
-							<!-- //swiper_control -->
-						</div>
-					</div>
-					<!-- //evt_plan_banner -->
+                        <!-- swiper_control -->
+                        <div class="swiper_control">
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- //swiper_control -->
+                     </div>
+                    <!--//상품 스왑-->
                 </div>
             </div>    
             <!-- //ht_cont : 반응최고 -->
@@ -644,12 +633,11 @@
 			<div class="ht_cont hot_deal_wrap">
 				<div class="contents_inner">
 					<h2 class="ht_tit">오늘만 특가<em class="hotdeal_shine"></em></h2>
-					<!-- 타이머 영역 -->
+					<!--타이머 영역-->
                     <div class="timer_area">
                         <div class="timer">05:23:15</div>
                     </div>
-                    <!-- 타이머 영역 -->
-
+                    <!--타이머 영역-->
 					<!-- thumb4_banner : function - thumb4banner(); -->
 					<div class="thumb4_banner ht_today_banner"><!-- 오늘만 특가 class="ht_today_banner" -->
 						<div class="swiper-container">
@@ -763,7 +751,8 @@
 			<!-- //ht_cont : (오늘만 특가) 4단 배너 -->
 
 
-            <!-- ht_cont : 하단 광고배너 -->
+
+           <!-- ht_cont : 하단 광고배너 -->
 			<div class="ht_cont ht_under_banner_area">
 				<div class="contents_inner">
 					<h2 class="hidden">광고배너</h2>
@@ -805,6 +794,8 @@
 				</div>
 			</div>
 			<!-- //ht_cont : 하단 광고배너 -->
+
+
 
         </section>
         <!-- /ht_contents_wrap -->
