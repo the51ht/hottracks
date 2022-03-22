@@ -1041,6 +1041,7 @@ $(function () {
 $(function(){
     // 마감임박, 반응최고 스와이프
     //상품 개수 2개이하일때 ul class="evt_slider nonswipe"로 설정
+    /*
     if ($('.swiper.evt_swiper').length == 0 ) return; 
 
     $('.swiper.evt_swiper').each(function(i, ele){
@@ -1061,7 +1062,7 @@ $(function(){
            $(ele).find('.swiper-wrapper').removeClass('swiper-wrapper');
            $(this).removeClass('evt_swiper');
         }
-    });
+    });*/
 })
 
 
