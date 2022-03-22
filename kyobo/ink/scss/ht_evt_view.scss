@@ -11,7 +11,10 @@
 
 /** 상단메뉴 : top_evt_area **/
 .top_evt_area {
-    padding-bottom:0;
+    margin-bottom:30px;padding-bottom:0;
+    .contents_inner {
+        border-bottom:1px solid #eaeaea;
+    }
 }
 
 /* .evt_menu */
@@ -190,7 +193,10 @@
 
 /** 이벤트 당첨자 발표 **/
 .evt_winner_list {
-    border-top:1px solid #000; 
+    position:relative;border-top:1px solid #000; 
+    &.mt {
+        margin-top:-31px;
+    }
     .evt_winner_item {
         padding:20px 0;
         overflow: hidden;

@@ -2355,28 +2355,31 @@ body {
 }
 
 .tab_swiper.tab_txt li {
-  height: 50px;
+  height: 24px;
 }
 
 .tab_swiper.tab_txt a {
-  height: 50px;
-  line-height: 50px;
+  height: 24px;
+  line-height: 24px;
+}
+
+.tab_swiper.tab_txt .swiper_control .swiper-button-prev,
+.tab_swiper.tab_txt .swiper_control .swiper-button-next {
+  width: 24px !important;
+  height: 24px !important;
+  margin-top: -12px !important;
+}
+
+.tab_swiper.tab_txt .swiper_control .swiper-button-prev:after,
+.tab_swiper.tab_txt .swiper_control .swiper-button-next:after {
+  background-size: 24px;
 }
 
 .tab_ty + .tab_under {
-  margin-top: -28px;
+  margin-top: -15px;
 }
 
 /* tab_under */
-.tab_under {
-  border-bottom: 1px solid #eaeaea;
-}
-
-.tab_under .txt_swiper,
-.tab_under .tab_txt {
-  margin-bottom: 17px;
-}
-
 /** tab_box **/
 .tab_box {
   position: relative;
