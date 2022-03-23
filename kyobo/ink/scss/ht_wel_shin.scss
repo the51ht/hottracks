@@ -1,8 +1,42 @@
-.wel_tod_middle_wrap {
-    background:pink;
-    width:1460px !important;
-    margin:0 auto;
-    background:url(../images/guide/wel_tod_middle_bg.svg) no-repeat left top/ 100%;
+.ht_cont {
+    .mc_tit {
+        color:#000;font-size:42px;font-weight:500;line-height:56px;letter-spacing:-2.5px;font-family: 'Gmarket Sans';
+        img { 
+            vertical-align:top;
+        }
+        &.center {
+            text-align:center;
+        }
+    }
+
+}
+
+
+
+
+.wel_hotdeal {
+    &:before {
+        content:"";
+        position:absolute;
+        width:63px;
+        height:63px;
+        bottom:60px;
+        left:50%;
+        z-index:1;
+        margin-left:-700px;
+        background:url(../images/main/wel_hotdeal_bg1.svg) no-repeat center/ 100%;
+    }
+    &:after {
+        content:"";
+        position:absolute;
+        width:103px;
+        height:120px;
+        background:url(../images/main/wel_hotdeal_bg2.svg) no-repeat center/ 100%;
+        top:207px;
+        left:50%;
+        z-index:1;
+        margin-left:650px;
+    }
 }
 .wel_today_time {
     margin-bottom:24px;
@@ -16,11 +50,16 @@
     }
     .wel_tod_img {
         position:absolute;
-        height:167px;
-        left:50px;
+        width:382px;
+        height:168px;
+        left:0px;
         bottom:-3px;
-
-
+        overflow: hidden;
+        &>img {
+            width:100%;
+            height:100%;
+            transform:scaleX(1.03);
+        }
     }
     .wel_tod_acc {
         position:absolute;
@@ -58,6 +97,7 @@
         left:23%;
         bottom:-41px;
         z-index: 3;
+        animation:musMembMsg both infinite 5s;
         &:after {
             content: '';
             border-color: #000 transparent;
@@ -83,36 +123,19 @@
             left:50%;
             top:0;
             margin-top:-12px;
-            margin-left: 2px;
+            margin-left: 1px;
             transform: rotate( 90deg);
         }
     }
 }
 //배너 네비게이션
-.wel_tod_handle {
-    position:relative;
-    margin:0;
-    height:0;
-    ;
-    .swiper-button-prev {       
-        top:-235px ;
-        left:-590px;
-    }
-    .swiper-button-next {               
-        top:-235px;
-        left:550px;
-    }
+.thumb4_banner.wel_hot_banner {
+   overflow: visible;
+   .swiper-container {
+        overflow: hidden;
+   }
 
 }
-// .thumb4_banner.wel_hot_banner {
-//    border:1x solid blue;
-//    overflow: visible;
-//    .swiper-container {
-//         overflow: hidden;
-//    }
-
-// }
-
 
 
 /*** 앵콜 특가 : .wel_encore ***/
@@ -218,14 +241,20 @@
 //기획전 배너
 .wel_exehibition {
     padding-top:60px;
+    
+    .wel_exehibition_banner {
+        position:relative;
+        width:calc(100% + 36px);
+        margin:0 -18px;
+    }
      .evt_list {
          margin:-40px 0 0 0;
          display: flex;
          flex-flow: row wrap;
-         justify-content: space-between;
+         justify-content: space-around;
         & > li {
             width:582px !important;
-            margin:40px 0 0 0 !important;
+           margin:40px 0 0 0 !important;
         }
         .img_wrap {
             margin-top:0;
@@ -245,33 +274,211 @@
      }
 }
 
-/*** 카테고리 : .wel_category_tab ***/
-.wel_category_tab {
-    position:relative;height:45px;z-index:10;
-    &.on{
-        .tab_sticky_swiper {
-            position:fixed;top:50px;width:calc(100% + 40px);max-width:750px;margin:0 -20px;padding:10px 56px 10px 20px;border:solid #d5d5d5;border-width:1px 0;box-sizing:border-box;
-        }
-    }
-}
+
 .wel_category {
-    padding-bottom:0;
+    padding-bottom:60px;
     .mc_tit {
-        margin-bottom:20px; 
+        margin-bottom:33px; 
+        margin-left:-25px;
         img {
-            position:relative;margin-left:5px;width:36px;
+            position:relative;margin-left:8px;width:42px; height:42px;
         }
     }
 }
-.tab_sticky_swiper {
-    background:#fff;overflow:hidden;
+
+/*** 지금, 이 상품을 : .wel_now ***/
+.wel_now {
+    padding:30px 20px 80px 20px;
+    overflow:hidden;
+    background:#1977f2 url('../images/main/bg_wel_now.jpg') center top/33px repeat;
+    text-align:center;
+    .wel_now_tit {
+        width:626px;padding:60px 0;
+        display:inline-block;position:relative;
+        .s1 {
+            position:absolute;left:70px;top:-5px;width:83%;
+        }
+        .s2 {
+            position:absolute;left:7px;top:17px;width:70px;
+        }
+        .s3 {
+            position:absolute;right:-25px;top:0px;width:120px;
+        }
+    }
+    .mc_tit {
+        color:#fff; font-size: 42px;
+        font-family: 'Gmarket Sans';
+        line-height:56px;
+        text-align:center;
+        font-weight: 500;
+    }
+    .tab_ty a:before {
+        border-color:#000;
+    }
+    .tab_swiper .swiper_control .swiper-button-prev:before, .tab_swiper .swiper_control .swiper-button-next:before {
+        background:none;
+    }
+}
+.wel_now_banner {
+    overflow: visible;
+    height:544px;
+    .swiper-wrapper {
+        transition-timing-function: linear;
+    }
     .swiper-slide {
-        width:auto;
-        a {
-            margin:0;
+        width:2448px;
+        display:flex;
+    }
+     .img {
+        width:272px;
+        height:272px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        overflow: hidden;
+        &:nth-of-type(3n+1) {
+            width:544px;
+            height:544px;
+        }
+        &:nth-of-type(3){
+            transform: translate(-100%, 100%);
+         }
+         &:nth-of-type(4){
+            transform: translateX(-50% );
+         }
+         &:nth-of-type(5),
+         &:nth-of-type(7){
+            transform: translateX(-100% );
+         }
+         &:nth-of-type(6){
+            transform: translate(-200%, 100%);
+         }
+         &:nth-of-type(8){
+            transform: translateX(-200% );
+         }
+         &:nth-of-type(9){
+            transform: translate(-300%, 100%);
+         }
+         & img {
+             width:100%;
+         }
+ 
+    }
+}
+
+/* wel_prod_view_cont */
+.wel_prod_view_cont {
+    padding:0 2px 2px 2px;background:#000;
+    ul {
+        display:flex;justify-content:space-between;flex-wrap:wrap;margin:-2px 0 0 -2px;
+    }
+    li {
+        display:flex;flex-direction:column;justify-content:top;align-items:center;width:calc(33.3% - 2px);margin:2px 0 0 2px;
+        img {
+            width:100%;
+        }
+    }
+    &.on {
+        li {
+            animation:wel_prod both 0.4s;
+            &:nth-child(1) {
+                animation-delay:0.2s;
+            }
+            &:nth-child(2) {
+                animation-delay:0.4s;
+            }
+            &:nth-child(3) {
+                animation-delay:0.6s;
+            }
+            &:nth-child(4) {
+                animation-delay:0.5s;
+            }
+            &:nth-child(5) {
+                animation-delay:0.6s;
+            }
+            &:nth-child(6) {
+                animation-delay:0.8s;
+            }
+            &:nth-child(7) {
+                animation-delay:0.3s;
+            }
+            &:nth-child(8) {
+                animation-delay:0.7s;
+            }
+            &:nth-child(9) {
+                animation-delay:0.2s;
+            }
+        }
+    }
+}
+@keyframes wel_prod{
+0% {opacity:0;transform:scale(0.5);}
+100% {opacity:1;transform:scale(1);}
+}
+
+
+
+
+
+/* wel_category_rank */
+.wel_category_rank {
+    width:calc(100% + 36px);
+    margin:0px -18px 40px -18px;
+    overflow: hidden;
+    counter-reset:item;
+    .prod_item {
+        float:left;width:273px !important;
+        &:last-of-type {
+            position:relative;
+            &:before {
+                content:"";
+                position:absolute;
+                width:35px;
+                height:35px;
+                background:url(../images/guide/ico_plus_big.svg) no-repeat center/ 100%;
+                top:100px;
+                left:50%;
+                z-index:1;
+                transform: translateX(-50%);
+
+            }
+        }
+        .product_pic {
+            display:block;position:relative;
+            &:after {
+                position:absolute;left:10px;top:10px;width:24px;height:24px;background:#000;border-radius:4px;color:#fff;letter-spacing:-1px;font-size:16px;font-weight:700;line-height:24px;text-align:center;content:counter(item);counter-increment:item;
+            }
+        }
+    }    
+    .btn_box_more {
+        position:relative;width:271px;height:0;padding-top:100%;background:#fff;border:1px dashed #D5D5D5;overflow:hidden;font-size:14px;
+        p {
+            display:flex;flex-direction:row;justify-content:center;align-items:center;position:absolute;left:0;top:0;width:100%;height:100%;margin-top:18px;
+            span{
+                display:inline-block;position:relative;padding-right:10px;line-height:20px;letter-spacing:-1px;
+                &:after {
+                    position:absolute;right:0;top:50%;width:6px;height:6px;margin-top:-4px;border:solid #000;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
+                }
+            }
+        }
+    }
+}
+.wel_category_banner {
+    position:relative;
+    .swiper-container {
+        position:relative;
+        width:calc(100% + 20px);
+        margin-left:-20px;
+    }
+    .evt_list{
+        margin:0;
+        display: flex;
+        flex-flow: row nowrap;
+        & > li{
+            width:582px !important;
+            &:last-of-type {
+                margin-right: 0;
+            }
+
         }
     } 
-}
-.sticky_cont{
-    margin-bottom:40px;
 }

@@ -515,12 +515,15 @@
         position:absolute;left:0;top:-1px;width:200px;height:calc(100% + 1px);background-color:#000;border-radius:50px;box-sizing:content-box;transition: left .1s ease-in-out;content:"";z-index:0;
     }
     a {
-        display:inline-block;position:relative;width:190px;height:54px;color:#595959;font-size:20px;font-weight:500;line-height:54px;box-sizing:border-box;text-align:center;vertical-align:top;letter-spacing:-1px;transition:color 0.5s;z-index:1;
+        display:inline-block;position:relative;width:190px;height:54px;color:#595959;font-size:20px;font-weight:500;line-height:54px;box-sizing:border-box;text-align:center;vertical-align:top;letter-spacing:-1px;transition:color 0.5s;z-index:1;transition:color 0.4s;
         span {
             position:relative;padding-left:0;
             &:before {
                 position:absolute;left:0;top:-3px;width:30px;height:30px;background:center/30px no-repeat;content:"";opacity:0;
             }
+        }
+        &:hover {
+            color:#000;
         }
         &.active {
             color:#fff;
