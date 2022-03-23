@@ -20,7 +20,10 @@
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
 
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
-<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- <link rel="stylesheet" href="../../css/ht_template_ink.css"> -->
+
+
+<link rel="stylesheet" href="../../css/ht_main_old_jang.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
 
 
@@ -642,45 +645,72 @@
 
 
 
-			<!-- ht_cont : MD PICK -->
+
+			<!-- ht_cont :  MD PICK - .wel_md_pick / function - musPop();-->
 			<div class="ht_cont wel_md_pick">
 				<div class="contents_inner">
 					<h2 class="mc_tit"><img src="../../images/main/tit_wel_md_pick.svg" alt="MD PICK"></h2>
-
 					<!-- wel_md_pick_cont -->
 					<div class="wel_md_pick_cont wel_cont">
 						<div class="swiper-container">
+							<!-- swiper-wrapper -->
 							<div class="swiper-wrapper">
 								<!-- swiper-slide 반복 -->
 								<div class="swiper-slide">
-									<div class="md_pick_box">
-										<p class="img"><img src="../../images/temp/@img_md_pick01.jpg" alt=""></p><!-- image size : 정사각형 - 공통가이드 참조 -->
-										<!--<p class="img"></p> 이미지 없을 경우 공백 -->
-										<p class="txt"><span>자연의 싱싱함을 드려요</span></p>
-									</div>
+									<a href="#n" class="md_pick_box">
+										<div class="product_pic">
+											<img src="../../images/temp/@img_md_pick01.jpg" alt="">
+										</div>
+										<div class="product_info">
+											<p class="txt"><span>자연의 싱싱함을 드려요</span></p>
+										</div>
+									</a>
 								</div>
 								<!-- //swiper-slide 반복 -->
-
-
 								<div class="swiper-slide">
-									<div class="md_pick_box">
-										<p class="img"><img src="../../images/temp/@img_md_pick02.jpg" alt=""></p>
-										<p class="txt"><span>올해는 득템 뉴이어</span></p>
-									</div>
+									<a href="#n" class="md_pick_box">
+										<div class="product_pic">
+											<img src="../../images/temp/@img_md_pick02.jpg" alt="">
+										</div>
+										<div class="product_info">
+											<p class="txt"><span>올해는 득템 뉴이어</span></p>
+										</div>
+									</a>
 								</div>
 								<div class="swiper-slide">
-									<div class="md_pick_box">
-										<p class="img"><img src="../../images/temp/@img_md_pick03.jpg" alt=""></p>
-										<p class="txt"><span>푸르름 신상은 또 못 참지</span></p>
-									</div>
+									<a href="#n" class="md_pick_box">
+										<div class="product_pic">
+											<img src="../../images/temp/@img_md_pick03.jpg" alt="">
+										</div>
+										<div class="product_info">
+											<p class="txt"><span>푸르름 신상은 또 못 참지</span></p>
+										</div>
+									</a>
 								</div>
 							</div>
+							<!-- //swiper-wrapper -->
+
+							<!-- swiper_control -->
+							<div class="swiper_control">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<!-- //swiper_control -->
 						</div>
+
+						<!-- star_fade_in -->
+						<div class="star_fade_in02">
+							<img src="../../images/main/ico_mus_mc_pop_bg01.svg" alt="">
+							<img src="../../images/main/ico_mus_mc_pop_bg01.svg" alt="">
+							<img src="../../images/main/ico_mus_mc_pop_bg01.svg" alt="">
+						</div>
+						<!-- //star_fade_in -->
 					</div>
 					<!-- //wel_md_pick_cont -->
 				</div>
 			</div>
-			<!-- //ht_cont : MD PICK -->
+			<!-- //ht_cont : MD PICK-->
 
 
 			
@@ -926,7 +956,6 @@
 							</div>
 						</div>
 						<!-- //wel_belt_banner -->
-						<button class="btn_wel_search_cl"><span class="hidden">실시간 쇼핑 검색어 닫기</span></button>
 						<button class="btn_wel_search"><span class="hidden">실시간 쇼핑 검색어 더보기</span></button><!-- 22.02 : 버튼추가 -->
 					</div>
 					<!-- //wel_search_cont -->
@@ -1353,6 +1382,282 @@
 			</div>
 			<!-- //ht_cont : 광고배너 -->
 
+
+			<!-- ht_cont : LP SHOP - wel_gift  / function - welGift();-->
+			<div class="ht_cont wel_gift ht_bg">
+				<div class="contents_inner">
+					<h2 class="ht_tit_big">선물이 필요한 순간, 핫트<img src="../../images/main/tit_wel_gift_heart.svg" alt="">하세요</h2>
+
+					<!-- tab_ty -->
+					<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<!-- swiper-wrapper -->
+						<ul class="swiper-wrapper">
+							<li class="swiper-slide">
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<img src="../../images/main/ico_wel_gift_tab.svg" alt="">
+									<span>남다른</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>금액별</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>단체선물</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>기념일</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>디지털</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>미식가</span>
+								</a>
+							</li>
+							<li class="swiper-slide">
+								<a href="#n">
+									<span>아무거나</span>
+								</a>
+							</li>
+						</ul>
+						<!-- //swiper-wrapper -->
+
+						<!-- swiper_control -->
+						<div class="swiper_control">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+						<!-- //swiper_control -->
+					</div>
+					<!-- //tab_ty -->
+
+					<!-- tab_txt : 하단 border - tab_under -->
+					<div class="tab_txt tab_under tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul>
+							<li>
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<span>#덕후템</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#한정템</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#랜덤럭키박스</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#쓸모없는</span>
+								</a>
+							</li>
+							<li>
+								<a href="#n">
+									<span>#발렌타인데이</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //tab_txt : 하단 border - tab_under -->  
+
+					<!-- wel_gift_cont -->
+					<div class="wel_gift_cont">
+						<div class="swiper-container">
+							<!-- swiper-wrapper -->
+							<ul class="swiper-wrapper">
+								<!-- swiper-slide 반복 -->
+								<li class="swiper-slide">
+									<div class="img_wrap">
+										<a href="#">
+											<p class="img"><img src="../../images/temp/@img_wel_gift01.jpg" alt=""></p>
+											<div class="product_info">
+												<div class="product_info_inner">
+													<div class="desc">
+														<p>
+															2022년 다이어리 꾸미기는 
+															우리에게 맡겨라! 핫트랙스 
+															인기 작가들의 콜라보 모음!
+														</p>
+													</div>
+													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+													<div class="price_line">
+														<span class="discount_rate">10%</span>
+														<span class="final_price">12,000</span>
+														<span class="price_origin"></span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<!-- //swiper-slide 반복 -->
+								<li class="swiper-slide">
+									<div class="img_wrap">
+										<a href="#">
+											<p class="img"><img src="../../images/temp/@img_wel_gift02.jpg" alt=""></p>
+											<div class="product_info">
+												<div class="product_info_inner">
+													<div class="desc">
+														<p>
+															2022년 다이어리 꾸미기는 
+															우리에게 맡겨라! 핫트랙스 
+															인기 작가들의 콜라보 모음!
+														</p>
+													</div>
+													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+													<div class="price_line">
+														<span class="discount_rate">10%</span>
+														<span class="final_price">12,000</span>
+														<span class="price_origin"></span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="img_wrap">
+										<a href="#">
+											<p class="img"><img src="../../images/temp/@img_wel_gift03.jpg" alt=""></p>
+											<div class="product_info">
+												<div class="product_info_inner">
+													<div class="desc">
+														<p>
+															2022년 다이어리 꾸미기는 
+															우리에게 맡겨라! 핫트랙스 
+															인기 작가들의 콜라보 모음!
+														</p>
+													</div>
+													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+													<div class="price_line">
+														<span class="discount_rate">10%</span>
+														<span class="final_price">12,000</span>
+														<span class="price_origin"></span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="img_wrap">
+										<a href="#">
+											<p class="img"><img src="../../images/temp/@img_wel_gift04.jpg" alt=""></p>
+											<div class="product_info">
+												<div class="product_info_inner">
+													<div class="desc">
+														<p>
+															2022년 다이어리 꾸미기는 
+															우리에게 맡겨라! 핫트랙스 
+															인기 작가들의 콜라보 모음!
+														</p>
+													</div>
+													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+													<div class="price_line">
+														<span class="discount_rate">10%</span>
+														<span class="final_price">12,000</span>
+														<span class="price_origin"></span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="img_wrap">
+										<a href="#">
+											<p class="img"><img src="../../images/temp/@img_wel_gift05.jpg" alt=""></p>
+											<div class="product_info">
+												<div class="product_info_inner">
+													<div class="desc">
+														<p>
+															2022년 다이어리 꾸미기는 
+															우리에게 맡겨라! 핫트랙스 
+															인기 작가들의 콜라보 모음!
+														</p>
+													</div>
+													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+													<div class="price_line">
+														<span class="discount_rate">10%</span>
+														<span class="final_price">12,000</span>
+														<span class="price_origin">31,800</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li class="swiper-slide"> 
+									<div class="img_wrap">
+										<a href="#">
+											<p class="img"><img src="../../images/temp/@img_wel_gift06.jpg" alt=""></p>
+											<div class="product_info">
+												<div class="product_info_inner">
+													<div class="desc">
+														<p>
+															2022년 다이어리 꾸미기는 
+															우리에게 맡겨라! 핫트랙스 
+															인기 작가들의 콜라보 모음!
+														</p>
+													</div>
+													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+													<div class="price_line">
+														<span class="discount_rate">10%</span>
+														<span class="final_price">12,000</span>
+														<span class="price_origin">31,800</span>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</li>
+							</ul>
+							<!-- //swiper-wrapper -->
+
+							<!-- swiper_control -->
+							<div class="swiper_control">
+								<div class="swiper-pagination"></div>
+							</div>
+							<!-- //swiper_control -->
+						</div>
+					</div>
+					<!-- //wel_gift_cont -->
+
+					<!-- btn_area -->
+					<div class="btn_gift_warp">
+						<div class="btn_wrap">
+							<a href="#n" class="btn_gift">
+								<p>
+									넌 이럴때, <br>
+									어떤 선물해?
+								</p>
+								<span class="btn_more_view fc_white">
+									선물 고민 참여하기
+									<em class="ico_arw"></em>
+								</span>
+							</a>
+						</div>
+						<div class="icon_wrap">
+							<img src="../../images/main/ico_wel_finger_heart.svg" alt=""/>
+						</div>
+					</div>
+					
+					<!-- //btn_area -->	
+				</div>
+			</div>
+			<!-- //ht_cont : wel_gift -->
 
 
 			<!-- ht_cont : 카테고리 -->
@@ -2585,4 +2890,161 @@
 </div>
 <!-- // wrapper -->
 </body>
+
+<script>
+	/***** jang 작업 *****/
+	/* MD PICK */
+	function mdPick(){
+		var $target = $('.wel_md_pick_cont .swiper-container');
+		$target.each(function (index, element) {
+			var $parent = $(this).parent('.type5_banner01');
+			var slideOption = {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 5,
+				centeredSlides: true,
+				loop: true,
+				spaceBetween: 0,
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				speed: 700,
+				on: {
+					slideChangeTransitionEnd: function(){
+						$('.wel_md_pick_cont .swiper-slide-active').addClass('zoom_in');
+					},
+					slideChange: function() {
+						$('.wel_md_pick_cont .swiper-slide-active').removeClass('zoom_in');
+					}
+				},
+				navigation: {
+					nextEl: ('.wel_md_pick_cont .swiper-button-next'),
+					prevEl: ('.wel_md_pick_cont .swiper-button-prev'),
+				}
+			};
+			musReservedSwiper = new Swiper($target.get(), slideOption);
+			$('.wel_md_pick_cont .swiper-slide-active').addClass('zoom_in');
+		});
+	}
+
+	$(function(){
+		if(!$('.wel_md_pick_cont').length) return;
+		mdPick();
+	});
+
+
+
+	/* 선물이 필요한 순간 */
+	function welGift(){
+		var $target = $('.wel_gift_cont .swiper-container');
+		var slideOption = {
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			loop: true,
+			loopsSlide: 1,
+			spaceBetween: 36,
+			autoplay: {
+				delay:0,
+				disableOnInteraction: true,
+			},
+			pagination: {
+				el: ('.wel_gift_cont .swiper-pagination'),
+				type: "progressbar",
+			},
+			speed: 3500,
+			allowTouchMove: false
+		};
+		welGiftSwiper = new Swiper($target.get(), slideOption);
+	}
+
+	$(function(){
+		if(!$('.wel_gift_cont').length) return;
+		welGift();
+	});
+
+	/* Tab Swiper */
+	function tabSwiper(){
+		var $target = $('.tab_swiper');
+		$target.each(function (index, element) {
+			var $parent = $(this);
+			$parent.addClass('t_idx_' + index);
+			
+			var slideOption = {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 'auto',
+				centeredSlides: false,
+				loop: false,
+				loopsSlide: 1,
+				spaceBetween:0,
+				speed: 700,
+				navigation: {
+					nextEl: ('.t_idx_' + index + ' .swiper-button-next'),
+					prevEl: ('.t_idx_' + index + ' .swiper-button-prev'),
+				},
+				pagination: false
+			};
+			/* 탭 넓이가 1200px 이상일때 실행 */
+			var tabListWidthTotal = 0,
+				tabList = $('.t_idx_' + index + ' .swiper-slide');
+			for(var i = 0; i < tabList.length; i++ ){
+				tabListWidthTotal += tabList.eq(i).width();
+			};
+			
+			if(tabListWidthTotal > 1200){
+				tabSwiperCont = new Swiper(this, slideOption);
+			}
+		});
+	}
+
+	$(function(){
+		if(!$('.tab_swiper').length) return;
+		tabSwiper();
+	});
+
+
+
+	/* 실시간 홈쇼핑 */
+	function welSearch(){
+		var $target = $('.wel_search_list .swiper-container');
+		var slideOption = {
+			direction: 'vertical',
+			slidesPerView: 'auto',
+			loop: true,
+			loopsSlide: 1,
+			spaceBetween: 0,
+			touchRatio: 0,  //드래그 금지
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+		},
+			speed: 500,
+		};
+		welSearchSwiper = new Swiper($target.get(), slideOption);
+	}
+
+	$(function(){
+		if(!$('.wel_search_cont').length) return;
+		welSearch();
+
+		$('.btn_wel_search').on('click', function(e) {
+			e.preventDefault();
+			if($(this).closest('.wel_search_cont').hasClass('on')){
+				welSearch();
+				$(this).closest('.wel_search_cont').removeClass('on');
+			}else{
+				welSearchSwiper.destroy();
+				$(this).closest('.wel_search_cont').addClass('on');
+			}
+		});  
+		$('.btn_wel_search_cl').on('click', function(e) {
+			e.preventDefault();
+			welSearch();
+			$(this).closest('.wel_search_cont').removeClass('on');
+		});
+	});
+</script>
 </html>
