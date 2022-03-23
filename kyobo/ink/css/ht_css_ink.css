@@ -19,6 +19,7 @@ https://github.com/the51hsson/doc/blob/main/scss_guide.md 참조
 */
 /*** button ***/
 button {
+  font-family: Roboto,"Noto Sans KR","PingFang SC","Apple SD Gothic Neo","Microsoft YaHei UI","Malgun Gothic",sans-serif;
   cursor: pointer;
 }
 
@@ -438,54 +439,154 @@ button.btn_lg {
   margin-top: 40px;
 }
 
-/* prod_sort_wrap */
-.prod_sort_wrap {
+/** rangking **/
+.evt_rank .product_pic {
+  margin-top: 25px;
+}
+
+.rangking {
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  padding-top: 1px;
+  background: url("../images/guide/lank_noraml.svg") center/70px no-repeat;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000;
+  font-size: 0;
+  font-weight: 700;
+  line-height: 70px;
+  text-align: center;
+  z-index: 4;
+}
+
+.rangking .rank {
+  display: inline-block;
   position: relative;
-  margin-bottom: 20px;
-  overflow: hidden;
-  z-index: 5;
+  font-size: 20px;
+  vertical-align: top;
 }
 
-.prod_sort_wrap .prod_ck_lists {
-  float: left;
-  margin: 8px 0;
+.rangking .rank_icon {
+  display: inline-block;
+  position: relative;
+  top: 8px;
+  width: 15px;
+  height: 18px;
+  background: center/14px 18px no-repeat;
 }
 
-.prod_sort_wrap .form_chk {
-  margin-right: 14px;
+.rangking.up .rank_icon {
+  background-image: url("../images/guide/lank_noraml_up.svg");
 }
 
-.prod_sort_wrap .prod_type_selec_area {
-  float: right;
+.rangking.down .rank_icon {
+  background-image: url("../images/guide/lank_noraml_up.svg");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.prod_sort_wrap .prod_type_selec_area .form_sel .ui-selectmenu-button {
-  width: 120px;
-  height: 38px;
+.rangking.same .rank_icon:before {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  width: 6px;
+  height: 2px;
+  margin-top: -1px;
+  background-color: #000;
+  content: "";
 }
 
-.prod_sort_wrap .prod_type_selec_area .form_sel .ui-selectmenu-button .ui-selectmenu-text {
-  height: 38px;
-  line-height: 35px;
+.evt_products:first-of-type .prod_item:nth-of-type(1) .rangking {
+  background-image: url("../images/guide/lank_hot.svg");
+  color: #fff;
 }
 
-.prod_sort_wrap .prod_type_selec_area .form_sel .ui-selectmenu-button .ui-selectmenu-icon {
-  top: 14px;
+.evt_products:first-of-type .prod_item:nth-of-type(1) .rangking.none_icon .rank_icon {
+  display: none;
 }
 
-.prod_sort_wrap .prod_type_selec_area .list_view_type_btn {
-  width: 38px;
-  height: 38px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  cursor: pointer;
-  background: url("../images/layout/ico_hamburger.svg") center/14px no-repeat;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
+.evt_products:first-of-type .prod_item:nth-of-type(1) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(1) .rangking.down .rank_icon {
+  background-image: url("../images/guide/lank_hot_up.svg");
 }
 
-.prod_sort_wrap .prod_type_selec_area .list_view_type_btn.row_view {
-  background-image: url("../images/layout/ico_window.svg");
+.evt_products:first-of-type .prod_item:nth-of-type(1) .rangking.same .rank_icon:before {
+  background-color: #fff;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(2) .rangking {
+  background-image: url("../images/guide/lank_hot.svg");
+  color: #fff;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(2) .rangking.none_icon .rank_icon {
+  display: none;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(2) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(2) .rangking.down .rank_icon {
+  background-image: url("../images/guide/lank_hot_up.svg");
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(2) .rangking.same .rank_icon:before {
+  background-color: #fff;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(3) .rangking {
+  background-image: url("../images/guide/lank_hot.svg");
+  color: #fff;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(3) .rangking.none_icon .rank_icon {
+  display: none;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(3) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(3) .rangking.down .rank_icon {
+  background-image: url("../images/guide/lank_hot_up.svg");
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(3) .rangking.same .rank_icon:before {
+  background-color: #fff;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(4) .rangking {
+  background-image: url("../images/guide/lank_hot.svg");
+  color: #fff;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(4) .rangking.none_icon .rank_icon {
+  display: none;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(4) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(4) .rangking.down .rank_icon {
+  background-image: url("../images/guide/lank_hot_up.svg");
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(4) .rangking.same .rank_icon:before {
+  background-color: #fff;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(5) .rangking {
+  background-image: url("../images/guide/lank_hot.svg");
+  color: #fff;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(5) .rangking.none_icon .rank_icon {
+  display: none;
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(5) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(5) .rangking.down .rank_icon {
+  background-image: url("../images/guide/lank_hot_up.svg");
+}
+
+.evt_products:first-of-type .prod_item:nth-of-type(5) .rangking.same .rank_icon:before {
+  background-color: #fff;
 }
 
 /** product_pic **/

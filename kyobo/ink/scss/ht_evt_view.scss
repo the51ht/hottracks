@@ -1,23 +1,104 @@
-/*=============================================== HTR-P-EVT-LIST-000.html =============================================*/
-
-/***** 이벤트&기획전 *****/
-.evt_liar_area {
-    position:relative;
-    .pagination {
-        width:1200px;margin:-20px auto 0 auto;
-    }
-}
-
-
+@charset "UTF-8";
 /** 상단메뉴 : top_evt_area **/
 .top_evt_area {
-    position:sticky;top:80px;margin:-20px 0 30px 0;padding:20px 0 0 0;background:#fff;z-index:10;
+    position:sticky;top:80px;margin:-20px 0 30px 0;padding:20px 0 0 0;background:#fff;z-index:10;overflow:hidden;
     .contents_inner {
         border-bottom:1px solid #eaeaea;
     }
+    &.ty02 {
+        margin:0;padding:0;
+        .contents_inner {
+            border-bottom:0;
+        }
+        .tab_txt.ty02 {
+            margin-bottom:0;
+        }
+        .tab_swiper {
+            margin:20px 0 20px 0;
+        }
+    }
 }
-.evt_tab_cont {
-    
+
+/* prod_sort_wrap */
+.prod_sort_wrap { 
+	position:relative;margin-bottom:20px;overflow:hidden;z-index:5;
+    &.dep_top {
+        padding-top:20px;
+    }
+	.prod_ck_lists {
+		float:left;margin:8px 0;
+	}
+	.form_chk {margin-right:14px;
+	}
+	.prod_type_selec_area { 
+		float:right;
+		.form_sel{
+			.ui-selectmenu-button { 
+				width:135px;height:38px;
+				.ui-selectmenu-text {
+					height:38px;line-height:35px;
+				}
+				.ui-selectmenu-icon {
+					top:14px;
+				}
+			}
+		} 
+		.list_view_type_btn {
+			width:38px;height:38px;border:1px solid #ccc;border-radius:6px;cursor:pointer;background:url('../images/layout/ico_hamburger.svg') center/14px no-repeat;transition:background 0.2s;
+			&.row_view {
+				background-image:url('../images/layout/ico_window.svg');
+			}
+		}
+	}
+    .period_sort {
+        float:left;margin:12px 20px 0 0;font-size:14px;
+        button{
+            position:relative;margin-left:13px;
+            &:before {
+                position:absolute;left:-10px;top:6px;width:1px;height:7px;background-color:#eaeaea;content:"";
+            }
+            &.active{
+                font-weight:700;
+            }
+            &:first-child{
+                margin-left:0;
+                &:before {
+                    display:none;
+                }
+            }
+        }
+    }
+}
+
+/* .list_info_text_warp */
+.list_info_text_warp {
+    margin-bottom:25px;padding-top:20px;border-top:1px solid #eaeaea;color:#767676;
+}
+
+/* Date Sort 영역 */
+
+    .date_select_warp{
+        float: left;margin-top: 7px;
+        button{
+            font-weight: 700;font-size: 20px;line-height: 26px;
+        }
+    }
+/**/
+
+
+
+
+
+
+/* 회색 배경 탭 : .tab_bg_gray */
+.tab_bg_gray {
+    position:relative;height:74px;padding:19px 0;background:#f7f7f7;box-sizing:border-box;line-height:74px;
+    &:before {
+        position:absolute;left:-300%;top:0;width:600%;height:100%;background:#f7f7f7;content:"";
+    }
+    ul {
+        position:relative;
+    }
 }
 
 /* .evt_menu */
@@ -72,6 +153,13 @@
     }
 }
 
+/***** 이벤트&기획전 *****/
+.evt_liar_area {
+    position:relative;
+    .pagination {
+        width:1200px;margin:-20px auto 0 auto;
+    }
+}
 
 
 /** 마감임박 **/
@@ -179,7 +267,7 @@
 
 
     
-//이벤트 목록 없음
+/* 이벤트 목록 없음 */
 .no_evt_list_wrap {
     padding:200px 0;
     position:relative;
