@@ -308,6 +308,7 @@ function thumb4banner(){
 
         if($parent.find('.swiper-slide').length > 4) {
             thumb4bannerSwiper = new Swiper(this, slideOption);
+            $parent.addClass('swiper-on');
         }
 	});
 }
@@ -360,7 +361,7 @@ function tabSwiper(){
             loop: false,
             loopsSlide: 1,
             spaceBetween:0,
-            speed: 700,
+            speed: 500,
             navigation: {
                 nextEl: ('.t_idx_' + index + ' .swiper-button-next'),
                 prevEl: ('.t_idx_' + index + ' .swiper-button-prev'),
