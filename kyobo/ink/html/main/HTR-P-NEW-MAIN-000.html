@@ -122,17 +122,78 @@
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide">
 									<a href="#n" class="on"><!-- 활성화  class="on" -->
-										<span>음반</span>
+										<span>전체</span>
 									</a>
 								</li>
 								<li class="swiper-slide">
 									<a href="#n">
-										<span>DVD</span>
+										<span>디자인문구</span>
 									</a>
 								</li>
 								<li class="swiper-slide">
 									<a href="#n">
-										<span>BLU-RAY</span>
+										<span>디지털/자동차</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>필기구</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>오피스</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>리빙/생활가전</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>키친</span>
+									</a>
+								</li>
+
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>푸드</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>가구/수납</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>패션잡화</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>뷰티/헬스</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>여행/취미</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>유아동</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>여행/취미</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>유아동</span>
 									</a>
 								</li>
 							</ul>
@@ -148,137 +209,194 @@
 						<!-- //tab_ty -->
                     </div>
 					<!-- //tab_bg_gray -->
-
-					<!-- tab_ty -->
-					<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide">
-								<a href="#n" class="on"><!-- 활성화  class="on" -->
-									<span>전체</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>드라마/로맨스</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>애니메이션</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>TV시리즈</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>SF판타지</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>액션/모험</span>
-								</a>
-							</li>
-						</ul>
-                        <!-- swiper_control -->
-                        <div class="swiper_control">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                        <!-- //swiper_control -->
-					</div>
-					<!-- //tab_ty -->
                 </div>
             </div>  
             <!-- //상단 메뉴-->
 
 
-			<!-- ht_cont : 상품 리스트 -->
-			<div class="ht_cont">
+<style>
+/* 작업시 작업 해당부분으로 sass 방식으로 넣어 주세요 */
+.ht_new_main {
+	background:#ece5da;
+}
+
+.ht_new_list .ht_tit_big02 img {
+	display:inline-block;height:40px;margin:0 0 0 10px;vertical-align:top;
+}
+</style>
+
+			<!-- ht_cont : 상단 배너 -->
+			<div class="ht_cont ht_bg ht_new_main">
 				<div class="contents_inner">
-					<!-- 상품 정렬 방식 선택 -->
-					<div class="prod_sort_wrap dep_top">
-						<!-- 체크박스 리스트 -->
-						<ul class="prod_ck_lists">
-							<li class="form_chk">
-								<input id="prod0" type="checkbox">
-								<label for="prod0">할인</label>
-							</li>
-							<li class="form_chk">
-								<input id="prodChk1" type="checkbox">
-								<label for="prodChk1">쿠폰</label>
-							</li>
-							<li class="form_chk">
-								<input id="prodChk2" type="checkbox">
-								<label for="prodChk2">핫트랙스배송</label>
-							</li>
-							<li class="form_chk">
-								<input id="prodChk3" type="checkbox">
-								<label for="prodChk3">무료배송</label>
-							</li>
-							<li class="form_chk">
-								<input id="prodChk4" type="checkbox">
-								<label for="prodChk4">품절포함</label>
-							</li>
-						</ul>
-						<!-- //체크박스 리스트 -->
+					<h2 style="font-size:40px;text-align:center;">MD 추천 신상품</h2>
+
+					<!-- thumb4_banner : function - thumb4banner(); -->
+					<div class="thumb4_banner ht_today_banner"><!-- 오늘만 특가 class="ht_today_banner" -->
+						<div class="swiper-container">
+							<!-- swiper-wrapper -->
+							<ul class="swiper-wrapper">
+								<!-- swiper-slide 반복 -->
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod01.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //swiper-slide 반복 -->
 
 
-						<!-- prod_type_selec_area -->
-						<div class="prod_type_selec_area">
-							<span style="display:inline-block;margin-right:5px;color:red;font-size:13px;line-height:38px;">DVD, BLU-RAY : '전체' 비노출 →</span>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod02.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod03.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod04.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod05.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod06.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod01.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod02.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+									</div>
+									<div class="product_info">
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- //swiper-wrapper -->
 
-
-<script>
-/* 
-교보 자체 내 select UI - jquery ui select
-
-https://jqueryui.com/selectmenu/#default
-*/
-$(function(){
-	$('#selecMy').selectmenu({
-		change:function(event, data){
-			console.log(data.item.value)
-		}
-	});
-});
-</script>	
-								
-									
-							<!-- form_sel -->
-							<div class="form_sel">
-								<select id="selecMy">
-									<option value ="opt1">전체</option>
-									<option value="opt2">국내음반</option>
-									<option value="opt3">수입음반</option>
-								</select>
-								<select id="selecMy02">
-									<option value ="opt1">신상품순</option>
-									<option value="opt2">판매인기순</option>
-									<option value="opt3">낮은 가격순</option>
-									<option value="opt4">높은 가격순</option>
-									<option value="opt5">높은 할인율순</option>
-									<option value="opt6">찜♥많은순</option>
-									<option value="opt7">리뷰 평점순</option>
-								</select>
+							<!-- swiper_control -->
+							<div class="swiper_control">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-next"></div>
 							</div>
-							<!-- //form_sel -->
-							<button class="list_view_type_btn"></button>
+							<!-- //swiper_control -->
 						</div>
-						<!-- //prod_type_selec_area -->
 					</div>
-					<!-- //상품 정렬 방식 선택-->
+					<!-- //thumb4_banner -->
+				</div>
+			</div>
+			<!-- //ht_cont : 상단 배너 -->
 
 
-                    <!-- 목록 정보 문구 노출 영역 -->
-                    <div class="list_info_text_warp">
-                        <p>10,232개의 상품</p>
-                    </div>
-                    <!-- //목록 정보 문구 노출 영역 -->
-
+			<!-- ht_cont : 상품 리스트 -->
+			<div class="ht_cont ht_bg ht_new_list">
+				<div class="contents_inner">
+					<h2 class="ht_tit_big02"><strong class="point_line ty05"><em>신상품 모두보기<img src="../../images/main/tit_new_prod_list.svg" alt=""></em></strong></h2>
 
 					<!-- evt_prod_list_wrap -->
 					<div class="evt_prod_list_wrap">

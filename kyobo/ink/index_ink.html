@@ -20,6 +20,10 @@
 <script src="./wsg/ia_resources/jquery-3.6.0.min.js"></script>
 <script src="./wsg/ia_resources/glim.js"></script>
 <style>
+.ia_tbl_wrap table tbody + tbody tr:first-child td {
+	border-top:15px solid #eaeaea;
+}
+
 tr td:nth-child(2) {font-weight:700;}
 .point td {background-color:#fff4f1 !important}
 .point .col_date {color:#cb0000;font-weight:700;}
@@ -38,7 +42,7 @@ tr td:nth-child(2) {font-weight:700;}
 .point03 .col_date {color:#cb0000;font-weight:700;}
 .point03 .chk td {background-color:#f4feb4 !important}
 
-.point05 td {background-color:#eee6ff !important}
+.point05 td {background-color:#f2ecff !important}
 
 
 .hid td {background-color:#eee !important}
@@ -515,17 +519,17 @@ tr td:nth-child(2) {font-weight:700;}
 									
 
 									<!-- 오늘만 특가 -->
-									<tbody style="display:none;">
-										<tr>
+									<tbody>
+										<tr class="point">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p>오늘만 특가</td>
 											<td class="col_2depth" data-label="2Depth"></td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
-												<a href="html/main/HTR-M-TOD-MAIN-000.html" target="_blank">html/main/HTR-M-TOD-MAIN-000.html</a>
+												<a href="html/main/HTR-P-TOD-MAIN-000.html" target="_blank">html/main/HTR-P-TOD-MAIN-000.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22-02-03</td>
-											<td class="col_complete" data-label="상태"></td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">진행중</td>
 											<td class="col_memo" data-label="비고">
 
 											</td>
@@ -533,29 +537,35 @@ tr td:nth-child(2) {font-weight:700;}
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p></td>
-											<td class="col_2depth" data-label="2Depth">라이브 알림 팝업</td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m5">POP</p>라이브 알림 팝업</td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
-												<a href="html/guide/pop_guide.html" target="_blank">html/guide/pop_guide.html</a>
+												<a href="html/guide/00_pop_guide.html" target="_blank">html/guide/00_pop_guide.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22-02-18</td>
-											<td class="col_complete" data-label="상태"></td>
+											<td class="col_date" data-label="날짜">22.03.25</td>
+											<td class="col_complete" data-label="상태">완료</td>
 											<td class="col_memo" data-label="비고">
-												<span style="color:#cb0000">팝업 가이드 참조</span>
+												<ul>
+													<li style="color:#cb0000;">1. 팝업 가이드 참조</li>
+												</ul>
 											</td>
 										</tr>
-										<tr>
+										<tr class="point">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p>핫딜 특가</td>
 											<td class="col_2depth" data-label="2Depth"></td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
-												<a href="html/main/HTR-M-TOD-MAIN-001.html" target="_blank">html/main/HTR-M-TOD-MAIN-001.html</a>
+												<a href="html/main/HTR-P-TOD-MAIN-001.html" target="_blank">html/main/HTR-P-TOD-MAIN-001.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22-02-03</td>
+											<td class="col_date" data-label="날짜"></td>
 											<td class="col_complete" data-label="상태"></td>
 											<td class="col_memo" data-label="비고">
-
+												<ul>
+													<li style="color:#cb0000;">
+														<span style="background-color:#b8e748">1. 이벤트 모듈 사용! 이벤트 모듈 후 진행!!</span>
+													</li>
+												</ul>
 											</td>
 										</tr>
 									</tbody>
@@ -563,61 +573,31 @@ tr td:nth-child(2) {font-weight:700;}
 
 
 									<!-- 베스트/신상품/무료배송 -->
-									<tbody style="display:none;">
-										<tr>
+									<tbody>
+										<tr class="point">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p>베스트</td>
 											<td class="col_2depth" data-label="2Depth"></td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
-												<a href="html/main/HTR-M-BES-MAIN-000.html" target="_blank">html/main/HTR-M-BES-MAIN-000.html</a>
+												<a href="html/main/HTR-P-BES-MAIN-000.html" target="_blank">html/main/HTR-P-BES-MAIN-000.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22-02-08</td>
-											<td class="col_complete" data-label="상태"></td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">진행중</td>
 											<td class="col_memo" data-label="비고">
 
 											</td>
 										</tr>
-										<!--<tr>
-											<td class="col_num" data-label="번호"></td>
-											<td class="col_1depth" data-label="1Depth"></td>
-											<td class="col_2depth" data-label="2Depth">탭2</td>
-											<td class="col_3depth" data-label="3Depth"></td>
-											<td class="col_url" data-label="URL">
-												<a href="" target="_blank">html/main/HTR-M-BES-MAIN-001.html</a>
-											</td>
-											<td class="col_date" data-label="날짜"></td>
-											<td class="col_complete" data-label="상태"></td>
-											<td class="col_memo" data-label="비고">
-												<button type="button" class="btn_memo">Comment</button>
-												<div class="col_memo_con"></div>
-											</td>
-										</tr>
-										<tr>
-											<td class="col_num" data-label="번호"></td>
-											<td class="col_1depth" data-label="1Depth"></td>
-											<td class="col_2depth" data-label="2Depth">탭3</td>
-											<td class="col_3depth" data-label="3Depth"></td>
-											<td class="col_url" data-label="URL">
-												<a href="" target="_blank">html/main/HTR-M-BES-MAIN-002.html</a>
-											</td>
-											<td class="col_date" data-label="날짜"></td>
-											<td class="col_complete" data-label="상태"></td>
-											<td class="col_memo" data-label="비고">
-												<button type="button" class="btn_memo">Comment</button>
-												<div class="col_memo_con"></div>
-											</td>
-										</tr>-->
-										<tr>
+										<tr class="point">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m1">BD</p>신상품</td>
 											<td class="col_2depth" data-label="2Depth"></td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
-												<a href="html/main/HTR-M-NEW-MAIN-000.html" target="_blank">html/main/HTR-M-NEW-MAIN-000.html</a>
+												<a href="html/main/HTR-P-NEW-MAIN-000.html" target="_blank">html/main/HTR-P-NEW-MAIN-000.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22-02-08</td>
-											<td class="col_complete" data-label="상태"></td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">진행중</td>
 											<td class="col_memo" data-label="비고">
 
 											</td>
@@ -628,59 +608,30 @@ tr td:nth-child(2) {font-weight:700;}
 											<td class="col_2depth" data-label="2Depth"></td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
-												<a href="html/main/HTR-M-DEL-MAIN-000.html" target="_blank">html/main/HTR-M-DEL-MAIN-000.html</a>
+												<a href="html/main/HTR-P-DEL-MAIN-000.html" target="_blank">html/main/HTR-P-DEL-MAIN-000.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22-02-08</td>
-											<td class="col_complete" data-label="상태"></td>
+											<td class="col_date" data-label="날짜">22.03.25</td>
+											<td class="col_complete" data-label="상태">완료</td>
 											<td class="col_memo" data-label="비고">
 
 											</td>
 										</tr>
-										<!--<tr>
-											<td class="col_num" data-label="번호"></td>
-											<td class="col_1depth" data-label="1Depth"></td>
-											<td class="col_2depth" data-label="2Depth">탭1</td>
-											<td class="col_3depth" data-label="3Depth"></td>
-											<td class="col_url" data-label="URL">
-												<a href="" target="_blank">html/main/HTR-M-DEL-MAIN-001.html</a>
-											</td>
-											<td class="col_date" data-label="날짜"></td>
-											<td class="col_complete" data-label="상태"></td>
-											<td class="col_memo" data-label="비고">
-												<button type="button" class="btn_memo">Comment</button>
-												<div class="col_memo_con"></div>
-											</td>
-										</tr>
-										<tr>
-											<td class="col_num" data-label="번호"></td>
-											<td class="col_1depth" data-label="1Depth"></td>
-											<td class="col_2depth" data-label="2Depth">탭3</td>
-											<td class="col_3depth" data-label="3Depth"></td>
-											<td class="col_url" data-label="URL">
-												<a href="" target="_blank">html/main/HTR-M-DEL-MAIN-002.html</a>
-											</td>
-											<td class="col_date" data-label="날짜"></td>
-											<td class="col_complete" data-label="상태"></td>
-											<td class="col_memo" data-label="비고">
-												<button type="button" class="btn_memo">Comment</button>
-												<div class="col_memo_con"></div>
-											</td>
-										</tr>-->
+										
 									</tbody>
 									<!-- //베스트/신상품/무료배송 -->
 
 
 									<!-- 브랜드샵 -->
-									<tbody style="display:none;">
-										<tr>
+									<tbody>
+										<tr class="point">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p>브랜드샵</td>
 											<td class="col_2depth" data-label="2Depth"></td>
 											<td class="col_3depth" data-label="3Depth"></td>
 											<td class="col_url" data-label="URL">
-												<a href="html/main/HTR-M-BRAD-MAIN-000.html" target="_blank">html/main/HTR-M-BRAD-MAIN-000.html</a>
+												<a href="tml/main/HTR-P-BRAD-MAIN-000.htm" target="_blank">html/main/HTR-P-BRAD-MAIN-000.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22-02-18</td>
+											<td class="col_date" data-label="날짜"></td>
 											<td class="col_complete" data-label="상태"></td>
 											<td class="col_memo" data-label="비고">
 
@@ -1329,7 +1280,7 @@ tr td:nth-child(2) {font-weight:700;}
 										</tr>
 									</thead>
 
-									<body>
+									<tbody>
 										<tr class="point05">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p>상품상세</td>
@@ -1369,6 +1320,7 @@ tr td:nth-child(2) {font-weight:700;}
 												</ul>
 											</td>
 										</tr>
+
 										<tr>
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p></td>

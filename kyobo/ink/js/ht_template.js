@@ -462,6 +462,17 @@ function prod_fold_btn(val){
 
 
 
+/* .ht_tit_nav_inner */
+$(function(){
+	$(document).on('click', '.ht_tit_nav_inner a', function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).parent().attr('class', 'ht_tit_nav_inner').addClass('chk'+ ($(this).index() + 1));
+	});
+});
+
+
+
+
 
 
 

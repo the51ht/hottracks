@@ -11,7 +11,7 @@
 <meta property="og:image" content="../../images/layout/sns.jpg">
 <link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
-<title>신상품 : 핫트랙스</title>
+<title>오늘만 특가 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -100,186 +100,60 @@
 
 
 		<!-- ht_contents_wrap -->
-		<section class="ht_contents_wrap">
+		<section class="ht_contents_wrap">	
+			<!-- ht_tit_nav -->
+			<nav class="ht_tit_nav">
+				<!-- ht_tit_nav_inner -->
+				<div class="ht_tit_nav_inner chk1"><!-- 활성화 함수 -->
+					<a href="#n" class="active"><span class="ico_tod_nav01">오늘만 특가</span></a>
+					<a href="#n"><span class="ico_tod_nav02">핫딜 특가</span></a>
+				</div>
+				<!-- //ht_tit_nav_inner -->
+			</nav>
+			<!-- //ht_tit_nav -->
 
-            <!-- Title -->  
-            <div class="ht_cont ht_title"> 
-                <div class="contents_inner">
-                    <h1 class="ht_tit_big02 left">신상품</h1>
-                </div>
-            </div>  
-            <!-- //Title -->
+<style>
+/* 작업시 작업 해당부분으로 sass 방식으로 넣어 주세요 */
+.tod_full_banner {
+	padding:30px;background:#ffeb01;
+}
+</style>
 
 
-            <!-- 상단 메뉴-->  
-            <div class="ht_cont top_evt_area ty02"> 
-                <div class="contents_inner">
-					<!-- tab_bg_gray -->
-					<div class="tab_bg_gray">
-						<!-- tab_ty -->
-						<div class="tab_swiper tab_txt ty02 tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-							<!-- swiper-wrapper -->
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide">
-									<a href="#n" class="on"><!-- 활성화  class="on" -->
-										<span>음반</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>DVD</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>BLU-RAY</span>
-									</a>
-								</li>
-							</ul>
-							<!-- //swiper-wrapper -->
+			<!-- tod_full_banner -->
+			<div class="ht_cont tod_full_banner">
+				<div class="contents_inner">
+					<h1  style="height:228px;">오늘만 특가</h1>
+					<!-- prod_share_area -->
+					<div class="prod_share_area">
 
-							<!-- swiper_control -->
-							<div class="swiper_control">
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
+						<!-- sns_share_wrap -->
+						<div class="sns_share_wrap">
+							<button type="button" class="btn_share"><span class="ico_share"></span><span class="hidden">공유하기</span></button>
+							<div class="sns_share_box">
+								<a href="#" class="btn_sns_share ht_kakao"><span class="hidden">카카오톡 공유하기</span></a>
+								<a href="#" class="btn_sns_share ht_instar"><span class="hidden">인스타그램 공유하기</span></a>
+								<a href="#" class="btn_sns_share ht_facebook"><span class="hidden">페이스북 공유하기</span></a>
+								<!--<a href="#" class="btn_sns_share ht_twitter"><span class="hidden">트위트 공유하기</span></a>
+								<a href="#" class="btn_sns_share ht_pinterest"><span class="hidden">핀터레스트 공유하기</span></a>-->
+								<a href="#" class="btn_sns_share ht_line"><span class="hidden">라인 공유하기</span></a>
+								<!--<a href="#" class="btn_sns_share ht_message"><span class="hidden">메세지 공유하기</span></a>-->
+								<a href="#" class="btn_sns_share ht_url_copy"><span class="hidden">url 복사하기</span></a>
+
+								<button class="btn_sns_share_close" type="button"><i class="ico_share_close"></i><span class="hidden">공유하기 닫기</span></button>
 							</div>
-							<!-- //swiper_control -->
 						</div>
-						<!-- //tab_ty -->
-                    </div>
-					<!-- //tab_bg_gray -->
-
-					<!-- tab_ty -->
-					<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-						<ul class="swiper-wrapper">
-							<li class="swiper-slide">
-								<a href="#n" class="on"><!-- 활성화  class="on" -->
-									<span>전체</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>드라마/로맨스</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>애니메이션</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>TV시리즈</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>SF판타지</span>
-								</a>
-							</li>
-							<li class="swiper-slide">
-								<a href="#n">
-									<span>액션/모험</span>
-								</a>
-							</li>
-						</ul>
-                        <!-- swiper_control -->
-                        <div class="swiper_control">
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
-                        </div>
-                        <!-- //swiper_control -->
+						<!-- //sns_share_wrap -->
 					</div>
-					<!-- //tab_ty -->
-                </div>
-            </div>  
-            <!-- //상단 메뉴-->
+					<!-- //prod_share_area -->
+				</div>
+			</div>
+			<!-- //tod_full_banner -->
 
 
 			<!-- ht_cont : 상품 리스트 -->
-			<div class="ht_cont">
+			<div class="ht_cont ht_bg ht_new_list">
 				<div class="contents_inner">
-					<!-- 상품 정렬 방식 선택 -->
-					<div class="prod_sort_wrap dep_top">
-						<!-- 체크박스 리스트 -->
-						<ul class="prod_ck_lists">
-							<li class="form_chk">
-								<input id="prod0" type="checkbox">
-								<label for="prod0">할인</label>
-							</li>
-							<li class="form_chk">
-								<input id="prodChk1" type="checkbox">
-								<label for="prodChk1">쿠폰</label>
-							</li>
-							<li class="form_chk">
-								<input id="prodChk2" type="checkbox">
-								<label for="prodChk2">핫트랙스배송</label>
-							</li>
-							<li class="form_chk">
-								<input id="prodChk3" type="checkbox">
-								<label for="prodChk3">무료배송</label>
-							</li>
-							<li class="form_chk">
-								<input id="prodChk4" type="checkbox">
-								<label for="prodChk4">품절포함</label>
-							</li>
-						</ul>
-						<!-- //체크박스 리스트 -->
-
-
-						<!-- prod_type_selec_area -->
-						<div class="prod_type_selec_area">
-							<span style="display:inline-block;margin-right:5px;color:red;font-size:13px;line-height:38px;">DVD, BLU-RAY : '전체' 비노출 →</span>
-
-
-<script>
-/* 
-교보 자체 내 select UI - jquery ui select
-
-https://jqueryui.com/selectmenu/#default
-*/
-$(function(){
-	$('#selecMy').selectmenu({
-		change:function(event, data){
-			console.log(data.item.value)
-		}
-	});
-});
-</script>	
-								
-									
-							<!-- form_sel -->
-							<div class="form_sel">
-								<select id="selecMy">
-									<option value ="opt1">전체</option>
-									<option value="opt2">국내음반</option>
-									<option value="opt3">수입음반</option>
-								</select>
-								<select id="selecMy02">
-									<option value ="opt1">신상품순</option>
-									<option value="opt2">판매인기순</option>
-									<option value="opt3">낮은 가격순</option>
-									<option value="opt4">높은 가격순</option>
-									<option value="opt5">높은 할인율순</option>
-									<option value="opt6">찜♥많은순</option>
-									<option value="opt7">리뷰 평점순</option>
-								</select>
-							</div>
-							<!-- //form_sel -->
-							<button class="list_view_type_btn"></button>
-						</div>
-						<!-- //prod_type_selec_area -->
-					</div>
-					<!-- //상품 정렬 방식 선택-->
-
-
-                    <!-- 목록 정보 문구 노출 영역 -->
-                    <div class="list_info_text_warp">
-                        <p>10,232개의 상품</p>
-                    </div>
-                    <!-- //목록 정보 문구 노출 영역 -->
-
-
 					<!-- evt_prod_list_wrap -->
 					<div class="evt_prod_list_wrap">
 						<!-- 상품 리스트 -->
@@ -427,26 +301,6 @@ $(function(){
 							</li>
 							<!-- //품절 상품 -->				
 
-							<!-- 상품배너 : 16개(8줄) 마다 노출 : 만약 li 안으로 들어가야 할경우
-							<li class="prod_resp">
-								<div class="prod_solo_banner">
-									<a href="#n"><img src="../../images/temp/@img_solo_banner.jpg" alt=""></a>
-								</div>
-							</li>
-							//상품배너 : 16개(8줄) 마다 노출 -->
-						</ul>
-						<!-- //상품 리스트-->
-
-
-						<!-- solo_banner -->
-						<div class="solo_banner">
-							<a href="#n"><img src="../../images/temp/@img_solo_banner.jpg" alt="" class="bd_img"></a>
-						</div>
-						<!-- //solo_banner -->
-
-
-						<!-- 상품 리스트 -->
-						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod05.jpg" alt="">

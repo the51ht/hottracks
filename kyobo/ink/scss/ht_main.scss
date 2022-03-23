@@ -256,56 +256,6 @@
 
 
 /***** * 음반메인 * *****/
-/*** mus_tit_nav : 상단 탭 ***/
-.mus_tit_nav {
-    position:relative;margin-bottom:30px;font-size:0;text-align:center;
-}
-
-/* .mus_tit_nav_inner */
-.mus_tit_nav_inner {
-    display:inline-block;position:relative;border:1px solid #ddd;border-radius:28px;vertical-align:top;
-    &:before {
-        position:absolute;left:0;top:-1px;width:155px;height:calc(100% + 1px);background-color:#000;border-radius:50px;box-sizing:content-box;transition: left .1s ease-in-out;content:"";
-    }
-    a {
-        display:inline-block;position:relative;width:155px;height:54px;color:#595959;font-size:20px;font-weight:500;line-height:54px;box-sizing:border-box;text-align:center;vertical-align:top;letter-spacing:-1px;transition:color 0.5s;
-        span {
-            position:relative;padding-left:0;
-            &:before {
-                position:absolute;left:0;top:-3px;width:30px;height:30px;background:center/30px no-repeat;content:"";opacity:0;
-            }
-        }
-        &.active {
-            color:#fff;
-            span {
-                position:relative;padding-left:38px;
-                &:before {
-                    opacity:1;
-                }
-            }
-        }
-        &:nth-child(1) span:before {
-            background-image:url('../images/main/ico_mus_main_t01.svg');
-        }
-        &:nth-child(2) span:before {
-            background-image:url('../images/main/ico_mus_main_t02.svg');
-        }
-        &:nth-child(3) span:before {
-            background-image:url('../images/main/ico_mus_main_t03.svg');
-        }
-    }
-    &.active0:before {
-        left:0;
-    }
-    &.active1:before {
-        left:calc(100% / 3);
-    }
-    &.active2:before {
-        left:calc((100% / 3 ) * 2);
-    }
-}
-
-
 
 /*** 예약상품 : .mus_mc_reserved ***/
 .mus_mc_reserved {
