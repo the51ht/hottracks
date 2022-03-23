@@ -446,9 +446,14 @@
     .btn_more_view_box {
         background:none !important;
         strong {
-            color:#fff;
+            color:#fff;border-color:rgba(255,255,255,0.3);transition:border 0.4s;
             em:after {
                 border-color:#fff !important;
+            }
+        }
+        &:hover {
+            strong {
+                border-color:#fff;
             }
         }
     }

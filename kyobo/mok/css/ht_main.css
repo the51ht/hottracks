@@ -896,6 +896,9 @@
   opacity: 0;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .wel_live_cont .img_wel_live {
@@ -3375,6 +3378,9 @@
   left: 50%;
   top: 50%;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -7450,6 +7456,13 @@
   height: 22px;
   background: url("../images/main/ico_participate_num.svg") center/100% no-repeat;
   content: "";
+}
+
+.gft_question_cont_list .gft_question_tit .s2,
+.pop_view_add .gft_question_tit .s2 {
+  text-overflow: inherit;
+  overflow: inherit;
+  -webkit-box-orient: inherit;
 }
 
 /* gft_question_chk */

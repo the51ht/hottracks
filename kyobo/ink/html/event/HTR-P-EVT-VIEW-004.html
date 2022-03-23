@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=1600">
-<title>이벤트 기획전</title>
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>이벤트 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -14,7 +21,6 @@
 <!-- // Plug-In css -->
 
 
-
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
@@ -22,7 +28,6 @@
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
-
 
 
 <!-- Polyfill javascript -->
@@ -46,7 +51,6 @@
 <!-- // Plug-In javascript -->
 
 
-
 <!-- ht_ Hottracks UI JavaScript : 공통작업 -->
 <script src="../../js/ui_ink.js"></script>
 <script src="../../js/ht_lib.js"></script>
@@ -65,7 +69,7 @@
 <!-- wrapper -->
 <div class="wrapper">
 	<!-- Header -->
-	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#f4f4f4;">
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
 		<!-- service_mall_wrap -->
 		<div class="service_mall_wrap">
 			<div class="service_mall_inner" style="height:42px;;"></div>
@@ -75,12 +79,11 @@
 		<!-- header_inner -->
 		<div class="header_inner">
 			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
-			<nav class="gnb_wrap" style="height:87px;"></nav>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
 		</div>
 		<!-- //header_inner -->
 	</header>
 	<!-- //Header -->
-
 
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">
@@ -89,7 +92,28 @@
 				<ol class="breadcrumb_list">
 					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
 					<li class="breadcrumb_item">
-						<a href="#" class="btn_sub_depth">CD/LP</a>
+						<a href="#" class="btn_sub_depth">디자인/문구</a>
+						<!-- DESC : 서브메뉴 갯수에 따라 col이 나눠지는 경우, div.sub_depth_box 영역에 multiclass 부여 필요
+							1단 : default(multi class 없음) / 2단 : col2 / 3단 : col3
+							-->
+						<div class="sub_depth_grid">
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item active"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">다이어리/스케줄러</a>
 						<!-- DESC : 서브메뉴 갯수에 따라 col이 나눠지는 경우, div.sub_depth_box 영역에 multiclass 부여 필요
 							1단 : default(multi class 없음) / 2단 : col2 / 3단 : col3
 							-->
@@ -120,17 +144,15 @@
                 <div class="contents_inner">
                     <h1 class="ht_tit_big02 left">당첨 결과 보기</h1>
 
-
-                    <!--게시글 타이틀-->
+                    <!-- 게시글 타이틀 -->
                     <article class="evt_description_title">
                         <div class="category_area">음반/영상</div>
                         <div class="list_title_area">빅톤 1ST CONCERT [NEW WORLD]DVD 발매기념 상영회 초대 이벤트 진행 안내 </div>
                         <div class="list_date_area">2021.11.08</div>
                     </article>
-                    <!--//게시글 타이틀-->
+                    <!-- //게시글 타이틀 -->
 
-
-                    <!--게시글 본문-->
+                    <!-- 게시글 본문 -->
                     <div class="evt_description_content">
                         안녕하세요 고객님, 핫트랙스입니다.<br><br>
                         지난 2020년 진행 예정이었으나 코로나19 상황 악화로 인해 연기 되었던
@@ -165,25 +187,19 @@
                         축하드립니다! <br>
                         핫트랙스 몰에 가입하신 휴대전화번호로 약속한 선물 보내드리도록 하겠습니다 :D<br><br>
         
-                        * 사은품 발급을 위한 개인정보 수신 동의가 필요합니다.<br>
-                        <hr class="evt_hr">
+                        * 사은품 발급을 위한 개인정보 수신 동의가 필요합니다.
                     </div>
-                     <!--//게시글 본문-->
+                    <!-- //게시글 본문-->
 
-
-                    <!--버튼-->
-                    <div class="evt_winner_btn_area">
+                    <!-- btn_area-->
+                    <div class="btn_area">
                         <button class="btn_lg btn_primary">내 당첨 결과 확인</button>
                         <button class="btn_lg btn_line_gray">목록</button>
                     </div>
-                    <!--//버튼-->
-                   
+                    <!-- //btn_area -->
                 </div>
-            
             </div>  
             <!-- //상단 메뉴-->  
-
-
         </section>
         <!-- /ht_contents_wrap -->
 	</main>

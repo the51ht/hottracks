@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=1600">
-<title>이벤트 기획전</title>
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>이벤트 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -14,7 +21,6 @@
 <!-- // Plug-In css -->
 
 
-
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
@@ -22,7 +28,6 @@
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
-
 
 
 <!-- Polyfill javascript -->
@@ -46,7 +51,6 @@
 <!-- // Plug-In javascript -->
 
 
-
 <!-- ht_ Hottracks UI JavaScript : 공통작업 -->
 <script src="../../js/ui_ink.js"></script>
 <script src="../../js/ht_lib.js"></script>
@@ -65,7 +69,7 @@
 <!-- wrapper -->
 <div class="wrapper">
 	<!-- Header -->
-	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#f4f4f4;">
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
 		<!-- service_mall_wrap -->
 		<div class="service_mall_wrap">
 			<div class="service_mall_inner" style="height:42px;;"></div>
@@ -75,17 +79,15 @@
 		<!-- header_inner -->
 		<div class="header_inner">
 			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
-			<nav class="gnb_wrap" style="height:87px;"></nav>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
 		</div>
 		<!-- //header_inner -->
 	</header>
 	<!-- //Header -->
 
-
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">
 
-		
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap">
             <!-- 상단 메뉴-->  
@@ -111,7 +113,7 @@
                             <li class="swiper-slide">
                                 <a href="#n">
                                     <img src="../../images/guide/evt_quick_mn3.svg" alt="">
-                                    <span>쿠폰존<span>
+                                    <span>쿠폰존</span>
                                 </a>
                             </li>
                             <li class="swiper-slide">
@@ -132,109 +134,120 @@
                                     <span>당첨자 발표</span>
                                 </a>
                             </li>
-
-
                         </ul>
                     </div>
                     <!-- //tab_ty -->
 
+					<!-- tab_txt : 하단 border - tab_under -->
+					<div class="tab_under">
+						<!-- tab_ty -->
+						<div class="tab_swiper tab_txt tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+							<!-- swiper-wrapper -->
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
+										<span>전체</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>라이브</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>음반/영상</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n">
+										<span>컬쳐</span>
+									</a>
+								</li>
+							</ul>
+							<!-- //swiper-wrapper -->
 
-                    <!--tab_txt-->
-                    <div class="tab_txt tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-                        <ul>
-                            <li>
-                                <a href="#n" class="on"><!-- 활성화  class="on" -->
-                                    <span>전체</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <span>라이브</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <span>음반/영상</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <span>컬처</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <span>일반</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--//tab_txt-->
-
+							<!-- swiper_control -->
+							<div class="swiper_control">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<!-- //swiper_control -->
+						</div>
+						<!-- //tab_ty -->
+					</div>
+					<!-- //tab_txt : 하단 border - tab_under -->  
                 </div>
-            
             </div>  
             <!-- //상단 메뉴-->  
 
-			<!-- ht_cont : 상품 4단 -->
+
+			<!-- ht_cont : 당첨자 목록 리스트 -->
 			<div class="ht_cont">
 				<div class="contents_inner">
-                    <ul class="evt_winner_list">
+                    <!-- evt_winner_list -->
+                    <ul class="evt_winner_list mt">
                         <!-- evt_winner_item 반복 -->
                         <li class="evt_winner_item">
-                            <div class="list_num">11</div>
-                            <div class="list_cate">라이브</div>
-                            <!--div.title: 최근 7일 이내 등록시 status_new 클래스 추가-->
-                            <div class="title status_new">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
-                            <div class="date">2021.11.08</div>
+                            <a href="#">
+                                <div class="list_num">11</div>
+                                <div class="list_cate">라이브</div>
+                                <div class="title status_new">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div><!-- .title: 최근 7일 이내 등록시 status_new 클래스 추가-->
+                                <div class="date">2021.11.08</div>
+                            </a>
                         </li>
                          <!-- //evt_winner_item 반복 -->
 
-
-                         <li class="evt_winner_item">
-                            <div class="list_num">10</div>
-                            <div class="list_cate">라이브</div>
-                            <!--div.title: 최근 7일 이내 등록시 status_new 클래스 추가-->
-                            <div class="title status_new">GHOST9 - 5th MINI ALBUM COMEBACK SHOWCASE &lt;NOW : Who we are facing&gt; 당첨 안내</div>
-                            <div class="date">2021.11.08</div>
+                        <li class="evt_winner_item">
+                            <a href="#">
+                                <div class="list_num">10</div>
+                                <div class="list_cate">라이브</div>
+                                <div class="title status_new">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
+                                <div class="date">2021.11.08</div>
+                            </a>
                         </li>
                         <li class="evt_winner_item">
-                            <div class="list_num">9</div>
-                            <div class="list_cate">라이브</div>
-                            <!--div.title: 최근 7일 이내 등록시 status_new 클래스 추가-->
-                            <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
-                            <div class="date">2021.11.08</div>
+                            <a href="#">
+                                <div class="list_num">9</div>
+                                <div class="list_cate">라이브</div>
+                                <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
+                                <div class="date">2021.11.08</div>
+                            </a>
                         </li>
                         <li class="evt_winner_item">
-                            <div class="list_num">8</div>
-                            <div class="list_cate">라이브</div>
-                            <!--div.title: 최근 7일 이내 등록시 status_new 클래스 추가-->
-                            <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
-                            <div class="date">2021.11.08</div>
+                            <a href="#">
+                                <div class="list_num">8</div>
+                                <div class="list_cate">라이브</div>
+                                <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
+                                <div class="date">2021.11.08</div>
+                            </a>
                         </li>
                         <li class="evt_winner_item">
-                            <div class="list_num">8</div>
-                            <div class="list_cate">라이브</div>
-                            <!--div.title: 최근 7일 이내 등록시 status_new 클래스 추가-->
-                            <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
-                            <div class="date">2021.11.08</div>
+                            <a href="#">
+                                <div class="list_num">7</div>
+                                <div class="list_cate">라이브</div>
+                                <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
+                                <div class="date">2021.11.08</div>
+                            </a>
                         </li>
                         <li class="evt_winner_item">
-                            <div class="list_num">8</div>
-                            <div class="list_cate">라이브</div>
-                            <!--div.title: 최근 7일 이내 등록시 status_new 클래스 추가-->
-                            <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
-                            <div class="date">2021.11.08</div>
+                            <a href="#">
+                                <div class="list_num">6</div>
+                                <div class="list_cate">라이브</div>
+                                <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
+                                <div class="date">2021.11.08</div>
+                            </a>
                         </li>
                         <li class="evt_winner_item">
-                            <div class="list_num">8</div>
-                            <div class="list_cate">라이브</div>
-                            <!--div.title: 최근 7일 이내 등록시 status_new 클래스 추가-->
-                            <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
-                            <div class="date">2021.11.08</div>
+                            <a href="#">
+                                <div class="list_num">6</div>
+                                <div class="list_cate">라이브</div>
+                                <div class="title">핫트랙스 LIVE X 단순생활 이벤트 당첨자 발표</div>
+                                <div class="date">2021.11.08</div>
+                            </a>
                         </li>
                     </ul>
-
+                    <!-- //evt_winner_list -->
 
                     <!-- pagination -->
                     <div class="pagination">
@@ -256,13 +269,19 @@
                     </div>
                     <!-- //pagination -->
 
+                    <!-- 이벤트 항목이 없을 경우
+                    <div class="ht_cont no_evt_list_wrap">
+                        <div class="contents_inner">
+                            <p class="txt">이벤트 목록이 없습니다.</p>
+                        </div>
+                    </div>
+                    //ht_cont : 이벤트 항목이 없을 경우 -->
 				</div>
 			</div>
-			<!-- //ht_cont : 상품 4단 -->
+			<!-- //ht_cont : 당첨자 목록 리스트 -->
 
 
-
-           <!-- ht_cont : 하단 광고배너 -->
+            <!-- ht_cont : 하단 광고배너 -->
 			<div class="ht_cont ht_under_banner_area">
 				<div class="contents_inner">
 					<h2 class="hidden">광고배너</h2>

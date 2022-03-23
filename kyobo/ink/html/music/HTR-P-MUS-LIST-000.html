@@ -11,7 +11,7 @@
 <meta property="og:image" content="../../images/layout/sns.jpg">
 <link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
-<title>카테고리 메인 : 핫트랙스</title>
+<title>BLU-RAY : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -88,39 +88,32 @@
 
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">
-		<!-- breadcrumb_wrap -->
-		<section class="breadcrumb_wrap">
-			<div class="breadcrumb_inner">
-				<ol class="breadcrumb_list">
-					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
-					<li class="breadcrumb_item">
-						<a href="#" class="btn_sub_depth">디자인문구</a>
-						<!-- DESC : 서브메뉴 갯수에 따라 col이 나눠지는 경우, div.sub_depth_box 영역에 multiclass 부여 필요
-							1단 : default(multi class 없음) / 2단 : col2 / 3단 : col3
-							-->
-						<div class="sub_depth_grid">
-							<!-- repeat(li.depth_item 최대 10개) -->
-							<div class="sub_depth_box">
-								<ul class="sub_depth_list">
-									<!-- DESC : 활성화된 depth active class 추가 -->
-									<li class="depth_item active"><a href="#" class="depth_link">교보북클럽</a></li>
-									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
-									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
-									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
-									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
-									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
-								</ul>
-							</div>
-							<!-- // repeat -->
-						</div>
-					</li>
-				</ol>
-			</div>
-		</section>
-		<!-- //breadcrumb_wrap -->
-		
+
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap">
+			<h1 class="hidden">BLU-RAY</h1>
+
+<script>
+/* mus_tit_nav */
+$(function(){
+	$(document).on('click', '.mus_tit_nav_inner a', function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).parent().attr('class', 'mus_tit_nav_inner').addClass('active'+$(this).index());
+	});
+});
+</script>
+
+			<!-- mus_tit_nav -->
+			<nav class="mus_tit_nav">
+				<!-- mus_tit_nav_inner -->
+				<div class="mus_tit_nav_inner active1">
+					<a href="#n"><span>음반</span></a>
+					<a href="#n" class="active"><span>DVD</span></a>
+					<a href="#n"><span>BLU-RAY</span></a>
+				</div>
+				<!-- //mus_tit_nav_inner -->
+			</nav>
+			<!-- //mus_tit_nav -->
 
 			<!-- ht_sub_cont -->
 			<div class="ht_sub_cont">
@@ -131,10 +124,11 @@
 					<!-- ht_lnb_cont -->
 					<ul class="ht_lnb_cont">
 						<li class="view_all"><button class="lnb_1dep">전체보기</button></li>
-
-						<li class="on"><button class="lnb_1dep">다이어리/스케줄러</button><!-- 활성화 class="on" -->
+						<!--DESC : 활성화 클래스 on 추가-->
+						<li class="on"><button class="lnb_1dep">가요</button>
 							<ul class="dep2">
-								<li><button class="lnb_2dep">날짜형 다이어리 </button><!-- 활성화 class="on" -->
+								<!--DESC : 활성화 클래스 on 추가-->
+								<li><button class="lnb_2dep">모양펀치</button>
 									 <ul class="dep3">
 										<li><button class="lnb_3dep">심플/기능성</button></li>
 										<li><button class="lnb_3dep">캐릭터/일러스트</button></li>
@@ -142,7 +136,7 @@
 										<li><button class="lnb_3dep">포토/여행</button></li>
 									 </ul>
 								</li>
-								<li><button class="lnb_2dep">만년다이어리</button>
+								<li><button class="lnb_2dep">포장박스</button>
 									<ul class="dep3">
 										<li><button class="lnb_3dep">심플/기능성</button></li>
 										<li><button class="lnb_3dep">캐릭터/일러스트</button></li>
@@ -150,7 +144,7 @@
 										<li><button class="lnb_3dep">포토/여행</button></li>
 									 </ul>
 								</li>
-								<li><button class="lnb_2dep">날짜형 스케줄러</button>
+								<li><button class="lnb_2dep">포장지</button>
 									<ul class="dep3">
 										<li><button class="lnb_3dep">심플/기능성</button></li>
 										<li><button class="lnb_3dep">캐릭터/일러스트</button></li>
@@ -160,7 +154,7 @@
 								</li>
 							</ul>
 						</li>
-						<li><button class="lnb_1dep">비즈니스플래너/노트</button>
+						<li><button class="lnb_1dep">POP</button>
 							<ul class="dep2">
 								<li><button class="lnb_2dep">모양펀치</button>
 									 <ul class="dep3">
@@ -188,7 +182,7 @@
 								</li>
 							</ul>
 						</li>
-						<li><button class="lnb_1dep">다이어리/스케줄러</button>
+						<li><button class="lnb_1dep">ROCK</button>
 							<ul class="dep2">
 								<li><button class="lnb_2dep">모양펀치</button>
 									 <ul class="dep3">
@@ -219,19 +213,17 @@
 					</ul>
 					<!-- //ht_lnb_cont -->
 
-					<!-- 상세 검색 버튼 -->
+                    <!-- 상세 검색 버튼 -->
 					<div class="search_btn_area">
-						<button class="search_btn" data-role="btn-dialog" data-target="#popbrand_search"><span class="search_icon"></span>브랜드 골라보기</button>
-						<button class="search_btn" data-role="btn-dialog" data-target="#popbrand_search"><span class="search_icon"></span>브랜드 골라보기<em class="brand_count">3</em></button>
-						<button class="search_btn"><span class="pen_icon"></span>만년필이 궁금하세요?</button>
+						<button class="search_btn"><span class="search_icon"></span>DVD/BLU-RAY<br>상세검색</button>
 					</div>
-				    <!-- //상세 검색 버튼 -->
+                    <!-- //상세 검색 버튼 -->
 				</nav>
 				<!-- LNB -->
 
 				<!-- ht_sub_area -->
 				<section class="ht_sub_area">
-					<h1 class="ht_tit">디자인 문구</h1>
+					<h1 class="ht_tit">BLU-RAY</h1>
 
 					<!-- ht_cont : 상단배너 - ht_top_banner -->
 					<div class="ht_cont ht_top_banner">
@@ -240,6 +232,17 @@
 							<div class="swiper-container">
 								<!-- swiper-wrapper -->
 								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<a href="#n">
+											<p class="img"><img src="../../images/temp/@img_top_banner03.jpg" alt=""></p>
+											<div class="txt">
+												<ul>
+													<li class="s1">비제 카르멘 예약 판매</li>
+													<li class="s2">단독 예약 판매 시작</li>
+												</ul>
+											</div>
+										</a>
+									</li>
 									<li class="swiper-slide">
 										<a href="#n">
 											<p class="img"><img src="../../images/temp/@img_top_banner01.jpg" alt=""></p><!-- image size: 994*400px -->
@@ -262,17 +265,6 @@
 											</div>
 										</a>
 									</li>
-									<li class="swiper-slide">
-										<a href="#n">
-											<p class="img"><img src="../../images/temp/@img_top_banner03.jpg" alt=""></p>
-											<div class="txt">
-												<ul>
-													<li class="s1">비제 카르멘 예약 판매</li>
-													<li class="s2">단독 예약 판매 시작</li>
-												</ul>
-											</div>
-										</a>
-									</li>
 								</ul>
 								<!-- //swiper-wrapper -->
 
@@ -291,19 +283,24 @@
 					<!-- //ht_cont : 상단배너 - ht_top_banner -->
 
 
-					<!-- ht_cont : MD 추천 / 베스트 -->
+					<!-- ht_cont : 예약상품 / 베스트 / 신상품 -->
 					<div class="ht_cont" >
 						<!-- tab_txt -->
 						<div class="tab_txt ty02 tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
 							<ul>
 								<li>
 									<a href="#n" class="on"><!-- 활성화  class="on" -->
-										<span>MD 추천</span>
+										<span>예약상품</span>
 									</a>
 								</li>
 								<li>
 									<a href="#n">
 										<span>베스트</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>신상품</span>
 									</a>
 								</li>
 							</ul>
@@ -469,7 +466,7 @@
 						</div>
 						<!-- //thumb4_banner -->
 					</div>	
-					<!-- //ht_cont : MD 추천 / 베스트 -->
+					<!-- //ht_cont : 예약상품 / 베스트 / 신상품 -->
 
 
 					<!-- ht_cont : 상품 -->
@@ -480,26 +477,31 @@
 							<ul class="prod_ck_lists">
 								<li class="form_chk">
 									<input id="prod0" type="checkbox">
-									<label for="prod0">할인</label>
+									<label for="prod0">예약</label>
 								</li>
 								<li class="form_chk">
 									<input id="prodChk1" type="checkbox">
-									<label for="prodChk1">쿠폰</label>
+									<label for="prodChk1">할인</label>
 								</li>
 								<li class="form_chk">
 									<input id="prodChk2" type="checkbox">
-									<label for="prodChk2">핫트랙스배송</label>
+									<label for="prodChk2">쿠폰</label>
 								</li>
 								<li class="form_chk">
 									<input id="prodChk3" type="checkbox">
-									<label for="prodChk3">무료배송</label>
+									<label for="prodChk3">핫트랙스배송</label>
 								</li>
 								<li class="form_chk">
 									<input id="prodChk4" type="checkbox">
-									<label for="prodChk4">품절포함</label>
+									<label for="prodChk4">무료배송</label>
+								</li>
+								<li class="form_chk">
+									<input id="prodChk5" type="checkbox">
+									<label for="prodChk5">품절포함</label>
 								</li>
 							</ul>
 							<!-- //체크박스 리스트 -->
+
 <script>
 /* 
 교보 자체 내 select UI - jquery ui select
@@ -520,8 +522,7 @@ $(function(){
 								<div class="form_sel" data-val="test">
 									<!--id 값으로 ui select vlaue 읽을 수 있도록 스크립트 작업-->
 									<select title="타이틀" id="selecMy">
-										<option value="opt1">신상품순</option>
-										<option value="opt1">신상품순</option>
+										<option value ="opt1">신상품순</option>
 										<option value="opt2">판매인기순</option>
 										<option value="opt3">낮은 가격순</option>
 										<option value="opt4">높은 가격순</option>
@@ -534,301 +535,10 @@ $(function(){
 								<button class="list_view_type_btn"></button>
 							</div>
 						</div>
-						<!-- //상품 정렬 방식 선택 -->
+						<!-- //상품 정렬 방식 선택-->
 
+                        <div style="height:500px;background-color:#d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:500px;text-align:center;">HTR-M-CTG-LIST-001.html 동일</div>
 
-						<!-- evt_prod_list_wrap -->
-					    <div class="evt_prod_list_wrap">
-							<!-- 상품 리스트 -->
-							<ul class="evt_products"><!-- row_dir : row type -->
-								<!-- prod_item 반복 -->
-								<li class="prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod01.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-										<button class="evt_good_count active">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-
-										<!-- 19세 상품 항목
-										<img src="../../images/guide/img_19.svg" alt="">
-										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-										//19세 상품 항목 -->
-
-										<!-- 대체/품절 상품
-										<div class="show_replace">
-											<div>
-												<div>아쉽지만!<br>품절이예요</div>
-												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-											</div>
-										</div>
-										//대체/품절 상품 -->
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<!-- //prod_item 반복 -->
-
-								<!-- 19세 상품 -->
-								<li class="prod_item">
-									<div class="product_pic">
-										<!-- 19세 상품 항목 -->
-										<img src="../../images/guide/img_19.svg" alt="">
-										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-										<!-- //19세 상품 항목 -->
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<!-- //19세 상품 -->
-
-								<!-- 대체 상품 -->
-								<li class="prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod03.jpg" alt="">
-										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-
-										<!--<button class="evt_good_count active">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>-->
-
-
-										<!-- 대체/품절 상품 -->
-										<div class="show_replace">
-											<div>
-												<div>아쉽지만!<br>품절이예요</div>
-												<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
-												<button type="button" class="replace_prod_btn" onclick="alert('html/guide/00_products_list.html 페이지 확인!');">대체상품</button>
-											</div>
-										</div>
-										<!-- //대체/품절 상품 -->
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<!-- //대체 상품 -->
-
-								<!-- 품절 상품 -->
-								<li class="prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod04.jpg" alt="">
-										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-
-										<!--<button class="evt_good_count active">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>-->
-
-										<!-- 대체/품절 상품 -->
-										<div class="show_replace">
-											<div>
-												<div>아쉽지만!<br>품절이예요</div>
-												<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
-											</div>
-										</div>
-										<!-- //대체/품절 상품 -->
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<!-- //품절 상품 -->				
-
-								<!-- 상품배너 : 16개(8줄) 마다 노출 : 만약 li 안으로 들어가야 할경우
-								<li class="prod_resp">
-									<div class="prod_solo_banner">
-										<a href="#n"><img src="../../images/temp/@img_solo_banner.jpg" alt=""></a>
-									</div>
-								</li>
-								//상품배너 : 16개(8줄) 마다 노출 -->
-							</ul>
-							<!-- //상품 리스트-->
-
-
-							<!-- solo_banner -->
-							<div class="solo_banner">
-								<a href="#n"><img src="../../images/temp/@img_solo_banner.jpg" alt="" class="bd_img"></a>
-							</div>
-							<!-- //solo_banner -->
-
-
-							<!-- 상품 리스트 -->
-							<ul class="evt_products"><!-- row type : class="row_dir" -->
-								<li class="prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod05.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-										<button class="evt_good_count">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<li class="prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod06.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-										<button class="evt_good_count">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<li class="prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod01.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-										<button class="evt_good_count">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<li class="prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod02.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-										<button class="evt_good_count">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-									</div>
-									<div class="product_info">
-										<div class="company">dretec</div>
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge on">쿠폰</span>
-											<span class="badge">사은품</span>
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-							</ul>
-							<!-- //상품 리스트-->
-						</div>
-						<!-- //evt_prod_list_wrap -->
-
-
-						<!-- pagination -->
-						<div class="pagination">
-							<button class="btn_page prev"><span class="hidden">이전</span></button>
-							<div class="page_num">
-								<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
-								<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
-								<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-								<a href="#" class="btn_page_num active" title="현재페이지">10</a>
-								<a href="#" class="btn_page_num">11</a>
-								<a href="#" class="btn_page_num">12</a>
-								<a href="#" class="btn_page_num">13</a>
-								<a href="#" class="btn_page_num">14</a>
-								<a href="#" class="btn_page_num">15</a>
-								<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-								<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
-							</div>
-							<button class="btn_page next"><span class="hidden">다음</span></button>
-						</div>
-						<!-- //pagination -->
 					</div>
 					<!-- //ht_cont : 상품 -->
 
@@ -841,52 +551,7 @@ $(function(){
 			<!-- ht_cont : 기획전 3단 -->
 			<div class="ht_cont">
 				<div class="contents_inner">
-					<!-- evt_list -->
-					<ul class="evt_list type3"><!-- 3단 class="type3" -->
-						<!-- li 반복 -->
-						<li>
-							<div class="discount_icon">~25%</div> 
-							<div class="img_wrap">
-								<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB1.jpg" alt=""></p></a>
-							</div>
-							<ul class="item_info">
-								<li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
-								<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-								<li class="date">2021.11.04~2021.11.17</li>
-							</ul>
-						</li>
-						<!-- //li 반복 -->
-
-						<li>
-							<div class="discount_icon">~25%</div> 
-							<div class="img_wrap">
-								<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB2.jpg" alt=""></p></a>
-							</div>
-							<ul class="item_info">
-								<li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
-								<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-								<li class="date">2021.11.04~2021.11.17</li>
-							</ul>
-						</li>
-						<li>
-							<div class="discount_icon">~25%</div> 
-							<div class="img_wrap">
-								<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB3.jpg" alt=""></p></a>
-							</div>
-							<ul class="item_info">
-								<li class="title">제3회 라이징스타 공모전 최종 수상작 발표</li>
-								<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-								<li class="date">2021.11.04~2021.11.17</li>
-							</ul>
-						</li>
-					</ul>
-					<!-- //evt_list-->
-
-					<!-- btn_area -->
-					<div class="btn_area">
-						<button class="btn_more_view_box ty02"><strong>기획전 더보기<em></em></strong></button>
-					</div>
-					<!-- //btn_area -->
+					<div style="height:200px;background-color:#d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:200px;text-align:center;">HTR-M-CTG-LIST-001.html 동일</div>
 				</div>
 			</div>
 			<!-- //ht_cont : 기획전 -->
@@ -960,86 +625,5 @@ $(function(){
 	<!-- //탑버튼 -->
 </div>
 <!-- // wrapper -->
-
-
-<!-- 브랜드 골라보기 : id="popbrand_search" --> 
-<div id="popbrand_search" class="dialog_wrap" data-class="dialog_sm">
-    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
-
-    <!-- dialog_header -->
-    <div class="dialog_header none_bd">
-        <div class="dialog_title">브랜드 골라 보기</div>
-    </div>
-    <!-- //dialog_header -->
-
-    <!-- dialog_contents -->
-    <div class="dialog_contents brand_search_wrap">
-		<!-- form_search_box -->
-		<div class="form_search_box">
-			<!-- form_ip_search -->
-			<div class="form_ip_search">
-				<input type="search" class="form_ip" placeholder="브랜드명 검색">
-				<button type="button" class="btn_ip_clear"><span class="hidden">초기화</span></button>
-			</div>
-			<!-- //form_ip_search -->
-			<button type="button" class="btn_ip_search"><span class="hidden">검색</span></button>
-		</div>
-		<!-- //form_search_box -->
-
-		<!-- 스크롤 영역 -->
-		<div class="custom_scroll_wrap sc_pop_btn">
-			<!--브랜드 체크 리스트-->
-			<ul class="cks_list">
-				<li class="cks_item">
-					<span class="form_chk">
-						<input id="exChk01" type="checkbox">
-						<label for="exChk01">키스맥</label>
-					</span>
-				</li>
-				<li class="cks_item">
-					<span class="form_chk">
-						<input id="exChk02" type="checkbox">
-						<label for="exChk02">꾸밈</label>
-					</span>
-				</li>
-				<li class="cks_item">
-					<span class="form_chk">
-						<input id="exChk03" type="checkbox">
-						<label for="exChk03">탑탑리빙</label>
-					</span>
-				</li>
-				<li class="cks_item">
-					<span class="form_chk">
-						<input id="exChk04" type="checkbox">
-						<label for="exChk04">러브미모어</label>
-					</span>
-				</li>
-				<li class="cks_item">
-					<span class="form_chk">
-						<input id="exChk05" type="checkbox">
-						<label for="exChk05">제이밀크</label>
-					</span>
-				</li>
-
-				<!-- 검색결과 없는 경우 -->
-				<li class="emp">
-					<span>검색 결과가 없습니다.</span>
-				</li>
-				<!-- //검색결과 없는 경우 -->
-			</ul>
-			<!-- //브랜드 체크 리스트-->
-		</div>
-		<!-- //스크롤 영역-->
-
-		<!-- btn_area -->
-		<div class="btn_area">
-			<button type="button" class="btn_md btn_wish btn_reset"><span class="hidden">초기화</span></button>
-			<button type="text" class="btn_md btn_black"><span>상품보기</span></button>
-		</div>
-		<!-- //btn_area -->
-    </div>
-    <!-- //dialog_contents -->
-</div>
-<!-- //브랜드 골라보기 : id="popbrand_search" --> 
 </body>
 </html>

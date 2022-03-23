@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=1600">
-<title>이벤트 기획전</title>
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>팝업 공통 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -14,7 +21,6 @@
 <!-- // Plug-In css -->
 
 
-
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
@@ -22,7 +28,6 @@
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
-
 
 
 <!-- Polyfill javascript -->
@@ -46,20 +51,11 @@
 <!-- // Plug-In javascript -->
 
 
-
 <!-- ht_ Hottracks UI JavaScript : 공통작업 -->
 <script src="../../js/ui_ink.js"></script>
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<style>
-    .mc_tit02 {margin-bottom:15px;color:#000;font-size:20px;font-weight:700;line-height:32px;letter-spacing:-1px;}
-    .mc_tit03 {margin-bottom:10px;color:#000;font-size:16px;font-weight:700;line-height:26px;letter-spacing:-0.5px;}
-    .ht_contents_wrap { text-align: center;}
-    .ht_contents_wrap button {width:800px; margin-bottom:20px;}
-    .ht_contents_wrap button:last-child {margin-bottom:0;}
-    </style>
 </head>
 
 <body>
@@ -72,32 +68,89 @@
 
 <!-- wrapper -->
 <div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">
-
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap">
-            <!-- 이미지 정보 팝업 -->
-            <div style="padding:40px 20px 50px 20px;">
-                <h2 class="mc_tit02">이벤트 기획전 팝업</h2>
-                <button type="button" class="btn_lg btn_black" data-role="btn-dialog" data-target="#popImg01"><span class="text">당첨축하 / #popImg01</span></button>
-                <button type="button" class="btn_lg btn_black" data-role="btn-dialog" data-target="#popImg02"><span class="text">당첨축하(축하) / #popImg02</span></button>
-                <button type="button" class="btn_lg btn_black" data-role="btn-dialog" data-target="#popImg03"><span class="text">당첨실패 / #popImg03</span></button>
-                <button type="button" class="btn_lg btn_black" data-role="btn-dialog" data-target="#popTxt01"><span class="text">결과내용 / #popImg04</span></button>
-            </div>
-            <!-- //이미지 정보 팝업 -->
+            
+			<!-- ht_cont -->
+			<div class="ht_cont">
+				<div class="contents_inner">
+					<!-- 팝업 -->
+					<div class="ht_cont">
+						<h2 class="ht_tit05">알림 팝업</h2>
+						<button type="button" class="btn_sm btn_light_gray" data-role="btn-dialog" data-target="#popAlert01"><span class="text">알림(확인) / #popAlert01</span></button>
+					</div>
+					<!-- //팝업 -->
 
+                    <!-- 이미지 정보 팝업 -->
+					<div class="ht_cont">
+						<h2 class="ht_tit05">이미지 정보 팝업</h2>
 
-        </section>
-        <!-- /ht_contents_wrap -->
+						<button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popImg01"><span class="text">당첨축하 / #popImg01</span></button>
+						<button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popImg02"><span class="text">당첨축하(축하) / #popImg02</span></button>
+						<button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popImg03"><span class="text">당첨실패 / #popImg03</span></button>
+						<button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popImg04"><span class="text">결과내용 / #popImg04</span></button>
+					</div>
+					<!-- //이미지 정보 팝업 -->
+				</div>
+			</div>
+			<!-- //ht_cont -->
+
+		</section>
+		<!-- /ht_contents_wrap -->
 	</main>
 	<!-- //Contents -->
-
 </div>
 <!-- // wrapper -->
 
+
+<!-- 팝업 : 알림(확인) : popAlert01 -->
+<div id="popAlert01" class="dialog_wrap" data-class="dialog_alert">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">알림</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <div class="evt_pop_content">
+            !- 노출 메시지-!
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_primary" data-dialog-close><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- //팝업 : 알림(확인) : popHpPop01 -->
+
+
 <!-- 이미지 : 당첨축하 / #popTxt01 -->
-<div id="popImg01" class="dialog_wrap">
+<div id="popImg01" class="dialog_wrap" data-class="dialog_sm">
     <!-- dialog_contents -->
     <div class="dialog_contents evt_cotent">
         <div class="evt_pop_img">
@@ -118,7 +171,7 @@
 
 
 <!-- 이미지 정보 : 당첨축하(축하) / #popTxt02 -->
-<div id="popImg02" class="dialog_wrap">
+<div id="popImg02" class="dialog_wrap" data-class="dialog_sm">
     <!-- dialog_contents -->
     <div class="dialog_contents evt_cotent">
         <div class="evt_pop_img">
@@ -139,7 +192,7 @@
 
 
 <!-- 이미지 정보 : 당첨실패 / #popTxt03 -->
-<div id="popImg03" class="dialog_wrap">
+<div id="popImg03" class="dialog_wrap" data-class="dialog_sm">
     <!-- dialog_contents -->
     <div class="dialog_contents evt_cotent">
         <div class="evt_pop_img">
@@ -159,24 +212,25 @@
 <!-- //이미지 정보 : 당첨실패 / #popTxt03 -->
 
 
-<!-- 텍스트 정보 : 참여내역 없음 / #popTxt04 -->
-<div id="popTxt01" class="dialog_wrap">
-    <!-- dialog_header -->
-    <div class="dialog_header evt_title_header">
-        <div class="dialog_title">알림</div>
-    </div>
-    <!-- //dialog_header -->
+<!-- 이미지 정보 : 결과내용 / #popTxt04 -->
+<div id="popImg04" class="dialog_wrap" data-class="dialog_sm">
     <!-- dialog_contents -->
-    <div class="dialog_contents evt_pop_cotent">
-      <div class="evt_pop_content">김미미님의 참여 내역이 없습니다.</div> 
+    <div class="dialog_contents evt_cotent">
+        <div class="evt_pop_img">
+            <img src="../../images/guide/evt_fortune.svg" alt="">
+        </div>
+        <div class="sub_txt">축하해요</div>
+        <div class="main_msg">통합포인트 <em>1,000</em>원</div> 
     </div>
     <!-- //dialog_contents -->
+
     <!-- dialog_footer -->
     <div class="dialog_footer evt_pop_footer">
-      <button type="button" class="btn_ip btn_primary secondary" data-dialog-close><span class="text">확인</span></button>
+        <button type="button" class="btn_ip btn_primary" data-dialog-close><span class="text">확인</span></button>
     </div>
     <!-- //dialog_footer -->
 </div>
+<!-- //이미지 정보 : 결과내용 / #popTxt04 -->
 
 </body>
 </html>
