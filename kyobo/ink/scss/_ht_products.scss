@@ -9,7 +9,7 @@
 		.prod_item {
 			width:calc(20% - 36px);
 		}
-	}
+	}	
 }
 .evt_prod_list_wrap + .pagination,
 .evt_list + .pagination,
@@ -17,34 +17,51 @@
 	margin-top:40px;
 }
 
-/* prod_sort_wrap */
-.prod_sort_wrap { 
-	position:relative;margin-bottom:20px;overflow:hidden;z-index:5;
-	.prod_ck_lists {
-		float:left;margin:8px 0;
+
+/** rangking **/
+.evt_rank {
+	.product_pic {
+		margin-top:25px;
 	}
-	.form_chk {margin-right:14px;
+}
+.rangking {
+	position:absolute;left:-11px;top:0;width:70px;height:70px;padding-top:1px;background:url('../images/guide/lank_noraml.svg') center/70px no-repeat;box-sizing:border-box;color:#000;font-size:0;font-weight:700;line-height:70px;text-align:center;z-index:4;
+	.rank {
+		display:inline-block;position:relative;font-size:20px;vertical-align:top;
 	}
-	.prod_type_selec_area { 
-		float:right;
-		.form_sel{
-			.ui-selectmenu-button { 
-				width:120px;height:38px;
-				.ui-selectmenu-text {
-					height:38px;line-height:35px;
-				}
-				.ui-selectmenu-icon {
-					top:14px;
-				}
-			}
-		} 
-		.list_view_type_btn {
-			width:38px;height:38px;border:1px solid #ccc;border-radius:6px;cursor:pointer;background:url('../images/layout/ico_hamburger.svg') center/14px no-repeat;transition:background 0.2s;
-			&.row_view {
-				background-image:url('../images/layout/ico_window.svg');
-			}
+	.rank_icon {
+		display:inline-block;position:relative;top:8px;width:15px;height:18px;background:center/14px 18px no-repeat;
+	}
+	&.up .rank_icon {
+		background-image:url('../images/guide/lank_noraml_up.svg');
+	}
+	&.down .rank_icon {
+		background-image:url('../images/guide/lank_noraml_up.svg');transform:rotate(180deg);
+	}
+	&.same .rank_icon {
+		&:before {
+			position:absolute;left:4px;top:50%;width:6px;height:2px;margin-top:-1px;background-color:#000;content:"";
 		}
 	}
+}
+@for $lank from 1 through 5 {
+	.evt_products:first-of-type .prod_item:nth-of-type(#{$lank}) .rangking {
+		background-image:url('../images/guide/lank_hot.svg');color:#fff;
+		&.none_icon {
+			.rank_icon{
+				display: none;
+			}
+		}    
+		&.up .rank_icon,
+		&.down .rank_icon {
+			background-image:url('../images/guide/lank_hot_up.svg');
+		}
+		&.same .rank_icon {
+			&:before {
+				background-color:#fff;
+			}
+		}
+	}  
 }
 
 

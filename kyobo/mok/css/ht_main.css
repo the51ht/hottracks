@@ -781,6 +781,7 @@
 }
 
 .wel_live_cont .swiper-slide {
+  position: relative;
   width: 80%;
   margin: 0 0 35px 20px;
   opacity: 0.6;
@@ -846,6 +847,33 @@
 
 .wel_live_cont .swiper-slide:last-child {
   margin-right: calc(20% - 20px);
+}
+
+.wel_live_cont .swiper-slide .live_box_img {
+  position: relative;
+  width: 100%;
+  height: calc((100vw - 12.2vw) + 156px);
+  max-height: 806px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.wel_live_cont .swiper-slide .live_box_img p {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wel_live_cont .swiper-slide .live_box_img p img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wel_live_cont .swiper-pagination.swiper-pagination-fraction {
@@ -9657,6 +9685,7 @@
 /** 이사 예정 **/
 .cont_wrap {
   position: relative;
+  padding-bottom: 40px;
   background: #fff;
 }
 
@@ -9677,5 +9706,5 @@
 }
 
 .cont_wrap .wel_belt02 {
-  margin-top: 40px;
+  margin: 40px 0 -40px 0;
 }
