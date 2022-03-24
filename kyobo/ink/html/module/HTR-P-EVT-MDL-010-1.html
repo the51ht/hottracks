@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<title>이벤트 기획전</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+
+</head>
+
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">	
+        <!-- breadcrumb_wrap -->
+		<section class="breadcrumb_wrap">
+			<div class="breadcrumb_inner">
+				<ol class="breadcrumb_list">
+					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">기획전</a>
+						<!-- DESC : 서브메뉴 갯수에 따라 col이 나눠지는 경우, div.sub_depth_box 영역에 multiclass 부여 필요
+							1단 : default(multi class 없음) / 2단 : col2 / 3단 : col3
+							-->
+						<div class="sub_depth_grid">
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item active"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+		<!-- //breadcrumb_wrap -->
+
+
+
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap mdl_contents_wrap">
+            <div class="upper_wrap">
+                <!-- moudule 001 -->
+                <article class="mdl_wrap">
+                    <div class="mdl_inner mdl001_wrap">
+                        <p class="sub_tit">Be On D 다이어리 전품목 특가</p>
+                        <h2 class="ht_tit03">널 보는 것만으로도 기분이 좋아져!</h2>
+                        <div class="period">2021.11.04 ~ 2021.11.15</div>
+                        <div class="box_circle">~25%</div>
+                        <button type="button" class="btn_share" data-role="btn-dialog" data-target="#popBottomHasBtnEx1">
+                            <span class="txt hidden">공유하기</span>
+                        </button>
+                    </div>
+                </article>
+                <!-- //moudule 001 -->
+
+
+                <!--풀이미지 영역-->
+                <div class="mdl_wrap">
+                    <img src="../../images/temp/@mdl_010_img.png" alt="" class="mdl_full_img">
+                </div>
+                <!--//풀이미지 영역-->
+            
+                    
+                <!--module010영역-->
+                <div class="mdl_wrap">
+                    <div class="mdl_inner mdl009_wrap">
+                        <!--색상 변경 인라인 스타일 예시 :  style="background-color: red; border-color:red;" -->
+                        <button class="btn_xlg btn_black" data-role="btn-dialog" data-target="#evtApplyPop">응모하기</button>
+                    </div>
+                </div>
+                <!--//module010영역-->
+            </div>
+
+
+            
+			<!-- ht_cont : 하단 광고배너 -->
+			<div class="ht_cont ht_under_banner_area">
+				<div class="contents_inner">
+					<h2 class="hidden">광고배너</h2>
+					<!-- ht_under_banner -->
+					<div class="ht_under_banner">
+						<div class="swiper-container">
+							<!-- swiper-wrapper -->
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<a href="#n"><img src="../../images/temp/@img_under_banner01.jpg" alt=""></a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n"><img src="../../images/temp/@img_under_banner02.jpg" alt=""></a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#n"><img src="../../images/temp/@img_under_banner03.jpg" alt=""></a>
+								</li>
+							</ul>
+							<!-- //swiper-wrapper -->
+
+							<!-- ht_option_box -->
+							<div class="ht_option_box">
+								<div class="play_pause_box play">
+									<button class="btn_play"><span class="hidden">play</span></button>
+									<button class="btn_pause"><span class="hidden">pause</span></button>
+								</div>
+								<!-- swiper_control -->
+								<div class="swiper_control02">
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-pagination"></div>
+									<div class="swiper-button-next"></div>
+								</div>
+								<!-- //swiper_control -->
+							</div>
+							<!-- //ht_option_box -->
+						</div>
+					</div>
+					<!-- //ht_under_banner -->
+				</div>
+			</div>
+			<!-- //ht_cont : 하단 광고배너 -->
+			
+
+        </section>
+        <!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+
+    <!-- Footer -->
+	<footer class="footer_wrapper" style="height:205px;background-color:#f7f7f7;color:#000;font-size:20px;font-weight:700;line-height:205px;text-align:center;">
+		Footer
+	</footer>
+	<!-- //Footer -->
+
+
+	<!-- 윙배너 -->
+	<section class="fly_menu_wrapper sps">
+	</section>
+	<!-- // 윙배너 -->
+
+
+	<!-- 탑버튼 -->
+	<div class="floating_wrapper">
+	</div>
+	<!-- //탑버튼 -->
+
+</div>
+<!-- // wrapper -->
+
+<!-- 투표하기 : module 009-3--> 
+<div id="evtVotePop" class="dialog_wrap" data-class="dialog_md">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">투표 참여하기</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents evt_vote_wrap">
+		<!-- 스크롤 영역 -->
+		<div class="custom_scroll_wrap sc_pop_btn">
+			<h2 class="tit">디자인 선택</h2>
+			<p class="sub_tit">마음에 드는 다이어리를 선택해 주세요.</p>
+			<ul class="evt_vote_list">
+				<!-- vote_item 반복 -->
+				<li class="vote_item">
+					<div class="prod_pic">
+						<img src="../../images/temp/@img_prod02.jpg" alt="">
+						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote0">
+						<label for="evt_vote0" class="evt_vote_lb"></label>	
+					</div>
+					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
+				</li>
+				<!-- //vote_item 반복 -->
+
+
+				<li class="vote_item">
+					<div class="prod_pic">
+						<img src="../../images/temp/@img_prod02.jpg" alt="">
+						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote1">
+						<label for="evt_vote1" class="evt_vote_lb"></label>	
+					</div>
+					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
+				</li>
+				<li class="vote_item">
+					<div class="prod_pic">
+						<img src="../../images/temp/@img_prod02.jpg" alt="">
+						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote2">
+						<label for="evt_vote2" class="evt_vote_lb"></label>	
+					</div>
+					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
+				</li>
+				<li class="vote_item">
+					<div class="prod_pic">
+						<img src="../../images/temp/@img_prod02.jpg" alt="">
+						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote3">
+						<label for="evt_vote3" class="evt_vote_lb"></label>	
+					</div>
+					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
+				</li>
+			</ul>
+
+			<div class="vote_cmt_box">
+				<h2 class="ht_tit05">댓글입력</h2>
+				<!--textarea : 댓글 입력-->
+				<div class="cmt_box">
+					<textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
+					<div class="count_line"><em class="count">0</em>300자</div>
+				</div>
+				<!--//textarea : 댓글 입력-->
+			</div>
+
+		</div>
+		<!-- //스크롤 영역-->
+
+		<!-- btn_area -->
+		<div class="btn_area">
+			<!--버튼 비활성화 클래스 : disabled -->
+			<button type="text" class="btn_md btn_primary disabled"><span>참여하기</span></button>
+		</div>
+		<!-- //btn_area -->
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //투표하기 : module 009-3 --> 
+
+
+</html>

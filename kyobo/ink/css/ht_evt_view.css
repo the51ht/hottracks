@@ -399,6 +399,10 @@
 }
 
 /** 오늘만 특가 **/
+.hot_deal_wrap {
+  position: relative;
+}
+
 .hot_deal_wrap .hotdeal_shine {
   width: 35px;
   height: 35px;
@@ -435,6 +439,10 @@
   font-size: 20px;
   font-weight: 700;
   font-family: 'Gmarket Sans';
+}
+
+.mdl_wrap .hot_deal_wrap {
+  padding: 60px 0;
 }
 
 /* 이벤트 목록 없음 */
@@ -660,6 +668,14 @@
 }
 
 /*============================================ HTR-P-EVT-MDL.html ========================================*/
+.mdl_contents_wrap {
+  margin-top: 0;
+}
+
+.upper_wrap {
+  margin-bottom: 60px;
+}
+
 .mdl_wrap {
   max-width: 1920px;
   margin: 0 auto;
@@ -668,6 +684,19 @@
 .mdl_wrap .mdl_inner {
   width: 1200px;
   margin: 0 auto;
+}
+
+.mdl_wrap .evt_tit_bar {
+  padding: 60px 0 40px;
+  font-size: 30px;
+  letter-spacing: -1px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.mdl_wrap .mdl_full_img {
+  width: 100%;
 }
 
 .mdl_wrap .devide_hr {
@@ -790,6 +819,20 @@
 .mdl_prod_wrap .evt_products {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+.mdl_prod_banner .evt_products {
+  margin: -40px 0 0 0;
+}
+
+.mdl_prod_banner .prod_item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 40px 0 0 0;
+}
+
+.mdl_prod_banner .prod_item:nth-of-type(2n+1) {
+  margin-right: 36px;
 }
 
 .mdl008_wrap {
@@ -1263,4 +1306,78 @@
 
 .cmt_evt_list .cmt_box {
   margin-top: 20px;
+}
+
+.mdl015_wrap .tab_content {
+  padding: 60px 0;
+}
+
+.mdl015_wrap .ht_tit {
+  text-align: center;
+  line-height: 45px;
+  margin-bottom: 40px;
+}
+
+.mdl017_wrap {
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.mdl017_wrap .mdl_017_list {
+  overflow: hidden;
+}
+
+.mdl_017_card {
+  background-color: #F2F2F2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  width: 400px;
+  padding: 40px 90px 70px 40px;
+}
+
+.mdl_017_card:nth-of-type(2n+1) {
+  background-color: #FAFAFA;
+}
+
+.mdl_017_card .discount {
+  font-size: 20px;
+  letter-spacing: -1px;
+  line-height: 30px;
+  color: #DA2128;
+  font-weight: 700;
+}
+
+.mdl_017_card .discount + .tit {
+  margin-top: 0;
+}
+
+.mdl_017_card .tit {
+  font-size: 20px;
+  height: 60px;
+  line-height: 30px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+.mdl_017_card .sub_tit {
+  height: 42px;
+  line-height: 21px;
+  letter-spacing: -1px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: keep-all;
 }
