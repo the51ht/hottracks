@@ -332,9 +332,6 @@
 							<div class="wel_tod_img">
 								<img src="../../images/main/wel_tod_banner.svg" alt="" >
 							</div>
-							<div class="wel_tod_acc">
-								<img src="../../images/main/wel_tod_acc.svg" alt="">
-							</div>
 							<p class="time_bar">10:32:24</p>
 							<p class="wel_today_balloon"><span>얼마 안남았어요. 서두르세요!</span></p>
 						</div>
@@ -1330,7 +1327,7 @@
 									</a>
 								</div>
 							</li>
-							
+
 							<li class="swiper-slide" >
 								<div class="img">
 									<a href="#n">
@@ -1439,27 +1436,42 @@
 					observer: true,
 					observeParents: true,
 					slidesPerView: 'auto',
-					//centeredSlides: true,
+					centeredSlides: true,
 					loop: true,
 					loopsSlide: 1,
 					spaceBetween: 0,
 					autoplay: {
 						delay:0,
-						disableOnInteraction: true,
+						disableOnInteraction: false,
 					},
-					speed: 7000,
-					allowTouchMove:false,
+					speed: 15000,
 				};
-				wel_now_banner = new Swiper($target.get(), slideOption);
-			}
+			    var wel_now_b = new Swiper($target.get(), slideOption);
 
+				$(document).on('mouseenter', '.wel_now_banner.swiper-container', function(){
+					slideOption.autoplay = false;
+					new Swiper($target.get(), slideOption);
+				});
+				
+				$(document).on('mouseleave', '.wel_now_banner .swiper-slide', function(){
+					slideOption.autoplay = {
+						delay:0,
+						disableOnInteraction: false,
+					}
+					new Swiper($target.get(), slideOption);
+				});
+				
+	
+			}
 			$(function(){
 				if(!$('.wel_now_banner').length) return;
 				wel_now_banner();
+
+			
+					
 			});	
 
 			</script>
-
 			<!-- ht_cont : 기획전 -->
 			<div class="ht_cont wel_exehibition" >
 				<div class="contents_inner">
