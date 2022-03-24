@@ -1,153 +1,10 @@
 @charset "UTF-8";
-/** 상단메뉴 : top_evt_area **/
-.top_evt_area {
-    position:sticky;top:80px;margin:-20px 0 30px 0;padding:20px 0 0 0;background:#fff;z-index:10;overflow:hidden;
-    .contents_inner {
-        border-bottom:1px solid #eaeaea;
-    }
-    &.ty02 {
-        margin:0;padding:0;
-        .contents_inner {
-            border-bottom:0;
-        }
-        .tab_swiper.tab_ty {
-            margin:20px 0 20px 0;
-        }
-    }
-}
-
-/* prod_sort_wrap */
-.prod_sort_wrap { 
-	position:relative;margin-bottom:20px;overflow:hidden;z-index:5;
-    &.dep_top {
-        padding-top:20px;
-    }
-	.prod_ck_lists {
-		float:left;margin:8px 0;
-	}
-	.form_chk {margin-right:14px;
-	}
-	.prod_type_selec_area { 
-		float:right;
-		.form_sel{
-			.ui-selectmenu-button { 
-				width:135px;height:38px;
-				.ui-selectmenu-text {
-					height:38px;line-height:35px;
-				}
-				.ui-selectmenu-icon {
-					top:14px;
-				}
-			}
-		} 
-		.list_view_type_btn {
-			width:38px;height:38px;border:1px solid #ccc;border-radius:6px;cursor:pointer;background:url('../images/layout/ico_hamburger.svg') center/14px no-repeat;transition:background 0.2s;
-			&.row_view {
-				background-image:url('../images/layout/ico_window.svg');
-			}
-		}
-	}
-    .period_sort {
-        float:left;margin:12px 20px 0 0;font-size:14px;
-        &.ed {
-            margin-right:0;
-        }
-        button{
-            position:relative;margin-left:13px;color:#595959;
-            &:before {
-                position:absolute;left:-10px;top:6px;width:1px;height:7px;background-color:#eaeaea;content:"";
-            }
-            &.active{
-                color:#000;font-weight:700;
-            }
-            &:first-child{
-                margin-left:0;
-                &:before {
-                    display:none;
-                }
-            }
-        }
-    }
-}
-
-/* .list_info_text_warp */
-.list_info_text_warp {
-    margin-bottom:25px;padding-top:20px;border-top:1px solid #eaeaea;color:#595959;
-}
-
-/* Date Sort 영역 */
-.date_select_warp{
-    float: left;margin-top: 7px;
-    button{
-        font-weight: 700;font-size: 20px;line-height: 26px;
-    }
-}
-
-/* 회색 배경 탭 : .tab_bg_gray */
-.tab_bg_gray {
-    position:relative;height:74px;padding:12px 0;background:#f7f7f7;box-sizing:border-box;
-    &:before {
-        position:absolute;left:-300%;top:0;width:600%;height:100%;background:#f7f7f7;content:"";
-    }
-    .tab_swiper .swiper_control .swiper-button-prev:before,
-    .tab_swiper .swiper_control .swiper-button-next:before {
-        background:linear-gradient(to right, rgba(247, 247, 247, 0) 20%, #f7f7f7 60%);
-    }
-}
-
-/* .evt_menu */
-.evt_menu {
-    position:relative;
-    z-index:3;
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    padding-bottom:15px;
-    margin-bottom:0 !important;
-    .left_txt_sum {
-        flex-shrink: 0;
-        line-height: 20px;
-        letter-spacing: -0.01em;
-        color:#595959;
-    }
-    a:last-of-type:after {
-        display: none;
-    }
-}
-/* 소팅메뉴 */
-.sort_tab {
-    display: flex;
-    margin-bottom: 20px;
-    padding:0;
-    overflow: hidden;
-    justify-content: flex-end;
-    margin:0;
-    & > a{
-        position: relative;
-        padding:0 9px;
-        font-size: 14px;
-        color:#595959;
-        &:last-of-type{
-            padding-right:0;
-        }
-        &:after {
-            content: '';
-            display: block;
-            background-color: rgb(213, 213, 213);
-            width:1px;
-            height:8px;
-            position: absolute;
-            right: -1px;
-            top:5px;
-        }
-    }
-    .active {
-        font-weight: 500;
-        color:#000;
-    }
-}
+/*
+    Event
+*/
 
 /***** 이벤트&기획전 *****/
+/*** .evt_liar_area ***/
 .evt_liar_area {
     position:relative;
     .pagination {
@@ -156,14 +13,14 @@
 }
 
 
-/** 마감임박 **/
+/*** 마감임박 ***/
 .dead_line_wrap {
     background-color:#fff4f1;
 }
 
 /* deadline_bubble */
 .deadline_bubble {
-    display:inline-block;;position:relative;right:135px;top:-47px;padding:14px 34px;background-color:#d4ff1a;border:3px solid #000;box-sizing:border-box;border-radius:40px;text-align:left;color:#000;animation:evtMsg both infinite 5s;
+    display:inline-block;position:relative;right:135px;top:-47px;padding:14px 34px;background-color:#d4ff1a;border:3px solid #000;box-sizing:border-box;border-radius:40px;text-align:left;color:#000;animation:evtMsg both infinite 5s;
     .txt {
         font-size:16px;line-height:24px;font-weight:700;overflow:hidden;
         &:before,
@@ -182,7 +39,7 @@
 .deadline_character_area {
     display:block;position:absolute;right:0;top:0;width:100%;text-align:right;z-index:1;
     .deadline_character {
-        position:absolute;right:35px; top:-28px;width:96px;height:110px;
+        position:absolute;right:35px;top:-28px;width:96px;height:110px;
         img{
             width:100%;
         }
@@ -197,146 +54,81 @@
 }
 
 
-/** 반응최고 **/
+
+/*** 반응최고 ***/
 .best_react_wrap {
     background-color:#e1f7e5;
 }
 .heart_emoji {
-    width:35px;
-    height:35px;
-    display: inline-block;
-    margin-left:5px;
-    margin-bottom:-8px;
-    background:url(../images/guide/heart_emoji.svg) no-repeat center/31px;
+    display:inline-block;width:35px;height:35px;margin-bottom:-8px;margin-left:5px;background:url('../images/guide/heart_emoji.svg') center/31px no-repeat ;
 }
 
 
-/** 오늘만 특가 **/
+
+/*** 오늘만 특가 ***/
 .hot_deal_wrap { 
-    position:relative;  
+    position:relative;
     .hotdeal_shine {
-        width:35px;
-        height:35px;
-        display: inline-block;
-        margin-left:5px;
-        margin-bottom:-8px;   
-        background:url(../images/guide/hotdeal_shine.svg) no-repeat center/31px;
+        display:inline-block;width:35px;height:35px;margin-bottom:-8px;margin-left:5px;background:url('../images/guide/hotdeal_shine.svg') center/31px no-repeat;
     }
     .timer_area {
-        position:absolute;
-        right:0;
-        top:-4px;
-        z-index: 1;
-        display: inline-block;
-        padding:14px 9px 9px 48px;
-        background-color:  #D4FF1A;
-        border-radius: 35px;
+        display:inline-block;position:absolute;right:0;top:-4px;padding:14px 9px 9px 48px;background-color:#d4ff1a;border-radius:35px;z-index:1;
         &:before {
-            content:"";
-            width:62px;
-            height:65px;
-            position:absolute;
-            left:7px;
-            top:-23px;
-            z-index: 2;
-            background:url(../images/guide/timer_bomb.svg) no-repeat center/61px;
+            position:absolute;left:7px;top:-23px;width:62px;height:65px;background:url('../images/guide/timer_bomb.svg') center/61px no-repeat;content:"";z-index:2;
         }
         .timer {
-            line-height:23px; 
-            font-size: 20px;
-            font-weight: 700;
-            font-family:'Gmarket Sans'; 
+
+            font-family:'Gmarket Sans';font-size:20px;font-weight:700;line-height:23px;
         }
     }
 }
-
 .mdl_wrap .hot_deal_wrap {
-    padding: 60px 0;
-    .timer_area  {
+    padding:60px 0;
+    .timer_area {
         top:56px;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-    
 /* 이벤트 목록 없음 */
 .no_evt_list_wrap {
-    padding:200px 0;
-    position:relative;
-    background:url(../images/guide/no_search_data_icon.svg) no-repeat center 40% /60px;
+    position:relative;padding:200px 0;background:url('../images/guide/no_search_data_icon.svg') center 40% /60px no-repeat ;
     .txt {
-        line-height: 24px;
-        text-align: center;
-        letter-spacing: -0.01em;
-        font-size: 16px;
-        color:#767676;
-        margin-top:25px;
+        margin-top:25px;color:#767676;font-size:16px;line-height:24px;text-align:center;
+        
     }
 }  
 
-/** 이벤트 당첨자 발표 **/
+
+
+
+
+/***** 이벤트 당첨자 발표 *****/
+/** 목록 **/
 .evt_winner_list {
-    position:relative;border-top:1px solid #000; 
+    position:relative;border-top:1px solid #000;
     &.mt {
         margin-top:-30px;
     }
     .evt_winner_item {
-        padding:20px 0;
-        overflow: hidden;
-        border-bottom:1px solid #EAEAEA;
+        padding:20px 0;border-bottom:1px solid #eaeaea;overflow:hidden;
     }
     .list_num {
-        width:30px;
-        float:left;
-        margin-right:10px;
-        line-height:19px;
-        font-size: 13px;
-        text-align: center; 
+        float:left;width:30px;margin-right:10px;font-size:13px;line-height:19px;text-align:center;
     }
     .list_cate {
-        width:100px;
-        float:left;
-        margin-right:10px;
-        line-height:19px;
-        font-size: 13px; 
-        text-align: center;
-        color:#767676;
+        float:left;width:100px;margin-right:10px;color:#767676;font-size:13px;text-align:center;line-height:19px;
     }
     .title {
-        float:left;
-        line-height:19px;
-        // max-width:965px;
+        float:left;/*max-width:965px;*/line-height:19px;
         &.status_new {
-            position: relative;
+            position:relative;
             &:before {
-                content:"";
-                position: absolute;
-                width:20px;
-                height:20px;
-                right:  -25px;
-                top:-1px;
-                background:url(../images/guide/new_post.svg) no-repeat center center /18px;;
+                position:absolute;right:-25px;top:-1px;width:20px;height:20px;background:url('../images/guide/new_post.svg') center /18px no-repeat;content:"";
             }
         } 
     }
     .date {
-        width:65px;
-        float:right;
-        line-height:19px;
-        font-size: 13px;
-        text-align: center;
-        color:#767676;
-        letter-spacing: -0.01em; 
+        float:right;width:70px;color:#767676;font-size:13px;text-align:center;line-height:19px;
     }
 }
 .evt_winner_list + .pagination {
@@ -344,121 +136,82 @@
 }
 
 
-
-/* 당첨 결과 보기 */
+/** 당첨 결과 보기 **/
 .evt_description_title {
-	padding:24px 4px 20px 4px;
-    border-top:1px solid #000;
-	border-bottom:1px solid #eaeaea;
+	padding:24px 4px 20px 4px;border-top:1px solid #000;border-bottom:1px solid #eaeaea;
 	.category_area {
-		line-height:18px;
-        letter-spacing: -0.01em;
-		color:#767676;
-        margin-bottom:10px;
+		margin-bottom:10px;color:#767676;line-height:18px;
 	}
 	.list_title_area {
-		font-weight:700;
-		line-height:40px;
-        font-size: 24px;
-		letter-spacing: -0.01em;
+        font-size:24px;font-weight:700;line-height:40px;
 	}
 	.list_date_area {
-        margin-top:5px;
-        line-height: 19px;
-		font-size: 14px;
-		color:#767676;
-        letter-spacing: -0.01em;
+        margin-top:5px;color:#767676;font-size:14px;line-height:19px;
 	}
 }
 .evt_description_content {
-        padding:40px 4px;
-        border-bottom:1px solid #eaeaea;
-        line-height: 22px;
+    padding:40px 4px;border-bottom:1px solid #eaeaea;line-height:22px;
     .category_area{
 	  line-height:18px;
     }
     .list_title_area {
-	  white-space: normal;
-	  font-weight: 700;;
-     }
+        font-weight:700;white-space:normal;
+    }
     .list_date_area {
-		line-height:19px;
-     }
-	.evt_hr {
-		display: block;
-		width:100%;
-		height:1px;
-		border:none;
-		border-top:1px dashed #000;
-        margin:15px 0;
-	}
+        line-height:19px;
+    }
 }
 
-/*================================ 레이어 팝업 =============================*/
-.dialog_wrapper .ui-dialog .dialog_wrap  {
-    .dialog_header.evt_title_header{
+
+
+
+
+/***** 이벤트 팝업 *****/
+.dialog_wrapper .ui-dialog .dialog_wrap {
+    .dialog_header.evt_title_header {
         padding-bottom:18px;
     }
-    .dialog_contents.evt_pop_cotent{
-        color:#595959;
-        line-height:22px;
-        letter-spacing:-0.14px;
-        text-align: center;
-        margin:0;  
-        padding:32px 20px;    
+    .dialog_contents.evt_pop_cotent {
+        margin:0;padding:32px 20px;color:#595959;line-height:22px;text-align:center;
     }
-    .dialog_contents.evt_cotent{
-        margin:0;
-        padding:48px 0 32px 0;
-        .evt_pop_img{
-            width:100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            text-align: center;
-            img{
+    .dialog_contents.evt_cotent {
+        margin:0;padding:48px 0 32px 0;
+        .evt_pop_img {     
+            display:flex;width:100%;justify-content:center;align-items:center;align-content:center;text-align:center;
+            img {
                 max-width:33%;
             }
         }
-        .sub_txt{
-            width:100%;
-            margin-top:12px;
-            line-height:19px;
-            text-align: center;
-            color:#595959;
+        .sub_txt {
+            width:100%;margin-top:12px;color:#595959;line-height:19px;text-align:center;
         }
-        .main_msg{
-            font-size: 20px;
-            font-weight:700;
-            line-height:32px;  
-            text-align: center;
-            letter-spacing: -0.2px;
+        .main_msg {
+            font-size:20px;font-weight:700;line-height:32px;text-align:center;letter-spacing:-0.2px;
         }
     }
-    .dialog_contents.evt_full_img{
-        position:relative;
-        min-width:335px;
-        height:0;
-        margin:0;
-        padding-top:203px;
-        img{
-            position:absolute;
-            width:100%;
-            top:0;
-            left:50%;
-            right:0;
-            transform: translateX(-50%);
+    .dialog_contents.evt_full_img {
+        position:relative;min-width:335px;height:0;margin:0;padding-top:203px;
+        img {
+            position:absolute;left:50%;right:0;top:0;width:100%;transform:translateX(-50%);
         }
     }
     .dialog_footer.evt_pop_footer{
         margin:0;
         &>.secondary{
-            background-color: #d53020;
+            background-color:#d53020;
         }
-    
     }
 }
+
+
+
+
+
+
+
+
+
+
 /*============================================ HTR-P-EVT-MDL.html ========================================*/
 .mdl_contents_wrap {
     margin-top:0;

@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*
+    Main
+*/
 /***** * 웰컴메인 * *****/
 /*** 히어로 배너 : .wel_hero ***/
 .wel_hero {
@@ -22,7 +25,7 @@
   top: 0;
   width: 36px;
   height: 36px;
-  background: url(../images/guide/ico_plus_w.svg) no-repeat 50%/11px;
+  background: url("../images/guide/ico_plus_w.svg") no-repeat 50%/11px;
   z-index: 10;
 }
 
@@ -53,11 +56,11 @@
 }
 
 .wel_hero_banner .play_pause_box .btn_play {
-  background: rgba(0, 0, 0, 0.3) url(../images/guide/ico_play.svg) no-repeat 50%/8px;
+  background: rgba(0, 0, 0, 0.3) url("../images/guide/ico_play.svg") no-repeat 50%/8px;
 }
 
 .wel_hero_banner .play_pause_box .btn_pause {
-  background: rgba(0, 0, 0, 0.3) url(../images/guide/ico_pause.svg) no-repeat 50%/6px;
+  background: rgba(0, 0, 0, 0.3) url("../images/guide/ico_pause.svg") no-repeat 50%/6px;
 }
 
 .wel_hero_banner .play_pause_box.play .btn_play {
@@ -1118,9 +1121,11 @@
   left: 50%;
   top: 50%;
   width: 100%;
-  height: auto;
+  height: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .mus_mc_chart_cont .txt {

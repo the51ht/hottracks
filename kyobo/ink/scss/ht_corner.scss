@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/*
+    Corner Main
+*/
+
+/***** 오늘만 특가 *****/
+.tod_full_banner {
+    padding-bottom:0;background:#ffeb01;
+    .time_bar {
+        position:absolute;left:49.5%;top:183px;width:215px;color:#fff;font-family:'Gmarket Sans';font-size:26px;line-height:78px;font-weight:700;text-align:center;transform:translateX(-50%);
+    }
+    .mc_txt {
+        position:absolute;left:50%;bottom:30px;font-weight:500;transform:translateX(-50%);
+        img {
+            margin-right:3px;vertical-align:top;
+        }
+    }
+    .prod_share_area {
+        right:21px;top:30px;
+        .sns_share_wrap {
+            .btn_share {
+                border-radius:50%;border:1px solid #d5d5d5;width:42px;height:42px;background:#fff;
+            }
+            .sns_share_box{
+                right:-22px;top:0px;
+            }
+        }
+    }
+    .btn_more_view_box {
+        &.ty02:hover{
+            background-color:initial;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/***** 핫딜특가 *****/
+.tod_full_banner{
+    &.tod_hot_benner {
+        background:#F4F4F4;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/***** 베스트 *****/
+.deadline_character_area {
+    &.ht_best_deadline {
+        position:sticky;top:50%;width:auto;height:0;z-index:4;
+        .deadline_bubble{
+            right:-15px;top:0;padding:14px 20px 10px 25px;
+            &:after{
+                display:inline-block;position:absolute;right:-97px;top:-14px;width:79px;height:100px;background:url('../images/main/ico_side_float02.svg') no-repeat;content:"";
+            }
+            .txt {
+                img {
+                    margin-top:-5px;margin-left:5px;transform:rotate(180deg);
+                }
+                &:before{
+                    right:-9px;transform:rotate(180deg);
+                }
+                &:after{
+                    margin-top:-6px;border-width:0 10px 12px 10px;transform:rotate(90deg);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/***** 신상픔 *****/
+.ht_new_main {
+    background:url('../images/main/bg_wel_md_pick.jpg') center bottom /100% repeat-x;
+    h2 {
+        margin-bottom:20px;text-align:center;
+        img {
+            height:103px;
+        }
+        p {
+            font-size:18px;font-weight:400;line-height:24px;
+        }
+    }
+    .bg_star img{
+        position:absolute;
+        &:nth-child(1) {
+            left:-171px;top:290px;
+        }
+        &:nth-child(2) {
+            right:307px;top:-30px;
+        }
+        &:nth-child(3) {
+            right:-184px;bottom:12px;
+        }
+    }
+    .thumb4_banner {
+        overflow:initial;
+        .swiper-slide:before {
+            background:#fff;border:initial;box-shadow:15px 10px 20px -2px rgba(0, 0, 0, 0.16);
+        }
+        .product_pic {
+            a:after{
+                border:initial;
+            }
+        }
+        &.ht_today_banner {
+            .product_info{
+                height:170px;
+            }
+        }
+    }
+}
+
+/* ht_new_list */
+.ht_new_list {
+    .ht_tit_big02 {
+        img{
+            display:inline-block;height:40px;margin:0 0 0 10px;vertical-align:top;
+        }
+    }
+}
+
+/* ht_new_deadline */
+.deadline_character_area {
+    &.ht_new_deadline {
+        position:sticky;top:50%;width:auto;height:0;z-index:4;
+        .deadline_bubble{
+            right:-15px;top:0;padding:14px 20px 10px 25px;
+            &:after{
+                display:inline-block;position:absolute;left:12px;top:-23px;width:70px;height:38px;background:url('../images/main/ico_side_float01.svg') no-repeat;content:"";
+            }
+            .txt {
+                img {
+                    margin-left:5px;margin-top:-5px;transform:rotate(180deg);
+                }
+                &:before{
+                    right:-9px;transform:rotate(180deg);
+                }
+                &:after{
+                    margin-top:-6px;border-width:0 10px 12px 10px;transform:rotate(90deg);
+                }
+            } 
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
