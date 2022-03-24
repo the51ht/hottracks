@@ -87,7 +87,10 @@
 /**** 오늘만 특가 ****/
 /* 오늘만 특가 */
 .tod_full_banner{
-    padding:30px;background:#ffeb01;
+    background:#ffeb01;
+    &.ht_cont{
+        padding-bottom: 0;
+    }
     .time_bar{
         font-size: 26px;line-height: 78px;font-weight: 600;color: #fff;position: absolute;top: 183px;left: 49.5%;transform: translateX(-50%);font-family: 'Gmarket Sans';
     }
@@ -98,7 +101,7 @@
         }
     }
     .prod_share_area{
-        right: 21px;
+        top: 30px;right: 21px;
         .sns_share_wrap{
             .btn_share{
                 border-radius: 50%;border: 1px solid #D5D5D5;width: 42px;height: 42px;background: #fff;
@@ -118,9 +121,6 @@
 /* 핫딜 특가 */
 .tod_full_banner{
     &.tod_hot_benner{
-        padding:0px;background:#F4F4F4;
-        .prod_share_area{
-            top: 30px;
-        }
+        background:#F4F4F4;
     }
 }
