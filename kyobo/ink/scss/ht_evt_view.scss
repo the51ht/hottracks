@@ -49,13 +49,16 @@
 	}
     .period_sort {
         float:left;margin:12px 20px 0 0;font-size:14px;
+        &.ed {
+            margin-right:0;
+        }
         button{
-            position:relative;margin-left:13px;
+            position:relative;margin-left:13px;color:#595959;
             &:before {
                 position:absolute;left:-10px;top:6px;width:1px;height:7px;background-color:#eaeaea;content:"";
             }
             &.active{
-                font-weight:700;
+                color:#000;font-weight:700;
             }
             &:first-child{
                 margin-left:0;
@@ -69,7 +72,7 @@
 
 /* .list_info_text_warp */
 .list_info_text_warp {
-    margin-bottom:25px;padding-top:20px;border-top:1px solid #eaeaea;color:#767676;
+    margin-bottom:25px;padding-top:20px;border-top:1px solid #eaeaea;color:#595959;
 }
 
 /* Date Sort 영역 */
@@ -105,7 +108,7 @@
         flex-shrink: 0;
         line-height: 20px;
         letter-spacing: -0.01em;
-        color:#292929;
+        color:#595959;
     }
     a:last-of-type:after {
         display: none;
@@ -324,6 +327,7 @@
         line-height:19px;
         font-size: 13px;
         text-align: center;
+        color:#767676;
         letter-spacing: -0.01em; 
     }
 }
