@@ -1034,6 +1034,8 @@ $(function () {
 
 
 /*** Event ***/
+
+
 $(function(){
     // 마감임박, 반응최고 스와이프
     //상품 개수 2개이하일때 ul class="evt_slider nonswipe"로 설정
@@ -1091,6 +1093,7 @@ $(function(){
 
 });
 
+
 /*이벤트 모듈 textarea*/
 $(function(){
     //focus, blur
@@ -1104,9 +1107,10 @@ $(function(){
    
    //등록하기 버튼  
    $(document).on('keyup','.cmt_textarea', function(){
+        if($(this).parents('.cmt_item').length) return;
+
        var is_emoji = $(this).parent().next().hasClass('cmt_emoji_list');
        var target_btn =  $(this).parents('.mdl014_wrap').find('.btn_md.btn_black');
-
        if(is_emoji){
              //아이콘 이미지가 있는 경우 (textarea 입력 글자수 1글자 이상 + 이미지 선택하면 버튼 활성화)
              if($(this).val().length > 0 && $(this).parent().next().find('.on').length) {
@@ -1134,7 +1138,8 @@ $(function(){
    //댓글 이미지 선택(아이콘 형)
    $(document).on('click', '.cmt_emoji_list .emoji', function(){
        $(this).removeClass('off').addClass('on').siblings().addClass('off').removeClass('on');
-       console.log($(this).parent().prev().children('.cmt_textarea'))
+       if($(this).parents('.cmt_item').length) return;
+
        var $tArea = $(this).parent().prev().children('.cmt_textarea');
         
        //댓글 입력 textarea 입력 글자수 1글자 이상일때 버튼 활성화
@@ -1161,6 +1166,7 @@ $(function(){
    $(document).on('keyup', '.vote_cmt_box .cmt_textarea', function(){
        var $cked_radio = $(this).parents('.dialog_contents').find('.evt_vote_list').find('.evt_vote_radio').is(':checked');
        var target_btn = $(this).parents('.dialog_contents').find('.btn_md.btn_primary');
+        
 
        if($cked_radio && $(this).val().length > 0) {
             $( target_btn ).removeClass('disabled');
@@ -1172,4 +1178,50 @@ $(function(){
 
 
 
+
+//mdl007 상품 2단 배너
+$(function(){
+	if(!$('.mdl_prod_banner').length) return;
+	mdl_prod_banner();
+	/* 2단배너 */
+	function mdl_prod_banner(){
+		var $target = $('.mdl_prod_banner .swiper-container');
+		$target.each(function (index, element) {
+			var $parent = $(this).parent('.mdl_prod_banner');
+
+			var slideOption = {
+				observer: true,
+				observeParents: true,
+				slidesPerView: 'auto',
+				slidesPerGroup: 2,
+				centeredSlides: false,
+				spaceBetween:0,
+				// autoplay: {
+				// 	delay: 5000,
+				// 	disableOnInteraction: false,
+				// },
+				speed: 700,
+				navigation: {
+					nextEl: $(element).find('.swiper-button-next'),
+					prevEl: $(element).find('.swiper-button-prev'),
+				},
+				pagination: {
+					el: $(element).find('.swiper-pagination'),
+					type: 'fraction',
+					formatFractionCurrent: function (number) {
+						return KyoboBookPub.ink.setPrependZero(number, 2);
+					},
+					formatFractionTotal: function (number) {
+						return KyoboBookPub.ink.setPrependZero(number, 2);
+					}
+				}
+			};
+
+			if($parent.find('.swiper-slide').length > 2) {
+				var mdl_prod_b = new Swiper(this, slideOption);
+			}
+		});
+	}
+
+});
 

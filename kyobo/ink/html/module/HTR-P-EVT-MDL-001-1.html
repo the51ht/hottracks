@@ -53,56 +53,6 @@
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
 
-<script>
-$(function(){
-	if(!$('.thumb2_banner').length) return;
-		thumb2banner();
-	/* 2단배너 */
-	function thumb2banner(){
-		var $target = $('.thumb2_banner .swiper-container');
-		$target.each(function (index, element) {
-			var $parent = $(this).parent('.thumb2_banner');
-			$parent.addClass('thumb2_idx_' + index);
-			
-			var slideOption = {
-				observer: true,
-				observeParents: true,
-				slidesPerView: 'auto',
-				centeredSlides: false,
-				loop: true,
-				loopsSlide: 1,
-				spaceBetween:0,
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false,
-				},
-				speed: 700,
-				navigation: {
-					nextEl: ('.thumb2_idx_' + index + ' .swiper-button-next'),
-					prevEl: ('.thumb2_idx_' + index + ' .swiper-button-prev'),
-				},
-				pagination: {
-					el: ('.thumb2_idx_' + index + ' .swiper-pagination'),
-					type: 'fraction',
-					formatFractionCurrent: function (number) {
-						return KyoboBookPub.ink.setPrependZero(number, 2);
-					},
-					formatFractionTotal: function (number) {
-						return KyoboBookPub.ink.setPrependZero(number, 2);
-					}
-				}
-			};
-
-			if($parent.find('.swiper-slide').length > 2) {
-				var thumb2bannerSwiper = new Swiper(this, slideOption);
-			}
-		});
-	}
-
-})
-</script>
-
-
 </head>
 
 <body>
@@ -135,7 +85,7 @@ $(function(){
 
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">	
-        		<!-- breadcrumb_wrap -->
+        <!-- breadcrumb_wrap -->
 		<section class="breadcrumb_wrap">
 			<div class="breadcrumb_inner">
 				<ol class="breadcrumb_list">
@@ -167,7 +117,7 @@ $(function(){
 		<!-- //breadcrumb_wrap -->
 
 		<!-- ht_contents_wrap -->
-		<section class="ht_contents_wrap">
+		<section class="ht_contents_wrap mdl_contents_wrap">
 
             <!-- moudule 001 -->
             <article class="mdl_wrap promotion_end">

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<title>이벤트 기획전</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+
+</head>
+
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">	
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap mdl_contents_wrap">
+           
+            <!--타이틀 영역-->
+            <div class="mdl_wrap">
+                <h1 class="evt_tit_bar">마음에 쏙 드는 다이어리 디자인을 PICK해주세요!</h1>
+                <img src="../../images/temp/@mdl_009_img.png" class="mdl_full_img" alt="">
+            </div>
+                <!--//타이틀 영역-->
+
+
+            <!--module009영역-->
+            <div class="mdl_wrap" style="background-color: #FF8963;">
+                <div class="mdl_inner mdl009_wrap">
+                    <!--색상 변경 인라인 스타일 예시 :  style="background-color: red; border-color:red;" -->
+                    <button class="btn_xlg btn_black" data-role="btn-dialog" data-target="#evtVotePop">투표하기</button>
+                </div>
+            </div>
+            <!--//module009영역-->
+    
+            
+            <!-- moudule 019 영역 -->
+            <div class="mdl_wrap">
+                <div class="mdl_inner mdl014_wrap">
+                    <h2 class="ht_tit04">댓글입력</h2>
+                    <!--textarea : 댓글 입력-->
+                    <div class="cmt_box">
+                        <textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
+                        <div class="count_line"><em class="count">0</em>300자</div>
+                    </div>
+                    <!--//textarea : 댓글 입력-->
+
+
+                    
+                    <!--댓글 아이콘 이미지-->
+                    <ul class="cmt_emoji_list">
+                        <li class="emoji">
+                            <a><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></a>
+                        </li>
+                        <li class="emoji">
+                            <a><img src="../../images/guide/ico_cmt_emoji2.svg" alt=""></a>
+                        </li>
+                        <li class="emoji">
+                            <a><img src="../../images/guide/ico_cmt_emoji3.svg" alt=""></a>
+                        </li>
+                        <li class="emoji">
+                            <a><img src="../../images/guide/ico_cmt_emoji4.svg" alt=""></a>
+                        </li>
+                        <li class="emoji">
+                            <a><img src="../../images/guide/ico_cmt_emoji5.svg" alt=""></a>
+                        </li> 
+                    </ul>
+                    <!--//댓글 아이콘 이미지-->
+
+
+                    <!--등록 버튼-->
+                    <div class="btn_area">
+                        <!--버튼 비활성화 클래스 disabled-->
+                        <button class="btn_md btn_black disabled">등록하기</button>
+                    </div>
+                    <!--//등록 버튼-->
+
+                    <!--cmt_info_area-->
+                    <div class="cmt_info_area">
+                        <p class="cmt_total">총 <em class="count">744건</em>의 댓글이 있습니다.</p>
+
+                        <!-- form_chk -->
+                        <span class="form_chk">
+                            <input id="myCmt_ck" type="checkbox" />
+                            <label for="myCmt_ck">내가 쓴 댓글 보기</label>
+                        </span>
+                        <!-- //form_chk -->
+                
+                    </div>
+                    <!--//cmt_info_area-->
+
+                    <!--댓글 리스트-->
+                    <ul class="cmt_evt_list">
+                        <!--cmt_item 반복-->
+                        <li class="cmt_item">
+                            <div class="cmt_upper">
+                                <ul class="cmt_writer_info">
+                                    <li class="upper_item">ab******</li>
+                                    <li class="upper_item">2021.07.11</li>
+                                    <!-- <li class="upper_item cmt_modify">수정</li>
+                                    <li class="upper_item cmt_delete">삭제</li> -->
+                                </ul>
+                                <!--등록된 이미지가 있는 경우-->
+                                <div class="cmt_icon"><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></div>
+                                <div class="cmt_title">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</div>
+                            </div>
+
+                            <!--textarea : 댓글 수정-->
+                            <div class="cmt_box hidden">
+                                <textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
+                                <div class="count_line"><em class="count">0</em>300자</div>
+                            </div>
+                            <!--//textarea : 댓글 수정-->
+                        </li>
+                        <!--//cmt_item 반복-->
+
+
+                        <li class="cmt_item">
+                            <div class="cmt_upper">
+                                <ul class="cmt_writer_info">
+                                    <li class="upper_item">Rlflsldl</li>
+                                    <li class="upper_item">2021.07.11</li>
+                                    <li class="upper_item cmt_modify">수정</li>
+                                    <li class="upper_item cmt_delete">삭제</li>
+                                </ul>
+                                <!--등록된 이미지가 있는 경우-->
+                                <div class="cmt_icon"><img src="../../images/guide/ico_cmt_emoji3.svg" alt=""></div>
+                                <div class="cmt_title">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</div>
+                            </div>
+
+
+                            <div class="hidden">
+                                <!--textarea : 댓글 수정-->
+                                <div class="cmt_box">
+                                    <textarea name="" class="cmt_textarea"></textarea>
+                                    <div class="btn_wrap">
+                                        <span class="count_line"><em class="count">0</em>300자</span>
+                                        <button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+                                        <button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
+                                </div>
+                                </div>
+                                <!--//textarea : 댓글 수정-->
+
+                                <!--댓글 아이콘 이미지-->
+                                <ul class="cmt_emoji_list">
+                                    <li class="emoji">
+                                        <a><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></a>
+                                    </li>
+                                    <li class="emoji">
+                                        <a><img src="../../images/guide/ico_cmt_emoji2.svg" alt=""></a>
+                                    </li>
+                                    <li class="emoji">
+                                        <a><img src="../../images/guide/ico_cmt_emoji3.svg" alt=""></a>
+                                    </li>
+                                    <li class="emoji">
+                                        <a><img src="../../images/guide/ico_cmt_emoji4.svg" alt=""></a>
+                                    </li>
+                                    <li class="emoji">
+                                        <a><img src="../../images/guide/ico_cmt_emoji5.svg" alt=""></a>
+                                    </li> 
+                                </ul>
+                                <!--//댓글 아이콘 이미지-->
+                            </div>
+                        </li>
+
+                        
+                    </ul>
+                    <!--//댓글 리스트-->
+
+
+                    <!-- pagination -->
+                    <div class="pagination">
+                        <button class="btn_page prev"><span class="hidden">이전</span></button>
+                        <div class="page_num">
+                            <!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+                            <a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+                            <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+                            <a href="#" class="btn_page_num active" title="현재페이지">10</a>
+                            <a href="#" class="btn_page_num">11</a>
+                            <a href="#" class="btn_page_num">12</a>
+                            <a href="#" class="btn_page_num">13</a>
+                            <a href="#" class="btn_page_num">14</a>
+                            <a href="#" class="btn_page_num">15</a>
+                            <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+                            <a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+                        </div>
+                        <button class="btn_page next"><span class="hidden">다음</span></button>
+                    </div>
+                    <!-- //pagination -->
+
+                </div>
+            </div>
+            <!-- //moudule 019 영역 -->
+
+
+        </section>
+        <!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+
+</div>
+<!-- // wrapper -->
+
+<!-- 투표하기 팝업: module 009-3--> 
+<div id="evtVotePop" class="dialog_wrap" data-class="dialog_md">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">투표 참여하기</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents evt_vote_wrap">
+		<!-- 스크롤 영역 -->
+		<div class="custom_scroll_wrap sc_pop_btn">
+			<h2 class="tit">디자인 선택</h2>
+			<p class="sub_tit">마음에 드는 다이어리를 선택해 주세요.</p>
+			<ul class="evt_vote_list">
+				<!-- vote_item 반복 -->
+				<li class="vote_item">
+					<div class="prod_pic">
+						<img src="../../images/temp/@img_prod02.jpg" alt="">
+						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote0">
+						<label for="evt_vote0" class="evt_vote_lb"></label>	
+					</div>
+					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
+				</li>
+				<!-- //vote_item 반복 -->
+
+
+				<li class="vote_item">
+					<div class="prod_pic">
+						<img src="../../images/temp/@img_prod02.jpg" alt="">
+						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote1">
+						<label for="evt_vote1" class="evt_vote_lb"></label>	
+					</div>
+					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
+				</li>
+				<li class="vote_item">
+					<div class="prod_pic">
+						<img src="../../images/temp/@img_prod02.jpg" alt="">
+						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote2">
+						<label for="evt_vote2" class="evt_vote_lb"></label>	
+					</div>
+					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
+				</li>
+				<li class="vote_item">
+					<div class="prod_pic">
+						<img src="../../images/temp/@img_prod02.jpg" alt="">
+						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote3">
+						<label for="evt_vote3" class="evt_vote_lb"></label>	
+					</div>
+					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
+				</li>
+			</ul>
+
+			<div class="vote_cmt_box">
+				<h2 class="ht_tit05">댓글입력</h2>
+				<!--textarea : 댓글 입력-->
+				<div class="cmt_box">
+					<textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
+					<div class="count_line"><em class="count">0</em>300자</div>
+				</div>
+				<!--//textarea : 댓글 입력-->
+			</div>
+
+		</div>
+		<!-- //스크롤 영역-->
+
+		<!-- btn_area -->
+		<div class="btn_area">
+			<!--버튼 비활성화 클래스 : disabled -->
+			<button type="text" class="btn_md btn_primary disabled"><span>참여하기</span></button>
+		</div>
+		<!-- //btn_area -->
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //투표하기 팝업: module 009-3 --> 
+
+
+</html>
