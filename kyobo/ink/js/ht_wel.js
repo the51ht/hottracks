@@ -82,6 +82,54 @@ $(function(){
 
 
 
+/* 실시간 홈쇼핑 */
+function welSearch(){
+    var $target = $('.wel_search_list .swiper-container');
+    var slideOption = {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        loop: true,
+        loopsSlide: 1,
+        spaceBetween: 0,
+        touchRatio: 0,  //드래그 금지
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+    },
+        speed: 500,
+    };
+    welSearchSwiper = new Swiper($target.get(), slideOption);
+}
+
+$(function(){
+    if(!$('.wel_search_cont').length) return;
+    welSearch();
+
+    $('.btn_wel_search').on('click', function(e) {
+        e.preventDefault();
+        if($(this).closest('.wel_search_cont').hasClass('on')){
+            welSearch();
+            $(this).closest('.wel_search_cont').removeClass('on');
+        }else{
+            welSearchSwiper.destroy();
+            $(this).closest('.wel_search_cont').addClass('on');
+        }
+    });  
+    $('.btn_wel_search_cl').on('click', function(e) {
+        e.preventDefault();
+        welSearch();
+        $(this).closest('.wel_search_cont').removeClass('on');
+    });
+});
+
+
+
+
+
+
+
+
+
 
 
 /* 지금 이 상품을 */
@@ -124,12 +172,16 @@ $(function(){
 });	
 
 
+
+
+
+
+
 /*  기획전 배너 */
 function wel_exehibition_banner(){
     var $target = $('.wel_exehibition_banner .swiper-container');
     $target.each(function (index, ele) {
         var $parent = $(this).parent('.wel_exehibition_banner');
-        
         var slideOption = {
             slidesPerView: 2,
             slidesPerColumn:2,
@@ -162,10 +214,12 @@ function wel_exehibition_banner(){
         }
     });
 }
+
 $(function(){
     if(!$('.wel_exehibition_banner').length) return;
     wel_exehibition_banner();
 });
+
 
 
 /* 큐레이션 */
@@ -177,6 +231,7 @@ function curation_btn(val){
         $(val).closest('.li').addClass('on')
     }
 }
+
 
 
 /* 선물이 필요한 순간 */
@@ -213,45 +268,7 @@ $(function(){
 
 
 
-/* 실시간 홈쇼핑 */
-function welSearch(){
-    var $target = $('.wel_search_list .swiper-container');
-    var slideOption = {
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        loop: true,
-        loopsSlide: 1,
-        spaceBetween: 0,
-        touchRatio: 0,  //드래그 금지
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-    },
-        speed: 500,
-    };
-    welSearchSwiper = new Swiper($target.get(), slideOption);
-}
 
-$(function(){
-    if(!$('.wel_search_cont').length) return;
-    welSearch();
-
-    $('.btn_wel_search').on('click', function(e) {
-        e.preventDefault();
-        if($(this).closest('.wel_search_cont').hasClass('on')){
-            welSearch();
-            $(this).closest('.wel_search_cont').removeClass('on');
-        }else{
-            welSearchSwiper.destroy();
-            $(this).closest('.wel_search_cont').addClass('on');
-        }
-    });  
-    $('.btn_wel_search_cl').on('click', function(e) {
-        e.preventDefault();
-        welSearch();
-        $(this).closest('.wel_search_cont').removeClass('on');
-    });
-});
 
 
 
