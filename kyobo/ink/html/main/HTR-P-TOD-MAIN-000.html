@@ -27,6 +27,8 @@
 
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_corner_menu_jang.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
 
 
@@ -112,18 +114,18 @@
 			</nav>
 			<!-- //ht_tit_nav -->
 
-<style>
-/* 작업시 작업 해당부분으로 sass 방식으로 넣어 주세요 */
-.tod_full_banner {
-	padding:30px;background:#ffeb01;
-}
-</style>
 
-
+			<!-- 오늘만 특가 : 기본-->
 			<!-- tod_full_banner -->
 			<div class="ht_cont tod_full_banner">
 				<div class="contents_inner">
-					<h1  style="height:228px;">오늘만 특가</h1>
+					<h1>
+						<img src="../../images/main/img_tod_benner_today.svg" alt="">
+					</h1>
+
+					<p class="time_bar">10:32:24</p>
+					<p class="mc_txt btn_more_view_box ty02"><a href="#n"><img src="../../images/main/ico_tod_benner_today.svg" alt="">오늘만 특가 메일 알림 받기<em></em></a></p>
+					
 					<!-- prod_share_area -->
 					<div class="prod_share_area">
 
@@ -149,7 +151,43 @@
 				</div>
 			</div>
 			<!-- //tod_full_banner -->
+			<!-- //오늘만 특가 : 기본 -->
 
+
+			<!-- 핫딜 특가 : 클래스 추가 .tod_hot_benner -->
+			<!-- tod_full_banner -->
+			<div class="ht_cont tod_full_banner tod_hot_benner">
+				<div class="contents_inner">
+					<h1>
+						<img src="../../images/main/img_tod_benner_hot.svg" alt="">
+					</h1>
+					
+					<!-- prod_share_area -->
+					<div class="prod_share_area">
+
+						<!-- sns_share_wrap -->
+						<div class="sns_share_wrap">
+							<button type="button" class="btn_share"><span class="ico_share"></span><span class="hidden">공유하기</span></button>
+							<div class="sns_share_box">
+								<a href="#" class="btn_sns_share ht_kakao"><span class="hidden">카카오톡 공유하기</span></a>
+								<a href="#" class="btn_sns_share ht_instar"><span class="hidden">인스타그램 공유하기</span></a>
+								<a href="#" class="btn_sns_share ht_facebook"><span class="hidden">페이스북 공유하기</span></a>
+								<!--<a href="#" class="btn_sns_share ht_twitter"><span class="hidden">트위트 공유하기</span></a>
+								<a href="#" class="btn_sns_share ht_pinterest"><span class="hidden">핀터레스트 공유하기</span></a>-->
+								<a href="#" class="btn_sns_share ht_line"><span class="hidden">라인 공유하기</span></a>
+								<!--<a href="#" class="btn_sns_share ht_message"><span class="hidden">메세지 공유하기</span></a>-->
+								<a href="#" class="btn_sns_share ht_url_copy"><span class="hidden">url 복사하기</span></a>
+
+								<button class="btn_sns_share_close" type="button"><i class="ico_share_close"></i><span class="hidden">공유하기 닫기</span></button>
+							</div>
+						</div>
+						<!-- //sns_share_wrap -->
+					</div>
+					<!-- //prod_share_area -->
+				</div>
+			</div>
+			<!-- //tod_full_banner -->
+			<!-- //오늘만특가 : 클래스 추가 .tod_hot_benner -->
 
 			<!-- ht_cont : 상품 리스트 -->
 			<div class="ht_cont ht_bg ht_new_list">
