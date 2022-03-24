@@ -1,5 +1,4 @@
-/***** jang 작업 *****/
-
+/****  웰컴메인  ****/
 /* 핫트랙스 라이브 */
 function welLive(){
     var $target = $('.wel_live_cont .swiper-container');
@@ -11,11 +10,11 @@ function welLive(){
         loop: true,
         loopsSlide: 1,
         spaceBetween: 0,
-        /*autoplay: {
+        autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-        },*/
-        speed: 900,
+        },
+        speed: 1000,
         pagination: {
             el: $('.wel_live_cont').find('.swiper-pagination')[0],
             type: 'fraction',
@@ -84,6 +83,94 @@ $(function(){
 
 
 
+
+/* 지금 이 상품을 */
+function wel_now_banner(){
+    var $target = $('.wel_now_banner.swiper-container');
+    var slideOption = {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        loop: true,
+        loopsSlide: 1,
+        spaceBetween: 0,
+        autoplay: {
+            delay:0,
+            disableOnInteraction: false,
+        },
+        speed: 15000,
+    };
+    var wel_now_b = new Swiper($target.get(), slideOption);
+
+    $(document).on('mouseenter', '.wel_now_banner.swiper-container', function(){
+        slideOption.autoplay = false;
+        new Swiper($target.get(), slideOption);
+    });
+    
+    $(document).on('mouseleave', '.wel_now_banner .swiper-slide', function(){
+        slideOption.autoplay = {
+            delay:0,
+            disableOnInteraction: false,
+        }
+        new Swiper($target.get(), slideOption);
+    });
+    
+
+}
+$(function(){
+    if(!$('.wel_now_banner').length) return;
+    wel_now_banner();
+
+
+        
+});	
+
+
+/*  기획전 배너 */
+function wel_exehibition_banner(){
+    var $target = $('.wel_exehibition_banner .swiper-container');
+    $target.each(function (index, ele) {
+        var $parent = $(this).parent('.wel_exehibition_banner');
+        
+        var slideOption = {
+            slidesPerView: 2,
+            slidesPerColumn:2,
+            slidesPerGroup: 2,
+            spaceBetween: 0,
+            observer: true,
+            observeParents: true,
+            // loop: true,
+            // loopsSlide: 1,
+            spaceBetween: 0,
+            speed: 700,
+            pagination: {
+                el:  $(ele).find('.swiper-pagination')[0],
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            },
+            navigation: {
+                nextEl: $(ele).find('.swiper-button-next'),
+                prevEl: $(ele).find('.swiper-button-prev'),
+            },
+        };
+
+        if($parent.find('.swiper-slide').length > 4) {
+            var thumb2bannerSwiper = new Swiper(this, slideOption);
+        }
+    });
+}
+$(function(){
+    if(!$('.wel_exehibition_banner').length) return;
+    wel_exehibition_banner();
+});
+
+
 /* 큐레이션 */
 function curation_btn(val){
     if( $(val).closest('.li').hasClass('on')){
@@ -93,8 +180,6 @@ function curation_btn(val){
         $(val).closest('.li').addClass('on')
     }
 }
-
-
 
 
 /* 선물이 필요한 순간 */
@@ -127,45 +212,6 @@ $(function(){
     welGift();
 });
 
-/* Tab Swiper */
-function tabSwiper(){
-    var $target = $('.tab_swiper');
-    $target.each(function (index, element) {
-        var $parent = $(this);
-        $parent.addClass('t_idx_' + index);
-        
-        var slideOption = {
-            observer: true,
-            observeParents: true,
-            slidesPerView: 'auto',
-            centeredSlides: false,
-            loop: false,
-            loopsSlide: 1,
-            spaceBetween:0,
-            speed: 700,
-            navigation: {
-                nextEl: ('.t_idx_' + index + ' .swiper-button-next'),
-                prevEl: ('.t_idx_' + index + ' .swiper-button-prev'),
-            },
-            pagination: false
-        };
-        /* 탭 넓이가 1200px 이상일때 실행 */
-        var tabListWidthTotal = 0,
-            tabList = $('.t_idx_' + index + ' .swiper-slide');
-        for(var i = 0; i < tabList.length; i++ ){
-            tabListWidthTotal += tabList.eq(i).width();
-        };
-        
-        if(tabListWidthTotal > 1200){
-            tabSwiperCont = new Swiper(this, slideOption);
-        }
-    });
-}
-
-$(function(){
-    if(!$('.tab_swiper').length) return;
-    tabSwiper();
-});
 
 
 
@@ -209,3 +255,37 @@ $(function(){
         $(this).closest('.wel_search_cont').removeClass('on');
     });
 });
+
+
+
+
+$(function(){
+    if(!$('.wel_category_banner').length) return;
+    wel_category_banner();
+
+    function wel_category_banner(){
+        var $target = $('.wel_category_banner .swiper-container');
+        $target.each(function (index, ele) {
+            var $parent = $(this).parent('.wel_category_banner');
+            var slideOption = {
+                slidesPerView: 'auto',
+                slidesPerGroup: 2,
+                spaceBetween: 0,
+                observer: true,
+                observeParents: true,
+                spaceBetween: 0,
+                speed: 700,
+                navigation: {
+                    nextEl: $($parent).find('.swiper-button-next'),
+                    prevEl: $($parent).find('.swiper-button-prev'),
+                },
+            };
+
+            if($parent.find('.swiper-slide').length > 2) {
+                var thumb2bannerSwiper = new Swiper(this, slideOption);
+                $parent.addClass('swiper-on');
+            }
+        });
+    }
+});
+

@@ -289,7 +289,7 @@ function thumb4banner(){
                 delay: 5000,
                 disableOnInteraction: false,
             },
-            speed: 700,
+            speed: 1000,
             navigation: {
                 nextEl: ('.thumb4_idx_' + index + ' .swiper-button-next'),
                 prevEl: ('.thumb4_idx_' + index + ' .swiper-button-prev'),
