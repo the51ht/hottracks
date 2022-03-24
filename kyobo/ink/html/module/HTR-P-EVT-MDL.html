@@ -65,6 +65,23 @@
 
 <!-- wrapper -->
 <div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
 
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">	
@@ -847,44 +864,44 @@
 
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-009(기본형) : 009-3팝업 모듈 연동)</p>
 
-			<!--module009영역-->
+			<!--module009 영역-->
 			<div class="mdl_wrap" style="background-color: #FF8963;">
 				<div class="mdl_inner mdl009_wrap">
 					<!--색상 변경 인라인 스타일 예시 :  style="background-color: red; border-color:red;" -->
 					<button class="btn_xlg btn_black" data-role="btn-dialog" data-target="#evtVotePop">투표하기</button>
 				</div>
 			</div>
-			<!--//module009영역-->
+			<!--//module009 영역-->
 
 			
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-009(이미지형) : 009-3팝업 모듈 연동)</p>
 
-			<!--module009=영역-->
+			<!--module009 영역-->
 			<div class="mdl_wrap" style="background-color: #FF8963;">
 				<div class="mdl_inner mdl009_wrap">
 					<a href="#none" class="mdl_img_btn" data-role="btn-dialog" data-target="#evtVotePop"><img src="../../images/temp/@mdl_img_btn.png" alt=""></a>
 				</div>
 			</div>
-			<!--//module009영역-->
+			<!--//module009 영역-->
 
 
 
 			
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-010(기본형) : 010-2 팝업 모듈 연동)</p>
 
-			<!--module010영역-->
+			<!--module010 영역-->
 			<div class="mdl_wrap">
 				<div class="mdl_inner mdl009_wrap">
 					<!--색상 변경 인라인 스타일 예시 :  style="background-color: red; border-color:red;" -->
 					<button class="btn_xlg btn_black" data-role="btn-dialog" data-target="#evtApplyPop">응모하기</button>
 				</div>
 			</div>
-			<!--//module010영역-->
+			<!--//module010 영역-->
 
 			
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-010(이미지형) : 010-2 팝업 모듈 연동)</p>
 
-			<!--module010영역-->
+			<!--module010 영역-->
 			<div class="mdl_wrap">
 				<div class="mdl_inner mdl009_wrap">
 					<a href="#none" class="mdl_img_btn" data-role="btn-dialog" data-target="#evtApplyPop"><img src="../../images/temp/@mdl_img_btn2.png" alt=""></a>
@@ -1209,32 +1226,86 @@
 
 
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-015</p>
+			<script>
+				$(function(){
+					var stickyMenus  = document.querySelectorAll('.sticky_anchor_menu');
+					var menus, targetElem;
+					if(!stickyMenus) return;
 
+
+					var elemsInfo = {};
+
+					for(var i = 0; i < stickyMenus.length; i++) {
+						menus = document.querySelectorAll('.sticky_anchor_menu')[i].children; //li.swiper-slide
+
+						for(var mn = 0; mn < menus.length; mn++) {
+							menus[mn].addEventListener('click', moveScroll(event), true);
+
+                            targetElem =  menus[mn].dataset.target;
+							elemsInfo[targetElem] = {                   //타겟 엘리먼트 길이, 높이값 저장
+								 'top' : $('#' + targetElem).offset().top, 
+								 'height' : $('#' + targetElem).height(), 
+								};
+						}
+					}
+
+					var headerHeight = $('header').height() || 0;
+         
+
+					//스크롤 시 해당 메뉴 활성화
+					window.addEventListener('scroll', function(e){
+						headerHeight = $('header').height() || 0;
+						Object.keys(elemsInfo).forEach(function(ele, i){
+							if( $(window).scrollTop() >= (elemsInfo[ele].top - headerHeight - 65 ) &&
+							 	$(window).scrollTop() < (elemsInfo[ele].top + elemsInfo[ele].height  - headerHeight - 65)) {
+									$('.swiper-slide[data-target = "'+ ele +'"]').parents('.sticky_anchor_menu').find('a').removeClass('on');
+									$('.swiper-slide[data-target = "'+ ele +'"]').children('a').addClass('on');
+							}
+						});
+					});
+
+					//taeget 엘리먼트로 스크롤 이동
+					function moveScroll(){
+						return function(e){
+							var targetId = e.target.closest('.swiper-slide').dataset.target;
+							var offsetT = $('#'+targetId).offset().top; //이동할 엘리먼트 높이
+							var stickyMnHeight = $(e.target.closest('.mdl_sticky_mn')).height(); //스티키 메뉴 높이
+							var targetTop = offsetT - headerHeight -  stickyMnHeight;
+							
+							 $('html, body').animate({ scrollTop : targetTop }, 300, function(){
+								 $(e.target).closest('a').parent('').siblings().find('.on').removeClass('on');
+								 $(e.target).closest('a').addClass('on');
+							 });
+						}
+					}
+
+				});
+			</script>
 			<!--module015영역-->
 			<div class="mdl_wrap">
-				<div class="mdl_inner mdl015_wrap" style="border:1px solid red;">
+				<div class="mdl_inner mdl015_wrap">
 					<!--sticky menu-->
-					<div class="swiper-wrapper">
+					<div class="swiper-wrapper mdl_sticky_mn">
 						<!-- moudule 002 -->
 						<div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide">
-									<a href="#test0" class="on"><!-- 활성화  class="on" -->
+							<ul class="swiper-wrapper sticky_anchor_menu">
+								<li class="swiper-slide" data-target = "st_test0">
+									<a href="#none" class="on"><!-- 활성화  class="on" -->
 										<span>2022 다이어리</span>
 									</a>
 								</li>
-								<li class="swiper-slide">
-									<a href="#test1">
+								<li class="swiper-slide" data-target = "st_test1">
+									<a href="#none">
 										<span>기록과 아카이빙을 위한</span>
 									</a>
 								</li>
-								<li  class="swiper-slide">
-									<a href="#test2">
+								<li  class="swiper-slide" data-target = "st_test2">
+									<a href="#none">
 										<span>Be On :D 할인쿠폰</span>
 									</a>
 								</li>
-								<li  class="swiper-slide">
-									<a href="#test3">
+								<li  class="swiper-slide" data-target = "st_test3">
+									<a href="#none">
 										<span>별별일상 응모하기</span>
 									</a>
 								</li>
@@ -1246,7 +1317,7 @@
 
 
 					<!--anchor_target-->
-					<div id="test0" class="anchor_target" style="border:1px solid blue;">
+					<div id="st_test0" class="anchor_target">
 						<h2 class="ht_tit">2022다이어리</h2>
 
 						<!-- 상품 리스트 -->
@@ -1397,7 +1468,7 @@
 					<!--//anchor_target-->
 
 					<!--anchor_target-->
-					<div id="test1" class="anchor_target" style="border:1px solid blue;">
+					<div id="st_test1" class="anchor_target">
 						<h2 class="ht_tit">기록과 아카이빙을 위한</h2>
 
 						<!-- 상품 리스트 -->
@@ -1548,7 +1619,7 @@
 					<!--//anchor_target-->
 
 					<!--anchor_target-->
-					<div id="test2" class="anchor_target" style="border:1px solid blue;">
+					<div id="st_test2" class="anchor_target" >
 						<h2 class="ht_tit">Be On :D 할인쿠폰</h2>
 
 						<!-- 상품 리스트 -->
@@ -1699,8 +1770,8 @@
 					<!--//anchor_target-->
 
 					<!--anchor_target-->
-					<div id="test3" class="anchor_target" style="border:1px solid blue;">
-						<h2 class="ht_tit">Be On :D 할인쿠폰</h2>
+					<div id="st_test3" class="anchor_target">
+						<h2 class="ht_tit">별별일상 응모하기</h2>
 
 						<!-- 상품 리스트 -->
 						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->

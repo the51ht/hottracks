@@ -12,7 +12,7 @@ $(function(){
         }
     });
     //2depth
-    $(document).on('click', '.dep2>li', function(e){
+    $(document).on('click', '.dep2 > li', function(e){
         if( e.isDefaultPrevented()) return;
         e.preventDefault();
 
@@ -23,7 +23,7 @@ $(function(){
         }
     });
     //3depth
-    $(document).on('click', '.dep3>li', function(e){
+    $(document).on('click', '.dep3 > li', function(e){
         e.preventDefault();
     });
 });
@@ -987,6 +987,7 @@ function setProdDetailAnchor() {
         // 스크롤에 따라 탭 active 상태 변경
         function setTabBtnActive() {
             var activeIndex;
+    
             activeIndex = $('.prod_detail_contents .tab_content.sps-blw').length - 1;
 
             _tabLinks.removeClass('on');
