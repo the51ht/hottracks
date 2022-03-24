@@ -2,8 +2,13 @@
 .ht_new_main {
     background: url(../images/main/bg_wel_md_pick.jpg) center bottom repeat-x;background-size: 100% 100%;
     h2{
-        margin-bottom: 20px;
-        p {font-size: 18px;line-height: 24px;font-weight: 400;}
+        margin-bottom: 20px;text-align:center;
+        img {
+            height:103px;
+        }
+        p {
+            font-size: 18px;line-height: 24px;font-weight: 400;
+        }
     }
     .bg_star img{
         position: absolute;
@@ -30,21 +35,22 @@
 }
 .ht_new_list{
     .deadline_character_area{
-        position: fixed;right: 101px;top: 50%;z-index: 4;width: auto;
+        position:sticky;top:50%;width:auto;height:0;z-index:4;
         .deadline_bubble{
+            right:-15px;top:0;
             padding: 14px 20px 10px 25px;
             &:after{
-                background: url(../images/main/ico_side_float01.svg) no-repeat;content: "";display: inline-block;width: 67px;height: 33px;position: absolute;top: -23px;left: 12px;
+                background: url(../images/main/ico_side_float01.svg) no-repeat;content: "";display: inline-block;width:70px;height: 38px;position: absolute;top: -23px;left: 12px;
             }
             .txt {
                 img{
                     transform: rotate(180deg);margin-left: 5px;margin-top: -5px;
                 }
                 &:before{
-                    right: -9px;-webkit-transform: rotate(180deg);transform: rotate(180deg);
+                    right: -9px;transform: rotate(180deg);
                 }
                 &:after{
-                    margin-top: -6px;border-width: 0 10px 12px 10px;-webkit-transform: rotate(90deg);transform: rotate(90deg);
+                    margin-top: -6px;border-width: 0 10px 12px 10px;transform: rotate(90deg);
                 }
             } 
         }
@@ -62,8 +68,9 @@
 /**** 베스트 ****/
 .ht_best_list {
     .deadline_character_area{
-        position: fixed;right: 101px;top: 50%;z-index: 4;width: auto;
+        position:sticky;top:50%;width:auto;height:0;z-index:4;
         .deadline_bubble{
+            right:-15px;top:0;
             padding: 14px 20px 10px 25px;
             &:after{
                 background: url(../images/main/ico_side_float02.svg) no-repeat;content: "";display: inline-block;width: 79px;height: 100px;position: absolute;top: -14px;right: -97px;

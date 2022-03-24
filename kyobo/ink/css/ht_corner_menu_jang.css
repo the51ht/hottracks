@@ -7,6 +7,11 @@
 
 .ht_new_main h2 {
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.ht_new_main h2 img {
+  height: 103px;
 }
 
 .ht_new_main h2 p {
@@ -54,14 +59,17 @@
 }
 
 .ht_new_list .deadline_character_area {
-  position: fixed;
-  right: 101px;
+  position: -webkit-sticky;
+  position: sticky;
   top: 50%;
-  z-index: 4;
   width: auto;
+  height: 0;
+  z-index: 4;
 }
 
 .ht_new_list .deadline_character_area .deadline_bubble {
+  right: -15px;
+  top: 0;
   padding: 14px 20px 10px 25px;
 }
 
@@ -69,8 +77,8 @@
   background: url(../images/main/ico_side_float01.svg) no-repeat;
   content: "";
   display: inline-block;
-  width: 67px;
-  height: 33px;
+  width: 70px;
+  height: 38px;
   position: absolute;
   top: -23px;
   left: 12px;
@@ -86,14 +94,14 @@
 .ht_new_list .deadline_character_area .deadline_bubble .txt:before {
   right: -9px;
   -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .ht_new_list .deadline_character_area .deadline_bubble .txt:after {
   margin-top: -6px;
   border-width: 0 10px 12px 10px;
   -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .ht_new_list .ht_tit_big02 img {
@@ -105,14 +113,17 @@
 
 /**** 베스트 ****/
 .ht_best_list .deadline_character_area {
-  position: fixed;
-  right: 101px;
+  position: -webkit-sticky;
+  position: sticky;
   top: 50%;
-  z-index: 4;
   width: auto;
+  height: 0;
+  z-index: 4;
 }
 
 .ht_best_list .deadline_character_area .deadline_bubble {
+  right: -15px;
+  top: 0;
   padding: 14px 20px 10px 25px;
 }
 
