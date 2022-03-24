@@ -1572,47 +1572,43 @@
 
 /*** 지금, 이 상품을 :.wel_now ***/
 .wel_now {
-  padding: 30px 20px 80px 20px;
+  padding: 0 0 80px 0;
   overflow: hidden;
   background: #1977f2 url("../images/main/bg_wel_now.jpg") center top/33px repeat;
   text-align: center;
 }
 
 .wel_now .wel_now_tit {
-  width: 626px;
-  padding: 60px 0;
+  width: 590px;
+  padding: 100px 0 65px 0;
   display: inline-block;
   position: relative;
 }
 
 .wel_now .wel_now_tit .s1 {
   position: absolute;
-  left: 70px;
-  top: -5px;
-  width: 83%;
+  left: 74px;
+  top: 55px;
+  width: 450px;
 }
 
 .wel_now .wel_now_tit .s2 {
   position: absolute;
-  left: 7px;
-  top: 17px;
+  left: -13px;
+  top: 70px;
   width: 70px;
 }
 
 .wel_now .wel_now_tit .s3 {
   position: absolute;
-  right: -25px;
-  top: 0px;
-  width: 120px;
+  right: -20px;
+  top: 30px;
+  width: 122px;
 }
 
 .wel_now .ht_tit_big {
+  margin-bottom: 0;
   color: #fff;
-  font-size: 42px;
-  font-family: 'Gmarket Sans';
-  line-height: 56px;
-  text-align: center;
-  font-weight: 500;
 }
 
 .wel_now .tab_ty a:before {
@@ -1621,6 +1617,10 @@
 
 .wel_now .tab_swiper .swiper_control .swiper-button-prev:before, .wel_now .tab_swiper .swiper_control .swiper-button-next:before {
   background: none;
+}
+
+.wel_now .tab_swiper {
+  margin-bottom: 20px;
 }
 
 .wel_now_banner {
@@ -2524,7 +2524,7 @@
 
 .wel_category .ht_tit_big img {
   position: relative;
-  margin-left: 8px;
+  margin: -3px 0 0 15px;
   width: 42px;
   height: 42px;
 }
@@ -2647,8 +2647,6 @@
 
 /* wel_category_rank */
 .wel_category_rank {
-  width: calc(100% + 36px);
-  margin: 0px -18px 40px -18px;
   overflow: hidden;
   counter-reset: item;
 }
@@ -2686,13 +2684,16 @@
   top: 10px;
   width: 24px;
   height: 24px;
+  padding-right: 1px;
   background: #000;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #fff;
   letter-spacing: -1px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 25px;
   text-align: center;
   content: counter(item);
   counter-increment: item;
@@ -2705,8 +2706,12 @@
   padding-top: 100%;
   background: #fff;
   border: 1px dashed #D5D5D5;
+  border-radius: 12px;
   overflow: hidden;
   font-size: 14px;
+  font-weight: 500;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
 }
 
 .wel_category_rank .btn_box_more p {
@@ -2754,6 +2759,10 @@
   overflow: hidden;
 }
 
+.wel_category_rank .btn_box_more:hover {
+  background-color: #f4f4f4;
+}
+
 .wel_category_banner {
   position: relative;
 }
@@ -2781,4 +2790,34 @@
 
 .wel_category_banner .evt_list > li:last-of-type {
   margin-right: 0;
+}
+
+.wel_category_tab .tab_swiper {
+  margin-bottom: 40px;
+}
+
+.wel_category_tab.on .wel_category_tab_inner {
+  position: fixed;
+  top: 80px;
+  z-index: 10;
+  width: 1300px;
+  margin: 0 -50px;
+  padding: 20px 50px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wel_category_tab.on .wel_category_tab_inner:after {
+  position: absolute;
+  left: -300%;
+  bottom: 0;
+  width: 700%;
+  height: 1px;
+  background-color: #eaeaea;
+  content: "";
+}
+
+.wel_category_tab.on .wel_category_tab_inner .tab_swiper {
+  margin-bottom: 0;
 }
