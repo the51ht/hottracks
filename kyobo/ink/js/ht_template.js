@@ -622,28 +622,22 @@ function wel_now_banner(){
             spaceBetween:0,
             autoplay: {
                 delay:0,
-                disableOnInteraction: true,
+                disableOnInteraction:false,
+                pauseOnMouseEnter: true
             },
             pagination: false,
             speed: 18000,
             allowTouchMove: false
         };
         wel_now_bannerSwiper = new Swiper(this, slideOption);
-
-
-        $target.on('mouseover', function(){
-            wel_now_bannerSwiper.autoplay.stop();
-          });
-        $target.on('mouseout', function(){
-            wel_now_bannerSwiper.autoplay.start();
-          });
         
     }); 
 }
 $(function(){
     if(!$('.wel_now_banner').length) return;
-    wel_now_banner();      
+    wel_now_banner();    
 });	
+
 
 
 

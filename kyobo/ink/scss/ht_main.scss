@@ -882,10 +882,10 @@
 .wel_now_banner {
     height:544px;overflow:visible;
     .swiper-wrapper {
-        transition-timing-function:linear;
+        background:#000;transition-timing-function:linear;
     }
     .swiper-slide {
-        display:flex;width:2448px;
+        display:flex;width:2448px !important;
     }
     .img {
         width:272px;height:272px;box-sizing:border-box;flex-shrink:0;overflow:hidden;
@@ -919,6 +919,9 @@
         }
         & > a {
             display:block;position:relative;
+            &:before {
+                position:absolute;left:0;top:0;width:100%;height:100%;border:1px solid #000;box-sizing:border-box;content:"";
+            }
         }
         &:hover .info_bg_box {
             opacity:1;
@@ -1038,7 +1041,7 @@
             position:absolute;right:-65px;top:-62px;
         }
         img:nth-child(2){
-            position:absolute;left:-208px;bottom:-55px;
+            position:absolute;left:-208px;bottom:-60px;
         }
     }
 }
