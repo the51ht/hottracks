@@ -1,21 +1,21 @@
 
 /* 차트선택 : 년, 월, 주, 일 팝업 */
 .prod_sort_wrap.dep_top{
-    overflow: initial;height: 38px;
+    overflow: initial;
+    &:after{
+        display: block;clear: both;content: "";
+    }
 }
 .date_select_warp{
+    .tooltip_wrap {
+        position:static;
+    }
+    .btn_sort_date {
+        cursor: text !important;
+    }
     .tooltip_wrap{
         .tooltip_inner{
-            left: -266px;top: 25px;padding: 0; height:355px;
-            + .tooltip_inner{
-                left: 75px;
-                + .tooltip_inner{
-                    left: 416px;
-                    + .tooltip_inner{
-                        left: 757px;
-                    }
-                }
-            }
+            left:-50px;top:53px;padding: 0; height:355px;
             .tooltip_header{
                 padding: 22px;border-bottom: 1px solid #000;
                 .tooltip_head_title{
@@ -26,10 +26,16 @@
                 display:table; table-layout: fixed; width:100%;
                 .chart_select_warp{
                     display:table-cell;
+                    li {
+                        position:relative;
+                    }
                     input[type="radio"] {
-                        display: none;
-                        + label {
-                            display: inline-block;border: 1px solid #dfdfdf;background-color: #ffffff;text-align: center;cursor: pointer;font-size: 14px;color: #000;width: 100%;padding:13px 12px;border: initial;text-align: left;
+                        position: absolute;left:0;top:0;width:100%;height:100%;opacity:0;cursor:pointer;z-index:-1;
+                        + label  {
+                            display: inline-block;border: 1px solid #dfdfdf;background-color: #ffffff;text-align: center;cursor: pointer;font-size: 14px;color: #000;width: 100%;padding:12px;  border: initial;text-align: left; transition:all 0.4s;
+                            &:hover {
+                                background-color: #F5F5F5;color: #000;
+                            }
                         }
                         &:checked + label {
                             background-color: #F5F5F5;color: #000;
@@ -51,20 +57,14 @@
             }
         }
         &.active {
-            .tooltip_inner{
-                left: -266px;top: 25px;border-radius: 12px;
-                + .tooltip_inner{
-                    left: 75px;
-                    + .tooltip_inner{
-                        left: 416px;
-                        + .tooltip_inner{
-                            left: 757px;
-                        }
-                    }
-                }
-            }
+
             .btn_tooltip .ico_info{
                 background-image: url(../../../assets/common/images/arw_tooltip_active.png);background-color: #000;
+            }
+        }
+        .tooltip_header{
+            .btn_tooltip_close{
+                margin-top: 3px;
             }
         }
         .tooltip_footer{
@@ -73,7 +73,7 @@
             }
         }
         .custom_scroll_wrap{
-            max-height: calc(25.2vh - 100px) !important;border-right: 1px solid #ccc;
+            max-height: calc(318px - 100px) !important;border-right: 1px solid #ccc;
             .simplebar-track{
                 background:initial;right: 4px;top: 5px;
             }
@@ -84,3 +84,72 @@
     }
 }
 
+
+
+
+
+/**** 브랜드샵 ****/
+.brad_main_prod,
+.brad_main_coupon,
+.brad_main_exhibition,
+.brad_main_viewer{
+    .ht_tit{
+        text-align: center;
+    }
+}
+
+
+
+/* 브랜드 쿠폰 */
+.brad_main_coupon{
+    .brand_coupon_item{
+        position: relative;width: 379px;height: 288px;
+        &:before{
+            background: url(../images/guide/brand_coupon_bg.svg) no-repeat;content: "";display: inline-block;width: 376px;height: 285px;background-size: 100%;position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;
+        }
+    }
+    .cupon_info{
+        padding: 30px 40px 0 40px;height: 100%;box-sizing: border-box;
+        span{
+            display: block;text-align: left;
+        }
+        .discount{
+            font-size: 30px;color: #DA2128;font-weight: 600;
+        }
+        .title{
+            font-size: 20px;font-weight: 600;
+        }
+        .sub.gray{
+            font-size: 14px;color: #595959;margin-top: 10px; line-height: 22px;
+            + .sub.gray{
+                margin-top: 0px;
+            }
+        }
+        .cpon_notice{
+            font-size: 12px;color: #767676;margin-top: 12px;
+        }
+        .cpon_down{
+            font-size: 16px;font-weight: 600;position: absolute;bottom: 22px;left: 169px;
+        }
+    }
+}
+
+
+
+/* 브랜드 상품 */
+.brad_main_tab{
+    margin: 20px auto;
+}
+
+.brad_main_prod{
+    padding-bottom: 0;
+    .ht_tit{
+        margin-bottom: 0;
+    }
+    .list_info_text_warp{
+        border: 0;padding-top: 10px; float: left;margin-bottom: 0;
+    }
+    .prod_sort_wrap.dep_top{
+        margin-bottom: 0;padding-top: 0;float: right;
+    }
+}
