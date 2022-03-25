@@ -403,6 +403,11 @@
   position: relative;
 }
 
+.hot_deal_wrap .ht_tit {
+  margin-bottom: 24px;
+  line-height: 42px;
+}
+
 .hot_deal_wrap .hotdeal_shine {
   width: 35px;
   height: 35px;
@@ -441,12 +446,8 @@
   font-family: 'Gmarket Sans';
 }
 
-.mdl_wrap .hot_deal_wrap {
-  padding: 60px 0;
-}
-
-.mdl_wrap .hot_deal_wrap .timer_area {
-  top: 56px;
+.hot_deal_wrap .timer_area {
+  top: 57px;
 }
 
 /* 이벤트 목록 없음 */
@@ -673,7 +674,7 @@
 
 /*============================================ HTR-P-EVT-MDL.html ========================================*/
 .mdl_contents_wrap {
-  margin-top: 0;
+  margin-top: 20px !important;
 }
 
 .upper_wrap {
@@ -681,12 +682,6 @@
 }
 
 .mdl_wrap {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-
-.mdl_wrap .mdl_inner {
-  width: 1200px;
   margin: 0 auto;
 }
 
@@ -710,6 +705,16 @@
   margin: 0;
   border: none;
   background-color: #F0F0F0;
+}
+
+.mdl_wrap + .ht_under_banner_area {
+  margin-top: 60px;
+}
+
+.mdl_inner {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
 }
 
 .mdl001_wrap {
@@ -760,33 +765,33 @@
   background: url("../images/guide/btn_ht_share.svg") center/18px no-repeat;
 }
 
-.promotion_end {
-  border: 1px solid red;
-  position: relative;
-  background-color: #fff;
-  z-index: 10;
-}
-
-.promotion_end:before {
-  content: "종료되었습니다.";
-  position: absolute;
+.evt_end_dim {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
   top: 0;
   left: 0;
-  right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.evt_end_dim:before {
+  content: "종료되었습니다.";
+  position: absolute;
+  width: 100%;
+  z-index: 3;
   color: #fff;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 35px;
-  letter-spacing: -1px;
-  z-index: 5;
   text-align: center;
-  padding-top: 48vh;
+  padding-top: 45%;
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .mdl003_wrap {
-  padding: 120px 0;
+  padding-top: 120px;
 }
 
 .mdl003_wrap .ht_tit {
@@ -816,8 +821,9 @@
   padding-right: 20px !important;
 }
 
-.mdl_prod_wrap {
-  padding: 60px 0;
+.mdl_prod_wrap .ht_tit {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .mdl_prod_wrap .evt_products {
@@ -878,8 +884,6 @@
 .mdl009_wrap {
   margin: 0 auto;
   text-align: center;
-  padding: 60px 0;
-  max-width: 1920px;
 }
 
 .mdl009_wrap .btn_xlg {
@@ -1069,7 +1073,7 @@
 }
 
 .mdl014_wrap {
-  padding: 70px 0;
+  padding: 60px 0;
 }
 
 .mdl014_wrap .btn_md {
@@ -1336,7 +1340,6 @@
 
 .mdl017_wrap {
   overflow: hidden;
-  padding: 60px 0;
 }
 
 .mdl017_wrap .mdl_017_list {

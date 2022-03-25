@@ -1152,7 +1152,7 @@ $(function(){
    });
 
 
-   /*mdl009-3 투표하기*/
+   /*mdl 009-3 투표하기*/
    //라디오 선택
    $(document).on('click', '.evt_vote_list .evt_vote_radio', function(){
        var $textArea = $(this).parents('.evt_vote_list').next().find('.cmt_textarea');
@@ -1180,7 +1180,7 @@ $(function(){
 
 
 
-//mdl007 상품 2단 배너
+/*mdl 007 상품 2단 배너*/
 $(function(){
 	if(!$('.mdl_prod_banner').length) return;
 	mdl_prod_banner();
@@ -1226,3 +1226,57 @@ $(function(){
 
 });
 
+/*mdl 015 스티키 메뉴 스크롤 모션*/
+$(function(){
+    var stickyMenus  = document.querySelectorAll('.sticky_anchor_menu');
+    var menus, targetElem;
+    if(!stickyMenus) return;
+
+
+    var elemsInfo = {};
+
+    for(var i = 0; i < stickyMenus.length; i++) {
+        menus = document.querySelectorAll('.sticky_anchor_menu')[i].children; //li.swiper-slide
+
+        for(var mn = 0; mn < menus.length; mn++) {
+            menus[mn].addEventListener('click', moveScroll(event), true);
+
+            targetElem =  menus[mn].dataset.target;
+            elemsInfo[targetElem] = {                   //타겟 엘리먼트 길이, 높이값 저장
+                 'top' : $('#' + targetElem).offset().top, 
+                 'height' : $('#' + targetElem).height(), 
+                };
+        }
+    }
+
+    var headerHeight = $('header').height() || 0;
+
+
+    //스크롤 시 해당 메뉴 활성화
+    window.addEventListener('scroll', function(e){
+        headerHeight = $('header').height() || 0;
+        Object.keys(elemsInfo).forEach(function(ele, i){
+            if( $(window).scrollTop() >= (elemsInfo[ele].top - headerHeight - 65 ) &&
+                 $(window).scrollTop() < (elemsInfo[ele].top + elemsInfo[ele].height  - headerHeight - 65)) {
+                    $('.swiper-slide[data-target = "'+ ele +'"]').parents('.sticky_anchor_menu').find('a').removeClass('on');
+                    $('.swiper-slide[data-target = "'+ ele +'"]').children('a').addClass('on');
+            }
+        });
+    });
+
+    //taeget 엘리먼트로 스크롤 이동
+    function moveScroll(){
+        return function(e){
+            var targetId = e.target.closest('.swiper-slide').dataset.target;
+            var offsetT = $('#'+targetId).offset().top; //이동할 엘리먼트 높이
+            var stickyMnHeight = $(e.target.closest('.mdl_sticky_mn')).height(); //스티키 메뉴 높이
+            var targetTop = offsetT - headerHeight -  stickyMnHeight;
+
+             $('html, body').animate({ scrollTop : targetTop }, 300, function(){
+                 $(e.target).closest('a').parent('').siblings().find('.on').removeClass('on');
+                 $(e.target).closest('a').addClass('on');
+             });
+        }
+    }
+
+});
