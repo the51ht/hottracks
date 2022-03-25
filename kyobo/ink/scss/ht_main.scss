@@ -881,6 +881,16 @@
 /* wel_now_banner */
 .wel_now_banner {
     height:544px;overflow:visible;
+    &:before,
+    &:after {
+        position:absolute;left:-300%;;width:700%;height:2px;background:#000;content:"";z-index:5;
+    }
+    &:before {
+        top:0;
+    }
+    &:after {
+        bottom:0;
+    }
     .swiper-wrapper {
         background:#000;transition-timing-function:linear;
     }

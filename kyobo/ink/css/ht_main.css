@@ -1989,6 +1989,24 @@
   overflow: visible;
 }
 
+.wel_now_banner:before, .wel_now_banner:after {
+  position: absolute;
+  left: -300%;
+  width: 700%;
+  height: 2px;
+  background: #000;
+  content: "";
+  z-index: 5;
+}
+
+.wel_now_banner:before {
+  top: 0;
+}
+
+.wel_now_banner:after {
+  bottom: 0;
+}
+
 .wel_now_banner .swiper-wrapper {
   background: #000;
   -webkit-transition-timing-function: linear;
