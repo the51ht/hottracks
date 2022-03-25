@@ -7,6 +7,15 @@
     .tooltip_wrap{
         .tooltip_inner{
             left: -266px;top: 25px;padding: 0; height:355px;
+            + .tooltip_inner{
+                left: 75px;
+                + .tooltip_inner{
+                    left: 416px;
+                    + .tooltip_inner{
+                        left: 757px;
+                    }
+                }
+            }
             .tooltip_header{
                 padding: 22px;border-bottom: 1px solid #000;
                 .tooltip_head_title{
@@ -44,6 +53,15 @@
         &.active {
             .tooltip_inner{
                 left: -266px;top: 25px;border-radius: 12px;
+                + .tooltip_inner{
+                    left: 75px;
+                    + .tooltip_inner{
+                        left: 416px;
+                        + .tooltip_inner{
+                            left: 757px;
+                        }
+                    }
+                }
             }
             .btn_tooltip .ico_info{
                 background-image: url(../../../assets/common/images/arw_tooltip_active.png);background-color: #000;
