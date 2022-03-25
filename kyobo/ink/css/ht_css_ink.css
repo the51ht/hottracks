@@ -317,21 +317,11 @@ button.btn_lg {
   max-height: calc(85vh - 200px) !important;
 }
 
-/* 웰컴메인 팝업 - 토스트 메시지*/
-/*
-.toast_wrap {
-    display: none;
-    position: fixed;
-    left: 50% !important;
-    bottom: 36px !important;
-    width: calc(100% - 40px);
-    max-width: 335px;
-    z-index: 1005;
-    transform: translateX(-50%) !important;
-    transition: bottom 0.23s;
-    font-size: 0;
+.custom_scroll_wrap.sc_disabled {
+  overflow: hidden !important;
 }
-*/
+
+/* 웰컴메인 팝업 - 토스트 메시지*/
 .toast_wrap .toast_message {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -350,7 +340,8 @@ button.btn_lg {
           box-sizing: border-box;
   width: 100%;
   min-height: 50px;
-  padding: 15px 30px 11px;
+  height: auto !important;
+  padding: 15px 30px 11px !important;
   border-radius: 10px;
   background: black;
   border: 1px solid #000;
@@ -362,34 +353,6 @@ button.btn_lg {
   letter-spacing: -0.01em;
   font-weight: 500;
   text-align: center;
-}
-
-.welcome_toast .toast_message {
-  background: #fff;
-  padding: 15px 22px 11px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.welcome_toast .txt_toast {
-  color: #000;
-  text-align: left;
-  padding-left: 13px;
-  font-size: 13px;
-}
-
-.welcome_toast .txt_toast .btn_txt_more {
-  display: inline-block;
-}
-
-.welcome_toast .txt_toast .btn_txt_more a {
-  font-size: 12px;
-  color: #595959;
-}
-
-.welcome_toast .txt_toast span {
-  font-weight: bold;
 }
 
 /* 3교제 Custom */
@@ -1014,7 +977,6 @@ body {
   position: relative;
   margin-bottom: 20px;
   overflow: hidden;
-  z-index: 5;
 }
 
 .prod_sort_wrap.dep_top {

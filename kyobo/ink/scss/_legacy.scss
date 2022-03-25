@@ -267,27 +267,16 @@ button.btn_lg {
     &.sc_pop_btn {
         max-height:calc(85vh - 200px) !important;
     }
+    &.sc_disabled {
+        overflow:hidden !important;
+    }
 }
 
 
 
 
 /* 웰컴메인 팝업 - 토스트 메시지*/
-//토스트 메세지
-/*
-.toast_wrap {
-    display: none;
-    position: fixed;
-    left: 50% !important;
-    bottom: 36px !important;
-    width: calc(100% - 40px);
-    max-width: 335px;
-    z-index: 1005;
-    transform: translateX(-50%) !important;
-    transition: bottom 0.23s;
-    font-size: 0;
-}
-*/
+
 .toast_wrap .toast_message {
     display: inline-flex;
     justify-content: center;
@@ -296,7 +285,8 @@ button.btn_lg {
     box-sizing: border-box;
     width: 100%;
     min-height: 50px;
-    padding: 15px 30px 11px;
+    height:auto !important;
+    padding: 15px 30px 11px !important;
     border-radius: 10px;
     background: rgba(0, 0, 0, 1);
     border: 1px solid #000;
@@ -307,23 +297,6 @@ button.btn_lg {
     letter-spacing: -0.01em;
     font-weight: 500;
     text-align: center;
-}
-.welcome_toast {
-    .toast_message{
-        background: #fff;padding: 15px 22px 11px;justify-content: start;
-    }
-    .txt_toast{
-        color: #000;text-align: left;padding-left: 13px;font-size: 13px;
-        .btn_txt_more{
-            display: inline-block;
-            a{
-                font-size: 12px;color: #595959;
-            }
-        }
-        span{
-            font-weight: bold;
-        }
-    }
 }
 
 
