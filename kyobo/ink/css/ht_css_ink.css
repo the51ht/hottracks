@@ -346,23 +346,37 @@ button.btn_lg {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 100%;
   min-height: 50px;
   height: auto !important;
   padding: 15px 30px 11px !important;
-  border-radius: 10px;
   background: black;
   border: 1px solid #000;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
   color: #fff;
   font-size: 14px;
-  line-height: 22px;
-  letter-spacing: -0.01em;
   font-weight: 500;
+  line-height: 22px;
   text-align: center;
+}
+
+/* 레이아웃 */
+.wrapper .header_wrapper .service_mall_wrap .service_mall_inner:before,
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item .user_menu_link .cnt {
+  background-color: #da2128;
+}
+
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.my .user_menu_link:before {
+  background-image: url("../images/layout/btn_header_my.png");
+}
+
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.my {
+  -webkit-box-shadow: 0 5px 10px 0 rgba(211, 0, 0, 0.5);
+          box-shadow: 0 5px 10px 0 rgba(211, 0, 0, 0.5);
 }
 
 /* 3교제 Custom */
