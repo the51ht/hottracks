@@ -848,10 +848,98 @@
 
 
 /*** 지금, 이 상품을 : .wel_now ***/
+.wel_now {
+    padding:0 0 80px 0;background:#1977f2 url('../images/main/bg_wel_now.jpg') center top/33px repeat;text-align:center;overflow:hidden;
+    .wel_now_tit {
+        display:inline-block;position:relative;width:590px;padding:100px 0 65px 0;
+        .s1 {
+            position:absolute;left:74px;top:55px;width:450px;
+        }
+        .s2 {
+            position:absolute;left:-13px;top:70px;width:70px;
+        }
+        .s3 {
+            position:absolute;right:-20px;top:30px;width:122px;
+        }
+    }
+    .ht_tit_big {
+        margin-bottom:0;
+        color:#fff;
+    }
+    .tab_ty a:before {
+        border-color:#000;
+    }
+    .tab_swiper {
+        margin-bottom:20px;
+    }
+    .tab_swiper .swiper_control .swiper-button-prev:before,
+    .tab_swiper .swiper_control .swiper-button-next:before {
+        background:linear-gradient(to right, rgba(25, 119, 241, 0) 20%, #1977f1 60%);
+    }
+}
 
-
-
-
+/* wel_now_banner */
+.wel_now_banner {
+    height:544px;overflow:visible;
+    .swiper-wrapper {
+        transition-timing-function:linear;
+    }
+    .swiper-slide {
+        display:flex;width:2448px;
+    }
+    .img {
+        width:272px;height:272px;box-sizing:border-box;flex-shrink:0;overflow:hidden;
+        &:nth-of-type(3n+1) {
+            width:544px;height:544px;
+            .info_bg_box {
+                padding:0 80px;
+            }
+        }
+        &:nth-of-type(3){
+            transform:translate(-100%, 100%);
+        }
+        &:nth-of-type(4){
+            transform:translateX(-50% );
+        }
+        &:nth-of-type(5),
+        &:nth-of-type(7){
+            transform:translateX(-100%);
+        }
+        &:nth-of-type(6){
+            transform:translate(-200%, 100%);
+        }
+        &:nth-of-type(8){
+            transform:translateX(-200% );
+        }
+        &:nth-of-type(9){
+            transform:translate(-300%, 100%);
+        }
+        img {
+            width:100%;
+        }
+        & > a {
+            display:block;position:relative;
+        }
+        &:hover .info_bg_box {
+            opacity:1;
+            .title {
+                margin-top:0;
+            }
+        }
+    }
+    .info_bg_box {
+        display:flex;position:absolute;left:0;top:0;width:100%;height:100%;padding:0 30px;box-sizing:border-box;background-color:rgba(0,0,0,0.8);color:#fff;flex-flow:row wrap;align-items:center;align-content:center;justify-content:flex-start;opacity:0;overflow:hidden;transition:opacity .3s;z-index:3;
+        .title {
+            display:-webkit-box;width:100%;margin-top:10%;margin-bottom:10px;font-size:16px;line-height:24px;letter-spacing:-1px;text-align:left;word-break:keep-all;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;transition:margin-top .3s;
+        }
+        .discount {
+            margin-right:4px;font-size:20px;font-weight:700;line-height:30px;letter-spacing:-1px;
+        }
+        .price_origin {
+            font-size:20px;font-weight:700;line-height:30px;letter-spacing:-1px;
+        }
+    }
+}
 
 
 
@@ -1141,7 +1229,7 @@
 }
 
 /* wel_gift_cont */
-.wel_gift_cont{
+.wel_gift_cont {
     position:relative;margin:0;
     .swiper-container {
         overflow:inherit;
@@ -1215,21 +1303,85 @@
 
 
 
+/*** 카테고리 : .wel_category ***/
+.wel_category {
+    .ht_tit_big {
+        text-align:center;
+        img {
+            position:relative;margin:-3px 0 0 15px;width:42px;height:42px;
+        }
+    }
+}
 
+/* wel_category_tab */
+.wel_category_tab {
+    .tab_swiper {
+        margin-bottom:40px;
+    }
+    &.on {
+        .wel_category_tab_inner {
+            position:fixed;top:80px;z-index:10;width:1300px;margin:0 -50px;padding:20px 50px;background:#fff;box-sizing:border-box;
+            &:after {
+                position:absolute;left:-300%;bottom:0;width:700%;height:1px;background-color:#eaeaea;content:"";
+            }
+            .tab_swiper {
+                margin-bottom:0;
+            }
+        }
+    }
+}
 
+/* wel_category_rank */
+.wel_category_rank {
+    counter-reset:item;overflow:hidden;
+    .prod_item {
+        float:left;width:273px !important;
+        &:last-of-type {
+            position:relative;
+            &:before {
+                position:absolute;left:50%;top:100px;width:35px;height:35px;background:url('../images/guide/ico_plus_big.svg') center/ 100% no-repeat;transform:translateX(-50%);content:"";z-index:1;
+            }
+        }
+        .product_pic {
+            display:block;position:relative;
+            &:after {
+                position:absolute;left:10px;top:10px;width:24px;height:24px;padding-right:1px;background:#000;border-radius:4px;box-sizing:border-box;color:#fff;letter-spacing:-1px;font-size:15px;font-weight:700;line-height:25px;text-align:center;content:counter(item);counter-increment:item;
+            }
+        }
+    }    
+    .btn_box_more {
+        position:relative;width:271px;height:0;padding-top:100%;background:#fff;border:1px dashed #D5D5D5;border-radius:12px;overflow:hidden;font-size:14px;font-weight:500;transition:background 0.4s;
+        p {
+            display:flex;flex-direction:row;justify-content:center;align-items:center;position:absolute;left:0;top:0;width:100%;height:100%;margin-top:18px;
+            span{
+                display:inline-block;position:relative;padding-right:10px;line-height:20px;letter-spacing:-1px;
+                &:after {
+                    position:absolute;right:0;top:50%;width:6px;height:6px;margin-top:-4px;border:solid #000;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
+                }
+            }
+        }
+        &:hover {
+            background-color:#f4f4f4;
+        }
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* wel_category_banner */
+.wel_category_banner {
+    position:relative;
+    .swiper-container {
+        position:relative;width:calc(100% + 18px);margin-left:-18px;
+    }
+    .evt_list{
+        display:flex;flex-flow:row nowrap;margin:0;
+        & > li{
+            width:582px !important;
+            &:last-of-type {
+                margin-right:0;
+            }
+        }
+    } 
+}
 
 
 
