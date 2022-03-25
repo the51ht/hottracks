@@ -10,13 +10,17 @@
   content: "";
 }
 
+.date_select_warp .tooltip_wrap {
+  position: static;
+}
+
 .date_select_warp .btn_sort_date {
   cursor: text !important;
 }
 
 .date_select_warp .tooltip_wrap .tooltip_inner {
-  left: -266px;
-  top: 25px;
+  left: -50px;
+  top: 53px;
   padding: 0;
   height: 355px;
 }
@@ -40,8 +44,19 @@
   display: table-cell;
 }
 
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp li {
+  position: relative;
+}
+
 .date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"] {
-  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: -1;
 }
 
 .date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"] + label {
@@ -56,6 +71,13 @@
   padding: 12px;
   border: initial;
   text-align: left;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"] + label:hover {
+  background-color: #F5F5F5;
+  color: #000;
 }
 
 .date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"]:checked + label {
@@ -83,12 +105,6 @@
 .date_select_warp .tooltip_wrap .btn_tooltip [class^=ico_] {
   width: 18px;
   height: 18px;
-}
-
-.date_select_warp .tooltip_wrap.active .tooltip_inner {
-  left: -266px;
-  top: 25px;
-  border-radius: 12px;
 }
 
 .date_select_warp .tooltip_wrap.active .btn_tooltip .ico_info {
