@@ -1929,6 +1929,210 @@
 }
 
 /*** 지금, 이 상품을 : .wel_now ***/
+.wel_now {
+  padding: 0 0 80px 0;
+  background: #1977f2 url("../images/main/bg_wel_now.jpg") center top/33px repeat;
+  text-align: center;
+  overflow: hidden;
+}
+
+.wel_now .wel_now_tit {
+  display: inline-block;
+  position: relative;
+  width: 590px;
+  padding: 100px 0 65px 0;
+}
+
+.wel_now .wel_now_tit .s1 {
+  position: absolute;
+  left: 74px;
+  top: 55px;
+  width: 450px;
+}
+
+.wel_now .wel_now_tit .s2 {
+  position: absolute;
+  left: -13px;
+  top: 70px;
+  width: 70px;
+}
+
+.wel_now .wel_now_tit .s3 {
+  position: absolute;
+  right: -20px;
+  top: 30px;
+  width: 122px;
+}
+
+.wel_now .ht_tit_big {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.wel_now .tab_ty a:before {
+  border-color: #000;
+}
+
+.wel_now .tab_swiper {
+  margin-bottom: 20px;
+}
+
+.wel_now .tab_swiper .swiper_control .swiper-button-prev:before,
+.wel_now .tab_swiper .swiper_control .swiper-button-next:before {
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, rgba(25, 119, 241, 0)), color-stop(60%, #1977f1));
+  background: linear-gradient(to right, rgba(25, 119, 241, 0) 20%, #1977f1 60%);
+}
+
+/* wel_now_banner */
+.wel_now_banner {
+  height: 544px;
+  overflow: visible;
+}
+
+.wel_now_banner .swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.wel_now_banner .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2448px;
+}
+
+.wel_now_banner .img {
+  width: 272px;
+  height: 272px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow: hidden;
+}
+
+.wel_now_banner .img:nth-of-type(3n+1) {
+  width: 544px;
+  height: 544px;
+}
+
+.wel_now_banner .img:nth-of-type(3n+1) .info_bg_box {
+  padding: 0 80px;
+}
+
+.wel_now_banner .img:nth-of-type(3) {
+  -webkit-transform: translate(-100%, 100%);
+          transform: translate(-100%, 100%);
+}
+
+.wel_now_banner .img:nth-of-type(4) {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.wel_now_banner .img:nth-of-type(5), .wel_now_banner .img:nth-of-type(7) {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.wel_now_banner .img:nth-of-type(6) {
+  -webkit-transform: translate(-200%, 100%);
+          transform: translate(-200%, 100%);
+}
+
+.wel_now_banner .img:nth-of-type(8) {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+.wel_now_banner .img:nth-of-type(9) {
+  -webkit-transform: translate(-300%, 100%);
+          transform: translate(-300%, 100%);
+}
+
+.wel_now_banner .img img {
+  width: 100%;
+}
+
+.wel_now_banner .img > a {
+  display: block;
+  position: relative;
+}
+
+.wel_now_banner .img:hover .info_bg_box {
+  opacity: 1;
+}
+
+.wel_now_banner .img:hover .info_bg_box .title {
+  margin-top: 0;
+}
+
+.wel_now_banner .info_bg_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+  z-index: 3;
+}
+
+.wel_now_banner .info_bg_box .title {
+  display: -webkit-box;
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1px;
+  text-align: left;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-transition: margin-top .3s;
+  transition: margin-top .3s;
+}
+
+.wel_now_banner .info_bg_box .discount {
+  margin-right: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -1px;
+}
+
+.wel_now_banner .info_bg_box .price_origin {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -1px;
+}
+
 /*** 기획전 : .wel_exehibition ***/
 .wel_exehibition .evt_list {
   display: -webkit-box;
@@ -2671,6 +2875,197 @@
   height: 26px;
   font-size: 48px;
   content: "”";
+}
+
+/*** 카테고리 : .wel_category ***/
+.wel_category .ht_tit_big {
+  text-align: center;
+}
+
+.wel_category .ht_tit_big img {
+  position: relative;
+  margin: -3px 0 0 15px;
+  width: 42px;
+  height: 42px;
+}
+
+/* wel_category_tab */
+.wel_category_tab .tab_swiper {
+  margin-bottom: 40px;
+}
+
+.wel_category_tab.on .wel_category_tab_inner {
+  position: fixed;
+  top: 80px;
+  z-index: 10;
+  width: 1300px;
+  margin: 0 -50px;
+  padding: 20px 50px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wel_category_tab.on .wel_category_tab_inner:after {
+  position: absolute;
+  left: -300%;
+  bottom: 0;
+  width: 700%;
+  height: 1px;
+  background-color: #eaeaea;
+  content: "";
+}
+
+.wel_category_tab.on .wel_category_tab_inner .tab_swiper {
+  margin-bottom: 0;
+}
+
+/* wel_category_rank */
+.wel_category_rank {
+  counter-reset: item;
+  overflow: hidden;
+}
+
+.wel_category_rank .prod_item {
+  float: left;
+  width: 273px !important;
+}
+
+.wel_category_rank .prod_item:last-of-type {
+  position: relative;
+}
+
+.wel_category_rank .prod_item:last-of-type:before {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  width: 35px;
+  height: 35px;
+  background: url("../images/guide/ico_plus_big.svg") center/100% no-repeat;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: "";
+  z-index: 1;
+}
+
+.wel_category_rank .prod_item .product_pic {
+  display: block;
+  position: relative;
+}
+
+.wel_category_rank .prod_item .product_pic:after {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+  padding-right: 1px;
+  background: #000;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  letter-spacing: -1px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: center;
+  content: counter(item);
+  counter-increment: item;
+}
+
+.wel_category_rank .btn_box_more {
+  position: relative;
+  width: 271px;
+  height: 0;
+  padding-top: 100%;
+  background: #fff;
+  border: 1px dashed #D5D5D5;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
+}
+
+.wel_category_rank .btn_box_more p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 18px;
+}
+
+.wel_category_rank .btn_box_more p span {
+  display: inline-block;
+  position: relative;
+  padding-right: 10px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+
+.wel_category_rank .btn_box_more p span:after {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -4px;
+  border: solid #000;
+  border-width: 1px 1px 0 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  content: "";
+  overflow: hidden;
+}
+
+.wel_category_rank .btn_box_more:hover {
+  background-color: #f4f4f4;
+}
+
+/* wel_category_banner */
+.wel_category_banner {
+  position: relative;
+}
+
+.wel_category_banner .swiper-container {
+  position: relative;
+  width: calc(100% + 18px);
+  margin-left: -18px;
+}
+
+.wel_category_banner .evt_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin: 0;
+}
+
+.wel_category_banner .evt_list > li {
+  width: 582px !important;
+}
+
+.wel_category_banner .evt_list > li:last-of-type {
+  margin-right: 0;
 }
 
 /***** * 음반메인 * *****/

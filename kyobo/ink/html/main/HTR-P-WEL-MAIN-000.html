@@ -55,8 +55,6 @@
 <script src="../../js/ui_ink.js"></script>
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
-<script src="../../js/ht_wel.js"></script>
-<link rel="stylesheet" href="../../css/ht_wel.css">
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
 </head>
 
@@ -1119,12 +1117,7 @@
 
 
 
-
-
-
-
-
-			<!-- ht_cont : 지금 이 상품을 -->
+			<!-- ht_cont : 지금 이 상품을 function - wel_now_banner();-->
 			<div class="ht_cont wel_now">
 				<div class="contents_inner">
 					<!-- wel_now_tit -->
@@ -1142,28 +1135,28 @@
 						<!-- swiper-wrapper -->
 						<ul class="swiper-wrapper">
 							<li class="swiper-slide">
-								<a href="#n" class="on">
+								<a href="#now1" class="on">
 									<img src="../../images/main/ico_tab_ty11.png" alt="">
 									<span>NOW 인기</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#now2">
 									<span>정리의기술</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#now1">
 									<span>리히트랩</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#now2">
 									<span>크리스마스카드</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#now1">
 									<span>미니언즈</span>
 								</a>
 							</li>
@@ -1187,7 +1180,6 @@
 									<span>아이코닉</span>
 								</a>
 							</li>
-
 							<li class="swiper-slide">
 								<a href="#n">
 									<span>플레이스테이션</span>
@@ -1226,306 +1218,223 @@
 					</div>
 					<!-- //tab_ty -->
 
-
-					<!--wel_prod_banner-->
-					<div class="swiper-container wel_now_banner">
-						<ul class="swiper-wrapper">
-							<!--li.swiper-slide 반복-->
-							<li class="swiper-slide" >
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now01.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now02.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now03.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now04.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now05.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now06.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now07.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img" >
-									<a href="#n">
-										<img src="../../images/temp/@img_now08.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img" >
-									<a href="#n">
-										<img src="../../images/temp/@img_now09.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-							</li>
-							<!--//li.swiper-slide 반복-->
+<script>
+$(function(){
+	$('.wel_now .tab_link a').click(function(){    
+		wel_now_banner()
+	});
+});
+</script>
 
 
-
-							<li class="swiper-slide" >
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now01.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now02.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now03.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now04.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now05.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now06.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now07.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img" >
-									<a href="#n">
-										<img src="../../images/temp/@img_now08.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img" >
-									<a href="#n">
-										<img src="../../images/temp/@img_now09.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-							</li>
-
-							<li class="swiper-slide" >
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now01.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now02.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now03.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now04.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now05.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now06.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img">
-									<a href="#n">
-										<img src="../../images/temp/@img_now07.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img" >
-									<a href="#n">
-										<img src="../../images/temp/@img_now08.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-								<div class="img" >
-									<a href="#n">
-										<img src="../../images/temp/@img_now09.jpg" alt="">
-										<ul class="info_bg_box">
-											<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
-											<div class="discount">10%</div>
-											<div class="price_origin">12,000</div>
-										</ul>
-									</a>
-								</div>
-							</li>
-						</ul>
+					<!-- NOW 인기 -->
+					<div class="tab_cont on" id="now1"><!-- tab_link / tab_cont .on : 확인용 - Ajax 처리시 해당 class 삭제 / 모션처리 class="on" -->
+						<!-- wel_prod_banner -->
+						<div class="swiper-container wel_now_banner">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide" >
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now01.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now02.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now03.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now04.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now05.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now06.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now07.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img" >
+										<a href="#n">
+											<img src="../../images/temp/@img_now08.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img" >
+										<a href="#n">
+											<img src="../../images/temp/@img_now09.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //wel_prod_banner-->
 					</div>
-					<!--//wel_prod_banner-->
+					<!-- //NOW 인기 -->
 
-
+					<!-- 정리의기술 -->
+					<div class="tab_cont" id="now2"><!-- tab_link / tab_cont .on : 확인용 - Ajax 처리시 해당 class 삭제 / 모션처리 class="on" -->
+						<!-- wel_prod_banner -->
+						<div class="swiper-container wel_now_banner">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide" >
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now09.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now08.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now07.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now06.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now05.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now04.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img">
+										<a href="#n">
+											<img src="../../images/temp/@img_now03.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img" >
+										<a href="#n">
+											<img src="../../images/temp/@img_now02.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+									<div class="img" >
+										<a href="#n">
+											<img src="../../images/temp/@img_now01.jpg" alt="">
+											<ul class="info_bg_box">
+												<div class="title">2022 컬러풀 2단 캘린더 체크 리스트</div>
+												<div class="discount">10%</div>
+												<div class="price_origin">12,000</div>
+											</ul>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //wel_prod_banner-->
+					</div>
+					<!-- //정리의기술 -->
 				</div>
 			</div>
 			<!-- //ht_cont : 지금 이 상품을 -->
-
-
-
-
-
-
 
 
 
@@ -1668,6 +1577,7 @@
 				</div>					
 			</div>
 			<!-- //ht_cont : 기획전 -->
+
 
 
 			<!-- ht_cont : 큐레이션 -->
@@ -2022,42 +1932,42 @@
 					<h2 class="ht_tit_big">선물이 필요한 순간, 핫트<img src="../../images/main/tit_wel_gift_heart.svg" alt="">하세요</h2>
 
 					<!-- tab_ty -->
-					<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+					<div class="tab_swiper tab_ty tab_link"><!-- tab_link_gift :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
 						<!-- swiper-wrapper -->
 						<ul class="swiper-wrapper">
 							<li class="swiper-slide">
-								<a href="#n" class="on"><!-- 활성화  class="on" -->
+								<a href="#gift1" class="on"><!-- 활성화  class="on" -->
 									<img src="../../images/main/ico_wel_gift_tab.svg" alt="">
 									<span>남다른</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#gift2">
 									<span>금액별</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#gift1">
 									<span>단체선물</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#gift2">
 									<span>기념일</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#gift1">
 									<span>디지털</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#gift2">
 									<span>미식가</span>
 								</a>
 							</li>
 							<li class="swiper-slide">
-								<a href="#n">
+								<a href="#gift1">
 									<span>아무거나</span>
 								</a>
 							</li>
@@ -2072,6 +1982,7 @@
 						<!-- //swiper_control -->
 					</div>
 					<!-- //tab_ty -->
+
 
 					<!-- tab_txt : 하단 border - tab_under -->
 					<div class="tab_txt tab_under tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
@@ -2103,172 +2014,355 @@
 							</li>
 						</ul>
 					</div>
-					<!-- //tab_txt : 하단 border - tab_under -->  
+					<!-- //tab_txt : 하단 border - tab_under -->
 
-					<!-- wel_gift_cont -->
-					<div class="wel_gift_cont">
-						<div class="swiper-container">
-							<!-- swiper-wrapper -->
-							<ul class="swiper-wrapper">
-								<!-- swiper-slide 반복 -->
-								<li class="swiper-slide">
-									<div class="img_wrap">
-										<a href="#">
-											<p class="img"><img src="../../images/temp/@img_wel_gift01.jpg" alt=""></p>
-											<div class="product_info">
-												<div class="product_info_inner">
-													<div class="desc">
-														<p>
-															2022년 다이어리 꾸미기는 
-															우리에게 맡겨라! 핫트랙스 
-															인기 작가들의 콜라보 모음!
-														</p>
-													</div>
-													<!--<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<div class="price_line">
-														<span class="discount_rate">10%</span>
-														<span class="final_price">12,000</span>
-														<span class="price_origin"></span>
-													</div>-->
-												</div>
-											</div>
-										</a>
-									</div>
-								</li>
-								<!-- //swiper-slide 반복 -->
+<script>
+$(function(){
+    $('.wel_gift .tab_link a').click(function(){    
+		welGift();
+    });
+});
+</script>
 
-								
-								<li class="swiper-slide">
-									<div class="img_wrap">
-										<a href="#">
-											<p class="img"><img src="../../images/temp/@img_wel_gift02.jpg" alt=""></p>
-											<div class="product_info">
-												<div class="product_info_inner">
-													<div class="desc">
-														<p>
-															2022년 다이어리 꾸미기는 
-															우리에게 맡겨라! 핫트랙스 
-															인기 작가들의 콜라보 모음!
-														</p>
-													</div>
-													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<div class="price_line">
-														<span class="discount_rate">10%</span>
-														<span class="final_price">12,000</span>
-														<span class="price_origin"></span>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-								</li>
-								<li class="swiper-slide">
-									<div class="img_wrap">
-										<a href="#">
-											<p class="img"><img src="../../images/temp/@img_wel_gift03.jpg" alt=""></p>
-											<div class="product_info">
-												<div class="product_info_inner">
-													<div class="desc">
-														<p>
-															2022년 다이어리 꾸미기는 
-															우리에게 맡겨라! 핫트랙스 
-															인기 작가들의 콜라보 모음!
-														</p>
-													</div>
-													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<div class="price_line">
-														<span class="discount_rate">10%</span>
-														<span class="final_price">12,000</span>
-														<span class="price_origin"></span>
+					<!-- 남다른 -->
+					<div class="tab_cont on" id="gift1"><!-- tab_link / tab_cont .on : 확인용 - Ajax 처리시 해당 class 삭제 / 모션처리 class="on" -->
+						<!-- wel_gift_cont -->
+						<div class="wel_gift_cont">
+							<div class="swiper-container">
+								<!-- swiper-wrapper -->
+								<ul class="swiper-wrapper">
+									<!-- swiper-slide 반복 -->
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift01.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<!--<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin"></span>
+														</div>-->
 													</div>
 												</div>
-											</div>
-										</a>
-									</div>
-								</li>
-								<li class="swiper-slide">
-									<div class="img_wrap">
-										<a href="#">
-											<p class="img"><img src="../../images/temp/@img_wel_gift04.jpg" alt=""></p>
-											<div class="product_info">
-												<div class="product_info_inner">
-													<div class="desc">
-														<p>
-															2022년 다이어리 꾸미기는 
-															우리에게 맡겨라! 핫트랙스 
-															인기 작가들의 콜라보 모음!
-														</p>
-													</div>
-													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<div class="price_line">
-														<span class="discount_rate">10%</span>
-														<span class="final_price">12,000</span>
-														<span class="price_origin"></span>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-								</li>
-								<li class="swiper-slide">
-									<div class="img_wrap">
-										<a href="#">
-											<p class="img"><img src="../../images/temp/@img_wel_gift05.jpg" alt=""></p>
-											<div class="product_info">
-												<div class="product_info_inner">
-													<div class="desc">
-														<p>
-															2022년 다이어리 꾸미기는 
-															우리에게 맡겨라! 핫트랙스 
-															인기 작가들의 콜라보 모음!
-														</p>
-													</div>
-													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<div class="price_line">
-														<span class="discount_rate">10%</span>
-														<span class="final_price">12,000</span>
-														<span class="price_origin">31,800</span>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-								</li>
-								<li class="swiper-slide"> 
-									<div class="img_wrap">
-										<a href="#">
-											<p class="img"><img src="../../images/temp/@img_wel_gift06.jpg" alt=""></p>
-											<div class="product_info">
-												<div class="product_info_inner">
-													<div class="desc">
-														<p>
-															2022년 다이어리 꾸미기는 
-															우리에게 맡겨라! 핫트랙스 
-															인기 작가들의 콜라보 모음!
-														</p>
-													</div>
-													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<div class="price_line">
-														<span class="discount_rate">10%</span>
-														<span class="final_price">12,000</span>
-														<span class="price_origin">31,800</span>
-													</div>
-												</div>
-											</div>
-										</a>
-									</div>
-								</li>
-							</ul>
-							<!-- //swiper-wrapper -->
+											</a>
+										</div>
+									</li>
+									<!-- //swiper-slide 반복 -->
 
-							<!-- swiper_control -->
-							<div class="swiper_control">
-								<div class="swiper-pagination"></div>
+									
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift02.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin"></span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift03.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin"></span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift04.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin"></span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift05.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin">31,800</span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide"> 
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift06.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin">31,800</span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<!-- //swiper-wrapper -->
+
+								<!-- swiper_control -->
+								<div class="swiper_control">
+									<div class="swiper-pagination"></div>
+								</div>
+								<!-- //swiper_control -->
 							</div>
-							<!-- //swiper_control -->
 						</div>
+						<!-- //wel_gift_cont -->
 					</div>
-					<!-- //wel_gift_cont -->
+					<!-- //남다른 -->
+
+
+					<!-- 금액별 -->
+					<div class="tab_cont" id="gift2"><!-- tab_link / tab_cont .on : 확인용 - Ajax 처리시 해당 class 삭제 / 모션처리 class="on" -->
+						<!-- wel_gift_cont -->
+						<div class="wel_gift_cont">
+							<div class="swiper-container">
+								<!-- swiper-wrapper -->
+								<ul class="swiper-wrapper">
+									<!-- swiper-slide 반복 -->
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift06.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<!--<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin"></span>
+														</div>-->
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<!-- //swiper-slide 반복 -->
+
+									
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift05.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin"></span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift04.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin"></span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift03.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin"></span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide">
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift02.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin">31,800</span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+									<li class="swiper-slide"> 
+										<div class="img_wrap">
+											<a href="#">
+												<p class="img"><img src="../../images/temp/@img_wel_gift01.jpg" alt=""></p>
+												<div class="product_info">
+													<div class="product_info_inner">
+														<div class="desc">
+															<p>
+																2022년 다이어리 꾸미기는 
+																우리에게 맡겨라! 핫트랙스 
+																인기 작가들의 콜라보 모음!
+															</p>
+														</div>
+														<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
+														<div class="price_line">
+															<span class="discount_rate">10%</span>
+															<span class="final_price">12,000</span>
+															<span class="price_origin">31,800</span>
+														</div>
+													</div>
+												</div>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<!-- //swiper-wrapper -->
+
+								<!-- swiper_control -->
+								<div class="swiper_control">
+									<div class="swiper-pagination"></div>
+								</div>
+								<!-- //swiper_control -->
+							</div>
+						</div>
+						<!-- //wel_gift_cont -->
+					</div>
+					<!-- //금액별 -->
+
 
 					<!-- btn_area -->
 					<div class="btn_gift_warp">
@@ -2291,7 +2385,7 @@
 
 
 
-			<!-- ht_cont : 카테고리 -->
+			<!-- ht_cont : 카테고리 - PC는 Tab 클릭방식! -->
 			<div class="ht_cont wel_category">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big">카테고리 베스트<img src="../../images/main/img_wel_category_smile.svg" alt=""></h2>
@@ -2305,37 +2399,37 @@
 								<!-- swiper-wrapper -->
 								<ul class="swiper-wrapper">
 									<li class="swiper-slide">
-										<a href="#n" class="on ">
+										<a href="#cate1" class="on ">
 											<img src="../../images/main/ico_tab_ty_c01.png" alt="">
 											<span>디자인문구</span>
 										</a>
 									</li>
 									<li class="swiper-slide">
-										<a href="#n">
+										<a href="#cate2">
 											<img src="../../images/main/ico_tab_ty_c02.png" alt="">
 											<span>디지털/자동차</span>
 										</a>
 									</li>
 									<li class="swiper-slide">
-										<a href="#n">
+										<a href="#cate1">
 											<img src="../../images/main/ico_tab_ty_c03.png" alt="">
 											<span>필기구</span>
 										</a>
 									</li>
 									<li class="swiper-slide">
-										<a href="#n">
+										<a href="#cate2">
 											<img src="../../images/main/ico_tab_ty_c04.png" alt="">
 											<span>오피스</span>
 										</a>
 									</li>
 									<li class="swiper-slide">
-										<a href="#n">
+										<a href="#cate1">
 											<img src="../../images/main/ico_tab_ty_c05.png" alt="">
 											<span>리빙/생활가전</span>
 										</a>
 									</li>
 									<li class="swiper-slide">
-										<a href="#n">
+										<a href="#cate2">
 											<img src="../../images/main/ico_tab_ty_c06.png" alt="">
 											<span>키친</span>
 										</a>
@@ -2409,374 +2503,743 @@
 									<div class="swiper-button-prev"></div>
 									<div class="swiper-button-next"></div>
 								</div>
-							<!-- //swiper_control -->
+								<!-- //swiper_control -->
 							</div>
 							<!-- //tab_ty -->
 						</div>
 						<!-- //wel_category_tab_inner -->
 					</div>
 					<!-- //wel_category_tab -->
-					
-
-					<!-- 상품 리스트 :4단 -->
-					<ul class="wel_category_rank evt_products"><!-- row type : class="row_dir" -->
-						<!-- prod_item 반복 --><!-- 15위 까지 노출 -->
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod01.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<!-- //prod_item 반복 -->
 
 
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod02.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
+					<!-- 디자인 문구 -->
+					<div class="tab_cont on" id="cate1"><!-- tab_link / tab_cont .on : 확인용 - Ajax 처리시 해당 class 삭제 / 모션처리 class="on" -->
+						<!-- 상품 리스트  -->
+						<ul class="wel_category_rank evt_products"><!-- 15위 까지 노출 -->
+							<!-- prod_item 반복 -->
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod01.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>>
 								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod03.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod04.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod05.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod06.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod01.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod02.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod03.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod04.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod05.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod06.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod01.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod02.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod03.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-							</div>
-							<div class="product_info">
-								<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-								</div>
-							</div>
-						</li>
-
-						<!-- 전체보기 -->
-						<li class="prod_item">
-							<a href="#n">
-								<div class="btn_box_more">
-									<p>
-										<span>베스트 전체보기</span>
-									</p>
-								</div>
-							</a>
-						</li>
-						<!-- //전체보기 -->
-					</ul>	
-					<!-- //상품 리스트 : 4단 -->	
-
-
-					<!-- 2단 배너 wel_category_banner-->
-					<div class="wel_category_banner"><!--function: wel_category_banner-->						
-						<div class="swiper-container">
-							<!-- evt_list -->
-							<ul class="swiper-wrapper evt_list">
-								<!-- li 반복 -->
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB1.jpg" alt=""></p></a>
-		
-										<!-- small_pics_area -->
-										<ul class="small_pics_area">
-											<li>
-												<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
-												<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
-											</li>
-										</ul>
-										<!-- //small_pics_area -->
-										<p class="evt_end_msg"><em>기획전 종료</em></p><!-- 기획전 종료시 -->
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
 									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표1</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-										<li class="date">2021.11.04~2021.11.17</li>
-									</ul>
-								</li>
-								<!-- //li 반복 -->
-		
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB2.jpg" alt=""></p></a>
-										<!-- small_pics_area -->
-										<ul class="small_pics_area">
-											<li>
-												<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
-												<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
-											</li>
-										</ul>
-										<!-- //small_pics_area -->
+								</div>
+							</li>
+							<!-- //prod_item 반복 -->
+
+
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod02.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
 									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표2</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-										<li class="date">2021.11.04~2021.11.17</li>
-									</ul>
-								</li>
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB3.jpg" alt=""></p></a>
-										<!-- small_pics_area -->
-										<ul class="small_pics_area">
-											<li>
-												<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
-												<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
-											</li>
-										</ul>
-										<!-- //small_pics_area -->
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod03.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
 									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표3</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-										<li class="date">2021.11.04~2021.11.17</li>
-									</ul>
-								</li>
-								<li class="swiper-slide">
-									<div class="discount_icon">~25%</div> 
-									<div class="img_wrap">
-										<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB4.jpg" alt=""></p></a>
-										<!-- small_pics_area -->
-										<ul class="small_pics_area">
-											<li>
-												<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
-											</li>
-											<li>
-												<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
-												<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
-											</li>
-										</ul>
-										<!-- //small_pics_area -->
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod04.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
 									</div>
-									<ul class="item_info">
-										<li class="title">제3회 라이징스타 공모전 최종 수상작 발표4</li>
-										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
-										<li class="date">2021.11.04~2021.11.17</li>
-									</ul>
-								</li>
-							</ul>
-							<!-- //evt_list-->
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod05.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod06.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod01.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod02.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod03.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod04.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod05.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod06.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod01.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod02.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod03.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+
+							<!-- 전체보기 -->
+							<li class="prod_item">
+								<a href="#n">
+									<div class="btn_box_more">
+										<p>
+											<span>베스트 전체보기</span>
+										</p>
+									</div>
+								</a>
+							</li>
+							<!-- //전체보기 -->
+						</ul>	
+						<!-- //상품 리스트 -->	
+
+						<!-- wel_category_banner-->
+						<div class="wel_category_banner"><!-- function - wel_category_banner(); -->			
+							<!-- swiper-container -->
+							<div class="swiper-container">
+								<!-- evt_list -->
+								<ul class="swiper-wrapper evt_list">
+									<!-- li 반복 -->
+									<li class="swiper-slide">
+										<div class="discount_icon">~25%</div> 
+										<div class="img_wrap">
+											<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB1.jpg" alt=""></p></a>
+			
+											<!-- small_pics_area -->
+											<ul class="small_pics_area">
+												<li>
+													<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+													<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
+												</li>
+											</ul>
+											<!-- //small_pics_area -->
+											<p class="evt_end_msg"><em>기획전 종료</em></p><!-- 기획전 종료시 -->
+										</div>
+										<ul class="item_info">
+											<li class="title">제3회 라이징스타 공모전 최종 수상작 발표1</li>
+											<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+											<li class="date">2021.11.04~2021.11.17</li>
+										</ul>
+									</li>
+									<!-- //li 반복 -->
+
+			
+									<li class="swiper-slide">
+										<div class="discount_icon">~25%</div> 
+										<div class="img_wrap">
+											<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB2.jpg" alt=""></p></a>
+											<!-- small_pics_area -->
+											<ul class="small_pics_area">
+												<li>
+													<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+													<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
+												</li>
+											</ul>
+											<!-- //small_pics_area -->
+										</div>
+										<ul class="item_info">
+											<li class="title">제3회 라이징스타 공모전 최종 수상작 발표2</li>
+											<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+											<li class="date">2021.11.04~2021.11.17</li>
+										</ul>
+									</li>
+									<li class="swiper-slide">
+										<div class="discount_icon">~25%</div> 
+										<div class="img_wrap">
+											<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB3.jpg" alt=""></p></a>
+											<!-- small_pics_area -->
+											<ul class="small_pics_area">
+												<li>
+													<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+													<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
+												</li>
+											</ul>
+											<!-- //small_pics_area -->
+										</div>
+										<ul class="item_info">
+											<li class="title">제3회 라이징스타 공모전 최종 수상작 발표3</li>
+											<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+											<li class="date">2021.11.04~2021.11.17</li>
+										</ul>
+									</li>
+									<li class="swiper-slide">
+										<div class="discount_icon">~25%</div> 
+										<div class="img_wrap">
+											<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB4.jpg" alt=""></p></a>
+											<!-- small_pics_area -->
+											<ul class="small_pics_area">
+												<li>
+													<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+													<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
+												</li>
+											</ul>
+											<!-- //small_pics_area -->
+										</div>
+										<ul class="item_info">
+											<li class="title">제3회 라이징스타 공모전 최종 수상작 발표4</li>
+											<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+											<li class="date">2021.11.04~2021.11.17</li>
+										</ul>
+									</li>
+								</ul>
+								<!-- //evt_list-->
+							</div>
+							<!-- //swiper-container -->
+
+							<!-- swiper_control -->
+							<div class="swiper_control_bk">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<!-- //swiper_control -->
 						</div>
+						<!-- //wel_category_banner-->
 
-						<!-- swiper_control -->
-						<div class="swiper_control_bk">
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
+						<!-- 기획전 전체 보기 버튼 -->
+						<div class="btn_area">
+							<a href="#none" target="_blank" class="btn_more_view_box ty02"><strong>기획전 전체보기<em></em></strong></a>
 						</div>
-						<!-- //swiper_control -->
-
+						<!-- //기획전 전체 보기 버튼 -->
 					</div>
-					<!-- //2단 배너 wel_category_banner-->
+					<!-- //디자인 문구 -->
 
-					<!--기획전 전체 보기 버튼-->
-					<div class="btn_area">
-						<a href="#none" target="_blank" class="btn_more_view_box ty02"><strong>기획전 전체보기<em></em></strong></a>
+
+					<!-- 디지털/자동차 -->
+					<div class="tab_cont" id="cate2"><!-- tab_link / tab_cont .on : 확인용 - Ajax 처리시 해당 class 삭제 / 모션처리 class="on" -->
+						<!-- 상품 리스트  -->
+						<ul class="wel_category_rank evt_products"><!-- 15위 까지 노출 -->
+							<!-- prod_item 반복 -->
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod06.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<!-- //prod_item 반복 -->
+
+
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod05.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod04.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod03.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod02.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod01.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod06.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod05.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod04.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod03.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod02.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod01.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod06.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod05.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+							<li class="prod_item">
+								<div class="product_pic">
+									<img src="../../images/temp/@img_prod04.jpg" alt="">
+									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+								</div>
+								<div class="product_info">
+									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">234,000</span>
+									</div>
+								</div>
+							</li>
+
+							<!-- 전체보기 -->
+							<li class="prod_item">
+								<a href="#n">
+									<div class="btn_box_more">
+										<p>
+											<span>베스트 전체보기</span>
+										</p>
+									</div>
+								</a>
+							</li>
+							<!-- //전체보기 -->
+						</ul>	
+						<!-- //상품 리스트 -->	
+
+						<!-- wel_category_banner-->
+						<div class="wel_category_banner"><!-- function - wel_category_banner(); -->			
+							<!-- swiper-container -->
+							<div class="swiper-container">
+								<!-- evt_list -->
+								<ul class="swiper-wrapper evt_list">
+									<!-- li 반복 -->
+									<li class="swiper-slide">
+										<div class="discount_icon">~25%</div> 
+										<div class="img_wrap">
+											<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB4.jpg" alt=""></p></a>
+			
+											<!-- small_pics_area -->
+											<ul class="small_pics_area">
+												<li>
+													<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+													<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
+												</li>
+											</ul>
+											<!-- //small_pics_area -->
+											<p class="evt_end_msg"><em>기획전 종료</em></p><!-- 기획전 종료시 -->
+										</div>
+										<ul class="item_info">
+											<li class="title">제3회 라이징스타 공모전 최종 수상작 발표1</li>
+											<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+											<li class="date">2021.11.04~2021.11.17</li>
+										</ul>
+									</li>
+									<!-- //li 반복 -->
+
+			
+									<li class="swiper-slide">
+										<div class="discount_icon">~25%</div> 
+										<div class="img_wrap">
+											<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB3.jpg" alt=""></p></a>
+											<!-- small_pics_area -->
+											<ul class="small_pics_area">
+												<li>
+													<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+													<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
+												</li>
+											</ul>
+											<!-- //small_pics_area -->
+										</div>
+										<ul class="item_info">
+											<li class="title">제3회 라이징스타 공모전 최종 수상작 발표2</li>
+											<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+											<li class="date">2021.11.04~2021.11.17</li>
+										</ul>
+									</li>
+									<li class="swiper-slide">
+										<div class="discount_icon">~25%</div> 
+										<div class="img_wrap">
+											<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB2.jpg" alt=""></p></a>
+											<!-- small_pics_area -->
+											<ul class="small_pics_area">
+												<li>
+													<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+													<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
+												</li>
+											</ul>
+											<!-- //small_pics_area -->
+										</div>
+										<ul class="item_info">
+											<li class="title">제3회 라이징스타 공모전 최종 수상작 발표3</li>
+											<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+											<li class="date">2021.11.04~2021.11.17</li>
+										</ul>
+									</li>
+									<li class="swiper-slide">
+										<div class="discount_icon">~25%</div> 
+										<div class="img_wrap">
+											<a href="#"><p class="img"><img src="../../images/temp/@img_prod_boxB1.jpg" alt=""></p></a>
+											<!-- small_pics_area -->
+											<ul class="small_pics_area">
+												<li>
+													<a href="n"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+												</li>
+												<li>
+													<a href="#n"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+													<button class="small_pics_more" onclick="alert('더보기')"><span>기획전<br>바로가기</span></button>
+												</li>
+											</ul>
+											<!-- //small_pics_area -->
+										</div>
+										<ul class="item_info">
+											<li class="title">제3회 라이징스타 공모전 최종 수상작 발표4</li>
+											<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
+											<li class="date">2021.11.04~2021.11.17</li>
+										</ul>
+									</li>
+								</ul>
+								<!-- //evt_list-->
+							</div>
+							<!-- //swiper-container -->
+
+							<!-- swiper_control -->
+							<div class="swiper_control_bk">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<!-- //swiper_control -->
+						</div>
+						<!-- //wel_category_banner-->
+
+						<!-- 기획전 전체 보기 버튼 -->
+						<div class="btn_area">
+							<a href="#none" target="_blank" class="btn_more_view_box ty02"><strong>기획전 전체보기<em></em></strong></a>
+						</div>
+						<!-- //기획전 전체 보기 버튼 -->
 					</div>
-					<!--//기획전 전체 보기 버튼-->
-					
+					<!-- //디지털/자동차 -->
 				</div>
 			</div>
 			<!-- //ht_cont : 카테고리 -->
