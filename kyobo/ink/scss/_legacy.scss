@@ -101,6 +101,14 @@ button.btn_lg {
 .form_rdo input:checked+label:before {
     background-color:#da2128;border-color:#da2128;
 }
+.form_chk input:checked[aria-disabled]+label:before,
+.form_chk input:checked[disabled]+label:before,
+.form_chk input:checked[readonly]+label:before,
+.form_rdo input:checked[aria-disabled]+label:before,
+.form_rdo input:checked[disabled]+label:before,
+.form_rdo input:checked[readonly]+label:before {
+    background:#db8880;border-color:#db8880;
+}
 
 
 

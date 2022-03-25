@@ -125,6 +125,16 @@ button.btn_lg {
   border-color: #da2128;
 }
 
+.form_chk input:checked[aria-disabled] + label:before,
+.form_chk input:checked[disabled] + label:before,
+.form_chk input:checked[readonly] + label:before,
+.form_rdo input:checked[aria-disabled] + label:before,
+.form_rdo input:checked[disabled] + label:before,
+.form_rdo input:checked[readonly] + label:before {
+  background: #db8880;
+  border-color: #db8880;
+}
+
 /*** Textarea ***/
 .form_textarea {
   height: 80px;
@@ -1995,7 +2005,7 @@ body {
   height: 44px;
   padding: 0 24px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #000;
