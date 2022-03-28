@@ -141,7 +141,7 @@
   background-color: #CCCCCC;
 }
 
-/**** 브랜드샵 ****/
+/******* 브랜드샵 *******/
 .brad_main_prod .ht_tit,
 .brad_main_coupon .ht_tit,
 .brad_main_exhibition .ht_tit,
@@ -149,7 +149,213 @@
   text-align: center;
 }
 
-/* 브랜드 쿠폰 */
+/** 브랜드 정보 **/
+.brad_main_info {
+  background: #2B2E3D;
+  margin-bottom: 60px;
+  padding-top: 60px;
+  position: relative;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.brad_main_info .brad_main_info_cont {
+  position: relative;
+}
+
+.brad_main_info .brad_main_info_cont:before {
+  background: url(../images/main/img_brad_bg_txt.svg) no-repeat;
+  content: "";
+  display: inline-block;
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  -webkit-animation: rotate_image 30s linear infinite;
+          animation: rotate_image 30s linear infinite;
+  top: -176px;
+  right: -70px;
+}
+
+@-webkit-keyframes rotate_image {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate_image {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.brad_main_info .brad_main_info_cont:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left {
+  padding-top: 86px;
+  float: left;
+  width: 43.2%;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left.brad_thumb:before {
+  background: url(../images/temp/@tod_prod_sample1.png) no-repeat;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  content: "";
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .logo {
+  line-height: 82px;
+  font-family: 'Gmarket Sans';
+  text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black, 5px 4px 1px #000;
+  font-weight: 900;
+  font-size: 72px;
+  color: #FFEB01;
+  letter-spacing: -1.6px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .brand {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 13px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .tit_desc {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap {
+  position: relative;
+  padding-top: 124px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .evt_good_count {
+  right: initial;
+  left: 0;
+  font-size: 18px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 42px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .evt_good_count .icon {
+  width: 18px;
+  height: 17px;
+  background-size: 100%;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .evt_good_count .txt {
+  margin-left: 5px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .prod_share_area {
+  right: initial;
+  top: initial;
+  left: 84px;
+  bottom: 33px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .prod_share_area .btn_share {
+  border-radius: 50%;
+  border: 0;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .prod_share_area .btn_share .ico_share {
+  background: url(../images/main/ico_share_white.svg) no-repeat center center/15px;
+  opacity: 1;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .prod_share_area .sns_share_box {
+  right: initial;
+  top: 1px;
+  left: 0px;
+  padding: 5px 0 5px 10px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_right {
+  width: 56.8%;
+  float: right;
+  padding-top: 86px;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_right .desc {
+  font-size: 15px;
+  line-height: 30px;
+  color: #fff;
+  opacity: 0.6;
+}
+
+/** Viewer **/
+.brad_main_viewer {
+  text-align: center;
+}
+
+.brad_main_viewer .ht_tit {
+  margin: -4px 0 7px 0;
+}
+
+.brad_main_viewer .ht_tit_sub {
+  font-size: 16px;
+  color: #767676;
+}
+
+.brad_main_viewer .video_item {
+  width: 994px;
+  height: 559px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.brad_main_viewer .video_item .evt_video {
+  width: 100%;
+  height: 100%;
+}
+
+/** 관련 기획전 **/
+.brad_main_exhibition_cont .img-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.brad_main_exhibition_cont .exhibition_info {
+  margin-top: 21px;
+}
+
+.brad_main_exhibition_cont .exhibition_info .title {
+  font-size: 20px;
+  font-weight: 500;
+  display: block;
+  line-height: 30px;
+}
+
+.brad_main_exhibition_cont .exhibition_info .sub {
+  font-size: 15px;
+  line-height: 22px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/** 브랜드 쿠폰 **/
 .brad_main_coupon .brand_coupon_item {
   position: relative;
   width: 379px;
@@ -169,6 +375,19 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+.brad_main_coupon .brand_coupon_item.brand_coupon_download {
+  cursor: default;
+}
+
+.brad_main_coupon .brand_coupon_item.brand_coupon_download:before {
+  background: url(../images/guide/brand_coupon_bg_down.svg) no-repeat;
+}
+
+.brad_main_coupon .brand_coupon_item.brand_coupon_download .cupon_info .discount, .brad_main_coupon .brand_coupon_item.brand_coupon_download .cupon_info .title, .brad_main_coupon .brand_coupon_item.brand_coupon_download .cupon_info .sub.gray, .brad_main_coupon .brand_coupon_item.brand_coupon_download .cupon_info .cpon_notice, .brad_main_coupon .brand_coupon_item.brand_coupon_download .cupon_info .cpon_down {
+  color: #000;
+  opacity: 0.5;
 }
 
 .brad_main_coupon .cupon_info {
@@ -219,7 +438,21 @@
   left: 169px;
 }
 
-/* 브랜드 상품 */
+.brad_main_coupon_cont .swiper-wrapper.list_lenght_warp {
+  display: inline-block;
+}
+
+.brad_main_coupon_cont .swiper-wrapper.list_lenght_warp li {
+  width: 31.6%;
+  float: left;
+  margin-left: 2.6%;
+}
+
+.brad_main_coupon_cont .swiper-wrapper.list_lenght_warp li:first-child {
+  margin-left: 0;
+}
+
+/*** 브랜드 상품 ***/
 .brad_main_tab {
   margin: 20px auto;
 }
