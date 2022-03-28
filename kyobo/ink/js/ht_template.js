@@ -1465,7 +1465,19 @@ $(function(){
             $(this).parent('.mdl014_wrap').find('.btn_md.btn_black').addClass('disabled');
        }
    });
-
+ /* mdl002 */
+ $(function(){
+  //앵커 태그 부드럽게 이동
+    document.querySelectorAll('.mdl_wrap .tab_box a[href^="#"]').forEach(function(anchor){
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+           if(this.getAttribute('href').length < 2) return ;
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+ })
 
    /*mdl 009-3 투표하기*/
    //라디오 선택
@@ -1512,10 +1524,8 @@ $(function(){
 				slidesPerGroup: 2,
 				centeredSlides: false,
 				spaceBetween:0,
-				// autoplay: {
-				// 	delay: 5000,
-				// 	disableOnInteraction: false,
-				// },
+                loop: true,
+                loopsSlide: 1,
 				speed: 700,
 				navigation: {
 					nextEl: $(element).find('.swiper-button-next'),
@@ -1588,9 +1598,10 @@ $(function(){
     //스크롤 시 해당 메뉴 활성화
     window.addEventListener('scroll', function(e){
         headerHeight = $('header').height() || 0;
+
         Object.keys(elemsInfo).forEach(function(ele, i){
-            if( $(window).scrollTop() >= (elemsInfo[ele].top - headerHeight - 65 ) &&
-                 $(window).scrollTop() < (elemsInfo[ele].top + elemsInfo[ele].height  - headerHeight - 65)) {
+            if( $(window).scrollTop() >= (elemsInfo[ele].top - headerHeight - 70 ) &&
+                 $(window).scrollTop() < (elemsInfo[ele].top + elemsInfo[ele].height  - headerHeight - 70)) {
                     $('.swiper-slide[data-target = "'+ ele +'"]').parents('.sticky_anchor_menu').find('a').removeClass('on');
                     $('.swiper-slide[data-target = "'+ ele +'"]').children('a').addClass('on');
             }

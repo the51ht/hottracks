@@ -310,7 +310,7 @@
 								<div class="swiper-button-prev"></div>
 								<div class="swiper-pagination"></div>
 								<div class="swiper-button-next"></div>
-							</div>
+							</div>  
 							<!-- //swiper_control -->
 						</div>
 					</div>
@@ -510,6 +510,29 @@
 			</div>
 			<!-- //module 018 -->
 
+			<!-- moudule 013 -->
+			<div class="mdl_wrap">
+				<h2 class="ht_tit game_tit">달려라 달려! 선물을 향해 스탬프를 PICK해주세요!</h2>
+				<article class="evt_step_wrap" style="background-image :url(../../images/temp/@step_evt_bg2.png)">
+					<div class="mdl_inner" >
+						<div class="upper">
+							<img src="../../images/temp/@attend_evt.png"  alt="">
+						</div>
+						<ul class="step_item_list" data-column ="3"><!--data-cloumn 값으로 step_item 너비 계산-->
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+						</ul>
+					</div>
+				</article>	
+			</div>
+			<!-- //moudule 013 -->
+
 
             <!-- moudule 019 -->
 			<div class="mdl_wrap">
@@ -670,39 +693,44 @@
 			<!-- //moudule 019 -->
 
 
-            <!-- module 015 -->
+			<!-- module 015 -->
 			<div class="mdl_wrap">
 				<div class="mdl_inner mdl015_wrap">
-					<!--sticky menu-->
-					<div class="swiper-wrapper mdl_sticky_mn">
-						<!-- moudule 002 -->
-						<div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-							<ul class="swiper-wrapper sticky_anchor_menu">
-								<li class="swiper-slide" data-target = "st_test0">
-									<a href="#none" class="on"><!-- 활성화  class="on" -->
-										<span>2022 다이어리</span>
-									</a>
-								</li>
-								<li class="swiper-slide" data-target = "st_test1">
-									<a href="#none">
-										<span>기록과 아카이빙을 위한</span>
-									</a>
-								</li>
-								<li  class="swiper-slide" data-target = "st_test2">
-									<a href="#none">
-										<span>Be On :D 할인쿠폰</span>
-									</a>
-								</li>
-								<li  class="swiper-slide" data-target = "st_test3">
-									<a href="#none">
-										<span>별별일상 응모하기</span>
-									</a>
-								</li>
-							</ul>
+					<!-- tab_ty -->
+					<div class="tab_swiper tab_ty mdl_sticky_mn"> <!--mdl_sticky_mn : 스크롤 모션 컨트롤 클래스-->
+						<!-- swiper-wrapper -->
+						<ul class="swiper-wrapper sticky_anchor_menu"> <!--sticky_anchor_menu : 스크롤 모션 컨트롤 클래스-->
+							<li class="swiper-slide" data-target = "st_test0">
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<span>2022 다이어리</span>
+								</a>
+							</li>
+							<li class="swiper-slide" data-target = "st_test1">
+								<a href="#n">
+									<span>기록과 아카이빙을 위한</span>
+								</a>
+							</li>
+							<li class="swiper-slide" data-target = "st_test2">
+								<a href="#n">
+									<span>Be On :D 할인쿠폰</span>
+								</a>
+							</li>
+							<li class="swiper-slide" data-target = "st_test3">
+								<a href="#n">
+									<span>별별일상 응모하기</span>
+								</a>
+							</li>
+						</ul>
+						<!-- //swiper-wrapper -->
+
+						<!-- swiper_control -->
+						<div class="swiper_control">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
 						</div>
-						<!-- // moudule 002 -->  
-					</div>	
-					<!--//sticky menu-->
+					<!-- //swiper_control -->
+					</div>
+					<!-- //tab_ty -->
 
 
 					<!--anchor_target--> 
@@ -710,23 +738,23 @@
 						<h2 class="ht_tit">2022다이어리</h2>
 
 						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
+						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<!-- prod_item 반복 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod01.jpg" alt="">
 									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
+
 									<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>
-	
+
 									<!-- 19세 상품 항목
 									<img src="../../images/guide/img_19.svg" alt="">
 									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 									//19세 상품 항목 -->
-	
+
 									<!-- 대체/품절 상품
 									<div class="show_replace">
 										<div>
@@ -752,7 +780,7 @@
 								</div>
 							</li>
 							<!-- //prod_item 반복 -->
-	
+
 							<!-- 19세 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
@@ -777,18 +805,18 @@
 								</div>
 							</li>
 							<!-- //19세 상품 -->
-	
+
 							<!-- 대체 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod03.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -814,18 +842,18 @@
 								</div>
 							</li>
 							<!-- //대체 상품 -->
-	
+
 							<!-- 품절 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod04.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -859,25 +887,24 @@
 					<!--anchor_target-->
 					<div id="st_test1" class="anchor_target">
 						<h2 class="ht_tit">기록과 아카이빙을 위한</h2>
-
 						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
+						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<!-- prod_item 반복 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod01.jpg" alt="">
 									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
+
 									<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>
-	
+
 									<!-- 19세 상품 항목
 									<img src="../../images/guide/img_19.svg" alt="">
 									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 									//19세 상품 항목 -->
-	
+
 									<!-- 대체/품절 상품
 									<div class="show_replace">
 										<div>
@@ -903,7 +930,7 @@
 								</div>
 							</li>
 							<!-- //prod_item 반복 -->
-	
+
 							<!-- 19세 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
@@ -928,18 +955,18 @@
 								</div>
 							</li>
 							<!-- //19세 상품 -->
-	
+
 							<!-- 대체 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod03.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -965,18 +992,18 @@
 								</div>
 							</li>
 							<!-- //대체 상품 -->
-	
+
 							<!-- 품절 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod04.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1012,23 +1039,23 @@
 						<h2 class="ht_tit">Be On :D 할인쿠폰</h2>
 
 						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
+						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<!-- prod_item 반복 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod01.jpg" alt="">
 									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
+
 									<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>
-	
+
 									<!-- 19세 상품 항목
 									<img src="../../images/guide/img_19.svg" alt="">
 									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 									//19세 상품 항목 -->
-	
+
 									<!-- 대체/품절 상품
 									<div class="show_replace">
 										<div>
@@ -1054,7 +1081,7 @@
 								</div>
 							</li>
 							<!-- //prod_item 반복 -->
-	
+
 							<!-- 19세 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
@@ -1079,18 +1106,18 @@
 								</div>
 							</li>
 							<!-- //19세 상품 -->
-	
+
 							<!-- 대체 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod03.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1116,18 +1143,18 @@
 								</div>
 							</li>
 							<!-- //대체 상품 -->
-	
+
 							<!-- 품절 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod04.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1163,23 +1190,23 @@
 						<h2 class="ht_tit">별별일상 응모하기</h2>
 
 						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
+						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<!-- prod_item 반복 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod01.jpg" alt="">
 									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
+
 									<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>
-	
+
 									<!-- 19세 상품 항목
 									<img src="../../images/guide/img_19.svg" alt="">
 									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 									//19세 상품 항목 -->
-	
+
 									<!-- 대체/품절 상품
 									<div class="show_replace">
 										<div>
@@ -1205,7 +1232,7 @@
 								</div>
 							</li>
 							<!-- //prod_item 반복 -->
-	
+
 							<!-- 19세 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
@@ -1230,18 +1257,18 @@
 								</div>
 							</li>
 							<!-- //19세 상품 -->
-	
+
 							<!-- 대체 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod03.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1267,18 +1294,18 @@
 								</div>
 							</li>
 							<!-- //대체 상품 -->
-	
+
 							<!-- 품절 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod04.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
