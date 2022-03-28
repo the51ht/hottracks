@@ -91,7 +91,7 @@
 
 /***** 신상픔 *****/
 .ht_new_main {
-    background:url('../images/main/bg_wel_md_pick.jpg') center bottom /100% repeat-x;
+    background:url('../images/main/bg_wel_md_pick.jpg') center/cover repeat-x;
     h2 {
         margin-bottom:20px;text-align:center;
         img {
@@ -160,6 +160,222 @@
                     margin-top:-6px;border-width:0 10px 12px 10px;transform:rotate(90deg);
                 }
             } 
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/***** 브랜드샵 *****/
+/** 브랜드 정보 **/
+.brad_main_info{
+    position:relative;background:linear-gradient(to right, #f3b79b 10%, #f41860 90%);overflow:hidden;
+}
+
+/* brad_main_info_cont */
+.brad_main_info_cont {
+    position:relative;min-height:430px;
+    &:before {
+        position:absolute;right:-59px;top:-165px;width:550px;height:550px;background:url('../images/main/img_brad_bg_txt.svg') no-repeat;content:"";animation:rotate_image 30s linear infinite;
+    }
+    @keyframes rotate_image{
+        100% {
+            transform:rotate(360deg);
+        }
+    }
+    &:after{
+        clear:both;display:block;content:"";
+    }
+}
+.brad_info_left {
+    float:left;width:480px;padding:86px 0 110px 0;color:#fff;font-size:16px;line-height:24px;box-sizing:border-box;
+    .brad_thumb {
+        position:absolute;left:0;top:0;width:70px;height:70px;background-color:#fff;border-radius:50%;border:2px solid #000;box-sizing:border-box;
+    }
+    .logo {
+        font-family:'Gmarket Sans';font-size:72px;font-weight:700;line-height:82px;letter-spacing:-1.5px;text-shadow:-1px -1px 0px rgb(0, 0, 0), 1px -1px 0px rgb(0, 0, 0), -1px 1px 0px rgb(0, 0, 0), 1px 1px 0px rgb(0, 0, 0), 5px 4px 1px #000;
+    }
+    .brand{
+        margin-top:10px;font-weight:700;
+    }
+    .tit_desc{
+        margin-top:6px;
+    }
+    .group_wrap {
+        position:absolute;left:0;bottom:0;
+        .evt_good_count{
+            font-size:18px;height:42px;padding:0 16px;border-radius:42px;position:initial;float:left;
+            .icon{
+                width:18px;height:17px;background-size:100%;
+            }
+            .txt {
+                margin-left:5px;
+            }
+        }
+        .prod_share_area{
+            position:initial;float:left;
+            .sns_share_wrap {
+                margin-left:5px;
+            }
+            .btn_share{
+                width:42px;height:42px;background-color:rgba(0, 0, 0, 0.6);border:0;border-radius:50%;
+                .ico_share {
+                    background:url('../images/main/ico_share_white.svg') 35% center/15px no-repeat;
+                }
+            }
+            .sns_share_box {
+                right:initial;left:0px;top:1px;padding:5px 0 5px 10px;
+            }
+        }
+    }
+}
+
+.brad_info_right{
+    float:right;width:690px;padding:96px 25px 0 0;box-sizing:border-box;
+    .desc{
+        color:#fff;font-size:15px;line-height:30px;letter-spacing:-0.5px;
+    }
+}
+
+
+/** brad_main_viewer **/
+.brad_main_viewer {
+    text-align:center;
+    .ht_tit {
+        margin-bottom:8px;;
+    }
+    .ht_tit_sub {
+        color:#767676;font-size:16px;line-height:24px;
+    }
+    .video_item{
+        width:994px;height:559px;margin:0 auto;margin-top:18px;
+        .evt_video {
+            width:100%;height:100%;
+        }
+    }
+}
+
+
+
+/** 관련 기획전 **/
+.brad_main_exhibition_cont {
+    .img-wrap{
+        border-radius:12px;overflow:hidden;
+    }
+    .exhibition_info {
+        margin-top:22px;color:#000;
+        .title {
+            display:block;font-size:20px;font-weight:500;line-height:28px;
+        }
+        .sub {
+            display:inline-block;margin-top:6px;font-size:15px;line-height:23px;
+        }
+    }
+    .swiper-wrapper {
+        &.list_lenght_warp {
+            display:inline-block;
+            li {
+                float:left;width:582px;margin-left:36px;
+                &:first-child{
+                    margin-left:0;
+                }
+            }
+        }
+    }
+}
+
+
+/** 브랜드 쿠폰 **/
+.brad_main_coupon {
+    .brand_coupon_item {
+        position:relative;width:379px;height:288px;
+        &:before {
+            display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;background:url('../images/guide/brand_coupon_bg.svg') no-repeat;content:"";z-index:-1;
+        }
+        &:disabled {
+            &:before{
+                background:url('../images/guide/brand_coupon_bg_down.svg') no-repeat;
+            }
+            .cupon_info {
+                .discount,
+                .title,
+                .sub.gray,
+                .cpon_notice, 
+                .cpon_down {
+                    color:#000;opacity:0.5;
+                }
+            }
+        }
+    }
+    .cupon_info{
+        height:100%;padding:30px 40px 0 40px;box-sizing:border-box;
+        span {
+            display:block;text-align:left;
+        }
+        .discount {
+            font-size:30px;color:#da2128;font-weight:700;
+        }
+        .title {
+            font-size:20px;font-weight:600;line-height:28px;
+        }
+        .sub.gray {
+            margin-top:10px;color:#595959;font-size:14px;line-height:22px;
+            + .sub.gray{
+                margin-top:0px;
+            }
+        }
+        .cpon_notice {
+            margin-top:10px;color:#767676;font-size:12px;line-height:20px;
+            em {
+                position:relative;padding-left:8px;
+                &:before {
+                    position:absolute;left:0;top:0;content:"*";
+                }
+            }
+        }
+        .cpon_down {
+            position:absolute;left:169px;bottom:22px;font-size:16px;font-weight:700;
+        }
+    }
+}
+.brad_main_coupon_cont {
+    .swiper-wrapper {
+        &.list_lenght_warp{
+            display:inline-block;
+            li{
+                float:left;width:31.6%;margin-left:2.6%;
+                &:first-child{
+                    margin-left:0;
+                }
+            }
+        }
+    }
+}
+
+
+/** 브랜드 상품 **/
+.brad_main_prod {
+    .list_info_text_warp {
+        position:relative;float:left;margin-bottom:-20px;padding-top:10px;border:0;z-index:1;
+    }
+    .prod_sort_wrap.dep_top {
+        float:right;margin-bottom:-20px;padding-top:0;z-index:1;
+    }
+    .tab_ty {
+        &.swiper-container-horizontal{
+            .swiper-wrapper{
+                justify-content:initial;
+            }
+        }
+        .swiper-wrapper{
+            justify-content:center;
         }
     }
 }

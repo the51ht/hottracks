@@ -10,6 +10,10 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: default;
+}
+
 /* btn_primary */
 a.btn_primary,
 button.btn_primary {
@@ -821,6 +825,10 @@ body {
   letter-spacing: -1px;
 }
 
+.ht_tit.center {
+  text-align: center;
+}
+
 .ht_tit02 {
   position: relative;
   margin-bottom: 14px;
@@ -1046,7 +1054,7 @@ body {
   margin: -20px 0 30px 0;
   padding: 20px 0 0 0;
   background: #fff;
-  z-index: 10;
+  z-index: 12;
   overflow: hidden;
 }
 
@@ -1558,6 +1566,10 @@ body {
 
 .tab_swiper.tab_txt.ty02 li {
   height: 50px;
+}
+
+.tab_swiper.tab_txt.ty02 li a {
+  font-size: 20px;
 }
 
 .tab_swiper.tab_txt li {
@@ -2392,6 +2404,146 @@ body {
   vertical-align: top;
   padding-left: 22px;
   background: url("../images/guide/ico_ht_alarm.svg") 0 4px/18px no-repeat;
+}
+
+/* 차트선택 : 년, 월, 주, 일 팝업 */
+.prod_sort_wrap.dep_top {
+  overflow: initial;
+}
+
+.prod_sort_wrap.dep_top:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.date_select_warp .tooltip_wrap {
+  position: static;
+}
+
+.date_select_warp .btn_sort_date {
+  cursor: text !important;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner {
+  left: -50px;
+  top: 53px;
+  height: 355px;
+  padding: 0;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_header {
+  padding: 22px;
+  border-bottom: 1px solid #000;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_header .tooltip_head_title {
+  font-size: 20px;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp {
+  display: table-cell;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp li {
+  position: relative;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: -1;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"] + label {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  border: initial;
+  color: #000;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"] + label:hover {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"]:checked + label {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_inner .tooltip_contents .chart_select_warp input[type="radio"]:disabled + label {
+  color: #ccc;
+  cursor: default;
+}
+
+.date_select_warp .tooltip_wrap .btn_tooltip {
+  margin-top: -3px;
+  margin-left: 4px;
+  background: none;
+}
+
+.date_select_warp .tooltip_wrap .btn_tooltip .ico_info {
+  background-image: url("../images/layout/arw_tooltip.png");
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.date_select_warp .tooltip_wrap .btn_tooltip [class^=ico_] {
+  width: 18px;
+  height: 18px;
+}
+
+.date_select_warp .tooltip_wrap.active .btn_tooltip .ico_info {
+  background-image: url("../images/layout/arw_tooltip_active.png");
+  background-color: #000;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_header .btn_tooltip_close {
+  margin-top: 3px;
+}
+
+.date_select_warp .tooltip_wrap .tooltip_footer .btn_tooltip_close {
+  position: initial;
+  background: none;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 66px;
+  font-size: 16px;
+}
+
+.date_select_warp .tooltip_wrap .custom_scroll_wrap {
+  max-height: calc(318px - 100px) !important;
+  border-right: 1px solid #ccc;
+}
+
+.date_select_warp .tooltip_wrap .custom_scroll_wrap .simplebar-track {
+  background: initial;
+  right: 4px;
+  top: 5px;
+}
+
+.date_select_warp .tooltip_wrap .simplebar-scrollbar:before {
+  background-color: #ccc;
 }
 
 /***** Animation *****/
