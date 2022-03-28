@@ -155,12 +155,12 @@
   margin-bottom: 60px;
   padding-top: 60px;
   position: relative;
-  padding-bottom: 50px;
   overflow: hidden;
 }
 
 .brad_main_info .brad_main_info_cont {
   position: relative;
+  min-height: 431px;
 }
 
 .brad_main_info .brad_main_info_cont:before {
@@ -172,8 +172,8 @@
   position: absolute;
   -webkit-animation: rotate_image 30s linear infinite;
           animation: rotate_image 30s linear infinite;
-  top: -176px;
-  right: -70px;
+  top: -165px;
+  right: -59px;
 }
 
 @-webkit-keyframes rotate_image {
@@ -199,7 +199,9 @@
 .brad_main_info .brad_main_info_cont .brad_info_left {
   padding-top: 86px;
   float: left;
-  width: 43.2%;
+  width: 40%;
+  padding-right: 3%;
+  padding-bottom: 113px;
 }
 
 .brad_main_info .brad_main_info_cont .brad_info_left.brad_thumb:before {
@@ -242,17 +244,17 @@
 }
 
 .brad_main_info .brad_main_info_cont .brad_info_left .group_wrap {
-  position: relative;
-  padding-top: 124px;
+  position: absolute;
+  bottom: 0;
 }
 
 .brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .evt_good_count {
-  right: initial;
-  left: 0;
   font-size: 18px;
   height: 42px;
   padding: 0 16px;
   border-radius: 42px;
+  position: initial;
+  float: left;
 }
 
 .brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .evt_good_count .icon {
@@ -266,10 +268,12 @@
 }
 
 .brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .prod_share_area {
-  right: initial;
-  top: initial;
-  left: 84px;
-  bottom: 33px;
+  position: initial;
+  float: left;
+}
+
+.brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .prod_share_area .sns_share_wrap {
+  margin-left: 5px;
 }
 
 .brad_main_info .brad_main_info_cont .brad_info_left .group_wrap .prod_share_area .btn_share {
@@ -293,9 +297,9 @@
 }
 
 .brad_main_info .brad_main_info_cont .brad_info_right {
-  width: 56.8%;
+  width: 57%;
   float: right;
-  padding-top: 86px;
+  padding-top: 96px;
 }
 
 .brad_main_info .brad_main_info_cont .brad_info_right .desc {
@@ -353,6 +357,20 @@
   line-height: 22px;
   display: inline-block;
   margin-top: 4px;
+}
+
+.brad_main_exhibition_cont .swiper-wrapper.list_lenght_warp {
+  display: inline-block;
+}
+
+.brad_main_exhibition_cont .swiper-wrapper.list_lenght_warp li {
+  width: 48.5%;
+  float: left;
+  margin-left: 3%;
+}
+
+.brad_main_exhibition_cont .swiper-wrapper.list_lenght_warp li:first-child {
+  margin-left: 0;
 }
 
 /** 브랜드 쿠폰 **/
@@ -452,7 +470,7 @@
   margin-left: 0;
 }
 
-/*** 브랜드 상품 ***/
+/** 브랜드 상품 **/
 .brad_main_tab {
   margin: 20px auto;
 }
