@@ -471,27 +471,30 @@
 }
 
 /** 브랜드 상품 **/
-.brad_main_tab {
-  margin: 20px auto;
-}
-
-.brad_main_prod {
-  padding-bottom: 0;
-}
-
-.brad_main_prod .ht_tit {
-  margin-bottom: 0;
-}
-
 .brad_main_prod .list_info_text_warp {
-  border: 0;
+  margin-bottom: -20px;
   padding-top: 10px;
+  border: 0;
+  position: relative;
   float: left;
-  margin-bottom: 0;
+  z-index: 1;
 }
 
 .brad_main_prod .prod_sort_wrap.dep_top {
-  margin-bottom: 0;
+  margin-bottom: -20px;
   padding-top: 0;
   float: right;
+  z-index: 1;
+}
+
+.brad_main_prod .tab_ty.swiper-container-horizontal .swiper-wrapper {
+  -webkit-box-pack: initial;
+      -ms-flex-pack: initial;
+          justify-content: initial;
+}
+
+.brad_main_prod .tab_ty .swiper-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
