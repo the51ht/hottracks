@@ -107,17 +107,17 @@
 
             <p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-002</p>   
 
-            <!-- moudule 002 -->
+            <!-- moudule 002 + 앵커 기능 테스트 -->
             <div class="mdl_wrap">
                 <div class="mdl_inner tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
                     <ul>
                         <li>
-                            <a href="#n" class="on"><!-- 활성화  class="on" -->
+                            <a href="#mdl002_test0" class="on"><!-- 활성화  class="on" -->
                                 <span>순간을 장면으로 기록하세요</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#n">
+                            <a href="#mdl002_test1">
                                 <span>기록을 위한 다이어리</span>
                             </a>
                         </li>
@@ -210,9 +210,13 @@
                 </div>
             </div>
             <!-- // moudule 002 -->  
-
+             
 
             <p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-003</p>
+            <!-- module 002 앵커 타겟 예시 -->
+			<div class="evt_anchor_target" id="mdl002_test0"></div>
+			<!-- // module 002 앵커 타겟 예시 -->
+
 
             <!-- moudule 003 -->
             <div class="mdl_wrap">
@@ -225,7 +229,13 @@
                     </div>
                 </div>
             </div>
-            <!-- //moudule 003 -->
+            <!-- //moudule 003 --> 
+
+
+			<!-- module 002 앵커 타겟 예시 -->
+			<div class="evt_anchor_target" id="mdl002_test1"></div>
+			<!-- // module 002 앵커 타겟 예시 -->
+
 
             <!-- moudule 003 -->
             <div class="mdl_wrap" style="background-color: #F4F0EA;">
@@ -239,6 +249,9 @@
                 </div>
             </div>
             <!-- //moudule 003 -->
+
+
+
 
             <p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-004</p>
 
@@ -430,9 +443,8 @@
             <!-- //moudule 004 -->
 
 
-
+	
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-004-2</p>
-
             <!-- moudule 004 -->
 			<div class="ht_cont wel_hero">
 				<!-- wel_hero_banner -->
@@ -555,7 +567,7 @@
 			</div>
             <!-- //moudule 004 -->
 
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-005</p>
+			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-006</p>
 			<!-- moudule 006 -->
 			<div class="mdl_wrap">
 				<div class="mdl_inner mdl_prod_wrap">
@@ -602,7 +614,10 @@
 			</div>
 			<!-- //moudule 006 -->
 
+			
+
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-007</p>
+
 
 			<!-- moudule 007 -->
 			<div class="mdl_wrap">
@@ -886,7 +901,6 @@
 			</div>
 			<!-- //module 009 (이미지형)-->
 
-
 			
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-010(기본형) : 010-2 팝업 모듈 연동)</p>
 
@@ -938,7 +952,8 @@
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-011</p>
 
 			<!-- module 011 -->
-            <section class="rullet_wrap" style="background-image: url(../../images/guide/rullet_evt_bg.png);">
+			<!--타이틀이 없는 경우-->
+			<article class="mdl_wrap rullet_wrap" style="background-image: url(../../images/guide/rullet_evt_bg.png);">
 
 				<div class="rullet">
 					<div class="rullet_circle">
@@ -948,14 +963,33 @@
 						<img src="../../images/guide/rullet_pin.png" alt="">
 					</div>
 				</div>
-            </section>
+			</article>
+			<!-- //module 011 -->
+
+
+			<!-- module 011 -->
+            <!--타이틀이 있는 경우-->
+			<!-- <div class="mdl_wrap">
+				<h2 class="ht_tit game_tit">행운의 룰렛을 쏘세요!</h2>
+				<article class="rullet_wrap" style="background-image: url(../../images/guide/rullet_evt_bg.png);">
+
+					<div class="rullet">
+						<div class="rullet_circle">
+							<img src="../../images/guide/rullet_circle.png" alt="" >
+						</div>
+						<div class="rullet_pin">
+							<img src="../../images/guide/rullet_pin.png" alt="">
+						</div>
+					</div>
+				</article>
+			</div> -->
 			<!-- //module 011 -->
 
 
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-012</p>
 
 			<!-- module 012 -->
-			<div class="evt_calender_wrap" style="background-image:url('../../images/guide/evt_calender_bg.png');">
+			<article class="mdl_wrap evt_calender_wrap" style="background-image:url('../../images/guide/evt_calender_bg.png');">
 				<!-- 달력 영역 -->
 				<div class="calender_box">
 					<p class="attend_date">이번 달 출석 일수 <strong class="strong">5일</strong></p>
@@ -1025,20 +1059,18 @@
 						</table>
 					</div> 
 					<div class="after_box"></div>
-					<div class="after_box after"></div>
+					<div class="after_box"></div>
 				</div>
 				<!-- //달력 영역 -->
                  
 
 				<!-- module 012 button (이미지형) -->
-				<div class="mdl_wrap">
-					<div class="mdl_inner mdl009_wrap">
-						<a href="#none" class="mdl_img_btn"><img src="../../images/guide/mdl_img_btn3.png" alt=""></a>
-					</div>
+				<div class="mdl_inner mdl009_wrap">
+					<a href="#none" class="mdl_img_btn"><img src="../../images/guide/mdl_img_btn3.png" alt=""></a>
 				</div>
 				<!-- //module 012 button(이미지형) -->
 
-			</div>
+			</article>
 			<!-- //module 012 -->
 
 
@@ -1046,24 +1078,51 @@
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-013</p>
 
 			<!-- moudule 013 영역 -->
-			<section class="mdl_wrap evt_step_wrap" style="background-image :url(../../images/temp/@step_evt_bg.png)">
-				<div class="mdl_inner" >
-					<div class="upper">
-						<img src="../../images/temp/@attend_evt.png"  alt="">
+			<!--타이틀이 없는 경우-->
+				<article class="mdl_wrap evt_step_wrap" style="background-image :url(../../images/temp/@step_evt_bg.png)">
+					<div class="mdl_inner" >
+						<div class="upper">
+							<img src="../../images/temp/@attend_evt.png"  alt="">
+						</div>
+						<ul class="step_item_list" data-column ="3"><!--data-cloumn 값으로 step_item 너비 계산-->
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+						</ul>
 					</div>
-					<ul class="step_item_list" data-column ="3"><!--data-cloumn 값으로 step_item 너비 계산-->
-						<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-					</ul>
-				</div>
-			</section>
+				</article>	
 			<!-- //moudule 013 영역 -->
+
+
+			
+			<!-- moudule 013 -->
+			<!--타이틀이 있는 경우-->
+			<!-- <div class="mdl_wrap">
+				<h2 class="ht_tit game_tit">달려라 달려! 선물을 향해 스탬프를 PICK해주세요!</h2>
+				<article class="evt_step_wrap" style="background-image :url(../../images/temp/@step_evt_bg.png)">
+					<div class="mdl_inner" >
+						<div class="upper">
+							<img src="../../images/temp/@attend_evt.png"  alt="">
+						</div>
+						<ul class="step_item_list" data-column ="3"> data-cloumn 값으로 step_item 너비 계산
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+						</ul>
+					</div>
+				</article>	
+			</div> -->
+			<!-- //moudule 013 -->
 
 
 			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-M-EVT-MDL-014(수정 클릭: 내가 쓴 댓글 수정)</p>
@@ -1427,23 +1486,23 @@
 						<h2 class="ht_tit">2022다이어리</h2>
 
 						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
+						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<!-- prod_item 반복 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod01.jpg" alt="">
 									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
+
 									<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>
-	
+
 									<!-- 19세 상품 항목
 									<img src="../../images/guide/img_19.svg" alt="">
 									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 									//19세 상품 항목 -->
-	
+
 									<!-- 대체/품절 상품
 									<div class="show_replace">
 										<div>
@@ -1469,7 +1528,7 @@
 								</div>
 							</li>
 							<!-- //prod_item 반복 -->
-	
+
 							<!-- 19세 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
@@ -1494,18 +1553,18 @@
 								</div>
 							</li>
 							<!-- //19세 상품 -->
-	
+
 							<!-- 대체 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod03.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1531,18 +1590,18 @@
 								</div>
 							</li>
 							<!-- //대체 상품 -->
-	
+
 							<!-- 품절 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod04.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1576,25 +1635,24 @@
 					<!--anchor_target-->
 					<div id="st_test1" class="anchor_target">
 						<h2 class="ht_tit">기록과 아카이빙을 위한</h2>
-
 						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
+						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<!-- prod_item 반복 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod01.jpg" alt="">
 									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
+
 									<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>
-	
+
 									<!-- 19세 상품 항목
 									<img src="../../images/guide/img_19.svg" alt="">
 									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 									//19세 상품 항목 -->
-	
+
 									<!-- 대체/품절 상품
 									<div class="show_replace">
 										<div>
@@ -1620,7 +1678,7 @@
 								</div>
 							</li>
 							<!-- //prod_item 반복 -->
-	
+
 							<!-- 19세 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
@@ -1645,18 +1703,18 @@
 								</div>
 							</li>
 							<!-- //19세 상품 -->
-	
+
 							<!-- 대체 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod03.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1682,18 +1740,18 @@
 								</div>
 							</li>
 							<!-- //대체 상품 -->
-	
+
 							<!-- 품절 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod04.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1729,23 +1787,23 @@
 						<h2 class="ht_tit">Be On :D 할인쿠폰</h2>
 
 						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
+						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<!-- prod_item 반복 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod01.jpg" alt="">
 									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
+
 									<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>
-	
+
 									<!-- 19세 상품 항목
 									<img src="../../images/guide/img_19.svg" alt="">
 									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 									//19세 상품 항목 -->
-	
+
 									<!-- 대체/품절 상품
 									<div class="show_replace">
 										<div>
@@ -1771,7 +1829,7 @@
 								</div>
 							</li>
 							<!-- //prod_item 반복 -->
-	
+
 							<!-- 19세 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
@@ -1796,18 +1854,18 @@
 								</div>
 							</li>
 							<!-- //19세 상품 -->
-	
+
 							<!-- 대체 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod03.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1833,18 +1891,18 @@
 								</div>
 							</li>
 							<!-- //대체 상품 -->
-	
+
 							<!-- 품절 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod04.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1880,23 +1938,23 @@
 						<h2 class="ht_tit">별별일상 응모하기</h2>
 
 						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
+						<ul class="evt_products"><!-- row type : class="row_dir" -->
 							<!-- prod_item 반복 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod01.jpg" alt="">
 									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
+
 									<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>
-	
+
 									<!-- 19세 상품 항목
 									<img src="../../images/guide/img_19.svg" alt="">
 									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
 									//19세 상품 항목 -->
-	
+
 									<!-- 대체/품절 상품
 									<div class="show_replace">
 										<div>
@@ -1922,7 +1980,7 @@
 								</div>
 							</li>
 							<!-- //prod_item 반복 -->
-	
+
 							<!-- 19세 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
@@ -1947,18 +2005,18 @@
 								</div>
 							</li>
 							<!-- //19세 상품 -->
-	
+
 							<!-- 대체 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod03.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -1984,18 +2042,18 @@
 								</div>
 							</li>
 							<!-- //대체 상품 -->
-	
+
 							<!-- 품절 상품 -->
 							<li class="prod_item">
 								<div class="product_pic">
 									<img src="../../images/temp/@img_prod04.jpg" alt="">
 									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
+
 									<!--<button class="evt_good_count active">
 										<div class="icon"></div>
 										<div class="txt">999+</div>
 									</button>-->
-	
+
 									<!-- 대체/품절 상품 -->
 									<div class="show_replace">
 										<div>
@@ -2036,36 +2094,42 @@
 			<!-- module 015-1 -->
 			<div class="mdl_wrap">
 				<div class="mdl_inner mdl015_wrap">
-					<!--sticky menu-->
-					<div class="swiper-wrapper mdl_sticky_mn">
-						<!-- moudule 002 -->
-						<div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-							<ul class="swiper-wrapper sticky_anchor_menu">
-								<li class="swiper-slide" data-target = "sticky_test0">
-									<a href="#none" class="on"><!-- 활성화  class="on" -->
-										<span>2022 다이어리2</span>
-									</a>
-								</li>
-								<li class="swiper-slide" data-target = "sticky_test1">
-									<a href="#none">
-										<span>기록과 아카이빙을 위한2</span>
-									</a>
-								</li>
-								<li  class="swiper-slide" data-target = "sticky_test2">
-									<a href="#none">
-										<span>Be On :D 할인쿠폰2</span>
-									</a>
-								</li>
-								<li  class="swiper-slide" data-target = "sticky_test3">
-									<a href="#none">
-										<span>별별일상 응모하기2</span>
-									</a>
-								</li>
-							</ul>
+					<!-- tab_ty -->
+					<div class="tab_swiper tab_ty mdl_sticky_mn"> <!--mdl_sticky_mn : 스크롤 모션 컨트롤 클래스-->
+						<!-- swiper-wrapper -->
+						<ul class="swiper-wrapper sticky_anchor_menu"> <!--sticky_anchor_menu : 스크롤 모션 컨트롤 클래스-->
+							<li class="swiper-slide" data-target = "sticky_test0">
+								<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<span>2022 다이어리2</span>
+								</a>
+							</li>
+							<li class="swiper-slide" data-target = "sticky_test1">
+								<a href="#n">
+									<span>기록과 아카이빙을 위한2</span>
+								</a>
+							</li>
+							<li class="swiper-slide" data-target = "sticky_test2">
+								<a href="#n">
+									<span>Be On :D 할인쿠폰2</span>
+								</a>
+							</li>
+							<li class="swiper-slide" data-target = "sticky_test3">
+								<a href="#n">
+									<span>별별일상 응모하기2</span>
+								</a>
+							</li>
+						</ul>
+						<!-- //swiper-wrapper -->
+
+						<!-- swiper_control -->
+						<div class="swiper_control">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
 						</div>
-						<!-- // moudule 002 -->  
-					</div>	
-					<!--//sticky menu-->
+					<!-- //swiper_control -->
+					</div>
+					<!-- //tab_ty -->
+
 
 
 					<!--anchor_target-->

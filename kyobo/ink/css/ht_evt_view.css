@@ -214,7 +214,7 @@
   line-height: 23px;
 }
 
-.hot_deal_wrap .timer_area {
+.mdl_wrap .hot_deal_wrap .timer_area {
   top: 57px;
 }
 
@@ -432,12 +432,25 @@
   margin-top: 20px !important;
 }
 
+.evt_anchor_target {
+  width: 100%;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
 .upper_wrap {
   margin-bottom: 60px;
 }
 
 .mdl_wrap {
   margin: 0 auto;
+}
+
+.mdl_wrap.promotion_end {
+  position: relative;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .mdl_wrap .evt_tit_bar {
@@ -462,6 +475,12 @@
   background-color: #F0F0F0;
 }
 
+.mdl_wrap .game_tit {
+  padding-top: 60px;
+  margin-bottom: 42px;
+  text-align: center;
+}
+
 .mdl_wrap + .ht_under_banner_area {
   margin-top: 60px;
 }
@@ -470,6 +489,10 @@
   width: 1200px;
   margin: 0 auto;
   padding: 60px 0;
+}
+
+.mdl_inner.tab_box {
+  padding: 0;
 }
 
 .mdl001_wrap {
@@ -529,6 +552,7 @@
   top: 0;
   left: 0;
   bottom: 0;
+  overflow: hidden;
 }
 
 .evt_end_dim:before {
@@ -538,7 +562,7 @@
   z-index: 3;
   color: #fff;
   text-align: center;
-  padding-top: 45%;
+  padding-top: 47%;
   font-size: 24px;
   line-height: 35px;
   font-weight: 700;
@@ -578,6 +602,7 @@
 
 .mdl_prod_wrap .ht_tit {
   text-align: center;
+  line-height: 45px;
   margin-bottom: 40px;
 }
 
@@ -1138,10 +1163,29 @@
   width: 608px;
   position: relative;
   margin: 0 auto;
+  z-index: 3;
+}
+
+.evt_calender_wrap .after_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fff;
+  border: 2px solid;
+  top: 4px;
+  left: 4px;
   z-index: 1;
 }
 
+.evt_calender_wrap .after_box:nth-of-type(2) {
+  left: 8px;
+  top: 8px;
+}
+
 .evt_calender_wrap .attend_date {
+  position: relative;
   padding: 27px 0;
   text-align: center;
   background-color: #000;
@@ -1149,6 +1193,7 @@
   letter-spacing: -1px;
   font-size: 20px;
   color: #fff;
+  z-index: 3;
 }
 
 .evt_calender_wrap .strong {
@@ -1297,7 +1342,7 @@
   line-height: 30px;
   letter-spacing: -1px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   margin-top: 30px;
   display: -webkit-box;
   -webkit-line-clamp: 2;

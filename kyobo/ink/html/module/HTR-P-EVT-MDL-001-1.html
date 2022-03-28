@@ -119,7 +119,7 @@
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap mdl_contents_wrap">
             <!-- moudule 001 -->
-            <article class="mdl_wrap">
+            <article class="mdl_wrap promotion_end"><!--promotion_end : 이벤트 종료 시 클래스 추가-->
                 <div class="mdl_inner mdl001_wrap">
                     <p class="sub_tit">Be On D 다이어리 전품목 특가</p>
                     <h2 class="ht_tit03">널 보는 것만으로도 기분이 좋아져!</h2>
@@ -264,4 +264,13 @@
 </div>
 <!-- // wrapper -->
 </body>
+<script>
+	$(function(){
+		if($('.promotion_end').length > 0 ) {
+			$('body').css('overflow-y', 'hidden');
+		}else {
+			$('body').css('overflow-y', 'visible');
+		}
+	});
+</script>
 </html>
