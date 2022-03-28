@@ -1632,49 +1632,72 @@ $(function(){
     if(!stickyMenus) return;
 
 
-    var elemsInfo = {};
+    var elemsInfo = {}; // 앵커 태그 타겟 정보
+    var stickyAreaInfo = {};//스티키 영역 정보
 
     for(var i = 0; i < stickyMenus.length; i++) {
-        menus = document.querySelectorAll('.sticky_anchor_menu')[i].children; //li.swiper-slide
+        stickyAreaInfo['mdl015_wrap'+i] = {
+            'top' : $('.mdl015_wrap').eq(i).offset().top,
+            'height' : $('.mdl015_wrap').eq(i).outerHeight(),
+        } 
 
+        menus = document.querySelectorAll('.sticky_anchor_menu')[i].children; //li.swiper-slide
         for(var mn = 0; mn < menus.length; mn++) {
             menus[mn].addEventListener('click', moveScroll(event), true);
 
             targetElem =  menus[mn].dataset.target;
             elemsInfo[targetElem] = {                   //타겟 엘리먼트 길이, 높이값 저장
                  'top' : $('#' + targetElem).offset().top, 
-                 'height' : $('#' + targetElem).height(), 
+                 'height' : $('#' + targetElem).outerHeight(), 
                 };
         }
     }
-
-    var headerHeight = $('header').height() || 0;
-
+    
+    var headerHeight = $('header').outerHeight() ;
+    var stickyMnHeight  = $('.mdl_sticky_mn').outerHeight();
 
     //스크롤 시 해당 메뉴 활성화
-    window.addEventListener('scroll', function(e){
-        headerHeight = $('header').height() || 0;
+    window.addEventListener('scroll', actionMenu);
 
-        Object.keys(elemsInfo).forEach(function(ele, i){
-            if( $(window).scrollTop() >= (elemsInfo[ele].top - headerHeight - 70 ) &&
-                 $(window).scrollTop() < (elemsInfo[ele].top + elemsInfo[ele].height  - headerHeight - 70)) {
-                    $('.swiper-slide[data-target = "'+ ele +'"]').parents('.sticky_anchor_menu').find('a').removeClass('on');
-                    $('.swiper-slide[data-target = "'+ ele +'"]').children('a').addClass('on');
+    function actionMenu(){
+        headerHeight = $('header').outerHeight();
+        
+        Object.keys(stickyAreaInfo).forEach(function(ele, i) {
+
+            if($(window).scrollTop() >= (stickyAreaInfo[ele].top - headerHeight - stickyMnHeight) && 
+            $(window).scrollTop() < (stickyAreaInfo[ele].top +  stickyAreaInfo[ele].height - headerHeight - stickyMnHeight)){
+                $('.mdl015_wrap').eq(i).find('.mdl_sticky_mn').css({'position': 'fixed', 'top': headerHeight + 'px'})
+            }else {
+                $('.mdl015_wrap').eq(i).find('.mdl_sticky_mn').css({'position': 'static', 'top': '0'});
             }
         });
-    });
+
+
+        Object.keys(elemsInfo).forEach(function(ele, i){
+            if( $(window).scrollTop() >= (elemsInfo[ele].top - headerHeight - stickyMnHeight*2 ) &&
+                 $(window).scrollTop() < (elemsInfo[ele].top + elemsInfo[ele].height - headerHeight - stickyMnHeight )) {
+                    $('.swiper-slide[data-target = "'+ ele +'"]').parents('.sticky_anchor_menu').find('a').removeClass('on');
+                    $('.swiper-slide[data-target = "'+ ele +'"]').children('a').addClass('on');    
+ 
+            }
+        });
+    
+    }
 
     //target 엘리먼트로 스크롤 이동
     function moveScroll(){
         return function(e){
+            var outerSticky = $(e.target.closest('.mdl_sticky_mn')).css('position') == 'fixed';
             var targetId = e.target.closest('.swiper-slide').dataset.target;
+            var mnHeight =  outerSticky ?  stickyMnHeight - $('.mdl_sticky_mn').height(): stickyMnHeight + stickyMnHeight - $('.mdl_sticky_mn').height();
             var offsetT = $('#'+targetId).offset().top; //이동할 엘리먼트 높이
-            var stickyMnHeight = $(e.target.closest('.mdl_sticky_mn')).height(); //스티키 메뉴 높이
-            var targetTop = offsetT - headerHeight -  stickyMnHeight;
+            var targetTop = offsetT - headerHeight -  mnHeight;
+
 
              $('html, body').animate({ scrollTop : targetTop }, 300, function(){
-                 $(e.target).closest('a').parent('').siblings().find('.on').removeClass('on');
-                 $(e.target).closest('a').addClass('on');
+                $(e.target).closest('a').parent().siblings().find('.on').removeClass('on');
+                $(e.target).closest('a').addClass('on');
+  
              });
         }
     }
