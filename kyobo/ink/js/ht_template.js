@@ -617,7 +617,7 @@ function wel_now_banner(){
             observer: false,
             observeParents: false,
             slidesPerView: 'auto',
-            centeredSlides: true,
+            centeredSlides: false,
             loop: true,
             spaceBetween:0,
             autoplay: {
