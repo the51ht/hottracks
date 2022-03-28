@@ -228,19 +228,13 @@ button.btn_lg {
     }
 }
 .dialog_wrapper .ui-dialog.dialog_main {
-    left:50%;
-    margin-left:-200px;
-    border-radius: 12px;
-    overflow: hidden;
+    left:50%;margin-left:-200px;border-radius:12px;overflow:hidden;
     .dialog_wrap.ui-dialog-content {
         padding:0 30px 30px 30px;
     }
 }
 .dialog_wrapper .ui-dialog.dialog_main {
-    left:50%;
-    margin-left:-200px;
-    border-radius: 12px;
-    overflow: hidden;
+    left:50%;margin-left:-200px;border-radius:12px;overflow:hidden;
     .dialog_wrap.ui-dialog-content {
         padding:0 30px 30px 30px;
     }
@@ -284,29 +278,69 @@ button.btn_lg {
 
 
 /* 웰컴메인 팝업 - 토스트 메시지*/
-
 .toast_wrap .toast_message {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    box-sizing: border-box;
-    width: 100%;
-    min-height: 50px;
-    height:auto !important;
-    padding: 15px 30px 11px !important;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 1);
-    border: 1px solid #000;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.16);
-    color: #fff;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: -0.01em;
-    font-weight: 500;
-    text-align: center;
+    display:inline-flex;justify-content:center;align-items:center;flex-direction:row;width:100%;min-height:50px;height:auto !important;padding:15px 30px 11px !important;background:rgba(0, 0, 0, 1);border:1px solid #000;border-radius:12px;box-sizing:border-box;box-shadow:0 5px 10px rgba(0, 0, 0, 0.16);color:#fff; font-size:14px;font-weight:500;line-height:22px;text-align:center;
 }
 
 
 
 
+
+
+
+
+
+
+/* 레이아웃 */
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .logo_box .logo_link{
+    background:url('../images/layout/logo.svg') left center/100px 28px no-repeat;
+}
+.wrapper .header_wrapper.sps.sps-blw .gnb_search_wrap .logo_box .logo_link {
+    background:url('../images/layout/logo.svg') left center/80px 22px no-repeat;
+}
+.wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list .gnb_item img {
+    display:inline-block;height:20px;margin:2px 5px 0 0;vertical-align:top;
+}
+.wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list .gnb_item .gnb_marker {
+    position:relative;padding-right:6px;
+    &:after {
+        position:absolute;right:0;top:0;width:4px;height:4px;background-color:#da2128;border-radius:50%;content:"";
+    }
+}
+
+
+.wrapper .header_wrapper .service_mall_wrap .service_mall_inner:before,
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item .user_menu_link .cnt {
+    background-color:#da2128
+}
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.my .user_menu_link:before {
+    background-image:url('../images/layout/btn_header_my.png');
+}
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.my {
+    box-shadow:0 5px 10px 0 rgba(211, 0, 0, 0.5);
+}
+
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .gnb_search_box {
+    border-color:#000;
+}
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .gnb_search_box .btn_gnb_search {
+    background-image:url('../images/layout/btn_header_search.png');
+}
+
+
+.wrapper .fly_menu_wrapper .fly_menu_inner {
+    border:2px solid #000;
+}
+.wrapper .fly_menu_wrapper {
+    width:102px;;
+}
+.wrapper .fly_menu_wrapper .btn_shopping_guide,
+.wrapper .floating_wrapper .btn_history .count {
+    background-color:#000;
+}
+.wrapper .fly_menu_wrapper .fly_menu_inner .fly_menu_link {
+    color:#000;font-weight:700;
+}
+.wrapper .fly_menu_wrapper .fly_menu_inner .fly_menu_link:after {
+    top:1px;width:13px;height:13px;background:url('../images/layout/ico_fold_plus.png') center/100% no-repeat;transform:translateY(0);
+}

@@ -1541,6 +1541,24 @@ $(function(){
 
 });
 
+/* mdl 013 출석체크 */
+$(function(){
+    if( $('.evt_step_wrap').length > 0) stepEvtCalc();  //출석 도장 이미지 너비값 계산
+
+    function stepEvtCalc(){
+        var colLength = $('.evt_step_wrap').find('.step_item_list').data('column');
+        var wRate = 100 / colLength;
+
+        wRate = Math.floor(wRate * 100) / 100;
+        $('.evt_step_wrap').find('.step_item').css('width', wRate +'%');
+    }
+});
+
+
+
+
+
+
 /*mdl 015 스티키 메뉴 스크롤 모션*/
 $(function(){
     var stickyMenus  = document.querySelectorAll('.sticky_anchor_menu');
@@ -1579,7 +1597,7 @@ $(function(){
         });
     });
 
-    //taeget 엘리먼트로 스크롤 이동
+    //target 엘리먼트로 스크롤 이동
     function moveScroll(){
         return function(e){
             var targetId = e.target.closest('.swiper-slide').dataset.target;
