@@ -1504,6 +1504,62 @@ $(function(){
    })
 });
 
+/* mdl004 배너 */
+ 
+
+function mdl4Banner(){
+    var $target = $('.mdl004_banner .swiper-container');
+    $target.each(function (index, ele) {
+        var $parent = $(this).parent('.mdl004_banner');
+  
+        var slideOption = {
+            slidesPerView: 'auto',
+            speed: 700,
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true,
+            loopsSlide: 1,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }, 
+            autoHeight: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                //pauseOnMouseEnter: true,
+            },
+            navigation: {
+                nextEl:$(ele).find('.swiper-button-next'),
+                prevEl: $(ele).find('.swiper-button-prev'),
+            },
+            pagination: {
+                el: $(ele).find('.swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            }
+        };
+        
+        var mdl4BannerSwiper;
+        
+        if($parent.find('.swiper-slide').length > 1) {
+            mdl4BannerSwiper = new Swiper(this, slideOption);
+            $parent.find('.option_box').css('display','flex');
+        }
+	});
+}
+
+$(function(){
+    if(!$('.mdl004_banner').length) return;
+    mdl4Banner();
+    $('.mdl004_banner').find('.s1, .s2').lettering('lines');
+});
+
 
 
 

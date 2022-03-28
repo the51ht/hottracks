@@ -439,6 +439,15 @@
   visibility: hidden;
 }
 
+.devide_hr {
+  display: block;
+  width: 100%;
+  padding-top: 60px;
+  margin: 0;
+  border: none;
+  background-color: #F0F0F0;
+}
+
 .upper_wrap {
   margin-bottom: 60px;
 }
@@ -466,15 +475,6 @@
   width: 100%;
 }
 
-.mdl_wrap .devide_hr {
-  display: block;
-  width: 100%;
-  padding-top: 60px;
-  margin: 0;
-  border: none;
-  background-color: #F0F0F0;
-}
-
 .mdl_wrap .game_tit {
   padding-top: 60px;
   margin-bottom: 42px;
@@ -488,14 +488,9 @@
 .mdl_inner {
   width: 1200px;
   margin: 0 auto;
-  padding: 60px 0;
 }
 
-.mdl_inner.tab_box {
-  padding: 0;
-}
-
-.mdl001_wrap {
+.mdl001_wrap .mdl_inner {
   position: relative;
   padding: 20px 0;
 }
@@ -596,8 +591,191 @@
   height: 100%;
 }
 
-.wel_hero_banner .no_btn_all.swiper-pagination.swiper-pagination-fraction {
-  padding-right: 20px !important;
+.mdl004_banner .option_box {
+  display: none;
+  position: absolute;
+  right: calc(50% - 600px);
+  bottom: 20px;
+  z-index: 1;
+}
+
+.mdl004_banner .option_box .btn_all {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background: url("../images/guide/ico_plus_w.svg") no-repeat 50%/11px;
+  z-index: 10;
+}
+
+.mdl004_banner .swiper-pagination.swiper-pagination-fraction {
+  position: static;
+  height: 36px;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.mdl004_banner .swiper-pagination.swiper-pagination-fraction .swiper-pagination-current,
+.mdl004_banner .swiper-pagination.swiper-pagination-fraction .swiper-pagination-total {
+  font-size: 16px;
+  line-height: 37px;
+}
+
+.mdl004_banner .play_pause_box {
+  margin-right: 4px;
+}
+
+.mdl004_banner .play_pause_box [class^=btn_] {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.mdl004_banner .play_pause_box .btn_play {
+  background: rgba(0, 0, 0, 0.3) url("../images/guide/ico_play.svg") no-repeat 50%/8px;
+}
+
+.mdl004_banner .play_pause_box .btn_pause {
+  background: rgba(0, 0, 0, 0.3) url("../images/guide/ico_pause.svg") no-repeat 50%/6px;
+}
+
+.mdl004_banner .play_pause_box.play .btn_play {
+  display: none;
+}
+
+.mdl004_banner .play_pause_box.play .btn_pause {
+  display: block;
+}
+
+.mdl004_banner .play_pause_box.pause .btn_play {
+  display: block;
+}
+
+.mdl004_banner .play_pause_box.pause .btn_pause {
+  display: none;
+}
+
+.mdl004_banner .swiper_control {
+  position: static;
+  margin: 0;
+}
+
+.mdl004_banner .swiper_control .swiper-button-next,
+.mdl004_banner .swiper_control .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  z-index: 10;
+}
+
+.mdl004_banner .swiper_control .swiper-button-next {
+  right: calc(50% - 670px);
+  left: initial;
+}
+
+.mdl004_banner .swiper_control .swiper-button-prev {
+  left: calc(50% - 670px);
+}
+
+.mdl004_banner .swiper-slide-active .mdl_banner_box .txt .s1 span {
+  -webkit-animation: txtTop both 0.4s 0.4s;
+          animation: txtTop both 0.4s 0.4s;
+}
+
+.mdl004_banner .swiper-slide-active .mdl_banner_box .txt .s1 span:nth-child(2) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.mdl004_banner .swiper-slide-active .mdl_banner_box .txt .s2 span {
+  -webkit-animation: fade both 0.4s 0.8s;
+          animation: fade both 0.4s 0.8s;
+}
+
+.mdl004_banner .swiper-slide:first-child:nth-last-child(1) .mdl_banner_box .txt .s1 span {
+  -webkit-animation: txtTop both 0.4s 0.4s;
+          animation: txtTop both 0.4s 0.4s;
+}
+
+.mdl004_banner .swiper-slide:first-child:nth-last-child(1) .mdl_banner_box .txt .s1 span:nth-child(2) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.mdl004_banner .swiper-slide:first-child:nth-last-child(1) .mdl_banner_box .txt .s2 span {
+  -webkit-animation: fade both 0.4s 0.8s;
+          animation: fade both 0.4s 0.8s;
+}
+
+.mdl_banner_box {
+  position: relative;
+  overflow: hidden;
+}
+
+.mdl_banner_box a {
+  display: block;
+  position: relative;
+}
+
+.mdl_banner_box .img {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.mdl_banner_box .img img {
+  position: relative;
+  left: 50%;
+  max-width: 1920px;
+  height: auto;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+.mdl_banner_box .txt {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1200px;
+  height: 100%;
+  margin-left: -600px;
+}
+
+.mdl_banner_box .txt ul {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  width: calc(100% - 60px);
+  color: #fff;
+  letter-spacing: -1px;
+  -webkit-transform: translateY(-53%);
+          transform: translateY(-53%);
+}
+
+.mdl_banner_box .txt span {
+  display: block;
+  position: relative;
+  opacity: 0;
+}
+
+.mdl_banner_box .txt .s1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 64px;
+}
+
+.mdl_banner_box .txt .s2 {
+  margin-top: 14px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  opacity: 0.8;
 }
 
 .mdl_prod_wrap .ht_tit {
@@ -850,10 +1028,6 @@
   line-height: 23px;
   font-size: 15px;
   display: block;
-}
-
-.mdl014_wrap {
-  padding: 60px 0;
 }
 
 .mdl014_wrap .btn_md {
@@ -1259,10 +1433,6 @@
   background-position: center;
 }
 
-.evt_step_wrap .mdl_inner {
-  padding: 0;
-}
-
 .evt_step_wrap img {
   width: 100%;
 }
@@ -1279,6 +1449,7 @@
 
 .mdl015_wrap {
   position: relative;
+  padding: 0;
 }
 
 .mdl015_wrap .mdl_sticky_mn {
@@ -1290,7 +1461,7 @@
 }
 
 .mdl015_wrap .anchor_target {
-  padding: 60px 0;
+  padding-top: 60px;
 }
 
 .mdl015_wrap .ht_tit {
