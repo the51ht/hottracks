@@ -1962,7 +1962,7 @@
   position: relative;
   width: 64px;
   height: 64px;
-  background: #f7f7f7;
+  background: #eaeaea;
   border-radius: 6px;
   overflow: hidden;
 }
@@ -1975,6 +1975,15 @@
   height: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.prod_thumb .img_t.ico_t img {
+  width: inherit;
+  height: inherit;
+  -o-object-fit: none;
+     object-fit: none;
 }
 
 .prod_thumb .txt_num {
@@ -2223,7 +2232,7 @@
   background: #fff;
   border: 1px solid #d5d5d5;
   color: #595959;
-  line-height: 19px;
+  line-height: 20px;
 }
 
 .fold_tit .fold_info button {
@@ -2788,6 +2797,15 @@
 .byte_check_wrap + .reply_list,
 .reply_list + .byte_check_wrap {
   margin-top: 10px;
+}
+
+.byte_check_wrap {
+  -webkit-transition: border 0.4s;
+  transition: border 0.4s;
+}
+
+.byte_check_wrap.on {
+  border-color: #000;
 }
 
 /* reply_list_item */

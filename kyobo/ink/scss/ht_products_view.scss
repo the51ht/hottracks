@@ -1158,9 +1158,14 @@
     position:relative;
     float:right;
     .img_t {
-        position:relative;width:64px;height:64px;background:#f7f7f7;border-radius:6px;overflow:hidden;
+        position:relative;width:64px;height:64px;background:#eaeaea;border-radius:6px;overflow:hidden;
         img {
-            position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);
+            position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);object-fit:cover;
+        }
+        &.ico_t {
+            img {
+                width:inherit;height:inherit;object-fit:none;
+            }
         }
     }
     .txt_num {
@@ -1258,7 +1263,7 @@
             /*position:absolute;right:0;top:0;*/height:20px;padding:0 9px;background:#f7f7f7;border-radius:10px;box-sizing:border-box;color:#292929;font-size:12px;line-height:21px;
             float:left;margin-right:10px;
             &.ty02 {
-                background:#fff;border:1px solid #d5d5d5;color:#595959;line-height:19px;
+                background:#fff;border:1px solid #d5d5d5;color:#595959;line-height:20px;
             }
         }
         button {
@@ -1574,6 +1579,12 @@
 .byte_check_wrap + .reply_list,
 .reply_list + .byte_check_wrap {
     margin-top:10px;
+}
+.byte_check_wrap {
+    transition:border 0.4s;
+    &.on {
+        border-color:#000;
+    }
 }
 
 /* reply_list_item */
