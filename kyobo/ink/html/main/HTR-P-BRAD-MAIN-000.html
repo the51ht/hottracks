@@ -308,14 +308,14 @@
             <!-- //Viewer -->
 
 
-			
+
             <!-- 관련 기획전 -->  
             <div class="ht_cont brad_main_exhibition"> 
                 <div class="contents_inner">
                     <h2 class="ht_tit center">관련 기획전</h2>
 
 					<!-- brad_main_exhibition_cont -->
-					<div class="brad_main_exhibition_cont">
+					<div class="brad_main_exhibition_cont"><!-- function bradEx(); -->
 						<!-- swiper-container -->
                         <div class="swiper-container">
 							<!-- swiper-wrapper -->
@@ -415,7 +415,7 @@
                     <h2 class="ht_tit center">브랜드 쿠폰</h2>
 
 					<!-- brad_main_coupon_cont -->
-                    <div class="brad_main_coupon_cont">
+                    <div class="brad_main_coupon_cont"><!-- function bradCoupon(); -->
 						<!-- swiper-container -->
                         <div class="swiper-container">
 							<!-- swiper-wrapper -->
@@ -989,94 +989,7 @@ $(function(){
 </div>
 <!-- // wrapper -->
 
-
 <script>
-
-/* 관련 기획전 */
-function bradEx(){
-	var $target = $('.brad_main_exhibition_cont .swiper-container');
-	var slideOption = {
-		slidesPerView: 2,
-		loop: false,
-		slidesPerGroup: 2,
-		spaceBetween: 36,
-		speed: 700,
-		pagination: {
-			el: $('.brad_main_exhibition_cont').find('.swiper-pagination')[0],
-			type: 'fraction',
-			formatFractionCurrent: function (number) {
-				return KyoboBookPub.ink.setPrependZero(number, 2);
-			},
-			formatFractionTotal: function (number) {
-				return KyoboBookPub.ink.setPrependZero(number, 2);
-			}
-		},
-		navigation: {
-			nextEl: '.brad_main_exhibition_cont .swiper-button-next',
-			prevEl: '.brad_main_exhibition_cont .swiper-button-prev',
-		},
-	};
-	if($target .find('.swiper-slide').length > 2) {
-		bradExnSwiper = new Swiper($target.get(), slideOption);
-	}
-}
-
-$(function(){
-	if(!$('.brad_main_exhibition_cont').length) return;
-	bradEx();
-
-	/* 기획전 개수에 따라 클래스 추가 */
-	if($(".brad_main_exhibition_cont .swiper-wrapper > li").length < 3){
-		$(".brad_main_exhibition_cont .swiper-wrapper").addClass("list_lenght_warp");
-	}else{
-		$(".brad_main_exhibition_cont .swiper-wrapper").removeClass("list_lenght_warp");
-	}
-});
-
-
-
-
-/* 브랜드 쿠폰 */
-function bradCoupon(){
-	var $target = $('.brad_main_coupon_cont .swiper-container');
-	var slideOption = {
-		slidesPerView: 3,
-		slidesPerGroup: 3,
-		loop: false,
-		spaceBetween: 30,
-		speed: 700,
-		pagination: {
-			el: $('.brad_main_coupon_cont').find('.swiper-pagination')[0],
-			type: 'fraction',
-			formatFractionCurrent: function (number) {
-				return KyoboBookPub.ink.setPrependZero(number, 2);
-			},
-			formatFractionTotal: function (number) {
-				return KyoboBookPub.ink.setPrependZero(number, 2);
-			}
-		},
-		navigation: {
-			nextEl: '.brad_main_coupon_cont .swiper-button-next',
-			prevEl: '.brad_main_coupon_cont .swiper-button-prev',
-		},
-	};
-	if($target .find('.swiper-slide').length > 3) {
-		bradCouponSwiper = new Swiper($target.get(), slideOption);
-	}
-}
-
-$(function(){
-	if(!$('.brad_main_coupon_cont').length) return;
-	bradCoupon();
-
-	/* 쿠폰 목록 개수에 따라 클래스 추가 */
-	if($(".brad_main_coupon_cont .swiper-wrapper > li").length < 4){
-		$(".brad_main_coupon_cont .swiper-wrapper").addClass("list_lenght_warp");
-	}else{
-		$(".brad_main_coupon_cont .swiper-wrapper").removeClass("list_lenght_warp");
-	}
-});
-
 /* 쿠폰 받기 토스트 */
 function toastBtn1(){
 	KyoboBookPub.ink.setToastMessage('쿠폰 받기가 완료 되었습니다.', 3000);
