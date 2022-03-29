@@ -1106,6 +1106,91 @@ $(function(){
 
 
 
+/****  브랜드샵  ****/
+/* 관련 기획전 */
+function bradEx() {
+	var $target = $('.brad_main_exhibition_cont .swiper-container');
+	var slideOption = {
+		slidesPerView: 2,
+		loop: false,
+		slidesPerGroup: 2,
+		spaceBetween: 36,
+		speed: 700,
+		pagination: {
+			el: $('.brad_main_exhibition_cont').find('.swiper-pagination')[0],
+			type: 'fraction',
+			formatFractionCurrent: function (number) {
+				return KyoboBookPub.ink.setPrependZero(number, 2);
+			},
+			formatFractionTotal: function (number) {
+				return KyoboBookPub.ink.setPrependZero(number, 2);
+			}
+		},
+		navigation: {
+			nextEl: '.brad_main_exhibition_cont .swiper-button-next',
+			prevEl: '.brad_main_exhibition_cont .swiper-button-prev',
+		},
+	};
+	if($target.find('.swiper-slide').length > 2) {
+		bradExnSwiper = new Swiper($target.get(), slideOption);
+        $(".brad_main_exhibition_cont .swiper-wrapper").removeClass("list_lenght_warp");
+	} else{
+		$(".brad_main_exhibition_cont .swiper-wrapper").addClass("list_lenght_warp");
+    }
+}
+$(function(){
+	if(!$('.brad_main_exhibition_cont').length) return;
+	bradEx();
+});
+
+
+
+/* 브랜드 쿠폰 */
+function bradCoupon(){
+	var $target = $('.brad_main_coupon_cont .swiper-container');
+	var slideOption = {
+		slidesPerView: 3,
+		slidesPerGroup: 3,
+		loop: false,
+		spaceBetween: 30,
+		speed: 700,
+		pagination: {
+			el: $('.brad_main_coupon_cont').find('.swiper-pagination')[0],
+			type: 'fraction',
+			formatFractionCurrent: function (number) {
+				return KyoboBookPub.ink.setPrependZero(number, 2);
+			},
+			formatFractionTotal: function (number) {
+				return KyoboBookPub.ink.setPrependZero(number, 2);
+			}
+		},
+		navigation: {
+			nextEl: '.brad_main_coupon_cont .swiper-button-next',
+			prevEl: '.brad_main_coupon_cont .swiper-button-prev',
+		},
+	};
+	if($target.find('.swiper-slide').length > 3) {
+		bradCouponSwiper = new Swiper($target.get(), slideOption);
+        $(".brad_main_coupon_cont .swiper-wrapper").removeClass("list_lenght_warp");
+	}else{
+        $(".brad_main_coupon_cont .swiper-wrapper").addClass("list_lenght_warp");
+    }
+}
+
+$(function(){
+	if(!$('.brad_main_coupon_cont').length) return;
+	bradCoupon();
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
