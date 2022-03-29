@@ -33,11 +33,12 @@ $(function(){
 });
 
 
-
+var calendarTabSwiperCont;
 
 /* 라이브 달력 */
 function calendarTabSwiper(){
     var $target = $('.calendar_tab');
+    var $parent = $($target).parent();
     var slideOption = {
         slidesPerView: 'auto',
         spaceBetween:0,
@@ -45,9 +46,15 @@ function calendarTabSwiper(){
         observer: true,
         observeParents: true,
         slidesPerView:7,
-        speed:300,
+        slidesPerGroup:7,
+        speed:500,
+        navigation: {
+            nextEl: $($parent).find('.swiper-button-next'),
+            prevEl:  $($parent).find('.swiper-button-prev'),
+        },
     };
     calendarTabSwiperCont = new Swiper($target.get(), slideOption);
+    $parent.addClass('swiper-on');
 }
 
 $(function(){

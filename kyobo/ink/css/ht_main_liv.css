@@ -199,10 +199,9 @@
 .alarm_chk02 {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  margin-left: 6px;
 }
 
 .alarm_chk02 input[type="checkbox"] {
@@ -221,8 +220,8 @@
 .alarm_chk02 input[type="checkbox"] + label {
   display: block;
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: url("../images/main/ico_wel_live_alarm02.svg") center/100% no-repeat;
   overflow: hidden;
   cursor: pointer;
@@ -463,27 +462,65 @@
 
 /*** 라이브 캘린더 : .liv_calendar ***/
 .liv_calendar {
-  padding: 70px 0 50px 0;
+  padding: 113px 0 0 0;
+  position: relative;
+}
+
+.liv_calendar .custom_scroll_wrap_test {
+  max-height: calc(85vh - 200px);
+  overflow-y: auto;
+  padding-bottom: 1px;
 }
 
 .calendar_tab_wrap {
-  position: fixed;
-  left: 0;
-  top: 63px;
-  width: 100%;
-  max-width: 750px;
-  margin: 0 auto;
+  position: absolute;
+  left: -30px;
+  top: -24px;
+  width: calc(100% - 80px);
   background: #000;
-  padding: 14px 5px;
+  padding: 15px 70px;
   overflow: hidden;
   z-index: 10;
 }
 
-@media only screen and (min-width: 750px) {
-  .calendar_tab_wrap {
-    left: 50%;
-    margin-left: -375px;
-  }
+.calendar_tab_wrap.swiper-on .swiper_control {
+  display: block;
+  margin: 0;
+  height: 0;
+}
+
+.calendar_tab_wrap.swiper-on .swiper-button-prev,
+.calendar_tab_wrap.swiper-on .swiper-button-next {
+  width: 12px;
+  height: 67px;
+  background: none;
+  top: -67px;
+}
+
+.calendar_tab_wrap.swiper-on .swiper-button-prev {
+  left: -235px;
+}
+
+.calendar_tab_wrap.swiper-on .swiper-button-prev:after {
+  background: url(../images/guide/ico_arrow_prev_white.svg) no-repeat center/11px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  border: none;
+}
+
+.calendar_tab_wrap.swiper-on .swiper-button-next {
+  left: 235px;
+}
+
+.calendar_tab_wrap.swiper-on .swiper-button-next:after {
+  background: url(../images/guide/ico_arrow_prev_white.svg) no-repeat center/11px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  border: none;
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents.liv_pop {
+  overflow: visible;
 }
 
 /* calendar_tab */
@@ -492,19 +529,22 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 .calendar_tab .swiper-slide {
   padding: 0 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 60px;
 }
 
 .calendar_tab .li {
   display: block;
   position: relative;
-  width: 100%;
-  height: 65px;
+  width: 48px;
+  height: 67px;
+  margin: 0 auto;
   border-radius: 22px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -518,11 +558,11 @@
 .calendar_tab .li em {
   display: block;
   position: relative;
-  padding-top: 10px;
+  padding-top: 5px;
   color: #767676;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
-  line-height: 11px;
+  line-height: 17px;
 }
 
 .calendar_tab .li em:before {
@@ -539,11 +579,10 @@
 
 .calendar_tab .li span {
   display: block;
-  margin-top: 4px;
   font-size: 20px;
   font-weight: 700;
-  line-height: 20px;
-  letter-spacing: -1px;
+  line-height: 26px;
+  letter-spacing: -0.6px;
 }
 
 .calendar_tab .li.hue span {
@@ -574,18 +613,27 @@
 /* .ht_msg_box */
 .ht_msg_box {
   position: relative;
-  margin: 40px 0 60px 0;
+  margin: 0 0 60px 0;
   text-align: center;
 }
 
+.ht_msg_box .ico img {
+  width: 80px;
+}
+
 .ht_msg_box .ico + .txt {
-  margin-top: 18px;
+  margin-top: 20px;
+}
+
+.ht_msg_box .txt {
+  line-height: 24px;
+  letter-spacing: -1px;
+  font-size: 16px;
 }
 
 /* liv_timeline */
 .liv_timeline {
   position: relative;
-  margin-top: 25px;
 }
 
 .liv_timeline:before {
@@ -600,7 +648,7 @@
 
 .liv_timeline .li {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .liv_timeline .li:before {
@@ -672,8 +720,8 @@
 
 .liv_timeline_marker strong.ing:before {
   position: absolute;
-  left: -10px;
-  top: -10px;
+  left: -12px;
+  top: -21px;
   width: calc(100% + 20px);
   height: calc(100% + 20px);
   border: 10px solid #fff;
@@ -761,7 +809,7 @@
 
 .liv_timeline_box .img {
   position: relative;
-  width: 30%;
+  width: 140px;
 }
 
 .liv_timeline_box .img .img_a {
@@ -801,14 +849,14 @@
 }
 
 .liv_timeline_box .txt {
-  width: calc(70% - 20px);
+  width: calc(100% - 160px);
   margin-left: 20px;
 }
 
 .liv_timeline_box .txt .s1 {
   position: relative;
   min-height: 40px;
-  padding-right: 70px;
+  padding-right: 85px;
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
@@ -824,7 +872,7 @@
 
 .liv_timeline_box .txt .s1 .alarm_chk02 {
   position: absolute;
-  right: 19px;
+  right: 29px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -832,21 +880,21 @@
 }
 
 .liv_timeline_box .txt .s1 + .s2 {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .liv_timeline_box .txt .s2 {
   position: relative;
-  padding: 0 20px 0 48px;
+  padding: 0 30px 0 100px;
 }
 
 .liv_timeline_box .txt .s2 .img_s {
   position: absolute;
   left: 0;
   top: 0;
-  width: 40px;
+  width: 80px;
   height: 0;
-  padding-top: 40px;
+  padding-top: 80px;
   background: #f7f7f7;
   border-radius: 4px;
   overflow: hidden;
@@ -874,7 +922,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 40px;
+  height: 80px;
   font-size: 12px;
   line-height: 18px;
   z-index: 2;
@@ -883,17 +931,19 @@
 .liv_timeline_box .txt .s2 .txt_s .c1 {
   color: #595959;
   font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -1px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .liv_timeline_box .txt .s2 .txt_s .c2 {
-  margin-top: 4px;
+  margin-top: 5px;
   color: #000;
   font-size: 0;
   font-weight: 700;
-  line-height: 18px;
+  line-height: 24px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -902,12 +952,12 @@
 .liv_timeline_box .txt .s2 .txt_s .c2 strong {
   padding-right: 4px;
   color: #da2128;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .liv_timeline_box .txt .s2 .txt_s .c2 span {
   padding-right: 4px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .liv_timeline_box .txt .s2 .txt_s .c2 em {
@@ -934,7 +984,7 @@
           box-sizing: border-box;
   color: #000;
   font-size: 14px;
-  line-height: 37px;
+  line-height: 35px;
 }
 
 .liv_btn a span, .liv_btn button span {

@@ -1625,7 +1625,7 @@ $(function(){
 
 
 
-/*mdl 015 스티키 메뉴 스크롤 모션*/
+/* mdl 015 스티키 메뉴 스크롤 모션 */
 $(function(){
     var stickyMenus  = document.querySelectorAll('.sticky_anchor_menu');
     var menus, targetElem;
@@ -1697,7 +1697,6 @@ $(function(){
              $('html, body').animate({ scrollTop : targetTop }, 300, function(){
                 $(e.target).closest('a').parent().siblings().find('.on').removeClass('on');
                 $(e.target).closest('a').addClass('on');
-  
              });
         }
     }
