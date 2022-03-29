@@ -476,6 +476,11 @@ body {
   min-height: 500px;
 }
 
+/*
+.dialog_wrapper.open {
+    position:fixed;top:0 !important;left:0 !important
+}
+*/
 /* .ht_contents_wrap */
 .breadcrumb_wrap ~ .ht_contents_wrap {
   margin-top: 42px;
@@ -2409,6 +2414,13 @@ body {
   background: url("../images/guide/ico_ht_alarm.svg") 0 4px/18px no-repeat;
 }
 
+.ico_evt_write {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 18px;
+  background: url("../images/guide/ico_pencil_white.svg") 0 3px/14px no-repeat;
+}
+
 /* 차트선택 : 년, 월, 주, 일 팝업 */
 .prod_sort_wrap.dep_top {
   overflow: initial;
@@ -2993,6 +3005,65 @@ body {
   cursor: pointer;
 }
 
+/* evt_chk */
+.evt_chk {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.evt_chk:checked + label:before {
+  background-color: black;
+}
+
+.evt_chk:checked + label:after {
+  opacity: 1;
+}
+
+.evt_chk + label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.evt_chk + label:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3) url("../images/guide/ico_checkbox.svg") center/17px no-repeat;
+  border-radius: 12px 0;
+  content: "";
+  z-index: 1;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
+}
+
+.evt_chk + label:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #000;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+  content: "";
+}
+
 /** product_info **/
 .product_info,
 .evt_products.row_dir.type5 {
@@ -3278,6 +3349,22 @@ body {
   margin-top: 5px;
   font-size: 13px;
   line-height: 16px;
+}
+
+/* 팝업내 2단 : type2 */
+.evt_products.type2 .prod_item {
+  width: calc(50% - 30px);
+}
+
+.evt_products.type2 .prod_item .company {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.evt_products.type2 .prod_item .title {
+  min-height: 44px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 /***** 기획전 : .evt_list *****/

@@ -4,7 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=1600">
-<title>이벤트 기획전</title>
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>이벤트 모듈 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -14,7 +21,6 @@
 <!-- // Plug-In css -->
 
 
-
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
@@ -22,7 +28,6 @@
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
-
 
 
 <!-- Polyfill javascript -->
@@ -46,13 +51,11 @@
 <!-- // Plug-In javascript -->
 
 
-
 <!-- ht_ Hottracks UI JavaScript : 공통작업 -->
 <script src="../../js/ui_ink.js"></script>
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
 </head>
 
 <body>
@@ -82,410 +85,1140 @@
 	</header>
 	<!-- //Header -->
 
-
 	<!-- Contents -->
-	<main id="containerWrapper" class="container_wrapper">	
+	<main id="containerWrapper" class="container_wrapper">
+		<!-- breadcrumb_wrap -->
+		<section class="breadcrumb_wrap">
+			<div class="breadcrumb_inner">
+				<ol class="breadcrumb_list">
+					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
+				</ol>
+			</div>
+		</section>
+		<!-- //breadcrumb_wrap -->
+
+
 		<!-- ht_contents_wrap -->
-		<section class="mdl_contents_wrap">
+		<section class="ht_contents_wrap">
+			<!-- mdl_contents_wrap -->
+			<div class="mdl_contents_wrap">
+				<h1 class="hidden">이벤트</h1>
 
-            <p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-001</p>
+				<!--<p class="evt_end_msg"><em>종료되었습니다</em></p>-->
 
-            <!-- moudule 001 -->
-            <article class="mdl_wrap mdl001_wrap">
-                <div class="mdl_inner">
-                    <p class="sub_tit">Be On D 다이어리 전품목 특가</p>
-                    <h2 class="ht_tit03">널 보는 것만으로도 기분이 좋아져!</h2>
-                    <div class="period">2021.11.04 ~ 2021.11.15</div>
-                    <div class="box_circle">~25%</div>
-                    <button type="button" class="btn_share" data-role="btn-dialog" data-target="#popBottomHasBtnEx1">
-                        <span class="txt hidden">공유하기</span>
-                    </button>
-                </div>
-            </article>
-            <!-- //moudule 001 -->
+				<!-- Module A : mdl001 -->
+				<div class="mdl_wrap mdl001">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<p class="sub_tit">Be On D 다이어리 전품목 특가</p>
+						<h1 class="ht_tit03">널 보는 것만으로도 기분이 좋아져!</h1>
+						<div class="period">2021.11.04 ~ 2021.11.15</div>
+						<div class="box_circle">~25%</div>
 
+						<!-- prod_share_area -->
+						<div class="prod_share_area">
 
-            <p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-002</p>   
+							<!-- sns_share_wrap -->
+							<div class="sns_share_wrap">
+								<button type="button" class="btn_share"><span class="ico_share"></span><span class="hidden">공유하기</span></button>
+								<div class="sns_share_box">
+									<a href="#" class="btn_sns_share ht_kakao"><span class="hidden">카카오톡 공유하기</span></a>
+									<a href="#" class="btn_sns_share ht_instar"><span class="hidden">인스타그램 공유하기</span></a>
+									<a href="#" class="btn_sns_share ht_facebook"><span class="hidden">페이스북 공유하기</span></a>
+									<!--<a href="#" class="btn_sns_share ht_twitter"><span class="hidden">트위트 공유하기</span></a>
+									<a href="#" class="btn_sns_share ht_pinterest"><span class="hidden">핀터레스트 공유하기</span></a>-->
+									<a href="#" class="btn_sns_share ht_line"><span class="hidden">라인 공유하기</span></a>
+									<!--<a href="#" class="btn_sns_share ht_message"><span class="hidden">메세지 공유하기</span></a>-->
+									<a href="#" class="btn_sns_share ht_url_copy"><span class="hidden">url 복사하기</span></a>
 
-            <!-- moudule 002 + 앵커 기능 테스트 -->
-            <div class="mdl_wrap">
-                <div class="mdl_inner tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-                    <ul>
-                        <li>
-                            <a href="#mdl002_test0" class="on"><!-- 활성화  class="on" -->
-                                <span>순간을 장면으로 기록하세요</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#mdl002_test1">
-                                <span>기록을 위한 다이어리</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>    
-            <!-- //moudule 002 -->  
-
-
-            <!-- moudule 002 -->
-            <div class="mdl_wrap">
-                <div class="mdl_inner tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-                    <ul>
-                        <li>
-                            <a href="#n" class="on"><!-- 활성화  class="on" -->
-                                <span>순간을 장면으로 기록하세요</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <span>기록을 위한 다이어리</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <span>Be On :D 할인쿠폰</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- // moudule 002 -->  
-
-
-            <!-- moudule 002 -->
-            <div class="mdl_wrap">
-                <div class="mdl_inner tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-                    <ul>
-                        <li>
-                            <a href="#n" class="on"><!-- 활성화  class="on" -->
-                                <span>순간을 장면으로 기록하세요</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <span>기록과 아카이빙을 위한 다이어리</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <span>Be On :D 할인쿠폰</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <span>별별일상 응모하기</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- // moudule 002 -->  
-
-
-            <!-- moudule 002 -->
-            <div class="mdl_wrap">
-                <div class="mdl_inner tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-                    <ul>
-                        <li>
-                            <a href="#n" class="on"><!-- 활성화  class="on" -->
-                                <span>순간을 장면으로<br>기록하세요</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <span>기록과 아카이빙을 위한<br>다이어리</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <span>Be On :D<br>할인쿠폰</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#n">
-                                <span>별별일상<br>응모하기</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- // moudule 002 -->  
-             
-
-            <p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-003</p>
-            <!-- module 002 앵커 타겟 예시 -->
-			<div class="evt_anchor_target" id="mdl002_test0"></div>
-			<!-- // module 002 앵커 타겟 예시 -->
-
-
-            <!-- moudule 003 -->
-            <div class="mdl_wrap mdl003_wrap">
-                <div class="mdl_inner">
-                    <h3 class="ht_tit">직접 기록하는 모습을 담았어요</h3>
-                    <!--비디오 영역-->
-                    <div class="video_item">
-                        <iframe class="evt_video" src="https://www.youtube.com/embed/2ecZikgQgCc" title="YouTube video player" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  muted></iframe>
-                    </div>
-                </div>
-            </div>
-            <!-- //moudule 003 --> 
-
-
-			<!-- module 002 앵커 타겟 예시 -->
-			<div class="evt_anchor_target" id="mdl002_test1"></div>
-			<!-- // module 002 앵커 타겟 예시 -->
-
-
-            <!-- moudule 003 -->
-            <div class="mdl_wrap mdl003_wrap" style="background-color: #F4F0EA;">
-                <div class="mdl_inner">
-                    <h3 class="ht_tit">직접 기록하는 모습을 담았어요</h3>
-                    <!--비디오 영역-->
-                    <div class="video_item">
-                        <iframe class="evt_video" src="https://www.youtube.com/embed/2ecZikgQgCc" title="YouTube video player" frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  muted></iframe>
-                    </div>
-                </div>
-            </div>
-            <!-- //moudule 003 -->
-
-
-
-
-            <p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-004</p>
-			
-			
-            <!-- moudule 004 -->
-			<div class="mdl_wrap">
-				<!-- mdl004_banner -->
-				<div class="mdl004_banner">
-					<!-- swiper-container -->
-					<div class="swiper-container">
-						<!-- swiper-wrapper -->
-						<div class="swiper-wrapper">
-							<!-- swiper-slide 반복 -->
-							<div class="swiper-slide">
-								<div class="mdl_banner_box">
-									<a href="#n">
-										<p class="img"><img src="../../images/temp/@img_wel_hero_banner01.jpg" alt=""></p><!-- image size: 1920*600px -->
-										<div class="txt">
-											<ul>
-												<li class="s1">들숨에 건강을<br>날숨에 재력을</li>
-												<li class="s2">핫트랙스에서 새해선물 준비하고<br>푸짐한 혜택 받아가세요!</li>
-											</ul>
-										</div>
-									</a>
+									<button class="btn_sns_share_close" type="button"><i class="ico_share_close"></i><span class="hidden">공유하기 닫기</span></button>
 								</div>
 							</div>
-							<!-- //swiper-slide 반복 -->
-
-
-							<div class="swiper-slide">
-								<div class="mdl_banner_box">
-									<a href="#n">
-										<p class="img"><img src="../../images/temp/@img_wel_hero_banner02.jpg" alt=""></p>
-										<div class="txt">
-											<ul>
-												<li class="s1" style="color:#0e1df4;">멀리 안나가<br>매일 홈트</li>
-												<li class="s2" style="color:#0e1df4;">매일 하루 30분만 투자해요<br>힘내라고 다이어트 응원쿠폰</li>
-											</ul>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="mdl_banner_box">
-									<a href="#n">
-										<p class="img"><img src="../../images/temp/@img_wel_hero_banner03.jpg" alt=""></p>
-										<!--
-											이미지만 등록시 해당 영영 삭제
-											<div class="txt">
-											<ul>
-												<li class="s1"><span>1</span></li>
-											</ul>
-										</div>-->
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="mdl_banner_box">
-									<a href="#n">
-										<p class="img"><img src="../../images/temp/@img_wel_hero_banner04.jpg" alt=""></p>
-										<div class="txt">
-											<ul>
-												<li class="s1">빛나는<br>라이프스타일</li>
-												<li class="s2">핫트랙스 추천 아이템으로<br>취향을 발견해 보세요!</li>
-											</ul>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="mdl_banner_box">
-									<a href="#n">
-										<p class="img"><img src="../../images/temp/@img_wel_hero_banner05.jpg" alt=""></p>
-										<div class="txt">
-											<ul>
-												<li class="s1" style="color:#4c2b17">어서와~<br>이런 귀여움은 처음이지?</li>
-												<li class="s2" style="color:#333;">카카오프렌즈 라이언의 반려묘 춘식이<br>춘식이템 소장욕구를 부르네</li>
-											</ul>
-										</div>
-									</a>
-								</div>
-							</div>
-
-							<div class="swiper-slide">
-								<div class="mdl_banner_box">
-									<a href="#n">
-										<p class="img"><img src="../../images/temp/@img_mus_hero_banner01.jpg" alt=""></p><!-- image size: 750*840px -->
-										<div class="txt">
-											<ul>
-												<li class="s1">JWIIVER(제이위버)<br>JTRAP [미니 1집]</li>
-												<li class="s2">‘7인조 신인 보이그룹’ JWiiver(제이위버)<br>첫 번째 미니앨범 [Jtrap] 발매!</li>
-											</ul>
-										</div>
-									</a>
-								</div>
-							</div>
+							<!-- //sns_share_wrap -->
 						</div>
-						<!-- //swiper-wrapper -->
-
-						<!-- option_box -->
-						<div class="option_box">
-							<div class="swiper-pagination no_btn_all"></div>
-						</div>
-						<!-- //option_box -->
-
-						<!-- swiper_control -->
-						<div class="swiper_control">
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-						</div>
-						<!-- //swiper_control -->
+						<!-- //prod_share_area -->
 					</div>
-					<!-- //swiper-container -->
+					<!-- //mdl_inner -->
 				</div>
-				<!-- //mdl004_banner -->
-			</div>
-            <!-- //moudule 004 -->
+				<!-- //Module A : mdl001 -->
 
 
-	
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-004-2</p>
 
-            <!-- moudule 004 -->
-			<div class="mdl_wrap">
-				<!-- mdl004_banner -->
-				<div class="mdl004_banner">
-					<!-- swiper-container -->
-					<div class="swiper-container">
-						<!-- swiper-wrapper -->
-						<div class="swiper-wrapper">
-							<!-- swiper-slide 반복 -->
-							<div class="swiper-slide">
-								<div class="mdl_banner_box">
-									<a href="#n">
-										<p class="img"><img src="../../images/temp/@img_wel_hero_banner01.jpg" alt=""></p><!-- image size: 1920*600px -->
-										<div class="txt">
-											<ul>
-												<li class="s1">들숨에 건강을<br>날숨에 재력을</li>
-												<li class="s2">핫트랙스에서 새해선물 준비하고<br>푸짐한 혜택 받아가세요!</li>
-											</ul>
-										</div>
+				<!-- Module B-1 : mdl002 -->
+				<div class="mdl_wrap mdl002">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<!-- tab_box -->
+						<div class="tab_box">
+							<ul>
+								<li>
+									<a href="#mdl002_test0" class="btn_anchor_chk on"><!-- 활성화  class="on" -->
+										<span>순간을 장면으로 기록하세요</span>
 									</a>
-								</div>
-							</div>
-							<!-- //swiper-slide 반복 -->
-
+								</li>
+								<li>
+									<a href="#mdl002_test1" class="btn_anchor_chk">
+										<span>기록을 위한 다이어리</span>
+									</a>
+								</li>
+							</ul>
 						</div>
-						<!-- //swiper-wrapper -->
+						<!-- tab_box -->
+						<br>
 
-						<!-- option_box -->
-						<div class="option_box">
-							<div class="swiper-pagination no_btn_all"></div>
+						<!-- tab_box -->
+						<div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+							<ul>
+								<li>
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
+										<span>순간을 장면으로 기록하세요</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>기록을 위한 다이어리</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>Be On :D 할인쿠폰</span>
+									</a>
+								</li>
+							</ul>
 						</div>
-						<!-- //option_box -->
-
-						<!-- swiper_control -->
-						<div class="swiper_control">
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
+						<!-- tab_box -->
+						<br>
+						
+						<!-- tab_box -->
+						<div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+							<ul>
+								<li>
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
+										<span>순간을 장면으로 기록하세요</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>기록과 아카이빙을 위한 다이어리</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>Be On :D 할인쿠폰</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>별별일상 응모하기</span>
+									</a>
+								</li>
+							</ul>
 						</div>
-						<!-- //swiper_control -->
+						<!-- tab_box -->
+						<br>
+						
+						<!-- tab_box -->
+						<div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+							<ul>
+								<li>
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
+										<span>순간을 장면으로<br>기록하세요</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>기록과 아카이빙을 위한<br>다이어리</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>Be On :D<br>할인쿠폰</span>
+									</a>
+								</li>
+								<li>
+									<a href="#n">
+										<span>별별일상<br>응모하기</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- tab_box -->
 					</div>
-					<!-- //swiper-container -->
+					<!-- //mdl_inner -->
 				</div>
-				<!-- //mdl004_banner -->
-			</div>
-            <!-- //moudule 004 -->
+				<!-- //Module B-1 : mdl002 -->
 
 
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-006</p>
-			<!-- moudule 006 -->
-			<div class="mdl_wrap mdl_prod_wrap">
-				<div class="mdl_inner">
-					<!-- 상품 리스트 -->
-					<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
-						<li class="prod_item">
-							<div class="product_pic">
-								<img src="../../images/temp/@img_prod01.jpg" alt="">
-								<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
 
-								<button class="evt_good_count active">
-									<div class="icon"></div>
-									<div class="txt">999+</div>
-								</button>
+				<!-- Module B-2 : mdl003 -->
+				<div class="mdl_wrap mdl003">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
 
-								<!-- 19세 상품 항목
-								<img src="../../images/guide/img_19.svg" alt="">
-								<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-								//19세 상품 항목 -->
+						<div class="evt_anchor_target" id="mdl002_test0"></div><!-- 앵커 타겟 예시 -->
+						<!-- tab_box -->
+						<div class="tab_box">
+							<ul>
+								<li>
+									<a href="#mdl002_test0" class="btn_anchor_chk on"><!-- 활성화  class="on" -->
+										<span>순간을 장면으로 기록하세요</span>
+									</a>
+								</li>
+								<li>
+									<a href="#mdl002_test1" class="btn_anchor_chk">
+										<span>기록을 위한 다이어리</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- tab_box -->
 
-								<!-- 대체/품절 상품
-								<div class="show_replace">
-									<div>
-										<div>아쉽지만!<br>품절이예요</div>
-										<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
+						<h3 class="ht_tit">순간을 장면으로 기록하세요</h3>
+
+						<!-- 비디오 영역 -->
+						<div class="video_item">
+							<iframe class="evt_video" src="https://www.youtube.com/embed/2ecZikgQgCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  muted></iframe>
+						</div>
+						<!-- //비디오 영역 -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module B-2 : mdl003 -->
+
+
+				<!-- Module B-2 : mdl003 : background -->
+				<div class="mdl_wrap mdl003" style="background-color:#f4f0ea;">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+
+						<div class="evt_anchor_target" id="mdl002_test1"></div><!-- 앵커 타겟 예시 -->
+						<!-- tab_box -->
+						<div class="tab_box">
+							<ul>
+								<li>
+									<a href="#mdl002_test0" class="btn_anchor_chk">
+										<span>순간을 장면으로 기록하세요</span>
+									</a>
+								</li>
+								<li>
+									<a href="#mdl002_test1" class="btn_anchor_chk on">
+										<span>기록을 위한 다이어리</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- tab_box -->
+
+						<h3 class="ht_tit">직접 기록하는 모습을 담았어요</h3>
+
+						<!-- 비디오 영역 -->
+						<div class="video_item">
+							<iframe class="evt_video" src="https://www.youtube.com/embed/2ecZikgQgCc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  muted></iframe>
+						</div>
+						<!-- //비디오 영역 -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module B-2 : mdl003 : background-->
+
+
+
+				<!-- Module B-3 : mdl004 -->
+				<div class="mdl_wrap mdl004">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+
+						<!-- mdl004_banner -->
+						<div class="mdl004_banner"><!-- function mdl4Banner(); -->
+							<!-- swiper-container -->
+							<div class="swiper-container">
+								<!-- swiper-wrapper -->
+								<div class="swiper-wrapper">
+									<!-- swiper-slide 반복 -->
+									<div class="swiper-slide">
+										<div class="mdl_banner_box">
+											<a href="#n">
+												<p class="img"><img src="../../images/temp/@img_wel_hero_banner01.jpg" alt=""></p><!-- image size: 1920*600px -->
+												<div class="txt">
+													<ul>
+														<li class="s1">들숨에 건강을<br>날숨에 재력을</li>
+														<li class="s2">핫트랙스에서 새해선물 준비하고<br>푸짐한 혜택 받아가세요!</li>
+													</ul>
+												</div>
+											</a>
+										</div>
+									</div>
+									<!-- //swiper-slide 반복 -->
+
+
+									<div class="swiper-slide">
+										<div class="mdl_banner_box">
+											<a href="#n">
+												<p class="img"><img src="../../images/temp/@img_wel_hero_banner02.jpg" alt=""></p>
+												<div class="txt">
+													<ul>
+														<li class="s1" style="color:#0e1df4;">멀리 안나가<br>매일 홈트</li>
+														<li class="s2" style="color:#0e1df4;">매일 하루 30분만 투자해요<br>힘내라고 다이어트 응원쿠폰</li>
+													</ul>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="mdl_banner_box">
+											<a href="#n">
+												<p class="img"><img src="../../images/temp/@img_wel_hero_banner03.jpg" alt=""></p>
+												<!--
+													이미지만 등록시 해당 영영 삭제
+													<div class="txt">
+													<ul>
+														<li class="s1"><span>1</span></li>
+													</ul>
+												</div>-->
+											</a>
+										</div>
 									</div>
 								</div>
-								//대체/품절 상품 -->
+								<!-- //swiper-wrapper -->
+
+								<!-- option_box -->
+								<div class="option_box">
+									<div class="swiper-pagination no_btn_all"></div>
+								</div>
+								<!-- //option_box -->
+
+								<!-- swiper_control -->
+								<div class="swiper_control">
+									<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>
+								</div>
+								<!-- //swiper_control -->
 							</div>
-							<div class="product_info">
-								<!-- <div class="company">dretec</div> -->
-								<div class="title">엑토 레트로 블루투스 멀티페어링<br>풀배열 키보드 B503</div>
-								<div class="price_line">
-									<span class="discount_rate">15%</span>
-									<span class="final_price">234,000</span>
-									<span class="price_origin">20,000</span>
+							<!-- //swiper-container -->
+						</div>
+						<!-- //mdl004_banner -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module B-3 : mdl004 -->
+
+
+
+				<!-- Module B-5 : mdl005 -->
+				<div class="mdl_wrap mdl005">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<!-- mdl_prod_wrap -->
+						<div class="mdl_prod_wrap">
+							<!-- thumb2_banner : function - mdl_prod_banner(); -->
+							<div class="mdl_prod_banner">
+								<div class="swiper-container">
+									<!-- swiper-wrapper -->
+									<ul class="swiper-wrapper evt_products row_dir">
+
+										<!--swiper-slide prod_item 반복 -->
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod01.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+												<button class="evt_good_count active">
+													<div class="icon"></div>
+													<div class="txt">999+</div>
+												</button>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드1 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+											</div>
+										</li>
+										<!-- //swiper-slide prod_item 반복 -->
+									</ul>
+									<!-- //swiper-wrapper -->
+
+									<!-- swiper_control -->
+									<div class="swiper_control">
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-pagination"></div>
+										<div class="swiper-button-next"></div>
+									</div>
+									<!-- //swiper_control -->
 								</div>
 							</div>
-						</li>
-					</ul>
-					<!-- //상품 리스트-->
-
+							<!-- //thumb4_banner -->
+						</div>
+						<!-- //mdl_prod_wrap -->
+					</div>
+					<!-- //mdl_inner -->
 				</div>
-			</div>
-			<!-- //moudule 006 -->
-
-			
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-007</p>
+				<!-- //Module B-5 : mdl005 -->
 
 
-			<!-- moudule 007 -->
-			<div class="mdl_wrap mdl_prod_wrap">
-				<div class="mdl_inner">
-					<h2 class="ht_tit">시즌 BEST상품</h2>
+				<!-- Module B-6 : mdl005 동일 -->
+				<div class="mdl_wrap mdl005">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<h2 class="ht_tit">시즌 BEST상품</h2>
 
-					<!-- thumb2_banner : function - mdl_prod_banner(); -->
-					<div class="mdl_prod_banner">
-						<div class="swiper-container">
+						<!-- mdl_prod_wrap -->
+						<div class="mdl_prod_wrap">
+							<!-- thumb2_banner : function - mdl_prod_banner(); -->
+							<div class="mdl_prod_banner">
+								<div class="swiper-container">
+									<!-- swiper-wrapper -->
+									<ul class="swiper-wrapper evt_products row_dir">
+
+										<!--swiper-slide prod_item 반복 -->
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod01.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+												<button class="evt_good_count active">
+													<div class="icon"></div>
+													<div class="txt">999+</div>
+												</button>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드1 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+											</div>
+										</li>
+										<!-- //swiper-slide prod_item 반복 -->
+
+
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod02.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+												<button class="evt_good_count active">
+													<div class="icon"></div>
+													<div class="txt">999+</div>
+												</button>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드2 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod03.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+												<button class="evt_good_count active">
+													<div class="icon"></div>
+													<div class="txt">999+</div>
+												</button>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드3 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod04.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+												<button class="evt_good_count active">
+													<div class="icon"></div>
+													<div class="txt">999+</div>
+												</button>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드4 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+											</div>
+										</li>
+
+									</ul>
+									<!-- //swiper-wrapper -->
+
+									<!-- swiper_control -->
+									<div class="swiper_control">
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-pagination"></div>
+										<div class="swiper-button-next"></div>
+									</div>
+									<!-- //swiper_control -->
+								</div>
+							</div>
+							<!-- //thumb4_banner -->
+						</div>
+						<!-- //mdl_prod_wrap -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module B-6 : mdl005 동일 -->
+
+
+
+				<!-- Module B-7 : mdl008 -->
+				<div class="mdl_wrap mdl008">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<h2 class="ht_tit">Be On :D 2022 다이어리<br>출시 기념 할인혜택</h2>
+						<p class="sub_tit">스크랩 다이어리 & 콜렉트 바인더 러버스 레코드</p>
+						<div class="desc">
+							순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
+							새롭게 출시 되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,<br>
+							우리의 모든 순간이 이야기가 되고 한 편의 영화가 될거예요.<br><br>
+							
+							당신만의 감성을 담은 오프닝 시퀸스를 연출해보세요.<br>
+							순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
+							새롭게 출시되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,
+						</div>
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module B-7 : mdl008 -->
+
+				<!-- Module B-7 : mdl008 : background -->
+				<div class="mdl_wrap mdl008" style="background-color:#f9f7f4;">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<h2 class="ht_tit">Be On :D 2022 다이어리<br>출시 기념 할인혜택</h2>
+						<p class="sub_tit">스크랩 다이어리 & 콜렉트 바인더 러버스 레코드</p>
+						<div class="desc">
+							순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
+							새롭게 출시 되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,<br>
+							우리의 모든 순간이 이야기가 되고 한 편의 영화가 될거예요.<br><br>
+							
+							당신만의 감성을 담은 오프닝 시퀸스를 연출해보세요.<br>
+							순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
+							새롭게 출시되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,
+						</div>
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module B-7 : mdl008 : background -->
+
+
+
+				<!-- Module C-1, 2 : mdl009 -->
+				<div class="mdl_wrap mdl009">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<button class="btn_lg btn_black" data-role="btn-dialog" data-target="#evtVotePop">투표하기</button>
+						<button class="btn_lg btn_black" data-role="btn-dialog" data-target="#evtApplyPop">응모하기</button>
+						<br><br>
+						<button class="btn_lg btn_primary">오늘 출석체크하기</button>
+						<button class="btn_lg" style="background-color:#787cf9; border-color:#787cf9;">색상 변경 인라인</button>
+						<br><br>
+
+						<button class="mdl_img_btn" data-role="btn-dialog" data-target="#evtVotePop"><img src="../../images/temp/@mdl_img_btn.png" alt=""></button>
+						<button class="mdl_img_btn" data-role="btn-dialog" data-target="#evtApplyPop"><img src="../../images/temp/@mdl_img_btn2.png" alt=""></button>
+						<button class="mdl_img_btn" ><img src="../../images/temp/@mdl_img_btn3.png" alt=""></button>
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //ModuleC-1, 2 : mdl009 -->
+
+				<!-- Module C1, 2 : mdl009 -->
+				<div class="mdl_wrap mdl009" style="background-color:#ff8963;">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<button class="mdl_img_btn"><img src="../../images/temp/@mdl_img_btn.png" alt=""></button>
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //ModuleC1, 2 : mdl009 -->
+
+
+				<!-- Module C-3 : mdl011 -->
+				<div class="mdl_wrap mdl011">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<!-- rullet_wrap -->
+						<div class="rullet_wrap" style="background-image: url(../../images/guide/evt_rullet_evt_bg.jpg);">
+							<div class="rullet">
+								<div class="rullet_circle">
+									<img src="../../images/guide/evt_rullet_circle.png" alt="" >
+								</div>
+								<div class="rullet_pin">
+									<img src="../../images/guide/evt_rullet_pin.png" alt="">
+								</div>
+							</div>
+						</div>
+						<!-- //rullet_wrap -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module C-3 : mdl011 -->
+
+
+				<!-- Module C-4 : mdl012 -->
+				<div class="mdl_wrap mdl012">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<!-- evt_calender_wrap -->
+						<div class="evt_calender_wrap" style="background-image:url('../../images/guide/evt_calender_bg.jpg');">
+
+							<!-- 달력 영역 -->
+							<div class="calender_box">
+								<p class="attend_date">이번 달 출석 일수 <strong class="strong">5일</strong></p>
+								<div class="calender">
+									<table>
+										<tr>
+											<th>SUN</th>
+											<th>MON</th>
+											<th>TUE</th>
+											<th>WED</th>
+											<th>THU</th>
+											<th>FRI</th>
+											<th>SAT</th>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td><div class="date">3/18</div></td>
+											<td><div class="date">3/19</div></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="date">3/20
+													<p class="attendance_img" style="background-image:url('../../images/guide/calender_attend_active.png');"></p><!-- 출석한 이미지 -->
+												</div>
+											</td>
+											<td><div class="date">3/21
+													<p class="attendance_img" style="background-image:url('../../images/temp/@img_now11.jpg');"></p>
+												</div>
+											</td>
+											<td><div class="date">3/22</div></td>
+											<td><div class="date">3/23</div></td>
+											<td><div class="date">3/24</div></td>
+											<td><div class="date">3/25</div></td>
+											<td><div class="date">3/26</div></td>
+										</tr>
+										<tr>
+											<td><div class="date">3/27</div></td>
+											<td><div class="date">3/28</div></td>
+											<td><div class="date">3/29</div></td>
+											<td><div class="date">3/30</div></td>
+											<td><div class="date">3/31</div></td>
+											<td><div class="date">4/1</div></td>
+											<td><div class="date">4/2</div></td>
+										</tr>
+										<tr>
+											<td><div class="date">4/3</div></td>
+											<td><div class="date">4/4</div></td>
+											<td><div class="date">4/5</div></td>
+											<td><div class="date">4/6</div></td>
+											<td><div class="date">4/7</div></td>
+											<td><div class="date">4/8</div></td>
+											<td><div class="date">4/9</div></td>
+										</tr>
+										<tr>
+											<td><div class="date">4/10</div></td>
+											<td><div class="date">4/11</div></td>
+											<td><div class="date">4/12</div></td>
+											<td><div class="date">4/13</div></td>
+											<td><div class="date">4/14</div></td>
+											<td><div class="date">4/15</div></td>
+											<td><div class="date">4/16</div></td>
+										</tr>
+									</table>
+								</div> 
+								<div class="after_box"></div>
+								<div class="after_box"></div>
+							</div>
+							<!-- //달력 영역 -->
+
+							<!-- btn_area -->
+							<div class="btn_area">
+								<button class="btn_lg btn_primary" style="background-color:#da2118;">오늘 출석체크하기</button>
+								<button class="mdl_img_btn" ><img src="../../images/temp/@mdl_img_btn3.png" alt=""></button>
+							</div>
+							<!-- //btn_area -->
+							
+						</div>
+						<!-- //evt_calender_wrap -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module C-4 : mdl012 -->
+
+
+
+				<!-- Module C-5 : mdl013 -->
+				<div class="mdl_wrap mdl013">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<!-- evt_step_wrap -->
+						<div class="evt_step_wrap" style="background-image :url(../../images/temp/@evt_step_evt_bg.jpg)">
+
+							<div class="upper">
+								<img src="../../images/temp/@evt_attend_evt.png"  alt="">
+							</div>
+							<ul class="step_item_list" data-column ="3"><!--data-cloumn 값으로 step_item 너비 계산-->
+								<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+								<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+								<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+								<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+								<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+								<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+								<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+								<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
+							</ul>
+
+						</div>
+						<!-- //evt_step_wrap -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module C-5 : mdl013 -->
+
+
+
+				<!-- Module D : mdl014 -->
+				<div class="mdl_wrap mdl014">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<h2 class="ht_tit04">댓글입력</h2>
+
+						<!-- byte_check_wrap -->
+						<div class="byte_check_wrap">
+							<textarea class="form_textarea" title="타이틀 입력" placeholder="댓글을 입력해주세요."></textarea>
+							<div class="byte_chack_footer">
+								<div class="byte_check">
+									<span class="count">0</span>
+									<span class="total">300자</span>
+								</div>
+								<!--<div class="btn_wrap">
+									<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+									<button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
+								</div>-->
+							</div>
+						</div>
+						<!-- //byte_check_wrap -->
+	
+						<!-- btn_area -->
+						<div class="btn_area">
+							<button class="btn_sm btn_black"><span class="ico_evt_write">등록하기</span></button>
+							<button class="btn_sm btn_black disabled"><span class="ico_evt_write">등록하기</span></button>
+						</div>
+						<!-- //btn_area -->
+	
+						<!-- cmt_info_area -->
+						<div class="cmt_info_area">
+							<p class="cmt_total">총 <em class="count">744건</em>의 댓글이 있습니다.</p>
+
+							<!-- form_chk -->
+							<span class="form_chk">
+								<input id="myCmt_ck" type="checkbox">
+								<label for="myCmt_ck">내가 쓴 댓글 보기</label>
+							</span>
+							<!-- //form_chk -->
+						</div>
+						<!--//cmt_info_area-->
+
+						<!-- fold_ty -->
+						<ul class="fold_ty">
+							<!-- .li 반복 -->
+							<li class="li">
+								<!-- fold_inner -->
+								<div class="fold_inner">
+									<!-- fold_tit -->
+									<div class="fold_tit">
+										<!-- txt -->
+										<div class="txt">
+											<!-- fold_info -->
+											<div class="fold_info">
+												<ul>
+													<li>ab******</li>
+													<li>2021.07.11</li>
+													<!--<li><button>수정</button></li>
+													<li><button>삭제</button></li>-->
+												</ul>
+											</div>
+											<!-- //fold_info -->
+
+											<p class="tit">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</p>
+										</div>
+										<!-- //txt -->
+									</div>
+									<!-- //fold_tit -->
+								</div>
+								<!-- //fold_inner -->
+							</li>
+							<!-- //.li 반복 -->
+
+							<li class="li">
+								<!-- fold_inner -->
+								<div class="fold_inner">
+									<!-- fold_tit -->
+									<div class="fold_tit">
+										<!-- txt -->
+										<div class="txt">
+											<!-- fold_info -->
+											<div class="fold_info">
+												<ul>
+													<li>ab******</li>
+													<li>2021.07.11</li>
+													<li><button>수정</button></li>
+													<li><button>삭제</button></li>
+												</ul>
+											</div>
+											<!-- //fold_info -->
+
+											<p class="tit">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</p>
+										</div>
+										<!-- //txt -->
+									</div>
+									<!-- //fold_tit -->
+								</div>
+								<!-- //fold_inner -->
+
+								<!-- review_reply -->
+								<div class="review_reply">
+									<span style="display:inline-block;margin-right:5px;color:red;font-size:13px;line-height:38px;">↓ 수정 버튼 클릭시 노출</span>
+									<!-- byte_check_wrap -->
+									<div class="byte_check_wrap">
+										<textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요">
+디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~
+										</textarea>
+										<div class="byte_chack_footer">
+											<div class="byte_check">
+												<span class="count">0</span>
+												<span class="total">300자</span>
+											</div>
+											<div class="btn_wrap">
+												<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+												<button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
+											</div>
+										</div>
+									</div>
+									<!-- //byte_check_wrap -->
+								</div>
+								<!-- //review_reply -->						
+							</li>
+
+							<!-- 등록된 항목이 없을 경우 -->
+							<li class="emp">
+								<p>첫 댓글을 등록해주세요.</p>
+							</li>
+							<!-- //등록된 항목이 없을 경우 -->
+						</ul>
+						<!-- //fold_ty -->
+	
+						<!-- pagination -->
+						<div class="pagination">
+							<button class="btn_page prev"><span class="hidden">이전</span></button>
+							<div class="page_num">
+								<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+								<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+								<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+								<a href="#" class="btn_page_num active" title="현재페이지">10</a>
+								<a href="#" class="btn_page_num">11</a>
+								<a href="#" class="btn_page_num">12</a>
+								<a href="#" class="btn_page_num">13</a>
+								<a href="#" class="btn_page_num">14</a>
+								<a href="#" class="btn_page_num">15</a>
+								<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+								<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+							</div>
+							<button class="btn_page next"><span class="hidden">다음</span></button>
+						</div>
+						<!-- //pagination -->
+
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module D : mdl014 -->
+
+				<!-- Module D : mdl014 : icon ver -->
+				<div class="mdl_wrap mdl014">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<h2 class="ht_tit04">댓글입력</h2>
+
+						<!-- byte_check_wrap -->
+						<div class="byte_check_wrap">
+							<textarea class="form_textarea" title="타이틀 입력" placeholder="댓글을 입력해주세요."></textarea>
+							<div class="byte_chack_footer">
+								<div class="byte_check">
+									<span class="count">0</span>
+									<span class="total">300자</span>
+								</div>
+								<!--<div class="btn_wrap">
+									<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+									<button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
+								</div>-->
+							</div>
+						</div>
+						<!-- //byte_check_wrap -->
+
+<script>
+/* 댓글 이미지 선택(아이콘 형) */
+$(function(){
+	$(document).on('click', '.cmt_emoji_list .emoji', function(){
+		$(this).removeClass('off').addClass('on').siblings().addClass('off').removeClass('on');
+
+	});
+});
+</script>
+
+						<!-- cmt_emoji_list : 댓글 아이콘 이미지 -->
+						<ul class="cmt_emoji_list">
+							<li class="emoji">
+								<button><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></button>
+							</li>
+							<li class="emoji">
+								<button><img src="../../images/guide/ico_cmt_emoji2.svg" alt=""></button>
+							</li>
+							<li class="emoji">
+								<button><img src="../../images/guide/ico_cmt_emoji3.svg" alt=""></button>
+							</li>
+							<li class="emoji">
+								<button><img src="../../images/guide/ico_cmt_emoji4.svg" alt=""></button>
+							</li>
+							<li class="emoji">
+								<button><img src="../../images/guide/ico_cmt_emoji5.svg" alt=""></button>
+							</li>
+						</ul>
+						<!-- //cmt_emoji_list : 댓글 아이콘 이미지 -->
+
+						<!-- btn_area -->
+						<div class="btn_area">
+							<button class="btn_sm btn_black"><span class="ico_evt_write">등록하기</span></button>
+							<button class="btn_sm btn_black disabled"><span class="ico_evt_write">등록하기</span></button>
+						</div>
+						<!-- //btn_area -->
+	
+						<!-- cmt_info_area -->
+						<div class="cmt_info_area">
+							<p class="cmt_total">총 <em class="count">744건</em>의 댓글이 있습니다.</p>
+	
+							<!-- form_chk -->
+							<span class="form_chk">
+								<input id="myCmt_ck2" type="checkbox">
+								<label for="myCmt_ck2">내가 쓴 댓글 보기</label>
+							</span>
+							<!-- //form_chk -->
+						</div>
+						<!--//cmt_info_area-->
+
+						<!-- fold_ty -->
+						<ul class="fold_ty">
+							<!-- .li 반복 -->
+							<li class="li">
+								<!-- fold_inner -->
+								<div class="fold_inner">
+									<!-- fold_tit -->
+									<div class="fold_tit">
+										<!-- txt -->
+										<div class="txt">
+											<!-- fold_info -->
+											<div class="fold_info">
+												<ul>
+													<li>ab******</li>
+													<li>2021.07.11</li>
+													<!--<li><button>수정</button></li>
+													<li><button>삭제</button></li>-->
+												</ul>
+											</div>
+											<!-- //fold_info -->
+
+											<!-- prod_thumb -->
+											<div class="prod_thumb">
+												<p class="img_t ico_t"><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></p>
+											</div>
+											<!-- //prod_thumb -->
+
+											<p class="tit">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</p>
+										</div>
+										<!-- //txt -->
+									</div>
+									<!-- //fold_tit -->
+								</div>
+								<!-- //fold_inner -->
+							</li>
+							<!-- //.li 반복 -->
+
+							<li class="li">
+								<!-- fold_inner -->
+								<div class="fold_inner">
+									<!-- fold_tit -->
+									<div class="fold_tit">
+										<!-- txt -->
+										<div class="txt">
+											<!-- fold_info -->
+											<div class="fold_info">
+												<ul>
+													<li>ab******</li>
+													<li>2021.07.11</li>
+													<li><button>수정</button></li>
+													<li><button>삭제</button></li>
+												</ul>
+											</div>
+											<!-- //fold_info -->
+
+											<!-- prod_thumb -->
+											<div class="prod_thumb">
+												<p class="img_t ico_t"><img src="../../images/guide/ico_cmt_emoji2.svg" alt=""></p>
+											</div>
+											<!-- //prod_thumb -->
+
+											<p class="tit">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</p>
+										</div>
+										<!-- //txt -->
+									</div>
+									<!-- //fold_tit -->
+								</div>
+								<!-- //fold_inner -->
+
+								<!-- review_reply -->
+								<div class="review_reply">
+									<span style="display:inline-block;margin-right:5px;color:red;font-size:13px;line-height:38px;">↓ 수정 버튼 클릭시 노출</span>
+									<!-- byte_check_wrap -->
+									<div class="byte_check_wrap">
+										<textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요">
+디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~
+										</textarea>
+										<div class="byte_chack_footer">
+											<div class="byte_check">
+												<span class="count">0</span>
+												<span class="total">300자</span>
+											</div>
+											<div class="btn_wrap">
+												<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+												<button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
+											</div>
+										</div>
+									</div>
+									<!-- //byte_check_wrap -->
+
+									<!-- cmt_emoji_list : 댓글 아이콘 이미지 -->
+									<ul class="cmt_emoji_list">
+										<li class="emoji">
+											<button><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></button>
+										</li>
+										<li class="emoji">
+											<button><img src="../../images/guide/ico_cmt_emoji2.svg" alt=""></button>
+										</li>
+										<li class="emoji">
+											<button><img src="../../images/guide/ico_cmt_emoji3.svg" alt=""></button>
+										</li>
+										<li class="emoji">
+											<button><img src="../../images/guide/ico_cmt_emoji4.svg" alt=""></button>
+										</li>
+										<li class="emoji">
+											<button><img src="../../images/guide/ico_cmt_emoji5.svg" alt=""></button>
+										</li>
+									</ul>
+									<!-- //cmt_emoji_list : 댓글 아이콘 이미지 -->
+								</div>
+								<!-- //review_reply -->						
+							</li>
+
+							<!-- 등록된 항목이 없을 경우
+							<li class="emp">
+								<p>첫 댓글을 등록해주세요.</p>
+							</li>
+							//등록된 항목이 없을 경우 -->
+						</ul>
+						<!-- //fold_ty -->
+	
+						<!-- pagination -->
+						<div class="pagination">
+							<button class="btn_page prev"><span class="hidden">이전</span></button>
+							<div class="page_num">
+								<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+								<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+								<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+								<a href="#" class="btn_page_num active" title="현재페이지">10</a>
+								<a href="#" class="btn_page_num">11</a>
+								<a href="#" class="btn_page_num">12</a>
+								<a href="#" class="btn_page_num">13</a>
+								<a href="#" class="btn_page_num">14</a>
+								<a href="#" class="btn_page_num">15</a>
+								<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+								<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+							</div>
+							<button class="btn_page next"><span class="hidden">다음</span></button>
+						</div>
+						<!-- //pagination -->
+
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module D : mdl014 : icon ver -->
+
+
+
+				<!-- Module E-1 : md;015 -->
+				<div class="mdl_wrap mdl015">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<!-- tab_ty -->
+						<div class="tab_swiper tab_ty mdl015_tab">
 							<!-- swiper-wrapper -->
-							<ul class="swiper-wrapper evt_products row_dir">
+							<ul class="swiper-wrapper"> 
+								<li class="swiper-slide">
+									<a href="#ant01" class="on"><!-- 활성화  class="on" -->
+										<span>2022 다이어리 max-width:300px : 두줄!!</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#ant02">
+										<span>기록과 아카이빙을 위한</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#ant03">
+										<span>Be On :D 할인쿠폰</span>
+									</a>
+								</li>
+								<li class="swiper-slide">
+									<a href="#ant04">
+										<span>별별일상 응모하기</span>
+									</a>
+								</li>
+							</ul>
+							<!-- //swiper-wrapper -->
 
-								<!--swiper-slide prod_item 반복 -->
-								<li class="swiper-slide prod_item">
+							<!-- swiper_control -->
+							<div class="swiper_control">
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+							<!-- //swiper_control -->
+						</div>
+						<!-- //tab_ty -->
+
+						<!-- anchor_target --> 
+						<div class="anchor_target" id="ant01">
+							<h2 class="ht_tit">2022다이어리</h2>
+
+							<!-- 상품 리스트 -->
+							<ul class="evt_products">
+								<!-- prod_item 반복 -->
+								<li class="prod_item">
 									<div class="product_pic">
 										<img src="../../images/temp/@img_prod01.jpg" alt="">
 										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
@@ -510,19 +1243,24 @@
 										//대체/품절 상품 -->
 									</div>
 									<div class="product_info">
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드1 B503</div>
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
 										<div class="price_line">
 											<span class="discount_rate">15%</span>
 											<span class="final_price">234,000</span>
 											<span class="price_origin">20,000</span>
 										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
 									</div>
 								</li>
-								<!-- //swiper-slide prod_item 반복 -->
-
+								<!-- //prod_item 반복 -->
 
 								<!-- 19세 상품 -->
-								<li class="swiper-slide prod_item">
+								<li class="prod_item">
 									<div class="product_pic">
 										<!-- 19세 상품 항목 -->
 										<img src="../../images/guide/img_19.svg" alt="">
@@ -530,1620 +1268,44 @@
 										<!-- //19세 상품 항목 -->
 									</div>
 									<div class="product_info">
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드2 B503</div>
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
 										<div class="price_line">
 											<span class="discount_rate">15%</span>
 											<span class="final_price">234,000</span>
 											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
 										</div>
 									</div>
 								</li>
 								<!-- //19세 상품 -->
 
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod01.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-										<button class="evt_good_count active">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-
-										<!-- 19세 상품 항목
-										<img src="../../images/guide/img_19.svg" alt="">
-										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-										//19세 상품 항목 -->
-
-										<!-- 대체/품절 상품
-										<div class="show_replace">
-											<div>
-												<div>아쉽지만!<br>품절이예요</div>
-												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-											</div>
-										</div>
-										//대체/품절 상품 -->
-									</div>
-									<div class="product_info">
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드3 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-									</div>
-								</li>
-
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod01.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-										<button class="evt_good_count active">
-											<div class="icon"></div>
-											<div class="txt">999+</div>
-										</button>
-
-										<!-- 19세 상품 항목
-										<img src="../../images/guide/img_19.svg" alt="">
-										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-										//19세 상품 항목 -->
-
-										<!-- 대체/품절 상품
-										<div class="show_replace">
-											<div>
-												<div>아쉽지만!<br>품절이예요</div>
-												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-											</div>
-										</div>
-										//대체/품절 상품 -->
-									</div>
-									<div class="product_info">
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드4 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-									</div>
-								</li>
-
-							</ul>
-							<!-- //swiper-wrapper -->
-
-							<!-- swiper_control -->
-							<div class="swiper_control">
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-pagination"></div>
-								<div class="swiper-button-next"></div>
-							</div>
-							<!-- //swiper_control -->
-						</div>
-					</div>
-					<!-- //thumb4_banner -->
-				</div>
-			</div>
-			<!-- //moudule 007 -->
-		
-
-            <p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-008</p>
-
-
-			<!-- moudule 008 -->
-			<div class="mdl008_wrap">
-				<h3 class="ht_tit">Be On :D 2022 다이어리<br>출시 기념 할인혜택</h3>
-				<p class="sub_tit">스크랩 다이어리 & 콜렉트 바인더 러버스 레코드</p>
-				<div class="desc">
-					순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
-					새롭게 출시 되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,<br>
-					우리의 모든 순간이 이야기가 되고 한 편의 영화가 될거예요.<br><br>
-					
-					당신만의 감성을 담은 오프닝 시퀸스를 연출해보세요.<br>
-					순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
-					새롭게 출시되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,
-				</div>
-			</div>
-			<!-- //moudule 008 -->
-			<hr class="devide_hr">
-
-			
-			<!-- moudule 008 -->
-			<div class="mdl008_wrap">
-				<h3 class="ht_tit">Be On :D 2022 다이어리<br>출시 기념 할인혜택</h3>
-			</div>
-			<!-- //moudule 008 -->
-			<hr class="devide_hr">
-
-
-			<!-- moudule 008 -->
-			<div class="mdl008_wrap">
-				<h3 class="ht_tit">Be On :D 2022 다이어리<br>출시 기념 할인혜택</h3>
-				<p class="sub_tit">스크랩 다이어리 & 콜렉트 바인더 러버스 레코드</p>
-			</div>
-			<!-- //moudule 008 -->
-			<hr class="devide_hr">
-			
-
-			<!-- moudule 008 -->
-			<div class="mdl008_wrap">
-				<div class="desc">
-					순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
-					새롭게 출시 되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,<br>
-					우리의 모든 순간이 이야기가 되고 한 편의 영화가 될거예요.<br><br>
-					
-					당신만의 감성을 담은 오프닝 시퀸스를 연출해보세요.<br>
-					순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
-					새롭게 출시되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,
-				</div>
-			</div>
-			<!-- //moudule 008 -->
-			<hr class="devide_hr">
-
-
-			<!-- moudule 008 -->
-			<div class="mdl008_wrap">
-				<p class="sub_tit">스크랩 다이어리 & 콜렉트 바인더 러버스 레코드</p>
-			</div>
-			<!-- //moudule 008 -->
-
-			<hr class="devide_hr">
-
-			<!-- moudule 008 -->
-			<div class="mdl008_wrap" style="background-color:#F9F7F4;">
-				<h3 class="ht_tit">Be On :D 2022 다이어리<br>출시 기념 할인혜택</h3>
-				<div class="desc">
-					순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
-					새롭게 출시 되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,<br>
-					우리의 모든 순간이 이야기가 되고 한 편의 영화가 될거예요.<br><br>
-					
-					당신만의 감성을 담은 오프닝 시퀸스를 연출해보세요.<br>
-					순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
-					새롭게 출시되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,
-				</div>
-            </div>
-			<!-- //moudule 008 -->
-
-			<hr class="devide_hr">
-
-			<!-- moudule 008 -->
-			<div class="mdl008_wrap">
-				<h3 class="ht_tit">Be On :D 2022 다이어리<br>출시 기념 할인혜택</h3>
-				<p class="sub_tit">
-					스크랩 다이어리 & 콜렉트 바인더 러버스 레코드<br>
-					순간을 장면으로 기록하는 당신을 위한 다이어리가 출시 되었습니다.<br>
-					우리의 모든 순간이 이야기가 되고 한 편의 영화가 될거예요.
-				</p>
-				<div class="desc">
-					순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
-					새롭게 출시 되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,<br>
-					우리의 모든 순간이 이야기가 되고 한 편의 영화가 될거예요.<br><br>
-					
-					당신만의 감성을 담은 오프닝 시퀸스를 연출해보세요.<br>
-					순간을 장면으로 기록하는 당신을 위한 오프닝 시퀸스 다이어리가<br>
-					새롭게 출시되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,<br><br>
-
-					당신을 위한 오프닝 다이어리가<br>
-					새롭게 출시 되었습니다. 기록의 한 페이지가 인생의 한 장면이라면,<br>
-					우리의 모든 순간이 이야기가 되고 한 편의 영화가 될거예요.<br>
-				</div>
-			</div>
-			<!-- //moudule 008-->
-
-			<hr class="devide_hr">
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-009(기본형) : 009-3팝업 모듈 연동)</p>
-
-			<!-- module 009 -->
-			<div class="mdl_wrap mdl009_wrap" style="background-color: #FF8963;">
-				<div class="mdl_inner">
-					<!--색상 변경 인라인 스타일 예시 :  style="background-color: red; border-color:red;" -->
-					<button class="btn_xlg btn_black" data-role="btn-dialog" data-target="#evtVotePop">투표하기</button>
-				</div>
-			</div>
-			<!--//module 009 -->
-
-			
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-009(이미지형) : 009-3팝업 모듈 연동)</p>
-
-			<!-- module 009 (이미지형)-->
-			<div class="mdl_wrap mdl009_wrap" style="background-color: #FF8963;">
-				<div class="mdl_inner">
-					<a href="#none" class="mdl_img_btn" data-role="btn-dialog" data-target="#evtVotePop"><img src="../../images/guide/mdl_img_btn.png" alt=""></a>
-				</div>
-			</div>
-			<!-- //module 009 (이미지형)-->
-
-			
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-010(기본형) : 010-2 팝업 모듈 연동)</p>
-
-			<!-- module 010 -->
-			<div class="mdl_wrap mdl009_wrap">
-				<div class="mdl_inner">
-					<!--색상 변경 인라인 스타일 예시 :  style="background-color: red; border-color:red;" -->
-					<button class="btn_xlg btn_black" data-role="btn-dialog" data-target="#evtApplyPop">응모하기</button>
-				</div>
-			</div>
-			<!-- //module 010 -->
-
-			
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-010(이미지형) : 010-2 팝업 모듈 연동)</p>
-
-			<!-- module 010 (이미지형) -->
-			<div class="mdl_wrap mdl009_wrap">
-				<div class="mdl_inner">
-					<a href="#none" class="mdl_img_btn" data-role="btn-dialog" data-target="#evtApplyPop"><img src="../../images/guide/mdl_img_btn2.png" alt=""></a>
-				</div>
-			</div>
-			<!-- //module 010 (이미지형) -->
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-012 BTN(기본형) </p>
-
-			<!-- module 012 button-->
-			<div class="mdl_wrap mdl009_wrap">
-				<div class="mdl_inner">
-					<!--색상 변경 인라인 스타일 예시 :  style="background-color: red; border-color:red;" -->
-					<button class="btn_xlg btn_primary">오늘 출석체크하기</button>
-				</div>
-			</div>
-			<!-- //module 012 button-->
-
-			
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-012 BTN(이미지형)</p>
-
-			<!-- module 012 button(이미지형) -->
-			<div class="mdl_wrap mdl009_wrap">
-				<div class="mdl_inner">
-					<a href="#none" class="mdl_img_btn" ><img src="../../images/guide/mdl_img_btn3.png" alt=""></a>
-				</div>
-			</div>
-			<!-- //module 012 button(이미지형) -->
-
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-011</p>
-
-			<!-- module 011 -->
-			<!--타이틀이 없는 경우-->
-			<article class="mdl_wrap rullet_wrap" style="background-image: url(../../images/guide/rullet_evt_bg.png);">
-
-				<div class="rullet">
-					<div class="rullet_circle">
-						<img src="../../images/guide/rullet_circle.png" alt="" >
-					</div>
-					<div class="rullet_pin">
-						<img src="../../images/guide/rullet_pin.png" alt="">
-					</div>
-				</div>
-			</article>
-			<!-- //module 011 -->
-
-
-			<!-- module 011 -->
-            <!--타이틀이 있는 경우-->
-			<!-- <div class="mdl_wrap">
-				<h2 class="ht_tit game_tit">행운의 룰렛을 쏘세요!</h2>
-				<article class="rullet_wrap" style="background-image: url(../../images/guide/rullet_evt_bg.png);">
-
-					<div class="rullet">
-						<div class="rullet_circle">
-							<img src="../../images/guide/rullet_circle.png" alt="" >
-						</div>
-						<div class="rullet_pin">
-							<img src="../../images/guide/rullet_pin.png" alt="">
-						</div>
-					</div>
-				</article>
-			</div> -->
-			<!-- //module 011 -->
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-012</p>
-
-			<!-- module 012 -->
-			<article class="mdl_wrap evt_calender_wrap" style="background-image:url('../../images/guide/evt_calender_bg.png');">
-				<!-- 달력 영역 -->
-				<div class="calender_box">
-					<p class="attend_date">이번 달 출석 일수 <strong class="strong">5일</strong></p>
-					<div class="calender">
-						<table>
-							<tr>
-								<th>SUN</th>
-								<th>MON</th>
-								<th>TUE</th>
-								<th>WED</th>
-								<th>THU</th>
-								<th>FRI</th>
-								<th>SAT</th>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td><div class="date">3/18</div></td>
-								<td><div class="date">3/19</div></td>
-							</tr>
-							<tr>
-								<td>
-									<div class="date">3/20
-										<p class="attendance_img" style="background-image:url('../../images/guide/calender_attend_active.png');"></p><!-- 출석한 이미지 -->
-									</div>
-								</td>
-								<td><div class="date">3/21
-										<p class="attendance_img" style="background-image:url('../../images/temp/@img_now11.jpg');"></p>
-									</div>
-								</td>
-								<td><div class="date">3/22</div></td>
-								<td><div class="date">3/23</div></td>
-								<td><div class="date">3/24</div></td>
-								<td><div class="date">3/25</div></td>
-								<td><div class="date">3/26</div></td>
-							</tr>
-							<tr>
-								<td><div class="date">3/27</div></td>
-								<td><div class="date">3/28</div></td>
-								<td><div class="date">3/29</div></td>
-								<td><div class="date">3/30</div></td>
-								<td><div class="date">3/31</div></td>
-								<td><div class="date">4/1</div></td>
-								<td><div class="date">4/2</div></td>
-							</tr>
-							<tr>
-								<td><div class="date">4/3</div></td>
-								<td><div class="date">4/4</div></td>
-								<td><div class="date">4/5</div></td>
-								<td><div class="date">4/6</div></td>
-								<td><div class="date">4/7</div></td>
-								<td><div class="date">4/8</div></td>
-								<td><div class="date">4/9</div></td>
-							</tr>
-							<tr>
-								<td><div class="date">4/10</div></td>
-								<td><div class="date">4/11</div></td>
-								<td><div class="date">4/12</div></td>
-								<td><div class="date">4/13</div></td>
-								<td><div class="date">4/14</div></td>
-								<td><div class="date">4/15</div></td>
-								<td><div class="date">4/16</div></td>
-							</tr>
-						</table>
-					</div> 
-					<div class="after_box"></div>
-					<div class="after_box"></div>
-				</div>
-				<!-- //달력 영역 -->
-                 
-
-				<!-- module 012 button (이미지형) -->
-				<div class="mdl_inner mdl009_wrap">
-					<a href="#none" class="mdl_img_btn"><img src="../../images/guide/mdl_img_btn3.png" alt=""></a>
-				</div>
-				<!-- //module 012 button(이미지형) -->
-
-			</article>
-			<!-- //module 012 -->
-
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-013</p>
-
-			<!-- moudule 013 영역 -->
-			<!--타이틀이 없는 경우-->
-				<article class="mdl_wrap evt_step_wrap" style="background-image :url(../../images/temp/@step_evt_bg.png)">
-					<div class="mdl_inner" >
-						<div class="upper">
-							<img src="../../images/temp/@attend_evt.png"  alt="">
-						</div>
-						<ul class="step_item_list" data-column ="3"><!--data-cloumn 값으로 step_item 너비 계산-->
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						</ul>
-					</div>
-				</article>	
-			<!-- //moudule 013 영역 -->
-
-
-			
-			<!-- moudule 013 -->
-			<!--타이틀이 있는 경우-->
-			<!-- <div class="mdl_wrap">
-				<h2 class="ht_tit game_tit">달려라 달려! 선물을 향해 스탬프를 PICK해주세요!</h2>
-				<article class="evt_step_wrap" style="background-image :url(../../images/temp/@step_evt_bg.png)">
-					<div class="mdl_inner" >
-						<div class="upper">
-							<img src="../../images/temp/@attend_evt.png"  alt="">
-						</div>
-						<ul class="step_item_list" data-column ="3"> data-cloumn 값으로 step_item 너비 계산
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-							<li class="step_item"><img src="../../images/temp/@evt_step1.png" alt=""></li>
-						</ul>
-					</div>
-				</article>	
-			</div> -->
-			<!-- //moudule 013 -->
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-014(수정 클릭: 내가 쓴 댓글 수정)</p>
-			<!-- moudule 014 영역 -->
-			<div class="mdl_wrap  mdl014_wrap">
-				<div class="mdl_inner">
-					<h2 class="ht_tit04">댓글입력</h2>
-					<!--textarea : 댓글 입력-->
-					<div class="cmt_box">
-						<textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
-						<div class="count_line"><em class="count">0</em>300자</div>
-					</div>
-					<!--//textarea : 댓글 입력-->
-
-
-					<!--등록 버튼-->
-					<div class="btn_area">
-						<!--버튼 비활성화 클래스 disabled-->
-						<button class="btn_md btn_black disabled">등록하기</button>
-					</div>
-					<!--//등록 버튼-->
-
-					<!--cmt_info_area-->
-					<div class="cmt_info_area">
-						<p class="cmt_total">총 <em class="count">744건</em>의 댓글이 있습니다.</p>
-
-						<!-- form_chk -->
-						<span class="form_chk">
-							<input id="myCmt_ck" type="checkbox" />
-							<label for="myCmt_ck">내가 쓴 댓글 보기</label>
-						</span>
-						<!-- //form_chk -->
-				
-					</div>
-					<!--//cmt_info_area-->
-
-					<!--댓글 리스트-->
-					<ul class="cmt_evt_list">
-						<!--cmt_item 반복-->
-						<li class="cmt_item">
-							<div class="cmt_upper">
-								<ul class="cmt_writer_info">
-									<li class="upper_item">ab******</li>
-									<li class="upper_item">2021.07.11</li>
-									<!-- <li class="upper_item cmt_modify">수정</li>
-									<li class="upper_item cmt_delete">삭제</li> -->
-								</ul>
-								<div class="cmt_title">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</div>
-							</div>
-
-							<!--textarea : 댓글 수정-->
-							<div class="cmt_box hidden">
-								<textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
-								<div class="count_line"><em class="count">0</em>300자</div>
-							</div>
-							<!--//textarea : 댓글 수정-->
-						</li>
-						<!--//cmt_item 반복-->
-
-
-						<li class="cmt_item">
-							<div class="cmt_upper">
-								<ul class="cmt_writer_info">
-									<li class="upper_item">Rlflsldl</li>
-									<li class="upper_item">2021.07.11</li>
-									<li class="upper_item cmt_modify">수정</li>
-									<li class="upper_item cmt_delete">삭제</li>
-								</ul>
-								<div class="cmt_title">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</div>
-							</div>
-
-							<!--textarea : 댓글 수정-->
-							<div class="cmt_box hidden">
-								<textarea name="" class="cmt_textarea"></textarea>
-								<div class="btn_wrap">
-									<span class="count_line"><em class="count">0</em>300자</span>
-									<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
-									<button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
-			                   </div>
-							</div>
-							<!--//textarea : 댓글 수정-->
-						</li>
-
-						
-					</ul>
-					<!--//댓글 리스트-->
-
-
-					<!-- pagination -->
-					<div class="pagination">
-						<button class="btn_page prev"><span class="hidden">이전</span></button>
-						<div class="page_num">
-							<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
-							<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
-							<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-							<a href="#" class="btn_page_num active" title="현재페이지">10</a>
-							<a href="#" class="btn_page_num">11</a>
-							<a href="#" class="btn_page_num">12</a>
-							<a href="#" class="btn_page_num">13</a>
-							<a href="#" class="btn_page_num">14</a>
-							<a href="#" class="btn_page_num">15</a>
-							<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-							<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
-						</div>
-						<button class="btn_page next"><span class="hidden">다음</span></button>
-					</div>
-					<!-- //pagination -->
-
-				</div>
-			</div>
-			<!-- //moudule 014 영역 -->
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-014((댓글없는경우)</p>
-			<!-- moudule 014 -->
-			<div class="mdl_wrap mdl014_wrap">
-				<div class="mdl_inner">
-					<h2 class="ht_tit04">댓글입력</h2>
-					<!--textarea : 댓글 입력-->
-					<div class="cmt_box">
-						<textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
-						<div class="count_line"><em class="count">0</em>300자</div>
-					</div>
-					<!--//textarea : 댓글 입력-->
-
-
-					<!--등록 버튼-->
-					<div class="btn_area">
-						<!--버튼 비활성화 클래스 disabled-->
-						<button class="btn_md btn_black disabled">등록하기</button>
-					</div>
-					<!--//등록 버튼-->
-
-					<!--cmt_info_area-->
-					<div class="cmt_info_area">
-						<p class="cmt_total">총 <em class="count">0건</em>의 댓글이 있습니다.</p>
-
-						<!-- form_chk -->
-						<span class="form_chk">
-							<input id="myCmt_ck" type="checkbox" disabled />
-							<label for="myCmt_ck">내가 쓴 댓글 보기</label>
-						</span>
-						<!-- //form_chk -->
-				
-					</div>
-					<!--//cmt_info_area-->
-
-					<!--댓글 리스트 : 댓글 없는 경우-->
-					<div class="no_cmt_box">첫 댓글을 등록해주세요</div>
-					<!--//-댓글 리스트 : 댓글 없는 경우-->
-
-				</div>
-			</div>
-			<!-- //moudule 014  -->
-
-
-			
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-019(수정 클릭: 내가 쓴 댓글 수정)</p>
-			<!-- moudule 019 -->
-			<div class="mdl_wrap mdl014_wrap">
-				<div class="mdl_inner">
-					<h2 class="ht_tit04">댓글입력</h2>
-					<!--textarea : 댓글 입력-->
-					<div class="cmt_box">
-						<textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
-						<div class="count_line"><em class="count">0</em>300자</div>
-					</div>
-					<!--//textarea : 댓글 입력-->
-
-
-					
-					<!--댓글 아이콘 이미지-->
-					<ul class="cmt_emoji_list">
-						<li class="emoji">
-							<a><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></a>
-						</li>
-						<li class="emoji">
-							<a><img src="../../images/guide/ico_cmt_emoji2.svg" alt=""></a>
-						</li>
-						<li class="emoji">
-							<a><img src="../../images/guide/ico_cmt_emoji3.svg" alt=""></a>
-						</li>
-						<li class="emoji">
-							<a><img src="../../images/guide/ico_cmt_emoji4.svg" alt=""></a>
-						</li>
-						<li class="emoji">
-							<a><img src="../../images/guide/ico_cmt_emoji5.svg" alt=""></a>
-						</li> 
-					</ul>
-					<!--//댓글 아이콘 이미지-->
-
-
-					<!--등록 버튼-->
-					<div class="btn_area">
-						<!--버튼 비활성화 클래스 disabled-->
-						<button class="btn_md btn_black disabled">등록하기</button>
-					</div>
-					<!--//등록 버튼-->
-
-					<!--cmt_info_area-->
-					<div class="cmt_info_area">
-						<p class="cmt_total">총 <em class="count">744건</em>의 댓글이 있습니다.</p>
-
-						<!-- form_chk -->
-						<span class="form_chk">
-							<input id="myCmt_ck" type="checkbox" />
-							<label for="myCmt_ck">내가 쓴 댓글 보기</label>
-						</span>
-						<!-- //form_chk -->
-				
-					</div>
-					<!--//cmt_info_area-->
-
-					<!--댓글 리스트-->
-					<ul class="cmt_evt_list">
-						<!--cmt_item 반복-->
-						<li class="cmt_item">
-							<div class="cmt_upper">
-								<ul class="cmt_writer_info">
-									<li class="upper_item">ab******</li>
-									<li class="upper_item">2021.07.11</li>
-									<!-- <li class="upper_item cmt_modify">수정</li>
-									<li class="upper_item cmt_delete">삭제</li> -->
-								</ul>
-								<!--등록된 이미지가 있는 경우-->
-								<div class="cmt_icon"><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></div>
-								<div class="cmt_title">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</div>
-							</div>
-
-							<!--textarea : 댓글 수정-->
-							<div class="cmt_box hidden">
-								<textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
-								<div class="count_line"><em class="count">0</em>300자</div>
-							</div>
-							<!--//textarea : 댓글 수정-->
-						</li>
-						<!--//cmt_item 반복-->
-
-
-						<li class="cmt_item">
-							<div class="cmt_upper">
-								<ul class="cmt_writer_info">
-									<li class="upper_item">Rlflsldl</li>
-									<li class="upper_item">2021.07.11</li>
-									<li class="upper_item cmt_modify">수정</li>
-									<li class="upper_item cmt_delete">삭제</li>
-								</ul>
-								<!--등록된 이미지가 있는 경우-->
-								<div class="cmt_icon"><img src="../../images/guide/ico_cmt_emoji3.svg" alt=""></div>
-								<div class="cmt_title">디자인이 너무 귀엽고 취향이에요! 핫트랙스에서 상품으로 나오면 정말 잘 쓸 것같아요~</div>
-							</div>
-
-
-							<div class="hidden">
-								<!--textarea : 댓글 수정-->
-								<div class="cmt_box">
-									<textarea name="" class="cmt_textarea"></textarea>
-									<div class="btn_wrap">
-										<span class="count_line"><em class="count">0</em>300자</span>
-										<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
-										<button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
-								</div>
-								</div>
-								<!--//textarea : 댓글 수정-->
-
-								<!--댓글 아이콘 이미지-->
-								<ul class="cmt_emoji_list">
-									<li class="emoji">
-										<a><img src="../../images/guide/ico_cmt_emoji1.svg" alt=""></a>
-									</li>
-									<li class="emoji">
-										<a><img src="../../images/guide/ico_cmt_emoji2.svg" alt=""></a>
-									</li>
-									<li class="emoji">
-										<a><img src="../../images/guide/ico_cmt_emoji3.svg" alt=""></a>
-									</li>
-									<li class="emoji">
-										<a><img src="../../images/guide/ico_cmt_emoji4.svg" alt=""></a>
-									</li>
-									<li class="emoji">
-										<a><img src="../../images/guide/ico_cmt_emoji5.svg" alt=""></a>
-									</li> 
-								</ul>
-								<!--//댓글 아이콘 이미지-->
-							</div>
-						</li>
-
-						
-					</ul>
-					<!--//댓글 리스트-->
-
-
-					<!-- pagination -->
-					<div class="pagination">
-						<button class="btn_page prev"><span class="hidden">이전</span></button>
-						<div class="page_num">
-							<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
-							<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
-							<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-							<a href="#" class="btn_page_num active" title="현재페이지">10</a>
-							<a href="#" class="btn_page_num">11</a>
-							<a href="#" class="btn_page_num">12</a>
-							<a href="#" class="btn_page_num">13</a>
-							<a href="#" class="btn_page_num">14</a>
-							<a href="#" class="btn_page_num">15</a>
-							<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-							<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
-						</div>
-						<button class="btn_page next"><span class="hidden">다음</span></button>
-					</div>
-					<!-- //pagination -->
-
-				</div>
-			</div>
-			<!-- //moudule 019 -->
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-015</p>
-
-			<!-- module 015 -->
-			<div class="mdl_wrap mdl015_wrap">
-				<div class="mdl_inner">
-					<!-- tab_ty -->
-					<div class="tab_swiper tab_ty mdl_sticky_mn"> <!--mdl_sticky_mn : 스크롤 모션 컨트롤 클래스-->
-						<!-- swiper-wrapper -->
-						<ul class="swiper-wrapper sticky_anchor_menu"> <!--sticky_anchor_menu : 스크롤 모션 컨트롤 클래스-->
-							<li class="swiper-slide" data-target = "st_test0">
-								<a href="#n" class="on"><!-- 활성화  class="on" -->
-									<span>2022 다이어리</span>
-								</a>
-							</li>
-							<li class="swiper-slide" data-target = "st_test1">
-								<a href="#n">
-									<span>기록과 아카이빙을 위한</span>
-								</a>
-							</li>
-							<li class="swiper-slide" data-target = "st_test2">
-								<a href="#n">
-									<span>Be On :D 할인쿠폰</span>
-								</a>
-							</li>
-							<li class="swiper-slide" data-target = "st_test3">
-								<a href="#n">
-									<span>별별일상 응모하기</span>
-								</a>
-							</li>
-						</ul>
-						<!-- //swiper-wrapper -->
-
-						<!-- swiper_control -->
-						<div class="swiper_control">
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-						</div>
-					<!-- //swiper_control -->
-					</div>
-					<!-- //tab_ty -->
-
-
-					<!--anchor_target--> 
-					<div id="st_test0" class="anchor_target">
-						<h2 class="ht_tit">2022다이어리</h2>
-
-						<!-- 상품 리스트 -->
-						<ul class="evt_products"><!-- row type : class="row_dir" -->
-							<!-- prod_item 반복 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod01.jpg" alt="">
-									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-									<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>
-
-									<!-- 19세 상품 항목
-									<img src="../../images/guide/img_19.svg" alt="">
-									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-									//19세 상품 항목 -->
-
-									<!-- 대체/품절 상품
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-										</div>
-									</div>
-									//대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //prod_item 반복 -->
-
-							<!-- 19세 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<!-- 19세 상품 항목 -->
-									<img src="../../images/guide/img_19.svg" alt="">
-									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-									<!-- //19세 상품 항목 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //19세 상품 -->
-
-							<!-- 대체 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod03.jpg" alt="">
-									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-
-									<!--<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>-->
-
-									<!-- 대체/품절 상품 -->
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-										</div>
-									</div>
-									<!-- //대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //대체 상품 -->
-
-							<!-- 품절 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod04.jpg" alt="">
-									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-
-									<!--<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>-->
-
-									<!-- 대체/품절 상품 -->
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
-										</div>
-									</div>
-									<!-- //대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //품절 상품 -->
-						</ul>
-						<!-- //상품 리스트-->
-					</div>
-					<!--//anchor_target-->
-
-					<!--anchor_target-->
-					<div id="st_test1" class="anchor_target">
-						<h2 class="ht_tit">기록과 아카이빙을 위한</h2>
-						<!-- 상품 리스트 -->
-						<ul class="evt_products"><!-- row type : class="row_dir" -->
-							<!-- prod_item 반복 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod01.jpg" alt="">
-									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-
-									<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>
-
-									<!-- 19세 상품 항목
-									<img src="../../images/guide/img_19.svg" alt="">
-									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-									//19세 상품 항목 -->
-
-									<!-- 대체/품절 상품
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-										</div>
-									</div>
-									//대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //prod_item 반복 -->
-
-							<!-- 19세 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<!-- 19세 상품 항목 -->
-									<img src="../../images/guide/img_19.svg" alt="">
-									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-									<!-- //19세 상품 항목 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //19세 상품 -->
-
-							<!-- 대체 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod03.jpg" alt="">
-									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-
-									<!--<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>-->
-
-									<!-- 대체/품절 상품 -->
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-										</div>
-									</div>
-									<!-- //대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //대체 상품 -->
-
-							<!-- 품절 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod04.jpg" alt="">
-									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-
-									<!--<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>-->
-
-									<!-- 대체/품절 상품 -->
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
-										</div>
-									</div>
-									<!-- //대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //품절 상품 -->
-						</ul>
-						<!-- //상품 리스트-->
-					</div>
-					<!--//anchor_target-->
-
-					<!--anchor_target-->
-					<div id="st_test2" class="anchor_target" >
-						<h2 class="ht_tit">Be On :D 할인쿠폰</h2>
-
-		
-						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
-							<!-- prod_item 반복 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod01.jpg" alt="">
-									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
-									<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>
-	
-									<!-- 19세 상품 항목
-									<img src="../../images/guide/img_19.svg" alt="">
-									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-									//19세 상품 항목 -->
-	
-									<!-- 대체/품절 상품
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-										</div>
-									</div>
-									//대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //prod_item 반복 -->
-	
-							<!-- 19세 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<!-- 19세 상품 항목 -->
-									<img src="../../images/guide/img_19.svg" alt="">
-									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-									<!-- //19세 상품 항목 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //19세 상품 -->
-	
-							<!-- 대체 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod03.jpg" alt="">
-									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
-									<!--<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>-->
-	
-									<!-- 대체/품절 상품 -->
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-										</div>
-									</div>
-									<!-- //대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //대체 상품 -->
-	
-							<!-- 품절 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod04.jpg" alt="">
-									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
-									<!--<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>-->
-	
-									<!-- 대체/품절 상품 -->
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
-										</div>
-									</div>
-									<!-- //대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //품절 상품 -->
-	
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod05.jpg" alt="">
-									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-									<p class="evt_end_msg"><em>이벤트 종료</em></p>
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod06.jpg" alt="">
-									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<!-- //상품 리스트-->
-					</div>
-					<!--//anchor_target-->
-
-					<!--anchor_target-->
-					<div id="st_test3" class="anchor_target">
-						<h2 class="ht_tit">별별일상 응모하기</h2>
-
-						<!-- 상품 리스트 -->
-						<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
-							<!-- prod_item 반복 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod01.jpg" alt="">
-									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-	
-									<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>
-	
-									<!-- 19세 상품 항목
-									<img src="../../images/guide/img_19.svg" alt="">
-									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-									//19세 상품 항목 -->
-	
-									<!-- 대체/품절 상품
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-										</div>
-									</div>
-									//대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //prod_item 반복 -->
-	
-							<!-- 19세 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<!-- 19세 상품 항목 -->
-									<img src="../../images/guide/img_19.svg" alt="">
-									<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
-									<!-- //19세 상품 항목 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //19세 상품 -->
-	
-							<!-- 대체 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod03.jpg" alt="">
-									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
-									<!--<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>-->
-	
-									<!-- 대체/품절 상품 -->
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
-										</div>
-									</div>
-									<!-- //대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //대체 상품 -->
-	
-							<!-- 품절 상품 -->
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod04.jpg" alt="">
-									<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
-	
-									<!--<button class="evt_good_count active">
-										<div class="icon"></div>
-										<div class="txt">999+</div>
-									</button>-->
-	
-									<!-- 대체/품절 상품 -->
-									<div class="show_replace">
-										<div>
-											<div>아쉽지만!<br>품절이예요</div>
-											<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
-										</div>
-									</div>
-									<!-- //대체/품절 상품 -->
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<!-- //품절 상품 -->
-	
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod05.jpg" alt="">
-									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-									<p class="evt_end_msg"><em>이벤트 종료</em></p>
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-							<li class="prod_item">
-								<div class="product_pic">
-									<img src="../../images/temp/@img_prod06.jpg" alt="">
-									<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-								</div>
-								<div class="product_info">
-									<div class="company">dretec</div>
-									<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">234,000</span>
-										<span class="price_origin">20,000</span>
-									</div>
-									<div class="badge_line">
-										<span class="badge on">쿠폰</span>
-										<span class="badge">사은품</span>
-										<span class="badge">무료배송</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<!-- //상품 리스트-->
-					</div>
-					<!--//anchor_target-->
-
-				</div>
-			</div>
-			<!-- //module 015 -->
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-017</p>
-
-			<!-- module 017 -->
-			<div class="mdl_wrap mdl017_wrap">
-				<div class="mdl_inner">
-					<!--mdl_017_list-->
-					<ul class="mdl_017_list">
-						<!--ul.mdl_017_card 반복-->
-						<li class="mdl_017_card">
-							<div class="discount">~24%</div>
-							<div class="tit">금주의 주말 특가는?!</div>
-							<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
-						</li>
-						<!--//ul.mdl_017_card 반복-->
-
-
-	
-						<li class="mdl_017_card">
-							<div class="tit">앱에서만 사용 가능한<br>주말 할인쿠폰!!</div>
-							<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
-						</li>
-						<li class="mdl_017_card">
-							<div class="discount">~24%</div>
-							<div class="tit">-금주의 주말 특가는?!</div>
-							<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
-						</li>
-						<li class="mdl_017_card">
-							<div class="discount">~24%</div>
-							<div class="tit">-금주의 주말 특가는?!</div>
-							<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
-						</li>
-						<li class="mdl_017_card">
-							<div class="discount">~24%</div>
-							<div class="tit">-금주의 주말 특가는?!</div>
-							<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
-						</li>
-						<li class="mdl_017_card">
-							<div class="discount">~24%</div>
-							<div class="tit">-금주의 주말 특가는?!</div>
-							<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
-						</li>
-					</ul>
-					<!--//mdl_017_list-->
-
-
-					<!--btn_area : 기획전 전체보기-->
-					<div class="btn_area">
-						<a href="#n" target="_blank" class="btn_more_view_box ty02"><strong>기획전 전체보기<em></em></strong></a>
-					</div>
-				    <!--//btn_area : 기획전 전체보기-->
-				</div>
-
-			</div>
-			<!-- //module 017-->
-
-
-			<p style="padding:30px 0 10px 20px; text-align: center; background-color: lavender;">+HTR-P-EVT-MDL-018</p>
-
-			<!-- module 018 -->
-			<div class="mdl_wrap mdl018_wrap">
-				<div class="mdl_inner hot_deal_wrap">
-					<h2 class="ht_tit">오늘만 특가<em class="hotdeal_shine"></em></h2>
-					<!-- 타이머 영역 -->
-                    <div class="timer_area">
-                        <div class="timer">05:23:15</div>
-                    </div>
-                    <!-- //타이머 영역 -->
-
-					<!-- thumb4_banner : function - thumb4banner(); -->
-					<div class="thumb4_banner ht_today_banner"><!-- 오늘만 특가 class="ht_today_banner" -->
-						<div class="swiper-container">
-							<!-- swiper-wrapper -->
-							<ul class="swiper-wrapper">
-								<!-- swiper-slide 반복 -->
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod01.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-									</div>
-									<div class="product_info">
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<!-- //swiper-slide 반복 -->
-
-
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod02.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-									</div>
-									<div class="product_info">
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<li class="swiper-slide prod_item">
+								<!-- 대체 상품 -->
+								<li class="prod_item">
 									<div class="product_pic">
 										<img src="../../images/temp/@img_prod03.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
+										<!--<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>-->
+
+										<!-- 대체/품절 상품 -->
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
+											</div>
+										</div>
+										<!-- //대체/품절 상품 -->
 									</div>
 									<div class="product_info">
+										<div class="company">dretec</div>
 										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
 										<div class="price_line">
 											<span class="discount_rate">15%</span>
@@ -2151,16 +1313,36 @@
 											<span class="price_origin">20,000</span>
 										</div>
 										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
 											<span class="badge">무료배송</span>
 										</div>
 									</div>
 								</li>
-								<li class="swiper-slide prod_item">
+								<!-- //대체 상품 -->
+
+								<!-- 품절 상품 -->
+								<li class="prod_item">
 									<div class="product_pic">
 										<img src="../../images/temp/@img_prod04.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
+										<!--<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>-->
+
+										<!-- 대체/품절 상품 -->
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
+											</div>
+										</div>
+										<!-- //대체/품절 상품 -->
 									</div>
 									<div class="product_info">
+										<div class="company">dretec</div>
 										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
 										<div class="price_line">
 											<span class="discount_rate">15%</span>
@@ -2168,50 +1350,51 @@
 											<span class="price_origin">20,000</span>
 										</div>
 										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
 											<span class="badge">무료배송</span>
 										</div>
 									</div>
 								</li>
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod05.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-									</div>
-									<div class="product_info">
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_prod06.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
-									</div>
-									<div class="product_info">
-										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
-										<div class="price_line">
-											<span class="discount_rate">15%</span>
-											<span class="final_price">234,000</span>
-											<span class="price_origin">20,000</span>
-										</div>
-										<div class="badge_line">
-											<span class="badge">무료배송</span>
-										</div>
-									</div>
-								</li>
-								<li class="swiper-slide prod_item">
+								<!-- //품절 상품 -->
+							</ul>
+							<!-- //상품 리스트-->
+						</div>
+						<!-- //anchor_target -->
+
+						<!-- anchor_target --> 
+						<div class="anchor_target" id="ant02">
+							<h2 class="ht_tit">기록과 아카이빙을 위한</h2>
+
+							<!-- 상품 리스트 -->
+							<ul class="evt_products">
+								<!-- prod_item 반복 -->
+								<li class="prod_item">
 									<div class="product_pic">
 										<img src="../../images/temp/@img_prod01.jpg" alt="">
 										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+										<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>
+
+										<!-- 19세 상품 항목
+										<img src="../../images/guide/img_19.svg" alt="">
+										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
+										//19세 상품 항목 -->
+
+										<!-- 대체/품절 상품
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
+											</div>
+										</div>
+										//대체/품절 상품 -->
 									</div>
 									<div class="product_info">
+										<div class="company">dretec</div>
 										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
 										<div class="price_line">
 											<span class="discount_rate">15%</span>
@@ -2219,16 +1402,24 @@
 											<span class="price_origin">20,000</span>
 										</div>
 										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
 											<span class="badge">무료배송</span>
 										</div>
 									</div>
 								</li>
-								<li class="swiper-slide prod_item">
+								<!-- //prod_item 반복 -->
+
+								<!-- 19세 상품 -->
+								<li class="prod_item">
 									<div class="product_pic">
-										<img src="../../images/temp/@img_prod02.jpg" alt="">
-										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+										<!-- 19세 상품 항목 -->
+										<img src="../../images/guide/img_19.svg" alt="">
+										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
+										<!-- //19세 상품 항목 -->
 									</div>
 									<div class="product_info">
+										<div class="company">dretec</div>
 										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
 										<div class="price_line">
 											<span class="discount_rate">15%</span>
@@ -2236,161 +1427,668 @@
 											<span class="price_origin">20,000</span>
 										</div>
 										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
 											<span class="badge">무료배송</span>
 										</div>
 									</div>
 								</li>
+								<!-- //19세 상품 -->
+
+								<!-- 대체 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod03.jpg" alt="">
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
+										<!--<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>-->
+
+										<!-- 대체/품절 상품 -->
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
+											</div>
+										</div>
+										<!-- //대체/품절 상품 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //대체 상품 -->
+
+								<!-- 품절 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod04.jpg" alt="">
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
+										<!--<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>-->
+
+										<!-- 대체/품절 상품 -->
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
+											</div>
+										</div>
+										<!-- //대체/품절 상품 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //품절 상품 -->
 							</ul>
-							<!-- //swiper-wrapper -->
-
-							<!-- swiper_control -->
-							<div class="swiper_control">
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-pagination"></div>
-								<div class="swiper-button-next"></div>
-							</div>
-							<!-- //swiper_control -->
+							<!-- //상품 리스트-->
 						</div>
-					</div>
-					<!-- //thumb4_banner -->
-				</div>
-			</div>
-			<!-- //module 018 -->
+						<!-- //anchor_target -->
 
+						<!-- anchor_target --> 
+						<div class="anchor_target" id="ant03">
+							<h2 class="ht_tit">Be On :D 할인쿠폰</h2>
+
+							<!-- 상품 리스트 -->
+							<ul class="evt_products row_dir">
+								<!-- prod_item 반복 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod01.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+										<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>
+
+										<!-- 19세 상품 항목
+										<img src="../../images/guide/img_19.svg" alt="">
+										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
+										//19세 상품 항목 -->
+
+										<!-- 대체/품절 상품
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
+											</div>
+										</div>
+										//대체/품절 상품 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //prod_item 반복 -->
+
+								<!-- 19세 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<!-- 19세 상품 항목 -->
+										<img src="../../images/guide/img_19.svg" alt="">
+										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
+										<!-- //19세 상품 항목 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //19세 상품 -->
+
+								<!-- 대체 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod03.jpg" alt="">
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
+										<!--<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>-->
+
+										<!-- 대체/품절 상품 -->
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
+											</div>
+										</div>
+										<!-- //대체/품절 상품 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //대체 상품 -->
+
+								<!-- 품절 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod04.jpg" alt="">
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
+										<!--<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>-->
+
+										<!-- 대체/품절 상품 -->
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
+											</div>
+										</div>
+										<!-- //대체/품절 상품 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //품절 상품 -->
+							</ul>
+							<!-- //상품 리스트-->
+						</div>
+						<!--/ /anchor_target -->
+
+						<!-- anchor_target --> 
+						<div class="anchor_target" id="ant04">
+							<h2 class="ht_tit">별별일상 응모하기</h2>
+
+							<!-- 상품 리스트 -->
+							<ul class="evt_products row_dir">
+								<!-- prod_item 반복 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod01.jpg" alt="">
+										<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+										<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>
+
+										<!-- 19세 상품 항목
+										<img src="../../images/guide/img_19.svg" alt="">
+										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
+										//19세 상품 항목 -->
+
+										<!-- 대체/품절 상품
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
+											</div>
+										</div>
+										//대체/품절 상품 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //prod_item 반복 -->
+
+								<!-- 19세 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<!-- 19세 상품 항목 -->
+										<img src="../../images/guide/img_19.svg" alt="">
+										<a href="javascript:alert('19세 이상');"><em class="hidden">19세 이상만 구매 가능해요</em></a>
+										<!-- //19세 상품 항목 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //19세 상품 -->
+
+								<!-- 대체 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod03.jpg" alt="">
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
+										<!--<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>-->
+
+										<!-- 대체/품절 상품 -->
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>
+											</div>
+										</div>
+										<!-- //대체/품절 상품 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //대체 상품 -->
+
+								<!-- 품절 상품 -->
+								<li class="prod_item">
+									<div class="product_pic">
+										<img src="../../images/temp/@img_prod04.jpg" alt="">
+										<!--<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>-->
+
+										<!--<button class="evt_good_count active">
+											<div class="icon"></div>
+											<div class="txt">999+</div>
+										</button>-->
+
+										<!-- 대체/품절 상품 -->
+										<div class="show_replace">
+											<div>
+												<div>아쉽지만!<br>품절이예요</div>
+												<!--<button type="button" class="replace_prod_btn" data-role="btn-dialog" data-target="#popReplaceProd">대체상품</button>-->
+											</div>
+										</div>
+										<!-- //대체/품절 상품 -->
+									</div>
+									<div class="product_info">
+										<div class="company">dretec</div>
+										<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">234,000</span>
+											<span class="price_origin">20,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge on">쿠폰</span>
+											<span class="badge">사은품</span>
+											<span class="badge">무료배송</span>
+										</div>
+									</div>
+								</li>
+								<!-- //품절 상품 -->
+							</ul>
+							<!-- //상품 리스트-->
+						</div>
+						<!-- //anchor_target -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module E-1 : mdl015 -->
+
+
+
+				<!-- Module F-1 : mdl017 -->
+				<div class="mdl_wrap">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<!-- mdl_017_list -->
+						<ul class="mdl_017_list">
+							<!-- .mdl_017_card 반복 -->
+							<li class="mdl_017_card">
+								<div class="discount">~24%</div>
+								<div class="tit">금주의 주말 특가는?!</div>
+								<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
+							</li>
+							<!-- //.mdl_017_card 반복 -->
+
+							<li class="mdl_017_card">
+								<div class="tit">앱에서만 사용 가능한<br>주말 할인쿠폰!!</div>
+								<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
+							</li>
+							<li class="mdl_017_card">
+								<div class="discount">~24%</div>
+								<div class="tit">-금주의 주말 특가는?!</div>
+								<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
+							</li>
+							<li class="mdl_017_card">
+								<div class="discount">~24%</div>
+								<div class="tit">-금주의 주말 특가는?!</div>
+								<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
+							</li>
+							<li class="mdl_017_card">
+								<div class="discount">~24%</div>
+								<div class="tit">-금주의 주말 특가는?!</div>
+								<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
+							</li>
+							<li class="mdl_017_card">
+								<div class="discount">~24%</div>
+								<div class="tit">-금주의 주말 특가는?!</div>
+								<div class="sub_tit">만능 틈색 브러쉬<br>1+1, 9900원 최저가!</div>
+							</li>
+						</ul>
+						<!-- //mdl_017_list -->
+
+						<!-- btn_area -->
+						<div class="btn_area">
+							<button class="btn_more_view_box ty02"><strong>기획전 전체보기<em></em></strong></button>
+						</div>
+						<!-- ///btn_area -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module F-1 : mdl017 -->
+
+
+
+				<!-- Module F-2 : mdl018 -->
+				<div class="mdl_wrap">
+					<!-- mdl_inner -->
+					<div class="mdl_inner">
+						<!-- hot_deal_wrap -->
+						<div class="hot_deal_wrap">
+							<h2 class="ht_tit">오늘만 특가<em class="hotdeal_shine"></em></h2>
+
+							<!-- 타이머 영역 -->
+							<div class="timer_area">
+								<div class="timer">05:23:15</div>
+							</div>
+							<!-- //타이머 영역 -->
+		
+							<!-- thumb4_banner : function - thumb4banner(); -->
+							<div class="thumb4_banner ht_today_banner"><!-- 오늘만 특가 class="ht_today_banner" -->
+								<div class="swiper-container">
+									<!-- swiper-wrapper -->
+									<ul class="swiper-wrapper">
+										<!-- swiper-slide 반복 -->
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod01.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+												<div class="badge_line">
+													<span class="badge">무료배송</span>
+												</div>
+											</div>
+										</li>
+										<!-- //swiper-slide 반복 -->
+		
+		
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod02.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+												<div class="badge_line">
+													<span class="badge">무료배송</span>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod03.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+												<div class="badge_line">
+													<span class="badge">무료배송</span>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod04.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+												<div class="badge_line">
+													<span class="badge">무료배송</span>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod05.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+												<div class="badge_line">
+													<span class="badge">무료배송</span>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod06.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+												<div class="badge_line">
+													<span class="badge">무료배송</span>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod01.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+												<div class="badge_line">
+													<span class="badge">무료배송</span>
+												</div>
+											</div>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<img src="../../images/temp/@img_prod02.jpg" alt="">
+												<a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+											</div>
+											<div class="product_info">
+												<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">234,000</span>
+													<span class="price_origin">20,000</span>
+												</div>
+												<div class="badge_line">
+													<span class="badge">무료배송</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<!-- //swiper-wrapper -->
+		
+									<!-- swiper_control -->
+									<div class="swiper_control">
+										<div class="swiper-button-prev"></div>
+										<div class="swiper-pagination"></div>
+										<div class="swiper-button-next"></div>
+									</div>
+									<!-- //swiper_control -->
+								</div>
+							</div>
+							<!-- //thumb4_banner -->
+						</div>
+						<!-- hot_deal_wrap -->
+					</div>
+					<!-- //mdl_inner -->
+				</div>
+				<!-- //Module F-2 : mdl018 -->
+
+			</div>
+			<!-- //mdl_contents_wrap -->
         </section>
         <!-- /ht_contents_wrap -->
 	</main>
 	<!-- //Contents -->
 
+
+	<!-- Footer -->
+	<footer class="footer_wrapper" style="height:205px;background-color:#f7f7f7;color:#000;font-size:20px;font-weight:700;line-height:205px;text-align:center;">
+		Footer
+	</footer>
+	<!-- //Footer -->
+
+
+	<!-- 윙배너 -->
+	<section class="fly_menu_wrapper sps">
+	</section>
+	<!-- // 윙배너 -->
+
+
+	<!-- 탑버튼 -->
+	<div class="floating_wrapper">
+	</div>
+	<!-- //탑버튼 -->
 </div>
 <!-- // wrapper -->
 
-<!-- 투표하기 : module 009-3--> 
-<div id="evtVotePop" class="dialog_wrap" data-class="dialog_md">
-    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
-
-    <!-- dialog_header -->
-    <div class="dialog_header">
-        <div class="dialog_title">투표 참여하기</div>
-    </div>
-    <!-- //dialog_header -->
-
-    <!-- dialog_contents -->
-    <div class="dialog_contents evt_vote_wrap">
-		<!-- 스크롤 영역 -->
-		<div class="custom_scroll_wrap sc_pop_btn">
-			<h2 class="tit">디자인 선택</h2>
-			<p class="sub_tit">마음에 드는 다이어리를 선택해 주세요.</p>
-			<ul class="evt_vote_list">
-				<!-- vote_item 반복 -->
-				<li class="vote_item">
-					<div class="prod_pic">
-						<img src="../../images/temp/@img_prod02.jpg" alt="">
-						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote0">
-						<label for="evt_vote0" class="evt_vote_lb"></label>	
-					</div>
-					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
-				</li>
-				<!-- //vote_item 반복 -->
-
-
-				<li class="vote_item">
-					<div class="prod_pic">
-						<img src="../../images/temp/@img_prod02.jpg" alt="">
-						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote1">
-						<label for="evt_vote1" class="evt_vote_lb"></label>	
-					</div>
-					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
-				</li>
-				<li class="vote_item">
-					<div class="prod_pic">
-						<img src="../../images/temp/@img_prod02.jpg" alt="">
-						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote2">
-						<label for="evt_vote2" class="evt_vote_lb"></label>	
-					</div>
-					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
-				</li>
-				<li class="vote_item">
-					<div class="prod_pic">
-						<img src="../../images/temp/@img_prod02.jpg" alt="">
-						<input type="radio" class="evt_vote_radio" name="test" id="evt_vote3">
-						<label for="evt_vote3" class="evt_vote_lb"></label>	
-					</div>
-					<div class="prod_title">2022 오프닝 시퀸스 다이어리<br>데코 포켓 노트 (날짜형)</div>
-				</li>
-			</ul>
-
-			<div class="vote_cmt_box">
-				<h2 class="ht_tit05">댓글입력</h2>
-				<!--textarea : 댓글 입력-->
-				<div class="cmt_box">
-					<textarea name="" class="cmt_textarea" placeholder="댓글을 입력해주세요."></textarea>
-					<div class="count_line"><em class="count">0</em>300자</div>
-				</div>
-				<!--//textarea : 댓글 입력-->
-			</div>
-
-		</div>
-		<!-- //스크롤 영역-->
-
-		<!-- btn_area -->
-		<div class="btn_area">
-			<!--버튼 비활성화 클래스 : disabled -->
-			<button type="text" class="btn_md btn_primary disabled"><span>참여하기</span></button>
-		</div>
-		<!-- //btn_area -->
-    </div>
-    <!-- //dialog_contents -->
-</div>
-<!-- //투표하기 : module 009-3 --> 
-
-
-<!-- 응모하기 : module 010-2--> 
-<div id="evtApplyPop" class="dialog_wrap" data-class="dialog_md">
-    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
-
-    <!-- dialog_header -->
-    <div class="dialog_header">
-        <div class="dialog_title">응모하기</div>
-    </div>
-    <!-- //dialog_header -->
-
-    <!-- dialog_contents -->
-    <div class="dialog_contents">
-		<!-- 스크롤 영역 -->
-		<div class="custom_scroll_wrap sc_pop_btn">
-			<!--폼 양식-->
-			<ul class="cm_form_list">
-				<li class="form_item">
-					<label for="" class="cm_lb">주문번호</label>
-					<input type="text" class="form_ip" disabled value="1234567">
-				</li>
-				<li class="form_item">
-					<label for="" class="cm_lb">이름</label>
-					<input type="text" class="form_ip" >
-				</li>
-				<li class="form_item">
-					<label for="" class="cm_lb">전화번호</label>
-					<input type="text" class="form_ip" >
-				</li>
-				<li class="form_item">
-					<label for="" class="cm_lb">생년월일</label>
-					<input type="text" class="form_ip">
-				</li>
-			</ul>
-			<!--//폼 양식-->
-		</div>
-		<!-- //스크롤 영역-->
-
-		<!-- btn_area -->
-		<div class="btn_area">
-			<!--버튼 비활성화 클래스 : disabled -->
-			<button type="text" class="btn_md btn_primary disabled"><span>응모하기</span></button>
-		</div>
-		<!-- //btn_area -->
-    </div>
-    <!-- //dialog_contents -->
-</div>
-<!-- // 응모하기 : module 010-2--> 
-
+<script>
+$(function(){
+	$('.mdl_wrap').each(function(index, item) {
+		if($(item).attr('style') != undefined){
+			$(this).addClass('mdl_bg')
+		}
+	});
+});
+</script>
+</body>
 </html>
