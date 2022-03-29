@@ -62,7 +62,7 @@
 
 .mdl_wrap {padding-bottom:60px;}
 .mdl_wrap:last-child {padding-bottom:0;}
-.mdl_wrap.mdl_bg {margin-bottom:60px;padding:60px 0;}
+.mdl_wrap.mdl_bg {margin-bottom:60px;padding:60px 0;border:10px solid red}
 
 
 	/*
@@ -85,7 +85,7 @@ $(function(){
 
     $('.mdl_wrap').each(function(index, item) {
 		console.log(item);
-		if($(item).attr('style') != ""){
+		if($(item).attr('style') != undefined){
 			$(this).addClass('mdl_bg')
 		}
     });
@@ -159,7 +159,7 @@ $(function(){
 		<section class="ht_contents_wrap mdl_contents_wrap">
            
             <!-- moudule 001 -->
-            <article class="mdl_wrap" style="">
+            <article class="mdl_wrap">
                 <div class="mdl_inner mdl001_wrap">
                     <p class="sub_tit">Be On D 다이어리 전품목 특가</p>
                     <h2 class="ht_tit03">널 보는 것만으로도 기분이 좋아져!</h2>
@@ -173,7 +173,7 @@ $(function(){
             <!-- //moudule 001 -->
 
             <!-- 타이틀 + 풀이미지 -->
-            <div class="mdl_wrap" style="">
+            <div class="mdl_wrap">
                 <!--타이틀 없으면 태그 삭제-->
                 <!-- <h1 class="evt_tit_bar">마음에 쏙 드는 다이어리 디자인을 PICK해주세요!</h1> -->
                 <img src="../../images/temp/@mdl_009_img.png" class="mdl_full_img" alt="">
@@ -192,7 +192,7 @@ $(function(){
     
             
             <!-- moudule 003 -->
-            <div class="mdl_wrap" style="">
+            <div class="mdl_wrap">
                 <div class="mdl_inner mdl003_wrap">
                     <h3 class="ht_tit">직접 기록하는 모습을 담았어요</h3>
                     <!--비디오 영역-->
@@ -206,7 +206,7 @@ $(function(){
 
 
             <!-- moudule 007 -->
-			<div class="mdl_wrap" style="">
+			<div class="mdl_wrap">
 				<div class="mdl_inner mdl_prod_wrap">
                     <h2 class="ht_tit">시즌 BEST상품</h2>
 
@@ -377,7 +377,7 @@ $(function(){
 
 
             <!-- module 018 -->
-			<div class="mdl_wrap" style="">
+			<div class="mdl_wrap">
 				<div class="mdl_inner hot_deal_wrap">
 					<h2 class="ht_tit">오늘만 특가<em class="hotdeal_shine"></em></h2>
 					<!-- 타이머 영역 -->
@@ -549,7 +549,7 @@ $(function(){
 			<!-- //module 018 -->
 
 			<!-- moudule 013 -->
-			<div class="mdl_wrap" style="">
+			<div class="mdl_wrap">
 				<h2 class="ht_tit game_tit">달려라 달려! 선물을 향해 스탬프를 PICK해주세요!</h2>
 				<article class="evt_step_wrap" style="background-image :url(../../images/temp/@step_evt_bg2.png)">
 					<div class="mdl_inner" >
@@ -573,7 +573,7 @@ $(function(){
 
 
             <!-- moudule 019 -->
-			<div class="mdl_wrap" style="">
+			<div class="mdl_wrap">
 				<div class="mdl_inner mdl014_wrap">
 					<h2 class="ht_tit04">댓글입력</h2>
 					<!--textarea : 댓글 입력-->
@@ -732,7 +732,7 @@ $(function(){
 
 
 			<!-- module 015 -->
-			<div class="mdl_wrap" style="">
+			<div class="mdl_wrap">
 				<div class="mdl_inner mdl015_wrap">
 					<!-- tab_ty -->
 					<div class="tab_swiper tab_ty mdl_sticky_mn"> <!--mdl_sticky_mn : 스크롤 모션 컨트롤 클래스-->
