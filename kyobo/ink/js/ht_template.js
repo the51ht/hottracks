@@ -1472,7 +1472,7 @@ function mdl4Banner(){
                 //pauseOnMouseEnter: true,
             },
             navigation: {
-                nextEl:$(ele).find('.swiper-button-next'),
+                nextEl: $(ele).find('.swiper-button-next'),
                 prevEl: $(ele).find('.swiper-button-prev'),
             },
             pagination: {
