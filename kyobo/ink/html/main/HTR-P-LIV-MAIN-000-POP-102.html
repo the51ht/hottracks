@@ -68,11 +68,11 @@ $(function(){
 </script>
 
 <script>
-    $(function(){
-        $('.calendar_tab .today em').text('오늘');
-        var idx = $('.calendar_tab .today').index();
-        calendarTabSwiperCont.slideTo(idx - 3, 0, false);
-    });
+$(function(){
+	$('.calendar_tab .today em').text('오늘');
+	var idx = $('.calendar_tab .today').index();
+	calendarTabSwiperCont.slideTo(idx - 3, 0, false);
+});
 </script>
 
 
@@ -294,159 +294,72 @@ $(function(){
 			//ht_msg_box -->
 
             <div class="custom_scroll_wrap_test sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
-                <!-- liv_timeline -->
-                <ul class="liv_timeline">
-                    <!-- .li 반복 -->
-                    <li class="li">
-                        <!-- liv_timeline_marker -->
-                        <div class="liv_timeline_marker">
-                            <strong class="on"><em>LIVE</em></strong>
-                            <p>12월 17일 07:00 방송중</p>
 
-                            <!--
-                            <strong class="on"><em>LIVE</em></strong>              : 방송중인 라이브
-                            <strong class="ing"><em>00:00:59</em><i></i></strong>    : 당일 방송 예정 라이브
-                            <strong>D-1</strong>                                     : 당일 방송 예정 라이브가 없을 경우
-                            -->
-                        </div>
-                        <!-- //liv_timeline_marker -->
+				<!-- liv_timeline -->
+				<ul class="liv_timeline">
+					<!-- .li 반복 -->
+					<li class="li">
+						<!-- liv_timeline_marker -->
+						<div class="liv_timeline_marker">
+							<!--<strong>D-1</strong>-->
+							<p>12월 16일 19:00 방송종료</p>
 
-                        <!-- liv_timeline_box -->
-                        <div class="liv_timeline_box">
-                            <div class="img">
-                                <p class="img_a" style="background-image:url('../../images/temp/@img_curation03.jpg');"></p><!-- 이미지 경로 : background-image -->
-                                <!--
-                                                                        : 정보 없을 시 노출 X
-                                <div class="liv_time_info">
-                                    <p><strong>19:00</strong></p>    : 시간정보 
-                                    <p>방송종료</p>                 :  방송종료
-                                </div>
-                                -->
-                            </div>
-                            <ul class="txt">
-                                <li class="s1">
-                                    <p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
-                                    <div class="alarm_chk02">
-                                        <input type="checkbox" id="chk_time01">
-                                        <label for="chk_time01"><span class="hidden">알림 받기</span></label>
-                                    </div>
-                                </li>
-                                <li class="s2">
-                                    <p class="img_s"><img src="../../images/temp/@img_wel_live_s2.jpg" alt=""></p>
-                                    <ul class="txt_s">
-                                        <li class="c1">로지텍 코리아 기계식 키보드</li>
-                                        <li class="c2">
-                                            <strong>50%</strong>
-                                            <span>134,000</span>
-                                            <!-- <em>129,000</em> -->
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //liv_timeline_box -->
+							<!--
+							<strong class="on"><em>LIVE</em></strong>              : 방송중인 라이브
+							<strong class="ing"><em>00:00:59</em><i></i></strong>    : 당일 방송 예정 라이브
+							<strong>D-1</strong>                                     : 당일 방송 예정 라이브가 없을 경우
+							-->
+						</div>
+						<!-- //liv_timeline_marker -->
 
-                        <!-- liv_btn -->
-                        <div class="liv_btn">
-                            <a href="#n"><span class="on">방송보기</span></a><!-- 방송중 버튼 : class="on" -->
-                        </div>
-                        <!-- //liv_btn -->
-                    </li>
-                    <!-- //.li 반복 -->
+						<!-- liv_timeline_box -->
+						<div class="liv_timeline_box">
+							<div class="img">
+								<p class="img_a" style="background-image:url('../../images/temp/@img_curation03.jpg');"></p><!-- 이미지 경로 : background-image -->
 
+								<div class="liv_time_info">
+									<p>방송종료</p>
+								</div>
+								<!--
+																		: 정보 없을 시 노출 X
+								<div class="liv_time_info">
+									<p><strong>19:00</strong></p>    : 시간정보 
+									<p>방송종료</p>                 :  방송종료
+								</div>
+								-->
+							</div>
+							<ul class="txt">
+								<li class="s1">
+									<p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
+									<div class="alarm_chk02">
+										<input type="checkbox" id="chk_time01">
+										<label for="chk_time01"><span class="hidden">알림 받기</span></label>
+									</div>
+								</li>
+								<li class="s2">
+									<p class="img_s"><img src="../../images/temp/@img_wel_live_s2.jpg" alt=""></p>
+									<ul class="txt_s">
+										<li class="c1">로지텍 코리아 기계식 키보드</li>
+										<li class="c2">
+											<strong>50%</strong>
+											<span>134,000</span>
+											<em>129,000</em>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //liv_timeline_box -->
 
-                    <li class="li">
-                        <!-- liv_timeline_marker -->
-                        <div class="liv_timeline_marker">
-                            <strong class="ing"><em>00:00:59</em><i></i></strong>
-                            <p>12월 17일 19:00 방송예정</p>
-                        </div>
-                        <!-- //liv_timeline_marker -->
-
-                        <!-- liv_timeline_box -->
-                        <div class="liv_timeline_box">
-                            <div class="img">
-                                <p class="img_a" style="background-image:url('../../images/temp/@img_curation05.jpg');"></p><!-- 이미지 경로 : background-image -->
-                                <div class="liv_time_info">
-                                    <p><strong>19:00</strong></p>
-                                </div>
-                            </div>
-                            <ul class="txt">
-                                <li class="s1">
-                                    <p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
-                                    <div class="alarm_chk02">
-                                        <input type="checkbox" id="chk_time02">
-                                        <label for="chk_time02"><span class="hidden">알림 받기</span></label>
-                                    </div>
-                                </li>
-                                <li class="s2">
-                                    <p class="img_s"><img src="../../images/temp/@img_wel_live_s2.jpg" alt=""></p>
-                                    <ul class="txt_s">
-                                        <li class="c1">로지텍 코리아 기계식 키보드</li>
-                                        <li class="c2">
-                                            <strong>50%</strong>
-                                            <span>134,000</span>
-                                            <!-- <em>129,000</em> -->
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //liv_timeline_box -->
-
-                        <!-- liv_btn -->
-                        <div class="liv_btn">
-                            <a href="#n"><span>사전 이벤트 참여하기</span></a>
-                        </div>
-                        <!-- //liv_btn -->
-                    </li>
-                    <li class="li">
-                        <!-- liv_timeline_marker -->
-                        <div class="liv_timeline_marker">
-                            <strong class="ing"><em>00:00:59</em><i></i></strong>
-                            <p>12월 17일 19:00 방송예정</p>
-                        </div>
-                        <!-- //liv_timeline_marker -->
-
-                        <!-- liv_timeline_box -->
-                        <div class="liv_timeline_box">
-                            <div class="img">
-                                <p class="img_a" style="background-image:url('../../images/temp/@img_curation01.jpg');"></p><!-- 이미지 경로 : background-image -->
-                                <div class="liv_time_info">
-                                    <p><strong>19:00</strong></p>
-                                </div>
-                            </div>
-                            <ul class="txt">
-                                <li class="s1">
-                                    <p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
-                                    <div class="alarm_chk02">
-                                        <input type="checkbox" id="chk_time02">
-                                        <label for="chk_time02"><span class="hidden">알림 받기</span></label>
-                                    </div>
-                                </li>
-                                <li class="s2">
-                                    <p class="img_s"><img src="../../images/temp/@img_wel_live_s2.jpg" alt=""></p>
-                                    <ul class="txt_s">
-                                        <li class="c1">로지텍 코리아 기계식 키보드</li>
-                                        <li class="c2">
-                                            <strong>50%</strong>
-                                            <span>134,000</span>
-                                            <!-- <em>129,000</em> -->
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- //liv_timeline_box -->
-
-                        <!-- liv_btn -->
-                        <div class="liv_btn">
-                            <a href="#n"><span>방송보기</span></a>
-                        </div>
-                        <!-- //liv_btn -->
-                    </li>
-                </ul>
-                <!-- //liv_timeline -->
+						<!-- liv_btn -->
+						<div class="liv_btn">
+							<a href="#n"><span>LIVE 다시보기</span></a>
+						</div>
+						<!-- //liv_btn -->
+					</li>
+					<!-- //.li 반복 -->
+				</ul>
+				<!-- //liv_timeline -->
             </div>
 
 		</div>
