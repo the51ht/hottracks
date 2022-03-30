@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>선물고민쓰기 : 핫트랙스</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+
+<link rel="stylesheet" href="../../css/ht_main_gft.css">
+<script src="../../js/ht_main_gft.js"></script>
+</head>
+
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap">
+
+			<!-- ht_cont -->
+			<div class="ht_cont">
+				<div class="contents_inner">
+					<!-- 팝업 -->
+					<div class="ht_cont">
+						<h2 class="ht_tit05">팝업</h2>
+
+						<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#gftWrtPop"><span class="text">선물 고민 쓰기 > 선물 선택 / #gftWrtPop</span></button>
+					</div>
+					<!-- //팝업 -->
+					
+				</div>
+			</div>
+			<!-- //ht_cont -->
+			
+		</section>
+		<!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+</div>
+<!-- // wrapper -->
+
+
+
+<!-- 선물 선택 : gftWrtPop --> 
+<div id="gftWrtPop" class="dialog_wrap" data-class="dialog_md">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">선물 고민 쓰기</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents evt_vote_wrap">
+		<!-- 스크롤 영역 -->
+		<div class="custom_scroll_wrap sc_pop_btn">
+			<!-- 선물 선택 -->
+			<div class="ht_cont_s">
+				<h2 class="ht_tit05">누구한테 선물 할 거에요?</h2>
+
+                <ul class="chk_list_ty">
+                    <li>
+                        <input type="radio" name="gft_ty01">
+                        <label>모두에게</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="gft_ty01">
+                        <label>여성에게</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="gft_ty01">
+                        <label>남성에게</label>
+                    </li>
+                </ul>
+
+                <div class="mc_s_cont">
+                    <!-- chk_list_ty -->
+                    <ul class="chk_list_ty ty02">
+                        <li>
+                            <input type="radio" name="gft_ty02">
+                            <label>10대</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="gft_ty02">
+                            <label>20대</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="gft_ty02">
+                            <label>30대</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="gft_ty02">
+                            <label>40대</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="gft_ty02">
+                            <label>50대 이상</label>
+                        </li>
+                    </ul>
+                    <!-- //chk_list_ty -->
+                </div>
+
+			</div>
+			<!-- //선물 선택 -->
+
+			<div class="ht_cont_s">
+				<h2 class="ht_tit05">어떤 사이인가요?</h2>
+
+                <ul class="chk_list_ty">
+                    <li>
+                        <input type="radio" name="gft_ty03">
+                        <label>가족</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="gft_ty03">
+                        <label>친구</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="gft_ty03">
+                        <label>애인</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="gft_ty03">
+                        <label>직장동료</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="gft_ty03" onclick="location.href='../main/HTR-M-GFT-WRT-003.html'">
+                        <label>선생님</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="gft_ty03" onclick="location.href='../main/HTR-M-GFT-WRT-003.html'">
+                        <label>제자</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="gft_ty03" onclick="location.href='../main/HTR-M-GFT-WRT-003.html'">
+                        <label>기타 지인</label>
+                    </li> 
+                </ul>
+			</div>
+		</div>
+		<!-- //스크롤 영역-->
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //선물 선택 : gftWrtPop --> 
+
+<script>
+$(function(){
+	$('#evtApplyPop').dialog({
+		//autoOpen: true
+	});
+});
+</script>
+</body>
+</html>

@@ -2,61 +2,48 @@
 
 /**** 선물추천 ****/
 /* 선물이 필요한 순간 핫트 하세요 */
-function gftNeed(){
-    var $target = $('.gft_need_cont  .swiper-container');
+function giftNeed(){
+    var $target = $('.gft_need_main_cont .swiper-container');
     var slideOption = {
-        observer: true,
-        observeParents: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        loop: true,
-        loopsSlide: 1,
-        spaceBetween: 20,
-        /*autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },*/
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        loop: false,
+        spaceBetween: 36,
         speed: 700,
-		pagination: false,
+        pagination: {
+            el: $('.gft_need_main_cont').find('.swiper-pagination')[0],
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return KyoboBookPub.ink.setPrependZero(number, 2);
+            },
+            formatFractionTotal: function (number) {
+                return KyoboBookPub.ink.setPrependZero(number, 2);
+            }
+        },
+        navigation: {
+            nextEl: '.gft_need_main_cont .swiper-button-next',
+            prevEl: '.gft_need_main_cont .swiper-button-prev',
+        },
     };
-    gftNeedSwiper = new Swiper($target.get(), slideOption);
+    if($target .find('.swiper-slide').length > 3) {
+        giftNeedSwiper = new Swiper($target.get(), slideOption);
+    }
 }
 
 $(function(){
-    if(!$('.gft_need_cont').length) return;
-    gftNeed();
+    if(!$('.gft_need_main_cont').length) return;
+    giftNeed();
+
+    if($(".gft_need_main_cont .swiper-wrapper > li").length < 4){
+        $(".gft_need_main_cont .swiper-wrapper").addClass("list_lenght_warp");
+    }else{
+        $(".gft_need_main_cont .swiper-wrapper").removeClass("list_lenght_warp");
+    }
 });
 
 
 
 /* 선물이 고민된다면, 핫트에 물어보세요 */
-function gftQuestion(){
-    var $target = $('.gft_question_cont .swiper-container');
-    var slideOption = {
-        observer: true,
-        observeParents: true,
-        slidesPerView: 'auto',
-        centeredSlides: false,
-        //loop: true,
-        loopsSlide: 1,
-        spaceBetween:0,
-        /*autoplay: {
-            delay:5000,
-            disableOnInteraction: false,
-        },*/
-        speed: 700,
-		pagination: {
-
-		},
-    };
-    gftQuestionSwiper = new Swiper($target.get(), slideOption);
-}
-
-$(function(){
-    if(!$('.gft_question_cont').length) return;
-    gftQuestion();
-});
-
 $(function(){
     $('.gft_question_chk input').click(function(){ 
         var chk = $(this).is(':checked');
@@ -71,7 +58,6 @@ $(function(){
         }
     }); 
 });
-
 
 
 /* 선물추천 - 팝업 */
