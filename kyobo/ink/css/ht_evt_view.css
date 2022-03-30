@@ -229,7 +229,7 @@
   text-align: center;
 }
 
-/***** 이벤트 당첨자 발표 *****/
+/*** 이벤트 당첨자 발표 ***/
 /** 목록 **/
 .evt_winner_list {
   position: relative;
@@ -343,7 +343,7 @@
   line-height: 19px;
 }
 
-/***** 이벤트 팝업 *****/
+/*** 이벤트 팝업 ***/
 .dialog_wrapper .ui-dialog .dialog_wrap .dialog_header.evt_title_header {
   padding-bottom: 18px;
 }
@@ -435,7 +435,12 @@
   top: 40vh;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  z-index: 2;
+  font-size: 24px;
+  z-index: 8;
+}
+
+.mdl_contents_wrap .evt_end_msg.ch em {
+  position: fixed;
 }
 
 .mdl_wrap {
@@ -457,12 +462,17 @@
 }
 
 .mdl_wrap .btn_area {
+  margin-top: 60px;
   text-align: center;
 }
 
 .mdl_wrap .btn_area img {
   width: auto;
   max-width: 100%;
+}
+
+.mdl_wrap .btn_area:only-child {
+  margin-top: 0;
 }
 
 .mdl_wrap .btn_lg {
@@ -475,14 +485,22 @@
   letter-spacing: -0.5px;
 }
 
-.mdl_wrap .tab_box + .ht_tit {
-  margin-top: 60px;
+.mdl_wrap .tab_box {
+  margin-bottom: 60px;
+}
+
+.mdl_wrap .tab_box:last-child {
+  margin-bottom: 0;
 }
 
 .mdl_inner {
   position: relative;
   width: 1200px;
   margin: 0 auto;
+}
+
+.mdl_inner .tab_box:only-child {
+  margin-bottom: 0;
 }
 
 .mdl_bg + .mdl004,
@@ -914,10 +932,6 @@
 
 .mdl012 .mdl_inner {
   width: 100%;
-}
-
-.mdl012 .btn_area {
-  margin-top: 60px;
 }
 
 /* evt_calender_wrap */
