@@ -629,6 +629,7 @@
   line-height: 24px;
   letter-spacing: -1px;
   font-size: 16px;
+  font-weight: 500;
 }
 
 /* liv_timeline */
@@ -676,15 +677,15 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin: 0 0 15px 25px;
+  margin: 0 0 17px 25px;
   border-radius: 12px;
   overflow: hidden;
 }
 
-.liv_timeline_marker strong {
+.liv_timeline_marker > strong {
   display: inline-block;
   position: relative;
-  height: 24px;
+  height: 26px;
   margin-right: 10px;
   padding: 0 10px;
   background: rgba(0, 0, 0, 0.6);
@@ -694,20 +695,20 @@
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-  line-height: 25px;
+  line-height: 27px;
   overflow: hidden;
 }
 
-.liv_timeline_marker strong.on {
+.liv_timeline_marker > strong.on {
   background-color: #ff2700;
 }
 
-.liv_timeline_marker strong.on em {
+.liv_timeline_marker > strong.on em {
   position: relative;
   padding-left: 12px;
 }
 
-.liv_timeline_marker strong.on em:before {
+.liv_timeline_marker > strong.on em:before {
   position: absolute;
   left: 0;
   top: 50%;
@@ -718,7 +719,7 @@
   content: "";
 }
 
-.liv_timeline_marker strong.ing:before {
+.liv_timeline_marker > strong.ing:before {
   position: absolute;
   left: -12px;
   top: -21px;
@@ -730,7 +731,7 @@
   z-index: 2;
 }
 
-.liv_timeline_marker strong.ing i {
+.liv_timeline_marker > strong.ing i {
   position: absolute;
   left: 0;
   top: 0;
@@ -744,7 +745,7 @@
           animation: btn_wel_live 2.2s linear infinite;
 }
 
-.liv_timeline_marker strong.ing:after {
+.liv_timeline_marker > strong.ing:after {
   position: absolute;
   left: 1px;
   top: 1px;
@@ -755,7 +756,7 @@
   content: "";
 }
 
-.liv_timeline_marker strong.ing em {
+.liv_timeline_marker > strong.ing em {
   position: relative;
   color: #ff2700;
   z-index: 2;
@@ -764,7 +765,10 @@
 .liv_timeline_marker p {
   padding-top: 2px;
   color: #000;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.liv_timeline_marker p strong {
   font-weight: 500;
 }
 
@@ -855,11 +859,10 @@
 
 .liv_timeline_box .txt .s1 {
   position: relative;
-  min-height: 40px;
+  min-height: 48px;
   padding-right: 85px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 22px;
 }
 
 .liv_timeline_box .txt .s1 > p {
@@ -872,11 +875,8 @@
 
 .liv_timeline_box .txt .s1 .alarm_chk02 {
   position: absolute;
-  right: 29px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  margin-top: -5px;
+  right: 30px;
+  top: -1px;
 }
 
 .liv_timeline_box .txt .s1 + .s2 {
@@ -987,16 +987,17 @@
   line-height: 35px;
 }
 
-.liv_btn a span, .liv_btn button span {
+.liv_btn a.on, .liv_btn button.on {
+  border: 1px solid #000;
+}
+
+.liv_btn a.on span, .liv_btn button.on span {
+  padding-left: 12px;
+  font-weight: 700;
   position: relative;
 }
 
-.liv_btn a span.on, .liv_btn button span.on {
-  padding-left: 12px;
-  font-weight: 700;
-}
-
-.liv_btn a span.on:before, .liv_btn button span.on:before {
+.liv_btn a.on span:before, .liv_btn button.on span:before {
   position: absolute;
   left: 0;
   top: 50%;
@@ -1007,67 +1008,202 @@
   content: "";
 }
 
+/* prod_share_area */
+.prod_share_area {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.prod_share_area .btn_ht_share {
+  background-image: url("../images/guide/btn_ht_share.svg");
+}
+
+.prod_share_area .btn_ht_wish {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  background: url("../images/guide/btn_ht_wish.svg") center/18px no-repeat;
+}
+
+.prod_share_area .btn_ht_wish.active {
+  background-image: url("../images/guide/btn_ht_wish_active.svg");
+}
+
+.prod_share_area .sns_share_wrap {
+  float: left;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.prod_share_area .sns_share_wrap .btn_share {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border: 0;
+}
+
+.prod_share_area .sns_share_wrap .btn_share .ico_share {
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  background: url("../images/guide/btn_ht_share.svg") center/18px no-repeat;
+}
+
+.prod_share_area .sns_share_wrap .sns_share_box {
+  right: -8px;
+  top: -12px;
+  width: auto;
+  -webkit-animation: fade both 0.3s;
+          animation: fade both 0.3s;
+}
+
+.prod_share_area .sns_share_wrap .btn_sns_share_close {
+  margin: 0 14px;
+}
+
+.prod_share_area .btn_sns_share {
+  background: center/28px no-repeat;
+}
+
+.prod_share_area .ht_kakao {
+  background-image: url("../images/layout/sns_kakao.svg");
+}
+
+.prod_share_area .ht_instar {
+  background-image: url("../images/layout/sns_instar.svg");
+}
+
+.prod_share_area .ht_facebook {
+  background-image: url("../images/layout/sns_facebook.svg");
+}
+
+.prod_share_area .ht_twitter {
+  background-image: url("../images/layout/sns_twitter.svg");
+}
+
+.prod_share_area .ht_pinterest {
+  background-image: url("../images/layout/sns_pinterest.svg");
+}
+
+.prod_share_area .ht_line {
+  background-image: url("../images/layout/sns_line.svg");
+}
+
+.prod_share_area .ht_message {
+  background-image: url("../images/layout/sns_message.svg");
+}
+
+.prod_share_area .ht_url_copy {
+  background-image: url("../images/layout/sns_url_copy.svg");
+}
+
 /*** 라이브 상세 : .liv_detail ***/
+/* liv_logo */
+.liv_logo {
+  padding-bottom: 20px;
+}
+
+.liv_logo .contents_inner {
+  text-align: center;
+}
+
+.liv_logo .ht_tit_big {
+  margin-bottom: 0;
+}
+
+.liv_logo .logo {
+  width: 135px;
+}
+
+.liv_logo img:nth-of-type(2) {
+  width: 77px;
+  margin-left: -4px;
+}
+
+.liv_logo .prod_share_area {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* liv_detail */
 .liv_detail {
   position: relative;
+  height: 600px;
 }
 
-.liv_detail .img {
-  position: relative;
-  height: 0;
-  padding-top: calc(100% + 40px);
-  margin: -40px -20px 30px -20px;
-  overflow: hidden;
-}
-
-.liv_detail .img img {
+.liv_detail .bg_img {
   position: absolute;
+  width: 1920px;
   left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.liv_detail .contents_inner {
+  position: relative;
   top: 50%;
-  width: 100%;
-  height: auto;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .liv_detail .liv_timeline_marker {
-  margin: 0;
-  padding-right: 40px;
-  border-radius: 0;
-  overflow: inherit;
+  margin: 0 0 16px 0;
+  padding-right: 0;
 }
 
-.liv_detail .btn_liv_share {
-  display: block;
-  position: absolute;
-  right: -15px;
-  top: -15px;
-  width: 50px;
-  height: 50px;
-  background: url("../images/guide/ico_tod_share.svg") center/20px no-repeat;
+.liv_detail .liv_timeline_marker p {
+  color: #FF2700;
+  font-weight: 700;
 }
 
-.liv_detail .txt {
-  margin-top: 16px;
-  padding-right: 40px;
+.liv_detail .title {
+  line-height: 50px;
+  letter-spacing: -1px;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.liv_detail .txt .s1 {
-  color: #000;
-  font-size: 18px;
+.liv_detail .sub_title {
+  font-size: 20px;
   font-weight: 500;
-  line-height: 28px;
-}
-
-.liv_detail .txt .s2 {
-  margin-top: 10px;
-  color: #767676;
-  font-size: 13px;
-  line-height: 19px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .liv_detail .liv_btn_area {
-  margin-top: 25px;
+  margin-top: 40px;
+}
+
+.liv_detail .liv_btn {
+  text-align: left;
+}
+
+.liv_detail .liv_btn a {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 40px;
+  border: 1px solid;
+  background-color: #fff;
+  padding: 0 29px 0 49px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.liv_detail .liv_btn a:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 24px;
+  top: 15px;
+  background: url(../images/guide/ico_bell.svg) no-repeat center/18px;
 }
 
 /* liv_btn_area */

@@ -1,59 +1,10 @@
 @charset "UTF-8";
 /***** * 코너메뉴 : 큐레이션 * *****/
-/*** hero_box : 상단 탭 ***/
-.hero_box {
-    padding:15px 20px 20px 20px;text-align:center;
-}
-.hero_txt {
-    color:#767676;font-size:24px;line-height:34px;
-    strong {
-        font-weight:700;
-    }
-}
-.hero_tab {
-    display:inline-block;position:relative;height:44px;margin-top:8px;font-size:0;
-    &:before {
-        position:absolute;left:0;top:0;width:100%;height:100%;border:1px solid #d5d5d5;border-radius:22px;content:"";
-    }
-    li {
-        display:inline-block;position:relative;font-size:13px;line-height:44px;
-        &:first-child a {
-            padding-left:20px;
-        }
-        &:last-child a {
-            padding-right:20px;
-        }
-        &:nth-child(2) {
-            a {
-                &.on span:before {
-                    background-image:url("../images/main/ico_cur_hero_tab02.svg")
-                }
-            }
-        }
-    }
-    a {
-        display:block;padding:0 10px;border-radius:22px;color:#767676;
-        span {
-            display:block;position:relative;padding-left:0;
-        }
-        &.on {
-            padding:0 20px;background:#000;color:#fff;font-weight:700;
-            span {
-                padding-left:25px;
-                &:before {
-                    position:absolute;left:0;top:50%;width:20px;height:20px;margin-top:-11px;background:url("../images/main/ico_cur_hero_tab.svg") center/100% no-repeat;content:"";
-                }
-            }
-        }
-    }
-}
-
-
 
 /*** 라이프스타일 : .curation_list ***/
 .curation_list {
     padding:35px 20px 40px 20px;background:#f5ede2 url('../images/main/bg_wel_curation.jpg') center top/32px repeat;overflow:hidden;
-    .mc_tit {
+    .ht_tit {
         margin-bottom:20px;text-align:center;opacity:1;
         img {
             width:252px;
@@ -108,7 +59,7 @@
 /*** 이럴 땐? 이런상품 : .cur_prod ***/
 .cur_prod {
     padding:60px 20px;
-    .mc_tit {
+    .ht_tit {
         margin-bottom:20px;font-size:30px;font-weight:400;line-height:36px;
         img {
             display:inline-block;width:32px;margin:-19px 0 -10px 8px;
@@ -204,7 +155,7 @@
 /*** What’s in your bag : .cur_new ***/
 .cur_new {
     padding-top:72px;overflow:hidden;
-    .mc_tit {
+    .ht_tit {
         margin-bottom:25px;font-size:30px;font-weight:400;line-height:36px;
     }
     .wel_cont {
@@ -359,7 +310,7 @@
 }
 .cur_new02 {
     padding-top:0;overflow:hidden;
-    .mc_tit {
+    .ht_tit {
         margin-bottom:25px;font-size:30px;font-weight:400;line-height:36px;opacity:1;animation:none;
         img {
             display:inline-block;height:40px;margin:-5px 0 0 8px;
@@ -492,22 +443,25 @@
 
 
 
+
+
+
+
+/* end */
+
 /*** 맞춤추천 비로그인 : .cur_join_msg ***/
 .cur_join_msg {
-    padding-top:10px;text-align:center;
+    text-align:center;
+    .contents_inner {
+        position:relative;margin-top:40px;
+    }
     &:before {
-        position:absolute;left:50%;top:10px;width:75px;height:75px;background:url("../images/main/ico_cur_join.svg") center/100% no-repeat;content:"";transform:translateX(-50%);
+        position:absolute;left:50%;top:40px;width:110px;height:110px;background:url("../images/main/ico_cur_join.svg") center/100% no-repeat;content:"";transform:translateX(-50%);
     }
     p {
-        padding-top:88px;
+        padding-top:120px;font-size:20px;font-weight:500;line-height:30px;
         strong {
             font-weight:500;
-        }
-    }
-    a {
-        display:inline-block;position:relative;margin-top:16px;padding-right:8px;color:#595959;
-        &:after {
-            position:absolute;right:0;top:50%;width:6px;height:6px;margin-top:-4px;border:solid #767676;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
         }
     }
 }
@@ -516,17 +470,28 @@
 
 /*** 실시간 쇼핑 검색어 ***/
 .cur_search {
-    .mc_tit {
+    .ht_tit {
         opacity:1;animation:none !important;
     }
 }
+
+/* end */
+
+
+
+
+
+
+
+
+
 
 
 
 /*** 최근에 검색하셨나요? : .cur_recent ***/
 .cur_recent {
     background:#f5ede2 url("../images/main/bg_wel_curation.jpg") center top/32px repeat;
-    .ht_tit_big02 {
+    .ht_tit {
         img {
             height:48px;margin-bottom:-10px;
         }
@@ -565,7 +530,7 @@
 
 /*** 상품과 기획전을 추천 : .cur_recommend ***/
 .cur_recommend {
-    .ht_tit_big02 {
+    .ht_tit {
         img {
             display:inline-block;height:27px;margin-left:10px;
         }
@@ -573,7 +538,7 @@
     .cur_prod_banner {  
         margin:22px 0 20px 0;
     }
-    .ht_tit_big02 + .prod_list {
+    .ht_tit + .prod_list {
         margin-top:-10px;
     }
 }
@@ -602,7 +567,7 @@
 
 /*** 찜한 브랜드 : .cur_brand_select ***/
 .cur_brand_select {
-    .ht_tit_big02 {
+    .ht_tit {
         img {
             height:28px;margin-left:4px;
         }
@@ -613,7 +578,7 @@
 
 /*** 이 브랜드 어떠세요? : .cur_brand_recommend ***/
 .cur_brand_recommend {
-    .mc_tit02 {
+    .ht_tit {
         img {
             height:28px;margin-left:4px;
         }
@@ -665,7 +630,7 @@
 /*** 최근 본 상품을 추천 : .cur_prod_view ***/
 .cur_prod_view {
     overflow:hidden;
-    .mc_tit02 {
+    .ht_tit {
         img {
             display:inline-block;height:27px;margin-left:10px;
         }

@@ -39,7 +39,7 @@ body {
 /***** Layout *****/
 /*** 간격 ***/
 .ht_cont {
-    position:relative;padding-bottom:60px;
+    position:relative;padding-bottom:60px;overflow:hidden;
     &:last-child {
         padding-bottom:0;
     }
@@ -245,7 +245,13 @@ body {
 
 /***** ht_tit_nav : 상단 탭 *****/
 .ht_tit_nav {
-    position:relative;margin-bottom:30px;font-size:0;text-align:center;
+    position:relative;margin-bottom:20px;font-size:0;text-align:center;
+    .ht_tit_nav_txt {
+        margin-bottom:18px;color:#767676;font-size:38px;line-height:44px;
+        strong {
+            font-weight:700;
+        }
+    }
 }
 
 /* .ht_tit_nav_inner */
@@ -304,6 +310,13 @@ body {
     .ico_tod_nav02:before {
         background-image:url('../images/main/ico_tod_main_t02.svg');
     }
+
+    .ico_cur_nav01:before {
+        background-image:url('../images/main/ico_cur_hero_tab01.svg');
+    }
+    .ico_cur_nav02:before {
+        background-image:url('../images/main/ico_cur_hero_tab02.svg');
+    }
 }
 
 
@@ -312,7 +325,7 @@ body {
 
 /***** 상단메뉴 : top_evt_area *****/
 .top_evt_area {
-    position:sticky;top:80px;margin:-20px 0 30px 0;padding:20px 0 0 0;background:#fff;z-index:12;overflow:hidden;
+    position:sticky;top:80px;margin:-20px 0 0 0;padding:20px 0 0 0;background:#fff;z-index:12;overflow:hidden;
     .contents_inner {
         border-bottom:1px solid #eaeaea;
     }

@@ -256,7 +256,7 @@ button.btn_lg {
 .pagination {
   margin-top: 0;
   padding-top: 30px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #eaeaea;
 }
 
 .pagination .page_num .btn_page_num.active {
@@ -513,6 +513,7 @@ body {
 .ht_cont {
   position: relative;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .ht_cont:last-child {
@@ -942,9 +943,20 @@ body {
 /***** ht_tit_nav : 상단 탭 *****/
 .ht_tit_nav {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 0;
   text-align: center;
+}
+
+.ht_tit_nav .ht_tit_nav_txt {
+  margin-bottom: 18px;
+  color: #767676;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.ht_tit_nav .ht_tit_nav_txt strong {
+  font-weight: 700;
 }
 
 /* .ht_tit_nav_inner */
@@ -1062,12 +1074,20 @@ body {
   background-image: url("../images/main/ico_tod_main_t02.svg");
 }
 
+.ht_tit_nav_inner .ico_cur_nav01:before {
+  background-image: url("../images/main/ico_cur_hero_tab01.svg");
+}
+
+.ht_tit_nav_inner .ico_cur_nav02:before {
+  background-image: url("../images/main/ico_cur_hero_tab02.svg");
+}
+
 /***** 상단메뉴 : top_evt_area *****/
 .top_evt_area {
   position: -webkit-sticky;
   position: sticky;
   top: 80px;
-  margin: -20px 0 30px 0;
+  margin: -20px 0 0 0;
   padding: 20px 0 0 0;
   background: #fff;
   z-index: 12;
@@ -1439,6 +1459,12 @@ body {
   overflow: hidden;
 }
 
+.tab_swiper.center .swiper-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .tab_swiper .swiper-slide {
   width: auto;
 }
@@ -1634,13 +1660,23 @@ body {
 .tab_ty + .tab_under + .tab_under,
 .tab_ty + .tab_under + .tab_under + .tab_under,
 .tab_ty + .tab_under + .tab_under + .tab_under + .tab_under {
-  margin-top: -15px;
+  margin: -12px 0 -5px 0;
 }
 
 /* tab_box */
 .tab_box {
   position: relative;
   border-bottom: 1px solid #d5d5d5;
+}
+
+.tab_box:before {
+  position: absolute;
+  bottom: -1px;
+  left: -200%;
+  width: 500%;
+  height: 1px;
+  background: #d5d5d5;
+  content: "";
 }
 
 .tab_box ul {
@@ -2076,7 +2112,7 @@ body {
 /* Btn : Contents */
 .btn_area {
   position: relative;
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
 }
 

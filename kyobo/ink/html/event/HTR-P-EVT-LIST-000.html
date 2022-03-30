@@ -628,12 +628,19 @@
                             <a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
                         </div>
                         <button class="btn_page next"><span class="hidden">다음</span></button>
+                        <button style="height:24px;margin-left:15px;font-size:13px;" onclick="locOffset();">위치 이동</button>
                     </div>
                     <!-- //pagination -->
                 </div>
                 <!-- evt_list_wrap -->
             </div>
             <!-- //이벤트 기획전 -->
+<script>
+function locOffset(){
+    var locOffsetTop = $('.evt_list_wrap').offset().top - $('.top_evt_area').innerHeight() - 110
+    $('html, body').stop().animate({scrollTop:locOffsetTop}, 700);
+}
+</script>
 
 
             <!-- ht_cont : 반응최고-->
