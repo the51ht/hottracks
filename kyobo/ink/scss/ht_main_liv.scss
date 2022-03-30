@@ -447,65 +447,6 @@
     }
 }
 
-//삭제 예정 (상품 상세에서 복붙)
-/* prod_share_area */
-.prod_share_area {
-    position:absolute;right:0;top:0;
-    .btn_ht_share {
-        background-image:url('../images/guide/btn_ht_share.svg');
-    }
-    .btn_ht_wish {
-        float:left;width:20px;height:20px;margin-left:10px;background:url('../images/guide/btn_ht_wish.svg') center/18px no-repeat;
-        &.active {
-            background-image:url('../images/guide/btn_ht_wish_active.svg');
-        }
-    }
-    .sns_share_wrap {
-        float:left;margin-left:10px;width:20px;height:20px;
-        .btn_share {
-            width:20px;height:20px;line-height:20px;border:0;
-            .ico_share {
-                width:20px;height:20px;margin-top:0;background:url('../images/guide/btn_ht_share.svg') center/18px no-repeat;
-            }
-        }
-        .sns_share_box {
-            right:-8px;top:-12px;width:auto;
-            animation:fade both 0.3s;
-        }
-        .btn_sns_share_close {
-            margin:0 14px;
-        }
-    }
-    .btn_sns_share {
-        background:center/28px no-repeat;
-    }
-    .ht_kakao {
-        background-image:url('../images/layout/sns_kakao.svg');
-    }
-    .ht_instar {
-        background-image:url('../images/layout/sns_instar.svg');
-    }
-    .ht_facebook {
-        background-image:url('../images/layout/sns_facebook.svg');
-    }
-    .ht_twitter {
-        background-image:url('../images/layout/sns_twitter.svg');
-    }
-    .ht_pinterest {
-        background-image:url('../images/layout/sns_pinterest.svg');
-    }
-    .ht_line {
-        background-image:url('../images/layout/sns_line.svg');
-    }
-    .ht_message {
-        background-image:url('../images/layout/sns_message.svg');
-    }
-    .ht_url_copy {
-        background-image:url('../images/layout/sns_url_copy.svg');
-    }
-}
-//삭제 예정 (상품 상세에서 복붙)
-
 /*** 라이브 상세 : .liv_detail ***/
 
 /* liv_logo */
@@ -523,9 +464,6 @@
     img:nth-of-type(2) {
         width:77px;margin-left:-4px;
     }
-    // .btn_liv_share {
-    //     display:block;position:absolute;right:0px;top:50%;margin-top:-25px; width:50px;height:50px;background:url('../images/guide/ico_tod_share.svg') center/20px no-repeat;
-    // }
     .prod_share_area {
         top:50%;transform: translateY(-50%);
     }
@@ -591,157 +529,45 @@
         }
     }
 }
+/* liv_prod */
+.liv_prod {
+    .btn_area {
+         margin-top: 30px;
+    }
+}
+.evt_anchor_target {
+	width:100%;
+	height:100px;
+	margin-top:-100px;
+	visibility: hidden;
+}
 
-/* liv_btn_area */
-.liv_btn_area {
-    margin-top:20px;text-align:center;
-    a, button {
-        display:block;width:100%;
-    }
-    .text {
-        font-size:14px;font-weight:500;
-    }
-    .ico {
-        display:inline-block;height:20px;margin:-10px 2px 0 0;vertical-align:middle;
-    }
+
+/* liv_intro */
+.liv_intro {
+    padding-top:60px;
+    margin-bottom:60px;
+    background-color:#FAFAFA;
 }
 
 /* view_cont_area */
 .view_cont_area {
-    color:#595959;font-size:14px;line-height:22px;letter-spacing:-0.2px;
+    width:582px;margin:0 auto; text-align:center;color:#595959;font-size:14px;line-height:22px;letter-spacing:-0.2px;
     strong {
         color:#000;font-weight:700;
     }
     .t_point {
-        color:#da2128;
+        color:#da2128;font-size: 20px;font-weight: 700;line-height: 30px;margin-bottom:20px;
+    }
+    img {
+        width:100%;
     }
 }
-
-
-/** 댓글 입력 **/
-.mc_cont {
-    .comment_area {
-        padding-top:0;
-    }
+.hot_symbol {
+    display: inline-block;
+    width:20px;
+    height:20px;
+    background: url(../images/guide/hot_symbol.svg) no-repeat center/ 14px;
+    margin-bottom: -1px;
+    margin-left: 3px;
 }
-
-/* comment_area */
-.comment_area {
-    .comment_txt_box {
-        position:relative;display:block;padding:12px 15px 8px 15px;border:1px solid #d5d5d5;box-sizing:border-box;
-        border-radius:4px;overflow:hidden; transition: border-color 0.2s ease-out;}
-    .comment_txt_box.active { border-color: #000; }
-    textarea {
-        width:100%;height:70px;border:0;box-sizing:border-box;color:#000;font-family:Roboto,"Noto Sans KR";font-size:14px;line-height:22px;outline:none;
-    }
-    .count_length_line {
-        display:flex;flex-flow:row nowrap;justify-content:flex-end;align-items:center;align-content:center;margin:0;font-size:12px;line-height:18px;
-    }
-    .count_defalut {
-        color:#767676;
-    }
-    .liv_btn_area {
-        margin-top:12px;
-    }
-}
-.comment_list_area {
-    margin-top:40px;padding:0;background:#fff;
-}
-.cmt_section_title {
-    padding-bottom:14px;border-bottom:1px solid #000;
-    .title {
-        font-size:16px;font-weight:700;line-height:26px;
-    }
-    .highlight {
-        color:#da2128;
-    }
-    .evt_ck_area {
-        display:block;padding-left:28px;
-    }
-}
-.common_check {
-    display:none;
-}
-.common_ck_label {
-    position:relative;
-    &:before{
-        position:absolute;left:-28px;top:-2px;width:22px;height:22px;background:url(../images/guide/ico_checkborder.svg) center/cover no-repeat;content:"";
-    }
-}
-.common_check:checked + label:before{
-    background:url(../images/guide/ico_checkborder_check.svg) center/cover no-repeat;
-}
-
-/* cmt_list_card_ul */
-.cmt_list_card_ul {
-    & > li{
-        padding:16px 5px;border-bottom:1px solid #eaeaea;letter-spacing:-0.4px;
-    }
-    .user_info {
-        span {
-            position:relative;display:inline-block;margin-left:12px;color:#767676;font-size:12px;line-height:16px;white-space:nowrap;
-            &:before{ 
-                position:absolute;left:-9px;top:3px;width:1px;height:9px;background-color:#dcdcdc;content:"";
-            }
-            &:first-child {
-                margin-left:0px;
-                &:before {
-                    display:none;
-                }
-            }
-        }
-        a {
-            color:#767676;
-        }
-    }
-    .cmt_pd_title {
-        margin-top:16px;color:#595959;font-size:13px;font-weight:500;line-height:19px;
-        
-    }
-    .cmt_pd_title + .user_cmt {
-        margin-top:6px;
-    }
-    .user_cmt {
-        margin-top:16px;display:flex;flex-flow:row nowrap;justify-content:flex-start;align-content:flex-start;align-content:flex-start;
-    }
-    .cmt_content{
-        color:#292929;line-height:22px;flex-grow:1;word-wrap:break-word;word-break:keep-all;
-    }
-    .cmt_img{
-        position:relative;width:78px;height:0;padding-top:78px;margin-left:19px;flex-shrink:0;overflow:hidden;
-        img {
-            position:absolute;left:0;right:0;top:0;width:100%;
-        }
-    }
-}
-
-/* mycomment_box */
-.mycomment_box {
-    position:relative;display:block;margin:16px 0 4px 0;padding:12px 15px 10px 15px;border:1px solid #d5d5d5;box-sizing:border-box;border-radius:4px;overflow:hidden;
-    textarea {
-        width:100%;height:63px;border:0;box-sizing:border-box;color:#000;font-family:Roboto,"Noto Sans KR";font-size:14px;line-height:21px;outline:none;
-    }
-    .count_length_line{
-        display:flex;flex-flow:row nowrap;justify-content:flex-end;align-items:center;align-content:center;margin:7px 14px;font-size:12px;line-height:18px;
-    }
-    .count_defalut {
-        color:#767676;
-    }
-    .mycomment_box_bottom {
-        display:flex;flex-flow:row nowrap;justify-content:flex-end;align-content:center;align-items:center;margin-top:8px;
-        .count_length_line{
-            margin-right:8px;
-        }
-    }
-    .btn_cmt {
-        width:50px;height:35px;border-radius:4px;font-size:13px;text-align:center;
-        &:last-of-type{
-            margin-left:5px;
-        }
-    }
-}
-
-
-
-
-
