@@ -198,12 +198,15 @@
 .tab_ty + .tab_under + .tab_under,
 .tab_ty + .tab_under + .tab_under + .tab_under,
 .tab_ty + .tab_under + .tab_under + .tab_under + .tab_under {
-    margin-top:-15px;
+    margin:-12px 0 -5px 0;
 }
 
 /* tab_box */
 .tab_box {
     position:relative;border-bottom:1px solid #d5d5d5;
+    &:before {
+        position:absolute;bottom:-1px;left:-200%;width:500%;height:1px;background:#d5d5d5;content:"";
+    }
     ul {
         display:table;table-layout:fixed;width:100%
     }

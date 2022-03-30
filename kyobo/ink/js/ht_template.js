@@ -1564,7 +1564,7 @@ $(function(){
     if(!$('.mdl015').length) return;
     $(window).on('scroll', function() {
         $('.anchor_target').each(function (index, element) {
-            if($(window).scrollTop() >= $(this).offset().top - $('.mdl015_tab').innerHeight() - 13 ) {
+            if($(window).scrollTop() >= $(this).offset().top - $('.mdl015_tab').innerHeight() - 111 ) {
                 $('.mdl015_tab a').removeClass('on');
                 $('.mdl015_tab a').eq(index).addClass('on');
             } 
@@ -1573,7 +1573,7 @@ $(function(){
     $.fn.anchorEvtChk = function(){
         $.each(this, function(i,v){
             var s = $(v).attr('href');
-            $('html, body').stop().animate({scrollTop:$(s).offset().top - $('.mdl015_tab').innerHeight() - 130 }, 500);
+            $('html, body').stop().animate({scrollTop:$(s).offset().top - $('.mdl015_tab').innerHeight() - 110 }, 500);
         });
     };
     $('.mdl015_tab a').on('click', function(e) {
@@ -1583,6 +1583,29 @@ $(function(){
 });
 
 
+
+/* Module : 이벤트 종료 */
+$(function(){
+    if(!$('.mdl_contents_wrap .evt_end_msg').length) return;
+	$(window).resize (resizeEvtEmp).resize();
+	function resizeEvtEmp(){
+		function scrollEvtEmp() {
+		 	var locS =  $(window).scrollTop();
+            var locA1 = $(window).height() / 4;
+            if( locS < locA1) {
+                $('.mdl_contents_wrap .evt_end_msg').removeClass('ch');
+            } else {
+                $('.mdl_contents_wrap .evt_end_msg').addClass('ch');
+            }
+		}
+		$(window).scroll(function() {
+			scrollEvtEmp();
+		});
+		$(window).resize(function() {
+			scrollEvtEmp();  
+		});
+	}
+});
 
 
 

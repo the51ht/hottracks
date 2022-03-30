@@ -124,12 +124,12 @@
 							<!-- swiper-wrapper -->
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide">
-									<a href="#n" class="on"><!-- 활성화  class="on" -->
+									<a href="#n">
 										<span>인기선물</span>
 									</a>
 								</li>
 								<li class="swiper-slide">
-									<a href="#n">
+									<a href="#n" class="on"><!-- 활성화  class="on" -->
 										<span>핫트추천</span>
 									</a>
 								</li>
@@ -181,146 +181,289 @@ $(function() {
         });
     });
 });
-
-/* 슬라이드 선택 */
-$(function() {
-    $('.gft_main_slider').slider({
-        range:'max',
-        min: 1,
-        max: 3,
-        value: 1,
-        slide: function(event, ui) {
-
-            if(ui.value == 1) {
-                len = 6
-            }else if(ui.value == 2){
-                len = 4
-            }else if(ui.value == 3){
-                len = 2
-            }
-
-            $('.gft_slide_view').removeClass('len6').removeClass('len4').removeClass('len2');
-            setTimeout(function(){
-                $('.gft_slide_view').addClass('len' +  len);
-            }, 50);
-            console.log(len);
-        }
-    });
-    console.log($('.gft_main_slider').slider('value'));
-    $('.gft_slide_view').addClass('len6');
-
-/*
-# 4행씩 노출
-2단 : 8개    2*4
-4단 : 16개   4*4
-3단 : 24개    6*4
-
-최소 노출  갯수 24개
-빈공간 없이 노출 12배수!
-(24 / 36/ 48/ 60 ..........)
-
-*/
-});
 </script>
 
+<div class="ht_cont ht_bg gft_need_tit">
+    <div class="contents_inner">
+        <h2 class="ht_tit_big02"><strong class="point_line ty07"><em>선물이 필요한 순간,</em></strong> 핫트<img src="../../images/main/tit_gft_need.svg" alt="">하세요</h2>
+        <!-- tab_ty -->
+        <div class="tab_swiper tab_ty tab_link t_idx_0"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+            <!-- swiper-wrapper -->
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="#n" class="on"><!-- 활성화  class="on" -->
+                        <span>남다른</span>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#n">
+                        <span>금액별</span>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#n">
+                        <span>단체선물</span>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="#n">
+                        <span>기념일</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- //swiper-wrapper -->
+
+            <!-- swiper_control -->
+            <div class="swiper_control">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <!-- //swiper_control -->
+        </div>
+        <!-- //tab_ty -->
+
+        <!-- tab_txt : 하단 border - tab_under -->
+        <div class="tab_txt tab_under tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+            <ul>
+                <li>
+                    <a href="#n" class="on"><!-- 활성화  class="on" -->
+                        <span>#덕후템</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#n">
+                        <span>#20대가 받고 싶은</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#n">
+                        <span>#남자가 받고싶은</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- //tab_txt : 하단 border - tab_under -->
+
+    </div>
+</div>
+
+
+<!-- ht_cont : 상단 배너 -->
+<div class="ht_cont ht_bg gft_need_main">
+    <div class="contents_inner">
+
+        <div class="gft_need_main_cont">
+            <div class="swiper-container">
+                <!-- swiper-wrapper -->
+                <!-- 상품 리스트 -->
+                <ul class="swiper-wrapper"><!-- row_dir : row type -->
+                    <!-- prod_item 반복 -->
+                    <li class="prod_item swiper-slide">
+                        <div class="product_pic">
+                            <img src="../../images/temp/@img_prod01.jpg" alt="">
+                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+                            <button class="evt_good_count active">
+                                <div class="icon"></div>
+                                <div class="txt">999+</div>
+                            </button>
+                        </div>
+                        <div class="product_info">
+                            
+                            <div class="title">유니크 가죽 장패드 마우스패드 데스크매트 생활방수</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">234,000</span>
+                                <span class="price_origin">20,000</span>
+                            </div>
+                            <div class="desc_line">
+                                <p>
+                                    2022년 다이어리 꾸미기는 우리에게 맡겨라! 😍핫트랙스와 지금 가장 핫한 인기 작가들의 콜라보! Only 핫트랙스에서 만날 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- //prod_item 반복 -->
+
+                    <li class="prod_item swiper-slide">
+                        <div class="product_pic">
+                            <img src="../../images/temp/@img_prod05.jpg" alt="">
+                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+                            <button class="evt_good_count">
+                                <div class="icon"></div>
+                                <div class="txt">999+</div>
+                            </button>
+                        </div>
+                        <div class="product_info">
+                            
+                            <div class="title">유니크 가죽 장패드 마우스패드 데스크매트 생활방수</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">234,000</span>
+                                <span class="price_origin">20,000</span>
+                            </div>
+                            <div class="desc_line">
+                                <p>
+                                    2022년 다이어리 꾸미기는 우리에게 맡겨라! 😍핫트랙스와 지금 가장 핫한 인기 작가들의 콜라보! Only 핫트랙스에서 만날 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="prod_item swiper-slide">
+                        <div class="product_pic">
+                            <img src="../../images/temp/@img_prod05.jpg" alt="">
+                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+                            <button class="evt_good_count">
+                                <div class="icon"></div>
+                                <div class="txt">999+</div>
+                            </button>
+                        </div>
+                        <div class="product_info">
+                            
+                            <div class="title">유니크 가죽 장패드 마우스패드 데스크매트 생활방수</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">234,000</span>
+                                <span class="price_origin">20,000</span>
+                            </div>
+                            <div class="desc_line">
+                                <p>
+                                    2022년 다이어리 꾸미기는 우리에게 맡겨라! 😍핫트랙스와 지금 가장 핫한 인기 작가들의 콜라보! Only 핫트랙스에서 만날 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </li>	
+                    
+                    <li class="prod_item swiper-slide">
+                        <div class="product_pic">
+                            <img src="../../images/temp/@img_prod05.jpg" alt="">
+                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+                            <button class="evt_good_count">
+                                <div class="icon"></div>
+                                <div class="txt">999+</div>
+                            </button>
+                        </div>
+                        <div class="product_info">
+                            
+                            <div class="title">유니크 가죽 장패드 마우스패드 데스크매트 생활방수</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">234,000</span>
+                                <span class="price_origin">20,000</span>
+                            </div>
+                            <div class="desc_line">
+                                <p>
+                                    2022년 다이어리 꾸미기는 우리에게 맡겨라! 😍핫트랙스와 지금 가장 핫한 인기 작가들의 콜라보! Only 핫트랙스에서 만날 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="prod_item swiper-slide">
+                        <div class="product_pic">
+                            <img src="../../images/temp/@img_prod06.jpg" alt="">
+                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+                            <button class="evt_good_count">
+                                <div class="icon"></div>
+                                <div class="txt">999+</div>
+                            </button>
+                        </div>
+                        <div class="product_info">
+                            
+                            <div class="title">유니크 가죽 장패드 마우스패드 데스크매트 생활방수</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">234,000</span>
+                                <span class="price_origin">20,000</span>
+                            </div>
+                            <div class="desc_line">
+                                <p>
+                                    2022년 다이어리 꾸미기는 우리에게 맡겨라! 😍핫트랙스와 지금 가장 핫한 인기 작가들의 콜라보! Only 핫트랙스에서 만날 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="prod_item swiper-slide">
+                        <div class="product_pic">
+                            <img src="../../images/temp/@img_prod01.jpg" alt="">
+                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+                            <button class="evt_good_count">
+                                <div class="icon"></div>
+                                <div class="txt">999+</div>
+                            </button>
+                        </div>
+                        <div class="product_info">
+                            
+                            <div class="title">유니크 가죽 장패드 마우스패드 데스크매트 생활방수</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">234,000</span>
+                                <span class="price_origin">20,000</span>
+                            </div>
+                            <div class="desc_line">
+                                <p>
+                                    2022년 다이어리 꾸미기는 우리에게 맡겨라! 😍핫트랙스와 지금 가장 핫한 인기 작가들의 콜라보! Only 핫트랙스에서 만날 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="prod_item swiper-slide">
+                        <div class="product_pic">
+                            <img src="../../images/temp/@img_prod01.jpg" alt="">
+                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+
+                            <button class="evt_good_count">
+                                <div class="icon"></div>
+                                <div class="txt">999+</div>
+                            </button>
+                        </div>
+                        <div class="product_info">
+                            
+                            <div class="title">유니크 가죽 장패드 마우스패드 데스크매트 생활방수</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">234,000</span>
+                                <span class="price_origin">20,000</span>
+                            </div>
+                            <div class="desc_line">
+                                <p>
+                                    2022년 다이어리 꾸미기는 우리에게 맡겨라! 😍핫트랙스와 지금 가장 핫한 인기 작가들의 콜라보! Only 핫트랙스에서 만날 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- //swiper-wrapper -->
+
+                <!-- swiper_control -->
+                <div class="swiper_control">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- //swiper_control -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //ht_cont : 상단 배너 -->
+
+
 			<!-- ht_cont : 상품 리스트 -->
-			<div class="ht_cont ht_bg gft_main">
+			<div class="ht_cont ht_bg gft_need">
 				<div class="contents_inner">
-                    <h2 class="ht_tit_big02"><img src="../../images/main/tit_gft_main.svg" alt=""></h2>
-                    <!-- gft_main_select -->
-                    <div class="gft_main_select">
-                        <!-- gft_main_msg -->
-                        <div class="gft_main_msg">
-                            <p>누르면 다른 기준으로 볼 수 있어요! </p>
-                        </div>
-                        <!-- //gft_main_msg -->
-        
-                        <!-- gft_main_tab -->
-                        <ul class="gft_main_tab">
-                            <li>
-                                <p class="on">
-                                    <input type="radio" name="gft_ty01" checked>
-                                    <i><img src="../../images/main/ico_gft_main_tab01_1.svg" alt=""></i>
-                                    <span>모든성별</span>
-                                </p>
-                                <p>
-                                    <input type="radio" name="gft_ty01">
-                                    <i><img src="../../images/main/ico_gft_main_tab01_2.svg" alt=""></i>
-                                    <span>여성</span>
-                                </p>
-                                <p>
-                                    <input type="radio" name="gft_ty01">
-                                    <i><img src="../../images/main/ico_gft_main_tab01_3.svg" alt=""></i>
-                                    <span>남성</span>
-                                </p> 
-                            </li>
-                            <li>
-                                <p class="on">
-                                    <input type="radio" name="gft_ty02" checked>
-                                    <i><img src="../../images/main/ico_gft_main_tab02_1.svg" alt=""></i>
-                                    <span>모든연령</span>
-                                </p>
-                                <p>
-                                    <input type="radio" name="gft_ty02">
-                                    <i><img src="../../images/main/ico_gft_main_tab02_2.svg" alt=""></i>
-                                    <span>유아</span>
-                                </p>
-                                <p>
-                                    <input type="radio" name="gft_ty02">
-                                    <i><img src="../../images/main/ico_gft_main_tab02_3.svg" alt=""></i>
-                                    <span>10대</span>
-                                </p> 
-                                <p>
-                                    <input type="radio" name="gft_ty02">
-                                    <i><img src="../../images/main/ico_gft_main_tab02_4.svg" alt=""></i>
-                                    <span>20대</span>
-                                </p>
-                                <p>
-                                    <input type="radio" name="gft_ty02">
-                                    <i><img src="../../images/main/ico_gft_main_tab02_5.svg" alt=""></i>
-                                    <span>30대</span>
-                                </p> 
-                                <p>
-                                    <input type="radio" name="gft_ty02">
-                                    <i><img src="../../images/main/ico_gft_main_tab02_6.svg" alt=""></i>
-                                    <span>40대 이상</span>
-                                </p>
-                            </li>
-                            <li>
-                                <p class="on">
-                                    <input type="radio" name="gft_ty03" checked>
-                                    <i><img src="../../images/main/ico_gft_main_tab03_1.svg" alt=""></i>
-                                    <span>1만원 미만</span>
-                                </p>
-                                <p>
-                                    <input type="radio" name="gft_ty03">
-                                    <i><img src="../../images/main/ico_gft_main_tab03_2.svg" alt=""></i>
-                                    <span>1~2만원</span>
-                                </p>
-                                <p>
-                                    <input type="radio" name="gft_ty03">
-                                    <i><img src="../../images/main/ico_gft_main_tab03_3.svg" alt=""></i>
-                                    <span>3~4만원</span>
-                                </p> 
-                                <p>
-                                    <input type="radio" name="gft_ty03">
-                                    <i><img src="../../images/main/ico_gft_main_tab03_4.svg" alt=""></i>
-                                    <span>5만원 이상</span>
-                                </p>
-                            </li>
-                        </ul>
-                        <!-- //gft_main_tab -->
-        
-                        <!-- gft_main_slider -->
-                        <div class="gft_main_slider_wrap">
-                            <div class="gft_main_slider"></div>
-                        </div>
-                        <!-- //gft_main_slider -->
-                    </div>
-                    <!-- //gft_main_select -->
-        
                     <!-- gft_slide_view -->  
-                    <div class="evt_prod_list_wrap gft_slide_view len6">
+                    <div class="evt_prod_list_wrap">
+                        <!-- gft_need_msg -->
+                        <div class="gft_need_msg">
+                            <p>다들 선물 고르는 중!</p>
+                        </div>
+                        <!-- //gft_need_msg -->
+
                         <!-- 상품 리스트 -->
 						<ul class="evt_products"><!-- row_dir : row type -->
 							<!-- prod_item 반복 -->
@@ -640,17 +783,25 @@ $(function() {
                     </div>
                     <!-- //gft_slide_view -->
         
-                    <!--
-                    <div class="emp">
-                        <p>항목이 없습니다.</p>
-                    </div>
-                    -->
-
-                    <!-- btn_area -->
-                    <div class="btn_area">
-                        <button class="btn_more_view"><span>더보기</span></button>
-                    </div>
-                    <!-- //btn_area -->
+                    <!-- pagination -->
+					<div class="pagination">
+						<button class="btn_page prev"><span class="hidden">이전</span></button>
+						<div class="page_num">
+							<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+							<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+							<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+							<a href="#" class="btn_page_num active" title="현재페이지">10</a>
+							<a href="#" class="btn_page_num">11</a>
+							<a href="#" class="btn_page_num">12</a>
+							<a href="#" class="btn_page_num">13</a>
+							<a href="#" class="btn_page_num">14</a>
+							<a href="#" class="btn_page_num">15</a>
+							<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+							<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+						</div>
+						<button class="btn_page next"><span class="hidden">다음</span></button>
+					</div>
+					<!-- //pagination -->
                 </div>
             </div>
 			<!-- //ht_cont : 상품 리스트 -->
@@ -722,5 +873,48 @@ $(function() {
 	<!-- //탑버튼 -->
 </div>
 <!-- // wrapper -->
+
+
+<script>
+    /* 선물이 필요한 순간 3단배너 */
+    function giftNeed(){
+        var $target = $('.gft_need_main_cont .swiper-container');
+        var slideOption = {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            loop: false,
+            spaceBetween: 36,
+            speed: 700,
+            pagination: {
+                el: $('.gft_need_main_cont').find('.swiper-pagination')[0],
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            },
+            navigation: {
+                nextEl: '.gft_need_main_cont .swiper-button-next',
+                prevEl: '.gft_need_main_cont .swiper-button-prev',
+            },
+        };
+        if($target .find('.swiper-slide').length > 3) {
+            giftNeedSwiper = new Swiper($target.get(), slideOption);
+        }
+    }
+
+    $(function(){
+        if(!$('.gft_need_main_cont').length) return;
+        giftNeed();
+
+        if($(".gft_need_main_cont .swiper-wrapper > li").length < 4){
+            $(".gft_need_main_cont .swiper-wrapper").addClass("list_lenght_warp");
+        }else{
+            $(".gft_need_main_cont .swiper-wrapper").removeClass("list_lenght_warp");
+        }
+    });
+</script>
 </body>
 </html>

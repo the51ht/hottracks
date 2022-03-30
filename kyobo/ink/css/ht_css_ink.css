@@ -144,6 +144,17 @@ button.btn_lg {
   height: 80px;
 }
 
+.file_list .file_item .btn_box {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.file_list .file_item.attached .attach_img_box .btn_remove_img {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.6) url("../images/guide/btn_share_close_w.png") center no-repeat;
+}
+
 /***** Text *****/
 .info_text_box {
   padding: 40px;
@@ -245,7 +256,7 @@ button.btn_lg {
 .pagination {
   margin-top: 0;
   padding-top: 30px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #eaeaea;
 }
 
 .pagination .page_num .btn_page_num.active {
@@ -502,6 +513,7 @@ body {
 .ht_cont {
   position: relative;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .ht_cont:last-child {
@@ -1056,7 +1068,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 80px;
-  margin: -20px 0 30px 0;
+  margin: -20px 0 0 0;
   padding: 20px 0 0 0;
   background: #fff;
   z-index: 12;
@@ -1623,13 +1635,23 @@ body {
 .tab_ty + .tab_under + .tab_under,
 .tab_ty + .tab_under + .tab_under + .tab_under,
 .tab_ty + .tab_under + .tab_under + .tab_under + .tab_under {
-  margin-top: -15px;
+  margin: -12px 0 -5px 0;
 }
 
 /* tab_box */
 .tab_box {
   position: relative;
   border-bottom: 1px solid #d5d5d5;
+}
+
+.tab_box:before {
+  position: absolute;
+  bottom: -1px;
+  left: -200%;
+  width: 500%;
+  height: 1px;
+  background: #d5d5d5;
+  content: "";
 }
 
 .tab_box ul {

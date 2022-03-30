@@ -6,7 +6,7 @@
 /***** 이벤트&기획전 *****/
 /*** .evt_liar_area ***/
 .evt_liar_area {
-    position:relative;
+    position:relative;margin-top:30px;
     .pagination {
         width:1200px;margin:-20px auto 0 auto;
     }
@@ -98,14 +98,12 @@
 
 
 
-
-
-/***** 이벤트 당첨자 발표 *****/
+/*** 이벤트 당첨자 발표 ***/
 /** 목록 **/
 .evt_winner_list {
     position:relative;border-top:1px solid #000;
     &.mt {
-        margin-top:-30px;
+        margin-top:0;
     }
     .evt_winner_item {
         padding:20px 0;border-bottom:1px solid #eaeaea;overflow:hidden;
@@ -162,9 +160,7 @@
 
 
 
-
-
-/***** 이벤트 팝업 *****/
+/*** 이벤트 팝업 ***/
 .dialog_wrapper .ui-dialog .dialog_wrap {
     .dialog_header.evt_title_header {
         padding-bottom:18px;
@@ -212,16 +208,25 @@
 
 /***** Event Module *****/
 .mdl_contents_wrap {
+    margin-bottom:60px;
+    &:last-child {
+        margin-bottom:0;
+    }
     .evt_end_msg {
         border-radius:0;z-index:8;
         em {
-            position:absolute;left:50%;top:40vh;transform:translateX(-50%);z-index:2;
+            position:absolute;left:50%;top:40vh;transform:translateX(-50%);font-size:24px;z-index:8;
+        }
+        &.ch {
+            em {
+                position:fixed;
+            }
         }
     }
 }
 
 .mdl_wrap {
-    position:relative;padding-bottom:60px;
+    position:relative;padding-bottom:60px;overflow:hidden;
     &:last-child {
         padding-bottom:0;
     }
@@ -233,20 +238,29 @@
     }
 
     .btn_area {
-        text-align:center;
+        margin-top:60px;text-align:center;
         img {
             width:auto;max-width:100%;
+        }
+        &:only-child {
+            margin-top:0;
         }
     }
     .btn_lg {
         min-width:378px;height:68px;border-radius:6px;  font-size:18px;;color:#fff;font-weight:700;letter-spacing:-0.5px;
     }
-    .tab_box + .ht_tit {
-        margin-top:60px;
+    .tab_box {
+        margin-bottom:60px;
+        &:last-child {
+            margin-bottom:0;;
+        }
     }
 }
 .mdl_inner {
     position:relative;width:1200px;margin:0 auto;
+    .tab_box:only-child {
+        margin-bottom:0;;
+    }
 }
 .mdl_bg + .mdl004,
 .mdl_bg + .mdl011,
@@ -542,9 +556,6 @@
     .mdl_inner {
         width:100%;
     }
-    .btn_area {
-        margin-top:60px;
-    }
 }
 
 /* evt_calender_wrap */
@@ -588,13 +599,8 @@
         }
     }
     .attendance_img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: center/contain no-repeat;
-      }
+        position:absolute;left:0;top:0;width:100%;height:100%;background:center/contain no-repeat;
+    }
 }
 
 
@@ -663,9 +669,9 @@
 
 /*** Module E-1 : .mdl015 ***/
 .mdl015 {
-    margin-top:-20px;
+    overflow:inherit;
     .tab_swiper {
-        position:sticky;top:80px;margin-bottom:40px;padding:20px 0;background:#fff;z-index:5;
+        position:sticky;top:80px;margin-top:-20px;margin-bottom:40px;padding:20px 0;background:#fff;z-index:5;
         a {
             max-width:300px;white-space:inherit;
         }
