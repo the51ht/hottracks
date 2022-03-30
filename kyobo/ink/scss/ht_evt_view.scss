@@ -208,6 +208,10 @@
 
 /***** Event Module *****/
 .mdl_contents_wrap {
+    margin-bottom:60px;
+    &:last-child {
+        margin-bottom:0;
+    }
     .evt_end_msg {
         border-radius:0;z-index:8;
         em {
@@ -222,7 +226,7 @@
 }
 
 .mdl_wrap {
-    position:relative;padding-bottom:60px;
+    position:relative;padding-bottom:60px;overflow:hidden;
     &:last-child {
         padding-bottom:0;
     }
@@ -665,9 +669,9 @@
 
 /*** Module E-1 : .mdl015 ***/
 .mdl015 {
-    margin-top:-20px;
+    overflow:inherit;
     .tab_swiper {
-        position:sticky;top:80px;margin-bottom:40px;padding:20px 0;background:#fff;z-index:5;
+        position:sticky;top:80px;margin-top:-20px;margin-bottom:40px;padding:20px 0;background:#fff;z-index:5;
         a {
             max-width:300px;white-space:inherit;
         }

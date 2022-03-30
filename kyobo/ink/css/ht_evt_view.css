@@ -424,6 +424,14 @@
 }
 
 /***** Event Module *****/
+.mdl_contents_wrap {
+  margin-bottom: 60px;
+}
+
+.mdl_contents_wrap:last-child {
+  margin-bottom: 0;
+}
+
 .mdl_contents_wrap .evt_end_msg {
   border-radius: 0;
   z-index: 8;
@@ -446,6 +454,7 @@
 .mdl_wrap {
   position: relative;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .mdl_wrap:last-child {
@@ -1144,13 +1153,14 @@
 
 /*** Module E-1 : .mdl015 ***/
 .mdl015 {
-  margin-top: -20px;
+  overflow: inherit;
 }
 
 .mdl015 .tab_swiper {
   position: -webkit-sticky;
   position: sticky;
   top: 80px;
+  margin-top: -20px;
   margin-bottom: 40px;
   padding: 20px 0;
   background: #fff;

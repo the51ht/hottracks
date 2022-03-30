@@ -256,7 +256,7 @@ button.btn_lg {
 .pagination {
   margin-top: 0;
   padding-top: 30px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #eaeaea;
 }
 
 .pagination .page_num .btn_page_num.active {
@@ -513,6 +513,7 @@ body {
 .ht_cont {
   position: relative;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 .ht_cont:last-child {
@@ -1641,6 +1642,16 @@ body {
 .tab_box {
   position: relative;
   border-bottom: 1px solid #d5d5d5;
+}
+
+.tab_box:before {
+  position: absolute;
+  bottom: -1px;
+  left: -200%;
+  width: 500%;
+  height: 1px;
+  background: #d5d5d5;
+  content: "";
 }
 
 .tab_box ul {
