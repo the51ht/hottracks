@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>선물고민쓰기 : 핫트랙스</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+
+<link rel="stylesheet" href="../../css/ht_main_gft.css">
+<script src="../../js/ht_main_gft.js"></script>
+</head>
+
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap">
+
+			<!-- ht_cont -->
+			<div class="ht_cont">
+				<div class="contents_inner">
+					<!-- 팝업 -->
+					<div class="ht_cont">
+						<h2 class="ht_tit05">팝업</h2>
+
+						<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#gftWrtPop"><span class="text">선물 고민 쓰기 > 선물 선택 > 최근 본 상품 찾기 / #gftWrtPop</span></button>
+					</div>
+					<!-- //팝업 -->
+					
+				</div>
+			</div>
+			<!-- //ht_cont -->
+			
+		</section>
+		<!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+</div>
+<!-- // wrapper -->
+
+
+
+<!-- 선물 선택 : gftWrtPop --> 
+<div id="gftWrtPop" class="dialog_wrap" data-class="dialog_md">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">선물 고민 쓰기</div>
+    </div>
+    <!-- //dialog_header -->
+
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents gft_wrt_wrap">
+		<!-- 스크롤 영역 -->
+		<div class="custom_scroll_wrap sc_pop_btn">
+
+			<div class="ctg_topMenu not_sticky">
+				<div class="inner_wrap round_ty">
+					<span>모두에게</span>
+					<span>10대</span>
+					<span>친구</span>
+				</div>
+				<!-- <a href="#" class="btn_line_refresh"><span>다시선택</span></a> -->
+			</div>
+
+			
+			<div class="ht_cont_s">
+				<h2 class="ht_tit05">
+					<strong class="point_line ty06"><em>고민하고 있는 선물이 뭐예요?</em></strong><img src="../../images/main/tit_gft_prod.svg" alt="">
+				</h2>
+
+				<!-- tab_swiper -->
+                <div class="tab_swiper tab_ty ty03 tab_link gft_wrt_pop"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <a href="#n" class="on"><!-- 활성화  class="on" -->
+                                <span>최근 본 상품 찾기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <span>찜 한 상품 찾기</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide">
+                            <a href="#n">
+                                <span>직접 검색</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //tab_swiper -->
+
+                <p class="sub_tit">최소 2개 부터 최대 3개의 상품을 선택할 수 있어요!</p>
+
+				<!-- 상품 리스트 -->
+				<ul class="evt_products type2">
+					<!-- prod_item 반복 -->
+					<li class="prod_item">
+						<div class="product_pic">
+							<img src="../../images/temp/@img_prod01.jpg" alt="">
+							<button class="evt_good_count active">
+								<div class="icon"></div>
+								<div class="txt">999+</div>
+							</button>
+							<input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+							<label><span class="hidden">선택</span></label>
+						</div>
+						<div class="product_info">
+							<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+							<div class="price_line">
+								<span class="discount_rate">15%</span>
+								<span class="final_price">234,000</span>
+								<span class="price_origin">20,000</span>
+							</div>
+						</div>
+					</li>
+					<!-- //prod_item 반복 -->
+
+					<li class="prod_item">
+						<div class="product_pic">
+							<img src="../../images/temp/@img_prod02.jpg" alt="">
+							<button class="evt_good_count active">
+								<div class="icon"></div>
+								<div class="txt">999+</div>
+							</button>
+							<input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+							<label><span class="hidden">선택</span></label>
+						</div>
+						<div class="product_info">
+							<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+							<div class="price_line">
+								<span class="discount_rate">15%</span>
+								<span class="final_price">234,000</span>
+								<span class="price_origin">20,000</span>
+							</div>
+						</div>
+					</li>
+					<li class="prod_item">
+						<div class="product_pic">
+							<img src="../../images/temp/@img_prod03.jpg" alt="">
+							<button class="evt_good_count active">
+								<div class="icon"></div>
+								<div class="txt">999+</div>
+							</button>
+							<input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+							<label><span class="hidden">선택</span></label>
+						</div>
+						<div class="product_info">
+							<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+							<div class="price_line">
+								<span class="discount_rate">15%</span>
+								<span class="final_price">234,000</span>
+								<span class="price_origin">20,000</span>
+							</div>
+						</div>
+					</li>
+					<li class="prod_item">
+						<div class="product_pic">
+							<img src="../../images/temp/@img_prod04.jpg" alt="">
+							<button class="evt_good_count active">
+								<div class="icon"></div>
+								<div class="txt">999+</div>
+							</button>
+							<input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+							<label><span class="hidden">선택</span></label>
+						</div>
+						<div class="product_info">
+							<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+							<div class="price_line">
+								<span class="discount_rate">15%</span>
+								<span class="final_price">234,000</span>
+								<span class="price_origin">20,000</span>
+							</div>
+						</div>
+					</li>
+					<li class="prod_item">
+						<div class="product_pic">
+							<img src="../../images/temp/@img_prod03.jpg" alt="">
+							<button class="evt_good_count active">
+								<div class="icon"></div>
+								<div class="txt">999+</div>
+							</button>
+							<input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+							<label><span class="hidden">선택</span></label>
+						</div>
+						<div class="product_info">
+							<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+							<div class="price_line">
+								<span class="discount_rate">15%</span>
+								<span class="final_price">234,000</span>
+								<span class="price_origin">20,000</span>
+							</div>
+						</div>
+					</li>
+					<li class="prod_item">
+						<div class="product_pic">
+							<img src="../../images/temp/@img_prod04.jpg" alt="">
+							<button class="evt_good_count active">
+								<div class="icon"></div>
+								<div class="txt">999+</div>
+							</button>
+							<input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+							<label><span class="hidden">선택</span></label>
+						</div>
+						<div class="product_info">
+							<div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
+							<div class="price_line">
+								<span class="discount_rate">15%</span>
+								<span class="final_price">234,000</span>
+								<span class="price_origin">20,000</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- //상품 리스트-->
+
+				<!-- pagination -->
+				<div class="pagination">
+					<button class="btn_page prev"><span class="hidden">이전</span></button>
+					<div class="page_num">
+						<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+						<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+						<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+						<a href="#" class="btn_page_num active" title="현재페이지">10</a>
+						<a href="#" class="btn_page_num">11</a>
+						<a href="#" class="btn_page_num">12</a>
+						<a href="#" class="btn_page_num">13</a>
+						<a href="#" class="btn_page_num">14</a>
+						<a href="#" class="btn_page_num">15</a>
+						<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+						<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+					</div>
+					<button class="btn_page next"><span class="hidden">다음</span></button>
+				</div>
+				<!-- //pagination -->
+			</div>
+		</div>
+		<!-- //스크롤 영역-->
+		<!-- fixed_btn_select --><!-- 0개일때 자동 닫힘 -->
+        <div class="fixed_btn_select">
+            <!-- form_box -->
+            <div class="form_box review_step02">
+
+				<div class="form_cont">
+					<div class="file_list_box">
+						<!-- s : file_list -->
+						<ul class="file_list">
+							<!-- s : 파일 등록 상태(이미지)-->
+							<li class="list_item">
+								<!-- DESC : 첨부시 attached class 추가 -->
+								<span class="file_item attached">
+									<span class="btn_box">
+										<!-- <input type="file" id="inputFileImage0" >
+										<label for="inputFileImage0"><span class="hidden">첨부파일 추가</span></label> -->
+
+										<span class="attach_img_box">
+											<!-- DESC : background-images 속성만 사용하여 url import 필요 -->
+											<span class="attach_img_view" style="background-image: url(../../images/temp/@img_prod01.jpg);"></span>
+											<button type="button" class="btn_remove_img" onclick="chkOutImg();"><span class="hidden">첨부파일 삭제</span></button>
+										</span>
+									</span>
+								</span>
+							</li>
+							<!-- e : 파일 등록 상태(이미지) -->
+
+							<!-- s : 파일 미등록 상태 -->
+							<li class="list_item">
+								<!-- DESC : 첨부시 attached class 추가 -->
+								<span class="file_item">
+									<span class="btn_box">
+										<!-- <input type="file" id="inputFileImage1" >
+										<label for="inputFileImage1"><span class="hidden">첨부파일 추가</span></label> -->
+
+										<span class="attach_img_box">
+											<span class="attach_img_view"></span>
+											<button type="button" class="btn_remove_img"><span class="hidden">첨부파일 삭제</span></button>
+										</span>
+									</span>
+								</span>
+							</li>
+							<!-- e : 파일 미등록 상태 -->
+							<!-- s : 파일 미등록 상태 -->
+							<li class="list_item">
+								<!-- DESC : 첨부시 attached class 추가 -->
+								<span class="file_item">
+									<span class="btn_box">
+										<!-- <input type="file" id="inputFileImage1" >
+										<label for="inputFileImage1"><span class="hidden">첨부파일 추가</span></label> -->
+
+										<span class="attach_img_box">
+											<span class="attach_img_view"></span>
+											<button type="button" class="btn_remove_img"><span class="hidden">첨부파일 삭제</span></button>
+										</span>
+									</span>
+								</span>
+							</li>
+							<!-- e : 파일 미등록 상태 -->
+						</ul>
+						<!-- e : file_list -->
+					</div>
+				</div>
+            </div>
+            <!-- //form_box -->
+            <div class="dialog_footer">
+                <button type="button" class="btn_md btn_primary" onclick="" disabled><span class="text">선택하기</span></button><!-- 2개 이상 일 경우 활성화 -->
+            </div>
+        </div>
+        <!-- //fixed_btn_select -->
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //선물 선택 : gftWrtPop --> 
+
+<script>
+$(function(){
+	$('#evtApplyPop').dialog({
+		//autoOpen: true
+	});
+});
+
+
+/* 확인용 : 22.03.21 수정 */
+function chkAll(obj){
+    $('.fixed_btn_select').removeClass('off').addClass('on');
+    $('.gft_prod').css('padding-bottom', $('.fixed_btn_select').innerHeight() + 30);
+}
+function chkOutImg(){
+    $('.fixed_btn_select').addClass('off');
+    $('.gft_prod').css('padding-bottom', '');
+    setTimeout(function(){
+        $('.fixed_btn_select').removeClass('on');
+    }, 600);
+}
+</script>
+</body>
+</html>
