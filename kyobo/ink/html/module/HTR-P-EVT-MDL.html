@@ -100,7 +100,7 @@
 
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap">
-			<!-- mdl_contents_wrap : 이벤트 모듈영역 -->
+			<!-- mdl_contents_wrap -->
 			<div class="mdl_contents_wrap">
 				<h1 class="hidden">이벤트</h1>
 
@@ -273,7 +273,7 @@
 						</div>
 						<!-- tab_box -->
 
-						<h2 class="ht_tit">순간을 장면으로 기록하세요</h2>
+						<h3 class="ht_tit">순간을 장면으로 기록하세요</h3>
 
 						<!-- 비디오 영역 -->
 						<div class="video_item">
@@ -309,7 +309,7 @@
 						</div>
 						<!-- tab_box -->
 
-						<h2 class="ht_tit">직접 기록하는 모습을 담았어요</h2>
+						<h3 class="ht_tit">직접 기록하는 모습을 담았어요</h3>
 
 						<!-- 비디오 영역 -->
 						<div class="video_item">
@@ -621,27 +621,16 @@
 				<div class="mdl_wrap mdl009">
 					<!-- mdl_inner -->
 					<div class="mdl_inner">
-						<!-- btn_area -->
-						<div class="btn_area">
-							<button class="btn_lg btn_black" data-role="btn-dialog" data-target="#evtVotePop">투표하기</button>
-							<button class="btn_lg btn_black" data-role="btn-dialog" data-target="#evtApplyPop">응모하기</button>
-						</div>
-						<!-- //btn_area -->
+						<button class="btn_lg btn_black" data-role="btn-dialog" data-target="#evtVotePop">투표하기</button>
+						<button class="btn_lg btn_black" data-role="btn-dialog" data-target="#evtApplyPop">응모하기</button>
+						<br><br>
+						<button class="btn_lg btn_primary">오늘 출석체크하기</button>
+						<button class="btn_lg" style="background-color:#787cf9; border-color:#787cf9;">색상 변경 인라인</button>
+						<br><br>
 
-						<!-- btn_area -->
-						<div class="btn_area">
-							<button class="btn_lg btn_primary">오늘 출석체크하기</button>
-							<button class="btn_lg" style="background-color:#787cf9; border-color:#787cf9;">색상 변경 인라인</button>
-						</div>
-						<!-- //btn_area -->
-
-						<!-- btn_area -->
-						<div class="btn_area">
-							<button class="mdl_img_btn" data-role="btn-dialog" data-target="#evtVotePop"><img src="../../images/temp/@mdl_img_btn.png" alt=""></button>
-							<button class="mdl_img_btn" data-role="btn-dialog" data-target="#evtApplyPop"><img src="../../images/temp/@mdl_img_btn2.png" alt=""></button>
-							<button class="mdl_img_btn" ><img src="../../images/temp/@mdl_img_btn3.png" alt=""></button>
-						</div>
-						<!-- //btn_area -->
+						<button class="mdl_img_btn" data-role="btn-dialog" data-target="#evtVotePop"><img src="../../images/temp/@mdl_img_btn.png" alt=""></button>
+						<button class="mdl_img_btn" data-role="btn-dialog" data-target="#evtApplyPop"><img src="../../images/temp/@mdl_img_btn2.png" alt=""></button>
+						<button class="mdl_img_btn" ><img src="../../images/temp/@mdl_img_btn3.png" alt=""></button>
 					</div>
 					<!-- //mdl_inner -->
 				</div>
@@ -651,11 +640,7 @@
 				<div class="mdl_wrap mdl009" style="background-color:#ff8963;">
 					<!-- mdl_inner -->
 					<div class="mdl_inner">
-						<!-- btn_area -->
-						<div class="btn_area">
-							<button class="mdl_img_btn"><img src="../../images/temp/@mdl_img_btn.png" alt=""></button>
-						</div>
-						<!-- //btn_area -->
+						<button class="mdl_img_btn"><img src="../../images/temp/@mdl_img_btn.png" alt=""></button>
 					</div>
 					<!-- //mdl_inner -->
 				</div>
@@ -2069,7 +2054,7 @@ $(function(){
 				<!-- //Module F-2 : mdl018 -->
 
 			</div>
-			<!-- //mdl_contents_wrap : 이벤트 모듈영역 -->
+			<!-- //mdl_contents_wrap -->
         </section>
         <!-- /ht_contents_wrap -->
 	</main>
@@ -2097,11 +2082,10 @@ $(function(){
 <!-- // wrapper -->
 
 <script>
-/* 제일 나중에 한번 실행 부탁드립니다. */
 $(function(){
 	$('.mdl_wrap').each(function(index, item) {
 		if($(item).attr('style') != undefined){
-			$(this).addClass('')
+			$(this).addClass('mdl_bg');
 		}
 	});
 });
