@@ -267,7 +267,7 @@ $(function() {
                                 </div>
                                 <!-- //swiper-slide 반복 -->
 
-                                <div class="swiper-slide gft_question_end">
+                                <div class="swiper-slide gft_question_end gft_question_my"><!-- 내가 쓴 고민일 경우 gft_question_my-->
                                     <!-- gft_question_box -->
                                     <div class="gft_question_box">
                                         <!-- gft_question_tit -->
@@ -275,8 +275,8 @@ $(function() {
                                             <li class="s1">
                                                 <span>abe10**</span>
                                                 <span>2021.07.11</span>
-                                                <!--<span><a href="#" class="cmt_modify">수정</a></span>
-                                                <span><a href="#" class="cmt_modify">삭제</a></span>-->
+                                                <span><a href="#" class="cmt_modify">수정</a></span>
+                                                <span><a href="#" class="cmt_modify" data-role="btn-dialog" data-target="#popAlert01">삭제</a></span>
                                             </li>
                                             <li class="s2">그렇게 친한 것도 아니고, 또 안 친하다고 하기도 뭐하고 해야할까요? </li>
                                             <li class="badge_line">
@@ -327,7 +327,7 @@ $(function() {
                                     <!-- //gft_question_box -->
                                 </div>
 
-                                <div class="swiper-slide">
+                                <div class="swiper-slide gft_question_my"><!-- 내가 쓴 고민일 경우 gft_question_my-->
                                     <!-- gft_question_box -->
                                     <div class="gft_question_box">
                                         <!-- gft_question_tit -->
@@ -335,8 +335,8 @@ $(function() {
                                             <li class="s1">
                                                 <span>abe10**</span>
                                                 <span>2021.07.11</span>
-                                                <!--<span><a href="#" class="cmt_modify">수정</a></span>
-                                                <span><a href="#" class="cmt_modify">삭제</a></span>-->
+                                                <span><a href="#" class="cmt_modify">수정</a></span>
+                                                <span><a href="#" class="cmt_modify" data-role="btn-dialog" data-target="#popAlert01">삭제</a></span>
                                             </li>
                                             <li class="s2">그렇게 친한 것도 아니고, 또 안 친하다고 하기도 뭐하고 애매하지만 계속 잘 지냈으면 하는 데면데면한 남사친 생일날 어떤 선물을 해야할까요? </li>
                                             <li class="badge_line">
@@ -456,23 +456,6 @@ $(function() {
                     <!-- //pagination -->
                 </div>
             </div>
-
-<script>
-    $(function(){
-        $('.gft_question_chk input').click(function(){ 
-            var chk = $(this).is(':checked');
-            if(chk){
-                $(this).closest('.gft_question_chk').addClass('on');
-                //$(this).closest('.gft_question_chk').find('input').prop('disabled', true);
-                //$(this).prop('disabled', false);
-    
-            }else{
-                $(this).closest('.gft_question_chk').removeClass('on');
-                //$(this).closest('.gft_question_chk').find('input').prop('disabled', false);
-            }
-        }); 
-    });
-</script>
                 
             <!-- ht_cont : 하단 광고배너 -->
             <div class="ht_cont ht_under_banner_area">
@@ -540,5 +523,32 @@ $(function() {
 	<!-- //탑버튼 -->
 </div>
 <!-- // wrapper -->
+
+
+<!-- 팝업 : 삭제(취소/확인) : popAlert02 -->
+<div id="popAlert01" class="dialog_wrap" data-class="dialog_alert">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">삭제 안내</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <div class="evt_pop_content">
+            삭제 하시겠습니까?
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_black" data-dialog-close><span class="text">취소</span></button>
+        <button type="button" class="btn_md btn_primary" data-dialog-close><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- //팝업 : 삭제(취소/확인) : popHpPop02 -->
 </body>
 </html>
