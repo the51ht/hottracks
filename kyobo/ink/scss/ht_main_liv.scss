@@ -302,6 +302,7 @@
         line-height: 24px;
         letter-spacing: -1px;
         font-size: 16px;
+        font-weight: 500;
     }
 }
 
@@ -324,9 +325,9 @@
 
 /* liv_timeline_marker */
 .liv_timeline_marker {
-    display:flex;position:relative;margin:0 0 15px 25px;border-radius:12px;overflow:hidden;
-    strong {
-        display:inline-block;position:relative;height:24px;margin-right:10px;padding:0 10px;background:rgba(0,0,0,0.6);border-radius:12px;box-sizing:border-box;color:#fff;font-size:14px;font-weight:700;line-height:25px;overflow:hidden;
+    display:flex;position:relative;margin:0 0 17px 25px;border-radius:12px;overflow:hidden;
+    & > strong {
+        display:inline-block;position:relative;height:26px;margin-right:10px;padding:0 10px;background:rgba(0,0,0,0.6);border-radius:12px;box-sizing:border-box;color:#fff;font-size:14px;font-weight:700;line-height:27px;overflow:hidden;
         &.on {
             background-color:#ff2700;
             em {
@@ -354,7 +355,10 @@
         }
     }
     p {
-        padding-top:2px;color:#000;font-size:14px;font-weight:500;
+        padding-top:2px;color:#000;font-size:16px;
+        strong {
+            font-weight: 500;
+        }
         &.t_point {
             color:#fc0000;
         }
@@ -385,12 +389,12 @@
     .txt {
         width:calc(100% - 160px);margin-left:20px;
         .s1 {
-            position:relative;min-height:40px;padding-right:85px;font-size:14px;font-weight:500;line-height:22px;
+            position:relative;min-height:48px;padding-right:85px;font-size:16px;font-weight:500;
             > p {
                 display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
             }
             .alarm_chk02 {
-                position:absolute;right:29px;top:50%;transform:translateY(-50%);margin-top:-5px;
+                position:absolute; right:30px; top:-1px;
             }
         }
         .s1 + .s2 {
@@ -431,46 +435,160 @@
     margin-top:20px;text-align:center;
     a, button {
         display:inline-block;height:37px;padding:0 20px;border:1px solid #ccc;border-radius:20px;box-sizing:border-box;color:#000;font-size:14px;line-height:35px;
-        span {
-            position:relative;
-            &.on {
-                padding-left:12px;font-weight:700;
+        &.on {
+            border:1px solid #000;
+            span {
+                padding-left:12px;font-weight:700;position:relative;
                 &:before {
                     position:absolute;left:0;top:50%;width:8px;height:9px;margin-top:-5px;background:url("../images/main/ico_wel_live_btn03.svg") center/100% no-repeat;content:"";
                 }
-            }
+           }
         }
     }
 }
 
-
+//삭제 예정 (상품 상세에서 복붙)
+/* prod_share_area */
+.prod_share_area {
+    position:absolute;right:0;top:0;
+    .btn_ht_share {
+        background-image:url('../images/guide/btn_ht_share.svg');
+    }
+    .btn_ht_wish {
+        float:left;width:20px;height:20px;margin-left:10px;background:url('../images/guide/btn_ht_wish.svg') center/18px no-repeat;
+        &.active {
+            background-image:url('../images/guide/btn_ht_wish_active.svg');
+        }
+    }
+    .sns_share_wrap {
+        float:left;margin-left:10px;width:20px;height:20px;
+        .btn_share {
+            width:20px;height:20px;line-height:20px;border:0;
+            .ico_share {
+                width:20px;height:20px;margin-top:0;background:url('../images/guide/btn_ht_share.svg') center/18px no-repeat;
+            }
+        }
+        .sns_share_box {
+            right:-8px;top:-12px;width:auto;
+            animation:fade both 0.3s;
+        }
+        .btn_sns_share_close {
+            margin:0 14px;
+        }
+    }
+    .btn_sns_share {
+        background:center/28px no-repeat;
+    }
+    .ht_kakao {
+        background-image:url('../images/layout/sns_kakao.svg');
+    }
+    .ht_instar {
+        background-image:url('../images/layout/sns_instar.svg');
+    }
+    .ht_facebook {
+        background-image:url('../images/layout/sns_facebook.svg');
+    }
+    .ht_twitter {
+        background-image:url('../images/layout/sns_twitter.svg');
+    }
+    .ht_pinterest {
+        background-image:url('../images/layout/sns_pinterest.svg');
+    }
+    .ht_line {
+        background-image:url('../images/layout/sns_line.svg');
+    }
+    .ht_message {
+        background-image:url('../images/layout/sns_message.svg');
+    }
+    .ht_url_copy {
+        background-image:url('../images/layout/sns_url_copy.svg');
+    }
+}
+//삭제 예정 (상품 상세에서 복붙)
 
 /*** 라이브 상세 : .liv_detail ***/
+
+/* liv_logo */
+.liv_logo {
+    padding-bottom: 20px;
+    .contents_inner {
+        text-align: center;
+    }
+    .ht_tit_big {
+        margin-bottom:0;
+    }
+    .logo {
+        width:135px;
+    }
+    img:nth-of-type(2) {
+        width:77px;margin-left:-4px;
+    }
+    // .btn_liv_share {
+    //     display:block;position:absolute;right:0px;top:50%;margin-top:-25px; width:50px;height:50px;background:url('../images/guide/ico_tod_share.svg') center/20px no-repeat;
+    // }
+    .prod_share_area {
+        top:50%;transform: translateY(-50%);
+    }
+}
+
+/* liv_detail */
 .liv_detail {
-    position:relative;
-    .img {
-        position:relative;height:0;padding-top:calc(100% + 40px);margin:-40px -20px 30px -20px;overflow:hidden;
-        img {
-            position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);
+     position:relative;
+     height:600px;
+     .bg_img{
+        position:absolute; width:1920px; left:50%;
+        top:0;
+        transform: translateX(-50%);
+     }
+     .contents_inner {
+         position:relative;
+         top:50%;
+         transform:translateY(-50%);
+     }
+     .liv_timeline_marker {
+        margin:0 0 16px 0;padding-right:0;
+        p {
+            color:#FF2700;font-weight: 700;
         }
     }
-    .liv_timeline_marker {
-        margin:0;padding-right:40px;border-radius:0;overflow:inherit;
+    .title {
+        line-height: 50px;
+        letter-spacing: -1px;
+        font-size: 38px;
+        font-weight: 700;
+        margin-bottom: 10px;
     }
-    .btn_liv_share {
-        display:block;position:absolute;right:-15px;top:-15px;width:50px;height:50px;background:url('../images/guide/ico_tod_share.svg') center/20px no-repeat;
-    }
-    .txt {
-        margin-top:16px;padding-right:40px;
-        .s1 {
-            color:#000;font-size:18px;font-weight:500;line-height:28px;
-        }
-        .s2 {
-            margin-top:10px;color:#767676;font-size:13px;line-height:19px;
-        }
+    .sub_title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        color:rgba(0,0,0,0.8);
     }
     .liv_btn_area {
-        margin-top:25px;
+        margin-top:40px;
+    }
+    .liv_btn {
+        text-align: left;
+        a {
+            position:relative;
+            height:50px;
+            line-height: 50px;
+            border-radius: 40px;
+            border:1px solid;
+            background-color: #fff;
+            padding:0 29px 0 49px;
+            font-size: 18px;
+            font-weight: 500;
+            &:before {
+                content:"";
+                width:20px;
+                height:20px;
+                position:absolute;
+                left:24px;
+                top:15px;
+                background:url(../images/guide/ico_bell.svg) no-repeat center / 18px;
+            }
+        }
     }
 }
 
