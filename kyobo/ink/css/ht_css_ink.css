@@ -943,9 +943,20 @@ body {
 /***** ht_tit_nav : 상단 탭 *****/
 .ht_tit_nav {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 0;
   text-align: center;
+}
+
+.ht_tit_nav .ht_tit_nav_txt {
+  margin-bottom: 18px;
+  color: #767676;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.ht_tit_nav .ht_tit_nav_txt strong {
+  font-weight: 700;
 }
 
 /* .ht_tit_nav_inner */
@@ -1061,6 +1072,14 @@ body {
 
 .ht_tit_nav_inner .ico_tod_nav02:before {
   background-image: url("../images/main/ico_tod_main_t02.svg");
+}
+
+.ht_tit_nav_inner .ico_cur_nav01:before {
+  background-image: url("../images/main/ico_cur_hero_tab01.svg");
+}
+
+.ht_tit_nav_inner .ico_cur_nav02:before {
+  background-image: url("../images/main/ico_cur_hero_tab02.svg");
 }
 
 /***** 상단메뉴 : top_evt_area *****/
@@ -1438,6 +1457,12 @@ body {
 /* tab_swiper */
 .tab_swiper {
   overflow: hidden;
+}
+
+.tab_swiper.center .swiper-wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tab_swiper .swiper-slide {
@@ -2087,7 +2112,7 @@ body {
 /* Btn : Contents */
 .btn_area {
   position: relative;
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
 }
 
