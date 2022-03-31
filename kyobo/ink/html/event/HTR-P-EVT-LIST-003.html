@@ -162,7 +162,7 @@
 							<div class="sort_tab">
 								<a href="#a" class="active"><span>최신순</span></a>
 								<a href="#a"><span>인기순</span></a>
-								<a href="#a"><span>마감임박순</span></a>
+								<a href="javascript:locOffset();"><span>마감임박순</span></a>
 							</div>
 							<!-- //소팅 메뉴 -->
 						</div>
@@ -442,7 +442,7 @@
 <script>
 function locOffset(){
 	var locOffsetTop = $('.evt_list_wrap').offset().top - $('.top_evt_area').innerHeight() - 80
-	$('html, body').stop().animate({scrollTop:locOffsetTop}, 700);
+	$('html, body').stop().animate({scrollTop:locOffsetTop}, 0);
 }
 </script>
 
