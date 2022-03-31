@@ -495,7 +495,7 @@ $(function(){
 
 
 /***** Contents *****/
-/***  웰컴메인 ***/
+/**** 웰컴메인 ****/
 /* 핫트랙스 라이브 */
 function welLive(){
     var $target = $('.wel_live_cont .swiper-container');
@@ -811,7 +811,7 @@ $(function(){
 
 
 
-/****  음반  ****/
+/**** 음반 ****/
 /* 예약상품 */
 function musReserved(){
     var $target = $('.type5_banner01 .swiper-container');
@@ -1119,7 +1119,7 @@ $(function(){
 
 
 
-/****  브랜드샵  ****/
+/**** 브랜드샵 ****/
 /* 관련 기획전 */
 function bradEx() {
 	var $target = $('.brad_main_exhibition_cont .swiper-container');
@@ -1194,6 +1194,76 @@ $(function(){
 	if(!$('.brad_main_coupon_cont').length) return;
 	bradCoupon();
 });
+
+
+
+
+
+
+
+
+
+/**** 선물추천 ****/
+/* 선물이 필요한 순간 핫트 하세요 */
+function giftNeed(){
+    var $target = $('.gft_need_main_cont .swiper-container');
+    var slideOption = {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        loop: true,
+        spaceBetween: 36,
+        speed: 700,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: $('.gft_need_main_cont').find('.swiper-pagination')[0],
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return KyoboBookPub.ink.setPrependZero(number, 2);
+            },
+            formatFractionTotal: function (number) {
+                return KyoboBookPub.ink.setPrependZero(number, 2);
+            }
+        },
+        navigation: {
+            nextEl: '.gft_need_main_cont .swiper-button-next',
+            prevEl: '.gft_need_main_cont .swiper-button-prev',
+        },
+    };
+    if($target .find('.swiper-slide').length > 3) {
+        giftNeedSwiper = new Swiper($target.get(), slideOption);
+        $(".gft_need_main_cont .swiper-wrapper").removeClass("list_lenght_warp");
+	} else{
+		$(".gft_need_main_cont .swiper-wrapper").addClass("list_lenght_warp");
+    }
+}
+
+$(function(){
+    if(!$('.gft_need_main_cont').length) return;
+    giftNeed();
+});
+
+
+
+
+
+
+
+
+
+/**** 라이브 ****/
+
+
+
+
+
+
+
+
+
+/**** 큐레이션 ****/
 
 
 
