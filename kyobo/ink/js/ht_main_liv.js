@@ -5,25 +5,28 @@
 function livReplaySwiper(){
     var $target = $('.liv_replay_cont');
     $target.each(function (index, element) {
-        var $parent = $(this);
+        var $parent = $(this).parent('.liv_replay_wrap');
         var slideOption = {
-            spaceBetween: 20,
+            spaceBetween: 0,
             observer: true,
             observeParents: true,
-            slidesPerView:3,
-            loop: true,
-            loopsSlide:1,
+            slidesPerView:'auto',
+            slidesPerGroup: 5,
+            // loop: true,
+            // loopsSlide:1,
             autoHeight: true,
-            pagination: {
-                el: $parent.find('.swiper-pagination')[0],
-                type : 'bullets',
+            speed:1000,
+            navigation: {
+                nextEl: $($parent).find('.swiper-button-next'),
+                prevEl: $($parent).find('.swiper-button-prev'),
             },
-            speed:400,
+
         };
 
-        //if($parent.find('.swiper-slide').length > 3) {
+        if($parent.find('.swiper-slide').length > 5) {
             livReplaySwiperCont = new Swiper(this, slideOption);
-        //}
+            $parent.addClass('swiper-on');
+        }
 	});
 }
 
@@ -66,18 +69,18 @@ $(function(){
 
 
 /* 미리 만나는 라이브 */
-function livNewMsg(){
-	var offsetPosition = $('.liv_list .li:first-child .alarm_chk02').offset();
-	var y = offsetPosition.top - $('.liv_list').offset().top + 35;
-	$('.liv_new_msg').css('top', y);
-}
-$(function(){
-    if(!$('.liv_new_msg').length) return;
-	livNewMsg();
-	$(window).resize(function() {
-		livNewMsg();
-	});
-});
+// function livNewMsg(){
+// 	var offsetPosition = $('.liv_list .li:first-child .alarm_chk02').offset();
+// 	var y = offsetPosition.top - $('.liv_list').offset().top + 35;
+// 	$('.liv_new_msg').css('top', y);
+// }
+// $(function(){
+//     if(!$('.liv_new_msg').length) return;
+// 	livNewMsg();
+// 	$(window).resize(function() {
+// 		livNewMsg();
+// 	});
+// });
 
 
 
@@ -138,10 +141,10 @@ function prod4_banner(){
             loop: true,
             loopsSlide: 1,
             spaceBetween:0,
-            // autoplay: {
-            //     delay: 5000,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             speed: 1000,
             navigation: {
                 nextEl: $(element).find('.swiper-button-next'),
