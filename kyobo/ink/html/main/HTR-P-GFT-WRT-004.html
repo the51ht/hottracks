@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>선물고민쓰기 : 핫트랙스</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+
+<link rel="stylesheet" href="../../css/ht_main_gft.css">
+<script src="../../js/ht_main_gft.js"></script>
+</head>
+
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap">
+
+			<!-- ht_cont -->
+			<div class="ht_cont">
+				<div class="contents_inner">
+					<!-- 팝업 -->
+					<div class="ht_cont">
+						<h2 class="ht_tit05">팝업</h2>
+
+						<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#gftWrtPop"><span class="text">선물 고민 쓰기 / #gftWrtPop</span></button>
+					</div>
+					<!-- //팝업 -->
+					
+				</div>
+			</div>
+			<!-- //ht_cont -->
+			
+		</section>
+		<!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+</div>
+<!-- // wrapper -->
+
+
+
+<!-- 선물 선택 : gftWrtPop --> 
+<div id="gftWrtPop" class="dialog_wrap" data-class="dialog_md">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">선물 고민 쓰기</div>
+    </div>
+    <!-- //dialog_header -->
+
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents gft_wrt_wrap">
+		<!-- 스크롤 영역 -->
+		<div class="custom_scroll_wrap sc_pop_btn">
+
+			<div class="ctg_topMenu not_sticky">
+				<div class="inner_wrap round_ty">
+					<span>모두에게</span>
+					<span>10대</span>
+					<span>친구</span>
+				</div>
+				<!-- <a href="#" class="btn_line_refresh"><span>다시선택</span></a> -->
+			</div>
+
+			<!-- gft_select_view -->
+            <div class="gft_select_view">
+                <ul>
+                    <li>
+                        <p class="ico">A</p>
+                        <p class="img"><img src="../../images/temp/@img_prod01.jpg" alt=""></p>
+                    </li>
+                    <li>
+                        <p class="ico">B</p>
+                        <p class="img"><img src="../../images/temp/@img_prod02.jpg" alt=""></p>
+                    </li>
+                    <li>
+                        <p class="ico">C</p>
+                        <p class="img"><img src="../../images/temp/@img_prod03.jpg" alt=""></p>
+                    </li>
+                </ul>
+            </div>
+            <!-- //gft_select_view -->
+
+
+			<div class="ht_cont_s">
+				<h2 class="ht_tit05">
+                    이런 상황이에요
+				</h2>
+                
+                <!-- form_cont -->
+                <div class="form_cont">
+                    <!-- byte_check_wrap -->
+                    <div class="byte_check_wrap">
+                        <textarea id="textKillingPart02" class="form_textarea" placeholder="문의하실 내용을 직접 작성해 주세요"  title="내용 입력" style="height: 78px;"></textarea>
+                        <div class="byte_chack_footer">
+                            <div class="byte_check">
+                                <span class="count">12</span>
+                                <span class="total">300자</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //byte_check_wrap -->
+                </div>
+                <!-- //form_cont -->
+
+			</div>
+
+            <div class="ht_cont_s">
+				<h2 class="ht_tit05">
+					고민하는 기간
+				</h2>
+
+                <!-- gft_view_slider_cont -->
+                <div class="gft_view_slider_cont">
+                    <script src="../../js/jquery.ui.touch-punch.min.js"></script><!-- 모바일 슬라이드 : 해당페이지에만 사용 -->
+                    <script>
+                    /* 슬라이드 선택 */
+                    $(function() {
+                        $('.gft_view_slider').slider({
+                            range:'max',
+                            min: 1,
+                            max: 7,
+                            value: 7,
+                            slide: function(event, ui) {
+                                console.log(ui.value);
+                            }
+                        });
+                        console.log($('.gft_view_slider').slider('value'));
+                    });
+                    </script>
+                    
+                    <!-- gft_main_slider -->
+                    <div class="gft_view_slider"></div>
+                    <!-- //gft_main_slider -->
+
+                    <!-- gft_view_slider_txt -->
+                    <div class="gft_view_slider_txt">
+                        <ul>
+                            <li>1일</li>
+                            <li>2일</li>
+                            <li>3일</li>
+                            <li>4일</li>
+                            <li>5일</li>
+                            <li>6일</li>
+                            <li>7일</li>
+                        </ul>
+                    </div>
+                    <!-- //gft_view_slider_txt -->
+                </div>
+                <!-- //gft_view_slider_cont -->
+
+                <!-- info_text_box -->
+                <div class="info_text_box">
+                    <ul class="bul_list">
+                        <li class="bul_item_dot font_size_xs">글 삭제는 <span>‘취소’</span> 버튼을 이용해주세요.</li>
+                        <li class="bul_item_dot font_size_xs">관련 없는 글은 관리자에 의해 삭제 될 수 있습니다.</li>
+                        <li class="bul_item_dot font_size_xs">등록한 선물 고민은 <span>[내가 쓴 고민]</span>에서 확인하실 수 있습니다.</li>
+                        <li class="bul_item_dot font_size_xs">고민하는 기간 1일은 등록한 날 자정까지 고민이 노출됩니다.</li>
+                    </ul>
+                </div>
+                <!-- //info_text_box --> 
+			</div>
+
+            <!-- btn_wrap -->
+            <div class="btn_wrap btn_area">
+                <button type="button" class="btn_md btn_black" data-role="btn-dialog" data-target="#popAlert01"><span class="text">취소</span></button>
+                <button type="button" class="btn_md btn_primary" disabled><span class="text">등록하기</span></button>
+            </div>
+            <!-- //btn_wrap -->
+		</div>
+		<!-- //스크롤 영역-->
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //선물 선택 : gftWrtPop --> 
+
+<script>
+$(function(){
+	$('#evtApplyPop').dialog({
+		//autoOpen: true
+	});
+});
+</script>
+
+
+<!-- 팝업 : 취소 안내(취소/확인) : popAlert01 -->
+<div id="popAlert01" class="dialog_wrap" data-class="dialog_alert">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">취소 안내</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <div class="evt_pop_content">
+            선물 고민 작성을 그만하시겠습니까?<br>
+            작성된 내용은 저장되지 않습니다.
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_black" data-dialog-close><span class="text">취소</span></button>
+        <button type="button" class="btn_md btn_primary" data-dialog-close><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- //팝업 : 취소 안내(취소/확인) : popHpPop01 -->
+
+<script>
+    /* 확인용 : 22.03.21 수정 */
+function chkAll(obj){
+    $('.fixed_btn_select').removeClass('off').addClass('on');
+    $('.custom_scroll_wrap').css('padding-bottom', $('.fixed_btn_select').innerHeight() + 30);
+}
+function chkOutImg(){
+    $('.fixed_btn_select').addClass('off');
+    $('.custom_scroll_wrap').css('padding-bottom', '');
+    setTimeout(function(){
+        $('.fixed_btn_select').removeClass('on');
+    }, 600);
+}
+</script>
+</body>
+</html>

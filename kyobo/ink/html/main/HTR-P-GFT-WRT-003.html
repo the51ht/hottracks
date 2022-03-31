@@ -101,7 +101,7 @@
 					<div class="ht_cont">
 						<h2 class="ht_tit05">팝업</h2>
 
-						<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#gftWrtPop"><span class="text">선물 고민 쓰기 > 선물 선택 > 최근 본 상품 찾기 / #gftWrtPop</span></button>
+						<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#gftWrtPop"><span class="text">선물 고민 쓰기 > 선물 선택 > 직접 검색 / #gftWrtPop</span></button>
 					</div>
 					<!-- //팝업 -->
 					
@@ -444,11 +444,11 @@ $(function(){
 /* 확인용 : 22.03.21 수정 */
 function chkAll(obj){
     $('.fixed_btn_select').removeClass('off').addClass('on');
-    $('.gft_prod').css('padding-bottom', $('.fixed_btn_select').innerHeight() + 30);
+    $('.custom_scroll_wrap').css('padding-bottom', $('.fixed_btn_select').innerHeight() + 30);
 }
 function chkOutImg(){
     $('.fixed_btn_select').addClass('off');
-    $('.gft_prod').css('padding-bottom', '');
+    $('.custom_scroll_wrap').css('padding-bottom', '');
     setTimeout(function(){
         $('.fixed_btn_select').removeClass('on');
     }, 600);

@@ -9,12 +9,8 @@
 }
 
 /* .gft_main */
-.gft_main_tap .tab_swiper.tab_txt.ty02 li a {
-  font-size: 24px;
-}
-
 .gft_main_tap .btn_line_round {
-  top: 20px !important;
+  top: 15px !important;
   z-index: 1;
 }
 
@@ -26,11 +22,12 @@
   height: 67px;
   text-align: center;
   opacity: 1 !important;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .gft_main .ht_tit_big02 img {
-  height: 67px;
+  height: 69px;
+  margin-left: 40px;
 }
 
 .gft_main .btn_more_view span {
@@ -213,7 +210,7 @@
   display: block;
   margin-top: 5px;
   color: #000;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   text-align: center;
 }
@@ -512,6 +509,7 @@
 .gft_need_main {
   background: url("../images/main/bg_wel_md_pick.jpg") center/cover repeat-x;
   overflow: initial;
+  margin-top: 33px;
 }
 
 .gft_need_main h2 {
@@ -624,6 +622,7 @@
 
 .ht_cont.ht_bg.gft_need {
   padding-top: 20px;
+  overflow: initial;
 }
 
 /* gft_need_msg */
@@ -1400,6 +1399,7 @@
 /* gft_wrt_wrap */
 .dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .gft_wrt_wrap {
   margin-top: 0;
+  overflow: initial;
 }
 
 .gft_wrt_wrap .ctg_topMenu {
@@ -1411,8 +1411,12 @@
   font-size: 12px;
 }
 
+.gft_wrt_wrap .ctg_topMenu .round_ty {
+  padding: 15px 15px !important;
+}
+
 .gft_wrt_wrap .ht_cont_s {
-  margin-top: 26px;
+  margin-top: 30px;
 }
 
 .gft_wrt_wrap .ht_cont_s .point_line {
@@ -1424,15 +1428,40 @@
   height: 14px;
 }
 
-.gft_wrt_wrap .ht_cont_s img {
+.gft_wrt_wrap .ht_cont_s .ht_tit05 img {
   vertical-align: top;
   margin-left: 8px;
 }
 
-.gft_wrt_wrap .mc_s_cont {
-  padding-bottom: 24px;
-  margin-bottom: 24px;
-  border-bottom: 1px solid rgba(213, 213, 213, 0.4);
+.gft_wrt_wrap .btn_gft_next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.gft_wrt_wrap .btn_gft_next button {
+  background-image: url(../images/guide/btn_banner_pagn_w.svg);
+  opacity: 1;
+  width: 44px;
+  height: 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 44px 44px;
+  -webkit-transition: opacity .23s;
+  transition: opacity .23s;
+  border-radius: 100%;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+.gft_wrt_wrap .btn_gft_next button:disabled {
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .gft_wrt_wrap .form_list_box_ty {
@@ -1529,6 +1558,14 @@
   color: #595959;
 }
 
+.gft_wrt_wrap .info_text_box {
+  padding: 20px 20px 15px 20px;
+}
+
+.gft_wrt_wrap .info_text_box ul li span {
+  color: #000;
+}
+
 /*** 선물 상세 : .gft_prod ***/
 .gft_prod .ht_tit_big02 img {
   height: 27px;
@@ -1580,22 +1617,23 @@
 /* 선물 고민 쓰기 : 상세 */
 .gft_select_view {
   position: relative;
-  margin: -20px -20px 0 -20px;
-  padding: 0 20px 16px 20px;
+  margin: 27px -20px 0 -20px;
+  padding: 0 20px 20px 20px;
   border-bottom: 1px solid #eee;
 }
 
 .gft_select_view ul {
   position: relative;
-  margin: 0 -10px;
   font-size: 0;
+  max-width: 354px;
+  margin: 0 auto;
 }
 
 .gft_select_view ul li {
   display: inline-block;
   position: relative;
-  width: calc(33.3% - 20px);
-  margin: 0 10px;
+  width: calc(33.3% - 18px);
+  margin: 0 9px;
   vertical-align: top;
   text-align: center;
 }
@@ -1640,7 +1678,7 @@
 .gft_view_slider.ui-slider-horizontal {
   position: relative;
   height: 16px;
-  margin: 0 9px;
+  margin: 0 20px;
   background: none;
 }
 
@@ -1649,7 +1687,7 @@
   left: -24px;
   top: 50%;
   width: calc(100% + 48px);
-  height: 3px;
+  height: 2px;
   margin-top: -2px;
   background: #d5d5d5;
   border-radius: 2px;
@@ -1665,7 +1703,7 @@
   left: -24px;
   top: 50%;
   width: calc(100% + 48px);
-  height: 3px;
+  height: 2px;
   margin-top: -2px;
   background: #d5d5d5;
   border-radius: 2px;
@@ -1673,11 +1711,11 @@
 }
 
 .gft_view_slider .ui-slider-handle {
-  top: 0;
-  width: 16px;
-  height: 16px;
+  top: -5px;
+  width: 22px;
+  height: 22px;
   background: #fff;
-  border: 5px solid #000;
+  border: 7px solid #000;
   border-radius: 50%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1686,7 +1724,7 @@
 
 .gft_view_slider_txt {
   position: relative;
-  margin: 7px 5px 0 5px;
+  margin: 15px 15px 0 15px;
 }
 
 .gft_view_slider_txt ul {
@@ -1697,7 +1735,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #767676;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 12px;
   text-align: center;
 }
