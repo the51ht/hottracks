@@ -491,29 +491,29 @@
 
 .calendar_tab_wrap.swiper-on .swiper-button-prev,
 .calendar_tab_wrap.swiper-on .swiper-button-next {
-  width: 12px;
+  width: 8px;
   height: 67px;
   background: none;
   top: -67px;
 }
 
 .calendar_tab_wrap.swiper-on .swiper-button-prev {
-  left: -235px;
+  left: -239px;
 }
 
 .calendar_tab_wrap.swiper-on .swiper-button-prev:after {
-  background: url(../images/guide/ico_arrow_prev_white.svg) no-repeat center/11px;
+  background: url(../images/guide/ico_arrow_prev_white.svg) no-repeat center/6px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   border: none;
 }
 
 .calendar_tab_wrap.swiper-on .swiper-button-next {
-  left: 235px;
+  left: 239px;
 }
 
 .calendar_tab_wrap.swiper-on .swiper-button-next:after {
-  background: url(../images/guide/ico_arrow_prev_white.svg) no-repeat center/11px;
+  background: url(../images/guide/ico_arrow_prev_white.svg) no-repeat center/6px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   border: none;
@@ -642,7 +642,7 @@
   left: 16px;
   top: 10px;
   width: 1px;
-  height: calc(100% - 70px);
+  height: calc(100% - 74px);
   border-left: 1px dashed #000;
   content: "";
 }
@@ -678,7 +678,7 @@
   display: flex;
   position: relative;
   margin: 0 0 17px 25px;
-  border-radius: 12px;
+  border-radius: 19px;
   overflow: hidden;
 }
 
@@ -976,15 +976,15 @@
 
 .liv_btn a, .liv_btn button {
   display: inline-block;
-  height: 37px;
-  padding: 0 20px;
+  height: 44px;
+  padding: 0 28px;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #000;
   font-size: 14px;
-  line-height: 35px;
+  line-height: 44px;
 }
 
 .liv_btn a.on, .liv_btn button.on {
@@ -1040,7 +1040,6 @@
 /* liv_detail */
 .liv_detail {
   position: relative;
-  height: 600px;
 }
 
 .liv_detail .bg_img {
@@ -1053,10 +1052,20 @@
 }
 
 .liv_detail .contents_inner {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .liv_detail .liv_timeline_marker {
