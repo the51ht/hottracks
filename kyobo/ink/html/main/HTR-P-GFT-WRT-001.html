@@ -403,11 +403,11 @@ $(function(){
 /* 확인용 : 22.03.21 수정 */
 function chkAll(obj){
     $('.fixed_btn_select').removeClass('off').addClass('on');
-    $('.gft_prod').css('padding-bottom', $('.fixed_btn_select').innerHeight() + 30);
+    $('.custom_scroll_wrap').css('padding-bottom', $('.fixed_btn_select').innerHeight() + 30);
 }
 function chkOutImg(){
     $('.fixed_btn_select').addClass('off');
-    $('.gft_prod').css('padding-bottom', '');
+    $('.custom_scroll_wrap').css('padding-bottom', '');
     setTimeout(function(){
         $('.fixed_btn_select').removeClass('on');
     }, 600);
