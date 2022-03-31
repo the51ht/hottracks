@@ -123,3 +123,49 @@ $(function(){
 
 });
 
+/* 4단배너 */
+
+function prod4_banner(){
+    var $target = $('.prod4_banner .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.prod4_banner');
+        var slideOption = {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            slidesPerGroup: 4,
+            loop: true,
+            loopsSlide: 1,
+            spaceBetween:0,
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false,
+            // },
+            speed: 1000,
+            navigation: {
+                nextEl: $(element).find('.swiper-button-next'),
+                prevEl: $(element).find('.swiper-button-prev'),
+            },
+            pagination: {
+                el: $(element).find('.swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            }
+        };
+
+        if($parent.find('.swiper-slide').length > 4) {
+            var prod4_b = new Swiper(this, slideOption);
+        }
+    });
+}
+
+$(function(){
+	if(!$('.prod4_banner').length) return;
+	prod4_banner();
+});
