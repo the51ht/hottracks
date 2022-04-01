@@ -18,22 +18,20 @@
 }
 
 .cor_live_banner .info {
-  position: absolute;
-  border: 1px solid blue;
+  position: relative;
   height: 600px;
   width: 1200px;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .cor_live_banner .liv_txt_list {
   position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  width: 600px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 100px;
 }
 
 .cor_live_banner .liv_txt_list .title {
@@ -75,12 +73,34 @@
 }
 
 .cor_live_banner .liv_prod_img {
-  position: absolute;
   width: 300px;
+  height: auto;
+  position: absolute;
   top: 50%;
+  right: 100px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 104px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cor_live_banner .liv_prod_img .prod_img {
+  width: 100%;
+}
+
+.cor_live_banner .btm_thumb {
+  padding: 10px;
+}
+
+.cor_live_banner .swiper_control {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -22px;
+}
+
+.cor_live_banner .swiper-button-next:after, .cor_live_banner .swiper-button-prev:after {
+  left: 554px;
 }
 
 /* liv_txt_list */
@@ -134,7 +154,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 35px;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .liv_txt_list .liv_btn {
@@ -359,14 +379,7 @@
 }
 
 .btm_thumb {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: absolute;
-  overflow: hidden;
   width: 100%;
   padding: 20px;
   background-color: rgba(51, 51, 51, 0.4);
@@ -379,6 +392,15 @@
           box-sizing: border-box;
 }
 
+.btm_thumb > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btm_thumb .img_thumb {
   width: 60px;
   height: 60px;
@@ -386,10 +408,6 @@
   overflow: hidden;
   float: left;
   background: rgba(0, 0, 0, 0.2);
-}
-
-.btm_thumb .img_thumb a {
-  display: block;
 }
 
 .btm_thumb .img_thumb img {

@@ -18,20 +18,20 @@
         transform: translateX(-50%);
     }
     .info {
-        position:absolute;
-        border:1px solid blue;
+        position:relative;;
         height:600px;
         width:1200px;
-        top:0;
-        left:50%;
-        transform: translateX(-50% );
         margin:0 auto;
+        overflow:hidden;
     }
+
+    // liv_txt_list
     .liv_txt_list {
         position:absolute;
-        top:0;
-        left:0;
-        background:rgba(0,0,0,0.3);
+        width: 600px;
+        top:50%;
+        transform: translateY(-50%);
+        left:100px;
         .title {
             color:#fff;
         }
@@ -68,14 +68,33 @@
     .live_btn {
         margin-top:42px;
     }
-    .liv_prod_img {
-        position:absolute;
-        width:300px;
-        top:50%;
-        transform: translateY(-50%);
-        right:104px;
 
+    //liv_prod_img
+    .liv_prod_img {
+        width:300px;
+        height:auto;
+        position:absolute;
+        top:50%;
+        right:100px;
+        transform: translateY(-50%);
+        border-radius:12px;
+        overflow: hidden;
+        .prod_img {
+            width:100%;
+        }
     } 
+    .btm_thumb {
+        padding:10px;
+    }
+    .swiper_control {
+        position:absolute;
+        width:100%;
+        top:50%;
+        margin-top:-22px;
+    }
+    .swiper-button-next:after,  .swiper-button-prev:after {
+        left:554px;
+    }
 }
 /* liv_txt_list */
 .liv_txt_list {
@@ -110,7 +129,7 @@
         font-size: 20px;
         font-weight: 500;
         line-height: 35px;
-        color:rgba(0,0,0,0.8);
+        color:rgba(255,255,255,0.8) !important;
     }
 
     .liv_btn {
@@ -243,12 +262,12 @@
     }
 }
 .btm_thumb {
-    display:flex;align-items:center;position:absolute;overflow:hidden;width:100%;padding:20px;background-color: rgba(51,51,51,0.4);bottom:0;left:0;border-bottom-left-radius: 12px; border-bottom-right-radius:12px;z-index: 1;box-sizing: border-box;
+  position:absolute;width:100%;padding:20px;background-color: rgba(51,51,51,0.4);bottom:0;left:0;border-bottom-left-radius: 12px; border-bottom-right-radius:12px;z-index: 1;box-sizing: border-box;
+    & > a {
+        display:flex;align-items:center;
+    }
     .img_thumb {
         width:60px;height:60px;border-radius: 4px;overflow: hidden;float:left;background:rgba(0,0,0,0.2  );
-        a{
-            display: block;
-        }
         img {
             width:100%;
         }
@@ -262,7 +281,7 @@
             width:100%;font-size: 13px;line-height: 19px;white-space: nowrap; overflow: hidden;text-overflow: ellipsis;margin-bottom: -1px;font-weight: 700;
         }
         .rate, .price{
-            font-size: 16px;line-height: 22px;vertical-align: top;margin-right:2px;font-weight: 700;
+            font-size: 16px;line-height: 22px;vertical-align: top;margin-right:2px;font-weight: 700; 
         }
         .rate {
             color:#da2128;

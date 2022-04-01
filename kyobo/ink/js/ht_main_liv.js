@@ -1,6 +1,58 @@
 
 
 /*** 라이브 메인 ***/
+/* 라이브 배너 */
+function corLiveBanner(){
+    var $target = $('.cor_live_banner .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.cor_live_banner');
+        $parent.addClass('hero_idx_' + index);
+
+        var slideOption = {
+            slidesPerView: 'auto',
+            speed: 700,
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true,
+            loopsSlide: 1,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }, 
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+                //pauseOnMouseEnter: true,
+            },
+            navigation: {
+                nextEl: ('.hero_idx_' + index + ' .swiper-button-next'),
+                prevEl: ('.hero_idx_' + index + ' .swiper-button-prev'),
+            },
+            pagination: {
+                el: ('.hero_idx_' + index + ' .swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            }
+        };
+      
+        if($parent.find('.swiper-slide').length > 1) {
+            htHeroBannerSwiper = new Swiper(this, slideOption);
+            $parent.addClass('swiper-on');
+            $parent.find('.option_box').css('display','flex');
+        }
+	});
+}
+
+$(function(){
+    if(!$('.cor_live_banner').length) return;
+    corLiveBanner();
+    $('.cor_live_banner').find('.s1, .s2').lettering('lines');
+});
 /* 라이브 다시보기 */
 function livReplaySwiper(){
     var $target = $('.liv_replay_cont');
