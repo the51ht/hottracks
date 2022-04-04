@@ -56,9 +56,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<link rel="stylesheet" href="../../css/ht_main_liv.css">
-<script src="../../js/ht_main_liv.js"></script>
 </head>
 
 <body>
@@ -110,6 +107,16 @@
 			<!-- ht_cont : 라이브 배너 -->
 			<div class="ht_cont liv_banner">
 				<h2 class="hidden">라이브배너</h2>
+				<!-- wel_live_txt -->
+				<ul class="wel_live_txt">
+					<li class="wel_live_txt01"></li>
+					<li class="wel_live_txt02"></li>
+					<li class="wel_live_txt03"></li>
+					<li class="wel_live_txt04"></li>
+					<li class="wel_live_txt05"></li>
+				</ul>
+				<!-- //wel_live_txt -->
+
 				<!-- cor_live_banner -->
 				<div class="cor_live_banner">
 					<!-- swiper-container -->
@@ -117,10 +124,8 @@
 						<!-- swiper-wrapper -->
 						<ul class="swiper-wrapper">
 							<!-- swiper-slide 반복 -->
-							<li class="swiper-slide">
-								<div class="img">
-									<img src="../../images/temp/@cor_live_banner1.png" alt="">
-								</div>			
+							<li class="swiper-slide on"><!-- 라이브 일때 class="on" -->
+								<!--<div class="img"></div> 이미지만 등록 할 경우 -->
 								<div class="info">
 									<!--liv_txt_list-->
 									<ul class="liv_txt_list">
@@ -135,6 +140,12 @@
 										</li>
 									</ul>
 									<!-- //liv_txt_list-->
+
+									<!-- wel_live_good_ani -->
+									<div class="wel_live_good_ani">
+										<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+									</div>
+									<!-- //wel_live_good_ani -->
 
 									<!-- liv_prod_img -->
 									<div class="liv_prod_img">
@@ -158,11 +169,7 @@
 							</li>
 							<!-- //swiper-slide 반복 -->
 
-
-							<li class="swiper-slide">
-								<div class="img">
-									<img src="../../images/temp/@cor_live_banner1.png" alt="">
-								</div>			
+							<li class="swiper-slide">		
 								<div class="info">
 									<!--liv_txt_list-->
 									<ul class="liv_txt_list">
@@ -172,20 +179,20 @@
 										</li>
 										<li class="title">핫트랙스 LIVE 국민향초 양키캔들!<br>최대 51% 할인</li>
 										<li class="sub_title">워머 + 캔들 세트 구매 시 최대 할인 혜택!</li>
-										<li class="liv_btn">
-											<button><span>사전 이벤트 참여하기</span></button>
-											<div class="alarm_chk02">
-												<input type="checkbox" id="chk_time01">
-												<label for="chk_time01"><span class="hidden">알림 받기</span></label>
+										<div class="live_btn">
+											<button type="button" class="btn_wel_live"><i></i><span>사전 이벤트 참여하기</span></button>
+											<div class="alarm_chk">
+												<input type="checkbox">
+												<label><span class="hidden">알림 받기</span></label>
 											</div>
-										</li>
+										</div>
 									</ul>
 									<!-- //liv_txt_list-->
 
 									<!-- liv_prod_img -->
 									<div class="liv_prod_img">
 										<div class="prod_img">
-											<img src="../../images/temp/@cor_live_main1.jpg" alt="">
+											<img src="../../images/temp/@img_curation01.jpg" alt="">
 										</div>
 										<div class="btm_thumb">
 											<a href="javascript:alert('제품상세');">
@@ -202,10 +209,7 @@
 									<!-- //liv_prod_img -->
 								</div>
 							</li>							
-							<li class="swiper-slide">
-								<div class="img">
-									<img src="../../images/temp/@cor_live_banner1.png" alt="">
-								</div>			
+							<li class="swiper-slide">			
 								<div class="info">
 									<!--liv_txt_list-->
 									<ul class="liv_txt_list">
@@ -215,20 +219,26 @@
 										</li>
 										<li class="title">핫트랙스 LIVE 국민향초 양키캔들!<br>최대 51% 할인</li>
 										<li class="sub_title">워머 + 캔들 세트 구매 시 최대 할인 혜택!</li>
-										<li class="liv_btn">
-											<button><span>사전 이벤트 참여하기</span></button>
-											<div class="alarm_chk02">
-												<input type="checkbox" id="chk_time01">
-												<label for="chk_time01"><span class="hidden">알림 받기</span></label>
+										<div class="live_btn">
+											<button type="button" class="btn_wel_live"><i></i><span>사전 이벤트 참여하기</span></button>
+											<div class="alarm_chk">
+												<input type="checkbox">
+												<label><span class="hidden">알림 받기</span></label>
 											</div>
-										</li>
+										</div>
 									</ul>
 									<!-- //liv_txt_list-->
+
+									<!-- wel_live_good_ani -->
+									<div class="wel_live_good_ani">
+										<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+									</div>
+									<!-- //wel_live_good_ani -->
 
 									<!-- liv_prod_img -->
 									<div class="liv_prod_img">
 										<div class="prod_img">
-											<img src="../../images/temp/@cor_live_main1.jpg" alt="">
+											<img src="../../images/temp/@img_curation02.jpg" alt="">
 										</div>
 										<div class="btm_thumb">
 											<a href="javascript:alert('제품상세');">
@@ -245,25 +255,28 @@
 									<!-- //liv_prod_img -->
 								</div>
 							</li>
-							<li class="swiper-slide">
-								<div class="img">
-									<img src="../../images/temp/@cor_live_banner1.png" alt="">
-								</div>			
+							<li class="swiper-slide">		
 								<div class="info">
 									<!--liv_txt_list-->
 									<ul class="liv_txt_list">
 										<li class="title">핫트랙스 LIVE 국민향초 양키캔들!<br>최대 51% 할인</li>
 										<li class="sub_title">워머 + 캔들 세트 구매 시 최대 할인 혜택!</li>
-										<li class="liv_btn">
-											<button><span>방송보기</span></button>
-										</li>
+										<div class="live_btn">
+											<button type="button" class="btn_wel_live"><i></i><span>방송보기</span></button>
+										</div>
 									</ul>
 									<!-- //liv_txt_list-->
+
+									<!-- wel_live_good_ani -->
+									<div class="wel_live_good_ani">
+										<i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+									</div>
+									<!-- //wel_live_good_ani -->
 
 									<!-- liv_prod_img -->
 									<div class="liv_prod_img">
 										<div class="prod_img">
-											<img src="../../images/temp/@cor_live_main1.jpg" alt="">
+											<img src="../../images/temp/@img_curation03.jpg" alt="">
 										</div>
 										<div class="btm_thumb">
 											<a href="javascript:alert('제품상세');">
@@ -282,7 +295,7 @@
 							</li>
 							<li class="swiper-slide">
 								<div class="img">
-									<img src="../../images/temp/@cor_live_banner2.png" alt="">
+									<img src="../../images/temp/@cor_live_banner2.png" alt=""><!-- 이미지만 등록 할 경우 -->
 								</div>			
 							</li>
 						</ul>
@@ -347,8 +360,9 @@
 			<!-- //ht_cont :  -->
 
 
-			<!-- ht_cont :  liv_meet-->
-			<div class="ht_cont liv_meet">
+
+			<!-- 미리 만나는 라이브 : .liv_meet-->
+			<div class="ht_cont liv_meet"><!-- 갯수가 2개 일때 class="liv_m2" / 갯수가 1개 일때 class="liv_m1" -->
 				<div class="contents_inner">
                     <h2 class="ht_tit_big02">미리 만나는 <strong class="point_line"><em>라이브</em></strong></h2>
 
@@ -401,7 +415,7 @@
 
 						<li class="li">
 							<div class="img">
-								<p class="img_a" style="background-image:url('../../images/temp/@img_prod_box01.jpg');"></p>
+								<p class="img_a" style="background-image:url('../../images/temp/@img_curation01.jpg');"></p>
 								<div class="wel_live_time">
 									<span><em>12</em>월 <em>24</em>일 (월)</span>
 									<p><em>05:30</em></p>
@@ -436,7 +450,7 @@
 						</li>
 						<li class="li">
 							<div class="img">
-								<p class="img_a" style="background-image:url('../../images/temp/@img_prod_box02.jpg');"></p>
+								<p class="img_a" style="background-image:url('../../images/temp/@img_curation03.jpg');"></p>
 								<div class="wel_live_time">
 									<span><em>12</em>월 <em>24</em>일 (월)</span>
 									<p><em>05:30</em></p>
@@ -479,77 +493,21 @@
 					<!-- //btn_area -->
                 </div>
             </div>
-			<!-- //ht_cont : liv_meet -->
+			<!-- //미리 만나는 라이브 : .liv_meet -->
 
-
-			<!--미리 만나는 라이브 1개: ul.liv_list 에 row_dir 믈래스 추가-->
-			<!-- ht_cont :  liv_meet-->
-			<div class="ht_cont liv_meet">
+			<!-- 미리 만나는 라이브 : .liv_meet-->
+			<div class="ht_cont liv_meet liv_m2"><!-- 갯수가 2개 일때 class="liv_m2" -->
 				<div class="contents_inner">
                     <h2 class="ht_tit_big02">미리 만나는 <strong class="point_line"><em>라이브</em></strong></h2>
 
-					<!-- liv_list -->
-					<ul class="liv_list row_dir">
-						<!-- .li 반복 -->
-						<li class="li">
-							<div class="img">
-								<p class="img_a" style="background-image:url('../../images/temp/@img_curation02.jpg');"></p><!-- 이미지 경로 : background-image -->
-								<div class="wel_live_time">
-									<span><em>12</em>월 <em>24</em>일 (월)</span>
-									<p><em>05:30</em></p>
-								</div>
-								<div class="btm_thumb">
-									<a href="javascript:alert('제품상세');">
-										<div class="img_thumb"><img src="../../images/temp/@img_wel_live_s2.jpg" alt=""></div>
-										<div class="info_thumb">
-											<span class="tit">로지텍 코리아 기계식 키보드</span>
-											<span class="rate">50%</span>
-											<span class="price">134,000</span>
-											<span class="origin">134,000</span>
-										</div>
-									</a>
-								</div>	
-							</div>
-							<ul class="txt">
-								<li class="s1">
-									<span>12월 17일</span>
-									<strong>19:30  방송예정</strong>
-
-									<div class="alarm_chk02">
-										<input type="checkbox" id="chk01">
-										<label for="chk01"><span class="hidden">알림 받기</span></label>
-									</div>
-								</li>
-								<li class="s2">
-									<p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
-									<p><a href="#n"><span>사전이벤트 참여하기</span></a></p>
-								</li>
-							</ul>
-						</li>
-						<!-- //.li 반복 -->
-					</ul>
-					<!-- //liv_list -->
-
-					<!-- btn_area -->
-					<div class="btn_area">
-						<button class="btn_more_view_box ty03"><strong>캘린더로 전체보기<em></em></strong></button>
+					<!-- liv_new_msg -->
+					<div class="liv_new_msg">
+						<p>놓치고 싶지 않은 라이브라면?<em></em></p>
 					</div>
-					<!-- //btn_area -->
-                </div>
-            </div>
-			<!-- //ht_cont : liv_meet -->
-			<!--//미리 만나는 라이브 1개-->
-
-
-
-			<!--미리 만나는 라이브 2개: ul.liv_list 에 row_dir 믈래스 추가-->
-			<!-- ht_cont :  liv_meet-->
-			<div class="ht_cont liv_meet">
-				<div class="contents_inner">
-                    <h2 class="ht_tit_big02">미리 만나는 <strong class="point_line"><em>라이브</em></strong></h2>
+					<!-- //liv_new_msg -->
 
 					<!-- liv_list -->
-					<ul class="liv_list row_dir">
+					<ul class="liv_list">
 						<!-- .li 반복 -->
 						<li class="li">
 							<div class="img">
@@ -588,6 +546,68 @@
 						</li>
 						<!-- //.li 반복 -->
 
+
+						<li class="li">
+							<div class="img">
+								<p class="img_a" style="background-image:url('../../images/temp/@img_curation01.jpg');"></p>
+								<div class="wel_live_time">
+									<span><em>12</em>월 <em>24</em>일 (월)</span>
+									<p><em>05:30</em></p>
+								</div>
+								<div class="btm_thumb">
+									<a href="javascript:alert('제품상세');">
+										<div class="img_thumb"><img src="../../images/temp/@img_wel_live_s2.jpg" alt=""></div>
+										<div class="info_thumb">
+											<span class="tit">로지텍 코리아 기계식 키보드</span>
+											<span class="rate">50%</span>
+											<span class="price">134,000</span>
+											<span class="origin">134,000</span>
+										</div>
+									</a>
+								</div>	
+							</div>
+							<ul class="txt">
+								<li class="s1">
+									<span>12월 17일</span>
+									<strong>19:30  방송예정</strong>
+
+									<div class="alarm_chk02">
+										<input type="checkbox" id="chk02">
+										<label for="chk02"><span class="hidden">알림 받기</span></label>
+									</div>
+								</li>
+								<li class="s2">
+									<p>아르페지오 밍크담요 컬렉션<br>온라인 최저가 LIVE!</p>
+									<p><a href="#n"><span>사전 이벤트 참여하기</span></a></p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- //liv_list -->
+
+					<!-- btn_area -->
+					<div class="btn_area">
+						<button class="btn_more_view_box ty03"><strong>캘린더로 전체보기<em></em></strong></button>
+					</div>
+					<!-- //btn_area -->
+                </div>
+            </div>
+			<!-- //미리 만나는 라이브 : .liv_meet -->
+
+			<!-- 미리 만나는 라이브 : .liv_meet-->
+			<div class="ht_cont liv_meet liv_m1"><!-- 갯수가 1개 일때 class="liv_m1" -->
+				<div class="contents_inner">
+                    <h2 class="ht_tit_big02">미리 만나는 <strong class="point_line"><em>라이브</em></strong></h2>
+
+					<!-- liv_new_msg -->
+					<div class="liv_new_msg">
+						<p>놓치고 싶지 않은 라이브라면?<em></em></p>
+					</div>
+					<!-- //liv_new_msg -->
+
+					<!-- liv_list -->
+					<ul class="liv_list">
+						<!-- .li 반복 -->
 						<li class="li">
 							<div class="img">
 								<p class="img_a" style="background-image:url('../../images/temp/@img_curation02.jpg');"></p><!-- 이미지 경로 : background-image -->
@@ -623,6 +643,7 @@
 								</li>
 							</ul>
 						</li>
+						<!-- //.li 반복 -->
 					</ul>
 					<!-- //liv_list -->
 
@@ -633,11 +654,10 @@
 					<!-- //btn_area -->
                 </div>
             </div>
-			<!-- //ht_cont : liv_meet -->
-			<!--//미리 만나는 라이브 1개-->
+			<!-- //미리 만나는 라이브 : .liv_meet -->
 
 
-			<!-- ht_cont :  liv_replay-->
+			<!-- 라이브 다시보기 : .liv_replay -->
 			<div class="ht_cont liv_replay">
 				<div class="contents_inner">
                     <h2 class="ht_tit_big02">라이브 다시보기<img src="../../images/main/tit_cur_prod_view.svg" alt=""></h2>
@@ -664,11 +684,10 @@
 										</div>	
 									</div>
 									<ul class="txt">
-										<li class="s1">좋은 필기구가 좋은 곳으로 데려다..1</li>
+										<li class="s1">좋은 필기구가 좋은 곳으로 데려다 좋은 필기구가 좋은 곳으로 데려다</li>
 									</ul>
 								</li>
 								<!-- //.swiper-slide 반복 -->
-
 
 								<li class="swiper-slide">
 									<div class="img">
@@ -845,7 +864,6 @@
 						</div>
 						<!-- //liv_replay_cont -->
 
-
 						<!-- swiper_control -->
 						<div class="swiper_control_bk">
 							<div class="swiper-button-prev"></div>
@@ -862,7 +880,7 @@
 					<!-- //btn_area -->
                 </div>
             </div>
-			<!-- //ht_cont : liv_replay -->
+			<!-- //라이브 다시보기 : .liv_replay -->
 
 
             <!-- ht_cont : 하단 광고배너 -->
@@ -906,6 +924,7 @@
                 </div>
             </div>
             <!-- //ht_cont : 하단 광고배너 -->
+
 		</section>
 		<!-- /ht_contents_wrap -->
 	</main>
