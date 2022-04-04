@@ -139,6 +139,14 @@
 						<button type="button" class="btn_sm btn_primary" onclick ="toastBtn1();"><span class="text">토스트 메세지</span></button>       
 					</div>
 					<!-- //토스트 메세지 -->   
+
+                     <!-- 3초 뒤 실행 -->
+					<div class="ht_cont">
+						<h2 class="ht_tit05">3초 뒤 실행</h2>
+
+                        <button type="button" class="btn_sm btn_light_gray" data-role="btn-dialog" data-target="#popAlert01" data-prev onclick="delayBtn(this);"><span class="text">3초 뒤 실행 / #popAlert01</span></button>
+					</div>
+					<!-- // 3초 뒤 실행 -->   
 				</div>
 			</div>
 			<!-- //ht_cont -->
@@ -156,6 +164,17 @@
 function toastBtn1(){
     KyoboBookPub.ink.setToastMessage('마케팅 수신에 동의하셨습니다. <br>야간수신에 동의하셨습니다. <br>수신동의 일시  2021년 12월 13일', 3000);
 }
+
+function delayBtn(thisBtn){
+        thisBtn.setAttribute('data-prev', null);
+        KyoboBookPub.ink.setUIDialog();
+        var target = thisBtn.getAttribute('data-target'); 
+
+        setTimeout(function(){
+            KyoboBookPub.ink.dialogOnOff().popOpen(target);
+            console.log('3초 후 이벤트 발생');   
+        }, 3000);
+    }
 </script>
 
 

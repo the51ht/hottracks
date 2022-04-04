@@ -6,7 +6,7 @@ function corLiveBanner(){
     var $target = $('.cor_live_banner .swiper-container');
     $target.each(function (index, element) {
         var $parent = $(this).parent('.cor_live_banner');
-        $parent.addClass('hero_idx_' + index);
+        $parent.addClass('live_idx_' + index);
 
         var slideOption = {
             slidesPerView: 'auto',
@@ -19,14 +19,15 @@ function corLiveBanner(){
             fadeEffect: {
                 crossFade: true
             }, 
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-                //pauseOnMouseEnter: true,
-            },
+            autoHeight: true,
+            //autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false,
+            //     //pauseOnMouseEnter: true,
+            // },
             navigation: {
-                nextEl: ('.hero_idx_' + index + ' .swiper-button-next'),
-                prevEl: ('.hero_idx_' + index + ' .swiper-button-prev'),
+                nextEl: ('.live_idx_' + index + ' .swiper-button-next'),
+                prevEl: ('.live_idx_' + index + ' .swiper-button-prev'),
             },
             pagination: {
                 el: ('.hero_idx_' + index + ' .swiper-pagination'),
@@ -51,8 +52,9 @@ function corLiveBanner(){
 $(function(){
     if(!$('.cor_live_banner').length) return;
     corLiveBanner();
-    $('.cor_live_banner').find('.s1, .s2').lettering('lines');
+    $('.cor_live_banner').find('.title, .sub_title').lettering('lines');
 });
+
 /* 라이브 다시보기 */
 function livReplaySwiper(){
     var $target = $('.liv_replay_cont');
