@@ -96,7 +96,12 @@
 			<div class="ht_cont">
 				<div class="contents_inner">
 					<div class="ht_cont">
-                        <button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#popLiv02"><span class="text">캘린더 : 오늘방송 없음 / #popLiv02</span></button>
+						<h2 class="ht_tit05">Dialog 팝업내 스크롤 및 달력 Swiper 시간차로 인해 onclick 방식으로 진행</h2>
+						<!-- 팝업 -->
+						<div class="ht_cont">
+							<button type="button" class="btn_sm btn_black" onclick="popLiv02();"><span class="text">캘린더 : 오늘방송 없음 / #popLiv02</span></button>
+						</div>
+						<!-- //팝업 -->
 					</div>
 				</div>
 			</div>
@@ -445,20 +450,20 @@
 
 
 <script>
-$(function(){
-	$('#popLiv02').dialog({
-		autoOpen: true
-	});
-});
+function popLiv02(){
+	$('#popLiv02').dialog('open');
+
+	$('.calendar_tab .today em').text('오늘');
+	var idx = $('.calendar_tab .today').index();
+	setTimeout(function(){
+		calendarTabSwiperCont.slideTo(idx - 3, 0, false);
+	}, 50);
+}
 </script>
 
 <script>
 $(function(){
-	$('.calendar_tab .today em').text('오늘');
-    var idx = $('.calendar_tab .today').index();
-	setTimeout(function(){
-		calendarTabSwiperCont.slideTo(idx - 3, 0, false);
-	}, 50);
+	popLiv02();
 });
 </script>
 </body>

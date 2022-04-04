@@ -394,9 +394,18 @@ $(function(){
             $('html, body').stop().animate({scrollTop:$(s).offset().top - 80 }, 500 );
         });
     };
-
+    $.fn.anchorChk2 = function(){
+        $.each(this, function(i,v){
+            var s = $(v).attr('href');
+            $('html, body').stop().animate({scrollTop:$(s).offset().top - 140 }, 500 );
+        });
+    };
     $('.btn_anchor_chk').click(function(){    
         $(this).anchorChk();
+        return false;
+    });
+    $('.btn_anchor_chk2').click(function(){    
+        $(this).anchorChk2();
         return false;
     });
 });

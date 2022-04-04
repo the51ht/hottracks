@@ -96,9 +96,10 @@
 			<!-- ht_cont -->
 			<div class="ht_cont">
 				<div class="contents_inner">
+					<h2 class="ht_tit05">Dialog 팝업내 스크롤 및 달력 Swiper 시간차로 인해 onclick 방식으로 진행</h2>
 					<!-- 팝업 -->
 					<div class="ht_cont">
-						<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#popLiv01"><span class="text">캘린더 : 방송중, 방송예정 / #popLiv01</span></button>
+						<button type="button" class="btn_sm btn_primary" onclick="popLiv01();"><span class="text">캘린더 : 방송중, 방송예정 / #popLiv01</span></button>
 					</div>
 					<!-- //팝업 -->
 				</div>
@@ -441,21 +442,22 @@
 </div>
 <!-- //popLiv01 -->	
 
+
 <script>
-$(function(){
-	$('#popLiv01').dialog({
-		autoOpen: true
-	});
-});
+function popLiv01(){
+	$('#popLiv01').dialog('open');
+
+	$('.calendar_tab .today em').text('오늘');
+	var idx = $('.calendar_tab .today').index();
+	setTimeout(function(){
+		calendarTabSwiperCont.slideTo(idx - 3, 0, false);
+	}, 50);
+}
 </script>
 
 <script>
 $(function(){
-	$('.calendar_tab .today em').text('오늘');
-	var idx = $('.calendar_tab .today').index();
-    setTimeout(function(){
-        calendarTabSwiperCont.slideTo(idx - 3, 0, false);
-    }, 50);
+	popLiv01();
 });
 </script>
 </body>
