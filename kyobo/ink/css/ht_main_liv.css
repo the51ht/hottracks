@@ -297,7 +297,7 @@
   content: "";
 }
 
-.liv_list .li .wel_live_time {
+.liv_list .wel_live_time {
   position: absolute;
   left: 50%;
   top: 200px;
@@ -308,33 +308,33 @@
   z-index: 2;
 }
 
-.liv_list .li .wel_live_time span {
+.liv_list .wel_live_time span {
   font-size: 26px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 38px;
 }
 
-.liv_list .li .wel_live_time em {
+.liv_list .wel_live_time em {
   font-family: 'Gmarket Sans';
 }
 
-.liv_list .li .wel_live_time p {
+.liv_list .wel_live_time p {
   margin-top: 7px;
   font-size: 58px;
   font-weight: 700;
   line-height: 54px;
 }
 
-.liv_list .li .txt {
+.liv_list .txt {
   margin-top: 15px;
 }
 
-.liv_list .li .txt .s1 {
+.liv_list .txt .s1 {
   position: relative;
   min-height: 50px;
 }
 
-.liv_list .li .txt .s1 span {
+.liv_list .txt .s1 span {
   display: block;
   color: #da2128;
   font-weight: 500;
@@ -342,50 +342,51 @@
   letter-spacing: -1px;
 }
 
-.liv_list .li .txt .s1 strong {
+.liv_list .txt .s1 strong {
   display: block;
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
   letter-spacing: -1px;
+  font-weight: 700;
 }
 
-.liv_list .li .txt .s1 .alarm_chk02 {
+.liv_list .txt .s1 .alarm_chk02 {
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.liv_list .li .txt .s1 + .s2 {
+.liv_list .txt .s1 + .s2 {
   margin-top: 8px;
 }
 
-.liv_list .li .txt .s2 {
+.liv_list .txt .s2 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -1px;
 }
 
-.liv_list .li .txt .s2 p:first-of-type {
+.liv_list .txt .s2 p:first-of-type {
   min-height: 48px;
 }
 
-.liv_list .li .txt .s2 a {
+.liv_list .txt .s2 a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 9px;
   color: #595959;
   font-size: 13px;
   line-height: 19px;
   font-weight: 500;
 }
 
-.liv_list .li .txt .s2 a span {
+.liv_list .txt .s2 a span {
   display: inline-block;
   position: relative;
   padding-right: 9px;
 }
 
-.liv_list .li .txt .s2 a span:after {
+.liv_list .txt .s2 a span:after {
   position: absolute;
   right: 0;
   top: 50%;
@@ -399,6 +400,51 @@
           transform: rotate(45deg);
   content: "";
   overflow: hidden;
+}
+
+.liv_list.row_dir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.liv_list.row_dir .li {
+  width: 582px;
+}
+
+.liv_list.row_dir .li .img {
+  width: 250px;
+  float: left;
+}
+
+.liv_list.row_dir .wel_live_time {
+  top: 100px;
+}
+
+.liv_list.row_dir .wel_live_time p {
+  font-size: 60px;
+  margin-top: 9px;
+}
+
+.liv_list.row_dir .btm_thumb {
+  padding: 10px;
+}
+
+.liv_list.row_dir .btm_thumb span {
+  letter-spacing: -0.014px;
+}
+
+.liv_list.row_dir .txt {
+  position: absolute;
+  width: calc(100% - 273px);
+  margin-top: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .btm_thumb {
