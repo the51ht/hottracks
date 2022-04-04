@@ -59,23 +59,6 @@
 
 <link rel="stylesheet" href="../../css/ht_main_liv.css">
 <script src="../../js/ht_main_liv.js"></script>
-<script>
-$(function(){
-	$('#popLiv01').dialog({
-		autoOpen: true
-	});
-});
-</script>
-
-<script>
-    $(function(){
-        $('.calendar_tab .today em').text('오늘');
-        var idx = $('.calendar_tab .today').index();
-        calendarTabSwiperCont.slideTo(idx - 3, 0, false);
-    });
-</script>
-
-
 </head>
 
 <body>
@@ -85,6 +68,7 @@ $(function(){
 	<a href="#containerWrapper">본문 바로가기</a>
 </div>
 <!-- //skip_nav_wrap -->
+
 <!-- wrapper -->
 <div class="wrapper">
 	<!-- Header -->
@@ -112,9 +96,11 @@ $(function(){
 			<!-- ht_cont -->
 			<div class="ht_cont">
 				<div class="contents_inner">
+					<!-- 팝업 -->
 					<div class="ht_cont">
-                        <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popImg01"><span class="text">캘린더 : 방송중, 방송예정 / #popLiv01</span></button>
+						<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#popLiv01"><span class="text">캘린더 : 방송중, 방송예정 / #popLiv01</span></button>
 					</div>
+					<!-- //팝업 -->
 				</div>
 			</div>
 			<!-- //ht_cont -->
@@ -125,7 +111,6 @@ $(function(){
 	<!-- //Contents -->
 </div>
 <!-- // wrapper -->
-
 
 
 <!-- popLiv01 -->
@@ -293,7 +278,7 @@ $(function(){
 			</div>
 			//ht_msg_box -->
 
-            <div class="custom_scroll_wrap_test sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
+            <div class="custom_scroll_wrap sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
                 <!-- liv_timeline -->
                 <ul class="liv_timeline">
                     <!-- .li 반복 -->
@@ -456,5 +441,22 @@ $(function(){
 </div>
 <!-- //popLiv01 -->	
 
+<script>
+$(function(){
+	$('#popLiv01').dialog({
+		autoOpen: true
+	});
+});
+</script>
+
+<script>
+$(function(){
+	$('.calendar_tab .today em').text('오늘');
+	var idx = $('.calendar_tab .today').index();
+    setTimeout(function(){
+        calendarTabSwiperCont.slideTo(idx - 3, 0, false);
+    }, 50);
+});
+</script>
 </body>
 </html>
