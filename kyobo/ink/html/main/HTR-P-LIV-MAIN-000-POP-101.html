@@ -56,26 +56,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<link rel="stylesheet" href="../../css/ht_main_liv.css">
-<script src="../../js/ht_main_liv.js"></script>
-<script>
-$(function(){
-	$('#popLiv02').dialog({
-		autoOpen: true
-	});
-});
-</script>
-
-<script>
-    $(function(){
-        $('.calendar_tab .today em').text('오늘');
-        var idx = $('.calendar_tab .today').index();
-        calendarTabSwiperCont.slideTo(idx - 3, 0, false);
-    });
-</script>
-
-
 </head>
 
 <body>
@@ -113,7 +93,12 @@ $(function(){
 			<div class="ht_cont">
 				<div class="contents_inner">
 					<div class="ht_cont">
-                        <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popImg02"><span class="text">캘린더 : 오늘방송 없음 / #popLiv02</span></button>
+						<h2 class="ht_tit05">Dialog 팝업내 스크롤 및 달력 Swiper 시간차로 인해 onclick 방식으로 진행</h2>
+						<!-- 팝업 -->
+						<div class="ht_cont">
+							<button type="button" class="btn_sm btn_black" onclick="popLiv02();"><span class="text">캘린더 : 오늘방송 없음 / #popLiv02</span></button>
+						</div>
+						<!-- //팝업 -->
 					</div>
 				</div>
 			</div>
@@ -127,8 +112,7 @@ $(function(){
 <!-- // wrapper -->
 
 
-
-<!-- popLiv01 -->
+<!-- popLiv02 -->
 <div id="popLiv02" class="dialog_wrap" data-class="dialog_full">
 	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
 
@@ -205,7 +189,7 @@ $(function(){
 							<button class="li" disabled><!-- 방송없음 : disabled -->
 								<em>화</em>
 								<span>8</span>
-							</a>
+							</button>
 						</li>
 						<li class="swiper-slide today"><!-- 오늘 class="today" / 선택 class="on" -->
 							<button class="li">
@@ -247,7 +231,7 @@ $(function(){
 							<button class="li">
 								<em>화</em>
 								<span>15</span>
-							</a>
+							</button>
 						</li>
 						<li class="swiper-slide">
 							<button class="li">
@@ -286,7 +270,7 @@ $(function(){
 			</div>
 			<!-- //calendar_tab_wrap -->
 
-            <div class="custom_scroll_wrap_test sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
+            <div class="custom_scroll_wrap sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
                 <!-- ht_msg_box -->
                 <div class="ht_msg_box">
                     <p class="ico"><img src="../../images/main/ico_liv_txt.svg" alt=""></p>
@@ -380,8 +364,8 @@ $(function(){
                                 <li class="s1">
                                     <p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
                                     <div class="alarm_chk02">
-                                        <input type="checkbox" id="chk_time02">
-                                        <label for="chk_time02"><span class="hidden">알림 받기</span></label>
+                                        <input type="checkbox">
+                                        <label><span class="hidden">알림 받기</span></label>
                                     </div>
                                 </li>
                                 <li class="s2">
@@ -425,8 +409,8 @@ $(function(){
                                 <li class="s1">
                                     <p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
                                     <div class="alarm_chk02">
-                                        <input type="checkbox" id="chk_time02">
-                                        <label for="chk_time02"><span class="hidden">알림 받기</span></label>
+                                        <input type="checkbox">
+                                        <label><span class="hidden">알림 받기</span></label>
                                     </div>
                                 </li>
                                 <li class="s2">
@@ -459,7 +443,25 @@ $(function(){
 	</div>
 	<!-- //dialog_contents -->
 </div>
-<!-- //popLiv01 -->	
+<!-- //popLiv02 -->	
 
+
+<script>
+function popLiv02(){
+	$('#popLiv02').dialog('open');
+
+	$('.calendar_tab .today em').text('오늘');
+	var idx = $('.calendar_tab .today').index();
+	setTimeout(function(){
+		calendarTabSwiperCont.slideTo(idx - 3, 0, false);
+	}, 50);
+}
+</script>
+
+<script>
+$(function(){
+	popLiv02();
+});
+</script>
 </body>
 </html>

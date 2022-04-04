@@ -773,8 +773,6 @@ KyoboBookPub.ink = (function () {
 
 		if( $(selector).length > 0 ) {
 			var dialogClass, containerId, dialogId, containerClasses;
-			//2022-04-04 개발 요청으로 추가(다른 이벤트 후 팝업 열리게 컨트롤)
-			var prevEvent;
 
 			$(selector).each(function() {
 				if ( $(this).parents('.ui-dialog').length > 0 ) return false;
@@ -917,15 +915,12 @@ KyoboBookPub.ink = (function () {
 
 				if ($(btnOpen).length > 0) {
 					$(btnOpen).each(function (index) {
-						prevEvent = $(this).data('prev'); 
-						if(prevEvent == undefined) {
-							$(this).off('click').on('click', function (event) {
-								var openTgId = $(this).data('target');
-	
-								event.preventDefault();
-								dialogOnOff().popOpen(openTgId);
-							});
-						}
+						$(this).off('click').on('click', function (event) {
+							var openTgId = $(this).data('target');
+
+							event.preventDefault();
+							dialogOnOff().popOpen(openTgId);
+						});
 					});
 				}
 

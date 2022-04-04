@@ -56,26 +56,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<link rel="stylesheet" href="../../css/ht_main_liv.css">
-<script src="../../js/ht_main_liv.js"></script>
-<script>
-$(function(){
-	$('#popLiv01').dialog({
-		autoOpen: true
-	});
-});
-</script>
-
-<script>
-    $(function(){
-        $('.calendar_tab .today em').text('오늘');
-        var idx = $('.calendar_tab .today').index();
-        calendarTabSwiperCont.slideTo(idx - 3, 0, false);
-    });
-</script>
-
-
 </head>
 
 <body>
@@ -85,6 +65,7 @@ $(function(){
 	<a href="#containerWrapper">본문 바로가기</a>
 </div>
 <!-- //skip_nav_wrap -->
+
 <!-- wrapper -->
 <div class="wrapper">
 	<!-- Header -->
@@ -112,9 +93,12 @@ $(function(){
 			<!-- ht_cont -->
 			<div class="ht_cont">
 				<div class="contents_inner">
+					<h2 class="ht_tit05">Dialog 팝업내 스크롤 및 달력 Swiper 시간차로 인해 onclick 방식으로 진행</h2>
+					<!-- 팝업 -->
 					<div class="ht_cont">
-                        <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popImg01"><span class="text">캘린더 : 방송중, 방송예정 / #popLiv01</span></button>
+						<button type="button" class="btn_sm btn_primary" onclick="popLiv01();"><span class="text">캘린더 : 방송중, 방송예정 / #popLiv01</span></button>
 					</div>
+					<!-- //팝업 -->
 				</div>
 			</div>
 			<!-- //ht_cont -->
@@ -125,7 +109,6 @@ $(function(){
 	<!-- //Contents -->
 </div>
 <!-- // wrapper -->
-
 
 
 <!-- popLiv01 -->
@@ -205,7 +188,7 @@ $(function(){
 							<button class="li" disabled><!-- 방송없음 : disabled -->
 								<em>화</em>
 								<span>8</span>
-							</a>
+							</button>
 						</li>
 						<li class="swiper-slide today on"><!-- 오늘 class="today" / 선택 class="on" -->
 							<button class="li">
@@ -247,7 +230,7 @@ $(function(){
 							<button class="li">
 								<em>화</em>
 								<span>15</span>
-							</a>
+							</button>
 						</li>
 						<li class="swiper-slide">
 							<button class="li">
@@ -293,7 +276,7 @@ $(function(){
 			</div>
 			//ht_msg_box -->
 
-            <div class="custom_scroll_wrap_test sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
+            <div class="custom_scroll_wrap sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
                 <!-- liv_timeline -->
                 <ul class="liv_timeline">
                     <!-- .li 반복 -->
@@ -327,8 +310,8 @@ $(function(){
                                 <li class="s1">
                                     <p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
                                     <div class="alarm_chk02">
-                                        <input type="checkbox" id="chk_time01">
-                                        <label for="chk_time01"><span class="hidden">알림 받기</span></label>
+                                        <input type="checkbox">
+                                        <label><span class="hidden">알림 받기</span></label>
                                     </div>
                                 </li>
                                 <li class="s2">
@@ -375,8 +358,8 @@ $(function(){
                                 <li class="s1">
                                     <p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
                                     <div class="alarm_chk02">
-                                        <input type="checkbox" id="chk_time02">
-                                        <label for="chk_time02"><span class="hidden">알림 받기</span></label>
+                                        <input type="checkbox">
+                                        <label><span class="hidden">알림 받기</span></label>
                                     </div>
                                 </li>
                                 <li class="s2">
@@ -420,8 +403,8 @@ $(function(){
                                 <li class="s1">
                                     <p>아르페지오 밍크담요 컬렉션 온라인 최저가 LIVE!</p>
                                     <div class="alarm_chk02">
-                                        <input type="checkbox" id="chk_time02">
-                                        <label for="chk_time02"><span class="hidden">알림 받기</span></label>
+                                        <input type="checkbox">
+                                        <label><span class="hidden">알림 받기</span></label>
                                     </div>
                                 </li>
                                 <li class="s2">
@@ -456,5 +439,23 @@ $(function(){
 </div>
 <!-- //popLiv01 -->	
 
+
+<script>
+function popLiv01(){
+	$('#popLiv01').dialog('open');
+
+	$('.calendar_tab .today em').text('오늘');
+	var idx = $('.calendar_tab .today').index();
+	setTimeout(function(){
+		calendarTabSwiperCont.slideTo(idx - 3, 0, false);
+	}, 50);
+}
+</script>
+
+<script>
+$(function(){
+	popLiv01();
+});
+</script>
 </body>
 </html>
