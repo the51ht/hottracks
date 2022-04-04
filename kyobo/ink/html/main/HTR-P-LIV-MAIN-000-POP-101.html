@@ -59,23 +59,6 @@
 
 <link rel="stylesheet" href="../../css/ht_main_liv.css">
 <script src="../../js/ht_main_liv.js"></script>
-<script>
-$(function(){
-	$('#popLiv02').dialog({
-		autoOpen: true
-	});
-});
-</script>
-
-<script>
-    $(function(){
-        $('.calendar_tab .today em').text('오늘');
-        var idx = $('.calendar_tab .today').index();
-        calendarTabSwiperCont.slideTo(idx - 3, 0, false);
-    });
-</script>
-
-
 </head>
 
 <body>
@@ -113,7 +96,7 @@ $(function(){
 			<div class="ht_cont">
 				<div class="contents_inner">
 					<div class="ht_cont">
-                        <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popImg02"><span class="text">캘린더 : 오늘방송 없음 / #popLiv02</span></button>
+                        <button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#popLiv02"><span class="text">캘린더 : 오늘방송 없음 / #popLiv02</span></button>
 					</div>
 				</div>
 			</div>
@@ -127,8 +110,7 @@ $(function(){
 <!-- // wrapper -->
 
 
-
-<!-- popLiv01 -->
+<!-- popLiv02 -->
 <div id="popLiv02" class="dialog_wrap" data-class="dialog_full">
 	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
 
@@ -286,7 +268,7 @@ $(function(){
 			</div>
 			<!-- //calendar_tab_wrap -->
 
-            <div class="custom_scroll_wrap_test sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
+            <div class="custom_scroll_wrap sc_pop_btn"><!--custom_scroll_wrap 임시 방편-->
                 <!-- ht_msg_box -->
                 <div class="ht_msg_box">
                     <p class="ico"><img src="../../images/main/ico_liv_txt.svg" alt=""></p>
@@ -459,7 +441,25 @@ $(function(){
 	</div>
 	<!-- //dialog_contents -->
 </div>
-<!-- //popLiv01 -->	
+<!-- //popLiv02 -->	
 
+
+<script>
+$(function(){
+	$('#popLiv02').dialog({
+		autoOpen: true
+	});
+});
+</script>
+
+<script>
+$(function(){
+	$('.calendar_tab .today em').text('오늘');
+    var idx = $('.calendar_tab .today').index();
+	setTimeout(function(){
+		calendarTabSwiperCont.slideTo(idx - 3, 0, false);
+	}, 50);
+});
+</script>
 </body>
 </html>
