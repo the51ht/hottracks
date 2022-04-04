@@ -142,9 +142,11 @@
 
                      <!-- 3초 뒤 실행 -->
 					<div class="ht_cont">
-						<h2 class="ht_tit05">3초 뒤 실행</h2>
+						<h2 class="ht_tit05">3초 뒤 실행 / function 호출 방식!!</h2>
 
                         <button type="button" class="btn_sm btn_light_gray" data-role="btn-dialog" data-target="#popAlert01" data-prev onclick="delayBtn(this);"><span class="text">3초 뒤 실행 / #popAlert01</span></button>
+
+                        <button type="button" class="btn_sm btn_primary" onclick="popA01();"><span class="text">onclick function 호출방식 : https://api.jqueryui.com/dialog/</span></button>
 					</div>
 					<!-- // 3초 뒤 실행 -->
                     <br><br><br><br>
@@ -161,6 +163,12 @@
 
 
 <script>
+function popA01(){
+    $('#popAlert01').dialog('open');
+
+    // 옵션:   https://api.jqueryui.com/dialog/
+}
+
 /* 마케팅 수신 동의 */
 function toastBtn1(){
     KyoboBookPub.ink.setToastMessage('마케팅 수신에 동의하셨습니다. <br>야간수신에 동의하셨습니다. <br>수신동의 일시  2021년 12월 13일', 3000);
