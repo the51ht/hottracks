@@ -151,7 +151,7 @@ $(function(){
 });
 
 
-/* 코너메뉴 Tab Slide */
+/* 코너메뉴 이럴 땐, 이런 상품 */
 function prodView(){
     var prodViewThumb = new Swiper('.cur_tab_contents_warp', {
         //direction: 'vertical',
