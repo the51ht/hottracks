@@ -1057,9 +1057,44 @@
 /*================================  //카테고리 메인 ===================================*/
 /*==================================  브랜드 메인 =====================================*/
 .brand_card {
+  position: relative;
   padding: 30px 20px;
-  background-color: #2B2E3D;
+  /*background-color: #2B2E3D;*/
+  background: -webkit-gradient(linear, left top, right bottom, from(#f3b79b), to(#f41860));
+  background: linear-gradient(to bottom right, #f3b79b 0%, #f41860 100%);
   color: #fff;
+}
+
+.brand_card:before {
+  position: absolute;
+  right: -50px;
+  bottom: -60px;
+  width: 198px;
+  height: 198px;
+  background: url("../images/main/img_brad_bg_txt.svg") center/100% no-repeat;
+  content: "";
+  -webkit-animation: rotate_image 30s linear infinite;
+          animation: rotate_image 30s linear infinite;
+}
+
+@-webkit-keyframes rotate_image {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate_image {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.brand_card:after {
+  clear: both;
+  display: block;
+  content: "";
 }
 
 .brand_card .tit_card_head {
@@ -1099,10 +1134,11 @@
 .brand_card .tit_card_head .logo {
   line-height: 36px;
   font-family: 'Gmarket Sans';
-  text-shadow: 3px 2px 0px #000;
+  /*text-shadow: 3px 2px 0px #000;*/
   font-weight: 900;
   font-size: 36px;
-  color: #FFEB01;
+  color: #fff;
+  text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black, 5px 4px 1px #000;
 }
 
 .brand_card .tit_card_head .brand_thumbnail ~ .brand,
