@@ -35,7 +35,8 @@ $(function(){
 
 
 
-/* 찜한 브랜드 */
+
+/* 이럴 땐? 이런상품 */
 function curProdSwiper(){
     var $target = $('.cur_prod_img');
     $target.each(function (index, element) {
@@ -47,14 +48,10 @@ function curProdSwiper(){
             freeMode: true,
             observer: true,
             observeParents: true,
-            //speed:1000,
-            pagination: {
-                el: $($parent).find('.swiper-pagination'),
-                type: "progressbar",
-            },
+            speed:300,
         };
 
-        if($parent.find('.swiper-slide').length > 4) {
+        if($parent.find('.swiper-slide').length > 1) {
             curProdSwiperCont = new Swiper(this, slideOption);
         }
 	});
@@ -251,13 +248,13 @@ function curTabCont(){
     });
 }
 
-// $(function(){
-//     if(!$('.tab_view_img_cont').length) return;
-//     if($('.cur_prod_contents_warp').find('.swiper-slide').length > 1) {
-//         $('.tab_view_img_cont').addClass('swiper-on');
-//         curTabCont();
-//     }
-//     $(window).resize(function() {
-//         curTabCont();
-//     });
-// });
+$(function(){
+    if(!$('.tab_view_img_cont').length) return;
+    if($('.cur_prod_contents_warp').find('.swiper-slide').length > 1) {
+        $('.tab_view_img_cont').addClass('swiper-on');
+        curTabCont();
+    }
+    $(window).resize(function() {
+        curTabCont();
+    });
+});

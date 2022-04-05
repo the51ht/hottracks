@@ -121,6 +121,15 @@
 
 
 					<div class="tab_num_swiper_cont">
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<div class="tab_swiper_cont">
+							<div class="swiper-container tab_swiper tab_ty tab_link">
+								<div class="swiper-pagination swiper-wrapper">
+								</div>
+							</div>
+						</div>
+						
 						<div class="tab_num_swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide cur_prod_content">
@@ -2766,14 +2775,7 @@
 							</div>
 						</div>
 
-						<div class="swiper-button-prev"></div>
-						<div class="swiper-button-next"></div>
-						<div class="tab_swiper_cont">
-							<div class="swiper-container tab_swiper tab_ty tab_link">
-								<div class="swiper-pagination swiper-wrapper">
-								</div>
-							</div>
-						</div>
+						
 					</div>
 					
 
@@ -2855,51 +2857,49 @@
 <!-- // wrapper -->
 
 <script>
-	/* 코너메뉴 What’s in your bag 컨텐츠 개수만큼 번호 탭 생성 */
-var swiper = new Swiper(".tab_num_swiper", {
-    slidesPerView: 1,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-		$(".tab_num_swiper_cont .tab_swiper_cont").append("<div class='swiper_control'> <div class='swiper-button-prev'></div> <div class='swiper-button-next'></div> </div>");
-      return '<span class="swiper-slide ' + className + '">' + (index + 1) + "</span>";
-    },
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+	/* 코너메뉴 What’s in your bag 컨텐츠 스와이프, 컨텐츠 개수만큼 번호 탭 생성 */
+	var swiper = new Swiper(".tab_num_swiper", {
+		slidesPerView: 1,
+		loop: true,
+		pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+		renderBullet: function (index, className) {
+			$(".tab_num_swiper_cont .tab_swiper_cont").append("<div class='swiper_control'> <div class='swiper-button-prev'></div> <div class='swiper-button-next'></div> </div>");
+		return '<span class="swiper-slide ' + className + '">' + (index + 1) + "</span>";
+		},
+		},
+		navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+		},
+	});
 	
-  });
-  
+	/* 코너메뉴 What’s in your bag 번호 탭 swiper button */
+	function numTabSwiper(){
+		var $target = $('.tab_swiper_cont .swiper-container');
+		var $parent = $('.tab_swiper_cont');
+		var slideOption = {
+			slidesPerView: 'auto',
+			loop: false,
+			speed: 700,
+			navigation: {
+				nextEl: '.tab_swiper_cont .swiper-button-next',
+				prevEl: '.tab_swiper_cont .swiper-button-prev',
+			},
+		};
 
-/* 코너메뉴 What’s in your bag 번호 탭 swiper button */
-function numTabSwiper(){
-    var $target = $('.tab_swiper_cont .swiper-container');
-    var $parent = $('.tab_swiper_cont');
-    var slideOption = {
-        slidesPerView: 'auto',
-        loop: false,
-        speed: 700,
-        navigation: {
-            nextEl: '.tab_swiper_cont .swiper-button-next',
-            prevEl: '.tab_swiper_cont .swiper-button-prev',
-        },
-    };
-
-    // 탭 16개부터 실행
-    if($parent.find('.swiper-slide').length > 15) {
-        numTabSwiperSwiper = new Swiper($target.get(), slideOption);
-        $parent.addClass('swiper-on');
-        $(".tab_swiper_cont .swiper-pagination").css({"justify-content" : "initial"});
-    }
-}
-$(function(){
-    if(!$('.tab_swiper_cont').length) return;
-    numTabSwiper();
-});
+		// 탭 16개부터 실행
+		if($parent.find('.swiper-slide').length > 15) {
+			numTabSwiperSwiper = new Swiper($target.get(), slideOption);
+			$parent.addClass('swiper-on');
+			$(".tab_swiper_cont .swiper-pagination").css({"justify-content" : "initial"});
+		}
+	}
+	$(function(){
+		if(!$('.tab_swiper_cont').length) return;
+		numTabSwiper();
+	});
 </script>
 </body>
 </html>
