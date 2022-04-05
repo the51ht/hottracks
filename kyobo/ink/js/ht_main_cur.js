@@ -212,13 +212,13 @@ function curTabCont(){
     });
 }
 
-$(function(){
-    if(!$('.tab_view_img_cont').length) return;
-    if($('.cur_prod_contents_warp').find('.swiper-slide').length > 1) {
-        $('.tab_view_img_cont').addClass('swiper-on');
-        curTabCont();
-    }
-    $(window).resize(function() {
-        curTabCont();
-    });
-});
+// $(function(){
+//     if(!$('.tab_view_img_cont').length) return;
+//     if($('.cur_prod_contents_warp').find('.swiper-slide').length > 1) {
+//         $('.tab_view_img_cont').addClass('swiper-on');
+//         curTabCont();
+//     }
+//     $(window).resize(function() {
+//         curTabCont();
+//     });
+// });

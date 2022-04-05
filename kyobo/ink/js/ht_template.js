@@ -335,6 +335,7 @@ $(function(){
             $(v).closest('.tab_link').find('a').removeClass('on');
             $(v).addClass('on');
             var s = $(v).attr('href');
+            console.log(s)
             $(s).parent().find('.tab_cont').removeClass('on');
             $(s).addClass('on');
         });
