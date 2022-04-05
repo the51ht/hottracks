@@ -47,7 +47,7 @@ function curProdSwiper(){
             freeMode: true,
             observer: true,
             observeParents: true,
-            speed:300,
+            //speed:1000,
             pagination: {
                 el: $($parent).find('.swiper-pagination'),
                 type: "progressbar",
@@ -94,7 +94,7 @@ function curProdViewSwiper(){
 
             if(tabList.length > 10){
                 curProdViewSwiperCont = new Swiper(this, slideOption);
-                $parent.addClass('swiper-on');
+                $($parent).addClass('swiper-on');
                 $($parent).find('.swiper-wrapper').addClass('start');
               
             }           

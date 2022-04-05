@@ -153,7 +153,7 @@
 .cur_prod_list_wrap {
     position:relative;
     .swiper_control {
-        margin-top:0;position: absolute; top:7px; left:50%;transform: translateX(-50%);
+        margin-top:0;position: absolute; top:7px; left:0; z-index:2;
         .swiper-button-prev,
         .swiper-button-next {
             width:50px;height:50px;
@@ -164,45 +164,65 @@
                 background: #000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;
             }
         }
-        .swiper-button-prev {
-            left:-575px;
-        }
+        // .swiper-button-prev {
+        //     left:-575px;
+        // }
         .swiper-button-next {
-           left:575px;
+           left:1095px;
         }
         .swiper-button-disabled {
-            display:none;
+            visibility:hidden;
         }
     }    
 }
 /* cur_prod_view_list */
 .cur_prod_view_list { 
-    position:relative; margin:0 auto;padding:0 0 83px 0; z-index:2;overflow:hidden;width:730px;
+    position:relative; margin:0 auto;padding:0 0 89px 0; z-index:2;overflow:visible;width:730px;
+    &:before {
+        content:"";
+        position:absolute;
+        width:235px;
+        height:64px;
+        background:#fff;
+        left:-235px;
+        top:0;
+        z-index:3;
+    }
+    &:after {
+        content:"";
+        position:absolute;
+        width:235px;
+        height:64px;
+        background:#fff;
+        right:-235px;
+        top:0;
+        z-index: 3;
+    }
 
     .swiper-wrapper {
         justify-content: center;
         &.start {
             justify-content: flex-start;
-            .swiper-slide  {
-                @for $curTab from 1 through 5 {
-                    &:nth-child(#{$curTab}){
-                        .txt {
-                            left:0; transform: translateX(0);
-                        }
-                        .txt span:after {
-                            left:32px;
-                        }
-                    }
-                } 
-            }
-            .swiper-slide:nth-last-child(-n + 5 ) {
-                .txt {
-                    left:inherit; right:0; transform: translateX(0);
-                }
-                .txt span:after {
-                    left:inherit; right:32px;  transform: translateX(50%);
-                }
-            } 
+            // .swiper-slide  {
+            //     @for $curTab from 1 through 5 {
+            //         &:nth-child(#{$curTab}){
+            //             .txt {
+            //                 left:0; transform: translateX(0);
+            //             }
+            //             .txt span:after {
+            //                 left:32px;
+            //             }
+            //         }
+            //     } 
+            // }
+            // .swiper-slide:nth-last-child(-n + 5 ) {
+            //     .txt {
+            //         left:inherit; right:0; transform: translateX(0);
+            //     }
+            //     .txt span:after {
+            //         left:inherit; right:32px;  transform: translateX(50%);
+            //     }
+            // } 
 
 
         }
@@ -213,7 +233,7 @@
             margin-right:0;
         }
         .img {
-            position:relative;height:0;margin-bottom:15px;padding-top:100%;background:#f7f7f7;border-radius:4px;overflow:hidden;
+            position:relative;height:0;margin-bottom:17px;padding-top:100%;background:#f7f7f7;border-radius:4px;overflow:hidden;
             img {
                 position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);opacity:0.5;transition:opacity 0.4s;
             }
@@ -222,7 +242,7 @@
             }
         }
         .txt {
-            display:none;position:absolute;left:50%;top:75px;transform: translateX(-50%);width:auto;max-width:none;white-space:nowrap;
+            display:none;position:absolute;left:50%;top:81px;transform: translateX(-50%);width:auto;max-width:none;white-space:nowrap;
             span {
                 display:inline-block;padding:12px 32px;
                 background:#000;color:#fff;font-size:20px;font-weight:700;line-height:28px;border-radius:39px;letter-spacing:-0.02px;
