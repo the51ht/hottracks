@@ -1776,7 +1776,7 @@ function mdl_prod_banner(){
                 }
             }
         };
-
+        console.log($parent.find('.swiper-slide').length);
         if($parent.find('.swiper-slide').length > 2) {
             var mdl_prod_b = new Swiper(this, slideOption);
         }
