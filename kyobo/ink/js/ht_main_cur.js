@@ -35,8 +35,7 @@ $(function(){
 
 
 
-
-/* 이럴 땐? 이런상품 */
+/* 찜한 브랜드 */
 function curProdSwiper(){
     var $target = $('.cur_prod_img');
     $target.each(function (index, element) {
@@ -49,9 +48,13 @@ function curProdSwiper(){
             observer: true,
             observeParents: true,
             speed:300,
+            pagination: {
+                el: $($parent).find('.swiper-pagination'),
+                type: "progressbar",
+            },
         };
 
-        if($parent.find('.swiper-slide').length > 1) {
+        if($parent.find('.swiper-slide').length > 4) {
             curProdSwiperCont = new Swiper(this, slideOption);
         }
 	});
