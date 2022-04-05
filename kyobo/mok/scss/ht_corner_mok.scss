@@ -855,9 +855,21 @@
 /*==================================  브랜드 메인 =====================================*/
 //브랜드 설명 카드
 .brand_card {
-    padding: 30px 20px;
-    background-color: #2B2E3D;
-    color:#fff;
+    position: relative;
+    padding:30px 20px;/*background-color: #2B2E3D;*/background:linear-gradient(to bottom right, #f3b79b 0%, #f41860 100%);color:#fff;
+
+    &:before {
+        position:absolute;right:-50px;bottom:-60px;width:198px;height:198px;background:url('../images/main/img_brad_bg_txt.svg') center/100% no-repeat;content:"";animation:rotate_image 30s linear infinite;
+    }
+    @keyframes rotate_image{
+        100% {
+            transform:rotate(360deg);
+        }
+    }
+    &:after{
+        clear:both;display:block;content:"";
+    }
+
     .tit_card_head {
         position: relative;
         margin-bottom:20px;
@@ -883,10 +895,11 @@
         .logo {
             line-height:36px;
             font-family: 'Gmarket Sans';
-            text-shadow: 3px 2px 0px #000;
+            /*text-shadow: 3px 2px 0px #000;*/
             font-weight:900;
             font-size:36px;
-            color:#FFEB01;
+            color:#fff;
+            text-shadow: -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black, 5px 4px 1px #000;
         }
         .brand_thumbnail ~ .brand, 
         .brand_thumbnail ~ .logo {

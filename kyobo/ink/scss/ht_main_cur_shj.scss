@@ -1,6 +1,3 @@
-.ht_bg + .ht_cont.mdl015 {
-    padding-top:40px;
-}
 
 /*** 상품과 기획전을 추천 : .cur_recommend ***/
 .cur_recommend {
@@ -33,7 +30,7 @@
     .ht_tit {
         line-height: 45px;
         img {
-            width:36px;height:auto;margin-left:-2px;
+            width:36px;height:auto;margin-left:-2px;margin-top:-5px;
         }
     }
     .ht_txt {
@@ -84,7 +81,30 @@
 .cur_brand_recommend {
     .ht_tit {
         img {
-            height:28px;margin-left:4px;
+            height:32px;margin-left:0px;margin-top:-5px;
+        }
+    }
+    .brand_info {
+        background-color: #f4f4f4;border-radius: 12px;padding:30px;box-sizing:border-box;
+        .brad_img {
+            width:56px;height:56px;border-radius: 50%;overflow: hidden;margin-bottom:15px;
+            img {
+                width:100%;
+            }
+        }
+        .brand_link {
+            font-size: 20px; font-weight: 700;line-height:29px;position:relative;
+            &:before {
+                content:'';
+                position:absolute;
+                right:-12px;
+                bottom:7px;
+                width:8px;
+                height:8px;
+                border-top:1px solid #707070;
+                border-right:1px solid #707070;
+                transform: rotate( 45deg );
+            }
         }
     }
 }
@@ -94,6 +114,7 @@
 .cur_brand_cont {
     position:relative;margin:20px 0 25px 0;padding:30px 0 40px 0;background:#fff;
     .cur_brand_tit {
+        display: flex; flex-flow: column; justify-content: center;
         position:relative;margin:30px 0 0 0;padding:31px 30px 31px 106px;box-sizing: border-box; height:118px; background-color:#F7F7F7; border-radius:12px;
         .s0 {
             position: absolute;width:56px;height:56px;left:30px; top:31px; z-index:1; border-radius: 50%; overflow: hidden;
@@ -102,7 +123,7 @@
             }
         }
         .s1 {
-            position:relative;color:#000;font-size:20px;font-weight:700;line-height:29px; letter-spacing: -0.014px;margin-bottom:5px;
+            position:relative;color:#000;font-size:20px;font-weight:700;line-height:29px; letter-spacing: -0.014px;
             a {
                 display:block;position:relative;
             }
@@ -114,7 +135,7 @@
             }
         }
         .s2 {
-            color:#767676;font-size:16px;line-height:24px;letter-spacing: -0.016px;
+            color:#767676;font-size:16px;line-height:24px;letter-spacing: -0.016px;margin-top:5px;
         }
     }
 }
@@ -124,25 +145,100 @@
     overflow:hidden;
     .ht_tit {
         img {
-            display:inline-block;height:27px;margin-left:10px;
+            display:inline-block;height:40px;margin-left:4px;margin-top:-5px;
         }
+    }
+    .cur_brand_cont {
+        margin:0;
+        padding:0;
+
     }
     
 }
-
+.cur_prod_list_wrap {
+    position:relative;
+    .swiper_control {
+        margin-top:0;position: absolute; top:7px; left:0; z-index:2;
+        .swiper-button-prev,
+        .swiper-button-next {
+            width:50px;height:50px;
+            &:after {
+                border-color:#000;
+            }
+            &:hover:after {
+                background: #000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;
+            }
+        }
+        // .swiper-button-prev {
+        //     left:-575px;
+        // }
+        .swiper-button-next {
+           left:1095px;
+        }
+        .swiper-button-disabled {
+            visibility:hidden;
+        }
+    }    
+}
 /* cur_prod_view_list */
 .cur_prod_view_list { 
-    position:relative;margin:0 -20px -20px -20px;padding:10px 20px 83px 20px;z-index:2;
+    position:relative; margin:0 auto;padding:0 0 89px 0; z-index:2;overflow:visible;width:730px;
+    &:before {
+        content:"";
+        position:absolute;
+        width:235px;
+        height:64px;
+        background:#fff;
+        left:-235px;
+        top:0;
+        z-index:3;
+    }
+    &:after {
+        content:"";
+        position:absolute;
+        width:235px;
+        height:64px;
+        background:#fff;
+        right:-235px;
+        top:0;
+        z-index: 3;
+    }
+
     .swiper-wrapper {
         justify-content: center;
+        &.start {
+            justify-content: flex-start;
+            // .swiper-slide  {
+            //     @for $curTab from 1 through 5 {
+            //         &:nth-child(#{$curTab}){
+            //             .txt {
+            //                 left:0; transform: translateX(0);
+            //             }
+            //             .txt span:after {
+            //                 left:32px;
+            //             }
+            //         }
+            //     } 
+            // }
+            // .swiper-slide:nth-last-child(-n + 5 ) {
+            //     .txt {
+            //         left:inherit; right:0; transform: translateX(0);
+            //     }
+            //     .txt span:after {
+            //         left:inherit; right:32px;  transform: translateX(50%);
+            //     }
+            // } 
+
+
+        }
     }
     .swiper-slide {
-        width:64px;height:64px;margin-right:12px;
+        width:64px;height:64px;margin-right:10px;
         &:last-child {
             margin-right:0;
         }
         .img {
-            position:relative;height:0;margin-bottom:15px;padding-top:100%;background:#f7f7f7;border-radius:4px;overflow:hidden;
+            position:relative;height:0;margin-bottom:17px;padding-top:100%;background:#f7f7f7;border-radius:4px;overflow:hidden;
             img {
                 position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);opacity:0.5;transition:opacity 0.4s;
             }
@@ -151,25 +247,16 @@
             }
         }
         .txt {
-            display:none;position:absolute;left:50%;top:75px;transform: translateX(-50%);width:auto;max-width:none;white-space:nowrap;
+            display:none;position:absolute;left:50%;top:81px;transform: translateX(-50%);width:auto;max-width:none;white-space:nowrap;
             span {
                 display:inline-block;padding:12px 32px;
                 background:#000;color:#fff;font-size:20px;font-weight:700;line-height:28px;border-radius:39px;letter-spacing:-0.02px;
                 &:after {
-                    position:absolute;left:50%;top:-8px;transform: translateX(-50%); width:0;height:0;border-bottom:16px solid #000;border-left:12px solid transparent;border-right:12px solid transparent;content:"";
+                    position:absolute;left:50%;top:-13px;transform: translateX(-50%); width:0;height:0;border-bottom:25px solid #000;border-left:16px solid transparent;border-right:16px solid transparent;content:"";
                 }                    
             }
         }
-        // &:nth-last-child(-n + 3) {
-        //     .txt {
-        //         left:inherit;right:0;text-align:right;
-        //         span {
-        //             &:after {
-        //                 left:inherit;right:27px;
-        //             }  
-        //         }     
-        //     }
-        // }
+
     }
     .on {
         .img {
@@ -204,7 +291,7 @@
         position:absolute;right:0;top:-34px;width:80px;height:80px;background:url("../images/main/ico_cur_new.svg") center/100% no-repeat;content:"";
     }
     p {
-        position:relative;right:78px;top:-7px;padding:12px 19px 10px 18px;background:#d4ff1a;border:solid #000;border-width:2px 2px 3px 2px;border-radius:30px;color:#000;font-size:16px;font-weight:500;line-height:18px;animation:curNewMsg both infinite 5s;
+        position:relative;right:78px;top:-7px;padding:12px 19px 10px 18px;background:#d4ff1a;border:solid #000;border-width:2px 2px 3px 2px;border-radius:30px;color:#000;font-size:16px;font-weight:700;line-height:18px;animation:curNewMsg both infinite 5s;
         &:before {
             position:absolute;right:-11px;top:50%;width:0;height:0;border-left:10px solid #000;border-top:7px solid transparent;border-bottom:7px solid transparent;content:"";transform:translateY(-51%);z-index:2;
         }

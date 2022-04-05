@@ -2533,20 +2533,27 @@
 
 /* liv_notice_li */
 .liv_notice_li {
-  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  max-width: 788px;
+  margin: 0 auto;
+  border-top: 1px solid #000;
 }
 
 .liv_notice_li .li {
   position: relative;
-  padding: 13px 5px;
-  border-top: 1px solid #eaeaea;
+  padding: 20px 1px 18px 1px;
+  border-bottom: 1px solid #eaeaea;
+  overflow: hidden;
 }
 
 .liv_notice_li .li a {
   display: block;
+  overflow: hidden;
 }
 
 .liv_notice_li .li p {
+  float: left;
+  max-width: 85%;
   color: #000;
   font-size: 14px;
   line-height: 22px;
@@ -2557,10 +2564,13 @@
 
 .liv_notice_li .li span {
   display: block;
+  float: right;
+  width: 15%;
   margin-top: 2px;
   color: #767676;
   font-size: 13px;
   line-height: 19px;
+  text-align: right;
 }
 
 /*** 미리 만나는 라이브 : .liv_meet ***/

@@ -70,7 +70,7 @@ $(function(){
 function curProdViewSwiper(){
     var $target = $('.cur_prod_view_list');
     $target.each(function (index, element) {
-        var $parent = $(this);
+        var $parent = $(this).parent('.cur_prod_list_wrap');
         $parent.addClass('cur_view_idx_' + index);
         var slideOption = {
             slidesPerView: 'auto',
@@ -78,12 +78,24 @@ function curProdViewSwiper(){
             freeMode: true,
             observer: true,
             observeParents: true,
-            speed:300,
+            slidesPerGroup: 10,
+            speed:900,
+            navigation: {
+                nextEl: ('.cur_view_idx_' + index + ' .swiper-button-next'),
+                prevEl: ('.cur_view_idx_' + index + ' .swiper-button-prev'),
+            },
         };
+            /* 10개 이상일때 실행 */
+            var tabList = $('.cur_view_idx_' + index + ' .swiper-slide');
 
-        if($parent.find('.swiper-slide').length > 1) {
-            curProdViewSwiperCont = new Swiper(this, slideOption);
-        }
+
+            if(tabList.length > 10){
+                curProdViewSwiperCont = new Swiper(this, slideOption);
+                $($parent).addClass('swiper-on');
+                $($parent).find('.swiper-wrapper').addClass('start');
+              
+            }           
+
 	});
 }
 
