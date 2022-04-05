@@ -167,8 +167,8 @@ $(function(){
 
 
 /* 코너메뉴 이럴 땐, 이런 상품 */
-function prodView(){
-    var prodViewThumb = new Swiper('.cur_tab_contents_warp', {
+function curTabCont(){
+    var curTabContThumb = new Swiper('.cur_tab_contents_warp', {
         //direction: 'vertical',
         observer: true,
         observeParents: true,
@@ -180,7 +180,7 @@ function prodView(){
         loopAdditionalSlides: 1
     });
     
-    var prodViewImg = new Swiper('.cur_prod_contents_warp', {
+    var curTabContImg = new Swiper('.cur_prod_contents_warp', {
         /*autoplay: {
             delay: 5000,
             disableOnInteraction: false,
@@ -196,19 +196,19 @@ function prodView(){
             crossFade: true
         },
         thumbs: {
-            swiper: prodViewThumb
+            swiper: curTabContThumb
         },
         loop: true,
         speed: 400,
         loopAdditionalSlides: 1
     });
     
-    prodViewImg.on('slideChangeTransitionStart', function() {
-        prodViewThumb.slideTo(prodViewImg.activeIndex);
+    curTabContImg.on('slideChangeTransitionStart', function() {
+        curTabContThumb.slideTo(curTabContImg.activeIndex);
     });
 
-    prodViewThumb.on('transitionStart', function(){
-        prodViewImg.slideTo(prodViewThumb.activeIndex);
+    curTabContThumb.on('transitionStart', function(){
+        curTabContImg.slideTo(curTabContThumb.activeIndex);
     });
 }
 
@@ -216,9 +216,9 @@ $(function(){
     if(!$('.tab_view_img_cont').length) return;
     if($('.cur_prod_contents_warp').find('.swiper-slide').length > 1) {
         $('.tab_view_img_cont').addClass('swiper-on');
-        prodView();
+        curTabCont();
     }
     $(window).resize(function() {
-        prodView();
+        curTabCont();
     });
 });
