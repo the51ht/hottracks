@@ -2858,12 +2858,12 @@
 	/* 코너메뉴 What’s in your bag 컨텐츠 개수만큼 번호 탭 생성 */
 var swiper = new Swiper(".tab_num_swiper", {
     slidesPerView: 1,
-    spaceBetween: 30,
     loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
       renderBullet: function (index, className) {
+		$(".tab_num_swiper_cont .tab_swiper_cont").append("<div class='swiper_control'> <div class='swiper-button-prev'></div> <div class='swiper-button-next'></div> </div>");
       return '<span class="swiper-slide ' + className + '">' + (index + 1) + "</span>";
     },
     },
@@ -2871,8 +2871,9 @@ var swiper = new Swiper(".tab_num_swiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+	
   });
-  $(".tab_swiper_cont").append("<div class='swiper_control'> <div class='swiper-button-prev'></div> <div class='swiper-button-next'></div> </div>");
+  
 
 /* 코너메뉴 What’s in your bag 번호 탭 swiper button */
 function numTabSwiper(){
