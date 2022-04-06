@@ -1,2 +1,356 @@
 @charset "UTF-8";
 /* ht_customer_old.css 에서 필요 부분 옮겨 주세요 */
+/* Search Tab : form_search_box */
+.form_search_box {
+  width: 400px;
+}
+
+.form_search_box.form_search_box_center {
+  margin: 0 auto;
+}
+
+/* Search Tab : cus_chk_list */
+.cus_chk_list {
+  position: relative;
+  margin: 15px 0 32px 0;
+}
+
+.cus_chk_list .chk_list_ty {
+  margin: -8px 0 0 -6px;
+}
+
+.cus_chk_list .chk_list_ty.ty02 li {
+  display: inline-block;
+  position: relative;
+  margin: 8px 0 0 6px;
+}
+
+.cus_chk_list .chk_list_ty.ty02 label {
+  height: 33px;
+  padding: 0 13px;
+  line-height: 35px;
+}
+
+.cus_chk_list .chk_list_ty.ty02 input:checked + label {
+  font-weight: 700;
+}
+
+.cus_chk_list.mb {
+  margin: 0 0 16px 0;
+}
+
+/**** 고객센터 Template ****/
+/** FAQ/QNA : fold_ty **/
+.cus_faq_view .mc_tit04 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.fold_ty {
+  position: relative;
+  border-top: 1px solid #000;
+}
+
+.fold_ty .li {
+  position: relative;
+  padding: 20px 5px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.fold_ty .li.on .fold_tit .txt_len, .fold_ty .li.on .fold_tit .txt_len1 {
+  display: block;
+  max-height: inherit;
+}
+
+.fold_ty .li.on .fold_btn span:after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.fold_ty .li.on .fold_view {
+  display: block;
+}
+
+.fold_ty .emp {
+  position: relative;
+  padding: 120px 5px;
+  border-bottom: 1px solid #eaeaea;
+  color: #767676;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.fold_ty .emp > p {
+  position: relative;
+  padding-top: 40px;
+}
+
+.fold_ty .emp > p:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  background: url("../images/guide/ico_not_list.svg") center/100% no-repeat;
+  content: "";
+}
+
+.fold_ty .emp.ed {
+  border-bottom: 0;
+}
+
+.fold_ty .emp .faq_search_tag {
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px dotted #d5d5d5;
+}
+
+.fold_tit {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.fold_tit .txt {
+  position: relative;
+  width: 100%;
+}
+
+.fold_tit .txt_len {
+  display: -webkit-box;
+  max-height: 44px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fold_tit .txt_len1 {
+  display: -webkit-box;
+  max-height: 22px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fold_tit .ico_marker {
+  position: relative;
+  margin-bottom: 11px;
+  font-size: 0;
+}
+
+.fold_tit .ico_marker li {
+  display: inline-block;
+  height: 21px;
+  margin-left: 10px;
+  padding: 0 8px;
+  background: #ecedf5;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #474C98;
+  font-size: 10px;
+  line-height: 21px;
+}
+
+.fold_tit .ico_marker li:first-child {
+  margin-left: 0;
+}
+
+.fold_tit .tit {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.fold_tit .tit_s {
+  color: #767676;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.fold_tit .tit_s span {
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.fold_tit .fold_info {
+  position: relative;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.fold_tit .fold_info > ul {
+  padding-top: 4px;
+  overflow: hidden;
+  float: left;
+}
+
+.fold_tit .fold_info > ul li {
+  position: relative;
+  float: left;
+  padding-left: 17px;
+  color: #767676;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.fold_tit .fold_info > ul li:before {
+  position: absolute;
+  left: 8px;
+  top: 1px;
+  width: 1px;
+  height: 11px;
+  background-color: #dcdcdc;
+  content: "";
+}
+
+.fold_tit .fold_info > ul li:first-child {
+  padding-left: 0px;
+}
+
+.fold_tit .fold_info > ul li:first-child:before {
+  display: none;
+}
+
+.fold_tit .fold_info > ul li strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fold_tit .fold_info > ul li strong.c1 {
+  color: #474c98;
+}
+
+.fold_tit .fold_info > ul li strong.c2 {
+  color: #da2128;
+}
+
+.fold_tit .fold_info .info {
+  /*position:absolute;right:0;top:0;*/
+  height: 20px;
+  padding: 0 9px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #292929;
+  font-size: 10px;
+  line-height: 21px;
+  float: left;
+  margin-right: 10px;
+}
+
+.fold_tit .img {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  margin-right: 12px;
+  background: #f7f7f7;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.fold_tit .img img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.fold_tit .img + .txt {
+  width: calc(100% - 90px);
+  margin-top: 5px;
+}
+
+.fold_tit .img + .txt .fold_info {
+  display: table-footer-group;
+  width: 100%;
+}
+
+.fold_tit .img + .txt .fold_info > ul {
+  padding-top: 8px;
+}
+
+.fold_tit .img + .txt .tit {
+  display: table-header-group;
+  width: 100%;
+}
+
+.fold_tit .img + .txt .tit_s {
+  display: table-header-group;
+  width: 100%;
+  margin: 0;
+}
+
+.fold_btn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.fold_btn button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fold_btn span {
+  display: inline-block;
+  position: relative;
+  padding-right: 24px;
+  color: #767676;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.fold_btn span:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../images/main/ico_more_view.svg") center/100% no-repeat;
+  content: "";
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.fold_view {
+  display: none;
+  position: relative;
+  margin-top: 15px;
+  padding: 40px;
+  background: #f7f7f7;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  -webkit-animation: fade both 0.5s;
+          animation: fade both 0.5s;
+}
