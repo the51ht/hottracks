@@ -695,14 +695,17 @@
   width: 100%;
 }
 
-.rullet_wrap .rullet_circle {
+.rullet_wrap .rullet {
   position: absolute;
-  width: 88%;
+  width: 84%;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate3d(-50%, -50%, 0);
-          transform: translate3d(-50%, -50%, 0);
-  z-index: 10;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.rullet_wrap .rullet_circle {
+  position: relative;
 }
 
 .rullet_wrap .rullet_circle > img {
@@ -711,11 +714,11 @@
 
 .rullet_wrap .rullet_pin {
   position: absolute;
-  width: 7.2%;
+  width: 10.2%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: -3%;
+  top: -4.5%;
   z-index: 20;
 }
 
@@ -755,37 +758,36 @@
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  background-color: #fff;
-  border: 2px solid #000;
+  padding: 45px 0 0 0;
+  background-color: #000;
   border-radius: 4px;
-  padding: 0 10px 20px 10px;
+  z-index: 3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.calender_wrap .table_wrap .handle {
+.calender_wrap .table_wrap:before {
+  content: "";
   position: absolute;
-  width: 18px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid;
   z-index: 1;
-  top: -25px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin-left: -20%;
+  left: 6px;
+  top: 6px;
 }
 
-.calender_wrap .table_wrap .handle.right {
-  margin-left: 20%;
-}
-
-.calender_wrap .table_wrap .tb_month {
+.calender_wrap .table_wrap:after {
+  content: "";
   position: absolute;
-  left: 50%;
-  top: 20px;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 21px;
-  color: #000;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 2px solid;
+  z-index: 2;
+  left: 3px;
+  top: 3px;
 }
 
 .calender_wrap .table_wrap .calender_tb {
@@ -793,38 +795,61 @@
   height: 100%;
   margin: 0 auto;
   background-color: #fff;
+  position: relative;
+  z-index: 7;
+  border: 2px solid;
+  border-top: none;
 }
 
 .calender_wrap .table_wrap .calender_tb tr {
   width: 100%;
 }
 
-.calender_wrap .table_wrap .calender_tb tr:first-of-type {
-  height: 80px;
+.calender_wrap .table_wrap .calender_tb tr:first-of-type th {
+  padding-top: 15px;
+}
+
+.calender_wrap .table_wrap .calender_tb tr:last-of-type td {
+  padding-bottom: 20px;
 }
 
 .calender_wrap .table_wrap .calender_tb th {
+  line-height: 11px;
   font-weight: 700;
-  font-size: 11px;
-  vertical-align: bottom;
-  padding-bottom: 4px;
+  font-size: 9px;
+  font-family: 'Gmarket Sans';
+  font-weight: 700;
+  padding-bottom: 6px;
 }
 
 .calender_wrap .table_wrap .calender_tb td {
   width: calc( 100% / 7);
-  height: 50px;
-  padding: 8px 3px 0 3px;
-  color: #767676;
+  height: 45px;
+  padding: 7px 3px 0 3px;
+  font-family: 'Gmarket Sans';
+  font-weight: 700;
+}
+
+.calender_wrap .table_wrap .calender_tb td:first-of-type {
+  padding-left: 13px;
+}
+
+.calender_wrap .table_wrap .calender_tb td:last-of-type {
+  padding-right: 13px;
 }
 
 .calender_wrap .table_wrap .calender_tb td .date {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 38px;
+  margin: 0 auto;
+  font-family: 'Gmarket Sans';
   font-size: 10px;
   text-align: center;
-  line-height: 40px;
-  background: url(../images/guide/calender_day_bg.svg) no-repeat center center/contain;
+  line-height: 38px;
+  letter-spacing: -0.01px;
+  white-space: nowrap;
+  background: url(../images/guide/calender_attend.svg) no-repeat center center/contain;
 }
 
 .calender_wrap .table_wrap .calender_tb td .on {
@@ -843,10 +868,21 @@
 }
 
 .calender_wrap .attendance_count {
-  margin-top: 15px;
+  position: absolute;
+  width: calc(100% - 40px);
+  max-width: 450px;
   text-align: center;
-  line-height: 25px;
-  font-size: 16px;
+  line-height: 13px;
+  font-size: 12px;
+  padding: 16px 0;
+  top: 60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  letter-spacing: -0.012px;
+  z-index: 4;
 }
 
 .calender_wrap .attendance_count .attendance {
@@ -899,7 +935,6 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-top: 20px;
 }
 
 .evt_step_wrap .step_item img {
