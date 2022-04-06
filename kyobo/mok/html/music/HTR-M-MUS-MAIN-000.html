@@ -247,7 +247,7 @@ $(function(){
 								<div class="swiper-slide">
 									<div class="hero_banner_box">
 										<a href="#n">
-											<p class="img"><img src="../../images/temp/@img_mus_hero_banner01.jpg" alt=""></p><!-- image size: 750*840px -->
+											<p class="img"><img src="../../images/temp/@img_mus_hero_banner01.jpg" alt=""></p><!-- image size: 750*760px -->
 											<div class="txt">
 												<ul>
 													<li class="s1">JWIIVER(제이위버)<br>JTRAP [미니 1집]</li>
@@ -301,7 +301,7 @@ $(function(){
 								<ul class="hero_banner_box">
 									<li>
 										<a href="#n">
-											<p class="img"><img src="../../images/temp/@img_mus_hero_banner01.jpg" alt=""></p><!-- image size: 750*840px -->
+											<p class="img"><img src="../../images/temp/@img_mus_hero_banner01.jpg" alt=""></p><!-- image size: 750*760px -->
 											<div class="txt">
 												<ul>
 													<li class="s1">JWIIVER(제이위버)<br>JTRAP [미니 1집]</li>
@@ -340,7 +340,7 @@ $(function(){
 					<h2 class="hidden">퀵메뉴</h2>
 
 					<!-- wel_quick_menu_cont -->
-					<ul class="wel_quick_menu_cont ty02">
+					<ul class="wel_quick_menu_cont"><!-- 22.04.06 class="ty02" 삭제 -->
 						<li>
 							<a href="#n">
 								<span class="ico"><img src="../../images/main/ico_wel_quick_menu09.svg" alt=""></span>
@@ -371,6 +371,20 @@ $(function(){
 								<span class="txt">상세검색</span>
 							</a>
 						</li>
+						<!-- 22.04.06 추가 -->
+						<li>
+							<a href="#n">
+								<span class="ico"><img src="../../images/main/ico_wel_quick_menu14.svg" alt=""></span>
+								<span class="txt">예약상품</span>
+							</a>
+						</li>
+						<li>
+							<a href="#n">
+								<span class="ico"><img src="../../images/main/ico_wel_quick_menu13.svg" alt=""></span>
+								<span class="txt">LP SHOP</span>
+							</a>
+						</li>
+						<!-- //22.04.06 추가 -->
 						<li>
 							<a href="#n">
 								<span class="ico"><img src="../../images/main/ico_wel_quick_menu12.svg" alt=""></span>
@@ -568,7 +582,20 @@ $(function(){
 				</div>
 				<!-- //mc_cont : 주문 내역 -->
 
-				
+<script>
+var i = 0;
+setInterval(function(){
+if(i>4){
+	i = 0;
+	$(".mus_mc_chart_cont .li.active").removeClass("active");
+	$(".mus_mc_chart_cont .li").eq(i).addClass("active");
+}else{
+	$(".mus_mc_chart_cont .li.active").removeClass("active");
+	$(".mus_mc_chart_cont .li").eq(i).addClass("active");
+	i++;
+}
+}, 4000);
+</script>
 
 				<!-- mc_cont : 실시간 차트 - .mus_mc_chart -->
 				<div class="mc_cont mc_dep mus_mc_chart">
@@ -629,7 +656,13 @@ $(function(){
 								<span class="num">2</span>
 								<span class="fluctuation down">1</span>
 							</div>
-							<p class="img"><img src="../../images/temp/@img_mus_prod02.png" alt=""></p>
+							<p class="img"><img src="../../images/temp/@img_mus_prod02.png" alt="">
+								<!-- 품절일 경우 --><!-- 22.04.06 추가 -->
+								<span class="show_replace">
+									<em>아쉽지만!<br>품절이예요</em>
+								</soan>
+								<!-- //품절일 경우 -->
+							</p>
 							<ul class="txt">
 								<li class="s1">JEON SOMI(전소미)</li>
 								<li class="s2">THE FIRST ALBUM XOXO THE FIRST ALBUM XOXO [키트]</li>
@@ -639,10 +672,11 @@ $(function(){
 									<em>129,000</em>
 								</li>
 								<li class="ico_marker_area">
-									<span class="ico_marker on">포스터</span>
+									<span class="ico_marker off2">품절</span><!-- 품절일 경우 --><!-- 22.04.06 추가 -->
+									<!--span class="ico_marker on">포스터</span>
 									<span class="ico_marker">사은품</span>
 									<span class="ico_marker">수입</span>
-									<span class="ico_marker">예약</span>
+									<span class="ico_marker">예약</span>-->
 								</li>
 							</ul>
 							<button class="btn_chart_view" onclick="btn_chart_view(this);"><span class="hidden">차트보기</span></button>
