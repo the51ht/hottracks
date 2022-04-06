@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+<meta name="Author" content="SEO 기획 정의 내용 반영" />
+<meta name="keywords" content="SEO 기획 정의 내용 반영"/>
+<meta name="description" content="SEO 기획 정의 내용 반영" />
+<meta name="subject" content="SEO 기획 정의 내용 반영" />
+<!-- DESC : 성인컨텐츠인 경우 추가하는 meta tag -->
+<!--<meta name="rating" content="adult" />-->
+
+<meta name="Robots" content="noindex, nofollow" />
+<meta name="msapplication-TileColor" content="#000000">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/guide/sns.jpg">
+<link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
+<title>카테고리</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/swiper-7.2.0/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css" />
+<!-- // Plug-In css -->
+
+<!-- font css -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
+<!-- // font css -->
+
+<!-- ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+<link rel="stylesheet" href="../../css/ht_css_mok.css">
+<link rel="stylesheet" href="../../css/ht_template_mok.css">
+<!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script src="../../vendors/lib/swiper-7.2.0/js/swiper-bundle.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/vanillajs-scrollspy/vanillajs-scrollspy.min.js"></script>
+<!-- // Plug-In javascript -->
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
+<script src="../../js/front_bak.js"></script>
+<script src="../../js/mok.ui.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
+</head>
+
+<body>
+<div class="ht_ wrapper">
+	<p style="margin:50px 0;">
+		<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#replaceProd" style="width:100%;"><span class="text">대체상품 / #replaceProd</span></button>
+	</p>
+</div>
+<script>
+$(function(){
+	$('#replaceProd').dialog({
+		autoOpen: true
+	});
+});
+</script>
+
+<!-- 품절 대체 상품 : replaceProd -->
+<div id="replaceProd" class="dialog_wrap" data-class="dialog_full">
+	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+	<!-- dialog_header -->
+	<div class="dialog_header">
+		<div class="dialog_title">하필 딱! 품절이지만 괜찮아요</div>
+	</div>
+	<!-- //dialog_header -->
+	
+	<!-- dialog_contents -->
+	<div class="dialog_contents">
+		<h3 class="replace_sub_tit">찾으시는 상품과 비슷한 상품이 여기 있어요!</h3>
+		<!-- evt_products -->
+		<ul class="evt_products"><!-- row_dir : row type -->
+			<!-- prod_item 반복 -->
+			<li class="prod_item">
+				<div class="product_pic">
+					<button class="evt_good_count">
+						<div class="icon"></div>
+						<div class="txt">80</div>
+					</button>
+					<a href="javascript:alert('제품상세');"><img src="../../images/guide/@tod_prod_sample1.svg" class="bd_img" alt=""></a>
+				</div>
+				<div class="product_info">
+					<div class="company">dretec</div>
+					<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+					<div class="price_line">
+						<span class="discount_rate">15%</span>
+						<span class="final_price">9,234,000</span>
+						<span class="price_origin">9,200,000</span>
+					</div>
+				</div>
+			</li>
+			<!-- //prod_item 반복 -->
+
+			<li class="prod_item">
+				<div class="product_pic">
+					<button class="evt_good_count">
+						<div class="icon"></div>
+						<div class="txt">80</div>
+					</button>
+					<a href="javascript:alert('제품상세');"><img src="../../images/guide/@tod_prod_sample1.svg" class="bd_img" alt=""></a>
+				</div>
+				<div class="product_info">
+					<div class="company">dretec</div>
+					<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+					<div class="price_line">
+						<span class="discount_rate">15%</span>
+						<span class="final_price">9,234,000</span>
+						<span class="price_origin">9,200,000</span>
+					</div>
+				</div>
+			</li>
+				
+		</ul>
+		<!-- //evt_products -->
+	</div>
+	<!-- //dialog_contents -->
+</div>
+<!-- //품절 대체 상품 : replaceProd -->
+</body>
+</html>
