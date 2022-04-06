@@ -93,7 +93,6 @@ function curProdViewSwiper(){
                 curProdViewSwiperCont = new Swiper(this, slideOption);
                 $($parent).addClass('swiper-on');
                 $($parent).find('.swiper-wrapper').addClass('start');
-              
             }           
 
 	});
@@ -104,6 +103,46 @@ $(function(){
     curProdViewSwiper();
 });
 
+
+/* cur_prod4_banner */
+function cur_prod4_banner(){
+    var $target = $('.cur_prod4_banner .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.cur_prod4_banner');
+        var slideOption = {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 2,
+            slidesPerColumn:2,
+            slidesPerGroup: 4,
+            centeredSlides: false,
+            spaceBetween:36,
+            speed: 700,
+            navigation: {
+                nextEl: $(element).find('.swiper-button-next'),
+                prevEl: $(element).find('.swiper-button-prev'),
+            },
+            pagination: {
+                el: $(element).find('.swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            }
+        };
+        if($parent.find('.swiper-slide').length > 4) {
+            var cur_prod_b = new Swiper(this, slideOption);
+        }
+    });
+}
+
+$(function(){
+	if(!$('.cur_prod4_banner').length) return;
+	cur_prod4_banner();
+});
 
 
 /* What’s in your bag : 팝업 */
