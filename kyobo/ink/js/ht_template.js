@@ -1926,6 +1926,23 @@ $(function () {
 });
 
 
+ /* 고객센터 */
+ $(function(){
+    /* fold_ty */
+    $.fn.fold_ty = function(){
+        var tar = $(this).closest('.li');
+        var foldingChk = tar.hasClass('on');
+        if (foldingChk){
+            tar.removeClass('on');
+            tar.find('.fold_btn span').text('펼치기');
+        } else {
+            tar.siblings('.li').removeClass('on');
+            tar.siblings('.li').find('.fold_btn span').text('펼치기');
+            tar.addClass('on');
+            tar.find('.fold_btn span').text('접기');
+        }
+    };
+});
 
 
 
