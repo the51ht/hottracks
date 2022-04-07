@@ -214,13 +214,20 @@ body {
     position:relative;margin-bottom:16px;color:#000;font-size:16px;font-weight:700;line-height:24px;letter-spacing:-1px;
 }
 .ht_txt {
-    position:relative;margin-bottom:20px;color:#595959;font-size:14px;font-weight:400;list-style:24px;
+    position:relative;margin-bottom:20px;color:#595959;font-size:14px;font-weight:400;line-height:22px;
+    &.center {
+        text-align:center;
+    }
+}
+.ht_txt02 {
+    position:relative;margin-bottom:20px;color:#595959;font-size:16px;font-weight:400;line-height:24px;
     &.center {
         text-align:center;
     }
 }
 
-.ht_tit + .ht_txt {
+.ht_tit + .ht_txt,
+.ht_tit + .ht_txt02 {
     margin-top:-15px;
 }
 
