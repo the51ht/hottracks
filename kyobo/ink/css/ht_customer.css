@@ -1,57 +1,5 @@
 @charset "UTF-8";
 /* ht_customer_old.css 에서 필요 부분 옮겨 주세요 */
-/** FAQ **/
-/* Search Area : form_search_box */
-.form_search_cont {
-  padding: 30px 26px;
-  margin-bottom: 32px;
-  background: #EAEAEA;
-  border-radius: 12px;
-}
-
-.form_search_box {
-  width: 376px;
-}
-
-.form_search_box.form_search_box_center {
-  margin: 0 auto;
-}
-
-.form_search_box .form_ip {
-  border: 2px solid #000000;
-  height: 50px;
-}
-
-/* Search Area : cus_chk_list */
-.cus_chk_list {
-  position: relative;
-  margin: 15px 0 0 0;
-}
-
-.cus_chk_list .chk_list_ty {
-  margin: -8px 0 0 -6px;
-}
-
-.cus_chk_list .chk_list_ty.ty02 li {
-  display: inline-block;
-  position: relative;
-  margin: 8px 0 0 6px;
-}
-
-.cus_chk_list .chk_list_ty.ty02 label {
-  height: 33px;
-  padding: 0 13px;
-  line-height: 35px;
-}
-
-.cus_chk_list .chk_list_ty.ty02 input:checked + label {
-  font-weight: 700;
-}
-
-.cus_chk_list.mb {
-  margin: 0 0 16px 0;
-}
-
 /** QNA **/
 .cus_qna_view .btn_txt_more {
   position: relative;
@@ -121,14 +69,18 @@
 .cus_info_text_box > strong {
   font-size: 14px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   display: inline-block;
   letter-spacing: -0.14px;
 }
 
+.cus_info_text_box .bul_list li {
+  font-size: 13px;
+}
+
 .cus_info_text_box .bul_list li span {
   color: #000;
-  font-weight: 700;
+  font-weight: 500;
   border-bottom: 1px solid #000;
 }
 
@@ -177,7 +129,62 @@
   right: 3px;
 }
 
-/* FAQ, QNA, 상품문의 내역 목록 */
+.ht_cus_cont {
+  /** FAQ **/
+  /* Search Area : form_search_box */
+  /* Search Area : cus_chk_list */
+  /* FAQ, QNA, 상품문의 내역 목록 */
+}
+
+.ht_cus_cont .form_search_cont {
+  padding: 30px 26px;
+  margin-bottom: 32px;
+  background: #EAEAEA;
+  border-radius: 12px;
+}
+
+.ht_cus_cont .form_search_box {
+  width: 376px;
+}
+
+.ht_cus_cont .form_search_box.form_search_box_center {
+  margin: 0 auto;
+}
+
+.ht_cus_cont .form_search_box .form_ip {
+  border: 2px solid #000000;
+  height: 50px;
+}
+
+.ht_cus_cont .cus_chk_list {
+  position: relative;
+  margin: 15px 0 0 0;
+}
+
+.ht_cus_cont .cus_chk_list .chk_list_ty {
+  margin: -8px 0 0 -6px;
+}
+
+.ht_cus_cont .cus_chk_list .chk_list_ty.ty02 li {
+  display: inline-block;
+  position: relative;
+  margin: 8px 0 0 6px;
+}
+
+.ht_cus_cont .cus_chk_list .chk_list_ty.ty02 label {
+  height: 33px;
+  padding: 0 13px;
+  line-height: 35px;
+}
+
+.ht_cus_cont .cus_chk_list .chk_list_ty.ty02 input:checked + label {
+  font-weight: 700;
+}
+
+.ht_cus_cont .cus_chk_list.mb {
+  margin: 0 0 16px 0;
+}
+
 .ht_cus_cont .prod_fold_view {
   display: inline-block;
   width: 100%;
