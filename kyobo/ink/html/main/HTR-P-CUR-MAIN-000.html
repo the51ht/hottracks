@@ -56,9 +56,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<link rel="stylesheet" href="../../css/ht_main_cur.css">
-<script src="../../js/ht_main_cur.js"></script>
 </head>
 
 <body>
@@ -122,8 +119,7 @@
 			<div class="ht_cont ht_bg wel_curation cur_main">
 				<div class="contents_inner">
 					<p class="cur_eyebrow"><span>큐레이션</span></p>
-
-					<h2 class="ht_tit_big"><img src="../../images/main/img_cur_main_tit.svg" alt="큐레이션"></h2>
+					<h2 class="ht_tit_big"><img src="../../images/main/img_cur_main_tit.svg" alt="라이프스타일"></h2>
 
 					<!-- wel_curation_cont -->
 					<div class="wel_curation_cont wel_cont">
@@ -425,73 +421,37 @@
 			<!-- //ht_cont : 큐레이션 -->
 			
 
-			<!-- ht_cont : 이럴 땐, 이런 상품 -->
+			<!-- ht_cont : 이럴 땐, 이런 상품 : function curProdA(); / curProdA_pagn() -->
 			<div class="ht_cont cur_prod">
 				<div class="contents_inner">
                     <h2 class="ht_tit_big02">이럴 땐, 이런 상품 <img src="../../images/main/tit_cur_prod.svg" alt=""></h2>
 
-					<div class="tab_view_img_cont">
-						<!-- tab_ty -->
-						<div class="swiper-container cur_tab_contents_warp tab_swiper tab_ty ">
-							<ul class="swiper-wrapper">
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>계절특유의 온도1111</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>결혼하는 나의 베프에게2222</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>번아웃 직전3333</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>444</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>555</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>666</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>777</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>888</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>999</span>
-									</a>
-								</li>
-								<li class="swiper-slide">
-									<a href="#n">
-										<span>000</span>
-									</a>
-								</li>
-							</ul>
+					<!-- cur_prod_swiper_pagn_area  -->
+					<div class="cur_prod_swiper_pagn_area tab_ty">
+						<div class="cur_prod_swiper_area_inner">
+							<div class="cur_prod_swiper_pagn swiper-wrapper">
+							</div>
 						</div>
-
-						<!-- //tab_ty -->
-
-						<div class="swiper-container cur_prod_contents_warp">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide cur_prod_content">
+						<div class="swiper_control">
+							<div class='swiper-button-prev'></div>
+							<div class='swiper-button-next'></div>
+						</div>
+					</div>
+					<!-- //cur_prod_swiper_pagn_area -->
+<script>
+	/* 페이징 타이틀  */
+	var curMenu = ['계절 특유계절', '결혼하는 나의 베프에게', '번아웃 직전' ,'너와 함께라면 어디라도 좋아', '지속가능한 내일을 위한 솔루션']
+</script>
+		
+					<!-- cur_prod_swiper_area -->
+					<div class="cur_prod_swiper_area">
+						<!-- swiper-container -->
+						<div class="swiper-container">
+							<!-- swiper-wrapper -->
+							<ul class="swiper-wrapper">
+								<!-- .cur_prod_content : 반복 -->
+								<li class="swiper-slide cur_prod_content">
+									<!-- cur_prod_top -->
 									<div class="cur_prod_top">
 										<div class="cur_prod_txt_warp">
 											<div class="cur_prod_txt">
@@ -515,8 +475,12 @@
 											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
 										</div>
 									</div>
+									<!-- //cur_prod_top -->
+
+									<!-- cur_prod_bottom -->
 									<div class="cur_prod_bottom">
 										<ul class="cur_prod_wrapper">
+											<!-- cur_prod_item 반복 -->
 											<li class="cur_prod_item">
 												<div class="cur_product_pic">
 													<img src="../../images/temp/@img_prod01.jpg" alt="">
@@ -533,9 +497,11 @@
 													</div>
 												</a>
 											</li>
+											<!-- //cur_prod_item 반복 -->
+
 											<li class="cur_prod_item">
 												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
+													<img src="../../images/temp/@img_prod02.jpg" alt="">
 												</div>
 												<a href="javascript:alert('제품상세');">
 													<div class="cur_product_info">
@@ -551,7 +517,7 @@
 											</li>
 											<li class="cur_prod_item">
 												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
+													<img src="../../images/temp/@img_prod03.jpg" alt="">
 												</div>
 												<a href="javascript:alert('제품상세');">
 													<div class="cur_product_info">
@@ -567,7 +533,7 @@
 											</li>
 											<li class="cur_prod_item">
 												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
+													<img src="../../images/temp/@img_prod04.jpg" alt="">
 												</div>
 												<a href="javascript:alert('제품상세');">
 													<div class="cur_product_info">
@@ -583,7 +549,7 @@
 											</li>
 											<li class="cur_prod_item">
 												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
+													<img src="../../images/temp/@img_prod05.jpg" alt="">
 												</div>
 												<a href="javascript:alert('제품상세');">
 													<div class="cur_product_info">
@@ -599,1006 +565,51 @@
 											</li>
 										</ul>
 									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													222
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													333
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													444
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													555
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													666
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													777
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													888
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													999
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class="swiper-slide cur_prod_content">
-									<div class="cur_prod_top">
-										<div class="cur_prod_txt_warp">
-											<div class="cur_prod_txt">
-												<strong>
-													000
-												</strong>
-												<p>
-													손이 닿는 곳곳마다 따듯함을 더해 줄 존재가 항상 있을 수 있기를<br>
-													내추럴한 구김, 소재감, 착용감까지 완벽하게
-												</p>
-												<div class="ctg_topMenu not_sticky">
-													<div class="inner_wrap round_ty">
-														<span>#집콕생활</span>
-														<span>#충전완료</span>
-														<span>#힐링이필요해</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="cur_prod_detail">
-											<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-										</div>
-									</div>
-									<div class="cur_prod_bottom">
-										<ul class="cur_prod_wrapper">
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											<li class="cur_prod_item">
-												<div class="cur_product_pic">
-													<img src="../../images/temp/@img_prod01.jpg" alt="">
-												</div>
-												<a href="javascript:alert('제품상세');">
-													<div class="cur_product_info">
-														<div class="cur_product_info_inner">
-															<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-															<div class="price_line">
-																<span class="discount_rate">15%</span>
-																<span class="final_price">9,234,000</span>
-															</div>
-														</div>
-													</div>
-												</a>
-											</li>
-											
-										</ul>
-									</div>
-								</div>
-							</div>
+									<!-- //cur_prod_bottom -->
+								</li>
+								<!-- //.cur_prod_content : 반복 -->	
+
+								</li>
+								<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#f4f4f4;font-size:20px;font-weight:500;text-align:center;line-height:524px;">002</p>
+								</li>
+								<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#ddd;font-size:20px;font-weight:500;text-align:center;line-height:524px;">003</p>
+								</li>
+								<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#f4f4f4;font-size:20px;font-weight:500;text-align:center;line-height:524px;">004</p>
+								</li>
+								<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#ddd;font-size:20px;font-weight:500;text-align:center;line-height:524px;">005</p>
+								</li>
+								<!--<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#f4f4f4;font-size:20px;font-weight:500;text-align:center;line-height:524px;">006</p>
+								</li>
+								<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#ddd;font-size:20px;font-weight:500;text-align:center;line-height:524px;">007</p>
+								</li>
+								<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#f4f4f4;font-size:20px;font-weight:500;text-align:center;line-height:524px;">008</p>
+								</li>
+								<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#ddd;font-size:20px;font-weight:500;text-align:center;line-height:524px;">009</p>
+								</li>
+								<li class="swiper-slide cur_prod_content">
+									<p style="height:524px;background-color:#f4f4f4;font-size:20px;font-weight:500;text-align:center;line-height:524px;">010</p>
+								</li>-->
+							</ul>
+							<!-- //swiper-wrapper -->
 						</div>
+						<!-- //swiper-container -->
 
 						<!-- swiper_control -->
-						<div class="swiper_control">
+						<div class="swiper_control_bk">
 							<div class="swiper-button-prev"></div>
-							<div class="swiper-pagination"></div>
 							<div class="swiper-button-next"></div>
 						</div>
 						<!-- //swiper_control -->
 					</div>
+					<!-- //cur_prod_swiper_area -->
                 </div>
             </div>
 			<!-- //ht_cont : 이럴 땐, 이런 상품 -->
@@ -1609,59 +620,66 @@
 				<div class="contents_inner">
                     <h2 class="ht_tit_big02">What’s in your bag</h2>
 
+					<!-- cur_new_msg -->
 					<div class="cur_new_msg">
 						<p>핫트랙스의 내돈내산 찐템!</p>
 					</div>
+					<!-- //cur_new_msg -->
 
-
+					<!-- cur_new_contents_warp -->
 					<div class="cur_new_contents_warp">
-						<div class="cur_new_content tab_cont on" id="cur_prod01">
+						<!-- cur_new_content -->
+						<div class="cur_new_content">
+							<!-- cur_new_top -->
 							<div class="cur_new_top">
+								<!-- cur_new_vis -->
 								<div class="cur_new_vis">
-									<!-- 동영상일 경우 -->
+									<!-- 동영상일 경우
 									<p class="cur_new_movie movie_frame">
 										<iframe src="https://www.youtube.com/embed/nBY0rwBvaSY"></iframe>
-									</p>
+									</p> -->
 
 									<!-- 이미지일 경우 -->
-									<!-- <p class="cur_new_img-warp">
-										<img src="../../images/temp/@img_cur_new01.png" title="">
-									</p> -->
+									<p class="cur_new_img-warp">
+										<img src="../../images/temp/@img_cur_new01.png" alt="">
+									</p>
+									<!-- //이미지일 경우 -->
 
 									<div class="cur_new_md">
 										<div class="md_thumb">
-											<img src="../../images/temp/@img_cur_new02.png" title="">
+											<img src="../../images/temp/@img_cur_new02.png" alt="">
 										</div>
 										<div class="md_desc">
 											<div class="md_desc_table">
 												<p>
-													이것저것 하고 싶은 게 많은 MD<br><span class="md_name">이봉봉</span>
+													이것저것 하고 싶은 게 많은 MD<br>이봉봉
 												</p>
 											</div>
 										</div>
 									</div>
 								</div>
+								<!-- //cur_new_vis -->
+
+								<!-- cur_new_txt_warp -->
 								<div class="cur_new_txt_warp">
 									<div class="cur_new_txt">
 										<strong>
 											어지러운 가방 속, 질서가 필요하다면 에르고바디 보드 홈트 밸런스보드 코어운동
 										</strong>
 										<p>
-											충전기, 볼펜, 이런저런 영수증까지 가득한 자유분방한 가방속을 조금 
-											더 신경 써서 정리하기로 했어요. 칸이 나뉘어져 있고 가벼운 수납 파우
-											치를 찾던 끝에 내린  결정은 툴 파우치였어요.
-											<br><br>
-											체계적인 가방 정리를  원한다면,  ALTNA 툴파우치를 추천해요.충전기, 
-											볼펜, 이런저런 영수증까지 가득한 자유분방한 가방속을 조금 더 신경 
-											써서 정리하기로 했어요. 충전기, 볼펜, 이런저런 영수증까지 가득한 자
-											유분방한 가방속을 조금 더 신경 써서 정리하기로 했어요. 칸이 나뉘어
-											져 있고 가벼운 수납 파우치를 찾던 끝에 내린 결정은 툴 파우치였어요.
+											충전기, 볼펜, 이런저런 영수증까지 가득한 자유분방한 가방속을 조금 더 신경 써서 정리하기로 했어요. 칸이 나뉘어져 있고 가벼운 수납 파우 치를 찾던 끝에 내린  결정은 툴 파우치였어요.<br><br>
+											체계적인 가방 정리를  원한다면,  ALTNA 툴파우치를 추천해요.충전기, 볼펜, 이런저런 영수증까지 가득한 자유분방한 가방속을 조금 더 신경 써서 정리하기로 했어요. 충전기, 볼펜, 이런저런 영수증까지 가득한 자유분방한 가방속을 조금 더 신경 써서 정리하기로 했어요. 칸이 나뉘어 져 있고 가벼운 수납 파우치를 찾던 끝에 내린 결정은 툴 파우치였어요.
 										</p>
 									</div>
 								</div>
+								<!-- cur_new_txt_warp -->
 							</div>
+							<!-- //cur_new_top -->
+
+							<!-- cur_prod_bottom -->
 							<div class="cur_prod_bottom">
 								<ul class="cur_prod_wrapper">
+									<!-- .cur_prod_item 반복 -->
 									<li class="cur_prod_item">
 										<div class="cur_product_pic">
 											<img src="../../images/temp/@img_prod01.jpg" alt="">
@@ -1685,9 +703,11 @@
 											</div>
 										</a>
 									</li>
+									<!-- //.cur_prod_item 반복 -->
+
 									<li class="cur_prod_item">
 										<div class="cur_product_pic">
-											<img src="../../images/temp/@img_prod01.jpg" alt="">
+											<img src="../../images/temp/@img_prod02.jpg" alt="">
 										</div>
 										<a href="javascript:alert('제품상세');">
 											<div class="cur_product_info">
@@ -1700,17 +720,13 @@
 														</p>
 													</div>
 													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<!-- <div class="price_line">
-														<span class="discount_rate">15%</span>
-														<span class="final_price">9,234,000</span>
-													</div> -->
 												</div>
 											</div>
 										</a>
 									</li>
 									<li class="cur_prod_item">
 										<div class="cur_product_pic">
-											<img src="../../images/temp/@img_prod01.jpg" alt="">
+											<img src="../../images/temp/@img_prod03.jpg" alt="">
 										</div>
 										<a href="javascript:alert('제품상세');">
 											<div class="cur_product_info">
@@ -1723,17 +739,13 @@
 														</p>
 													</div>
 													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<!-- <div class="price_line">
-														<span class="discount_rate">15%</span>
-														<span class="final_price">9,234,000</span>
-													</div> -->
 												</div>
 											</div>
 										</a>
 									</li>
 									<li class="cur_prod_item">
 										<div class="cur_product_pic">
-											<img src="../../images/temp/@img_prod01.jpg" alt="">
+											<img src="../../images/temp/@img_prod04.jpg" alt="">
 										</div>
 										<a href="javascript:alert('제품상세');">
 											<div class="cur_product_info">
@@ -1746,17 +758,13 @@
 														</p>
 													</div>
 													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<!-- <div class="price_line">
-														<span class="discount_rate">15%</span>
-														<span class="final_price">9,234,000</span>
-													</div> -->
 												</div>
 											</div>
 										</a>
 									</li>
 									<li class="cur_prod_item">
 										<div class="cur_product_pic">
-											<img src="../../images/temp/@img_prod01.jpg" alt="">
+											<img src="../../images/temp/@img_prod05.jpg" alt="">
 										</div>
 										<a href="javascript:alert('제품상세');">
 											<div class="cur_product_info">
@@ -1769,18 +777,17 @@
 														</p>
 													</div>
 													<div class="title">2022 컬러풀 2단 캘린더 체크리스트</div>
-													<!-- <div class="price_line">
-														<span class="discount_rate">15%</span>
-														<span class="final_price">9,234,000</span>
-													</div> -->
 												</div>
 											</div>
 										</a>
 									</li>
 								</ul>
 							</div>
+							<!-- //cur_prod_bottom -->
 						</div>
+						<!-- //cur_new_content -->
 					</div>
+					<!-- //cur_new_contents_warp -->
 
 					<!-- btn_area -->
 					<div class="btn_area">

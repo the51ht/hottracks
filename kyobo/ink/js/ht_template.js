@@ -378,6 +378,7 @@ function tabSwiper(){
         if(tabListWidthTotal > 1200){
             tabSwiperCont = new Swiper(this, slideOption);
         }
+
 	});
 }
 
@@ -1438,27 +1439,315 @@ $(function(){
 
 
 /**** 큐레이션 ****/
+/* 이럴 땐, 이런 상품 */
+function curProdA(){
+    var $target = $('.cur_prod_swiper_area .swiper-container');
+    $target.each(function (index, element) {
+        var slideOption = {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            loop: true,
+            loopsSlide: 1,
+            spaceBetween: 0,
+            speed: 500,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed:600,
+            navigation: {
+                nextEl: ('.cur_prod_swiper_area .swiper-button-next'),
+                prevEl: ('.cur_prod_swiper_area .swiper-button-prev'),
+            },
+            pagination: {
+                el: ".cur_prod_swiper_pagn",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<p class="swiper-slide ' + className + '"><span>' + (curMenu[index]) + "</span></p>";
+                },
+            },
+            on: {
+                slideChange: function () {
+                    if($('.cur_prod_swiper_pagn_area').hasClass('len')) {
+                        curProdA_pagnSwiper.slideTo(this.realIndex);
+                    }
+                }
+            }
+        };
+        if($target.find('.swiper-slide').length > 2) {
+            $('.cur_prod_swiper_area').addClass('swiper-on');
+            curProdASwiper = new Swiper(this, slideOption);
+        }
+	});
+}
+
+function curProdA_pagn(){
+    var $target = $('.cur_prod_swiper_pagn_area');
+    var slideOption = {
+        slidesPerView: 'auto',
+        loop: false,
+        speed: 700,
+        spaceBetween:0,
+        navigation: {
+            nextEl: '.cur_prod_swiper_pagn_area .swiper-button-next',
+            prevEl: '.cur_prod_swiper_pagn_area .swiper-button-prev',
+        },
+    };
+
+    var tabListWidthTotal = 0,
+    tabList = $target.find('.swiper-slide');
+    for(var i = 0; i < tabList.length; i++ ){
+        tabListWidthTotal += tabList.eq(i).innerWidth();
+    };
+
+    if(tabListWidthTotal > 1200){
+        curProdA_pagnSwiper = new Swiper($target.get(), slideOption);
+        $target.addClass('len')
+    }
+
+
+}
+$(function(){
+    if(!$('.cur_prod_swiper_area').length) return;
+    curProdA();
+    curProdA_pagn();
+});
 
 
 
+/* What’s in your bag 전체보기 */
+function curProdB(){
+    var $target = $('.cur_prod_swiper_area02 .swiper-container');
+    $target.each(function (index, element) {
+        var slideOption = {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            loop: false,
+            loopsSlide: 1,
+            spaceBetween: 0,
+            speed: 700,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed:600,
+            navigation: {
+                nextEl: ('.cur_prod_swiper_area02 .swiper-button-next'),
+                prevEl: ('.cur_prod_swiper_area02 .swiper-button-prev'),
+            },
+            pagination: {
+                el: ".cur_prod_swiper_pagn",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<p class="swiper-slide ' + className + '"><span>' + (index + 1) + "</span></p>";
+                },
+            },
+            on: {
+                slideChange: function () {
+
+                },
+                activeIndexChange: function () {
+                    var pageActive = this.realIndex; 
+                    var pageWidth = $('.cur_prod_swiper_area_inner').innerWidth();
+                    var tag = $('.cur_prod_swiper_pagn_area02 .cur_prod_swiper_pagn');
+                    var tag_a = $('.cur_prod_swiper_pagn_area02 .cur_prod_swiper_pagn p');
+                    var numWidth = tag_a.eq(0).outerWidth(true);
+                    var pageTotal = tag_a.length; 
+                    if($('.cur_prod_swiper_pagn_area02').hasClass('len')) {
+                        curProdB_pagnSwiper.slideTo(this.realIndex );
+                    }
+                    if (pageActive <= 7) {
+                        tag.css({"transform":"translate(0,0)"})
+                    }else if (pageActive > pageTotal - 8){ 
+                        tag.css({"transform":"translate(-"+(numWidth*(pageTotal - 15))+"px,0)"})
+                    }else if (pageActive > 7){ 
+                        tag.css({"transform":"translate(-"+(numWidth*(pageActive - 7))+"px,0)"})
+                    }
+                }
+            },
+
+        };
+        if($target.find('.swiper-slide').length > 2) {
+            $('.cur_prod_swiper_area02').addClass('swiper-on');
+            curProdBSwiper = new Swiper(this, slideOption);
+        }
+	});
+}
+
+function curProdB_pagn(){
+    var $target = $('.cur_prod_swiper_pagn_area02 .cur_prod_swiper_area_inner');
+    var slideOption = {
+        slidesPerView: 'auto',
+        loop: false,
+        speed: 700,
+        spaceBetween:0,
+        slidesPerGroup: 15,
+        loopFillGroupWithBlank : true,
+        navigation: {
+            nextEl: '.cur_prod_swiper_pagn_area02 .swiper-button-next',
+            prevEl: '.cur_prod_swiper_pagn_area02 .swiper-button-prev',
+        },
+    };
+
+    if($target.find('.swiper-slide').length > 15) {
+        curProdB_pagnSwiper = new Swiper($target.get(), slideOption);
+        $('.cur_prod_swiper_pagn_area02').addClass('len')
+    }
+}
+$(function(){
+    if(!$('.cur_prod_swiper_area02').length) return;
+    curProdB();
+    curProdB_pagn();
+});
 
 
 
+/* 찜한 브랜드 */
+function curProdSwiper(){
+    var $target = $('.cur_prod_img');
+    $target.each(function (index, element) {
+        var $parent = $(this);
+        $parent.addClass('cur_prod_idx_' + index);
+        var slideOption = {
+            slidesPerView: 'auto',
+            spaceBetween:0,
+            freeMode: true,
+            observer: true,
+            observeParents: true,
+            speed:300,
+            pagination: {
+                el: ('.cur_prod_idx_' + index + ' .swiper-pagination'),
+                type: "progressbar",
+            },
+        }
+        if($parent.find('.swiper-slide').length > 4) {
+            curProdSwiperCont = new Swiper(this, slideOption);
+        }
+	});
+}
+
+$(function(){
+    if(!$('.cur_prod_img').length) return;
+    curProdSwiper();
+});
 
 
 
+/* 최근 본 상품 추천 : cur_prod4_banner */
+function cur_prod4_banner(){
+    var $target = $('.cur_prod4_banner .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.cur_prod4_banner');
+        var slideOption = {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 2,
+            slidesPerColumn:2,
+            slidesPerGroup: 4,
+            centeredSlides: false,
+            spaceBetween:36,
+            speed: 700,
+            navigation: {
+                nextEl: $(element).find('.swiper-button-next'),
+                prevEl: $(element).find('.swiper-button-prev'),
+            },
+            pagination: {
+                el: $(element).find('.swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            }
+        };
+        if($parent.find('.swiper-slide').length > 4) {
+            var cur_prod_b = new Swiper(this, slideOption);
+        }
+    });
+}
+
+$(function(){
+	if(!$('.cur_prod4_banner').length) return;
+	cur_prod4_banner();
+});
+
+
+/* 최근 본 상품 추천 : Thumb */
+function curProdViewSwiper(){
+    var $target = $('.cur_prod_view_list');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.cur_prod_list_wrap');
+        $parent.addClass('cur_view_idx_' + index);
+        var slideOption = {
+            slidesPerView: 12,
+            spaceBetween: 10,
+            observer: true,
+            observeParents: true,
+            centeredSlides: true,
+            speed:600,
+            loop:true,
+            navigation: {
+                nextEl: ('.cur_view_idx_' + index + ' .swiper-button-next'),
+                prevEl: ('.cur_view_idx_' + index + ' .swiper-button-prev'),
+            },
+            touchRatio: 0,  //드래그 금지   
+            on: {
+                activeIndexChange: function () {
+                    setTimeout(function(){
+                        $('.cur_prod_view_list a').removeClass('on')
+                        $('.cur_prod_view_list .swiper-slide-active a').trigger('click');
+                    }, 100);
+                }
+            },
+        };
+        /* 10개 이상일때 실행 */
+
+        if($target.find('.swiper-slide').length > 10) {
+            curProdViewSwiperCont = new Swiper(this, slideOption);
+            $($parent).addClass('swiper-on');
+            $($parent).addClass('len');
+        }       
+	});
+}
+
+$(function(){
+    if(!$('.cur_prod_view_list').length) return;
+    curProdViewSwiper();
+});
 
 
 
+/* 큐레이션 탭 */
+$(function(){
+    if(!$('.cur_sticky_tab').length) return;
+    $(window).on('scroll', function() {
+        $('.cur_sticky_view').each(function (index, element) {
+            if($(window).scrollTop() >= $(this).offset().top - 205) {
+                $('.cur_sticky_tab a').removeClass('on');
+                $('.cur_sticky_tab a').eq(index).addClass('on');
+            } 
+        });
+    });
+    $.fn.anchorCusChk = function(){
+        $.each(this, function(i,v){
+            $(v).closest('.cur_sticky_tab').find('a').removeClass('on');
+            $(v).addClass('on');
 
-
-
-
-
-
-
-
-
+            var s = $(v).attr('href');
+            $('html, body').stop().animate({scrollTop:$(s).offset().top - 200 }, 500);
+        });
+    };
+    $('.cur_sticky_tab a').on('click', function(e) {
+        $(this).anchorCusChk();
+        e.preventDefault();
+    });
+});
 
 
 
@@ -1665,6 +1954,23 @@ $(function () {
 });
 
 
+ /* 고객센터 */
+ $(function(){
+    /* fold_ty */
+    $.fn.fold_ty = function(){
+        var tar = $(this).closest('.li');
+        var foldingChk = tar.hasClass('on');
+        if (foldingChk){
+            tar.removeClass('on');
+            tar.find('.fold_btn span').text('펼치기');
+        } else {
+            tar.siblings('.li').removeClass('on');
+            tar.siblings('.li').find('.fold_btn span').text('펼치기');
+            tar.addClass('on');
+            tar.find('.fold_btn span').text('접기');
+        }
+    };
+});
 
 
 
@@ -1802,7 +2108,7 @@ $(function(){
 
 
 
-/* Module E-1 : md;015 */
+/* Module E-1 : md015 */
 $(function(){
     if(!$('.mdl015').length) return;
     $(window).on('scroll', function() {
