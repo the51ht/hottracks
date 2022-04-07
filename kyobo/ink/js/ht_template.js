@@ -718,6 +718,10 @@ function curation_btn(val){
         $(val).closest('.li').addClass('on')
     }
 }
+$(function(){
+    if(!$('.wel_curation_cont').length) return;
+    $('.curation_box_list:gt(0) .curation_marker li').removeClass('on');
+});
 
 
 

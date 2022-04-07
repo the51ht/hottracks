@@ -1818,12 +1818,13 @@
 }
 
 .git_wrt_area .ctg_topMenu {
+  position: relative;
   margin: -20px 0 25px 0;
   background: #f7f7f7;
   line-height: 31px;
 }
 
-.git_wrt_area .ctg_topMenu span {
+.git_wrt_area .ctg_topMenu .inner_wrap span {
   height: 33px;
   padding-top: 1px;
   font-size: 12px;
@@ -1832,6 +1833,14 @@
 
 .git_wrt_area .ctg_topMenu .round_ty {
   padding: 15px 15px !important;
+}
+
+.git_wrt_area .ctg_topMenu .btn_line_refresh {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .git_wrt_area .ht_cont_s {
@@ -4681,6 +4690,10 @@
   height: 48px;
   margin: 4px 0 -10px 0;
   vertical-align: top;
+}
+
+.cur_recent .prod_item {
+  width: calc(33.3% - 36px);
 }
 
 .cur_recent .product_pic:before {
