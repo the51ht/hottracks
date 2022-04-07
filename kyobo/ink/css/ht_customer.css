@@ -47,23 +47,103 @@
   content: "";
 }
 
-.cus_qna_view .form_sel {
+.cus_qna_view .tit_form_wrap .form_sel {
   float: left;
 }
 
-.cus_qna_view .form_sel .ui-selectmenu-button {
+.cus_qna_view .tit_form_wrap .form_sel .ui-selectmenu-button {
   width: 120px;
 }
 
-.cus_qna_view .btn_area {
+.cus_qna_view .tit_form_wrap .btn_area {
   margin-top: 0;
   float: right;
 }
 
-.cus_qna_view .btn_area button.btn_md {
+.cus_qna_view .tit_form_wrap .btn_area button.btn_md {
   min-width: 122px;
   font-size: 14px;
   font-weight: 500;
+}
+
+.cus_qna_view .form_qna_wrap {
+  margin-top: 42px;
+}
+
+.cus_qna_view .form_qna_wrap .form_box:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.cus_qna_view .form_qna_wrap.form_wrap .form_box {
+  width: calc(73.5% - 160px);
+  display: table;
+  margin-top: 25px;
+}
+
+.cus_qna_view .form_qna_wrap .form_title {
+  width: 160px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.cus_qna_view .form_qna_wrap .form_title .form_label {
+  font-size: 14px;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+.cus_qna_view .form_qna_wrap .form_title .form_label .required {
+  margin-top: 3px;
+  padding-left: 4px;
+}
+
+.cus_qna_view .form_qna_wrap .form_title .form_label .required:before {
+  background-image: url(../../ink/images/guide/ico_required.svg);
+}
+
+.cus_qna_view .form_qna_wrap .form_cont {
+  float: right;
+  margin-top: 0px;
+  width: 400px;
+}
+
+.cus_qna_view .form_qna_wrap .btn_area {
+  border-top: 1px solid #EAEAEA;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.cus_qna_view .form_qna_wrap .btn_area.btn_area_desc {
+  padding-top: 17px;
+}
+
+.cus_qna_view .form_qna_wrap .btn_area.btn_area_desc .btn_primary {
+  margin-top: 30px;
+}
+
+.cus_qna_view .form_qna_wrap .btn_area.btn_area_desc p {
+  font-size: 13px;
+  color: #767676;
+  text-align: left;
+  letter-spacing: -0.13px;
+}
+
+.cus_qna_view .form_qna_wrap .btn_area .btn_primary {
+  min-width: 134px;
+}
+
+.cus_qna_view .form_qna_wrap .form_radio_sel .form_title {
+  display: inline-block;
+}
+
+.cus_qna_view .form_qna_wrap .form_radio_sel .form_ip {
+  margin-top: 10px;
+}
+
+.cus_qna_view .form_qna_wrap .form_radio_sel .form_cont + .form_cont {
+  margin-top: 25px;
 }
 
 .cus_info_text_box > strong {
@@ -129,8 +209,8 @@
   right: 3px;
 }
 
+/** FAQ **/
 .ht_cus_cont {
-  /** FAQ **/
   /* Search Area : form_search_box */
   /* Search Area : cus_chk_list */
   /* FAQ, QNA, 상품문의 내역 목록 */
@@ -143,15 +223,15 @@
   border-radius: 12px;
 }
 
-.ht_cus_cont .form_search_box {
+.ht_cus_cont .form_search_cont .form_search_box {
   width: 376px;
 }
 
-.ht_cus_cont .form_search_box.form_search_box_center {
+.ht_cus_cont .form_search_cont .form_search_box.form_search_box_center {
   margin: 0 auto;
 }
 
-.ht_cus_cont .form_search_box .form_ip {
+.ht_cus_cont .form_search_cont .form_search_box .form_ip {
   border: 2px solid #000000;
   height: 50px;
 }

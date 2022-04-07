@@ -105,7 +105,6 @@
                 <!-- 회원 -->
 				<!-- ht_sub_area -->
 				<section class="ht_sub_area">
-                    ↓ 회원
 					<h1 class="ht_tit">1:1 문의</h1>
 
                     <!-- info_text_box -->
@@ -125,12 +124,12 @@
                         <div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
                             <ul>
                                 <li>
-                                    <a href="#n" class="on"><!-- 활성화  class="on" -->
+                                    <a href="#n">
                                         <span>쇼핑몰 이용상담</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#n">
+                                    <a href="#n" class="on"><!-- 활성화  class="on" -->
                                         <span>영업점 이용상담</span>
                                     </a>
                                 </li>
@@ -143,23 +142,47 @@
                             <div class="form_wrap form_qna_wrap">
                                 <div class="form_box">
                                     <div class="form_title">
-                                        <span class="form_label">문의유형<em class="required"></em></span>
+                                        <span class="form_label">영업점<em class="required"></em></span>
                                     </div>
                                     <div class="form_cont">
                                         <!-- form_sel -->
                                         <div class="form_sel">
                                             <select title="선택해주세요">
                                                 <option>선택해주세요</option>
-                                                <option>결제</option>
-                                                <option>배송</option>
-                                                <option>주문취소/변경</option>
-                                                <option>반품</option>
-                                                <option>교환</option>
-                                                <option>증빙서류</option>
-                                                <option>회원</option>
-                                                <option>통합포인트/핫트랙스 온라인 예치금</option>
-                                                <option>이벤트/쿠폰</option>
-                                                <option>기타문의</option>
+                                                <option>광화문점</option>
+                                                <option>강남점</option>
+                                                <option>잠실점</option>
+                                                <option>창원점</option>
+                                                <option>부산점</option>
+                                                <option>목동점</option>
+                                                <option>천안점</option>
+                                                <option>영등포점</option>
+                                                <option>디큐브시티점</option>
+                                                <option>판교점</option>
+                                                <option>전주점</option>
+                                                <option>동대문점</option>
+                                                <option>울산점</option>
+                                                <option>일산점</option>
+                                                <option>송도점</option>
+                                                <option>대전점</option>
+                                                <option>광교월드스퀘어센터</option>
+                                                <option>반월당점</option>
+                                                <option>센텀시티점</option>
+                                                <option>은평점</option>
+                                                <option>칠곡센터</option>
+                                                <option>수유점</option>
+                                                <option>세종점</option>
+                                                <option>청량리점</option>
+                                                <option>합정점</option>
+                                                <option>가든파이브점</option>
+                                                <option>평촌점</option>
+                                                <option>경성대.부경성대센터</option>
+                                                <option>분당점</option>
+                                                <option>광주상무센터</option>
+                                                <option>광교점</option>
+                                                <option>거제디큐브점</option>
+                                                <option>천호점</option>
+                                                <option>대구점</option>
                                             </select>
                                         </div>
                                         <!-- //form_sel -->
@@ -167,22 +190,26 @@
                                 </div>
                                 <div class="form_box">
                                     <div class="form_title">
-                                        <span class="form_label">주문번호/상품코드<em class="required"></em></span>
+                                        <span class="form_label">문의유형<em class="required"></em></span>
                                     </div>
                                     <div class="form_cont">
-                                        <!-- form_search_box -->
-                                        <div class="form_search_box mb">
-                                            <!-- form_ip_search -->
-                                            <div class="form_ip_search">
-                                                <input type="search" class="form_ip" placeholder="검색 버튼을 눌러 선택해 주세요">
-                                                <button type="button" class="btn_ip_clear"><span class="hidden">초기화</span></button>
-                                            </div>
-                                            <!-- //form_ip_search -->
-                                            <button type="button" class="btn_ip_search"><span class="hidden">검색</span></button>
+                                        <!-- form_sel -->
+                                        <div class="form_sel">
+                                            <select title="선택해주세요">
+                                                <option>선택해주세요</option>
+                                                <option>상품</option>
+                                                <option>교환/환불</option>
+                                                <option>AS</option>
+                                                <option>멤버쉽</option>
+                                                <option>서비스[친절]</option>
+                                                <option>서비스[불친절]</option>
+                                                <option>기타</option>
+                                            </select>
                                         </div>
-                                        <!-- //form_search_box -->
+                                        <!-- //form_sel -->
                                     </div>
                                 </div>
+
                                 <div class="form_box">
                                     <div class="form_title">
                                         <span class="form_label">제목<em class="required"></em></span>
@@ -220,9 +247,8 @@
                                             <label for="exRdo01">휴대전화번호</label>
                                         </span>
                                         <!-- //form_rdo -->
-
-                                        <input type="tel" id="chk01" class="form_ip" placeholder="-없이 숫자만 입력" title="타이틀" value="010-5151-5151"/>
-
+                                        
+                                        <input type="tel" id="chk01" class="form_ip" placeholder="-없이 숫자만 입력" title="타이틀" value="010-5151-5151" />
                                         <div class="valid_check fail">
                                             <input type="text" id="chk01" class="form_ip" placeholder="-없이 숫자만 입력" title="타이틀">
                                             <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
@@ -237,145 +263,8 @@
                                         <!-- //form_rdo -->
 
                                         <input type="email" id="chk02" class="form_ip" placeholder="@ 포함 이메일 입력" title="타이틀" value="The-51@naver.com" disabled/>
-
                                         <div class="valid_check fail">
                                             <input type="text" id="chk02" class="form_ip" placeholder="@ 포함 이메일 입력" title="타이틀">
-                                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="btn_area">
-                                    <button class="btn_lg btn_primary" disabled>등록</button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //cus_qna_view -->
-					</div>
-					<!-- //ht_cont : 상단배너 - ht_top_banner -->
-				</section>
-				<!-- //ht_sub_area -->
-                <!-- 회원 -->
-
-
-                <!-- 비회원 -->
-                <!-- ht_sub_area -->
-				<section class="ht_sub_area">
-                    ↓ 비회원
-					<h1 class="ht_tit">1:1 문의</h1>
-
-                    <!-- info_text_box -->
-                    <div class="info_text_box cus_info_text_box">
-                        <ul class="bul_list">
-                            <li class="bul_item_dot font_size_xs">입력하신 정보는 고객님의 동의 없이 공개되지 않으며, 개인정보보호정책에 의해 보호 받고 있습니다.</li>
-                        </ul>
-                    </div>
-                    <!-- //info_text_box -->
-
-					<!-- ht_cont : 상단배너 - ht_top_banner -->
-					<div class="ht_cont ht_cus_cont">
-
-                        <!-- cus_qna_view -->
-                        <div class="cus_qna_view">
-                            <div class="form_wrap form_qna_wrap">
-                                <div class="form_box">
-                                    <div class="form_title">
-                                        <span class="form_label">문의유형<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- form_sel -->
-                                        <div class="form_sel">
-                                            <select title="선택해주세요">
-                                                <option>선택해주세요</option>
-                                                <option>결제</option>
-                                                <option>배송</option>
-                                                <option>주문취소/변경</option>
-                                                <option>반품</option>
-                                                <option>교환</option>
-                                                <option>증빙서류</option>
-                                                <option>회원</option>
-                                                <option>통합포인트/핫트랙스 온라인 예치금</option>
-                                                <option>이벤트/쿠폰</option>
-                                                <option>기타문의</option>
-                                            </select>
-                                        </div>
-                                        <!-- //form_sel -->
-                                    </div>
-                                </div>
-                                <div class="form_box">
-                                    <div class="form_title">
-                                        <span class="form_label">주문번호/상품코드<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- form_search_box -->
-                                        <div class="form_search_box mb">
-                                            <!-- form_ip_search -->
-                                            <div class="form_ip_search">
-                                                <input type="search" class="form_ip" placeholder="검색 버튼을 눌러 선택해 주세요">
-                                                <button type="button" class="btn_ip_clear"><span class="hidden">초기화</span></button>
-                                            </div>
-                                            <!-- //form_ip_search -->
-                                            <button type="button" class="btn_ip_search"><span class="hidden">검색</span></button>
-                                        </div>
-                                        <!-- //form_search_box -->
-                                    </div>
-                                </div>
-                                <div class="form_box">
-                                    <div class="form_title">
-                                        <span class="form_label">제목<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <input type="text" class="form_ip" placeholder="30자 이내로 작성해 주세요" title="타이틀 입력"/>
-                                    </div>
-                                </div>
-                                <div class="form_box">
-                                    <div class="form_title">
-                                        <span class="form_label">내용<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- byte_check_wrap -->
-                                        <div class="byte_check_wrap">
-                                            <textarea id="" class="form_textarea" title="타이틀 입력" placeholder="문의하실 내용을 직접 작성해 주세요" style="height: 78px;"></textarea>
-                                            <div class="byte_chack_footer">
-                                                <div class="byte_check">
-                                                    <span class="count">0</span>
-                                                    <span class="total">300자</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- //byte_check_wrap -->
-                                    </div>
-                                </div>
-                                <div class="form_box form_radio_sel">
-                                    <div class="form_title">
-                                        <span class="form_label">답변 수신 방법<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- form_rdo -->
-                                        <span class="form_rdo">
-                                            <input id="exRdo03" type="radio" name="exRdoName02" value="3" checked />
-                                            <label for="exRdo03">휴대전화번호</label>
-                                        </span>
-                                        <!-- //form_rdo -->
-
-                                        <input type="tel" id="chk03" class="form_ip" placeholder="-없이 숫자만 입력" title="타이틀" />
-
-                                        <div class="valid_check fail">
-                                            <input type="text" id="chk03" class="form_ip" placeholder="-없이 숫자만 입력" title="타이틀">
-                                            <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
-                                        </div>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- form_rdo -->
-                                        <span class="form_rdo">
-                                            <input id="exRdo04" type="radio" name="exRdoName02" value="4" />
-                                            <label for="exRdo04">이메일</label>
-                                        </span>
-                                        <!-- //form_rdo -->
-
-                                        <input type="email" id="chk04" class="form_ip" placeholder="@ 포함 이메일 입력" title="타이틀" disabled/>
-                                        
-                                        <div class="valid_check fail">
-                                            <input type="text" id="chk04" class="form_ip" placeholder="@ 포함 이메일 입력" title="타이틀">
                                             <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
                                         </div>
                                     </div>
@@ -386,29 +275,22 @@
                                         $('.form_radio_sel input[name=exRdoName01]').click(function(){ 
                                             
                                             var chkVar = $('.form_radio_sel input[name=exRdoName01]:checked').val();
+                                            console.log(chkVar)
                                             if(chkVar=='1'){
                                                 $('#chk01').removeAttr("disabled");
                                                 $('#chk02').attr("disabled", true);
                                             }else if(chkVar=='2'){
                                                 $('#chk01').attr("disabled", true);
                                                 $('#chk02').removeAttr("disabled");
-                                            }
-                                        }); 
-
-                                        $('.form_radio_sel input[name=exRdoName02]').click(function(){ 
-
-                                            var chkVar2 = $('.form_radio_sel input[name=exRdoName02]:checked').val();
-                                            if(chkVar2=='3'){
-                                                $('#chk03').removeAttr("disabled");
-                                                $('#chk04').attr("disabled", true);
-                                            }else if(chkVar2=='4'){
-                                                $('#chk03').attr("disabled", true);
-                                                $('#chk04').removeAttr("disabled");
+                                                
                                             }
                                         }); 
                                     });
                                 </script>
-                                <div class="btn_area">
+                                <div class="btn_area btn_area_desc">
+                                    <p>
+                                        * 영업점 이용 상담의 문의는 등록하신 이메일 또는 휴대폰번호로 회신을 드리며, 1:1문의에는 답변 내용이 등록되지 않으니 이점 양해 부탁 드립니다.
+                                    </p>
                                     <button class="btn_lg btn_primary" disabled>등록</button>
                                 </div>
                             </div>
@@ -418,7 +300,7 @@
 					<!-- //ht_cont : 상단배너 - ht_top_banner -->
 				</section>
 				<!-- //ht_sub_area -->
-                <!--//비회원 -->
+                <!-- 회원 -->
 			</div>
 			<!-- //ht_sub_cont -->
 		</section>

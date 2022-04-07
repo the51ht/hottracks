@@ -20,17 +20,71 @@
         &:after{
             display: block;clear: both;content: "";
         }
-    }
-    .form_sel {
-        float: left;
-        .ui-selectmenu-button{
-            width: 120px;
+        .form_sel {
+            float: left;
+            .ui-selectmenu-button{
+                width: 120px;
+            }
+        }
+        .btn_area{
+            margin-top: 0;float: right;
+            button.btn_md{
+                min-width: 122px;font-size: 14px;font-weight: 500;
+            }
         }
     }
-    .btn_area{
-        margin-top: 0;float: right;
-        button.btn_md{
-            min-width: 122px;font-size: 14px;font-weight: 500;
+    .form_qna_wrap{
+        margin-top: 42px;
+        .form_box{
+            &:after{
+                display: block; clear: both; content: "";
+            }
+        }
+        &.form_wrap {
+            .form_box {
+                width: calc(73.5% - 160px);display: table;margin-top: 25px;
+            }
+        }
+        .form_title{
+            width: 160px;display: table-cell;vertical-align: middle;
+            .form_label{
+                font-size: 14px;margin-top: 3px;margin-left:10px;
+                .required{       
+                    margin-top: 3px;padding-left: 4px;
+                    &:before {
+                        background-image: url(../../ink/images/guide/ico_required.svg);
+                    }
+                }
+            }
+        }
+        .form_cont{
+            float: right;margin-top: 0px;width: 400px;
+        }
+        .btn_area{
+            border-top: 1px solid #EAEAEA;padding-top: 30px;margin-top: 30px;
+            &.btn_area_desc{
+                padding-top: 17px;
+                .btn_primary{
+                    margin-top: 30px;
+                }
+                p{
+                    font-size: 13px;color: #767676;text-align: left;letter-spacing: -0.13px;
+                }
+            }
+            .btn_primary{
+                min-width: 134px;
+            }
+        }
+        .form_radio_sel{
+            .form_title{
+                display: inline-block;
+            }
+            .form_ip{
+                margin-top: 10px;
+            }
+            .form_cont + .form_cont{
+                margin-top: 25px;
+            }
         }
     }
     
@@ -72,19 +126,20 @@
     }
 }
 
+
+/** FAQ **/
 .ht_cus_cont{
-    /** FAQ **/
     /* Search Area : form_search_box */
     .form_search_cont{
         padding: 30px 26px;margin-bottom: 32px;background: #EAEAEA;border-radius: 12px;
-    }
-    .form_search_box{
-        width: 376px;
-        &.form_search_box_center{
-            margin:0 auto;
-        }
-        .form_ip{
-            border: 2px solid #000000;height: 50px;
+        .form_search_box{
+            width: 376px;
+            &.form_search_box_center{
+                margin:0 auto;
+            }
+            .form_ip{
+                border: 2px solid #000000;height: 50px;
+            }
         }
     }
     /* Search Area : cus_chk_list */
