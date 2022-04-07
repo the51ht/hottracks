@@ -37,112 +37,11 @@ $(function(){
 
 
 /* 이럴 땐? 이런상품 */
-function curProdSwiper(){
-    var $target = $('.cur_prod_img');
-    $target.each(function (index, element) {
-        var $parent = $(this);
-        $parent.addClass('cur_prod_idx_' + index);
-        var slideOption = {
-            slidesPerView: 'auto',
-            spaceBetween:0,
-            freeMode: true,
-            observer: true,
-            observeParents: true,
-            speed:300,
-        };
-
-        if($parent.find('.swiper-slide').length > 1) {
-            curProdSwiperCont = new Swiper(this, slideOption);
-        }
-	});
-}
-
-$(function(){
-    if(!$('.cur_prod_img').length) return;
-    curProdSwiper();
-});
 
 
 
 
 
-/* 최근 본 상품 추천 */
-function curProdViewSwiper(){
-    var $target = $('.cur_prod_view_list');
-    $target.each(function (index, element) {
-        var $parent = $(this).parent('.cur_prod_list_wrap');
-        $parent.addClass('cur_view_idx_' + index);
-        var slideOption = {
-            slidesPerView: 'auto',
-            spaceBetween:0,
-            freeMode: true,
-            observer: true,
-            observeParents: true,
-            slidesPerGroup: 10,
-            speed:900,
-            navigation: {
-                nextEl: ('.cur_view_idx_' + index + ' .swiper-button-next'),
-                prevEl: ('.cur_view_idx_' + index + ' .swiper-button-prev'),
-            },
-        };
-            /* 10개 이상일때 실행 */
-            var tabList = $('.cur_view_idx_' + index + ' .swiper-slide');
-
-
-            if(tabList.length > 10){
-                curProdViewSwiperCont = new Swiper(this, slideOption);
-                $($parent).addClass('swiper-on');
-                $($parent).find('.swiper-wrapper').addClass('start');
-            }           
-
-	});
-}
-
-$(function(){
-    if(!$('.cur_prod_view_list').length) return;
-    curProdViewSwiper();
-});
-
-
-/* cur_prod4_banner */
-function cur_prod4_banner(){
-    var $target = $('.cur_prod4_banner .swiper-container');
-    $target.each(function (index, element) {
-        var $parent = $(this).parent('.cur_prod4_banner');
-        var slideOption = {
-            observer: true,
-            observeParents: true,
-            slidesPerView: 2,
-            slidesPerColumn:2,
-            slidesPerGroup: 4,
-            centeredSlides: false,
-            spaceBetween:36,
-            speed: 700,
-            navigation: {
-                nextEl: $(element).find('.swiper-button-next'),
-                prevEl: $(element).find('.swiper-button-prev'),
-            },
-            pagination: {
-                el: $(element).find('.swiper-pagination'),
-                type: 'fraction',
-                formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
-                },
-                formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
-                }
-            }
-        };
-        if($parent.find('.swiper-slide').length > 4) {
-            var cur_prod_b = new Swiper(this, slideOption);
-        }
-    });
-}
-
-$(function(){
-	if(!$('.cur_prod4_banner').length) return;
-	cur_prod4_banner();
-});
 
 
 /* What’s in your bag : 팝업 */
