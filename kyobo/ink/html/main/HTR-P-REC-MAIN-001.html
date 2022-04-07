@@ -264,8 +264,42 @@
 			<!-- //ht_cont : 최근에 검색하셨나요? -->
 
 
+			<!-- ht_cont : cur_sticky_tab -->
+			<div class="ht_cont cur_sticky_tab">
+				<div class="contents_inner">
+					<!-- tab_box -->
+					<div class="tab_box"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+						<ul>
+							<li>
+								<a href="#curTab01" class="on"><!-- 활성화  class="on" -->
+									<span>관심있을 만한</span>
+								</a>
+							</li>
+							<li>
+								<a href="#curTab02">
+									<span>브랜드 소식</span>
+								</a>
+							</li>
+							<li>
+								<a href="#curTab03">
+									<span>최근 본 상품</span>
+								</a>
+							</li>
+							<li>
+								<a href="#curTab04">
+									<span>신잊고 있는</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- //tab_box --> 
+                </div>
+            </div>
+			<!-- //ht_cont : cur_sticky_tab -->
+
+
 			<!-- ht_cont : 상품과 기획전을 추천 -->
-			<div class="ht_cont cur_recommend">
+			<div class="ht_cont cur_recommend cur_sticky_view" id="curTab01"><!-- 스크롤 타켓 되는 컨텐츠 class="cur_sticky_view" -->
 				<div class="contents_inner">
 					<h2 class="ht_tit center">김미미님이 <strong class="point_line"><em>관심있을 만한</em></strong><br>상품을 추천드려요<img src="../../images/main/tit_cur_recommend.svg" alt=""></h2>
 
@@ -565,7 +599,7 @@
 
 
 			<!-- ht_cont : 브랜드 소식(찜한 브랜드 없는 경우) -->
-			<div class="ht_cont cur_brand_recommend">
+			<div class="ht_cont cur_brand_recommend cur_sticky_view" id="curTab02"><!-- 스크롤 타켓 되는 컨텐츠 class="cur_sticky_view" -->
 				<div class="contents_inner">
 					<h2 class="ht_tit center">혹시, 이 브랜드 어떠세요? <img src="../../images/main/tit_cur_brand_recommend.svg" alt=""></h2>
 					<p class="ht_txt02 center">김미미님이 주로 많이 본 브랜드를 추천해드려요</p>
@@ -729,7 +763,7 @@
 
 
 			<!-- ht_cont : 최근 본 상품 추천 -->
-			<div class="ht_cont cur_prod_view">
+			<div class="ht_cont cur_prod_view cur_sticky_view" id="curTab03"><!-- 스크롤 타켓 되는 컨텐츠 class="cur_sticky_view" -->
 				<div class="contents_inner">
 					<h2 class="ht_tit center"><strong class="point_line ty02"><em>최근 본 상품</em></strong>을 추천해드려요<img src="../../images/main/tit_cur_prod_view.svg" alt=""></h2>
 
@@ -842,7 +876,7 @@ $(function(){
 					<!-- //cur_prod_view -->
 
 					<!-- cur_brand_cont -->
-				   <ul class="cur_brand_cont">
+				    <ul class="cur_brand_cont">
 					   <li class="li tab_cont on" id="cur_prod_view01"><!-- tab_link / tab_cont : 확인용 - Ajax 처리 필요없을 시 class 삭제 -->
 							<!-- cur_prod4_banner : function - cur_prod4_banner(); -->
 							<div class="cur_prod4_banner">
@@ -1126,7 +1160,7 @@ $(function(){
 
 
 			<!-- ht_cont : 잊고 있는 그 상품 -->
-			<div class="ht_cont cur_prod_remind">
+			<div class="ht_cont cur_prod_remind cur_sticky_view" id="curTab04"><!-- 스크롤 타켓 되는 컨텐츠 class="cur_sticky_view" -->
 				<div class="contents_inner">
 					<h2 class="ht_tit center"><strong class="point_line ty03"><em>잊고 있는</em></strong> 그 상품</h2>
 					<p class="ht_txt02 center">김미미님의 찜, 장바구니 할인 상품을 보여드려요</p>

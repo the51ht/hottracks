@@ -376,9 +376,9 @@ function tabSwiper(){
         };
 
         if(tabListWidthTotal > 1200){
-           
+            tabSwiperCont = new Swiper(this, slideOption);
         }
-        tabSwiperCont = new Swiper(this, slideOption);
+
 	});
 }
 
@@ -1448,10 +1448,10 @@ function curProdA(){
             observeParents: true,
             slidesPerView: 'auto',
             centeredSlides: false,
-            loop: false,
+            loop: true,
             loopsSlide: 1,
             spaceBetween: 0,
-            speed: 700,
+            speed: 500,
             effect: 'fade',
             fadeEffect: {
                 crossFade: true
@@ -1719,6 +1719,34 @@ function curProdViewSwiper(){
 $(function(){
     if(!$('.cur_prod_view_list').length) return;
     curProdViewSwiper();
+});
+
+
+
+/* 큐레이션 탭 */
+$(function(){
+    if(!$('.cur_sticky_tab').length) return;
+    $(window).on('scroll', function() {
+        $('.cur_sticky_view').each(function (index, element) {
+            if($(window).scrollTop() >= $(this).offset().top - 205) {
+                $('.cur_sticky_tab a').removeClass('on');
+                $('.cur_sticky_tab a').eq(index).addClass('on');
+            } 
+        });
+    });
+    $.fn.anchorCusChk = function(){
+        $.each(this, function(i,v){
+            $(v).closest('.cur_sticky_tab').find('a').removeClass('on');
+            $(v).addClass('on');
+
+            var s = $(v).attr('href');
+            $('html, body').stop().animate({scrollTop:$(s).offset().top - 200 }, 500);
+        });
+    };
+    $('.cur_sticky_tab a').on('click', function(e) {
+        $(this).anchorCusChk();
+        e.preventDefault();
+    });
 });
 
 
@@ -2080,7 +2108,7 @@ $(function(){
 
 
 
-/* Module E-1 : md;015 */
+/* Module E-1 : md015 */
 $(function(){
     if(!$('.mdl015').length) return;
     $(window).on('scroll', function() {

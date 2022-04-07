@@ -20,6 +20,10 @@
 <script src="wsg/ia_resources/jquery-3.6.0.min.js"></script>
 <script src="wsg/ia_resources/glim.js"></script>
 <style>
+.ia_tbl_wrap table tbody + tbody tr:first-child td {
+	border-top:15px solid #eaeaea;
+}
+
 .point td {background-color:#fff4f1 !important}
 .point .col_date {color:#cb0000;font-weight:700;}
 .point .chk td {background-color:#fecabc !important}
@@ -320,7 +324,7 @@
 											<td class="col_memo" data-label="비고">
 											</td>
 										</tr>
-										<tr class="point05">
+										<tr class="point02">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth">햄버거메뉴</td>
 											<td class="col_2depth" data-label="2Depth"></td>
@@ -334,7 +338,7 @@
 												햄버거 메뉴 개발에 전달 / <span style="color:#cb0000">22.03.14 재수정</span>
 											</td>
 										</tr>
-										<tr class="point05">
+										<tr class="point02">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"></td>
 											<td class="col_2depth" data-label="2Depth"></td>
@@ -345,6 +349,24 @@
 											<td class="col_date" data-label="날짜">22.03.14</td>
 											<td class="col_complete" data-label="상태">완료</td>
 											<td class="col_memo" data-label="비고">22.03.14 재수정
+											</td>
+										</tr>
+									</tbody>
+									<tbody>
+										<tr class="point05">
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"><p class="ico m5">POP</p>대체상품 팝업 Ver.</td>
+											<td class="col_2depth" data-label="2Depth"></td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="html/guide/HTR-M-CTG-LIST-001-POP-100.html" target="_blank">html/guide/HTR-M-CTG-LIST-001-POP-100.html</a>
+											</td>
+											<td class="col_date" data-label="날짜">22.04.07</td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+												<ul>
+													<li style="color:#cb0000;">1. 22.04.07 팝업 ver. 추가</li>
+												</ul>
 											</td>
 										</tr>
 									</tbody>
@@ -390,10 +412,13 @@
 											<td class="col_url" data-label="URL">
 												<a href="html/main/HTR-M-WEL-MAIN-000.html" target="_blank">html/main/HTR-M-WEL-MAIN-000.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22.03.11</td>
+											<td class="col_date" data-label="날짜">22.04.07</td>
 											<td class="col_complete" data-label="상태">완료</td>
 											<td class="col_memo" data-label="비고">
-												오늘만 특가, 큐레이션 전체보기 추가
+												<ul>
+													<li style="color:#cb0000;">1. 22.03.11 오늘만 특가, 큐레이션 전체보기 추가</li>
+													<span style="background-color:#b8e748;color:#cb0000;">2. 22.04.07 카테고리 베스트 : 타이틀 및 대체상품 영역 추가</span>
+												</ul>
 											</td>
 										</tr>
 										<tr class="hid">
@@ -1109,7 +1134,7 @@
 
 									<!-- 큐레이션 -->
 									<tbody>
-										<tr>
+										<tr class="point03">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m4">SJ</p>큐레이션</td>
 											<td class="col_2depth" data-label="2Depth">큐레이션 메인</td>
@@ -1117,10 +1142,12 @@
 											<td class="col_url" data-label="URL">
 												<a href="html/main/HTR-M-CUR-MAIN-000.html" target="_blank">html/main/HTR-M-CUR-MAIN-000.html</a>
 											</td>
-											<td class="col_date" data-label="날짜">22.02.22</td>
+											<td class="col_date" data-label="날짜">22.04.07</td>
 											<td class="col_complete" data-label="상태">완료</td>
 											<td class="col_memo" data-label="비고">
-
+												<ul>
+													<span style="background-color:#b8e748;color:#cb0000;">1. 22.04.07 상단 타이틀 변경</span>
+												</ul>
 											</td>
 										</tr>
 										<tr>
@@ -1524,7 +1551,7 @@
 												<span style="color:#cb0000">확인용</span>
 											</td>
 										</tr>
-										<tr class="point05">
+										<tr class="point03">
 											<td class="col_num" data-label="번호"></td>
 											<td class="col_1depth" data-label="1Depth"><p class="ico m2">BG</p>공통모듈</td>
 											<td class="col_2depth" data-label="2Depth">이벤트/기획전모듈 A</td>
@@ -1536,7 +1563,10 @@
 											<td class="col_date" data-label="날짜">22.02.23</td>
 											<td class="col_complete" data-label="상태">완료</td>
 											<td class="col_memo" data-label="비고">
-												<span style="color:#cb0000">모듈 한페이지로 통합</span>
+												<ul>
+													<li style="color:#cb0000;">1.모듈 한페이지로 통합</li>
+													<li><span style="background-color:#b8e748;color:#cb0000;">2. 011, 012, 013 모듈 PC 디자인에 따른 수정</span></li>
+												</ul>
 											</td>
 										</tr>
 										<tr>
