@@ -376,9 +376,9 @@ function tabSwiper(){
         };
 
         if(tabListWidthTotal > 1200){
-           
+            tabSwiperCont = new Swiper(this, slideOption);
         }
-        tabSwiperCont = new Swiper(this, slideOption);
+
 	});
 }
 
