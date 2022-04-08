@@ -439,7 +439,7 @@
 									<dl>
 										<dt>배송비</dt>
 										<dd>
-											<p>핫트랙스 조건배송<br>2,000원 (20,000원 이상 구매 시 무료)<br>도서 산간 지역 추가 요금 있음</p>
+											<p>핫트랙스 조건배송 2,000원 (20,000원 이상 구매 시 무료)<br>도서 산간 지역 추가 요금 있음</p>
 											<button class="btn_arrow">묶음 배송 상품 보기</button>
 										</dd>
 									</dl>
@@ -536,6 +536,118 @@
 										</div>
 										<!-- //form_sel -->
 									</li>
+
+<script>
+/* 각인서비스 : Select Type  */
+function btnSelectLi(val){
+    $(val).SelectLi();
+}
+function btnSelectChk(val){
+	var tag = ('.select_li_form');
+	var listVar = $(val).closest('li').find('label').text();
+	$(val).closest(tag).find('.select_li_op span').text(listVar);
+	$(tag).removeClass('on');	
+}
+</script>					
+
+									<!-- 22.04 각인서비스 추가 -->
+									<li class="li">
+										<p class="option_msg">↓ 22.04.11 각인서비스 추가</p>
+									</li>
+									<li class="li">
+										<!-- form_sel -->
+										<div class="form_sel w_full">
+											<!-- select_li_form -->
+											<div class="select_li_form">
+												<button type="button" class="select_li_op" onclick="btnSelectLi(this);"><span>각인 서체를 선택하세요</span></button>
+												<!-- select_li_view -->
+												<div class="select_li_view">
+													<!-- select_li_list -->
+													<ul class="select_li_list">
+														<li>
+															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+															<label>
+																<strong>필기체</strong>
+																<span><img src="../../images/guide/img_cus_initials_sample01.jpg" alt=""></span>
+															</label>
+														</li>
+														<li>
+															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+															<label>
+																<strong>잉크버로우체</strong>
+																<span><img src="../../images/guide/img_cus_initials_sample02.jpg" alt=""></span>
+															</label>
+														</li>
+														<li>
+															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+															<label>
+																<strong>모토테입체</strong>
+																<span><img src="../../images/guide/img_cus_initials_sample03.jpg" alt=""></span>
+															</label>
+														</li>
+														<li>
+															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+															<label>
+																<strong>양지난초체</strong>
+																<span><img src="../../images/guide/img_cus_initials_sample04.jpg" alt=""></span>
+															</label>
+														</li>
+														<li>
+															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+															<label>
+																<strong>브랜들리 핸드체</strong>
+																<span><img src="../../images/guide/img_cus_initials_sample05.jpg" alt=""></span>
+															</label>
+														</li>
+														<li>
+															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+															<label>
+																<strong>고딕체</strong>
+																<span><img src="../../images/guide/img_cus_initials_sample06.jpg" alt=""></span>
+															</label>
+														</li>
+														<li>
+															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+															<label>
+																<strong>명조체</strong>
+																<span><img src="../../images/guide/img_cus_initials_sample07.jpg" alt=""></span>
+															</label>
+														</li>
+													</ul>
+													<!-- //select_li_list -->
+
+													<!-- select_li_bottom -->
+													<div class="select_li_bottom">
+														<!-- valid_check -->
+														<div class="valid_check fail">
+															<!-- form_sel -->
+															<div class="form_sel">
+																<textarea class="form_textarea" title="타이틀 입력" placeholder="각인 문구를 입력해주세요(20자 이내)"></textarea>
+															</div>
+															<!-- //form_sel -->
+															<span class="valid_desc">20자 이내로 입력해주세요</span>
+														</div>
+														<!-- //valid_check -->
+
+														<!-- btn_area -->
+														<div class="btn_area">
+															<button type="button" class="btn_md btn_primary"><span>각인신청</span></button>
+															<button type="button" class="btn_md btn_primary" disabled><span>각인신청</span></button>
+														</div>
+														<!-- //btn_area -->
+													</div>
+													<!-- //select_li_bottom -->
+												</div>
+												<!-- //select_li_view -->
+											</div>
+											<!-- //select_li_form -->
+										</div>
+										<!-- //form_sel -->
+									</li>
+									<!-- //22.04 각인서비스 추가 -->
+
+
+
 									<li class="li">
 										<!-- custom_scroll_wrap : .sc_option -->
 										<div class="custom_scroll_wrap sc_option">
