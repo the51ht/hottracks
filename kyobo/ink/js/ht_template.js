@@ -1826,6 +1826,21 @@ $(function(){
 
 
 
+
+/* 제품확대 :  .magnify */
+//var $zoom;
+$(function () {
+    if(!$('.prod_view_img_cont').length) return;
+    // Initiate magnification powers
+    $zoom = $('.ht_zoom').magnify({
+        afterLoad: function() {
+            //console.log('Magnification powers activated!');
+        }
+    });
+});
+
+
+
 /* 베스트 리뷰 */
 function prodPickBanner(){
     var $target = $('.prod_pick_banner .swiper-container');
