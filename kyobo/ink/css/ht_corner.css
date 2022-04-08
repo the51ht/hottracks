@@ -1818,12 +1818,13 @@
 }
 
 .git_wrt_area .ctg_topMenu {
+  position: relative;
   margin: -20px 0 25px 0;
   background: #f7f7f7;
   line-height: 31px;
 }
 
-.git_wrt_area .ctg_topMenu span {
+.git_wrt_area .ctg_topMenu .inner_wrap span {
   height: 33px;
   padding-top: 1px;
   font-size: 12px;
@@ -1832,6 +1833,14 @@
 
 .git_wrt_area .ctg_topMenu .round_ty {
   padding: 15px 15px !important;
+}
+
+.git_wrt_area .ctg_topMenu .btn_line_refresh {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .git_wrt_area .ht_cont_s {
@@ -2433,7 +2442,7 @@
 }
 
 .liv_txt_list .liv_timeline_marker p {
-  color: #FF2700;
+  margin-right: 10px;
   font-weight: 700;
 }
 
@@ -2459,32 +2468,34 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-.liv_txt_list .liv_btn {
+.liv_txt_list .liv_btn_area {
   text-align: left;
   margin-top: 42px;
 }
 
-.liv_txt_list .liv_btn a, .liv_txt_list .liv_btn button {
-  position: relative;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 40px;
-  border: 1px solid;
-  background-color: #fff;
-  padding: 0 29px 0 49px;
-  font-size: 18px;
+.liv_txt_list .liv_btn_area a, .liv_txt_list .liv_btn_area button {
+  border-radius: 25px;
+  font-size: 17px;
   font-weight: 500;
-  letter-spacing: -0.018px;
 }
 
-.liv_txt_list .liv_btn a:before, .liv_txt_list .liv_btn button:before {
-  content: "";
-  width: 20px;
-  height: 20px;
+.liv_txt_list .liv_btn_area .btn_line_gray {
+  border-color: #000;
+}
+
+.liv_txt_list .btn_liv_alarm {
+  position: relative;
+  padding-left: 22px;
+}
+
+.liv_txt_list .btn_liv_alarm:before {
   position: absolute;
-  left: 24px;
-  top: 15px;
-  background: url(../images/guide/ico_bell.svg) no-repeat center/18px;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  background: url("../images/guide/ico_bell.svg") center/100% no-repeat;
+  content: "";
 }
 
 /* alarm_chk02 */
@@ -4681,6 +4692,10 @@
   height: 48px;
   margin: 4px 0 -10px 0;
   vertical-align: top;
+}
+
+.cur_recent .prod_item {
+  width: calc(33.3% - 36px);
 }
 
 .cur_recent .product_pic:before {

@@ -718,6 +718,10 @@ function curation_btn(val){
         $(val).closest('.li').addClass('on')
     }
 }
+$(function(){
+    if(!$('.wel_curation_cont').length) return;
+    $('.curation_box_list:gt(0) .curation_marker li').removeClass('on');
+});
 
 
 
@@ -1819,6 +1823,43 @@ $(function(){
         prodView();
     });
 });
+
+
+
+/* 제품확대 :  .magnify */
+//var $zoom;
+$(function () {
+    if(!$('.prod_view_img_cont').length) return;
+    // Initiate magnification powers
+    $zoom = $('.ht_zoom').magnify({
+        afterLoad: function() {
+            //console.log('Magnification powers activated!');
+        }
+    });
+});
+
+
+
+/* 각인서비스 : Select Type  */
+$(function(){
+    if(!$('.select_li_form').length) return;
+	var tag = ('.select_li_form');
+    $.fn.SelectLi = function(){
+        var tar = $(this).closest(tag);
+        var foldingChk = tar.hasClass('on');
+        if (foldingChk){
+			tar.removeClass('on');
+        } else {
+            tar.addClass('on');
+        }
+    };
+    $('body').click(function(e){
+		if( !$(tag).has(e.target).length){
+			$(tag).removeClass('on');	
+		}
+    });
+});
+
 
 
 
