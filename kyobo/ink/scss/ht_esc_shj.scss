@@ -1,6 +1,7 @@
 /* ht_cpon_shj.scss 와 중복으로 삭제 예정 */
 //review_bnf_desc_list
 .review_bnf_desc_list {
+
     .bnf_desc {
         position: relative;
         line-height: 20px;
@@ -155,6 +156,7 @@
     }
     .pickup_notice_area {
         padding:0 20px;
+        width:708px; margin: 0 auto;
     }
     .pickup_notice_bubble {
         width:708px;
@@ -165,6 +167,8 @@
         border-radius: 12px;
         border:2px solid #000;
         text-align: center;
+        box-sizing:border-box;
+
         &:before{
             content:"";
             position:absolute;
@@ -233,6 +237,7 @@
 /***  =======================   HTR-P-COM-POP   ================================ ***/
 /*pop_phone_info_msg*/
 .pop_phone_info_msg {
+    margin-top:28px;
     .sys_check{
         padding-top:76px;
         &:before {
@@ -252,8 +257,12 @@
     }
 
 }
+.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_footer.mgt60 {
+    margin-top:30px; margin-bottom: -10px;
+}
 /* pop_box_info */
 .pop_box_info {
+    border-radius: 6px;
     .dl {
         display: block;margin-top:5px; overflow: hidden;letter-spacing: -0.014px;font-size: 14px;
         &:first-of-type {
@@ -292,7 +301,7 @@
         margin-right:22px;
     }
     .txt_toast{
-        min-width:347px;position:relative;background:#d4ff1a;border:2px solid #000;;border-radius:44px;padding:18px 40px;box-sizing: border-box;
+        min-width:347px;position:relative;background:#d4ff1a;border:2px solid #000;;border-radius:44px;padding:19px 40px 17px;box-sizing: border-box;
         color: #000;text-align: left;font-size: 16px;line-height:24px;font-weight:500;letter-spacing:-0.016px;
         &:before {
             position:absolute;left:-11px;top:50%;width:0;height:0;border-left:10px solid #000;border-top:7px solid transparent;border-bottom:7px solid transparent;content:"";transform:rotate(180deg);margin-top:-6px;z-index:2;
@@ -378,7 +387,7 @@
                 }
             }
             .dialog_contents {
-                margin-top:11px;padding-bottom: 20px;background-color: transparent;
+                margin-top:12px;padding-bottom: 20px;background-color: transparent;
                 .pop_belt_banner {
                    position:relative;overflow: hidden; border-radius: 12px;
                     &>img {
@@ -386,7 +395,7 @@
                     }
                 }
                 .evt_pop_content {
-                   display: block; width: calc(100% - 60px);padding-left:78px; position:absolute; z-index: 2; left:60px; top:calc(50% - 10px); transform:translateY(-50%); text-align: left; color:#000;
+                   display: block; width: calc(100% - 138px);padding-left:78px; position:absolute; z-index: 2; left:60px; top:calc(50% - 10px); transform:translateY(-50%); text-align: left; color:#000;
                    .tag_wrap {
                        position:absolute;top:5px;left:0;
                         .tag_item{
@@ -417,16 +426,16 @@
                     }
                     .tag_wrap {
                         .tag_item{
-                            color: #ffffff;padding: 1px 15px 4px 12px;background-color: #000000;border: 1px solid #000000;font-size: 11px;font-weight: 700;line-height: 14px;letter-spacing: -0.011px;
+                            color: #ffffff;padding: 3px 15px 2px 12px;background-color: #000000;border: 1px solid #000000;font-size: 11px;font-weight: 700;line-height: 15px;letter-spacing: -0.011px;
                         }
                     }
                     .evt_pop_content{
                         position: absolute;top: 65px;left: 0;text-align: left;display: inline-block;padding: 0 32px;box-sizing:border-box;
                         .main_msg{
-                            font-size: 28px;color: #000;width: 100%;line-height: 36px;font-weight: 700;margin-top: 9px;letter-spacing: -0.7px;
+                            font-size: 28px;color: #000;width: 100%;line-height: 36px;font-weight: 700;margin-top: 12px;letter-spacing: -0.7px;
                         }
                         .sub_txt{
-                            font-size: 13px;color: rgba(0,0,0,0.8); line-height: 18px;margin-top: 14px;
+                            font-size: 13px;color: rgba(0,0,0,0.8); line-height: 18px;margin-top: 15px;
                         }
                     }
                 }
