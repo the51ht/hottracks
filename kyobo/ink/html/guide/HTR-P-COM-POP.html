@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>핫트랙스</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+<link rel="stylesheet" href="../../css/ht_esc_shj.css">
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+
+<script>
+    /* 환영 토스트 메세지 */
+    function toastBtn3(){
+        setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_welcome.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님 즐거운 시간 보내셨나요? <br>핫트랙스에 오신 걸 환영합니다!</div>', 3000);
+    }
+    /* 장바구니 토스트 메세지 */
+    function toastBtn4(){
+        setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_cart.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님 장바구니에 담긴 상품이 있어요! <br><p class="btn_txt_more"><a href="#"><span>장바구니 바로가기</span></a></p></div>', 3000);
+    }
+    /* 이벤트 토스트 메세지 */
+    function toastBtn5(){
+        setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_event.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님! 다양한 이벤트가 진행 중입니다. <br><p class="btn_txt_more"><a href="#"><span>이벤트를 보러가세요</span></a></p></div>', 3000);
+    }
+
+
+    /**
+     * 20220408 환영 / 장바구니 / 이벤트 토스트 메세지
+	 * toast message
+     * @param icon 노출되는 아이콘 내용
+	 * @param msg 노출되는 메세지 내용
+	 * @param timer toast 노출 시간 밀리세컨드로 계산(default: 2000)
+	 */
+	function setToastMessage2(icon, msg, timer){
+		if (!timer) { timer = 2000; }
+
+		var toastCont, dockerHeight, bottomMargin;
+		toastCont = $("<div class='toast_wrap welcome_toast'><span class='toast_message'>" + icon + msg + "</span></div>");
+		dockerHeight = $('.docker_wrapper').height();
+		bottomMargin = 36;
+        console.log(dockerHeight);
+
+		if($('body').find('.toast_wrap').length < 1) $('body').append(toastCont);
+
+		toastCont.slideToggle(200, function() {
+			if (!isNaN(timer)) {
+				setTimeout(function() {
+					toastCont.fadeOut(function() {
+						$(this).remove();
+					});
+				}, timer);
+			}
+		});
+
+    }
+    </script>
+</head>
+
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps" style="background-color:#fff;">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner" style="height:42px;;"></div>
+		</div>
+		<!-- service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<div class="gnb_search_wrap" style="height:79px;line-height:79px;color:#000;font-size:20px;font-weight:700;text-align:center;">HEADER</div>
+			<nav class="gnb_wrap" style="height:80px;box-sizing:border-box;"></nav>
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap">
+            
+			<!-- ht_cont -->
+			<div class="ht_cont">
+				<div class="contents_inner">
+					<!-- 팝업 -->
+					<div class="ht_cont">
+						<h2 class="ht_tit05">시스템 점검</h2>
+						<button type="button" class="btn_sm btn_light_gray" data-role="btn-dialog" data-target="#popSystem01"><span class="text">시스템 점검 사전 안내/ #popSystem01</span></button>
+
+						<button type="button" class="btn_sm btn_light_gray" data-role="btn-dialog" data-target="#popSystem02"><span class="text">시스템 점검 중 안내 / #popSystem02</span></button> 
+
+					</div>
+					<!-- //팝업 -->
+
+
+					<!-- 텍스트 정보 팝업 --> 
+					<div class="ht_cont">
+						<h2 class="ht_tit05">토스트</h2>
+
+						<button type="button" class="btn_sm btn_primary"  onclick ="toastBtn3();"><span class="text">환영 메시지/ #popHpPop01</span></button>
+						<button type="button" class="btn_sm btn_primary"  onclick ="toastBtn4();"><span class="text">장바구니 바로가기 / #popHpPop02</span></button>
+						<button type="button" class="btn_sm btn_primary"  onclick ="toastBtn5();"><span class="text">이벤트 보러가기 / #popHpPop03</span></button>
+					</div>
+					<!-- //텍스트 정보 팝업 -->
+ 
+
+                    <!-- 이미지 정보 팝업 -->
+					<div class="ht_cont">
+						<h2 class="ht_tit05">이미지 정보 팝업</h2>
+
+						<button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popImg01"><span class="text">이미지 팝업(하단) / #popImg01</span></button>
+						<button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popImg02"><span class="text">이미지 팝업(전체) / #popImg02</span></button>
+					</div>
+					<!-- //이미지 정보 팝업 -->
+
+
+                    <br><br><br><br>
+				</div>
+			</div>
+			<!-- //ht_cont -->
+
+		</section>
+		<!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+</div>
+<!-- // wrapper -->
+
+
+<!-- 팝업 : 시스템 점검 사전 안내 / popSystem01 -->
+<div id="popSystem01" class="dialog_wrap" data-class="dialog_sm">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <!-- pop_phone_info_msg -->
+        <div class="pop_phone_info_msg">
+            <p class="sys_check">시스템 점검 사전 안내</p>
+        </div>
+        <!-- //pop_phone_info_msg -->
+
+        <!-- pop_box_info -->
+        <div class="pop_box_info">
+            <dl class="dl">
+                <dt class="dt">점검일시</dt>
+                <dd class="dd">12월 09일(목) 02:00~06:00</dd>
+            </dl>
+            <dl class="dl">
+                <dt class="dt">작업내용</dt>
+                <dd class="dd">시스템 정기점검</dd>
+            </dl>
+        </div>
+        <!-- //pop_box_info -->
+        <!-- pop_info -->
+        <ul class="pop_info">
+            <li class="none">핫트랙스의 보다 나은 서비스를 위해 서버 점검이 예정되어 있습니다. 점검 시간에는 사이트 접속이 불가하오니 양해 바랍니다.</li>
+        </ul>
+        <!-- //pop_info -->
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_primary" data-dialog-close><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- 팝업 : 시스템 점검 사전 안내 / popSystem01 -->
+
+
+
+<!-- 팝업 : 시스템 점검 중 안내 / popSystem02 -->
+<div id="popSystem02" class="dialog_wrap" data-class="dialog_sm">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <!-- pop_phone_info_msg -->
+        <div class="pop_phone_info_msg">
+            <p class="sys_check_ing">핫트랙스 몰 시스템 점검 중</p>
+        </div>
+        <!-- //pop_phone_info_msg -->
+
+        <!-- pop_box_info -->
+        <div class="pop_box_info">
+            <dl class="dl">
+                <dt class="dt">점검일시</dt>
+                <dd class="dd">12월 09일(목) 02:00~06:00</dd>
+            </dl>
+            <dl class="dl">
+                <dt class="dt">작업내용</dt>
+                <dd class="dd">시스템 정기점검</dd>
+            </dl>
+        </div>
+        <!-- //pop_box_info -->
+        <!-- pop_info -->
+        <ul class="pop_info">
+            <li class="none">시스템 안정성 및 성능 개선을 위한 작업을 진행중입니다. 서비스 이용에 불편을 드리는 점 양해 부탁드립니다. 보다 나은 서비스로 보답하겠습니다. 감사합니다</li>
+        </ul>
+        <!-- //pop_info -->
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_primary" data-dialog-close><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- 팝업 : 시스템 점검 중 안내 / popSystem02 -->
+
+
+<!--  이미지 팝업(하단) : popImg01 -->
+<div id="popImg01" class="dialog_wrap btm_wel_wrap" data-class="dialog_bottom">
+	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <span class="form_chk">
+            <input id="exChk01" type="checkbox">
+            <label for="exChk01">오늘 하루 보지 않기</label>
+        </span>
+    </div>
+    <!-- //dialog_header -->
+
+	<!-- dialog_contents -->
+	<div class="dialog_contents">
+        <div class="pop_belt_banner">
+            <img src="../../images/temp/@img_wel_pop_holiday_belt.jpg" alt="">
+        </div>
+        <div class="evt_pop_content">
+            <div class="tag_wrap">
+                <span class="tag_item">10%</span>
+            </div>
+            <div class="main_msg">배송비 걱정 없이 쇼핑하는 거 어떠세요?</div>
+            <div class="sub_txt">한 번만 써본 사람은 없는 마스크 믿고 쓰는 아에르!</div>
+        </div>
+	</div>
+	<!-- //dialog_contents -->
+</div>
+<!-- //이미지 팝업(하단) : popImg01 -->
+
+<!-- 이미지 팝업(전체) : popImg02 -->
+<div id="popImg02" class="dialog_wrap dialog_wrap_wel" data-class="dialog_sm">
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents evt_pop_cotent no_margin_top img_pop">
+        <div class="evt_pop_img">
+            <img src="../../images/temp/@img_wel_pop_holiday_full.jpg" alt="">
+        </div>
+        <div class="evt_pop_content">
+            <div class="tag_wrap">
+                <span class="tag_item">10%</span>
+            </div>
+            <div class="main_msg">
+                배송비 걱정 없이<br>쇼핑하는 거 어떠세요?
+            </div>
+            <div class="sub_txt">
+                설 선물 맛집 핫트랙스에서<br>
+                새해 복 가득 담아 선물하세요
+            </div>
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer no_margin_top">
+        <button type="button" class="btn_lg btn_line_white" data-dialog-close><span class="text">오늘은 그만보기</span></button>
+        <button type="button" class="btn_lg btn_line_white" data-dialog-close><span class="text">닫기</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- //이미지 팝업 : popImg02 -->
+
+</body>
+</html>
