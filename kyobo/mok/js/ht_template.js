@@ -1475,14 +1475,14 @@ function musLpshop(){
         observeParents: true,
         slidesPerView: 'auto',
         centeredSlides: false,
-        loop: false,
+        loop: true,
         loopsSlide: 1,
         spaceBetween:0,
-        /*autoplay: {
-            delay:5000,
-            disableOnInteraction: false,
-        },*/
-        speed: 700,
+        autoplay: {
+            delay:0,
+            disableOnInteraction: true,
+        },
+        speed: 3000,
 		pagination: false,
     };
     musLpshopSwiper = new Swiper($target.get(), slideOption);
