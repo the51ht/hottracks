@@ -1224,11 +1224,7 @@
 
     // liv_txt_list
     .liv_txt_list {
-        position:absolute;
-        width:600px;
-        top:50%;
-        transform:translateY(-50%);
-        left:100px;
+        position:absolute;left:100px;top:50%;width:600px;transform:translateY(-50%);
         .title {
             color:#fff;
             span {
@@ -1348,16 +1344,31 @@
         text-align:left;
         margin-top:42px;
         a, button {
+            min-width:auto;;
+            padding:0 29px;
+            border-radius:25px;
             border-radius:25px;font-size:17px;font-weight:500;
         }
         .btn_line_gray {
-            border-color:#000;
+            padding-top:0;
         }
     }
     .btn_liv_alarm {
-        position:relative;padding-left:22px;;
+        border-color:#000;
+        span {
+            position:relative;padding-left:22px;;
+            &:before {
+                position:absolute;left:0;top:2px;width:18px;height:18px;background:url('../images/guide/ico_bell.svg') center/100% no-repeat;content:"";  
+            }
+        }
+    }
+    .btn_wel_live.on {
+        color:#000;
         &:before {
-            position:absolute;left:0;top:2px;width:18px;height:18px;background:url('../images/guide/ico_bell.svg') center/100% no-repeat;content:"";  
+            border-color:#fff;
+        }
+        &:after {
+            background-color:#fff;
         }
     }
 }
@@ -1789,7 +1800,7 @@
         }
     }
     p {
-        padding-top:2px;color:#000;font-size:16px;
+        padding-top:2px;color:#fc0000;font-size:16px;
         strong {
             font-weight:500;
         }
@@ -2386,12 +2397,13 @@
 .cur_recent {
     background:#f5ede2 url("../images/main/bg_wel_curation.jpg") center top/32px repeat;
     .ht_tit {
+        text-align:center;
         img {
             height:48px;margin:4px 0 -10px 0;vertical-align:top;
         }
     }
-    .prod_item {
-        width:calc(33.3% - 36px);
+    .evt_products {
+        justify-content:center;
     }
     .product_pic {
         &:before {

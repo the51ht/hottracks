@@ -2302,11 +2302,11 @@
 
 .cor_live_banner .liv_txt_list {
   position: absolute;
-  width: 600px;
+  left: 100px;
   top: 50%;
+  width: 600px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 100px;
 }
 
 .cor_live_banner .liv_txt_list .title {
@@ -2478,21 +2478,28 @@
 }
 
 .liv_txt_list .liv_btn_area a, .liv_txt_list .liv_btn_area button {
+  min-width: auto;
+  padding: 0 29px;
+  border-radius: 25px;
   border-radius: 25px;
   font-size: 17px;
   font-weight: 500;
 }
 
 .liv_txt_list .liv_btn_area .btn_line_gray {
-  border-color: #000;
+  padding-top: 0;
 }
 
 .liv_txt_list .btn_liv_alarm {
+  border-color: #000;
+}
+
+.liv_txt_list .btn_liv_alarm span {
   position: relative;
   padding-left: 22px;
 }
 
-.liv_txt_list .btn_liv_alarm:before {
+.liv_txt_list .btn_liv_alarm span:before {
   position: absolute;
   left: 0;
   top: 2px;
@@ -2500,6 +2507,18 @@
   height: 18px;
   background: url("../images/guide/ico_bell.svg") center/100% no-repeat;
   content: "";
+}
+
+.liv_txt_list .btn_wel_live.on {
+  color: #000;
+}
+
+.liv_txt_list .btn_wel_live.on:before {
+  border-color: #fff;
+}
+
+.liv_txt_list .btn_wel_live.on:after {
+  background-color: #fff;
 }
 
 /* alarm_chk02 */
@@ -3418,7 +3437,7 @@
 
 .liv_timeline_marker p {
   padding-top: 2px;
-  color: #000;
+  color: #fc0000;
   font-size: 16px;
 }
 
@@ -4701,14 +4720,20 @@
   background: #f5ede2 url("../images/main/bg_wel_curation.jpg") center top/32px repeat;
 }
 
+.cur_recent .ht_tit {
+  text-align: center;
+}
+
 .cur_recent .ht_tit img {
   height: 48px;
   margin: 4px 0 -10px 0;
   vertical-align: top;
 }
 
-.cur_recent .prod_item {
-  width: calc(33.3% - 36px);
+.cur_recent .evt_products {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cur_recent .product_pic:before {
