@@ -123,8 +123,8 @@ function welLive(){
         observer: true,
         observeParents: true,
         slidesPerView: 'auto',
-        centeredSlides: false,
-        loop: false,
+        centeredSlides: true,
+        loop: true,
         loopsSlide: 1,
         spaceBetween: 0,
         /*autoplay: {
@@ -146,7 +146,7 @@ function welLive(){
             activeIndexChange: function () {
                 $('.wel_live_good_ani').removeClass('on');
                 $('.wel_live_cont .swiper-slide').removeClass('act');
-                $('.wel_live_cont .swiper-slide').eq(this.realIndex).addClass('act');
+                $('.wel_live_cont .swiper-slide').eq(this.activeIndex).addClass('act');
             }
         }
     };

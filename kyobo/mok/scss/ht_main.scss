@@ -333,7 +333,7 @@
 .wel_live {
     padding:60px 0 45px 0;background:#000;overflow:hidden;
     .mc_tit {
-        margin-bottom:20px;padding:0 30px;text-align:left;
+        margin-bottom:20px;padding:0 30px;text-align:center;
         img {
             height:34px;
         }
@@ -345,9 +345,21 @@
 
 /* eye_wel_live */
 .eye_wel_live {
-    position:relative;margin:-12px 30px 10px 30px;padding-left:12px;color:#d4ff1a;font-size:14px;font-weight:700;line-height:22px;
+    position:relative;margin:-12px 20px 10px 14.5%;padding-left:12px;color:#d4ff1a;font-size:14px;font-weight:700;line-height:22px;
     &:before {
         position:absolute;left:0;top:7px;width:6px;height:6px;background:#d4ff1a;border-radius:50%;content:"";
+    }
+}
+
+.eye_wel_live + .wel_live_cont {
+    .live_btn {
+        margin-top:6px;
+    }
+    .img_wel_live {
+        margin-top:15px;
+    }
+    .live_box_img {
+        margin-top:13px;
     }
 }
 
@@ -358,10 +370,9 @@
         overflow:initial;
     }
     .swiper-slide {
-        position: relative;
-        width:80%;margin:0 0 35px 20px;opacity:0.6;transition:opacity 0.4s;
+        position:relative;width:71%;margin:0 10px 35px 10px;opacity:0.6;transition:opacity 0.4s;
         .live_box {
-            padding-left:10px;color:#fff;text-align:left
+            color:#fff;text-align:left;
         }
         &.act {
             opacity:1;
@@ -398,7 +409,7 @@
             margin-right:calc(20% - 20px);
         }
         .live_box_img {
-            position:relative;width:100%;height:calc((100vw - 12.2vw) + 156px);max-height:806px;border-radius:8px;overflow:hidden;
+            position:relative;width:100%;height:calc( (71vw * 1.5) + 128px);max-height:927px;border-radius:8px;overflow:hidden;
             p {
                 position:absolute;left:0;top:0;width:100%;height:100%;
                 img {
@@ -420,15 +431,18 @@
         }
     }
     .tit_wel_live {
-        display:-webkit-box;min-height:56px;padding-right:50px;font-size:20px;font-weight:700;line-height:28px;opacity:0;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;transition:opacity 0.4s;
+        display:-webkit-box;min-height:56px;font-size:20px;font-weight:700;line-height:28px;opacity:0;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;transition:opacity 0.4s;
     }
     .txt_wel_live {
-        margin-top:8px;color:#999;font-size:14px;font-weight:400;line-height:22px;opacity:0;transition:opacity 0.5s;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
+        margin-top:4px;color:#999;font-size:14px;font-weight:400;line-height:22px;opacity:0;transition:opacity 0.5s;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
     }
     .img_wel_live {
-        position:relative;width:calc(100% + 10px);margin:20px 0 0 -10px;border-radius:12px;overflow:hidden;
+        position:relative;width:100%;height:0;margin-top:20px;padding-top:150%;border-radius:12px;overflow:hidden;
+        & > .img {
+            position:absolute;left:50%;top:50%;width:100%;height:100%;transform:translate(-50%,-50%);
+        }
         img {
-            width:100%;
+            width:100%;height:100%;object-fit:cover;
         }
         .wel_live_time {
             position:absolute;left:50%;top:50%;transform:translate(-50%,-70%);text-align:center;opacity:0;transition:opacity 0.4s;
@@ -453,10 +467,13 @@
     }
 }
 .live_btn {
-    position:relative;margin-top:14px;opacity:0;transition:opacity 0.4s;
+    position:relative;min-height:38px;margin-top:14px;vertical-align:top;opacity:0;transition:opacity 0.4s;
+    .alarm_chk {
+        margin:-2px 0 -6px 0;vertical-align:top;
+    }
 }
 .btn_wel_live {
-    display:inline-block;position:relative;height:37px;padding:0 15px;border-radius:19px;box-sizing:border-box;color:#fff;line-height:38px;overflow:hidden;
+    display:inline-block;position:relative;height:38px;padding:1px 15px 0 15px;border-radius:19px;box-sizing:border-box;color:#fff;line-height:38px;overflow:hidden;
     &:after {
         position:absolute;left:0;top:0;width:100%;height:100%;border:1px solid rgba(255,255,255,0.3);border-radius:19px;box-sizing:border-box;content:"";
     }
