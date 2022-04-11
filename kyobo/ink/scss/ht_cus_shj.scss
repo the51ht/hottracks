@@ -1,0 +1,203 @@
+/***   HTR-P-CUS-MAIN   ***/
+
+/***   HTR-P-CUS-MAIN   ***/
+
+
+
+/***   HTR-P-CUS-INFO   ***/
+.cus_view_upper {
+    padding-bottom:0;
+    .tab_txt {
+        margin-bottom: 30px;
+    }
+}
+//cus_font_box
+.info_text_box.cus_list_box {
+    padding:30px 40px 40px;
+    border-radius: 12px;
+    .ht_tit05 {
+        margin-bottom:10px;
+    }
+    .point_line {
+        img {
+            width:18px;  
+            margin-top:-7px;
+            margin-left:2px;
+        }
+        &:before {
+            height:14px;
+            top:10px;
+    
+        }
+    }
+    .bul_list li {
+        margin-top:8px !important;
+        line-height: 19px;
+        font-size: 13px;
+        color:#292929;
+        strong {
+            color:#000;
+        }
+        .lighter {
+            color:#767676;
+        }
+    }
+    &.letter {
+        background:url(../images/guide/cus_font_box.png) no-repeat center /cover;
+        .point_line:before {
+            background-color: #FFC09F;
+        }
+    }
+    &.package {
+        background:url(../images/guide/cus_package_box.svg) no-repeat center /cover;
+        .point_line:before {
+            background-color: #FFE65C;
+        }
+    }
+    &.card {
+        background:url(../images/guide/cus_card_box.svg) no-repeat center /cover;
+        .point_line:before {
+            background-color: #9AF8C2;
+        }
+    }
+}
+//cus_view_list
+.cus_view_list {
+    overflow: hidden;
+    & > .li {
+        width:482px;
+        float:left;
+        margin-top:30px;
+        &:nth-of-type(2n + 1) {
+            margin-right:30px;
+        }
+    }
+}
+.cus_view_box {
+    padding:29px 30px !important;
+    border:1px solid #EAEAEA;
+    border-radius: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    &.ty02 {
+        margin-top:30px;
+    }
+}
+.cus_initials {
+    & > li {
+        margin-bottom:15px;
+        padding-bottom:14px;
+        border-bottom: 1px dashed #D5D5D5;
+        display: flex;
+        justify-content: space-between;
+
+        &:last-of-type {
+            margin-bottom:0;
+            padding-bottom:0;
+            border-bottom:none;
+        }
+    }
+    span {
+        height:24px;
+        line-height:24px;
+        margin:0;
+        img {
+            height:100%;
+        }
+    }
+}
+//cus_package_list 
+.cus_package_list {
+    display: flex;
+    flex-flow: row wrap; 
+    & > li {
+        width:calc(100% / 3);
+        height: 212px;
+        line-height: 212px;
+        border-right:1px dashed #D5D5D5;
+        border-bottom: 1px dashed #D5D5D5;
+        box-sizing: border-box;
+        padding: 0 42px;
+        position:relative;
+        &:nth-of-type(3n) {
+            border-right: none;
+        }
+        &:nth-last-of-type( -n + 3 ){
+            border-bottom:none;
+        }
+        &:before {
+            content:"";
+            position:absolute;
+            width:20px;
+            height:20px;
+            background:#fff;
+            right:-10px;
+            bottom:-10px;
+            z-index:1;
+        }
+    }
+    img {
+        width:100%;
+    }
+}
+//cus_card_area
+.cus_card_area {
+    margin-bottom: 40px;
+    .ht_tit06 {
+        margin-bottom:20px;
+        text-align: center;
+    }
+    .cus_card_box {
+        width:315px;
+        margin:0 auto;
+        border-radius: 14px;
+        border:1px solid #CCC;
+        overflow: hidden;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+        img {
+            width:100%;
+        }
+    }
+    .btn_area {
+        margin-top:35px;
+        button {
+            min-width:164px;
+        }
+    }
+}
+.card_promotion {
+    tr th.center {
+        padding:20px 0 !important;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 19px;
+        strong {
+            font-size: 13px;
+            font-weight: 500;
+            color:#000;
+        }
+    }
+    .align_left {
+        padding:19px 30px !important;
+    }    
+    th:first-of-type, td:first-of-type {
+        border-right:1px solid #d5d5d5;
+    }
+    [class^=bul_item_] {
+        font-size: 13px;
+        color:#000;
+        em {
+            font-size: 12px;
+        }
+    }
+}
+.cus_bul {
+    margin:15px 0 18px;
+    [class^=bul_item_] {
+        line-height: 19px;
+        font-size: 13px;
+        color:#767676;
+    }
+}
+
+/***   HTR-P-CUS-INFO   ***/
