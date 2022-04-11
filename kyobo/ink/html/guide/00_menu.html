@@ -23,7 +23,7 @@
 
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+<link rel="stylesheet" href="https://pub-onk.ndev.kyobobook.co.kr/assets/common/css/style_ink.css" />
 
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
@@ -57,7 +57,6 @@
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
 </head>
-
 <body>
 <!-- skip_nav_wrap -->
 <div class="skip_nav_wrap">
@@ -177,6 +176,7 @@
 
 		<!-- header_inner -->
 		<div class="header_inner">
+			<!-- gnb_search_wrap -->
 			<div class="gnb_search_wrap">
 				<div class="logo_box">
 					<a href="#" class="logo_link"><span class="hidden">핫트랙스</span></a>
@@ -210,7 +210,11 @@
 					</li>
 				</ul>
 			</div>
+			<!-- //gnb_search_wrap -->
+
+			<!-- gnb_wrap -->
 			<nav class="gnb_wrap">
+				<!-- anb_wrap -->
 				<div class="anb_wrap">
 					<button type="button" class="btn_anb"><span class="hidden">전체메뉴</span></button>
 					<div class="anb_area">
@@ -222,1119 +226,1370 @@
 									<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
 									<li class="tab_item"><a href="#tabAnbCategory" class="tab_link"><span class="tab_text">카테고리 전체보기</span></a></li>
 									<li class="tab_item"><a href="#tabAnbService" class="tab_link"><span class="tab_text">서비스 전체보기</span></a></li>
-									<!--<li class="tab_item"><a href="#tabAnbMyMenu" class="tab_link my_menu"><span class="tab_text">MY MENU <span class="fc_green">5</span></span></a></li>-->
 								</ul>
 							</div>
 							<!-- //tab_list_wrap -->
+							
 							<!-- 카테고리 전체보기 -->
-							<div id="tabAnbCategory" class="tab_content anb_category">
-								<p style="height:535px;background-color:#f4f4f4;color:#da2128;font-size:16px;font-weight:500;line-height:535px;text-align:center;">카테고리 전체보기 - height : 535px - 디자인 작업중!!</p>
+							<div id="tabAnbCategory" class="tab_content">
+								<div class="tab_wrap type_md channel">
+									<!-- tab_list_wrap -->
+									<div class="tab_list_wrap">
+										<ul class="tabs">
+											<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
+											<li class="tab_item"><a href="#tabAnbCategoryKyobo" class="tab_link"><span class="tab_text">교보문고</span></a></li>
+											<li class="tab_item"><a href="#tabAnbCategoryEbook" class="tab_link"><span class="tab_text">eBook</span></a></li>
+											<li class="tab_item"><a href="#tabAnbCategorySam" class="tab_link"><span class="tab_text">sam</span></a></li>
+											<li class="tab_item"><a href="#tabAnbCategoryHotTracks" class="tab_link"><span class="tab_text">핫트랙스</span></a></li>
+										</ul>
+									</div>
+									<!-- //tab_list_wrap -->
 
-								<div class="anb_category_inner" style="display:none;">
-									<!-- 카테고리 탭 -->
-									<div class="tab_wrap category">
-										<!-- tab_list_wrap -->
-										<div class="tab_list_wrap">
-											<ul class="tabs">
-												<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
-												<li class="tab_item"><a href="#tabAnbCategorySub01" class="tab_link"><span class="tab_text">국내도서</span></a></li>
-												<li class="tab_item"><a href="#tabAnbCategorySub02" class="tab_link"><span class="tab_text">외국도서</span></a></li>
-												<li class="tab_item"><a href="#tabAnbCategorySub03" class="tab_link"><span class="tab_text">CASTing</span></a></li>
-												<li class="tab_item"><a href="#tabAnbCategorySub04" class="tab_link"><span class="tab_text">교보 ONLY</span></a></li>
+									<!-- 카테고리 - 교보문고 -->
+									<div id="tabAnbCategoryKyobo" class="tab_content anb_category">
+										<div class="anb_category_inner">
+											<!-- 카테고리 탭 -->
+											<div class="tab_wrap category">
+												<!-- tab_list_wrap -->
+												<div class="tab_list_wrap">
+													<ul class="tabs">
+														<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
+														<li class="tab_item"><a href="#tabAnbCategoryKyobo01" class="tab_link"><span class="tab_text">국내도서</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryKyobo02" class="tab_link"><span class="tab_text">외국도서</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryKyobo03" class="tab_link"><span class="tab_text">CASTing</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryKyobo04" class="tab_link"><span class="tab_text">교보 ONLY</span></a></li>
+													</ul>
+												</div>
+												<!-- //tab_list_wrap -->
+												<!-- 국내도서 -->
+												<div id="tabAnbCategoryKyobo01" class="tab_content has_banner">
+													<div class="custom_scroll_wrap">
+														<div class="category_view_area">
+															<a href="#" class="btn_arw_link"><span class="text">국내도서 전체</span></a>
+															<div class="fold_box_wrap category">
+																<!-- 메뉴 1단 영역 -->
+																<div class="col_area">
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<!-- DESC : 메뉴 강조 Case 1. fw_bold class 추가 -->
+																			<div class="fold_box_header fw_bold">소설 <button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<!-- DESC : 메뉴 강조 Case 2. fc_green class 추가 -->
+																			<div class="fold_box_header fc_green">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header fw_bold">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">자기개발</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">인문</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 1단 영역 -->
+
+																<!-- 메뉴 2단 영역 -->
+																<div class="col_area">
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">자기개발</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">인문</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 2단 영역 -->
+
+																<!-- 메뉴 3단 영역 -->
+																<div class="col_area">
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">자기개발</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">인문</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 3단 영역 -->
+															</div>
+														</div>
+
+														<!-- 스페셜 코너 -->
+														<div class="special_corner_area">
+															<div class="title_wrap title_size_xs">
+																<p class="title_heading">스페셜 코너</p>
+															</div>
+
+															<ul class="special_corner_list">
+																<li class="special_corner_item"><a href="#" class="special_corner_link">오늘의 책</a></li>
+																<li class="special_corner_item"><a href="#" class="special_corner_link">문장수집</a></li>
+																<li class="special_corner_item"><a href="#" class="special_corner_link">이 달의 책</a></li>
+																<li class="special_corner_item"><a href="#" class="special_corner_link">특가도서/정가인하</a></li>
+																<li class="special_corner_item"><a href="#" class="special_corner_link">추천도서</a></li>
+																<li class="special_corner_item"><a href="#" class="special_corner_link">이럴땐이런책</a></li>
+															</ul>
+														</div>
+														<!-- // 스페셜 코너 -->
+													</div>
+
+													<!-- 배너 이미지 영역 -->
+													<div class="banner_box">
+														<a href="#" class="banner_link">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_anb_banner.png" alt="임시 배너 이미지">
+														</a>
+													</div>
+													<!-- // 배너 이미지 영역 -->
+												</div>
+												<!-- // 국내도서 -->
+												<!-- 외국도서 -->
+												<div id="tabAnbCategoryKyobo02" class="tab_content has_banner">
+													<div class="custom_scroll_wrap">
+														<div style="width: 100%; height: 100%; background: rgba(255, 0, 0, .5); color: #fff; font-size: 16px;">국내도서와 동일</div>
+													</div>
+
+													<!-- 배너 이미지 영역 -->
+													<div class="banner_box">
+														<a href="#" class="banner_link">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_anb_banner2.png" alt="임시 배너 이미지">
+														</a>
+													</div>
+													<!-- // 배너 이미지 영역 -->
+												</div>
+												<!-- // 외국도서 -->
+												<!-- CASTing -->
+												<div id="tabAnbCategoryKyobo03" class="tab_content has_banner">
+													<div class="custom_scroll_wrap">
+														<div style="width: 100%; height: 100%; background: rgba(255, 0, 0, .5); color: #fff; font-size: 16px;">국내도서와 동일</div>
+													</div>
+
+													<!-- 배너 이미지 영역 -->
+													<div class="banner_box">
+														<a href="#" class="banner_link">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_anb_banner.png" alt="임시 배너 이미지">
+														</a>
+													</div>
+													<!-- // 배너 이미지 영역 -->
+												</div>
+												<!-- // CASTing -->
+												<!-- 교보 ONLY -->
+												<div id="tabAnbCategoryKyobo04" class="tab_content has_banner">
+													<div class="custom_scroll_wrap">
+														<div style="width: 100%; height: 100%; background: rgba(255, 0, 0, .5); color: #fff; font-size: 16px;">국내도서와 동일</div>
+													</div>
+
+													<!-- 배너 이미지 영역 -->
+													<div class="banner_box">
+														<a href="#" class="banner_link">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_anb_banner2.png" alt="임시 배너 이미지">
+														</a>
+													</div>
+													<!-- // 배너 이미지 영역 -->
+												</div>
+												<!-- //교보 ONLY -->
+											</div>
+											<!-- // 카테고리 탭 -->
+
+										</div>
+										<div class="anb_category_bottom">
+											<!-- 주력 서비스 -->
+											<ul class="recommend_service_list">
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">이달의 책</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_02.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">손글씨캠페인</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_03.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">손글씨 폰트</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_04.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">시그니처 향</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_05.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">책놀이터</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_06.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">책 그리고 꽃</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_07.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">문장수집</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_08.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">바로드림</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] class 추가 -->
+														<span class="img_box no_img">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_09.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">분철서비스</span>
+													</a>
+												</li>
 											</ul>
+											<!-- // 주력 서비스 -->
 										</div>
-										<!-- //tab_list_wrap -->
-										<!-- 국내도서 -->
-										<div id="tabAnbCategorySub01" class="tab_content">
-											<div class="custom_scroll_wrap">
-												<div class="category_view_area">
-													<a href="#" class="btn_arw_link"><span class="text">국내도서 전체</span></a>
-													<div class="fold_box_wrap category">
-														<!-- 메뉴 1단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<!-- DESC : 메뉴 강조 Case 1. fw_bold class 추가 -->
-																	<div class="fold_box_header fw_bold">소설 <button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<!-- DESC : 메뉴 강조 Case 2. fc_green class 추가 -->
-																	<div class="fold_box_header fc_green">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 카테고리가 구분되는 경우 여백처리를 위해 [gap] class 추가 -->
-																<li class="fold_box gap">
-																	<!-- DESC : 메뉴 강조 Case 3. fc_green class 추가, ico_new 구조 추가 -->
-																	<div class="fold_box_header fc_green">경제/경영<span class="ico_new"><span class="hidden">new</span></span><button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 1단 영역 -->
-
-														<!-- 메뉴 2단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<!-- DESC : 카테고리가 구분되는 경우 여백처리를 위해 [gap] class 추가 -->
-																<li class="fold_box no_fold gap">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 2단 영역 -->
-
-														<!-- 메뉴 3단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 카테고리가 구분되는 경우 여백처리를 위해 [gap] class 추가 -->
-																<li class="fold_box gap">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 3단 영역 -->
-													</div>
-												</div>
-
-												<!-- 스페셜 코너 -->
-												<div class="special_corner_area">
-													<div class="title_wrap title_size_sm">
-														<p class="title_heading">스페셜 코너</p>
-													</div>
-
-													<ul class="special_corner_list">
-														<li class="special_corner_item"><a href="#" class="special_corner_link">오늘의 책</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">문장수집</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">이 달의 책</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">특가도서/정가인하</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">추천도서</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">이럴땐이런책</a></li>
-													</ul>
-												</div>
-												<!-- // 스페셜 코너 -->
-											</div>
-										</div>
-										<!-- // 국내도서 -->
-										<!-- 외국도서 -->
-										<div id="tabAnbCategorySub02" class="tab_content">
-											<div class="custom_scroll_wrap">
-												<div class="category_view_area">
-													<a href="#" class="btn_arw_link"><span class="text">외국도서 전체</span></a>
-													<div class="fold_box_wrap category">
-														<!-- 메뉴 1단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설 <button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 1단 영역 -->
-
-														<!-- 메뉴 2단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 2단 영역 -->
-
-														<!-- 메뉴 3단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 3단 영역 -->
-													</div>
-												</div>
-
-												<!-- 스페셜 코너 -->
-												<div class="special_corner_area">
-													<div class="title_wrap title_size_sm">
-														<p class="title_heading">스페셜 코너</p>
-													</div>
-
-													<ul class="special_corner_list">
-														<li class="special_corner_item"><a href="#" class="special_corner_link">오늘의 책</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">문장수집</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">이 달의 책</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">특가도서/정가인하</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">추천도서</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">이럴땐이런책</a></li>
-													</ul>
-												</div>
-												<!-- // 스페셜 코너 -->
-											</div>
-										</div>
-										<!-- // 외국도서 -->
-										<!-- CASTing -->
-										<!-- TODO : CASTing, 교보 ONLY 디자인 수급 후 수정예정 -->
-										<div id="tabAnbCategorySub03" class="tab_content">
-											<div class="custom_scroll_wrap">
-												<div class="category_view_area">
-													<a href="#" class="btn_arw_link"><span class="text">CASTing</span></a>
-													<div class="fold_box_wrap category">
-														<!-- 메뉴 1단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설 <button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 1단 영역 -->
-
-														<!-- 메뉴 2단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 2단 영역 -->
-
-														<!-- 메뉴 3단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 3단 영역 -->
-													</div>
-												</div>
-
-												<!-- 스페셜 코너 -->
-												<div class="special_corner_area">
-													<div class="title_wrap title_size_sm">
-														<p class="title_heading">스페셜 코너</p>
-													</div>
-
-													<ul class="special_corner_list">
-														<li class="special_corner_item"><a href="#" class="special_corner_link">오늘의 책</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">문장수집</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">이 달의 책</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">특가도서/정가인하</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">추천도서</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">이럴땐이런책</a></li>
-													</ul>
-												</div>
-												<!-- // 스페셜 코너 -->
-											</div>
-										</div>
-										<!-- // CASTing -->
-										<!-- 교보 ONLY -->
-										<!-- TODO : CASTing, 교보 ONLY 디자인 수급 후 수정예정 -->
-										<div id="tabAnbCategorySub04" class="tab_content">
-											<div class="custom_scroll_wrap">
-												<div class="category_view_area">
-													<a href="#" class="btn_arw_link"><span class="text">교보 ONLY</span></a>
-													<div class="fold_box_wrap category">
-														<!-- 메뉴 1단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설 <button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 1단 영역 -->
-
-														<!-- 메뉴 2단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 2단 영역 -->
-
-														<!-- 메뉴 3단 영역 -->
-														<div class="col_area">
-															<ul class="fold_box_list">
-																<li class="fold_box">
-																	<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체222</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체333</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<li class="fold_box">
-																	<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-																	<div class="fold_box_contents">
-																		<ul class="category_list">
-																			<li class="category_item"><a href="#" class="category_link">전체444</a></li>
-																			<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
-																			<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
-																		</ul>
-																	</div>
-																</li>
-																<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">자기개발</a></div>
-																</li>
-																<li class="fold_box no_fold">
-																	<div class="fold_box_header"><a href="#">인문</a></div>
-																</li>
-															</ul>
-														</div>
-														<!-- // 메뉴 3단 영역 -->
-													</div>
-												</div>
-
-												<!-- 스페셜 코너 -->
-												<div class="special_corner_area">
-													<div class="title_wrap title_size_sm">
-														<p class="title_heading">스페셜 코너</p>
-													</div>
-
-													<ul class="special_corner_list">
-														<li class="special_corner_item"><a href="#" class="special_corner_link">오늘의 책</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">문장수집</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">이 달의 책</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">특가도서/정가인하</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">추천도서</a></li>
-														<li class="special_corner_item"><a href="#" class="special_corner_link">이럴땐이런책</a></li>
-													</ul>
-												</div>
-												<!-- // 스페셜 코너 -->
-											</div>
-										</div>
-										<!-- //교보 ONLY -->
 									</div>
-									<!-- // 카테고리 탭 -->
+									<!-- //카테고리 - 교보문고 -->
 
-									<!-- 배너 이미지 영역 -->
-									<div class="banner_box">
-										<a href="#" class="banner_link">
-											<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_anb_banner.png" alt="임시 배너 이미지">
-										</a>
+									<!-- 카테고리 - eBook -->
+									<div id="tabAnbCategoryEbook" class="tab_content anb_category">
+										<div class="anb_category_inner">
+											<!-- 카테고리 탭 -->
+											<div class="tab_wrap category ebook">
+												<!-- tab_list_wrap -->
+												<div class="tab_list_wrap">
+													<ul class="tabs">
+														<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
+														<li class="tab_item"><a href="#tabAnbCategoryEbook01" class="tab_link"><span class="tab_text">eBook</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryEbook02" class="tab_link"><span class="tab_text">오디오북</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryEbook03" class="tab_link"><span class="tab_text">동영상북</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryEbook04" class="tab_link"><span class="tab_text">eBook+</span></a></li>
+													</ul>
+												</div>
+												<!-- //tab_list_wrap -->
+												<!-- eBook -->
+												<div id="tabAnbCategoryEbook01" class="tab_content has_special">
+													<div class="custom_scroll_wrap">
+														<div class="category_view_area">
+															<div class="fold_box_wrap category col_4">
+																<!-- 메뉴 1단 영역 -->
+																<div class="col_area">
+																	<div class="title_wrap title_size_xs">
+																		<p class="title_heading">일반</p>
+																	</div>
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<!-- DESC : 메뉴 강조 Case 1. fw_bold class 추가 -->
+																			<div class="fold_box_header fw_bold">소설 <button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<!-- DESC : 메뉴 강조 Case 2. fc_green class 추가 -->
+																			<div class="fold_box_header fc_green">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header fw_bold">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">자기개발</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">인문</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">역사/문화</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">정치/사회</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">국어/외국어</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">건강/의학</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">교재/수험서</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">IT/프로그래밍</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 1단 영역 -->
+
+																<!-- 메뉴 2단 영역 -->
+																<!-- DESC : 타이틀 분기 없이 단을 넘어오는 경우 col_area에 title_gap 클래스 추가 -->
+																<div class="col_area title_gap">
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<div class="fold_box_header">과학/공학<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">예술/대중문화<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">종교<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">가정/생활/요리<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">여행/취미</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">매거진</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">청소년교양</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">아동</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">유아</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">북모닝CEO</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">외국도서</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 2단 영역 -->
+
+																<!-- 메뉴 3단 영역 -->
+																<div class="col_area">
+																	<div class="title_wrap title_size_xs">
+																		<p class="title_heading">로맨스</p>
+																	</div>
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<div class="fold_box_header">현대로맨스<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">동서양시대물<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">로맨스 판타지<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">할리퀸<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">TL/관능<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">성인소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																	</ul>
+																	<div class="title_wrap title_size_xs">
+																		<p class="title_heading">BL</p>
+																	</div>
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<div class="fold_box_header">국내 BL<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">해외 BL<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">GL<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 3단 영역 -->
+
+																<!-- 메뉴 4단 영역 -->
+																<div class="col_area">
+																	<div class="title_wrap title_size_xs">
+																		<p class="title_heading">코믹스</p>
+																	</div>
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<div class="fold_box_header">웹툰<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">교양/역사만화<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">드라마<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">성인만화<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">순정만화</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">스포츠만화</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">액션/무협 만화</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">명랑/코믹 만화</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">기타 만화</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">BL 만화</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">학원 만화</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 4단 영역 -->
+															</div>
+														</div>
+													</div>
+
+													<!-- 스페셜 코너 -->
+													<div class="special_corner_area">
+														<div class="title_wrap title_size_sm">
+															<p class="title_heading">스페셜 코너</p>
+														</div>
+
+														<ul class="special_corner_list">
+															<li class="special_corner_item"><a href="#" class="special_corner_link">eBook 집중탐구</a></li>
+															<li class="special_corner_item"><a href="#" class="special_corner_link">혜택라운지</a></li>
+															<li class="special_corner_item"><a href="#" class="special_corner_link">이벤트캘린더</a></li>
+															<li class="special_corner_item"><a href="#" class="special_corner_link">신간캘린더</a></li>
+															<li class="special_corner_item"><a href="#" class="special_corner_link">교보Original</a></li>
+														</ul>
+													</div>
+													<!-- // 스페셜 코너 -->
+												</div>
+												<!-- //eBook -->
+												<!-- 오디오북 -->
+												<div id="tabAnbCategoryEbook02" class="tab_content has_special">
+													<div class="custom_scroll_wrap">
+														<div style="width: 100%; height: 100%; background: rgba(255, 0, 0, .5); color: #fff; font-size: 16px;">eBook과 동일</div>
+													</div>
+												</div>
+												<!-- //오디오북 -->
+												<!-- 동영상북 -->
+												<div id="tabAnbCategoryEbook03" class="tab_content has_special">
+													<div class="custom_scroll_wrap">
+														<div style="width: 100%; height: 100%; background: rgba(255, 0, 0, .5); color: #fff; font-size: 16px;">eBook과 동일</div>
+													</div>
+												</div>
+												<!-- //동영상북 -->
+												<!-- eBook+ -->
+												<div id="tabAnbCategoryEbook04" class="tab_content has_special">
+													<div class="custom_scroll_wrap">
+														<div style="width: 100%; height: 100%; background: rgba(255, 0, 0, .5); color: #fff; font-size: 16px;">eBook과 동일</div>
+													</div>
+												</div>
+												<!-- //eBook+ -->
+											</div>
+											<!-- // 카테고리 탭 -->
+										</div>
+										<div class="anb_category_bottom">
+											<!-- 주력 서비스 -->
+											<ul class="recommend_service_list">
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">sam무제한 첫달무료</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_02.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">sam프리미엄 첫달특가</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_03.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">sam 회원혜택</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_04.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">열람권 선물하기</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_05.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">샘통북통</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_06.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">학술논문</span>
+													</a>
+												</li>
+											</ul>
+											<!-- // 주력 서비스 -->
+
+											<div class="banner_box">
+												<a href="#" class="banner_link">
+													<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_anb_banner_bottom.png" alt="임시 배너 이미지">
+												</a>
+											</div>
+										</div>
 									</div>
-									<!-- // 배너 이미지 영역 -->
+									<!-- //카테고리 - eBook -->
+
+									<!-- 카테고리 - sam -->
+									<div id="tabAnbCategorySam" class="tab_content anb_category">
+										<div class="anb_category_inner">
+											<!-- 카테고리 탭 -->
+											<div class="tab_wrap category sam">
+												<!-- tab_list_wrap -->
+												<div class="tab_list_wrap">
+													<ul class="tabs">
+														<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
+														<li class="tab_item"><a href="#tabAnbCategorySam01" class="tab_link"><span class="tab_text">sam 카테고리</span></a></li>
+													</ul>
+												</div>
+												<!-- //tab_list_wrap -->
+												<!-- 국내도서 -->
+												<div id="tabAnbCategorySam01" class="tab_content has_banner">
+													<div style="width: 100%; height: 100%; background: rgba(255, 0, 0, .5); color: #fff; font-size: 16px;">sam 카테고리 수급 후 적용 예정</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- //카테고리 - sam -->
+									
+									<!-- 카테고리 - 핫트랙스 -->
+									<div id="tabAnbCategoryHotTracks" class="tab_content anb_category">
+										<div class="anb_category_inner">
+											<!-- 카테고리 탭 -->
+											<div class="tab_wrap category gnb_hottracks">
+											<!-- <div class="tab_wrap category hot_tracks"> -->
+												<!-- tab_list_wrap -->
+												<div class="tab_list_wrap">
+													<ul class="tabs">
+														<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks01" class="tab_link"><span class="tab_text">디자인문구</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks02" class="tab_link"><span class="tab_text">디지털/자동차</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks03" class="tab_link"><span class="tab_text">필기구</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks04" class="tab_link"><span class="tab_text">오피스</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks05" class="tab_link"><span class="tab_text">리빙/생활가전</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks06" class="tab_link"><span class="tab_text">키친</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks07" class="tab_link"><span class="tab_text">푸드</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks08" class="tab_link"><span class="tab_text">가구/수납</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks09" class="tab_link"><span class="tab_text">패션잡화</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks10" class="tab_link"><span class="tab_text">뷰티/헬스</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks11" class="tab_link"><span class="tab_text">여행/취미</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks12" class="tab_link"><span class="tab_text">유아동</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks13" class="tab_link"><span class="tab_text">CD/LP</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks14" class="tab_link"><span class="tab_text">DVD</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks14" class="tab_link"><span class="tab_text">BLU-RAY</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks15" class="tab_link"><span class="tab_text">Only Hottracks</span></a></li>
+													</ul>
+												</div>
+												<!-- //tab_list_wrap -->
+
+												<!-- 디자인문구 -->
+												<div id="tabAnbCategoryHotTracks01" class="tab_content has_banner">
+													<div class="custom_scroll_wrap">
+														<div class="category_view_area">
+															<a href="#" class="btn_arw_link"><span class="text">디자인문구 전체</span></a>
+															<div class="fold_box_wrap category">
+																<!-- 메뉴 1단 영역 -->
+																<div class="col_area">
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<!-- DESC : 메뉴 강조 Case 1. fw_bold class 추가 -->
+																			<div class="fold_box_header fw_bold">소설 <button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<!-- DESC : 메뉴 강조 Case 2. fc_green class 추가 -->
+																			<div class="fold_box_header fc_green">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header fw_bold">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">자기개발</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">인문</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 1단 영역 -->
+
+																<!-- 메뉴 2단 영역 -->
+																<div class="col_area">
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">자기개발</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">인문</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 2단 영역 -->
+
+																<!-- 메뉴 3단 영역 -->
+																<div class="col_area">
+																	<ul class="fold_box_list">
+																		<li class="fold_box">
+																			<div class="fold_box_header">소설<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">러시아소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">시/에세이<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체222</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체333</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<li class="fold_box">
+																			<div class="fold_box_header">경제/경영<button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
+																			<div class="fold_box_contents">
+																				<ul class="category_list">
+																					<li class="category_item"><a href="#" class="category_link">전체444</a></li>
+																					<li class="category_item"><a href="#" class="category_link">한국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">영미소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">일본소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">중국소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">프랑스 소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">독일소설</a></li>
+																					<li class="category_item"><a href="#" class="category_link">북유럽소설</a></li>
+																				</ul>
+																			</div>
+																		</li>
+																		<!-- DESC : 폴딩 없는경우 no_fold class 추가 -->
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">자기개발</a></div>
+																		</li>
+																		<li class="fold_box no_fold">
+																			<div class="fold_box_header"><a href="#">인문</a></div>
+																		</li>
+																	</ul>
+																</div>
+																<!-- // 메뉴 3단 영역 -->
+															</div>
+														</div>
+													</div>
+
+													<!-- 배너 이미지 영역 -->
+													<div class="banner_box">
+														<a href="#" class="banner_link">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_anb_banner.png" alt="임시 배너 이미지">
+														</a>
+													</div>
+													<!-- // 배너 이미지 영역 -->
+												</div>
+												<!-- // 디자인문구 -->
+												
+											</div>
+											<!-- // 카테고리 탭 -->
+
+										</div>
+
+										<!-- anb_category_bottom -->
+										<div class="anb_category_bottom">
+											<!-- 주력 서비스 -->
+											<ul class="recommend_service_list">
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">이달의 책</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_02.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">손글씨캠페인</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_03.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">손글씨 폰트</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_04.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">시그니처 향</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_05.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">책놀이터</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_06.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">책 그리고 꽃</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_07.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">문장수집</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
+														<span class="img_box">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_08.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">바로드림</span>
+													</a>
+												</li>
+												<li class="recommend_service_item">
+													<a href="#" class="recommend_service_link">
+														<!-- DESC : 이미지 없는경우, img_box [no_img] class 추가 -->
+														<span class="img_box no_img">
+															<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_recommend_service_09.png" alt="주력 서비스 임시 이미지">
+														</span>
+														<span class="title">분철서비스</span>
+													</a>
+												</li>
+											</ul>
+											<!-- // 주력 서비스 -->
+										</div>
+										<!-- //anb_category_bottom -->
+									</div>
+									<!-- //카테고리 - 핫트랙스 -->
 								</div>
-
-								<!-- 주력 서비스 -->
-								<ul class="recommend_service_list" style="display:none;">
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
-											<span class="img_box">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">이달의 책</span>
-										</a>
-									</li>
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
-											<span class="img_box">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">손글씨캠페인</span>
-										</a>
-									</li>
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
-											<span class="img_box">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">손글씨 폰트</span>
-										</a>
-									</li>
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
-											<span class="img_box">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">시그니처 향</span>
-										</a>
-									</li>
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
-											<span class="img_box">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">책놀이터</span>
-										</a>
-									</li>
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
-											<span class="img_box">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">책 그리고 꽃</span>
-										</a>
-									</li>
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
-											<span class="img_box">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">문장수집</span>
-										</a>
-									</li>
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] clas 추가 -->
-											<span class="img_box">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">바로드림</span>
-										</a>
-									</li>
-									<li class="recommend_service_item">
-										<a href="#" class="recommend_service_link">
-											<!-- DESC : 이미지 없는경우, img_box [no_img] class 추가 -->
-											<span class="img_box no_img">
-												<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_recommend_service.png" alt="주력 서비스 임시 이미지">
-											</span>
-											<span class="title">분철서비스</span>
-										</a>
-									</li>
-								</ul>
-								<!-- // 주력 서비스 -->
 							</div>
 							<!-- //카테고리 전체보기 -->
+
 							<!-- 서비스 전체보기 -->
 							<div id="tabAnbService" class="tab_content anb_service">
 								<div class="custom_scroll_wrap">
@@ -1516,802 +1771,13 @@
 								</div>
 							</div>
 							<!-- //서비스 전체보기 -->
-							<!-- MY MENU -->
-							<div id="tabAnbMyMenu" class="tab_content anb_mymenu">
-								<!-- 카테고리 탭 -->
-								<div class="tab_wrap category">
-									<!-- tab_list_wrap -->
-									<div class="tab_list_wrap">
-										<ul class="tabs">
-											<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
-											<li class="tab_item"><a href="#tabAnbMymenuSub01" class="tab_link"><span class="tab_text">국내도서</span></a></li>
-											<li class="tab_item"><a href="#tabAnbMymenuSub02" class="tab_link"><span class="tab_text">외국도서</span></a></li>
-											<li class="tab_item"><a href="#tabAnbMymenuSub03" class="tab_link"><span class="tab_text">CASTing</span></a></li>
-											<li class="tab_item"><a href="#tabAnbMymenuSub04" class="tab_link"><span class="tab_text">교보 ONLY</span></a></li>
-										</ul>
-									</div>
-									<!-- //tab_list_wrap -->
-									<!-- 국내도서 -->
-									<div id="tabAnbMymenuSub01" class="tab_content">
-										<div class="category_inner">
-											<div class="custom_scroll_wrap">
-												<div class="title_wrap title_size_sm">
-													<p class="title_heading">국내도서</p>
-												</div>
-												<div class="category_group">
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- DESC : 데이터 없는 경우 no_data 추가 -->
-										<div class="favorite_menu_wrap">
-											<div class="btn_wrap">
-												<button type="button" class="btn_xs btn_light_gray"><span class="ico_star"></span><span class="text">전체해제</span></button>
-											</div>
-
-											<!-- DESC : 즐겨찾기 list append 시, 커스텀 스크롤 recaculate() 함수 실행 필요
-												$('.favorite_menu_wrap .custom_scroll_wrap')[0].SimpleBar.recalculate();
-												실행 예시는 html/ink/pc_guide/04_contents_07_custom_scroll.html 페이지 참고
-											-->
-											<div class="custom_scroll_wrap">
-												<!-- 데이터 있는 경우 -->
-												<ul class="favorite_menu_list">
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-												</ul>
-												<!-- // 데이터 있는 경우 -->
-												<!-- 데이터 없는 경우 -->
-												<!--<div class="no_data">
-													<div class="no_data_desc">MY MENU 설정을 통해 즐겨 찾는 메뉴를 <br />한번에 모아 볼 수 있어요</div>
-												</div>-->
-												<!-- // 데이터 없는 경우 -->
-											</div>
-										</div>
-									</div>
-									<!-- // 국내도서 -->
-									<!-- 외국도서 -->
-									<div id="tabAnbMymenuSub02" class="tab_content">
-										<div class="category_inner">
-											<div class="custom_scroll_wrap">
-												<div class="title_wrap title_size_sm">
-													<p class="title_heading">외국도서</p>
-												</div>
-												<div class="category_group">
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- DESC : 데이터 없는 경우 no_data 추가 -->
-										<div class="favorite_menu_wrap no_data">
-											<div class="btn_wrap">
-												<button type="button" class="btn_xs btn_light_gray" disabled><span class="ico_star"></span><span class="text">전체해제</span></button>
-											</div>
-
-											<!-- DESC : 즐겨찾기 list append 시, 커스텀 스크롤 recaculate() 함수 실행 필요
-												$('.favorite_menu_wrap .custom_scroll_wrap')[0].SimpleBar.recalculate();
-												실행 예시는 html/ink/pc_guide/04_contents_07_custom_scroll.html 페이지 참고
-											-->
-											<div class="custom_scroll_wrap">
-												<!-- 데이터 없는 경우 -->
-												<div class="no_data">
-													<div class="no_data_desc">MY MENU 설정을 통해 즐겨 찾는 메뉴를 <br />한번에 모아 볼 수 있어요</div>
-												</div>
-												<!-- // 데이터 없는 경우 -->
-											</div>
-										</div>
-									</div>
-									<!-- // 외국도서 -->
-									<!-- CASTing -->
-									<div id="tabAnbMymenuSub03" class="tab_content">
-										<div class="category_inner">
-											<div class="custom_scroll_wrap">
-												<div class="title_wrap title_size_sm">
-													<p class="title_heading">CASTing</p>
-												</div>
-												<div class="category_group">
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- DESC : 데이터 없는 경우 no_data 추가 -->
-										<div class="favorite_menu_wrap">
-											<div class="btn_wrap">
-												<button type="button" class="btn_xs btn_light_gray"><span class="ico_star"></span><span class="text">전체해제</span></button>
-											</div>
-
-											<!-- DESC : 즐겨찾기 list append 시, 커스텀 스크롤 recaculate() 함수 실행 필요
-												$('.favorite_menu_wrap .custom_scroll_wrap')[0].SimpleBar.recalculate();
-												실행 예시는 html/ink/pc_guide/04_contents_07_custom_scroll.html 페이지 참고
-											-->
-											<div class="custom_scroll_wrap">
-												<!-- 데이터 있는 경우 -->
-												<ul class="favorite_menu_list">
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-												</ul>
-												<!-- // 데이터 있는 경우 -->
-												<!-- 데이터 없는 경우 -->
-												<!--<div class="no_data">
-													<div class="no_data_desc">MY MENU 설정을 통해 즐겨 찾는 메뉴를 <br />한번에 모아 볼 수 있어요</div>
-												</div>-->
-												<!-- // 데이터 없는 경우 -->
-											</div>
-										</div>
-									</div>
-									<!-- // CASTing -->
-									<!-- 교보 ONLY -->
-									<div id="tabAnbMymenuSub04" class="tab_content">
-										<div class="category_inner">
-											<div class="custom_scroll_wrap">
-												<div class="title_wrap title_size_sm">
-													<p class="title_heading">교보 ONLY</p>
-												</div>
-												<div class="category_group">
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-													<div class="col_area">
-														<ul class="category_list">
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">소설</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-																<span class="category_name">시/에세이</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">경제/경영</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">자기계발</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">인문</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">역사/문화</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">종교</span>
-															</li>
-															<li class="category_item">
-																<button type="button" class="btn_favorite"><span class="hidden">즐겨찾기 추가</span></button>
-																<span class="category_name">정치/사회</span>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<!-- DESC : 데이터 없는 경우 no_data 추가 -->
-										<div class="favorite_menu_wrap">
-											<div class="btn_wrap">
-												<button type="button" class="btn_xs btn_light_gray"><span class="ico_star"></span><span class="text">전체해제</span></button>
-											</div>
-
-											<!-- DESC : 즐겨찾기 list append 시, 커스텀 스크롤 recaculate() 함수 실행 필요
-												$('.favorite_menu_wrap .custom_scroll_wrap')[0].SimpleBar.recalculate();
-												실행 예시는 html/ink/pc_guide/04_contents_07_custom_scroll.html 페이지 참고
-											-->
-											<div class="custom_scroll_wrap">
-												<!-- 데이터 있는 경우 -->
-												<ul class="favorite_menu_list">
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">소설</span>
-														</a>
-													</li>
-													<li class="favorite_menu_item">
-														<button type="button" class="btn_favorite active"><span class="hidden">즐겨찾기 해제</span></button>
-														<a href="#" class="favorite_menu_link">
-															<span class="depth01_title">국내도서</span>
-															<span class="gap">&gt;</span>
-															<span class="depth02_title">시/에세이</span>
-														</a>
-													</li>
-												</ul>
-												<!-- // 데이터 있는 경우 -->
-												<!-- 데이터 없는 경우 -->
-												<!--<div class="no_data">
-													<div class="no_data_desc">MY MENU 설정을 통해 즐겨 찾는 메뉴를 <br />한번에 모아 볼 수 있어요</div>
-												</div>-->
-												<!-- // 데이터 없는 경우 -->
-											</div>
-										</div>
-									</div>
-									<!-- //교보 ONLY -->
-								</div>
-								<!-- // 카테고리 탭 -->
-							</div>
-							<!-- //MY MENU -->
 						</div>
 						<!-- //tab_wrap -->
 					</div>
 				</div>
-
+				<!-- //anb_wrap -->
+				
+				<!-- gnb_list -->
 				<ul class="gnb_list">
 					<li class="gnb_item"><a href="#" class="gnb_link gnb_marker"><img src="../../images/layout/ico_main_menu_music.svg" alt="">음반·영상</a></li>
 					<li class="gnb_item"><a href="#" class="gnb_link gnb_marker">라이브</a></li>
@@ -2321,14 +1787,18 @@
 					<li class="gnb_item"><a href="#" class="gnb_link">선물추천</a></li>
 					<li class="gnb_item"><a href="#" class="gnb_link">큐레이션</a></li>
 				</ul>
+				<!-- //gnb_list -->
 
+				<!-- gnb_sub_list -->
 				<ul class="gnb_sub_list">
 					<li class="gnb_sub_item"><a href="#" class="gnb_sub_link">이벤트</a></li>
 					<li class="gnb_sub_item"><a href="#" class="gnb_sub_link">베스트</a></li>
 					<li class="gnb_sub_item"><a href="#" class="gnb_sub_link">신상품</a></li>
 					<li class="gnb_sub_item"><a href="#" class="gnb_sub_link">무료배송</a></li>
 				</ul>
+				<!-- // -->
 			</nav>
+			<!-- //gnb_wrap -->
 		</div>
 		<!-- //header_inner -->
 	</header>
