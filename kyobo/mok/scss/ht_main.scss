@@ -483,6 +483,10 @@
 0% {transform:rotate(0deg) scale(5);}
 100% {transform:rotate(360deg) scale(5);}
 }
+@keyframes btn_wel_live2 {
+0% {transform:rotate(0deg) scale(15);}
+100% {transform:rotate(360deg) scale(15);}
+}
 
 
 /* alarm_chk */
@@ -2690,6 +2694,20 @@
     }
     .liv_btn_area {
         margin-top:25px;
+    }
+    .btn_wel_live.on {
+        height:50px;border-radius:6px;
+        color:#000;
+        font-size:15px;;font-weight:500;
+        &:before {
+            border-color:#fff;border-radius:6px;;
+        }
+        &:after {
+            background-color:#fff;border-radius:4px;
+        }
+        i {
+            animation:btn_wel_live2 2.2s linear infinite;
+        }
     }
 }
 
