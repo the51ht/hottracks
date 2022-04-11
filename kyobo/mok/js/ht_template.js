@@ -127,10 +127,10 @@ function welLive(){
         loop: true,
         loopsSlide: 1,
         spaceBetween: 0,
-        /*autoplay: {
+        autoplay: {
             delay:5000,
             disableOnInteraction: false,
-        },*/
+        },
         speed: 700,
 		pagination: {
 			el: $('.wel_live_cont').find('.swiper-pagination')[0],
