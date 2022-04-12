@@ -76,6 +76,52 @@
   content: "";
 }
 
+.cus_qna_view .form_qna_wrap .form_code_list .form_title {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d {
+  padding: 17px 14px 14px;
+  margin-top: 10px;
+  border: 1px solid #d5d5d5;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d .img {
+  top: 45px;
+  left: initial;
+  right: 14px;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d .txt {
+  padding-left: 0px;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d .txt .s1 {
+  margin-bottom: 12px;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d .txt .s1 .info {
+  font-weight: 400;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d .txt .s1 span:nth-of-type(2) {
+  margin-left: 10px;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d .txt .s1 span:nth-of-type(2):before {
+  left: -6px;
+  top: 1px;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d .txt .s2 {
+  margin-bottom: 13px;
+}
+
+.cus_qna_view .form_qna_wrap .form_code_list .fold_d .txt .s3 + .s3 {
+  margin-top: 6px;
+}
+
 .cus_qna_view .form_qna_wrap.form_wrap .form_box {
   width: calc(73.5% - 160px);
   display: table;
@@ -214,6 +260,7 @@
   /* Search Area : form_search_box */
   /* Search Area : cus_chk_list */
   /* FAQ, QNA, 상품문의 내역 목록 */
+  /* QNA 주문내역 조회 팝업 : .cus_qna_code_pop*/
 }
 
 .ht_cus_cont .form_search_cont {
@@ -262,7 +309,7 @@
 }
 
 .ht_cus_cont .cus_chk_list.mb {
-  margin: 0 0 16px 0;
+  margin: 0 0 18px 0;
 }
 
 .ht_cus_cont .prod_fold_view {
@@ -277,6 +324,12 @@
 .ht_cus_cont .fold_view {
   margin-top: 18px;
   border-radius: 6px;
+}
+
+.ht_cus_cont .fold_view:after {
+  display: block;
+  content: "";
+  clear: both;
 }
 
 .ht_cus_cont .fold_ty {
@@ -390,6 +443,40 @@
   float: left;
 }
 
+.ht_cus_cont .fold_question.fold_q {
+  display: inline-block;
+  width: 83%;
+}
+
+.ht_cus_cont .fold_question.fold_d + .fold_question {
+  margin-top: 0;
+  border: 0;
+}
+
+.ht_cus_cont .fold_question .info {
+  position: relative;
+  font-size: 12px;
+  font-size: 10px;
+  color: #292929;
+  background: #F5F5F5;
+  border: #F5F5F5;
+  margin-right: 0;
+  float: right;
+  height: 20px;
+  padding: 0 9px;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 20px;
+}
+
+.ht_cus_cont .fold_question_btn {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(17% - 44px);
+  margin-top: 0;
+}
+
 .ht_cus_cont .fold_d {
   position: relative;
   min-height: 90px;
@@ -439,13 +526,10 @@
 .ht_cus_cont .fold_d .txt .s1 {
   line-height: 16px;
   color: #000;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -455,11 +539,19 @@
   font-size: 13px;
   font-weight: 500;
   margin-bottom: 4px;
+  display: -webkit-box;
+  max-height: 22px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .ht_cus_cont .fold_d .txt .s1 span {
   line-height: 16px;
   position: relative;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .ht_cus_cont .fold_d .txt .s1 span:nth-of-type(2) {
@@ -533,7 +625,7 @@
 .ht_cus_cont .fold_d .txt .s3 {
   line-height: 16px;
   padding-right: 80px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: -0.014px;
   color: #767676;
   display: -webkit-box;
@@ -620,24 +712,237 @@
   line-height: 22px;
 }
 
-.ht_cus_cont .fold_question.fold_d + .fold_question {
-  margin-top: 0;
-  border: 0;
+.ht_cus_cont.cus_qna_code_pop {
+  /* fold_ty02 */
 }
 
-.ht_cus_cont .fold_question .info {
+.ht_cus_cont.cus_qna_code_pop .fold_ty02_area {
   position: relative;
-  font-size: 12px;
-  font-size: 10px;
-  color: #292929;
-  background: #F5F5F5;
-  border: #F5F5F5;
-  margin-right: 0;
-  float: right;
-  height: 20px;
-  padding: 0 9px;
-  border-radius: 10px;
+  max-height: calc(100vh - 265px);
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  line-height: 20px;
+          box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 {
+  position: relative;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li {
+  position: relative;
+  margin-top: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  -webkit-transition: border 0.4s;
+  transition: border 0.4s;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li.on {
+  border-color: #000;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li.on .fold_tit02 .s1 {
+  background-color: #000;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li.on .fold_tit02 .s1 strong, .ht_cus_cont.cus_qna_code_pop .fold_ty02 .li.on .fold_tit02 .s1 span {
+  color: #fff;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li.on .fold_view02 {
+  display: block;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li.on .fold_view02 > ul > li {
+  border-bottom: 1px dotted #D5D5D5;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li.on .fold_view02 > ul > li:last-of-type {
+  border-bottom: none;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li.on .fold_btn span:after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_ty02 .li:first-child {
+  margin-top: 0;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 {
+  position: relative;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .s1 {
+  height: 36px;
+  padding: 0 19px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #eaeaea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 36px;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .s1 strong {
+  float: left;
+  color: #767676;
+  font-weight: 500;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .s1 span {
+  float: right;
+  width: calc(100% - 70px);
+  color: #000;
+  font-weight: 400;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: right;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .s2 {
+  position: relative;
+  padding: 17px 19px 13px;
+  color: #595959;
+  font-size: 13px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .s2 .c1 {
+  width: calc(100% - 40px);
+  font-weight: 400;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .s2 .c1 span {
+  display: inline-block;
+  max-width: calc(100% - 36px);
+  padding-right: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .s2 .c2 {
+  color: #000;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .fold_btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .fold_btn button, .ht_cus_cont.cus_qna_code_pop .fold_tit02 .fold_btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .fold_btn span {
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_tit02 .fold_btn span:after {
+  right: 20px;
+  top: 50%;
+  margin-top: -10px;
+  width: 22px;
+  height: 22px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 {
+  display: none;
+  margin: 0 18px 20px 20px;
+  border-top: 1px solid #EAEAEA;
+  -webkit-animation: fade both 0.5s;
+          animation: fade both 0.5s;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 > ul > li {
+  position: relative;
+  padding-left: 33px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 > ul > li .form_rdo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 > ul > li .form_rdo label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 > ul > li .form_rdo input + label:after {
+  top: 21px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 > ul > li .form_rdo input + label:before {
+  top: 15px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d {
+  border: none;
+  padding: 16px 0px 0;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d .img {
+  top: 44px;
+  left: initial;
+  right: 0px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d .txt {
+  padding-left: 0px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d .txt .s1 {
+  margin-bottom: 12px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d .txt .s1 .info {
+  font-weight: 400;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d .txt .s1 span:nth-of-type(2) {
+  margin-left: 10px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d .txt .s1 span:nth-of-type(2):before {
+  left: -6px;
+  top: 1px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d .txt .s2 {
+  margin-bottom: 15px;
+}
+
+.ht_cus_cont.cus_qna_code_pop .fold_view02 .fold_d .txt .s3 + .s3 {
+  margin-top: 6px;
 }

@@ -30,9 +30,6 @@
 <!-- //ht_ Hottracks css : 공통작업 -->
 
 
-<link rel="stylesheet" href="../../css/ht_cpon_shj.css">
-
-
 <!-- Polyfill javascript -->
 <script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
 
@@ -59,50 +56,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<script>
-	/* icon3_banner */
-	function icon3_banner(){
-		var $target = $('.icon3_banner .swiper-container');
-		$target.each(function (index, element) {
-			var $parent = $(this).parent('.icon3_banner');
-			var slideOption = {
-				observer: true,
-				observeParents: true,
-				slidesPerView: 'auto',
-				centeredSlides: false,
-				slidesPerGroup: 3,
-				spaceBetween:0,
-				speed: 1000,
-				navigation: {
-					nextEl: $(element).find('.swiper-button-next'),
-					prevEl: $(element).find('.swiper-button-prev'),
-				},
-				pagination: {
-					el: $(element).find('.swiper-pagination'),
-					type: 'fraction',
-					formatFractionCurrent: function (number) {
-						return KyoboBookPub.ink.setPrependZero(number, 2);
-					},
-					formatFractionTotal: function (number) {
-						return KyoboBookPub.ink.setPrependZero(number, 2);
-					}
-				}
-			};
-			
-			if($parent.find('.swiper-slide').length > 3) {
-				var icon3_b = new Swiper(this, slideOption);
-			}
-		});
-	}
-
-	$(function(){
-		if(!$('.icon3_banner').length) return;
-		icon3_banner();
-	});
-
-</script>
-
 </head>
 
 <body>
@@ -147,34 +100,31 @@
             </div>
             <!-- //Title -->
 
-
-			<!-- ht_cont :  wel_coupon (로그인 전) -->
+			<!-- wel_coupon (로그인 전) -->
 			<div class="ht_cont wel_coupon">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big">핫트랙스가<br><strong class="point_line ty10"><em>처음</em></strong>이라면?<img src="../../images/main/tit_wel_now_smile.svg" alt=""></h2>
-					<p class="ht_tit06">첫구매 쿠폰의 할인혜택과 함께 지금 쇼핑을 시작해보세요! </p>
+					<p class="ht_tit06">첫구매 쿠폰의 할인혜택과 함께 지금 쇼핑을 시작해보세요!</p>
+
 					<!-- 신규 가입 쿠폰 영역 -->
 					<ul class="cpon_subscription_wrap">
 						<!-- cpon 반복 -->
 						<li class="cpon">
 							<a href="#none">
 								<div class="cpon_name">신규 가입 쿠폰</div>
-								<div class="cpon_kind">1,000원</div>
+								<div class="cpon_kind">10,000원</div>
 								<div class="cpon_desc">6만원 이상 구매 시 사용 가능</div>
 								<div class="dash"></div>
 								<div class="barcode"></div>
 							</a>
 						</li>
-						<!--// cpon 반복 -->
-		
-		
-		
-		
+						<!-- //cpon 반복 -->
+
 						<li class="cpon">
 							<a href="#none">
 								<div class="cpon_name">신규 가입 쿠폰</div>
 								<div class="cpon_kind">5,000원</div>
-								<div class="cpon_desc">6만원 이상 구매 시 사용 가능</div>
+								<div class="cpon_desc">3만원 이상 구매 시 사용 가능</div>
 								<div class="dash"></div>
 								<div class="barcode"></div>
 							</a>
@@ -183,28 +133,26 @@
 							<a href="#none">
 								<div class="cpon_name">신규 가입 쿠폰</div>
 								<div class="cpon_kind">무료배송</div>
-								<div class="cpon_desc">6만원 이상 구매 시 사용 가능</div>
+								<div class="cpon_desc">주문 1건 무료배송</div>
 								<div class="dash"></div>
 								<div class="barcode"></div>
 							</a>
 						</li>
 					</ul>
-					<!--//신규 가입 쿠폰 영역-->
+					<!-- //신규 가입 쿠폰 영역-->
 
 					<!-- 버튼 영역 -->
-					<div class="live_btn">
+					<div class="btn_area">
 						<button type="button" class="btn_wel_live"><span>핫트랙스 회원가입 하러가기</span></button>
 					</div>
 					<!-- //버튼 영역 -->
 				</div>
             </div>
-			<!-- //ht_cont : wel_coupon (로그인 전)  -->
+			<!-- //wel_coupon (로그인 전)  -->
 
 
 			<p style="padding:30px 20px 10px 20px; background-color: lavender;">로그인 후</p>
-
-
-			<!-- ht_cont :   wel_coupon (로그인 후) -->
+			<!-- wel_coupon (로그인 후) -->
 			<div class="ht_cont wel_coupon">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big"><strong class="point_line ty10"><em>김미미</em></strong>님<br>안녕하세요!<img src="../../images/main/tit_wel_now_smile.svg" alt=""></h2>
@@ -214,24 +162,23 @@
 						<!--membet_bnf_item 반복 -->
 						<li class="membet_bnf_item">
 							<div class="icon">
-								<img src="../../images/guide/@wel_discount25.png" alt="">
+								<img src="../../images/guide/wel_discount25.png" alt="">
 							</div>
 							<div class="bnf_name">보유쿠폰</div>
 							<div class="bnf_amount">15개</div>
 						</li>
 						<!--//membet_bnf_item 반복 -->
 	
-	
 						<li class="membet_bnf_item">
 							<div class="icon">
-								<img src="../../images/guide/@wel_bnf_medal.png" alt="">
+								<img src="../../images/guide/wel_bnf_medal.png" alt="">
 							</div>
 							<div class="bnf_name">회원혜택</div>
 							<div class="bnf_amount">골드</div>
 						</li>
 						<li class="membet_bnf_item">
 							<div class="icon">
-								<img src="../../images/guide/@wel_bnf_attend.png" alt="">
+								<img src="../../images/guide/wel_bnf_attend.png" alt="">
 							</div>
 							<div class="bnf_name">출석체크</div>
 							<div class="bnf_amount">15일</div>
@@ -239,17 +186,16 @@
 					</ul>
 				</div>
 			</div>
-			<!-- //ht_cont : wel_coupon (로그인 후) -->
+			<!-- //wel_coupon (로그인 후) -->
 
 
-
-			<!-- ht_cont :  wel_benefits (다양한 혜택) -->
-			<div class="ht_cont wel_benefits">
+			<!-- 다양한 혜택 : wel_benefits -->
+			<div class="ht_cont ht_bg wel_benefits">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big02">핫트랙스 만의<br><strong class="point_line ty10"><em>다양한 혜택</em></strong></h2>
-					<!--신규 혜택 리스트-->
+
+					<!-- 신규 혜택 리스트 -->
 					<ul class="benefits">
-						<!-- benefit_item 반복 -->
 						<li class="benefit_item">
 							<div class="icon">
 								<img src="../../images/guide/wel_bnf_point.png" alt="">
@@ -259,10 +205,6 @@
 								<div class="bnf_sub">주문 금액의 최대 4% 포인트</div>
 							</div>
 						</li>
-						<!-- //benefit_item 반복 -->
-		
-		
-		
 						<li class="benefit_item">
 							<div class="icon">
 								<img src="../../images/guide/wel_bnf_deliver.png" alt="">
@@ -291,19 +233,20 @@
 							</div>
 						</li>
 					</ul>
-					<!--//신규 혜택 리스트 -->
+					<!-- //신규 혜택 리스트 -->
 				</div>
 			</div>
-			<!-- //ht_cont : wel_benefits (다양한 혜택) -->
+			<!-- //다양한 혜택 : wel_benefits -->
 
 
-			<!-- ht_cont :  wel_benefits (또다른 혜택) -->
-			<div class="ht_cont wel_benefits bg_color">
+			<!-- 또다른 혜택 : wel_benefits -->
+			<div class="ht_cont ht_bg wel_benefits bg_color">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big02">핫트랙스의<br><strong class="point_line ty10"><em>또 다른 혜택</em></strong></h2>
-					<!--혜택 카드 영역 상단-->
+
+					<!-- bnf_card_area_top -->
 					<div class="bnf_card_area_top">
-						<!--bnf_card -->
+						<!-- bnf_card -->
 						<div class="bnf_card ty01">
 							<p class="card_tit">교보문고와 핫트랙스의 <br>통합 멤버십 혜택 확인하기</p>
 							<a href="#" class="to_external">멤버십 혜택</a>
@@ -312,33 +255,25 @@
 								<div class="kind">MEMBERSHIP</div>
 							</div>
 						</div>
-						<!--//bnf_card -->
+						<!-- //bnf_card -->
 		
-						<!--bnf_card -->
+						<!-- bnf_card -->
 						<div class="bnf_card ty02">
 							<p class="card_tit">각인&middot;포장&middot;할인카드까지<br>핫트랙스만의 또 다른 혜택 확인하기</p>
 							<a href="#" class="to_external">핫트랙스 서비스 안내</a>
 							<div class="bnf_card_foot">
-							   <div class="bnf_card_ft_icon">
-								   <img src="../../images/guide/wel_bnf_card_btm01.png" alt="">
-							   </div>
-							   <div class="bnf_card_ft_icon">
-								   <img src="../../images/guide/wel_bnf_card_btm02.png" alt="">
-								</div>
-								<div class="bnf_card_ft_icon">
-									<img src="../../images/guide/wel_bnf_card_btm03.png" alt="">
-								</div>
+							   <div class="bnf_card_ft_icon"><img src="../../images/guide/wel_bnf_card_btm01.png" alt=""></div>
+							   <div class="bnf_card_ft_icon"><img src="../../images/guide/wel_bnf_card_btm02.png" alt=""></div>
+								<div class="bnf_card_ft_icon"><img src="../../images/guide/wel_bnf_card_btm03.png" alt=""></div>
 							</div>
 						</div>
-						<!--//bnf_card -->
+						<!-- //bnf_card -->
 					</div>	
-					<!--//혜택 카드 영역 상단-->
-
-
+					<!-- //bnf_card_area_top -->
 					
-					<!--혜택 카드 영역 하단-->
+					<!-- bnf_card_area_btm -->
 					<div class="bnf_card_area_btm">
-						<!--bnf_card_default -->
+						<!-- bnf_card_default -->
 						<div class="bnf_card_default">
 							<div class="card_body">
 								<span class="card_icon">
@@ -351,10 +286,10 @@
 								</div>
 							</div>
 						</div>
-						<!--//bnf_card_default -->
+						<!-- //bnf_card_default -->
 
-						<!--bnf_card_default -->
-						<div class="bnf_card_default ty_btm">
+						<!-- bnf_card_default -->
+						<div class="bnf_card_default">
 							<div class="card_body">
 								<span class="card_icon">
 									<img src="../../images/guide/wel_bnf_first_buy.png" alt="">
@@ -368,17 +303,16 @@
 								</div>
 							</div>
 							<div class="card_btm">
-								<a href="#" class="down_cpon">쿠폰 받기</a>
+								<button class="down_cpon"><span>쿠폰 받기</span></button>
 							</div>
 						</div>
-						<!--//bnf_card_default -->
+						<!-- //bnf_card_default -->
 							
-
-						<!--bnf_card_default -->
+						<!-- bnf_card_default -->
 						<div class="bnf_card_default">
 							<div class="card_body">
 								<span class="card_icon">
-									<img src="../../images/guide/wel_bnf_attend.png" alt="">
+									<img src="../../images/guide/wel_bnf_attend02.png" alt="">
 								</span>
 								<p class="tit"><strong>출석체크</strong></p>
 								<div class="cpon_desc">25회 출석하면 700포인트 적립!<br>한 달 동안 개근하면 최대 5,000 포인트 적립!</div>
@@ -387,22 +321,21 @@
 								</div>
 							</div>
 						</div>
-						<!--//bnf_card_default -->
+						<!-- //bnf_card_default -->
 					</div>
-					<!--//혜택 카드 영역 하단-->
+					<!-- //bnf_card_area_btm  -->
 				</div>
 			</div>
-			<!-- //ht_cont : wel_benefits (또다른 혜택) -->
+			<!-- //또다른 혜택 : wel_benefits -->
 
 
-
-			<!-- ht_cont :  wel_review (상품평 작성 혜택)-->
-			<div class="ht_cont wel_review">
+			<!-- 상품평 작성 : wel_review -->
+			<div class="ht_cont ht_bg wel_review">
 				<div class="contents_inner">
 					<h2 class="ht_tit_big02">상품평 작성하고<img src="../../images/guide/review_pencil.png"><br><strong class="point_line ty05"><em>적립/쿠폰 혜택</em></strong> 받으세요!</h2>
+
 					<!-- 리뷰 혜택 아이콘 리스크 -->
 					<ul class="review_bnf_list">
-						<!--bnf_item 반복-->
 						<li class="bnf_item">
 							<div class="icon">
 								<img src="../../images/guide/wel_bnf_100p.png" alt="">
@@ -410,9 +343,6 @@
 							<div class="point">100P</div>
 							<div class="info">일반 리뷰</div>
 						</li>
-						<!--//bnf_item 반복-->
-		
-		
 						<li class="bnf_item">
 							<div class="icon">
 								<img src="../../images/guide/wel_bnf_200p.png" alt="">
@@ -422,7 +352,7 @@
 						</li>
 						<li class="bnf_item">
 							<div class="icon">
-								<img src="../../images/guide/wel_discount25.png" alt="">
+								<img src="../../images/guide/wel_discount25_02.png" alt="">
 							</div>
 							<div class="point">25%쿠폰</div>
 							<div class="info">월간 후기왕</div>
@@ -431,8 +361,8 @@
 					</ul>
 					<!-- //리뷰 혜택 아이콘 리스트 -->
 		            
-		            <p class="rev_notice_tit">유의사항</p>
 					<!-- 유의사항 -->
+		            <p class="rev_notice_tit">유의사항</p>
 					<ul class="review_bnf_desc_list">
 						<li class="bnf_desc">구매 후 3개월 이내 작성 시, 포인트 적립 가능</li>
 						<li class="bnf_desc">상품리뷰 작성 후, 익일 PM11시 이후 적립</li>
@@ -443,14 +373,13 @@
 					<!-- //유의사항 -->
 				</div>
 			</div>
-			<!-- //ht_cont :  wel_review (상품평 작성 혜택)-->
+			<!-- //상품평 작성 : wel_review -->
 		
 
-
-			<!-- ht_cont : wel_reaction(3단 배너) -->
+			<!-- 반응최고 이벤트 : wel_reaction -->
 			<div class="ht_cont wel_reaction" >
 				<div class="contents_inner">
-					<h2 class="ht_tit_big02">반응최고 이벤트<img src="../../images/guide/swap_eye.svg"></h2>
+					<h2 class="ht_tit_big02">반응최고 이벤트<img src="../../images/guide/swap_eye.svg" alt=""></h2>
 
 					<!-- icon3_banner : function - icon3_banner(); -->
 					<div class="icon3_banner">
@@ -512,7 +441,6 @@
 										<li class="sub">최종 수상작 발표(대상/우수상/참가상)</li>
 									</ul>
 								</li>
-
 							</ul>
 							<!-- //swiper-wrapper -->
 
@@ -528,8 +456,7 @@
 					<!-- //icon3_banner -->
 				</div>
 			</div>
-			<!-- //ht_cont : wel_reaction(3단 배너) -->
-
+			<!-- //반응최고 이벤트 : wel_reaction  -->
 
 
             <!-- ht_cont : 하단 광고배너 -->
