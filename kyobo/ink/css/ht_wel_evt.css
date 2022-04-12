@@ -1,0 +1,992 @@
+@charset "UTF-8";
+/*
+    공통
+*/
+/***** 쿠폰/ 혜택 *****/
+.wel_coupon {
+  padding: 100px 0;
+  background: url(../images/guide/cpon_area_bg.png) center/cover no-repeat;
+  color: #fff;
+}
+
+.wel_coupon .ht_tit_big {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 60px;
+  line-height: 76px;
+  letter-spacing: -1px;
+}
+
+.wel_coupon .ht_tit_big > img {
+  width: 56px;
+  margin-top: -7px;
+  margin-left: 5px;
+}
+
+.wel_coupon .point_line:before {
+  top: 44px;
+}
+
+.wel_coupon .ht_tit06 {
+  margin-bottom: 18px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.wel_coupon .btn_wel_live {
+  padding: 0 29px;
+  font-weight: 500;
+}
+
+/* cpon_subscription_wrap */
+.cpon_subscription_wrap {
+  width: 479px;
+  margin: 0 auto;
+}
+
+.cpon_subscription_wrap .cpon {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  color: #000;
+}
+
+.cpon_subscription_wrap .cpon:last-of-type {
+  margin-bottom: 0;
+}
+
+.cpon_subscription_wrap .cpon:before {
+  position: absolute;
+  left: 36px;
+  top: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 50%;
+  content: "";
+}
+
+.cpon_subscription_wrap .cpon:after {
+  position: absolute;
+  left: 36px;
+  bottom: -6px;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 50%;
+  content: "";
+}
+
+.cpon_subscription_wrap .cpon .cpon_name {
+  margin-bottom: 5px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+
+.cpon_subscription_wrap .cpon .cpon_kind {
+  margin-bottom: 2px;
+  font-family: 'Gmarket Sans';
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.cpon_subscription_wrap .cpon .cpon_desc {
+  color: #767676;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.cpon_subscription_wrap .cpon .dash {
+  position: absolute;
+  left: 42px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  border-left: 1px dashed #000;
+}
+
+.cpon_subscription_wrap .cpon .barcode {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 16px;
+  height: 40px;
+  margin-top: -20px;
+  background: url(../images/guide/cpon_barcode.svg) no-repeat center center/cover;
+}
+
+/* member_bnf_list */
+.member_bnf_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 720px;
+  margin: 0 auto;
+}
+
+.member_bnf_list .membet_bnf_item {
+  width: 160px;
+  min-height: 100% !important;
+}
+
+.member_bnf_list .membet_bnf_item .icon {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 15px;
+  padding: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+
+.member_bnf_list .membet_bnf_item .icon > img {
+  height: 100%;
+}
+
+.member_bnf_list .membet_bnf_item .bnf_name {
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.member_bnf_list .membet_bnf_item .bnf_amount {
+  color: #d4ff1a;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+}
+
+/***  다양한 혜택 : .wel_benefits ***/
+.wel_benefits.bg_color {
+  background-color: #f7f7f7;
+}
+
+.wel_benefits .ht_tit_big02 {
+  margin-bottom: 16px;
+  font-family: 'Gmarket Sans';
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: -1px;
+}
+
+.wel_benefits .point_line:before {
+  top: 20px;
+}
+
+.wel_benefits .benefits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 994px;
+  margin: 0 auto;
+}
+
+.wel_benefits .benefits .benefit_item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  width: 479px;
+  padding: 34px 40px 34px 116px;
+  border-bottom: 1px solid #eaeaea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wel_benefits .benefits .benefit_item:nth-of-type(1), .wel_benefits .benefits .benefit_item:nth-of-type(2) {
+  border-top: 1px solid #808080;
+}
+
+.wel_benefits .benefits .benefit_item:nth-of-type(2n + 1) {
+  margin-right: 36px;
+}
+
+.wel_benefits .benefits .benefit_item .icon {
+  position: absolute;
+  left: 30px;
+  top: 24px;
+  width: 70px;
+  height: 70px;
+}
+
+.wel_benefits .benefits .benefit_item .icon img {
+  width: 100%;
+}
+
+.wel_benefits .benefits .benefit_item .bnf_tit {
+  margin-bottom: 7px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.wel_benefits .benefits .benefit_item .bnf_sub {
+  color: #767676;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/***  또 다른 혜택 ***/
+/* bnf_card_area_top */
+.bnf_card_area_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.bnf_card_area_top + .bnf_card_area_btm {
+  margin-top: 30px;
+}
+
+.bnf_card {
+  position: relative;
+  width: 582px;
+  min-height: 312px;
+  padding: 40px 30px 30px 40px;
+  background-color: #ff224e;
+  border: 2px solid #000;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bnf_card.ty01 {
+  margin-right: 36px;
+  color: #fff;
+}
+
+.bnf_card.ty01 .to_external {
+  color: #fff;
+}
+
+.bnf_card.ty02 {
+  background-color: #ffeb01;
+}
+
+.bnf_card.ty02 .to_external:before {
+  border-color: #000;
+}
+
+.bnf_card.ty02 .bnf_card_foot {
+  margin-top: 65px;
+}
+
+.bnf_card .card_tit {
+  margin-bottom: 17px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+.bnf_card .to_external {
+  position: relative;
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0.8;
+}
+
+.bnf_card .to_external:before {
+  position: absolute;
+  right: -12px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  content: "";
+}
+
+.bnf_card .bnf_card_foot {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+}
+
+.bnf_card .bnf_card_foot .company {
+  font-family: 'Gmarket Sans';
+  font-size: 14px;
+  line-height: 34px;
+}
+
+.bnf_card .bnf_card_foot .alliance {
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  height: 22px;
+  margin-left: -4px;
+  margin-right: -4px;
+  padding-right: 22px;
+  background: url(../images/guide/ico_bnf_alliance.svg) no-repeat center center/10px;
+}
+
+.bnf_card .bnf_card_foot .kind {
+  font-family: 'Gmarket Sans';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.bnf_card .bnf_card_foot .bnf_card_ft_icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-left: 6px;
+  font-size: 0;
+  vertical-align: top;
+}
+
+.bnf_card .bnf_card_foot .bnf_card_ft_icon:first-of-type {
+  margin-left: 0;
+}
+
+.bnf_card .bnf_card_foot .bnf_card_ft_icon > img {
+  width: 100%;
+}
+
+/* bnf_card_area_btm */
+.bnf_card_area_btm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bnf_card_default {
+  position: relative;
+  width: 376px;
+  min-height: 356px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bnf_card_default .card_body {
+  position: relative;
+  height: 100%;
+  padding: 35px 30px 0px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.bnf_card_default .card_body .card_icon {
+  position: absolute;
+  right: 30px;
+  top: 34px;
+  width: 70px;
+  height: 70px;
+}
+
+.bnf_card_default .card_body .card_icon > img {
+  width: 100%;
+}
+
+.bnf_card_default .card_body .tit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 72px;
+  padding-right: 80px;
+  font-family: 'Gmarket Sans';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+}
+
+.bnf_card_default .card_body .cpon_desc {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bnf_card_default .card_body .external {
+  position: absolute;
+  left: 30px;
+  bottom: 38px;
+}
+
+.bnf_card_default .card_body .external .to_external {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.bnf_card_default .card_body .external .to_external:before {
+  position: absolute;
+  left: 100%;
+  top: 4px;
+  width: 6px;
+  height: 6px;
+  margin-left: 3px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  content: "";
+}
+
+.bnf_card_default .card_body .new_bnf {
+  border-top: 1px solid #eaeaea;
+  margin-top: 30px;
+  padding: 19px 0 30px 0;
+}
+
+.bnf_card_default .card_body .new_bnf .only_app_icon {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  margin-right: 6px;
+  padding: 6px 12px 4px 12px;
+  background-color: #000;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 15px;
+  vertical-align: top;
+}
+
+.bnf_card_default .card_body .new_bnf .cpon_price {
+  display: inline-block;
+  color: #da2128;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  vertical-align: top;
+}
+
+.bnf_card_default .card_body .new_bnf .desc {
+  display: block;
+  margin-top: 5px;
+}
+
+.bnf_card_default .card_btm {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.bnf_card_default .card_btm .down_cpon {
+  position: relative;
+  width: 100%;
+  padding: 14px 0;
+  background-color: #292929;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.bnf_card_default .card_btm .down_cpon span {
+  position: relative;
+}
+
+.bnf_card_default .card_btm .down_cpon span:before {
+  position: absolute;
+  left: -19px;
+  top: -2px;
+  width: 14px;
+  height: 24px;
+  background: url(../images/guide/ico_download_white.svg) no-repeat center/12px;
+  content: "";
+}
+
+.bnf_card_default.disabled .new_bnf .only_app_icon {
+  background-color: #d5d5d5;
+}
+
+.bnf_card_default.disabled .new_bnf .cpon_price {
+  color: #d5d5d5;
+}
+
+.bnf_card_default.disabled .new_bnf .desc {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.bnf_card_default.disabled .card_btm {
+  background-color: #bebebe;
+}
+
+/*** 상품평 작성 : .wel_review ***/
+.wel_review .ht_tit_big02 {
+  margin-bottom: 16px;
+  font-family: 'Gmarket Sans';
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: -1px;
+}
+
+.wel_review .ht_tit_big02 img {
+  width: 46px;
+  margin-left: 7px;
+}
+
+.wel_review .point_line:before {
+  top: 20px;
+}
+
+.wel_review .rev_notice_tit {
+  margin: 30px 35px 10px 35px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.wel_review .review_bnf_desc_list {
+  margin: 0 35px;
+}
+
+.review_bnf_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin-top: 24px;
+  padding: 20px 0 30px 0;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.review_bnf_list .bnf_item {
+  position: relative;
+  width: calc(100% / 3);
+}
+
+.review_bnf_list .bnf_item:before {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 1px;
+  height: calc(100% - 10px);
+  border-left: 1px dashed #eaeaea;
+  content: "";
+}
+
+.review_bnf_list .bnf_item:first-child:before {
+  display: none;
+}
+
+.review_bnf_list .bnf_item .icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+.review_bnf_list .bnf_item .icon > img {
+  width: 100%;
+}
+
+.review_bnf_list .bnf_item .point {
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.review_bnf_list .bnf_item .info {
+  color: #767676;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.review_bnf_list .bnf_item .info_sub {
+  margin-top: 2px;
+  color: rgba(0, 0, 0, 0.3);
+  line-height: 22px;
+  text-align: center;
+}
+
+/*** 반응최고 이벤트 : .wel_reaction ***/
+.wel_review + .wel_reaction .contents_inner:before {
+  position: absolute;
+  left: 0;
+  top: -60px;
+  width: 100%;
+  height: 1px;
+  background: #eaeaea;
+  content: "";
+}
+
+.wel_reaction .ht_tit_big02 {
+  margin-bottom: 20px;
+  font-family: 'Gmarket Sans';
+  font-weight: 500;
+}
+
+.wel_reaction .ht_tit_big02 > img {
+  display: inline-block;
+  width: 42px;
+  margin: 2px 0 0 8px;
+  vertical-align: top;
+}
+
+.icon3_banner .swiper-container {
+  margin-left: -18px;
+  padding-left: 18px;
+}
+
+.icon3_banner .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.icon3_banner .evt_list {
+  margin: 0;
+}
+
+.icon3_banner .evt_list > li {
+  margin: 0 36px 0 0;
+}
+
+.icon3_banner .evt_list > li:last-of-type {
+  margin: 0;
+}
+
+/***** 바로드림 ******/
+.pickup_wrap {
+  padding-bottom: 60px !important;
+  background: url("../images/guide/pickup_bg.png") center/cover no-repeat;
+}
+
+.pickup_wrap .tit {
+  font-family: 'Gmarket Sans';
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.pickup_wrap .tit > img {
+  display: inline-block;
+  margin: -13px 2px 0 3px;
+}
+
+/* pickup_top_area */
+.pickup_top_area {
+  position: relative;
+  height: 440px;
+  margin-bottom: 37px;
+  overflow: hidden;
+}
+
+.pickup_top_area .shopping_img {
+  position: relative;
+  top: -50px;
+  width: 235px;
+  height: 490px;
+  margin: 0 auto;
+  z-index: 1;
+  -webkit-animation: wel_pickup_shoppingbag .7s both 1 .7s;
+          animation: wel_pickup_shoppingbag .7s both 1 .7s;
+}
+
+.pickup_top_area .shopping_img img {
+  width: 100%;
+}
+
+@-webkit-keyframes wel_pickup_shoppingbag {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes wel_pickup_shoppingbag {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+.pickup_top_area .pick_up_bubble {
+  position: absolute;
+  left: 50%;
+  top: 38%;
+  width: 0;
+  height: 78px;
+  background: url(../images/guide/wel_pickup_bubble.svg) no-repeat center center/97%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  z-index: 2;
+  -webkit-animation: wel_pick_up_bubble .8s forwards 1 .5s;
+          animation: wel_pick_up_bubble .8s forwards 1 .5s;
+}
+
+@-webkit-keyframes wel_pick_up_bubble {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 135px;
+  }
+}
+
+@keyframes wel_pick_up_bubble {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 135px;
+  }
+}
+
+/* pickup_step_area */
+.pickup_step_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  width: 540px;
+  margin: 54px auto 0 auto;
+}
+
+.pickup_step_area:before {
+  content: "";
+  position: absolute;
+  left: calc(100% / 6 - 20px);
+  top: 19px;
+  width: calc(100% / 3 * 2 + 40px);
+  height: 1px;
+  border-top: 1px dashed #000;
+}
+
+.pickup_step {
+  position: relative;
+  text-align: center;
+}
+
+.pickup_step .num_icon {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto 15px auto;
+  background: url(../images/guide/wel_pickup_num.svg) no-repeat center/99%;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: center;
+  z-index: 2;
+}
+
+.pickup_step .step_icon {
+  height: 78px;
+  margin: 0 auto 16px auto;
+}
+
+.pickup_step .desc {
+  min-width: 130px;
+  font-size: 20px;
+  line-height: 25px;
+  word-break: keep-all;
+  letter-spacing: -0.5px;
+}
+
+.pickup_step .desc .point_line:before {
+  top: 12px;
+}
+
+.pickup_step:nth-of-type(1) .step_icon {
+  background: url(../images/guide/wel_pickup_step1.svg) no-repeat center/contain;
+}
+
+.pickup_step:nth-of-type(2) .step_icon {
+  background: url(../images/guide/wel_pickup_step2.svg) no-repeat center/contain;
+}
+
+.pickup_step:nth-of-type(3) .step_icon {
+  background: url(../images/guide/wel_pickup_step3.svg) no-repeat center/contain;
+}
+
+.pickup_step .point_line:before {
+  height: 12px;
+}
+
+.review_bnf_desc_list {
+  margin-top: 25px;
+}
+
+.pickup_notice_area {
+  padding: 0 20px;
+  width: 708px;
+  margin: 0 auto;
+}
+
+.pickup_notice_bubble {
+  position: relative;
+  width: 708px;
+  margin: 40px auto 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #000;
+  text-align: center;
+}
+
+.pickup_notice_bubble:before {
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  width: 20px;
+  height: 26px;
+  margin-left: -10px;
+  background: url(../images/guide/wel_pickup_bubble_before.svg) no-repeat center center;
+  content: "";
+  z-index: 1;
+}
+
+.pickup_notice_bubble .tit {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Roboto,"Noto Sans KR";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.pickup_notice_bubble .tit .icon > img {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.pickup_notice_bubble .notice_desc {
+  margin-bottom: 20px;
+  line-height: 22px;
+}
+
+.pickup_notice_bubble .to_external {
+  position: relative;
+  line-height: 20px;
+}
+
+.pickup_notice_bubble .to_external:before {
+  position: absolute;
+  left: 100%;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  margin-left: 3px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  content: "";
+}
+
+/* review_bnf_desc_list */
+.review_bnf_desc_list .bnf_desc {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 10px;
+  color: #595959;
+  font-size: 14px;
+  line-height: 22px;
+  word-break: keep-all;
+}
+
+.review_bnf_desc_list .bnf_desc:last-of-type {
+  margin-bottom: 0;
+}
+
+.review_bnf_desc_list .bnf_desc:before {
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 2px;
+  height: 2px;
+  background-color: #999;
+  content: "";
+}

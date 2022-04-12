@@ -320,6 +320,48 @@ $(function(){
 
 
 
+/* icon3_banner */
+function icon3_banner(){
+    var $target = $('.icon3_banner .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.icon3_banner');
+        var slideOption = {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            slidesPerGroup: 3,
+            spaceBetween:0,
+            speed: 1000,
+            navigation: {
+                nextEl: $(element).find('.swiper-button-next'),
+                prevEl: $(element).find('.swiper-button-prev'),
+            },
+            pagination: {
+                el: $(element).find('.swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            }
+        };
+        if($parent.find('.swiper-slide').length > 3) {
+            var icon3_b = new Swiper(this, slideOption);
+        }
+    });
+}
+
+$(function(){
+    if(!$('.icon3_banner').length) return;
+    icon3_banner();
+});
+
+
+
+
 
 
 
