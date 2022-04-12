@@ -338,11 +338,12 @@
                                                         <p>영업점에서 상품 직접 픽업 하면 안될까요?<br>영업점 전화가 안되어서 여기에 문의 글 남깁니다.</p>
                                                     </div>
                                                     <!-- //Q -->
-                                                    <!-- A -->
-                                                    <div class="fold_question fold_a">
-                                                        <p>안녕하세요. 핫트랙스 담당자입니다.<br>고객님, 요청하신 영업점 직접 픽업은 불가합니다. </p>
-                                                    </div>
-                                                    <!-- //A -->
+                                                    <!-- fold_question_btn -->
+                                                    <ul class="fold_question_btn">
+                                                        <li><button><span>수정하기</span></button></li>
+                                                        <li><button data-role="btn-dialog" data-target="#popAlert02"><span>삭제하기</span></button></li>
+                                                    </ul>
+                                                    <!-- //fold_question_btn -->
                                                 </div>
                                                 <!-- //fold_view -->
 
@@ -400,7 +401,7 @@
                                                         <div class="fold_info">
                                                             <ul>
                                                                 <li>
-                                                                    <strong class="c2">확인중</strong>
+                                                                    <strong class="">답변요청</strong>
                                                                     <!--
                                                                     답변완료 : class="c1"
                                                                     확인중 : class="c2"
@@ -432,11 +433,12 @@
                                                         <p>영업점에서 상품 직접 픽업 하면 안될까요?<br>영업점 전화가 안되어서 여기에 문의 글 남깁니다.</p>
                                                     </div>
                                                     <!-- //Q -->
-                                                    <!-- A -->
-                                                    <div class="fold_question fold_a">
-                                                        <p>안녕하세요. 핫트랙스 담당자입니다.<br>고객님, 요청하신 영업점 직접 픽업은 불가합니다. </p>
-                                                    </div>
-                                                    <!-- //A -->
+                                                    <!-- fold_question_btn -->
+                                                    <ul class="fold_question_btn">
+                                                        <li><button><span>수정하기</span></button></li>
+                                                        <li><button data-role="btn-dialog" data-target="#popAlert02"><span>삭제하기</span></button></li>
+                                                    </ul>
+                                                    <!-- //fold_question_btn -->
                                                 </div>
                                                 <!-- //fold_view -->
 
@@ -606,5 +608,39 @@
 	<!-- //탑버튼 -->
 </div>
 <!-- // wrapper -->
+
+
+<!-- 팝업 : 문의 삭제 : popAlert02 -->
+<div id="popAlert02" class="dialog_wrap" data-class="dialog_alert">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">알림</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <div class="evt_pop_content">
+            접수된 문의를 삭제하시겠습니까?
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_black" data-dialog-close><span class="text">취소</span></button>
+        <button type="button" class="btn_md btn_primary" onclick="toastBtn1();" data-dialog-close><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- //팝업 : 문의 삭제 : popHpPop02 -->
+
+<script>
+    /* 문의삭제 팝업 확인 클릭 토스트 */
+    function toastBtn1(){
+        KyoboBookPub.ink.setToastMessage('정상적으로 삭제되었습니다.', 3000);
+    }
+    </script>
 </body>
 </html>
