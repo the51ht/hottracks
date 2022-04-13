@@ -361,7 +361,7 @@
 .cus_info_list .li {
   display: inline-block;
   line-height: 22px;
-  letter-spacing: -0.014px;
+  letter-spacing: -1px;
   margin-top: -1px;
 }
 
@@ -370,7 +370,6 @@
   position: relative;
   font-size: 15px;
   padding-left: 20px;
-  letter-spacing: -0.015px;
 }
 
 .cus_info_list .li:nth-of-type(1):before {
@@ -465,12 +464,16 @@
 }
 
 .cus_sv_list .li {
-  width: calc(100% / 3);
+  width: calc((100% - 2px) / 3);
   height: 130px;
   float: left;
   border-right: 1px dashed #D5D5D5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.cus_sv_list .li:last-of-type {
+  border-right: none;
 }
 
 .cus_sv_list .icon {

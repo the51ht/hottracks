@@ -274,14 +274,13 @@
     .li {
         display: inline-block;
         line-height:22px;
-        letter-spacing: -0.014px;
+        letter-spacing: -1px;
         margin-top:-1px;
         &:nth-of-type(1) {
             margin-right:50px;
             position:relative;
             font-size: 15px;
             padding-left:20px;
-            letter-spacing: -0.015px;
             &:before {
                 content: "";
                 width:20px;
@@ -363,11 +362,14 @@
     padding-top:25px;
     overflow: hidden;
     .li {
-        width: calc(100% / 3);
+        width: calc((100% - 2px) / 3);
         height:130px;
         float: left;
         border-right: 1px dashed #D5D5D5;
         box-sizing: border-box;
+        &:last-of-type {
+            border-right: none;
+        }
 
     }  
     .icon {
@@ -449,7 +451,7 @@
     margin-bottom: 30px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-between;      
     &:last-of-type {
         margin-bottom: 0;
     }
