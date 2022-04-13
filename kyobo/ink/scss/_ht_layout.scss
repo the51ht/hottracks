@@ -504,3 +504,99 @@ body {
 
 
 
+/* 이사예정 */
+/****** GNB *****/
+.ht_gnb_area {
+    position:relative;overflow:hidden;
+    .banner_box {
+        float:right;width:200px;margin-left:0 !important;
+    }
+}
+
+.ht_gnb_cont {
+    float:left;width:calc(100% - 200px);
+
+    font-size:14px;line-height:22px;
+}
+
+
+.ht_gnb {
+    position: relative;overflow:hidden;
+    .li {
+        position:relative;display:block;float:left;width:209px;height:370px;margin-left:50px;box-sizing:border-box;
+        &:first-child {
+            margin-left:0;
+        }
+        &.gnb4dep {
+            width:189px;
+        }
+    }
+    a {
+        font-size:13px;line-height:19px;;
+    }
+    .btn_arw_link {
+        margin-bottom: 20px;
+    }
+    .simplebar-content {
+        padding-right:0 !important;
+    }
+}
+
+.gnb_menu { 
+    position: relative;
+    &:before {
+        position:absolute;right:0;top:0;width:2px;height:370px;background:#f0f0f0;content:"";
+    }
+    li {
+        margin-top:12px;
+        &:first-child {
+            margin-top:0;
+        }
+        a {
+            display:block;
+            &.ht_gnb_arrow {
+                padding-right:20px;
+                span {
+                    &:after {
+                        position:absolute;right:0;top:50%;width:5px;height:8px;margin-top:-4px;background:url("../images/layout/ico_gnb_menu.svg") center/100% no-repeat;content:"";transition:background 0.4s;
+                    }
+                }
+            }
+            &.on {
+                color:#da2128;font-weight:700;
+                span:after {
+                    background-image:url("../images/layout/ico_gnb_menu_on.svg");
+                }
+            }
+            &:hover {
+                color:#da2128;font-weight:700;
+                span:after {
+                    background-image:url("../images/layout/ico_gnb_menu_on.svg");
+                }
+            }
+        }
+        span {
+            display:block;position:relative;
+        }
+    }
+}
+
+.gnb3dep {
+    .gnb_menu {
+        display:none;animation:fade both 0.4s;
+    }
+}
+.gnb4dep {
+    .gnb_menu {
+        display:none;animation:fade both 0.4s;
+        &:before {
+            display:none;
+        }
+    }
+}
+
+
+
+
+
+
