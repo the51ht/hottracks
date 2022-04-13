@@ -119,7 +119,6 @@
 
 					<!-- ht_cont : 상단배너 - ht_top_banner -->
 					<div class="ht_cont ht_cus_cont">
-
                         <!-- tab_box -->
                         <div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
                             <ul>
@@ -136,16 +135,33 @@
                             </ul>
                         </div>
                         <!-- //tab_box --> 
-
-                        <!-- cus_qna_view -->
-                        <div class="cus_qna_view">
-                            <div class="form_wrap form_qna_wrap">
-                                <div class="form_box">
-                                    <div class="form_title">
-                                        <span class="form_label">영업점<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- form_sel -->
+                        <div class="tbl_row_wrap">
+                            <table class="tbl_row">
+                                <caption>기본 정보 테이블로 아이디, 이름
+                                            
+                                            
+                                                툴팁열기
+                                                
+                                                    
+                                                        개명신청 안내
+                                                    
+                                                    
+                                                        법원 개명절차를 통해 이름이 변경되신 경우 [이름변경]을 선택하여 본인인증 후 이름 변경이 가능합니다.
+                                                    
+                                                    툴팁닫기
+                                                
+                                            
+                                            
+                                        , 휴대폰번호필수입력, 생년월일/성별, 비밀번호 변경필수입력, 비밀번호 확인필수입력, 전화번호, 이메일필수입력을(를) 나타낸 표입니다.</caption>
+                                <colgroup>
+                                    <col style="width: 140px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="has_btn_sm">영업점<span class="required"><span class="hidden">필수입력</span></span></th>
+                                        <td>
+                                            <!-- form_sel -->
                                         <div class="form_sel">
                                             <select title="선택해주세요">
                                                 <option>선택해주세요</option>
@@ -186,14 +202,13 @@
                                             </select>
                                         </div>
                                         <!-- //form_sel -->
-                                    </div>
-                                </div>
-                                <div class="form_box">
-                                    <div class="form_title">
-                                        <span class="form_label">문의유형<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- form_sel -->
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <th scope="row" class="has_btn_sm">문의유형<span class="required"><span class="hidden">필수입력</span></span></th>
+                                        <td>
+                                            <!-- form_sel -->
                                         <div class="form_sel">
                                             <select title="선택해주세요">
                                                 <option>선택해주세요</option>
@@ -207,95 +222,85 @@
                                             </select>
                                         </div>
                                         <!-- //form_sel -->
-                                    </div>
-                                </div>
-
-                                <div class="form_box">
-                                    <div class="form_title">
-                                        <span class="form_label">제목<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <input type="text" class="form_ip" placeholder="30자 이내로 작성해 주세요" title="타이틀 입력"/>
-                                    </div>
-                                </div>
-                                <div class="form_box">
-                                    <div class="form_title">
-                                        <span class="form_label">내용<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- byte_check_wrap -->
-                                        <div class="byte_check_wrap">
-                                            <textarea id="" class="form_textarea" title="타이틀 입력" placeholder="문의하실 내용을 직접 작성해 주세요" style="height: 78px;"></textarea>
-                                            <div class="byte_chack_footer">
-                                                <div class="byte_check">
-                                                    <span class="count">0</span>
-                                                    <span class="total">300자</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="has_btn_sm">제목<span class="required"><span class="hidden">필수입력</span></span></th>
+                                        <td>
+                                            <div class="input_btn_box">
+                                                <input type="text" class="form_ip" placeholder="30자 이내로 작성해 주세요" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="has_btn_sm">내용<span class="required"><span class="hidden">필수입력</span></span></th>
+                                        <td>
+                                            <!-- byte_check_wrap -->
+                                            <div class="byte_check_wrap">
+                                                <textarea id="" class="form_textarea" title="타이틀 입력" placeholder="문의하실 내용을 직접 작성해 주세요" style="height: 78px;"></textarea>
+                                                <div class="byte_chack_footer">
+                                                    <div class="byte_check">
+                                                        <span class="count">0</span>
+                                                        <span class="total">300자</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <!-- //byte_check_wrap -->
-                                    </div>
-                                </div>
-                                <div class="form_box form_radio_sel">
-                                    <div class="form_title">
-                                        <span class="form_label">답변 수신 방법<em class="required"></em></span>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- form_rdo -->
-                                        <span class="form_rdo">
-                                            <input id="exRdo01" type="radio" name="exRdoName01" value="1" checked />
-                                            <label for="exRdo01">휴대전화번호</label>
-                                        </span>
-                                        <!-- //form_rdo -->
-                                        
-                                        <input type="tel" id="chk01" class="form_ip" placeholder="-없이 숫자만 입력" title="타이틀" value="010-5151-5151" />
-                                        <div class="valid_check fail">
-                                            <input type="text" id="chk01" class="form_ip" placeholder="-없이 숫자만 입력" title="타이틀">
-                                            <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
-                                        </div>
-                                    </div>
-                                    <div class="form_cont">
-                                        <!-- form_rdo -->
-                                        <span class="form_rdo">
-                                            <input id="exRdo02" type="radio" name="exRdoName01" value="2" />
-                                            <label for="exRdo02">이메일</label>
-                                        </span>
-                                        <!-- //form_rdo -->
+                                            <!-- //byte_check_wrap -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="has_btn_sm">답변 수신 방법<span class="required"><span class="hidden">필수입력</span></span></th>
+                                        <td>
+                                            <ul class="chk_row_list">
+                                                <li class="chk_row_item" style="">
+                                                    <!-- form_rdo -->
+                                                    <span class="form_rdo">
+                                                        <input id="exRdo01" type="radio" name="exRdoName01" value="1" checked />
+                                                        <label for="exRdo01">휴대전화번호</label>
+                                                    </span>
+                                                    <!-- //form_rdo -->
 
-                                        <input type="email" id="chk02" class="form_ip" placeholder="@ 포함 이메일 입력" title="타이틀" value="The-51@naver.com" disabled/>
-                                        <div class="valid_check fail">
-                                            <input type="text" id="chk02" class="form_ip" placeholder="@ 포함 이메일 입력" title="타이틀">
-                                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <script>
-                                    /* 확인용 */
-                                    $(function(){
-                                        $('.form_radio_sel input[name=exRdoName01]').click(function(){ 
-                                            
-                                            var chkVar = $('.form_radio_sel input[name=exRdoName01]:checked').val();
-                                            console.log(chkVar)
-                                            if(chkVar=='1'){
-                                                $('#chk01').removeAttr("disabled");
-                                                $('#chk02').attr("disabled", true);
-                                            }else if(chkVar=='2'){
-                                                $('#chk01').attr("disabled", true);
-                                                $('#chk02').removeAttr("disabled");
-                                                
-                                            }
-                                        }); 
-                                    });
-                                </script>
-                                <div class="btn_area btn_area_desc">
-                                    <p>
-                                        * 영업점 이용 상담의 문의는 등록하신 이메일 또는 휴대폰번호로 회신을 드리며, 1:1문의에는 답변 내용이 등록되지 않으니 이점 양해 부탁 드립니다.
-                                    </p>
-                                    <button class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popAlert01"  disabled>등록</button>
-                                </div>
-                            </div>
+                                                    <div class="input_btn_box">
+                                                        <input type="tel" id="chk01" class="form_ip" placeholder="-없이 숫자만 입력" value="010-5151-5151"/>
+                                                    </div>
+
+                                                    <div class="valid_check fail">
+                                                        <div class="input_btn_box">
+                                                            <input type="text" id="chk01" class="form_ip" placeholder="-없이 숫자만 입력">
+                                                        </div>
+                                                        <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
+                                                    </div>
+                                                </li>
+                                                <li class="chk_row_item">
+                                                    <!-- form_rdo -->
+                                                    <span class="form_rdo">
+                                                        <input id="exRdo02" type="radio" name="exRdoName01" value="2" />
+                                                        <label for="exRdo02">이메일</label>
+                                                    </span>
+                                                    <!-- //form_rdo -->
+
+                                                    <div class="input_btn_box">
+                                                        <input type="email" id="chk02" class="form_ip" placeholder="@ 포함 이메일 입력" value="The-51@naver.com" disabled/>
+                                                    </div>
+                                                    <div class="valid_check fail">
+                                                        <div class="input_btn_box">
+                                                            <input type="email" id="chk02" class="form_ip" placeholder="@ 포함 이메일 입력">
+                                                        </div>
+                                                        <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- //cus_qna_view -->
+                        <div class="btn_wrap page_bottom btn_area_desc">
+                            <p>
+                                * 영업점 이용 상담의 문의는 등록하신 이메일 또는 휴대폰번호로 회신을 드리며, 1:1문의에는 답변 내용이 등록되지 않으니 이점 양해 부탁 드립니다.
+                            </p>
+                            <button class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popAlert01" disabled="">등록</button>
+                        </div>
 					</div>
 					<!-- //ht_cont : 상단배너 - ht_top_banner -->
 				</section>
@@ -332,14 +337,16 @@
 <script>
     /* 확인용 */
     $(function(){
-        $('input[name=receive_type]').click(function(){ 
-            var chkVar = $('input[name=receive_type]:checked').val();
+        $('input[name=exRdoName01]').click(function(){ 
+            
+            var chkVar = $('input[name=exRdoName01]:checked').val();
+            console.log(chkVar)
             if(chkVar=='1'){
-                $('#chk01').css('display', 'block');
-                $('#chk02').css('display', 'none');
+                $('#chk01').removeAttr("disabled");
+                $('#chk02').attr("disabled", true);
             }else if(chkVar=='2'){
-                $('#chk01').css('display', 'none');
-                $('#chk02').css('display', 'block');
+                $('#chk01').attr("disabled", true);
+                $('#chk02').removeAttr("disabled");
                 
             }
         }); 
