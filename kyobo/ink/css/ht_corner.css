@@ -1387,12 +1387,16 @@
 /* gft_question_cont_list */
 .gft_question_cont_list {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .gft_question_cont_list .swiper-slide {
   width: 582px;
   border-radius: 12px;
-  float: left;
   margin: 0 0 40px 36px;
 }
 
@@ -1479,10 +1483,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  display: -webkit-box;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  /*display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;*/
   overflow: hidden;
   min-height: 66px;
 }
