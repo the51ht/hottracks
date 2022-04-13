@@ -1890,25 +1890,6 @@ $(function () {
 
 
 
-/* 각인서비스 : Select Type  */
-$(function(){
-    if(!$('.select_li_form').length) return;
-	var tag = ('.select_li_form');
-    $.fn.SelectLi = function(){
-        var tar = $(this).closest(tag);
-        var foldingChk = tar.hasClass('on');
-        if (foldingChk){
-			tar.removeClass('on');
-        } else {
-            tar.addClass('on');
-        }
-    };
-    $('body').click(function(e){
-		if( !$(tag).has(e.target).length){
-			$(tag).removeClass('on');	
-		}
-    });
-});
 
 
 
