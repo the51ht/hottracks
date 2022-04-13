@@ -1412,15 +1412,23 @@ function calendarTabSwiper(){
         observer: true,
         observeParents: true,
         slidesPerView:7,
-        slidesPerGroup:7,
+        loopFillGroupWithBlank : true,
         speed:500,
         navigation: {
             nextEl: $($parent).find('.swiper-button-next'),
-            prevEl:  $($parent).find('.swiper-button-prev'),
+            prevEl: $($parent).find('.swiper-button-prev'),
         },
     };
     calendarTabSwiperCont = new Swiper($target.get(), slideOption);
     $parent.addClass('swiper-on');
+    $('.calendar_tab_wrap .swiper-button-next').on('click', function() {
+        var index = $('.calendar_tab .swiper-slide-active').index()
+        calendarTabSwiperCont.slideTo(index + 7)
+    });
+    $('.calendar_tab_wrap .swiper-button-prev').on('click', function() {
+        var index = $('.calendar_tab .swiper-slide-active').index()
+        calendarTabSwiperCont.slideTo(index - 7)
+    });
 }
 
 $(function(){

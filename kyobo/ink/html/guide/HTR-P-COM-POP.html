@@ -29,8 +29,6 @@
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
 
-<link rel="stylesheet" href="../../css/ht_esc_shj.css">
-
 
 <!-- Polyfill javascript -->
 <script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
@@ -58,52 +56,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<script>
-    /* 환영 토스트 메세지 */
-    function toastBtn3(){
-        setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_welcome.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님 즐거운 시간 보내셨나요? <br>핫트랙스에 오신 걸 환영합니다!</div>', 3000);
-    }
-    /* 장바구니 토스트 메세지 */
-    function toastBtn4(){
-        setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_cart.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님 장바구니에 담긴 상품이 있어요! <br><p class="btn_txt_more"><a href="#"><span>장바구니 바로가기</span></a></p></div>', 3000);
-    }
-    /* 이벤트 토스트 메세지 */
-    function toastBtn5(){
-        setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_event.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님! 다양한 이벤트가 진행 중입니다. <br><p class="btn_txt_more"><a href="#"><span>이벤트를 보러가세요</span></a></p></div>', 3000);
-    }
-
-
-    /**
-     * 20220408 환영 / 장바구니 / 이벤트 토스트 메세지
-	 * toast message
-     * @param icon 노출되는 아이콘 내용
-	 * @param msg 노출되는 메세지 내용
-	 * @param timer toast 노출 시간 밀리세컨드로 계산(default: 2000)
-	 */
-	function setToastMessage2(icon, msg, timer){
-		if (!timer) { timer = 2000; }
-
-		var toastCont, dockerHeight, bottomMargin;
-		toastCont = $("<div class='toast_wrap welcome_toast'><span class='toast_message'>" + icon + msg + "</span></div>");
-		dockerHeight = $('.docker_wrapper').height();
-		bottomMargin = 36;
-        console.log(dockerHeight);
-
-		if($('body').find('.toast_wrap').length < 1) $('body').append(toastCont);
-
-		toastCont.slideToggle(200, function() {
-			if (!isNaN(timer)) {
-				setTimeout(function() {
-					toastCont.fadeOut(function() {
-						$(this).remove();
-					});
-				}, timer);
-			}
-		});
-
-    }
-    </script>
 </head>
 
 <body>
@@ -145,8 +97,8 @@
 					<!-- 팝업 -->
 					<div class="ht_cont">
 						<h2 class="ht_tit05">시스템 점검</h2>
-						<button type="button" class="btn_sm btn_light_gray" data-role="btn-dialog" data-target="#popSystem01"><span class="text">시스템 점검 사전 안내/ #popSystem01</span></button>
-						<button type="button" class="btn_sm btn_light_gray" data-role="btn-dialog" data-target="#popSystem02"><span class="text">시스템 점검 중 안내 / #popSystem02</span></button> 
+						<button type="button" class="btn_sm btn_light_gray" onclick="popSystem01();"><span class="text">시스템 점검 사전 안내/ #popSystem01</span></button>
+						<button type="button" class="btn_sm btn_light_gray" onclick="popSystem02();"><span class="text">시스템 점검 중 안내 / #popSystem02</span></button> 
 					</div>
 					<!-- //팝업 -->
 
@@ -155,9 +107,9 @@
 					<div class="ht_cont">
 						<h2 class="ht_tit05">토스트</h2>
 
-						<button type="button" class="btn_sm btn_primary"  onclick ="toastBtn3();"><span class="text">환영 메시지/ #popHpPop01</span></button>
-						<button type="button" class="btn_sm btn_primary"  onclick ="toastBtn4();"><span class="text">장바구니 바로가기 / #popHpPop02</span></button>
-						<button type="button" class="btn_sm btn_primary"  onclick ="toastBtn5();"><span class="text">이벤트 보러가기 / #popHpPop03</span></button>
+						<button type="button" class="btn_sm btn_primary" onclick ="toastBtn3();"><span class="text">환영 메시지/ #popHpPop01</span></button>
+						<button type="button" class="btn_sm btn_primary" onclick ="toastBtn4();"><span class="text">장바구니 바로가기 / #popHpPop02</span></button>
+						<button type="button" class="btn_sm btn_primary" onclick ="toastBtn5();"><span class="text">이벤트 보러가기 / #popHpPop03</span></button>
 					</div>
 					<!-- //텍스트 정보 팝업 -->
  
@@ -166,13 +118,13 @@
 					<div class="ht_cont">
 						<h2 class="ht_tit05">이미지 정보 팝업</h2>
 
-						<button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popImg01"><span class="text">이미지 팝업(하단) / #popImg01</span></button>
-						<button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popImg02"><span class="text">이미지 팝업(전체) / #popImg02</span></button>
+						<button type="button" class="btn_sm btn_black" onclick="popImgBn01();"><span class="text">이미지 팝업(하단) / #popImgBn01</span></button>
+						<button type="button" class="btn_sm btn_black" onclick="popImgBn02();"><span class="text">이미지 팝업(전체) / #popImgBn02</span></button>
 					</div>
 					<!-- //이미지 정보 팝업 -->
-
-
                     <br><br><br><br>
+
+
 				</div>
 			</div>
 			<!-- //ht_cont -->
@@ -209,6 +161,7 @@
             </dl>
         </div>
         <!-- //pop_box_info -->
+        
         <!-- pop_info -->
         <ul class="pop_info">
             <li class="none">핫트랙스의 보다 나은 서비스를 위해 서버 점검이 예정되어 있습니다. 점검 시간에는 사이트 접속이 불가하오니 양해 바랍니다.</li>
@@ -218,13 +171,12 @@
     <!-- //dialog_contents -->
 
     <!-- dialog_footer -->
-    <div class="dialog_footer mgt60">
+    <div class="dialog_footer">
         <button type="button" class="btn_md btn_primary" data-dialog-close><span class="text">확인</span></button>
     </div>
     <!-- //dialog_footer -->
 </div>
 <!-- 팝업 : 시스템 점검 사전 안내 / popSystem01 -->
-
 
 
 <!-- 팝업 : 시스템 점검 중 안내 / popSystem02 -->
@@ -268,8 +220,9 @@
 <!-- 팝업 : 시스템 점검 중 안내 / popSystem02 -->
 
 
-<!--  이미지 팝업(하단) : popImg01 -->
-<div id="popImg01" class="dialog_wrap btm_wel_wrap" data-class="dialog_bottom">
+
+<!--  이미지 팝업(하단) : popImgBn01 -->
+<div id="popImgBn01" class="dialog_wrap btm_wel_wrap" data-class="dialog_bottom">
 	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
     <!-- dialog_header -->
     <div class="dialog_header">
@@ -285,7 +238,8 @@
         <div class="pop_belt_banner">
             <img src="../../images/temp/@img_wel_pop_holiday_belt.jpg" alt="">
         </div>
-        <div class="evt_pop_content">
+
+        <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
             <div class="tag_wrap">
                 <span class="tag_item">10%</span>
             </div>
@@ -295,17 +249,18 @@
 	</div>
 	<!-- //dialog_contents -->
 </div>
-<!-- //이미지 팝업(하단) : popImg01 -->
+<!-- //이미지 팝업(하단) : popImgBn01 -->
 
-<!-- 이미지 팝업(전체) : popImg02 -->
-<div id="popImg02" class="dialog_wrap dialog_wrap_wel" data-class="dialog_sm">
 
+<!-- 이미지 팝업(전체) : popImgBn02 -->
+<div id="popImgBn02" class="dialog_wrap dialog_wrap_wel" data-class="dialog_sm">
     <!-- dialog_contents -->
     <div class="dialog_contents evt_pop_cotent no_margin_top img_pop">
         <div class="evt_pop_img">
             <img src="../../images/temp/@img_wel_pop_holiday_full.jpg" alt="">
         </div>
-        <div class="evt_pop_content">
+
+        <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
             <div class="tag_wrap">
                 <span class="tag_item">10%</span>
             </div>
@@ -313,8 +268,7 @@
                 배송비 걱정 없이<br>쇼핑하는 거 어떠세요?
             </div>
             <div class="sub_txt">
-                설 선물 맛집 핫트랙스에서<br>
-                새해 복 가득 담아 선물하세요
+                설 선물 맛집 핫트랙스에서<br>새해 복 가득 담아 선물하세요
             </div>
         </div>
     </div>
@@ -327,7 +281,73 @@
     </div>
     <!-- //dialog_footer -->
 </div>
-<!-- //이미지 팝업 : popImg02 -->
+<!-- //이미지 팝업 : popImgBn02 -->
 
+
+
+<script>
+function popSystem01(){
+    $('#popSystem01').dialog('open');
+}
+function popSystem02(){
+    $('#popSystem02').dialog('open');
+}
+function popImgBn01(){
+    $('#popImgBn01').dialog('open');
+}
+function popImgBn02(){
+    $('#popImgBn02').dialog('open');
+}
+$(function(){
+    //popImgBn01()
+});
+</script> 
+
+
+<script>
+/* 환영 토스트 메세지 */
+function toastBtn3(){
+    setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_welcome.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님 즐거운 시간 보내셨나요? <br>핫트랙스에 오신 걸 환영합니다!</div>', 3000);
+}
+/* 장바구니 토스트 메세지 */
+function toastBtn4(){
+    setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_cart.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님 장바구니에 담긴 상품이 있어요! <br><p class="btn_txt_more"><a href="#"><span>장바구니 바로가기</span></a></p></div>', 3000);
+}
+/* 이벤트 토스트 메세지 */
+function toastBtn5(){
+    setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_event.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님! 다양한 이벤트가 진행 중입니다. <br><p class="btn_txt_more"><a href="#"><span>이벤트를 보러가세요</span></a></p></div>', 3000);
+}
+
+
+/**
+ * 20220408 환영 / 장바구니 / 이벤트 토스트 메세지
+ * toast message
+ * @param icon 노출되는 아이콘 내용
+ * @param msg 노출되는 메세지 내용
+ * @param timer toast 노출 시간 밀리세컨드로 계산(default: 2000)
+ */
+function setToastMessage2(icon, msg, timer){
+    if (!timer) { timer = 2000; }
+
+    var toastCont, dockerHeight, bottomMargin;
+    toastCont = $("<div class='toast_wrap welcome_toast'><span class='toast_message'>" + icon + msg + "</span></div>");
+    dockerHeight = $('.docker_wrapper').height();
+    bottomMargin = 36;
+    console.log(dockerHeight);
+
+    if($('body').find('.toast_wrap').length < 1) $('body').append(toastCont);
+
+    toastCont.slideToggle(200, function() {
+        if (!isNaN(timer)) {
+            setTimeout(function() {
+                toastCont.fadeOut(function() {
+                    $(this).remove();
+                });
+            }, timer);
+        }
+    });
+
+}
+</script>
 </body>
 </html>

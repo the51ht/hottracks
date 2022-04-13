@@ -7573,16 +7573,14 @@
 }
 
 .gft_question_tit .s2 {
-  min-height: 66px;
+  height: 66px;
   color: #000;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  display: -webkit-box;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow-y: auto;
+  /*min-height:66px;display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;*/
+  word-break: break-all;
 }
 
 .gft_question_tit .ico_participate_num {
@@ -7612,9 +7610,8 @@
 
 .gft_question_cont_list .gft_question_tit .s2,
 .pop_view_add .gft_question_tit .s2 {
-  text-overflow: inherit;
-  overflow: inherit;
-  -webkit-box-orient: inherit;
+  height: initial;
+  /*text-overflow:inherit;overflow:inherit;-webkit-box-orient:inherit;*/
 }
 
 /* gft_question_chk */

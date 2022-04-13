@@ -11,7 +11,7 @@
 <meta property="og:image" content="../../images/layout/sns.jpg">
 <link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
-<title>시스템 장애</title>
+<title>고객센터 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -29,11 +29,7 @@
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
 
-
-
-<link rel="stylesheet" href="../../css/ht_esc_shj.css">
-
-
+<link rel="stylesheet" href="../../css/ht_cus_shj.css">
 
 <!-- Polyfill javascript -->
 <script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
@@ -61,7 +57,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
 </head>
 
 <body>
@@ -92,31 +87,77 @@
 	<!-- //Header -->
 
 
-	<!-- Contents -->
+	<!-- Contents --> 
 	<main id="containerWrapper" class="container_wrapper">
 
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap">
+			<!-- ht_sub_cont -->
+			<div class="ht_sub_cont">
+				<!-- LNB -->
+				<nav class="ht_lnb">
+					<h2 class="tit">고객센터</h2>
 
-            <!-- ht_cont: system_err -->  
-			<div class="ht_cont system_err"> 
-                <div class="contents_inner">
-                  <div class="err_icon">
-                      <img src="../../images/main/system_error.jpg" alt="">
-                  </div>
-                  <h2 class="ht_tit04">현재 페이지를 표시할 수 없습니다.</h2>
-                  <p class="ht_txt02 center">
-                      현재 서비스가 원활하지 않아 페이지에 접근할 수 없습니다. 인터넷이 연결되어 있는지 확인 후,<br>
-                      새로 고침 또는 종료하여 다시 접속 해주세요. 이용에 불편을 드려 죄송합니다.
-                  </p>
-                  <div class="btn_area">
-                    <button type="button" class="btn_md btn_black" ><span class="text">이전페이지</span></button>
-                    <button type="button" class="btn_md btn_primary"><span class="text">핫트랙스 홈</span></button>
-                  </div>
-                </div>
-            </div>
-            <!-- // ht_cont: system_err-->
+					<div style="height:500px;background-color:#d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:500px;text-align:center;">LNB Area</div>
+				</nav>
+				<!-- LNB -->
 
+				<!-- ht_sub_area -->
+				<section class="ht_sub_area">
+					<h1 class="ht_tit">고객센터</h1>
+
+                    
+                    <!-- ht_cont : cus_etc_upper -->
+                    <div class="ht_cont cus_etc_upper">
+                        <!-- tab_txt -->
+                        <div class="tab_txt ty02 tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+                            <ul>
+                                <li>
+                                    <a href="#n"><!-- 활성화  class="on" -->
+                                        <span>이전 주문 조회</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#n" class="on" >
+                                        <span>예치금 환불신청</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //tab_txt -->
+
+                        <!-- info_text_box -->
+                        <div class="info_text_box">
+                            <ul class="bul_list">
+                                <li class="bul_item_dot">2022년 8월 통합이전에 예치된 금액은 전액 환불처리 됩니다.</li>
+                                <li class="bul_item_dot">통합이후 예치된 금액은 <a href="#" class="to_myroom">[마이룸 > 주문내역]</a>에서 조회 및 환불 신청하실 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <!-- //info_text_box -->
+
+                    </div>
+                    <!-- //ht_cont : cus_etc_upper -->
+
+                    
+                    <!-- ht_cont: cus_etc -->
+                    <div class="ht_cont cus_etc">
+                        <!-- deposit_ck_box -->
+                        <div class="deposit_ck_box">
+                            <div class="icon"><img src="../../images/guide/cus_deposit_ck.svg" alt=""></div>
+                            <h2 class="ht_tit05">핫트랙스 예치금을 확인해보세요.</h2>
+                            <p class="desc">교보핫트랙스 온라인 예치금은 결제대금 환불, 배송비 정산 등으로 발생한 금액입니다.<br>예치된 금액은 주문 결제 시 사용이 가능하며, 은행계좌로 환불신청을 하실 수 있습니다.</p>
+                            <div class="btn_area">
+                                <button class="btn_lg btn_black">핫트랙스 예치금 확인</button>
+                            </div>
+                        </div>
+                        <!--// deposit_ck_box -->
+                    </div>
+                    <!-- //ht_cont: cus_etc -->
+
+				</section>
+				<!-- //ht_sub_area -->
+			</div>
+			<!-- //ht_sub_cont -->
 		</section>
 		<!-- /ht_contents_wrap -->
 	</main>
