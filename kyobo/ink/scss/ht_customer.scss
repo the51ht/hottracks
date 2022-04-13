@@ -2,127 +2,6 @@
 
 
 /** QNA **/
-.cus_qna_view{
-    .btn_txt_more {
-        position:relative;overflow:hidden;margin: -39px 0 21px 0;
-        a, button {
-            display:block;float:right;color:#595959;font-size:13px;
-            span {
-                display:inline-block;position:relative;padding-right:10px;
-                &:after {
-                    position:absolute;right:2px;top:50%;width:6px;height:6px;margin-top:-4px;border:solid #595959;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
-                } 
-            }
-        }
-    }
-    .tit_form_wrap{
-        margin-top: 43px;border-bottom: 1px solid #000;padding-bottom: 15px;
-        &:after{
-            display: block;clear: both;content: "";
-        }
-        .form_sel {
-            float: left;
-            .ui-selectmenu-button{
-                width: 120px;
-            }
-        }
-        .btn_area{
-            margin-top: 0;float: right;
-            button.btn_md{
-                min-width: 122px;font-size: 14px;font-weight: 500;
-            }
-        }
-    }
-    .form_qna_wrap{
-        margin-top: 42px;
-        .form_box{
-            &:after{
-                display: block; clear: both; content: "";
-            }
-        }
-        .form_code_list{
-            .form_title{
-                display: inline-block;margin-top: 10px;
-            }
-            .fold_d {
-                padding: 17px 14px 14px;margin-top:10px;border: 1px solid #d5d5d5;
-                .img{
-                    top: 45px;left: initial;right: 14px;
-                }
-                .txt {
-                    padding-left: 0px;
-                    .s1 {
-                        margin-bottom: 12px;
-                        .info{
-                            font-weight: 400;
-                        }
-                        span{
-                            &:nth-of-type(2){
-                                margin-left:10px;
-                                &:before {
-                                    left:-6px;top:1px;
-                                }
-                            }
-                        }
-                    }
-                    .s2{
-                        margin-bottom: 13px;
-                    }
-                    .s3 + .s3 {
-                        margin-top: 6px;
-                    }
-                }
-            }
-        }
-        &.form_wrap {
-            .form_box {
-                width: calc(73.5% - 160px);display: table;margin-top: 25px;
-            }
-        }
-        .form_title{
-            width: 160px;display: table-cell;vertical-align: middle;
-            .form_label{
-                font-size: 14px;margin-top: 3px;margin-left:10px;
-                .required{       
-                    margin-top: 3px;padding-left: 4px;
-                    &:before {
-                        background-image: url(../../ink/images/guide/ico_required.svg);
-                    }
-                }
-            }
-        }
-        .form_cont{
-            float: right;margin-top: 0px;width: 400px;
-        }
-        .btn_area{
-            border-top: 1px solid #EAEAEA;padding-top: 30px;margin-top: 30px;
-            &.btn_area_desc{
-                padding-top: 17px;
-                .btn_primary{
-                    margin-top: 30px;
-                }
-                p{
-                    font-size: 13px;color: #767676;text-align: left;letter-spacing: -0.13px;
-                }
-            }
-            .btn_primary{
-                min-width: 134px;
-            }
-        }
-        .form_radio_sel{
-            .form_title{
-                display: inline-block;
-            }
-            .form_ip{
-                margin-top: 10px;
-            }
-            .form_cont + .form_cont{
-                margin-top: 25px;
-            }
-        }
-    }
-    
-}
 .cus_info_text_box{
     > strong{
         font-size: 14px;font-weight: 700;margin-bottom: 13px;display: inline-block;letter-spacing: -0.14px;
@@ -157,6 +36,96 @@
         em:after{
             background:url("../images/guide/ico_comment.svg") center/100% no-repeat;width: 14px;height: 14px;margin-top: -12px;right: 3px;
         }
+    }
+}
+.cus_qna_view{
+    .tit_form_wrap{
+        margin-top: 43px;border-bottom: 1px solid #000;padding-bottom: 15px;
+        &:after{
+            display: block;clear: both;content: "";
+        }
+        .form_sel {
+            float: left;
+            .ui-selectmenu-button{
+                width: 120px;
+            }
+        }
+        .btn_area{
+            margin-top: 0;float: right;
+            button.btn_md{
+                min-width: 122px;font-size: 14px;font-weight: 500;
+            }
+        }
+    }
+    .btn_txt_more {
+        position:relative;overflow:hidden;margin: -39px 0 21px 0;
+        a, button {
+            display:block;float:right;color:#595959;font-size:13px;
+            span {
+                display:inline-block;position:relative;padding-right:10px;
+                &:after {
+                    position:absolute;right:2px;top:50%;width:6px;height:6px;margin-top:-4px;border:solid #595959;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
+                } 
+            }
+        }
+    }
+}
+.ht_cus_cont{
+    .page_bottom{
+        .btn_primary{
+            min-width: 134px;
+        }
+    }
+    
+    .tab_box{
+        margin-top: 20px;
+        + .tbl_row_wrap{
+            margin-top: 0;
+        }
+    }
+    .tbl_row_wrap{
+        margin-top: 30px;
+    }
+    .tbl_row{
+        tbody th .required{       
+            margin-top: 3px;padding-left: 4px;
+            &:before {
+                background-image: url(../../ink/images/guide/ico_required.svg);
+            }
+        }
+        .form_search_box{
+            width: 400px;
+        }
+        .fold_question {
+            width: 400px;margin-top: 10px;
+        }
+        .byte_check_wrap{
+            width: 400px;
+        }
+        .chk_col_list{
+            width: 400px;
+            .form_rdo{
+                display: block;
+                + .input_btn_box{
+                    margin-top: 10px;
+                }
+            }
+            .valid_check {
+                margin-top: 10px;
+            }
+        }
+    }
+    .btn_area_desc{
+        margin-top: 17px;
+        .btn_primary{
+            margin-top: 30px;
+        }
+        p{
+            font-size: 13px;color: #767676;text-align: left;letter-spacing: -0.13px;
+        }
+    }
+    .tbl_row_wrap .tbl_row tbody th.has_btn_sm.ver_mid_text{
+        vertical-align: middle;display: table-cell;
     }
 }
 
@@ -199,7 +168,7 @@
     }
 
     
-    /* FAQ, QNA, 상품문의 내역 목록 */
+    /* FAQ, QNA 상품문의 내역 목록 */
     .prod_fold_view{
         display: inline-block;width: 100%;
     }
@@ -363,27 +332,6 @@
                     }
                 }
             }
-            // .s2 {
-            //     margin-top:2px;color:#000;font-size:12px;line-height:18px;
-            //     span {
-            //         position:relative;padding-left:13px;font-size:12px;line-height:14px;
-            //         &:before{ 
-            //             position:absolute;left:6px;top:2px;width:1px;height:9px;background-color:#dcdcdc;content:"";
-            //         }
-            //         &:first-child {
-            //             padding-left:0;
-            //             &:before {
-            //                 display:none;
-            //             }
-            //         }
-            //     }
-            // }
-            // .s3 {
-            //     margin-top:4px;color:#767676;font-size:11px;line-height:18px;
-            // }
-            // .info {
-            //     position:absolute;right:0;bottom:0;height:20px;padding:0 9px;background:#f7f7f7;border-radius:10px;box-sizing:border-box;color:#292929;font-size:10px;line-height:21px;
-            // }
         }
         &.ty02 {
             display:table;width:100%;table-layout:fixed;padding:12px 12px 12px 122px;
@@ -401,7 +349,6 @@
             }
         }
     }
-    
 
 
     /* QNA 주문내역 조회 팝업 : .cus_qna_code_pop*/
@@ -537,5 +484,163 @@
     }
 }
 
+
+/** 대량 구매 상담 **/
+/* cus_hero_area */
+.cus_hero_area {
+    position:relative;margin:0 0 32px 0;padding:91px 20px 22px 20px;text-align:center;
+    &:before {
+        position:absolute;left:49%;top:0;width:80px;height:80px;margin-left:-30px;background:url(../images/guide/ico_cus_hero01.svg) center/100% no-repeat;content:"";
+    }
+    .cus_hero_tit {
+        font-size:18px;font-weight:700; line-height: 28px; letter-spacing: -0.18px;
+        .point_line:before {
+            top:10px;background:#fff688;height: 14px;
+        }
+    }
+    h2 + p {
+        margin-top:15px; font-size: 15px; line-height: 23px;letter-spacing: -0.15px;
+    }
+    &.ty02 {
+        &:before {
+            background-image:url(../images/guide/ico_cus_hero02.svg);
+        }
+    }
+}
+.agree_box_wrap{
+    + .form_chk{
+        margin-top: 10px;
+    }
+}
+.ht_cus_cont{
+    .fold_question.fold_cus_bun{
+        min-height: 121px;padding: 14px 13px;
+        .img{
+            width: 93px;height: 93px;top: 13px;left: 13px; border-radius: 6px;
+        }
+        .txt{
+            padding: 14px 14px 9px 110px;
+            .s2{
+                font-size: 14px; line-height: 22px;margin-bottom: 2px;padding-right: 0px;font-weight: 400;
+            }
+            .s3{
+                font-size: 14px; line-height: 22px; font-weight: 700; color: #000;
+            }
+        }
+    }
+    .input_btn_box{
+        + .valid_check {
+            margin-top: 10px;
+            +.input_btn_box{
+                margin-top: 10px;
+            }
+        }
+        +.input_btn_box{
+            margin-top: 10px;
+        }
+    }
+    .tbl_row_wrap .tbl_row tbody td{
+        &.btn_add_tel{
+            .input_btn_box{
+                width: 546px;
+                .btn_ip.btn_black{
+                    margin-left: 10px;
+                }
+            }
+            .valid_check{
+                position: relative;
+            }
+            .btn_form_delete {
+                position: absolute;right: 6px;top: 10px;width: 30px;height: 30px;background: url(../images/guide/ico_btn_form_delete.svg) center/15px no-repeat;z-index: 1;cursor: pointer;
+            }
+        }
+    } 
+}
+/** 대량 구매 상담 팝업 **/
+/* bun_pop */
+.tab_swiper.bun_pop {
+    margin-top:0;margin-bottom:20px;;border-bottom: 0;padding-bottom: 0;
+    &:first-child {
+        margin-top:0;
+    }
+    .swiper-wrapper {
+        position:relative;font-size:0;
+        li {
+            display:inline-block;position:relative;margin:0px 0 0 6px;
+            &:first-child{
+                margin:0px 0 0 0px;
+            }
+            a {
+                display:block;font-size:12px;transition:all 0.4s;height:33px;padding:0 13px;background:#fff;border:1px solid #eaeaea;border-radius:18px;box-sizing:border-box;color:#595959;line-height:33px;
+                &.on{
+                    color:#fff;font-weight:700;
+                }
+            }
+        } 
+    }
+}
+
+/* bun_pop_wrap */
+.bun_pop_wrap {
+    margin-top:0 !important;
+    + .btn_area{
+        border-top:1px solid #EAEAEA; padding-top:30px; margin: 0 -30px 0;
+    }
+}
+
+/* bun_pop_area */
+.bun_pop_area {
+    position:relative;min-height:calc(85vh - 272px);padding-top:20px;box-sizing:border-box;
+    .sub_tit {
+        color:#595959;
+    }
+    .ctg_topMenu {
+        position:relative;margin:-20px 0 25px 0;background:#f7f7f7;line-height:31px;
+        .inner_wrap {
+            span {
+                height:33px;padding-top:1px;font-size:12px;vertical-align:top;
+            }        
+        }
+        .round_ty {
+            padding:15px 15px !important;
+        }
+        .btn_line_refresh {
+            position:absolute;right:20px;top:50%;transform:translateY(-50%);
+        }
+    }
+    .ht_cont_s {
+        margin-bottom:30px;
+        .point_line {
+            letter-spacing:-0.3px;
+            &:before{
+                top:9px;height:14px;
+            }
+        }
+        .ht_tit05 {
+            margin-bottom:15px;
+            img{
+                vertical-align:top;margin-left:8px;
+            }
+        }
+    }
+}
+
+
+/** 공지사항 **/
+.ht_cus_cont{
+    .contents_inner {
+        width: 994px;
+    }
+    .evt_description_title{
+        border-top: 0;
+    }
+    .evt_description_content{
+        + .btn_area{
+            button{
+                min-width: 134px;
+            }
+        }
+    }
+}
 
 
