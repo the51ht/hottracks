@@ -2715,7 +2715,7 @@
     .btn_wel_live.on {
         height:50px;border-radius:6px;
         color:#000;
-        font-size:15px;;font-weight:500;
+        font-size:15px;;font-weight:500;overflow:hidden;
         &:before {
             border-color:#fff;border-radius:6px;;
         }
@@ -4517,6 +4517,14 @@
     .wel_belt02 {
         margin:40px 0 -40px 0;
     }
+    &.main_cont_wrap{
+        .btn_more_div{
+            + .wel_belt02{
+                margin:40px 0 0px 0;
+            }
+        }
+    }
+    
     &.main_cont_wrap {
         padding-bottom:0;
     }
