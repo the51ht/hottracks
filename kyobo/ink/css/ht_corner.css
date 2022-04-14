@@ -1816,6 +1816,7 @@
   padding-top: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  /* prod_type_selec_area */
 }
 
 .git_wrt_area .sub_tit {
@@ -1868,6 +1869,49 @@
 .git_wrt_area .ht_cont_s .ht_tit05 img {
   vertical-align: top;
   margin-left: 8px;
+}
+
+.git_wrt_area .prod_type_selec_area {
+  margin-bottom: 20px;
+}
+
+.git_wrt_area .prod_type_selec_area .period_sort {
+  margin: 12px 20px 0 0;
+  font-size: 14px;
+}
+
+.git_wrt_area .prod_type_selec_area .period_sort.ed {
+  margin-right: 0;
+}
+
+.git_wrt_area .prod_type_selec_area .period_sort button {
+  position: relative;
+  margin-left: 13px;
+  color: #595959;
+  font-size: 13px;
+}
+
+.git_wrt_area .prod_type_selec_area .period_sort button:before {
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 1px;
+  height: 7px;
+  background-color: #D5D5D5;
+  content: "";
+}
+
+.git_wrt_area .prod_type_selec_area .period_sort button.active {
+  color: #000;
+  font-weight: 500;
+}
+
+.git_wrt_area .prod_type_selec_area .period_sort button:first-child {
+  margin-left: 0;
+}
+
+.git_wrt_area .prod_type_selec_area .period_sort button:first-child:before {
+  display: none;
 }
 
 /* mc_s_cont */
@@ -2036,49 +2080,6 @@
 
 .form_list_box_ty .form_sel .ui-selectmenu-button {
   width: 132px;
-}
-
-/* prod_type_selec_area */
-.prod_type_selec_area {
-  margin-bottom: 20px;
-}
-
-.prod_type_selec_area .period_sort {
-  margin: 12px 20px 0 0;
-  font-size: 14px;
-}
-
-.prod_type_selec_area .period_sort.ed {
-  margin-right: 0;
-}
-
-.prod_type_selec_area .period_sort button {
-  position: relative;
-  margin-left: 13px;
-  color: #595959;
-}
-
-.prod_type_selec_area .period_sort button:before {
-  position: absolute;
-  left: -10px;
-  top: 6px;
-  width: 1px;
-  height: 7px;
-  background-color: #D5D5D5;
-  content: "";
-}
-
-.prod_type_selec_area .period_sort button.active {
-  color: #000;
-  font-weight: 500;
-}
-
-.prod_type_selec_area .period_sort button:first-child {
-  margin-left: 0;
-}
-
-.prod_type_selec_area .period_sort button:first-child:before {
-  display: none;
 }
 
 /* fixed_btn_select */
@@ -5205,4 +5206,5 @@
   padding: 0 !important;
   background: #fff;
   z-index: 7;
+  overflow: hidden;
 }
