@@ -994,6 +994,32 @@
             }
         }
     }
+
+    /* prod_type_selec_area */
+    .prod_type_selec_area{
+        margin-bottom:20px;
+        .period_sort {
+            margin:12px 20px 0 0;font-size:14px;
+            &.ed {
+                margin-right:0;
+            }
+            button{
+                position:relative;margin-left:13px;color:#595959;font-size:13px;
+                &:before {
+                    position:absolute;left:-10px;top:5px;width:1px;height:7px;background-color:#D5D5D5;content:"";
+                }
+                &.active{
+                    color:#000;font-weight:500;
+                }
+                &:first-child{
+                    margin-left:0;
+                    &:before {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* mc_s_cont */
@@ -1075,32 +1101,6 @@
         position:absolute;left:0;top:0;
         .ui-selectmenu-button{
             width:132px;
-        }
-    }
-}
-
-/* prod_type_selec_area */
-.prod_type_selec_area{
-    margin-bottom:20px;
-    .period_sort {
-        margin:12px 20px 0 0;font-size:14px;
-        &.ed {
-            margin-right:0;
-        }
-        button{
-            position:relative;margin-left:13px;color:#595959;
-            &:before {
-                position:absolute;left:-10px;top:6px;width:1px;height:7px;background-color:#D5D5D5;content:"";
-            }
-            &.active{
-                color:#000;font-weight:500;
-            }
-            &:first-child{
-                margin-left:0;
-                &:before {
-                    display:none;
-                }
-            }
         }
     }
 }
@@ -2686,7 +2686,7 @@
 
 /*** 큐레이션 cur_sticky_tab ***/
 .cur_sticky_tab {
-    position:sticky;top:80px;margin-bottom:60px;padding:0 !important;background:#fff;z-index:7;
+    position:sticky;top:80px;margin-bottom:60px;padding:0 !important;background:#fff;z-index:7;overflow:hidden;
 }
 
 
