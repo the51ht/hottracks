@@ -1268,8 +1268,41 @@
   padding: 0;
 }
 
+.cus_cont_view:nth-of-type(3) .mc_tit03 {
+  top: calc(100% - 150px);
+}
+
+.cus_cont_view:nth-of-type(3) .mc_tit03:before {
+  background: url(../images/guide/cus_ribbon.svg) no-repeat center/18px;
+}
+
+.cus_cont_view:nth-of-type(3) .mc_tit03:after {
+  background: #FFE65C;
+}
+
+.cus_cont_view:nth-of-type(3) .info_text_box {
+  margin-top: -70px;
+}
+
+.cus_cont_view:nth-of-type(4) .mc_tit03 {
+  top: calc(100% - 130px);
+}
+
+.cus_cont_view:nth-of-type(4) .mc_tit03:before {
+  background: url(../images/guide/cus_card.svg) no-repeat center/18px;
+}
+
+.cus_cont_view:nth-of-type(4) .mc_tit03:after {
+  background: #9AF8C2;
+}
+
+.cus_cont_view:nth-of-type(4) .info_text_box {
+  margin-top: -50px;
+}
+
 .img_tit_area {
   position: relative;
+  background-color: #F4F4F4;
 }
 
 .img_tit_area .img {
@@ -1280,27 +1313,42 @@
   width: 100%;
 }
 
-.img_tit_area .img:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  content: "";
-}
-
 .img_tit_area .mc_tit03 {
   position: absolute;
   left: 20px;
-  top: calc(100% - 122px);
-  color: #fff;
+  top: calc(100% - 164px);
+  padding-right: 20px;
+  z-index: 2;
+}
+
+.img_tit_area .mc_tit03:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 5px;
+  right: -2px;
+  background: url(../images/guide/cus_pencil.svg) no-repeat center/18px;
+  z-index: 2;
+}
+
+.img_tit_area .mc_tit03:after {
+  position: absolute;
+  left: -2px;
+  top: 15px;
+  width: calc(100% + 4px);
+  height: 14px;
+  background: #FFC09F;
+  content: "";
+  z-index: -1;
+  -webkit-animation: pointLine both ease-in infinite 3s;
+          animation: pointLine both ease-in infinite 3s;
 }
 
 .img_tit_area .info_text_box {
   position: relative;
   width: calc(100% - 20px);
-  margin-top: -50px;
+  margin-top: -90px;
   background: #fff;
   border-radius: 0;
   color: #000;
@@ -1308,6 +1356,10 @@
 
 .img_tit_area .info_text_box .bul_item_dot:before {
   background-color: #222;
+}
+
+.img_tit_area .info_text_box [class^=bul_item_].font_size_xs {
+  letter-spacing: -0.03em;
 }
 
 .img_tit_area .t_point {

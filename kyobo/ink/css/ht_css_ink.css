@@ -111,6 +111,18 @@ button.btn_black[aria-disabled], button.btn_black[disabled] {
   border-color: #bebebe;
 }
 
+/* btn_primary_kb */
+.btn_primary_kb {
+  background: #474c98;
+  border: #474c98;
+  color: #fff;
+}
+
+.btn_primary_kb.btn_primary:hover {
+  background: #2c307c;
+  border-color: #2c307c;
+}
+
 /* Btn Size */
 a.btn_lg,
 button.btn_lg {
@@ -568,7 +580,7 @@ body {
 .ht_cont {
   position: relative;
   padding-bottom: 60px;
-  overflow: hidden;
+  /*overflow:hidden;*/
 }
 
 .ht_cont:last-child {
@@ -2368,6 +2380,12 @@ body {
   }
 }
 
+/* ht_under_line */
+.ht_under_line {
+  color: #000;
+  text-decoration: underline;
+}
+
 /***** Button *****/
 /* Btn : Contents */
 .btn_area {
@@ -2989,6 +3007,13 @@ body {
 .evt_prod_list_wrap .evt_products:first-child,
 .ht_sub_area .evt_prod_list_wrap .evt_products:first-child {
   margin-top: -40px;
+}
+
+.evt_prod_list_wrap {
+  position: relative;
+  margin: 0 -20px;
+  padding: 0 20px;
+  overflow: hidden;
 }
 
 .evt_prod_list_wrap .solo_banner {
