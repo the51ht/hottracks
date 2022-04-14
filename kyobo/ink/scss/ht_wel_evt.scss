@@ -570,14 +570,15 @@
 
 /* 이미지 팝업(하단) : popImgBm01*/
 .ui-dialog.dialog_bottom {
-    width:100% !important;max-height:calc(100% - 134px) !important;margin:0;transform:translateY(100%);align-self:flex-end;
+    width:100% !important;max-height:calc(100% - 134px) !important;margin:0;transform:translateY(100%);align-self:flex-end;animation:bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
 }
+/*
 .dialog_wrapper.open {
     display:flex;justify-content:center;align-items:center;flex-direction:row;position:fixed;left:0;top:0;width:100%;height:100%;overflow:hidden;
     .ui-dialog.dialog_bottom {
-        animation:bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
+        
     }
-}
+}*/
 @keyframes bottomPopAnimation {
     0% {transform:translateY(100%);}
     100% {transform:translateY(0);}
