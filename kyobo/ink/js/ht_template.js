@@ -1831,6 +1831,16 @@ function cusFaqBanner(){
                 nextEl: $($parent).find('.swiper-button-next'),
                 prevEl: $($parent).find('.swiper-button-prev'),
             },
+            pagination: {
+                el: $($parent).find('.swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            }
         };
 
         if($parent.find('.swiper-slide').length > 4) {
