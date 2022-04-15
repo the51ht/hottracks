@@ -29,7 +29,6 @@
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
 <!-- //ht_ Hottracks css : 공통작업 -->
 
-<link rel="stylesheet" href="../../css/ht_cus_shj.css">
 
 <!-- Polyfill javascript -->
 <script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
@@ -106,53 +105,47 @@
 				<section class="ht_sub_area">
 					<h1 class="ht_tit">핫트랙스 서비스 안내</h1>
 
+                    <!-- tab_txt -->
+                    <div class="tab_txt ty02 tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+                        <ul>
+                            <li>
+                                <a href="#n"><span>각인서비스</span></a>
+                            </li>
+                            <li>
+                                <a href="#n"><span>포장서비스</span></a>
+                            </li>
+                            <li>
+                                <a href="#n" class="on"><span>제휴/할인카드</span></a><!-- 활성화  class="on" -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //tab_txt -->
 
-					<!-- ht_cont: cus_view_upper -->
-					<div class="ht_cont cus_view_upper">
-						<!-- tab_txt -->
-						<div class="tab_txt ty02 tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-							<ul>
-								<li>
-									<a href="#n">
-										<span>각인서비스</span>
-									</a>
-								</li>
-								<li>
-									<a href="#n">
-										<span>포장서비스</span>
-									</a>
-								</li>
-								<li>
-									<a href="#n" class="on"><!-- 활성화  class="on" -->
-										<span>제휴/할인카드</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<!-- //tab_txt -->
-	
-						<!-- info_text_box -->
-						<div class="info_text_box cus_list_box card">
+
+                    <!-- 상단영역 -->
+                    <div class="ht_cont_s cus_view_upper">
+                        <!-- cus_list_box -->
+                        <div class="cus_list_box ty03">
 							<h2 class="ht_tit05"><strong class="point_line"><em>제휴/할인카드<img src="../../images/guide/cus_card.svg" alt=""></em></strong></h2>
 							<ul class="bul_list">
-								<li class="bul_item_dot"><strong>추가적립 & 할인과 다양한 무이자 할부 혜택!</strong><br>핫트랙스의 제휴/할인 카드 혜택으로 저렴하게 구매하세요.</li>
-							
+								<li class="bul_item_dot"><strong>추가적립 &amp; 할인과 다양한 무이자 할부 혜택!</strong><br>핫트랙스의 제휴/할인 카드 혜택으로 저렴하게 구매하세요.</li>
 							</ul>
-						</div>
-						<!-- //info_text_box -->
-					</div>
-					<!-- //ht_cont: cus_view_upper -->
+                        </div>
+                        <!-- //cus_list_box -->
+                    </div>
+                    <!-- //상단영역 -->
 
 
-                    <!-- ht_cont : cus_view_list -->
-                    <div class="ht_cont cus_view_list">
+                    <!-- 제휴/할인카드 -->
+                    <div class="ht_cont_s cus_view_list">
+						<!-- cus_view_box -->
                         <div class="cus_view_box ty02">
 							<!-- cus_card_area -->
 							<dl class="cus_card_area">
 								<dt class="ht_tit06">교보문고 핫트랙스 롯데카드</dt>
 								<dd class="cus_card_box"><img src="../../images/guide/img_cus_lottecard.jpg" alt=""></dd>
 								<dd class="btn_area">
-									<button class="btn_lg btn_black">바로DC 카드 신청</button>
+									<button class="btn_md btn_black">바로DC 카드 신청</button>
 								</dd>
 							</dl>
 							<!-- //cus_card_area -->
@@ -174,13 +167,13 @@
 											<td class="align_left">
 												<ul class="bul_list">
 													<li class="bul_item_dot">할인율 20% 할인</li>
-													<li class="bul_item_dot">월할인한도 2만원<em>(대상가맹점통합한도)</em></li>
+													<li class="bul_item_dot">월할인한도 2만원 <em>(대상가맹점통합한도)</em></li>
 												</ul> 
 											</td>
 											<td class="align_left">
 												<ul class="bul_list">
 													<li class="bul_item_dot">할인율 10% 할인</li>
-													<li class="bul_item_dot">월할인한도 1만원<em>(대상가맹점통합한도)</em></li>
+													<li class="bul_item_dot">월할인한도 1만원 <em>(대상가맹점통합한도)</em></li>
 												</ul> 
 											</td>
 										</tr>
@@ -197,9 +190,9 @@
 							</ul>
 							<!-- //bul_list -->
                         </div>
-
-                    </div>
-                    <!-- ht_cont : cus_view_list -->
+						<!-- //cus_view_box -->
+					</div>
+					<!-- //제휴/할인카드 -->
 
 				</section>
 				<!-- //ht_sub_area -->
@@ -229,6 +222,6 @@
 	</div>
 	<!-- //탑버튼 -->
 </div>
-<!-- // wrapper -->
+<!-- //wrapper -->
 </body>
 </html>

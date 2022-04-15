@@ -473,7 +473,7 @@
     }
 }
 .btn_wel_live {
-    display:inline-block;position:relative;height:38px;padding:1px 15px 0 15px;border-radius:19px;box-sizing:border-box;color:#fff;line-height:38px;overflow:hidden;
+    display:inline-block;position:relative;height:38px;padding:1px 15px 0 15px;border-radius:19px;box-sizing:border-box;color:#fff;line-height:38px;
     &:after {
         position:absolute;left:0;top:0;width:100%;height:100%;border:1px solid rgba(255,255,255,0.3);border-radius:19px;box-sizing:border-box;content:"";
     }
@@ -2710,14 +2710,15 @@
         }
     }
     .liv_btn_area {
-        margin-top:25px;
+        margin-top:25px;border-radius: 5px;
+        overflow: hidden;
     }
     .btn_wel_live.on {
         height:50px;border-radius:6px;
         color:#000;
         font-size:15px;;font-weight:500;overflow:hidden;
         &:before {
-            border-color:#fff;border-radius:6px;;
+            border-color:#fff;border-radius:6px;
         }
         &:after {
             background-color:#fff;border-radius:4px;

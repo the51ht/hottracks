@@ -111,7 +111,7 @@
 	</main>
 	<!-- //Contents -->
 </div>
-<!-- // wrapper -->
+<!-- //wrapper -->
 
 
 
@@ -126,18 +126,16 @@
     </div>
     <!-- //dialog_header -->
 
-    <!-- dialog_contents / bun_pop_wrap : 선물하기 팝업 컨텐츠 -->
-    <div class="dialog_contents bun_pop_wrap">
+    <!-- dialog_contents / cus_bun_wrap : 대량구매상품검색 팝업 컨텐츠 -->
+    <div class="dialog_contents cus_bun_wrap">
 
         <!-- 최근 본 상품 찾기 -->
-        <div class="bun_pop_area">
-            
+        <div class="git_wrt_area">
             <!-- 스크롤 영역 -->
             <div class="custom_scroll_wrap sc_pop_lg02">
                 <div class="ht_cont_s sc_box">
-    
                     <!-- tab_swiper -->
-                    <div class="tab_swiper tab_ty ty03 tab_link bun_pop"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+                    <div class="tab_swiper tab_ty ty03 tab_link gft_wrt_pop"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="#n" class="on"><!-- 활성화  class="on" -->
@@ -157,7 +155,7 @@
                         </ul>
                     </div>
                     <!-- //tab_swiper -->
-                    <p class="sub_tit">1개의 상품만 선택할 수 있어요!</p>
+                    <p class="sub_tit">최소 2개 부터 최대 3개의 상품을 선택할 수 있어요!</p>
 
                     <!-- 상품 리스트 -->
                     <ul class="evt_products type2">
@@ -165,12 +163,12 @@
                         <li class="prod_item">
                             <div class="product_pic">
                                 <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -182,16 +180,16 @@
                             </div>
                         </li>
                         <!-- //prod_item 반복 -->
-                        
+    
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod02.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -204,13 +202,13 @@
                         </li>
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod03.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -223,13 +221,13 @@
                         </li>
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod04.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -242,13 +240,13 @@
                         </li>
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod03.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -261,13 +259,13 @@
                         </li>
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod04.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -303,17 +301,17 @@
                 </div>
             </div>
             <!-- 스크롤 영역 -->
-            
         </div>
         <!-- //최근 본 상품 찾기 -->
+
+        <!-- btn_area -->
+        <div class="btn_area">
+            <!--버튼 비활성화 클래스 : disabled -->
+            <button type="text" class="btn_md btn_primary disabled"><span>선택하기</span></button>
+        </div>
+        <!-- //btn_area -->
     </div>
-    <!-- //dialog_contents / gft_wrt_wrap : 선물하기 팝업 컨텐츠 -->
-    <!-- btn_area -->
-    <div class="btn_area">
-        <!--버튼 비활성화 클래스 : disabled -->
-        <button type="text" class="btn_md btn_primary disabled"><span>선택하기</span></button>
-    </div>
-    <!-- //btn_area -->
+    <!-- //dialog_contents / cus_bun_wrap : 대량구매상품검색 팝업 컨텐츠 -->
 </div>
 <!-- //최근 본 상품 찾기 : gftWrtPop1 --> 
 
@@ -328,18 +326,16 @@
     </div>
     <!-- //dialog_header -->
 
-    <!-- dialog_contents / bun_pop_wrap : 선물하기 팝업 컨텐츠 -->
-    <div class="dialog_contents bun_pop_wrap">
+    <!-- dialog_contents / cus_bun_wrap : 대량구매상품검색 팝업 컨텐츠 -->
+    <div class="dialog_contents cus_bun_wrap">
 
         <!-- 직접 검색 -->
-        <div class="bun_pop_area">
-
+        <div class="git_wrt_area">
             <!-- 스크롤 영역 -->
             <div class="custom_scroll_wrap sc_pop_lg02">
                 <div class="ht_cont_s sc_box">
-    
                     <!-- tab_swiper -->
-                    <div class="tab_swiper tab_ty ty03 tab_link bun_pop"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+                    <div class="tab_swiper tab_ty ty03 tab_link gft_wrt_pop"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <a href="#n">
@@ -386,7 +382,6 @@
                     </div>
                     <!-- //form_list_box_ty -->
 
-
                     <div class="prod_type_selec_area">
                         <!-- Button Sort -->
                         <div class="period_sort">
@@ -397,23 +392,21 @@
                         <!-- //Button Sort -->
                     </div>
 
+                    <p class="sub_tit">최소 2개 부터 최대 3개의 상품을 선택할 수 있어요!</p>
 
 
-                    <p class="sub_tit">1개의 상품만 선택할 수 있어요!</p>
-
-
-                     <!-- 상품 리스트 -->
-                     <ul class="evt_products type2">
+                    <!-- 상품 리스트 -->
+                    <ul class="evt_products type2">
                         <!-- prod_item 반복 -->
                         <li class="prod_item">
                             <div class="product_pic">
                                 <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -425,16 +418,16 @@
                             </div>
                         </li>
                         <!-- //prod_item 반복 -->
-                        
+    
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod02.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -447,13 +440,13 @@
                         </li>
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod03.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -466,13 +459,13 @@
                         </li>
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod04.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -485,13 +478,13 @@
                         </li>
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod03.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -504,13 +497,13 @@
                         </li>
                         <li class="prod_item">
                             <div class="product_pic">
-                                <img src="../../images/temp/@img_prod01.jpg" alt="">
-                                <input type="radio" name="evtVote" class="evt_chk">
-                                <label><span class="hidden">선택</span></label>
+                                <img src="../../images/temp/@img_prod04.jpg" alt="">
                                 <button class="evt_good_count active">
                                     <div class="icon"></div>
                                     <div class="txt">999+</div>
                                 </button>
+                                <input type="checkbox" name="evtVote" class="evt_chk" onclick="chkAll(this);">
+                                <label><span class="hidden">선택</span></label>
                             </div>
                             <div class="product_info">
                                 <div class="title">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</div>
@@ -548,50 +541,18 @@
             <!-- 스크롤 영역 -->
         </div>
         <!-- //직접 검색 -->
+
+        <!-- btn_area -->
+        <div class="btn_area">
+            <!--버튼 비활성화 클래스 : disabled -->
+            <button type="text" class="btn_md btn_primary"><span>선택하기</span></button>
+        </div>
+        <!-- //btn_area -->
     </div>
-    <!-- //dialog_contents / gft_wrt_wrap : 선물하기 팝업 컨텐츠 -->
-    <!-- btn_area -->
-    <div class="btn_area">
-        <!--버튼 비활성화 클래스 : disabled -->
-        <button type="text" class="btn_md btn_primary disabled"><span>선택하기</span></button>
-    </div>
-    <!-- //btn_area -->
+    <!-- //dialog_contents / cus_bun_wrap : 대량구매상품검색 팝업 컨텐츠 -->
 </div>
 <!-- //직접 검색 : gftWrtPop3 --> 
 
-
-
-<script>
-/* 상품선택 */
-function chkAll(obj){
-    $('.fixed_btn_select').removeClass('off').addClass('on');
-    $('.custom_scroll_wrap .sc_box').css('padding-bottom', 184);
-}
-function chkOutImg(){
-    $('.fixed_btn_select').addClass('off');
-    $('.custom_scroll_wrap .sc_box').css('padding-bottom', '');
-    setTimeout(function(){
-        $('.fixed_btn_select').removeClass('on');
-    }, 600);
-}
-</script>
-
-<script src="../../js/jquery.ui.touch-punch.min.js"></script><!-- 모바일 슬라이드 : 해당페이지에만 사용 -->
-<script>
-/* 슬라이드 선택 */
-$(function() {
-    $('.gft_view_slider').slider({
-        range:'max',
-        min: 1,
-        max: 7,
-        value: 7,
-        slide: function(event, ui) {
-            console.log(ui.value);
-        }
-    });
-    console.log($('.gft_view_slider').slider('value'));
-});
-</script>
 
 <script>
 $(function(){
