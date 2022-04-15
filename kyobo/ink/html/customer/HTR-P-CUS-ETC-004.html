@@ -30,10 +30,6 @@
 <!-- //ht_ Hottracks css : 공통작업 -->
 
 
-
-<link rel="stylesheet" href="../../css/ht_cus_shj.css">
-
-
 <!-- Polyfill javascript -->
 <script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
 
@@ -104,7 +100,6 @@
 						<h2 class="ht_tit05">예치금 환불 팝업</h2>
 
 						<button type="button" class="btn_sm btn_light_gray" data-role="btn-dialog" data-target="#popRefApply"><span class="text">예치금 환불 신청 / #popRefApply</span></button>
-						<br><br>
 						<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#popRefDone"><span class="text">환불 신청 완료 / #popRefDone</span></button>
 					</div>
 					<!-- //텍스트 정보 팝업 -->
@@ -186,7 +181,7 @@
 
 
 <!-- 팝업 : 환불 신청 완료 / popRefDone -->
-<div id="popRefDone" class="dialog_wrap cus_ref" data-class="dialog_sm">
+<div id="popRefDone" class="dialog_wrap" data-class="dialog_alert">
     <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
     <!-- dialog_header -->
     <div class="dialog_header">
@@ -212,9 +207,11 @@
 
 
 </body>
-<script>$(function(){
+<script>
+$(function(){
     $('#popRefApply').dialog({
-        autoOpen:true
-    })
-})</script>
+        //autoOpen:true
+    });
+});
+</script>
 </html>
