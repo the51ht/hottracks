@@ -456,13 +456,10 @@
 
 
 
-/** 대량구매상담 **/
+/***** 대량구매상담 *****/
 /* cus_hero_area */
 .cus_hero_area {
-    position:relative;
-    padding:130px 0 60px 0;
-    border-top:1px solid #eaeaea ;
-    text-align:center;
+    position:relative;padding:130px 0 60px 0;border-top:1px solid #eaeaea ;text-align:center;
     &:before {
         position:absolute;left:50%;top:40px;width:80px;height:80px;margin-left:-30px;background:url(../images/guide/ico_cus_hero01.svg) center/100% no-repeat;content:"";
     }
@@ -488,8 +485,7 @@
 
 
 
-
-/** 대량구매상품검색 **/
+/*** 대량구매상품검색 ***/
 .cus_bun_wrap {
     .git_wrt_area {
         min-height:initial;padding-top:0;
@@ -498,6 +494,170 @@
         padding-bottom:0;border-bottom:0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/***** 핫트랙스 서비스 *****/
+/*** 상단영역 ***/
+.cus_view_upper {
+    position:relative;
+}
+
+/* cus_list_box */
+.cus_list_box {
+    padding:30px 40px 40px 40px;background-color:#f7f7f7;border-radius:12px;
+    .ht_tit05 {
+        margin-bottom:10px;
+    }
+    .point_line {
+        img {
+            display:inline-block;width:18px;margin:4px 0 0 4px;vertical-align:top;
+        }
+        &:before {
+            top:10px;height:14px;
+        }
+    }
+    .bul_list li {
+        margin-top:8px !important;color:#292929;font-size:14px;line-height:22px;
+        &:before {
+            background-color:#000;
+        }
+        strong {
+            color:#000;
+        }
+        .lighter {
+            color:#767676;
+        }
+    }
+    &.ty01 {
+        background:url(../images/guide/cus_font_box.png) no-repeat center /cover;
+        .point_line:before {
+            background-color:#ffc09f;
+        }
+    }
+    &.ty02 {
+        background:url(../images/guide/cus_package_box.svg) no-repeat center /cover;
+        .point_line:before {
+            background-color:#ffe65c;
+        }
+    }
+    &.ty03 {
+        background:url(../images/guide/cus_card_box.svg) no-repeat center /cover;
+        .point_line:before {
+            background-color:#9af8c2;
+        }
+    }
+}
+
+
+
+/*** 각인서비스 ***/
+.cus_letters {
+    position: relative;margin:-40px -15px 0 -15px;
+    overflow:hidden;
+    & > .li {
+        float:left;width:calc(50% - 30px);margin:40px 15px 0 15px;;
+    }
+}
+.cus_view_box {
+    padding:30px;border:1px solid #eaeaea;border-radius:12px;box-sizing:border-box;overflow:hidden;
+    &.ty02 {
+        padding:40px;
+    }
+}
+.cus_initials {
+    & > li {
+        display:flex;justify-content:space-between;margin-bottom:15px;padding-bottom:13px;border-bottom:1px dashed #D5D5D5;
+        &:last-of-type {
+            margin-bottom:0;padding-bottom:0; border-bottom:none;
+        }
+    }
+    span {
+        margin:0;height:24px;line-height:24px;
+        img {
+            height:100%;
+        }
+    }
+}
+
+
+
+/*** 포장서비스 ***/
+.cus_package_list {
+    display:flex; flex-flow:row wrap; 
+    & > li {
+        position:relative;width:calc((100% - 2px) / 3);height:212px;padding:0 42px;border-right:1px dashed #d5d5d5;border-bottom:1px dashed #d5d5d5;box-sizing:border-box;line-height:212px;
+        &:nth-of-type(3n) {
+            border-right:none;
+        }
+        &:nth-last-of-type( -n + 3 ){
+            border-bottom:none;
+        }
+        &:before {
+            position:absolute;right:-28px;bottom:-20px;width:56px;height:40px;background:#fff;content:"";z-index:1;
+        }
+    }
+    img {
+        width:100%;
+    }
+}
+
+
+
+/*** 제휴/할인카드 ***/
+.cus_card_area {
+    margin-bottom:40px;
+    .ht_tit06 {
+        margin-bottom:20px;text-align:center;
+    }
+    .cus_card_box {
+        width:315px;margin:0 auto;border:1px solid #ccc;border-radius:12px;box-shadow:10px 10px 20px rgba(0, 0, 0, 0.16);overflow:hidden;
+        img {
+            width:100%;
+        }
+    }
+    .btn_area {
+        margin-top:35px;
+    }
+}
+.card_promotion {
+    tr th.center {
+        padding:20px 0 !important;color:#000;
+        em {
+            color:#767676;font-size:13px;font-weight:500;line-height:19px;
+        }
+    }
+    .align_left {
+        padding:19px 30px !important;
+    }    
+    th:first-of-type, td:first-of-type {
+        border-right:1px solid #d5d5d5;
+    }
+    [class^=bul_item_] {
+        color:#000;
+        em {
+            font-size:13px;
+        }
+        &::before {
+            background-color:#000;
+        }
+    }
+}
+.cus_bul {
+    margin:15px 0 18px;
+    [class^=bul_item_] {
+        color:#767676;
+    }
+}
+
+
 
 
 

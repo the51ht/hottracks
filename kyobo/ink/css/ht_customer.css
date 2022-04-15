@@ -806,7 +806,7 @@
   right: 3px;
 }
 
-/** 대량구매상담 **/
+/***** 대량구매상담 *****/
 /* cus_hero_area */
 .cus_hero_area {
   position: relative;
@@ -852,7 +852,7 @@
   margin-top: 10px;
 }
 
-/** 대량구매상품검색 **/
+/*** 대량구매상품검색 ***/
 .cus_bun_wrap .git_wrt_area {
   min-height: initial;
   padding-top: 0;
@@ -861,4 +861,244 @@
 .cus_bun_wrap .tab_swiper.gft_wrt_pop {
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+/***** 핫트랙스 서비스 *****/
+/*** 상단영역 ***/
+.cus_view_upper {
+  position: relative;
+}
+
+/* cus_list_box */
+.cus_list_box {
+  padding: 30px 40px 40px 40px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+}
+
+.cus_list_box .ht_tit05 {
+  margin-bottom: 10px;
+}
+
+.cus_list_box .point_line img {
+  display: inline-block;
+  width: 18px;
+  margin: 4px 0 0 4px;
+  vertical-align: top;
+}
+
+.cus_list_box .point_line:before {
+  top: 10px;
+  height: 14px;
+}
+
+.cus_list_box .bul_list li {
+  margin-top: 8px !important;
+  color: #292929;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.cus_list_box .bul_list li:before {
+  background-color: #000;
+}
+
+.cus_list_box .bul_list li strong {
+  color: #000;
+}
+
+.cus_list_box .bul_list li .lighter {
+  color: #767676;
+}
+
+.cus_list_box.ty01 {
+  background: url(../images/guide/cus_font_box.png) no-repeat center/cover;
+}
+
+.cus_list_box.ty01 .point_line:before {
+  background-color: #ffc09f;
+}
+
+.cus_list_box.ty02 {
+  background: url(../images/guide/cus_package_box.svg) no-repeat center/cover;
+}
+
+.cus_list_box.ty02 .point_line:before {
+  background-color: #ffe65c;
+}
+
+.cus_list_box.ty03 {
+  background: url(../images/guide/cus_card_box.svg) no-repeat center/cover;
+}
+
+.cus_list_box.ty03 .point_line:before {
+  background-color: #9af8c2;
+}
+
+/*** 각인서비스 ***/
+.cus_letters {
+  position: relative;
+  margin: -40px -15px 0 -15px;
+  overflow: hidden;
+}
+
+.cus_letters > .li {
+  float: left;
+  width: calc(50% - 30px);
+  margin: 40px 15px 0 15px;
+}
+
+.cus_view_box {
+  padding: 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cus_view_box.ty02 {
+  padding: 40px;
+}
+
+.cus_initials > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 13px;
+  border-bottom: 1px dashed #D5D5D5;
+}
+
+.cus_initials > li:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cus_initials span {
+  margin: 0;
+  height: 24px;
+  line-height: 24px;
+}
+
+.cus_initials span img {
+  height: 100%;
+}
+
+/*** 포장서비스 ***/
+.cus_package_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.cus_package_list > li {
+  position: relative;
+  width: calc((100% - 2px) / 3);
+  height: 212px;
+  padding: 0 42px;
+  border-right: 1px dashed #d5d5d5;
+  border-bottom: 1px dashed #d5d5d5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 212px;
+}
+
+.cus_package_list > li:nth-of-type(3n) {
+  border-right: none;
+}
+
+.cus_package_list > li:nth-last-of-type(-n + 3) {
+  border-bottom: none;
+}
+
+.cus_package_list > li:before {
+  position: absolute;
+  right: -28px;
+  bottom: -20px;
+  width: 56px;
+  height: 40px;
+  background: #fff;
+  content: "";
+  z-index: 1;
+}
+
+.cus_package_list img {
+  width: 100%;
+}
+
+/*** 제휴/할인카드 ***/
+.cus_card_area {
+  margin-bottom: 40px;
+}
+
+.cus_card_area .ht_tit06 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cus_card_area .cus_card_box {
+  width: 315px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+
+.cus_card_area .cus_card_box img {
+  width: 100%;
+}
+
+.cus_card_area .btn_area {
+  margin-top: 35px;
+}
+
+.card_promotion tr th.center {
+  padding: 20px 0 !important;
+  color: #000;
+}
+
+.card_promotion tr th.center em {
+  color: #767676;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.card_promotion .align_left {
+  padding: 19px 30px !important;
+}
+
+.card_promotion th:first-of-type, .card_promotion td:first-of-type {
+  border-right: 1px solid #d5d5d5;
+}
+
+.card_promotion [class^=bul_item_] {
+  color: #000;
+}
+
+.card_promotion [class^=bul_item_] em {
+  font-size: 13px;
+}
+
+.card_promotion [class^=bul_item_]::before {
+  background-color: #000;
+}
+
+.cus_bul {
+  margin: 15px 0 18px;
+}
+
+.cus_bul [class^=bul_item_] {
+  color: #767676;
 }
