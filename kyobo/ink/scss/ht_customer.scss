@@ -209,8 +209,15 @@
             display:inline-block;width:83%;
         }
         &.fold_d {
+            margin-bottom: 25px;
             + .fold_question{
-                margin-top:0;border:0;
+                margin-top:0;border:0;padding-top: 0;
+                &:before {
+                    top: 0;
+                }
+                &:after {
+                    top: 21px;
+                }
             }
         }
         .info {
@@ -218,7 +225,10 @@
         }
     }
     .fold_question_btn{
-        display:inline-block;vertical-align:top;width:calc(17% - 44px);margin-top:0;
+        display:inline-block;vertical-align:top;width:calc(17% - 44px);margin-top:0;float: right;text-align: right;
+        li{
+            display: inline-block;float: initial;
+        }
     } 
 
     .fold_num{
