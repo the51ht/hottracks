@@ -1446,12 +1446,12 @@ function prod4_banner(){
         var slideOption = {
             observer: true,
             observeParents: true,
-            slidesPerView: 'auto',
+            slidesPerView: 4,
             centeredSlides: false,
             slidesPerGroup: 4,
             loop: true,
             loopsSlide: 1,
-            spaceBetween:0,
+            spaceBetween:36,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
