@@ -156,9 +156,22 @@
   width: 83%;
 }
 
+.cus_fold .fold_question.fold_d {
+  margin-bottom: 25px;
+}
+
 .cus_fold .fold_question.fold_d + .fold_question {
   margin-top: 0;
   border: 0;
+  padding-top: 0;
+}
+
+.cus_fold .fold_question.fold_d + .fold_question:before {
+  top: 0;
+}
+
+.cus_fold .fold_question.fold_d + .fold_question:after {
+  top: 21px;
 }
 
 .cus_fold .fold_question .info {
@@ -183,6 +196,13 @@
   vertical-align: top;
   width: calc(17% - 44px);
   margin-top: 0;
+  float: right;
+  text-align: right;
+}
+
+.cus_fold .fold_question_btn li {
+  display: inline-block;
+  float: initial;
 }
 
 .cus_fold .fold_num {
