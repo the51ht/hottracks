@@ -1812,6 +1812,47 @@ $(function(){
 
 
 
+/*** 고객센터 FAQ ***/
+function cusFaqBanner(){
+    var $target = $('.cus_faq_banner');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.cus_faq_cont');
+        var slideOption = {
+            centeredSlides: false,
+            spaceBetween: 10,
+            observer: true,
+            observeParents: true,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            loop: true,
+            loopsSlide:1,
+            speed:1000,
+            navigation: {
+                nextEl: $($parent).find('.swiper-button-next'),
+                prevEl: $($parent).find('.swiper-button-prev'),
+            },
+        };
+
+        if($parent.find('.swiper-slide').length > 4) {
+            livReplaySwiperCont = new Swiper(this, slideOption);
+            $parent.addClass('swiper-on');
+        }
+	});
+}
+
+$(function(){
+    if(!$('.cus_faq_banner').length) return;
+    cusFaqBanner();
+});
+
+
+
+
+
+
+
+
+
 
 
 
