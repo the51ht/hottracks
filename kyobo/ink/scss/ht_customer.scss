@@ -26,12 +26,12 @@
         &.primary a{
             color:#da2128;font-weight:700;
         }
-        &:before {
-            position:absolute;right:-4px;top:20px;width:19px;height:10px;background:url('../images/guide/ico_arrow.svg') center bottom/7px no-repeat;transform:rotate(-90deg);content:"";
-        }
     }
     .cus_1dep {
         position:relative;padding:0;box-sizing:border-box;color:#000;
+        &:before {
+            position:absolute;right:-8px;top:4px;width:4px;height:7px;background:url('../images/guide/ico_arrow_p.png') right center no-repeat;content:"";
+        }
     }
     .dep2_lst {
         margin-top:15px;
@@ -40,15 +40,15 @@
             &:last-of-type {
                 margin-bottom:0;
             }
-            &:before {
-                position:absolute;right:-10px;top:0;width:10px;height:23px;background:url('../images/guide/ico_arrow_59.svg') right center/ 4px no-repeat ;content:"";
-            }
         }
     }
     .cus_2dep {
         padding-left:8px;line-height:19px;letter-spacing:-1px;color:#767676;
         &:before {
-            content:"-";position:absolute;left:0;top:0px;width:6px;height:22px;line-height:22px;
+            position:absolute;right:-8px;top:4px;width:4px;height:7px;background:url('../images/guide/ico_arrow_p.png') right center no-repeat;content:"";opacity:0.65;
+        }
+        &:after {
+            position:absolute;left:0;top:9px;width:4px;height:1px;background:#767676;content:"";opacity:0.8;
         }
     }
 }
@@ -124,6 +124,19 @@
     position:relative;
     &:before {
         position:absolute;left:100px;top:-45px;width:38px;height:70px;background:url("../images/guide/ico_cus_mc_best.svg") center top/100% no-repeat;transform:rotate(25deg);content:"";
+    }
+    .swiper_control .swiper-pagination.swiper-pagination-fraction {
+        height:34px;color:#fff;line-height:34px;
+        span {
+            color:#fff !important;line-height:34px !important;
+        }
+    }
+    .swiper_control .swiper-button-next, .swiper_control .swiper-button-prev,
+    .swiper_control .swiper-button-next:after, .swiper_control .swiper-button-prev:after {
+        width:34px;height:34px;background-color:#fff;border-radius:50%;
+    }
+    .swiper_control .swiper-button-next:after, .swiper_control .swiper-button-prev:after {
+        background-size:34px;opacity:0.4;
     }
 }
 .cus_faq_banner {

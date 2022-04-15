@@ -220,25 +220,49 @@
                                     <tr>
                                         <th scope="row" class="has_btn_sm">제목<span class="required"><span class="hidden">필수입력</span></span></th>
                                         <td>
-                                            <div class="form_sel">
+                                            <div class="valid_check">
                                                 <input type="text" class="form_ip" placeholder="30자 이내로 작성해 주세요"/>
+                                                <span class="valid_desc">제목은 30자 이내로 작성 가능합니다</span>
+                                            </div>
+                                            <div class="valid_check fail">
+                                                <input type="text" class="form_ip" placeholder="30자 이내로 작성해 주세요"/>
+                                                <span class="valid_desc">제목은 30자 이내로 작성 가능합니다</span>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="has_btn_sm ver_mid_text">내용<span class="required"><span class="hidden">필수입력</span></span></th>
                                         <td>
-                                            <!-- byte_check_wrap -->
-                                            <div class="form_sel byte_check_wrap">
-                                                <textarea id="" class="form_textarea" placeholder="문의하실 내용을 직접 작성해 주세요" style="height: 78px;"></textarea>
-                                                <div class="byte_chack_footer">
-                                                    <div class="byte_check">
-                                                        <span class="count">0</span>
-                                                        <span class="total">300자</span>
+                                            <div class="valid_check">
+                                                <!-- byte_check_wrap -->
+                                                <div class="byte_check_wrap">
+                                                    <textarea id="" class="form_textarea" placeholder="문의하실 내용을 직접 작성해 주세요" style="height: 78px;"></textarea>
+                                                    <div class="byte_chack_footer">
+                                                        <div class="byte_check">
+                                                            <span class="count">0</span>
+                                                            <span class="total">300자</span>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <!-- //byte_check_wrap -->
+                                                <span class="valid_desc">내용은 300자 이내로 작성 가능합니다</span>
                                             </div>
-                                            <!-- //byte_check_wrap -->
+
+                                            <div class="valid_check fail">
+                                                <!-- byte_check_wrap -->
+                                                <div class="byte_check_wrap">
+                                                    <textarea id="" class="form_textarea" placeholder="문의하실 내용을 직접 작성해 주세요" style="height: 78px;"></textarea>
+                                                    <div class="byte_chack_footer">
+                                                        <div class="byte_check">
+                                                            <span class="count">0</span>
+                                                            <span class="total">300자</span>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <!-- //byte_check_wrap -->
+                                                <span class="valid_desc">내용은 300자 이내로 작성 가능합니다</span>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
