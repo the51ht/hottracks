@@ -1050,13 +1050,19 @@
                 background:#fff;border-color:#da2128;color:#da2128;
             }
         }   
-        label {
+        label, button {
             display:block;height:33px;padding:0 13px;background:#f7f7f7;border:1px solid #eaeaea;border-radius:18px;box-sizing:border-box;color:#000;font-size:12px;line-height:33px;transition:all 0.4s;
+        }
+        &.txt {
+            padding:8px 10px 0 0;font-size:14px;line-height:22px;
         }
     }
     &.ty02 {
-        label {
+        label, button {
             height:33px;padding:0 13px;background:#fff;border:1px solid #eaeaea;border-radius:18px;box-sizing:border-box;color:#595959;line-height:33px;
+            &:hover {
+                border-color:#999;
+            }
         }
         input {
             &:checked + label {

@@ -1968,7 +1968,7 @@
   color: #da2128;
 }
 
-.chk_list_ty li label {
+.chk_list_ty li label, .chk_list_ty li button {
   display: block;
   height: 33px;
   padding: 0 13px;
@@ -1984,7 +1984,13 @@
   transition: all 0.4s;
 }
 
-.chk_list_ty.ty02 label {
+.chk_list_ty li.txt {
+  padding: 8px 10px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.chk_list_ty.ty02 label, .chk_list_ty.ty02 button {
   height: 33px;
   padding: 0 13px;
   background: #fff;
@@ -1994,6 +2000,10 @@
           box-sizing: border-box;
   color: #595959;
   line-height: 33px;
+}
+
+.chk_list_ty.ty02 label:hover, .chk_list_ty.ty02 button:hover {
+  border-color: #999;
 }
 
 .chk_list_ty.ty02 input:checked + label {
