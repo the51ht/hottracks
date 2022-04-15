@@ -2,10 +2,104 @@
 /*
     고객센터
 */
-
 .ht_cus_cont {
     overflow:hidden;
 }
+
+
+
+
+
+/***** 예치금 환불신청 *****/
+/* deposit_ck_box */
+.deposit_ck_box {
+    margin-top:20px;text-align:center;
+    .icon {
+        width:80px;height:80px;margin:0 auto 10px auto;
+        img {
+            width:100%;
+        }
+    }
+    .desc {
+        font-size:15px;line-height:23px;
+    }
+    .btn_area {
+        margin-top:55px;
+    }
+}
+
+/* deposit_result_card */
+.deposit_result_card {
+    position:relative;margin-bottom:30px;padding:30px;border:1px solid #eaeaea;border-radius:12px;overflow:hidden;
+    &:last-of-type {
+        margin-bottom:0;
+    }
+    .ht_tit06 {
+        float:left;margin-bottom:0;line-height:24px;
+    }
+    .ico {
+        float:left;
+
+        margin-left:10px;padding:4px 8px 3px 8px;background-color:#474c98;border-radius:50px;color:#fff;font-size:10px;font-weight:400;
+    }
+    .result {
+        float:right;font-weight:700;
+    }
+    .deposit {
+        display:inline-block;margin:-3px 4px 0 0;color:#da2128;font-size:20px;line-height:22px;vertical-align:top;letter-spacing:-1px;
+    }
+}
+
+/* 예치금 환불 신청 */
+.dialog_wrapper .ui-dialog .dialog_wrap.cus_ref {
+    padding-bottom:30px;
+    .dialog_header {
+        padding-top:20px;border-bottom:none;
+    }
+    .dialog_contents {
+        margin-top:10px;
+    }
+    .evt_pop_content {
+        min-height:auto;
+    }
+    .pop_box_info {
+        margin-bottom:30px;padding:15px;border-radius:6px;
+        .bul_item_dot {
+            color:#595959;font-size:13px;line-height:19px;
+        }
+        &.ty02 {
+            margin:0;padding:0;background:none;
+        }
+        .tit {
+            margin-bottom:8px;line-height:20px;
+        }
+        .user_name {
+            margin-left:6px;color:#767676;font-weight:400;
+        }
+        dd {
+            margin-bottom:8px;
+            &:last-of-type {
+                margin-bottom:0;
+            }
+        }
+        .form_sel >span {
+            width:340px;
+        }
+    }
+    .deposit_result_card {
+        margin-bottom:20px;padding:0 0 20px 0;border:none;border-radius:0;border-bottom:1px solid #EAEAEA;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /***** FAQ & QNA *****/
 /* Search Area :form_search_box */
@@ -106,14 +200,14 @@
         }
     }
 
-    .fold_question{
-        &.fold_q{
+    .fold_question {
+        &.fold_q {
             display:inline-block;width:83%;
         }
         &.fold_d {
-            margin-bottom: 25px;
+            margin:0 0 40px 0;border-radius:12px;
             + .fold_question{
-                margin-top:0;border:0;padding-top: 0;
+                margin-top:0;border:0;padding-top:0;
                 &:before {
                     top: 0;
                 }
@@ -123,10 +217,10 @@
             }
         }
         .info {
-            position:relative;font-size:12px;font-size:10px;color:#292929;background:#F5F5F5;border:#F5F5F5;margin-right:0;float:right;   height:20px;padding:0 9px;border-radius:10px;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:20px;
+            position:relative;font-size:12px;font-size:10px;color:#292929;background:#F5F5F5;border:#F5F5F5;margin-right:0;float:right;height:20px;padding:0 9px;border-radius:10px;-webkit-box-sizing:border-box;box-sizing:border-box;line-height:20px;
         }
     }
-    .fold_question_btn{
+    .fold_question_btn {
         display:inline-block;vertical-align:top;width:calc(17% - 44px);margin-top:0;float: right;text-align: right;
         li{
             display: inline-block;float: initial;
@@ -236,7 +330,7 @@
 
 /* 리스트 상단 */
 .tit_form_wrap {
-    margin-top:43px;padding-bottom:15px;border-bottom:1px solid #000;
+    padding-bottom:15px;border-bottom:1px solid #000;
     &:after{
         display:block;clear:both;content:"";
     }
@@ -369,11 +463,7 @@
 
 
 
-
-
-
-
-
+/*** Table ***/
 .tab_box + .tbl_row_wrap {
     border-top:0;
 }
@@ -382,7 +472,7 @@
         background-image:url(../../ink/images/guide/ico_required.svg) !important;
     }
 }
-.fold_question {
+.tbl_row_wrap .fold_question {
     width:400px;
 }
 .valid_check {
@@ -397,11 +487,8 @@
 
 
 
-
-
-
-
-/* .btn_area_desc */
+/*** Btn ***/
+/* btn_area_desc */
 .btn_area_desc {
     margin-top:15px;
     li {
@@ -412,17 +499,6 @@
         &:first-child {
             margin-top:0;
         }
-    }
-}
-
-
-
-
-/*** Btn ***/
-/* btn_cus */
-.btn_cus {
-    a, button {
-        height:50px !important;
     }
 }
 
@@ -450,6 +526,10 @@
         }
     }
 }
+
+
+
+
 
 
 
@@ -576,7 +656,7 @@
     & > li {
         display:flex;justify-content:space-between;margin-bottom:15px;padding-bottom:13px;border-bottom:1px dashed #D5D5D5;
         &:last-of-type {
-            margin-bottom:0;padding-bottom:0; border-bottom:none;
+            margin-bottom:0;padding-bottom:0;border-bottom:none;
         }
     }
     span {
@@ -591,7 +671,7 @@
 
 /*** 포장서비스 ***/
 .cus_package_list {
-    display:flex; flex-flow:row wrap; 
+    display:flex;flex-flow:row wrap;
     & > li {
         position:relative;width:calc((100% - 2px) / 3);height:212px;padding:0 42px;border-right:1px dashed #d5d5d5;border-bottom:1px dashed #d5d5d5;box-sizing:border-box;line-height:212px;
         &:nth-of-type(3n) {
