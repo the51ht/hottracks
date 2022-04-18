@@ -1532,7 +1532,7 @@ KyoboBookPub.ink = (function () {
 			$(container).each(function(){
 				var that, isToggle;
 				that = $(this);
-
+  
 				$(this).find('.btn_tooltip').on('click', function(){
 					if ($(this).data('btn-toggle') !== undefined){
 						isToggle = true;
