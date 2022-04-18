@@ -1496,7 +1496,6 @@ KyoboBookPub.ink = (function () {
 		}
 	}
 
-
 	/**
 	 * tooltip hover type on off
 	 * @param container tooltip 컨테이너 영역 DOM 셀렉터 (default : .tooltip_wrap)

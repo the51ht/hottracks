@@ -329,7 +329,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 42px;
   border: solid #d5d5d5;
   border-width: 1px 0 0 1px;
   border-radius: 6px 6px 0 0;
@@ -354,14 +354,12 @@
 }
 
 .pen_pop_wrap .tab_menu_a a.on:after {
+  width: calc(100% - 4px);
+  height: 8px;
   position: absolute;
   left: 2px;
-  bottom: -4px;
-  width: calc(100% - 4px);
-  height: 10px;
+  top: calc(100% - 4px);
   background-color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   content: "";
 }
 
