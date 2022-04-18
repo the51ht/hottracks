@@ -1073,7 +1073,8 @@
 
 /*** 선물이 필요한 순간 핫트 하세요 : .gft_need_tit ***/
 .gft_need_tit.ht_cont.ht_bg {
-  padding: 60px 0 33px 0;
+  margin-bottom: -27px;
+  padding: 60px 0 0 0;
 }
 
 .gft_need_tit .ht_tit_big02 {
@@ -1115,6 +1116,7 @@
 
 /* gft_need_main */
 .gft_need_main {
+  padding-top: 60px;
   background: url("../images/main/bg_wel_md_pick.jpg") center/cover repeat-x;
   overflow: initial;
 }
@@ -1963,7 +1965,7 @@
   color: #da2128;
 }
 
-.chk_list_ty li label {
+.chk_list_ty li label, .chk_list_ty li button {
   display: block;
   height: 33px;
   padding: 0 13px;
@@ -1979,7 +1981,13 @@
   transition: all 0.4s;
 }
 
-.chk_list_ty.ty02 label {
+.chk_list_ty li.txt {
+  padding: 8px 10px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.chk_list_ty.ty02 label, .chk_list_ty.ty02 button {
   height: 33px;
   padding: 0 13px;
   background: #fff;
@@ -1989,6 +1997,10 @@
           box-sizing: border-box;
   color: #595959;
   line-height: 33px;
+}
+
+.chk_list_ty.ty02 label:hover, .chk_list_ty.ty02 button:hover {
+  border-color: #999;
 }
 
 .chk_list_ty.ty02 input:checked + label {

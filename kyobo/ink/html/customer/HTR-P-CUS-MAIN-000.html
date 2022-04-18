@@ -20,7 +20,6 @@
 <link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
 <!-- // Plug-In css -->
 
-<link rel="stylesheet" href="../../css/ht_cus_shj.css">
 
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
@@ -57,41 +56,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-<script>
-/* 고객센터 FAQ */
-function cusFaqBanner(){
-    var $target = $('.cus_faq_banner');
-    $target.each(function (index, element) {
-        var $parent = $(this).parent('.cus_faq_cont');
-        var slideOption = {
-            spaceBetween: 10,
-            observer: true,
-            observeParents: true,
-            slidesPerView:'auto',
-            slidesPerGroup: 4,
-            loop: true,
-            loopsSlide:1,
-            autoHeight: true,
-            speed:1000,
-            navigation: {
-                nextEl: $($parent).find('.swiper-button-next'),
-                prevEl: $($parent).find('.swiper-button-prev'),
-            },
-
-        };
-
-        if($parent.find('.swiper-slide').length > 4) {
-            livReplaySwiperCont = new Swiper(this, slideOption);
-            $parent.addClass('swiper-on');
-        }
-	});
-}
-
-$(function(){
-    if(!$('.cus_faq_banner').length) return;
-    cusFaqBanner();
-});
-</script>
 </head>
 
 <body>
@@ -149,7 +113,7 @@ $(function(){
 						<li class="bd_none"><a href="#" class="cus_1dep">대량구매상담</a></li>
 						<li><a href="#" class="cus_1dep">상품입점문의</a></li>
                         <li><a href="#" class="cus_1dep">공지사항</a></li>
-                        <li><a href="#" class="cus_1dep">서비스안내</a>
+                        <li>서비스안내
                             <ul class="dep2_lst">
 								<li><a href="#" class="cus_2dep">각인 서비스 </a></li>
 								<li><a href="#" class="cus_2dep">포장 서비스<a></li>
@@ -182,10 +146,10 @@ $(function(){
 				<section class="ht_sub_area">
 					<h1 class="ht_tit center">고객센터</h1>
 
-					<!-- ht_cont : ht_cus_cont -->
-					<div class="ht_cont ht_cus_cont">      
+					<!-- 고객센터 검색 -->
+					<div class="ht_cont cus_mc_faq">
+                        <!-- form_search_cont -->
                         <div class="form_search_cont">
-                            <!-- form_search_box 가운데 정렬 : form_search_box_center-->
                             <!-- form_search_box -->
                             <div class="form_search_box mb form_search_box_center">
                                 <!-- form_ip_search -->
@@ -197,60 +161,58 @@ $(function(){
                                 <button type="button" class="btn_ip_search"><span class="hidden">검색</span></button>
                             </div>
                             <!-- //form_search_box -->
-                            <!-- //form_search_box 가운데 정렬 : form_search_box_center -->
 
                             <!-- cus_chk_list -->
                             <div class="cus_chk_list">
                                 <!-- chk_list_ty -->
                                 <ul class="chk_list_ty ty02">
+                                    <li class="txt">자주 찾는 검색어</li>
                                     <li>
-                                        <input type="radio" name="faq_search" checked>
-                                        <label>Best FAQ</label>
+                                        <button><span>회원정보</span></button>
                                     </li>
                                     <li>
-                                        <input type="radio" name="faq_search">
-                                        <label>주문결제</label>
+                                        <button><span>주문결제</span></button>
                                     </li>
                                     <li>
-                                        <input type="radio" name="faq_search">
-                                        <label>배송</label>
+                                        <button><span>배송</span></button>
                                     </li>
                                     <li>
-                                        <input type="radio" name="faq_search">
-                                        <label>영업점</label>
+                                        <button><span>반품</span></button>
                                     </li>
                                     <li>
-                                        <input type="radio" name="faq_search">
-                                        <label>이벤트</label>
+                                        <button><span>교환</span></button>
                                     </li>
                                     <li>
-                                        <input type="radio" name="faq_search">
-                                        <label>반품/교환/환불</label>
+                                        <button><span>환불</span></button>
                                     </li>
                                     <li>
-                                        <input type="radio" name="faq_search">
-                                        <label>세금계산서/증빙</label>
+                                        <button><span>마일리지</span></button>
                                     </li>
                                     <li>
-                                        <input type="radio" name="faq_search">
-                                        <label>통합포인트/예치금/쿠폰</label>
+                                        <button><span>예치금</span></button>
                                     </li>
                                     <li>
-                                        <input type="radio" name="faq_search">
-                                        <label>사이트이용/장애/기타</label>
+                                        <button><span>쿠폰</span></button>
+                                    </li>
+                                    <li>
+                                        <button><span>영업점</span></button>
                                     </li>
                                 </ul>
                                 <!-- //chk_list_ty -->
                             </div>
                             <!-- //cus_chk_list -->
                         </div>
-                        
+                        <!-- //form_search_cont -->
+					</div>
+					<!-- //고객센터 검색 -->
+                    
+
+                    <!-- BEST FAQ -->
+                    <div class="ht_cont_s cus_mc_best">
                         <!-- cus_faq -->       
                         <div class="cus_faq">
-                            <div class="tit">
-                                <h2 class="ht_tit04">BEST FAQ</h2>
-                                <a href="#none" class="to_external">FAQ 전체보기</a>
-                            </div>
+                            <h2 class="ht_tit04">BEST FAQ</h2>
+
                             <!-- cus_faq_cont -->
                             <div class="cus_faq_cont">
                                 <!-- cus_faq_banner : function cusFaqBanner() -->
@@ -260,11 +222,17 @@ $(function(){
                                         <li class="swiper-slide">
                                             <a href="#none">
                                                 <div class="s1">주문결제</div>
-                                                <div class="info">문화상품권, 도서상품권으로 결제할 수 있나요?</div>
+                                                <div class="info">문화상품권, 도서상품권으로 결제할 수 있나요? 문화상품권, 도서상품권으로 결제할 수 있나요?</div>
                                             </a>
                                         </li>
                                         <!-- //swiper-slide 반복 -->
 
+                                        <li class="swiper-slide">
+                                            <a href="#none">
+                                                <div class="s1">주문결제</div>
+                                                <div class="info">문화상품권, 도서상품권으로 결제할 수 있나요?</div>
+                                            </a>
+                                        </li>
                                         <li class="swiper-slide">
                                             <a href="#none">
                                                 <div class="s1">주문결제</div>
@@ -294,17 +262,26 @@ $(function(){
                                 <!-- //cus_faq_banner -->
 
                                 <!-- swiper_control -->
-                                <div class="swiper_control_bk">
+                                <div class="swiper_control">
                                     <div class="swiper-button-prev"></div>
+                                    <div class="swiper-pagination"></div>
                                     <div class="swiper-button-next"></div>
                                 </div>
                                 <!-- //swiper_control -->
                             </div>
                             <!-- //cus_faq_cont -->
 
+                            <p class="btn_txt_more">
+                                <a href="#"><span>FAQ 전체보기</span></a>
+                            </p>
                         </div>
                         <!-- cus_faq -->
+                    </div>
+                    <!-- //BEST FAQ -->
 
+
+                    <!-- 고객센터 메뉴 -->
+                    <div class="ht_cont_s cus_mc_menu">
                         <!-- cus_qna_menu -->
                         <div class="cus_qna_menu">
                             <ul class="qna_list">
@@ -341,61 +318,78 @@ $(function(){
                             </ul>
                         </div>
                         <!-- //cus_qna_menu -->
+                    </div>
+                    <!-- //고객센터 메뉴 -->
 
+
+                    <!-- 고객센터 운영시간 안내 -->
+                    <div class="ht_cont cus_mc_contact">
                         <!-- cus_info -->
                         <div class="cus_info">
                             <ul class="cus_info_list">
-                                <li class="li"><strong>고객센터 운영시간 안내</strong></li>
-                                <li class="li">월~금요일 09:00 ~ 18:00 (주말/공휴일 제외)</li>
-                                <li class="li">점심시간 12:00 ~ 13:00</li>
-                                <li class="li">고객센터 전화문의 <strong>1661-1112</strong></li>
+                                <li class="li c1"><strong>고객센터 운영시간 안내</strong></li>
+                                <li class="li c2">월~금요일 09:00 ~ 18:00 (주말/공휴일 제외)</li>
+                                <li class="li c3">점심시간 12:00 ~ 13:00</li>
+                                <li class="li c4">고객센터 전화문의 <strong>1661-1112</strong></li>
                             </ul>
                         </div>
                         <!-- //cus_info -->
-					</div>
-					<!-- //ht_cont : ht_cus_cont -->
+                    </div>
+                    <!-- //고객센터 운영시간 안내 -->
 
                      
-                    <!-- ht_cont : cus_notice -->
-                    <div class="ht_cont cus_notice">
-                        <!--cus_notice_cont-->
+                    <!-- 공지사항/핫트랙스 서비스 안내 -->
+                    <div class="ht_cont cus_mc_notice">
+                        <!-- 공지사항 -->
                         <div class="cus_notice_cont">
                             <h2 class="ht_tit04">공지사항</h2>
-                            <a href="" class="to_external">전체보기</a>
+
                             <!-- cus_notice_list -->
                             <ul class="cus_notice_list">
-                                <li class="li">2021년 제 3회 핫트랙스 캐릭터 스티커 공모전 최종 수상작 발표!</li>
-                                <li class="li">핫트랙스 온라인 물류센터 이전에 따는 배송 지연 안내</li>
-                                <li class="li">CJ대한통운 택배 배송 지연 안내 (6/9~)</li>
-                                <li class="li">우체국택배 배송 지연 및 일부 지역 배송 접수중지 안내 (6/8~)</li>
-                                <li class="li">2021년 제 2회 핫트랙스 캐릭터 스티커&학용품 공모전 최종수상작 발표!</li>
+                                <li class="li"><a href="#n">2021년 제 3회 핫트랙스 캐릭터 스티커 공모전 최종 수상작 발표! 021년 제 3회 핫트랙스 캐릭터 스티커 공모전 최종 수상작 발표!</a></li>
+                                <li class="li"><a href="#n">트랙스 온라인 물류센터 이전에 따는 배송 지연</a></li>
+                                <li class="li"><a href="#n">CJ대한통운 택배 배송 지연 안내 (6/9~)</a></li>
+                                <li class="li"><a href="#n">우체국택배 배송 지연 및 일부 지역 배송 접수중지 안내 (6/8~)</a></li>
+                                <li class="li"><a href="#n">2021년 제 2회 핫트랙스 캐릭터 스티커&학용품 공모전 최종수상작 발표!</a></li>
+                                <!--<li class="li emp"><p>공지사항이 없습니다.</p></li>-->
                             </ul>
                             <!-- //cus_notice_list -->
+
+                            <p class="btn_txt_more">
+                                <a href="#"><em class="hidden">공지사항</em><span>전체보기</span></a>
+                            </p>
                         </div>
-                        <!--//cus_notice_cont-->
-                        <!--cus_notice_cont-->
+                        <!-- //공지사항 -->
+
+                        <!-- 핫트랙스 서비스 안내 -->
                         <div class="cus_notice_cont">
                             <h2 class="ht_tit04">핫트랙스 서비스 안내</h2>
                             <!-- cus_sv_list -->
                             <ul class="cus_sv_list">
                                 <il class="li">
-                                    <div class="icon"><img src="../../images/guide/ico_cus_sv01.svg" alt=""></div>
-                                    <div class="info">각인 서비스</div>
+                                    <a href="#n">
+                                        <div class="icon"><img src="../../images/guide/ico_cus_sv01.svg" alt=""></div>
+                                        <div class="info">각인 서비스</div>
+                                    </a>
                                 </il>
                                 <il class="li">
-                                    <div class="icon"><img src="../../images/guide/ico_cus_sv02.svg" alt=""></div>
-                                    <div class="info">포장 서비스</div>
+                                    <a href="#n">
+                                        <div class="icon"><img src="../../images/guide/ico_cus_sv02.svg" alt=""></div>
+                                        <div class="info">포장 서비스</div>
+                                    </a>
                                 </il>
                                 <il class="li">
-                                    <div class="icon"><img src="../../images/guide/ico_cus_sv03.svg" alt=""></div>
-                                    <div class="info">제휴/할인혜택</div>
+                                        <a href="#n">
+                                        <div class="icon"><img src="../../images/guide/ico_cus_sv03.svg" alt=""></div>
+                                        <div class="info">제휴/할인혜택</div>
+                                    </a>
                                 </il>
                             </ul>
                             <!-- //cus_sv_list -->
                         </div>
-                        <!--//cus_notice_cont-->
+                        <!-- //핫트랙스 서비스 안내 -->
                     </div>
-                     <!-- //ht_cont : cus_notice -->
+                     <!-- //공지사항/핫트랙스 서비스 안내 : cus_notice -->
 
 				</section>
 				<!-- //ht_sub_area -->
@@ -425,6 +419,6 @@ $(function(){
 	</div>
 	<!-- //탑버튼 -->
 </div>
-<!-- // wrapper -->
+<!-- //wrapper -->
 </body>
 </html>

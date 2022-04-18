@@ -2477,6 +2477,10 @@
 
 
 /*** 라이브 캘린더 : .liv_calendar ***/
+.liv_calendar_pop {
+    margin:0 !important;
+}
+
 .liv_calendar {
     padding:70px 0 50px 0;
 }
@@ -2547,7 +2551,7 @@
 
 /* liv_timeline */
 .liv_timeline {
-    position:relative;margin-top:25px;
+    position:relative;margin:57px 20px 32px 20px;
     &:before {
         position:absolute;left:16px;top:10px;width:1px;height:calc(100% - 70px);border-left:1px dashed #000;content:"";
     }
@@ -2710,13 +2714,12 @@
         }
     }
     .liv_btn_area {
-        margin-top:25px;border-radius: 5px;
-        overflow: hidden;
+        margin-top:25px;
     }
     .btn_wel_live.on {
-        height:50px;border-radius:6px;
+        height:50px;border-radius:5px;
         color:#000;
-        font-size:15px;;font-weight:500;overflow:hidden;
+        font-size:15px;;font-weight:500;overflow:hidden;isolation: isolate;
         &:before {
             border-color:#fff;border-radius:6px;
         }

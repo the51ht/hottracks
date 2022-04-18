@@ -1446,12 +1446,12 @@ function prod4_banner(){
         var slideOption = {
             observer: true,
             observeParents: true,
-            slidesPerView: 'auto',
+            slidesPerView: 4,
             centeredSlides: false,
             slidesPerGroup: 4,
             loop: true,
             loopsSlide: 1,
-            spaceBetween:0,
+            spaceBetween:36,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
@@ -1803,6 +1803,57 @@ $(function(){
     });
 });
 
+
+
+
+
+
+
+
+
+
+/*** 고객센터 FAQ ***/
+function cusFaqBanner(){
+    var $target = $('.cus_faq_banner');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.cus_faq_cont');
+        var slideOption = {
+            centeredSlides: false,
+            spaceBetween: 10,
+            observer: true,
+            observeParents: true,
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+            loop: true,
+            loopsSlide:1,
+            speed:1000,
+            navigation: {
+                nextEl: $($parent).find('.swiper-button-next'),
+                prevEl: $($parent).find('.swiper-button-prev'),
+            },
+            pagination: {
+                el: $($parent).find('.swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                }
+            }
+        };
+
+        if($parent.find('.swiper-slide').length > 4) {
+            livReplaySwiperCont = new Swiper(this, slideOption);
+            $parent.addClass('swiper-on');
+        }
+	});
+}
+
+$(function(){
+    if(!$('.cus_faq_banner').length) return;
+    cusFaqBanner();
+});
 
 
 
