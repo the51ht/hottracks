@@ -23,9 +23,10 @@
 
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<!--
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
-<!--<link rel="stylesheet" href="https://pub-onk.ndev.kyobobook.co.kr/assets/common/css/style_ink.css">--><!-- 추후 교보css  확인 -->
-
+-->
+<link rel="stylesheet" href="https://pub-onk.ndev.kyobobook.co.kr/assets/common/css/style_ink.css"><!-- 추후 교보css  확인 -->
 
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
@@ -58,9 +59,6 @@
 <script src="../../js/ht_lib.js"></script>
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<link rel="stylesheet" href="../../css/ht_gnb.css">
-<script src="../../js/ht_gnb.js"></script>
 </head>
 <body>
 <!-- skip_nav_wrap -->
@@ -1230,48 +1228,91 @@
 									<!-- 카테고리 - 핫트랙스 -->
 									<div id="tabAnbCategoryHotTracks" class="tab_content anb_category">
 										<div class="anb_category_inner">
-											<!-- 핫트랙스 GNB -->
-											<div class="gnb_hottracks_area">
-												<!-- ht_gnb_tab -->
-												<div class="ht_gnb_tab">
-													<ul>
-														<li><a href="#htGnbCate01" class="active"><span>디자인문구</span></a></li>
-														<li><a href="#htGnbCate02"><span>디지털/자동차</span></a></li>
-														<li><a href="#htGnbCate03"><span>필기구</span></a></li>
-														<li><a href="#htGnbCate04"><span>오피스</span></a></li>
-														<li><a href="#htGnbCate05"><span>리빙/생활가전</span></a></li>
-														<li><a href="#htGnbCate06"><span>키친</span></a></li>
-														<li><a href="#htGnbCate07"><span>푸드</span></a></li>
-														<li><a href="#htGnbCate08"><span>가구/수납</span></a></li>
-														<li><a href="#htGnbCate09"><span>패션잡화</span></a></li>
-														<li><a href="#htGnbCate10"><span>뷰티/헬스</span></a></li>
-														<li><a href="#htGnbCate11"><span>여행/취미</span></a></li>
-														<li><a href="#htGnbCate12"><span>유아동</span></a></li>
-														<li><a href="#htGnbCate13"><span>CD/LP</span></a></li>
-														<li><a href="#htGnbCate14"><span>DVD</span></a></li>
-														<li><a href="#htGnbCate15"><span>BLU-RAY</span></a></li>
-														<li><a href="#htGnbCate16"><span>Only Hottracks</span></a></li>
+											<!-- 카테고리 탭 -->
+											<div class="tab_wrap category gnb_hottracks">
+											<!-- <div class="tab_wrap category hot_tracks"> -->
+												<!-- tab_list_wrap -->
+												<div class="tab_list_wrap">
+													<ul class="tabs">
+														<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks01" class="tab_link"><span class="tab_text">디자인문구</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks02" class="tab_link"><span class="tab_text">디지털/자동차</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks03" class="tab_link"><span class="tab_text">필기구</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks04" class="tab_link"><span class="tab_text">오피스</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks05" class="tab_link"><span class="tab_text">리빙/생활가전</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks06" class="tab_link"><span class="tab_text">키친</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks07" class="tab_link"><span class="tab_text">푸드</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks08" class="tab_link"><span class="tab_text">가구/수납</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks09" class="tab_link"><span class="tab_text">패션잡화</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks10" class="tab_link"><span class="tab_text">뷰티/헬스</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks11" class="tab_link"><span class="tab_text">여행/취미</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks12" class="tab_link"><span class="tab_text">유아동</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks13" class="tab_link"><span class="tab_text">CD/LP</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks14" class="tab_link"><span class="tab_text">DVD</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks14" class="tab_link"><span class="tab_text">BLU-RAY</span></a></li>
+														<li class="tab_item"><a href="#tabAnbCategoryHotTracks15" class="tab_link"><span class="tab_text">Only Hottracks</span></a></li>
 													</ul>
 												</div>
-												<!-- //ht_gnb_tab -->
+												<!-- //tab_list_wrap -->
 
-												<!-- ht_gnb_area -->
-												<div class="ht_gnb_area">
+<script>
+$(function(){
+    $.fn.gnbTy = function(){
+        $.each(this, function(i,v){
+            $(v).parent().parent().find('a').removeClass('on');
+            $(v).addClass('on');
+            var s = $(v).attr('href');
+            $('.gnb3dep .gnb_menu').hide();
+            $(s).show();
+        });
+    };
+    $('.gnb2dep a').click(function(){    
+		$(this).parent().parent().find('a').removeClass('on');
+        $(this).addClass('on');
+        return false;
+    });
 
-													<!-- 디자인 문구 -->
-													<div class="ht_gnb_box" id="htGnbCate01" style="display:block;">
+    $('.gnb2dep .ht_gnb_arrow').click(function(){    
+		$(this).parent().parent().find('a').removeClass('on');
+            $(this).addClass('on');
+            var s = $(this).attr('href');
+            $('.gnb3dep .gnb_menu').hide();
+			$('.gnb4dep .gnb_menu').hide();
+			$('.gnb3dep a').removeClass('on');
+            $(s).show();
+        return false;
+    });
+	$('.gnb3dep a').click(function(){    
+		$(this).parent().parent().find('a').removeClass('on');
+        $(this).addClass('on');
+        return false;
+    });
+    $('.gnb3dep .ht_gnb_arrow').click(function(){    
+		$(this).parent().parent().find('a').removeClass('on');
+            $(this).addClass('on');
+            var s = $(this).attr('href');
+            $('.gnb4dep .gnb_menu').hide();
+            $(s).show();
+        return false;
+    });
+
+});
+</script>	
+
+												<!-- 디자인문구 -->
+												<div id="tabAnbCategoryHotTracks01" class="tab_content">
+													<!-- ht_gnb_area -->
+													<div class="ht_gnb_area">
 														<!-- ht_gnb_cont -->
 														<div class="ht_gnb_cont">
 															<!-- ht_gnb -->
 															<ul class="ht_gnb">
-																<!-- GNB 2Dep -->
 																<li class="li gnb2dep">
-																	<a href="#" class="btn_ht_all"><span>디자인문구 전체</span></a>
-
-																	<!-- custom_scroll_wrap -->
+																	<a href="#" class="btn_arw_link"><span class="text">디자인문구 전체</span></a>
 																	<div class="custom_scroll_wrap">
+																		
 																		<ul class="gnb_menu">
-																			<li><a href="#htGnbCate01_1" class="ht_gnb_arrow"><span>다이어리/스케쥴러</span></a></li><!-- 하위메뉴 있을 시 class="ht_gnb_arrow" -->
+																			<li><a href="#htGnbCate01_1" class="ht_gnb_arrow"><span>다이어리/스케쥴러</span></a></li>
 																			<li><a href="#htGnbCate01_2" class="ht_gnb_arrow"><span>비즈니스플래너/노트</span></a></li>
 																			<li><a href="#"><span>캘린더/만년</span></a></li>
 																			<li><a href="#htGnbCate01_4" class="ht_gnb_arrow"><span>필통/파우치</span></a></li>
@@ -1286,108 +1327,79 @@
 																			<li><a href="#htGnbCate01_13" class="ht_gnb_arrow"><span>데코/디자인테이프</span></a></li>
 																		</ul>
 																	</div>
-																	<!-- //custom_scroll_wrap -->
 																</li>
-																<!-- //GNB 2Dep -->
-
-																<!-- GNB 3Dep -->
 																<li class="li gnb3dep">
-																	<!-- custom_scroll_wrap -->
-																	<div class="custom_scroll_wrap">	
-																		
-																		<!-- gnb_menu_area -->
-																		<div class="gnb_menu_area" id="htGnbCate01_1">
-																			<a href="#" class="btn_ht_all"><span>전체</span></a>
-																			<ul class="gnb_menu">
-																				<li><a href="#htGnbCate01_1_1" class="ht_gnb_arrow"><span>메뉴명1-1</span></a></li><!-- 하위메뉴 있을 시 class="ht_gnb_arrow" -->
-																				<li><a href="#htGnbCate01_1_2" class="ht_gnb_arrow"><span>메뉴명1-2</span></a></li>
-																				<li><a href="#"><span>메뉴명1-3</span></a></li>
-																				<li><a href="#"><span>메뉴명1-4</span></a></li>
-																				<li><a href="#"><span>메뉴명1-5</span></a></li>
-																				<li><a href="#"><span>메뉴명1-6</span></a></li>
-																				<li><a href="#"><span>메뉴명1-7</span></a></li>
-																				<li><a href="#"><span>메뉴명1-8</span></a></li>
-																			</ul>
-																		</div>
-																		<!-- //gnb_menu_area -->
+																	<a href="#" class="btn_arw_link"><span class="text">디자인문구 전체</span></a>
+																	<div class="custom_scroll_wrap">																	
+																		<ul class="gnb_menu" id="htGnbCate01_1">
+																			<li><a href="#htGnbCate01_1_1" class="ht_gnb_arrow"><span>메뉴명1-1</span></a></li>
+																			<li><a href="#htGnbCate01_1_2" class="ht_gnb_arrow"><span>메뉴명1-2</span></a></li>
+																			<li><a href="#"><span>메뉴명1-3</span></a></li>
+																			<li><a href="#"><span>메뉴명1-4</span></a></li>
+																			<li><a href="#"><span>메뉴명1-5</span></a></li>
+																			<li><a href="#"><span>메뉴명1-6</span></a></li>
+																			<li><a href="#"><span>메뉴명1-7</span></a></li>
+																			<li><a href="#"><span>메뉴명1-8</span></a></li>
+																		</ul>
 
-																		<!-- gnb_menu_area -->
-																		<div class="gnb_menu_area" id="htGnbCate01_2">
-																			<a href="#" class="btn_ht_all"><span>전체</span></a>
-																			<ul class="gnb_menu">
-																				<li><a href="#"><span>메뉴명2-1</span></a></li>
-																				<li><a href="#"><span>메뉴명2-2</span></a></li>
-																				<li><a href="#"><span>메뉴명2-3</span></a></li>
-																				<li><a href="#"><span>메뉴명2-4</span></a></li>
-																				<li><a href="#"><span>메뉴명2-5</span></a></li>
-																				<li><a href="#"><span>메뉴명2-6</span></a></li>
-																				<li><a href="#"><span>메뉴명2-7</span></a></li>
-																				<li><a href="#"><span>메뉴명2-8</span></a></li>
-																				<li><a href="#"><span>메뉴명2-9</span></a></li>
-																				<li><a href="#"><span>메뉴명2-10</span></a></li>
-																				<li><a href="#"><span>메뉴명2-11</span></a></li>
-																				<li><a href="#"><span>메뉴명2-12</span></a></li>
-																				<li><a href="#"><span>메뉴명2-13</span></a></li>
-																				<li><a href="#"><span>메뉴명2-14</span></a></li>
-																				<li><a href="#"><span>메뉴명2-15</span></a></li>
-																				<li><a href="#"><span>메뉴명2-16</span></a></li>
-																				<li><a href="#"><span>메뉴명2-17</span></a></li>
-																			</ul>
-																		</div>
-																		<!-- //gnb_menu_area -->
+																		<ul class="gnb_menu" id="htGnbCate01_2">
+																			<li><a href="#"><span>메뉴명2-1</span></a></li>
+																			<li><a href="#"><span>메뉴명2-2</span></a></li>
+																			<li><a href="#"><span>메뉴명2-3</span></a></li>
+																			<li><a href="#"><span>메뉴명2-4</span></a></li>
+																			<li><a href="#"><span>메뉴명2-5</span></a></li>
+																			<li><a href="#"><span>메뉴명2-6</span></a></li>
+																			<li><a href="#"><span>메뉴명2-7</span></a></li>
+																			<li><a href="#"><span>메뉴명2-8</span></a></li>
+																			<li><a href="#"><span>메뉴명2-9</span></a></li>
+																			<li><a href="#"><span>메뉴명2-10</span></a></li>
+																			<li><a href="#"><span>메뉴명2-11</span></a></li>
+																			<li><a href="#"><span>메뉴명2-12</span></a></li>
+																			<li><a href="#"><span>메뉴명2-13</span></a></li>
+																			<li><a href="#"><span>메뉴명2-14</span></a></li>
+																			<li><a href="#"><span>메뉴명2-15</span></a></li>
+																			<li><a href="#"><span>메뉴명2-16</span></a></li>
+																			<li><a href="#"><span>메뉴명2-17</span></a></li>
+																		</ul>
 																	</div>
-																	<!-- //custom_scroll_wrap -->
 																</li>
-																<!-- //GNB 3Dep -->
 																
-																<!-- GNB 4Dep -->
-																<li class="li gnb4dep">
-																	<!-- custom_scroll_wrap -->
-																	<div class="custom_scroll_wrap">
-																		<!-- gnb_menu_area -->
-																		<div class="gnb_menu_area"  id="htGnbCate01_1_1">
-																			<a href="#" class="btn_ht_all"><span>전체</span></a>
-																			<ul class="gnb_menu">
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																			</ul>
-																		</div>
-																		<!-- //gnb_menu_area -->
 
-																		<!-- gnb_menu_area -->
-																		<div class="gnb_menu_area"  id="htGnbCate01_1_2">
-																			<a href="#" class="btn_ht_all"><span>전체</span></a>
-																			<ul class="gnb_menu">
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																				<li><a href="#"><span>메뉴명</span></a></li>
-																			</ul>
-																		</div>
-																		<!-- //gnb_menu_area -->
+
+																<li class="li gnb4dep">
+																	<div class="custom_scroll_wrap">
+																		<ul class="gnb_menu" id="htGnbCate01_1_1">
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																		</ul>
+
+																		<ul class="gnb_menu" id="htGnbCate01_1_2">
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																			<li><a href="#"><span>메뉴명</span></a></li>
+																		</ul>
 																	</div>
-																	<!-- //custom_scroll_wrap -->
 																</li>
-																<!-- //GNB 4Dep -->
 															</ul>
 															<!-- //ht_gnb -->
 														</div>
@@ -1401,17 +1413,13 @@
 														</div>
 														<!-- // 배너 이미지 영역 -->
 													</div>
-													<!-- //디자인 문구 -->
-
-													<!-- 디지털/자동차 -->
-													<div class="ht_gnb_box" id="htGnbCate02">
-														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">디지털/자동차</div>
-													</div>
-													<!-- //디지털/자동차 -->
+													<!-- //ht_gnb_area -->
 												</div>
-												<!-- //ht_gnb_area -->
+												<!-- // 디자인문구 -->
+												
 											</div>
-											<!-- //핫트랙스 GNB -->
+											<!-- // 카테고리 탭 -->
+
 										</div>
 
 										<!-- anb_category_bottom -->
