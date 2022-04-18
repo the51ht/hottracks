@@ -628,7 +628,8 @@
 
 /* 차트선택 : 년, 월, 주, 일 팝업 */
 .prod_sort_wrap.dep_top {
-    overflow:initial;
+   // overflow:initial;
+   overflow:visible;
     &:after {
         display:block;clear:both;height:0;content:"";overflow:hidden;
     }
@@ -642,6 +643,7 @@
         cursor:text !important;
     }
     .tooltip_wrap {
+        margin-top:2px;
         .tooltip_inner {
             left:-50px;top:53px;height:355px;padding:0;
             .tooltip_header{
@@ -696,7 +698,7 @@
         }
         .tooltip_footer{
             .btn_tooltip_close{
-                position:initial;background:none;width:100%;background:#000;color:#fff;height:66px;font-size:16px;
+                position:static;background:none;width:100%;background:#000;color:#fff;height:66px;font-size:16px;
             }
         }
         .custom_scroll_wrap{

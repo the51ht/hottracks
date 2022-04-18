@@ -2753,7 +2753,7 @@ body {
 
 /* 차트선택 : 년, 월, 주, 일 팝업 */
 .prod_sort_wrap.dep_top {
-  overflow: initial;
+  overflow: visible;
 }
 
 .prod_sort_wrap.dep_top:after {
@@ -2772,6 +2772,11 @@ body {
 .prod_sort_wrap
 .date_select_warp .btn_sort_date {
   cursor: text !important;
+}
+
+.prod_sort_wrap
+.date_select_warp .tooltip_wrap {
+  margin-top: 2px;
 }
 
 .prod_sort_wrap
@@ -2888,7 +2893,7 @@ body {
 
 .prod_sort_wrap
 .date_select_warp .tooltip_wrap .tooltip_footer .btn_tooltip_close {
-  position: initial;
+  position: static;
   background: none;
   width: 100%;
   background: #000;
@@ -3530,7 +3535,7 @@ body {
   color: #292929;
   font-size: 12px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 25px;
   vertical-align: top;
   overflow: hidden;
 }
