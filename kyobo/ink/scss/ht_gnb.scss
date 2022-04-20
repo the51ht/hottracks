@@ -196,10 +196,9 @@
 }
 
 .gnb2dep {
-    /*&:after {
-        width:150px;height:150px;background:rgba(80, 85, 177, 0.06);content:"모션 자리!";
-        text-align:center;line-height:150px;animation:fade both 0.6s;
-    }*/
+    &:after {
+        display:none;position:absolute;right:-122px;bottom:0;width:126px;height:86px;background:url('../images/layout/gnb_action.svg') center/100% no-repeat;content:"";animation:fade both 0.6s;
+    }
 }
 
 .gnb3dep {
@@ -207,10 +206,9 @@
     .gnb_menu_area {
         display:none;animation:fade both 0.6s;
     }
-    /*&:after {
-        position:absolute;right:-170px;bottom:30px;width:150px;height:150px;background:rgba(80, 85, 177, 0.12);content:"모션 자리!";
-        text-align:center;line-height:150px;display:none;animation:fade both 0.6s;
-    }*/
+    &:after {
+        display:none;position:absolute;right:-122px;bottom:30px;width:126px;height:86px;background:url('../images/layout/gnb_action.svg') center/100% no-repeat;content:"";animation:fade both 0.6s;
+    }
 }
 
 .gnb4dep {
@@ -224,7 +222,15 @@
 }
 
 .ht_gnb_cont {
-    &.chk {
+    &.chk2 {
+        .gnb2dep:after {
+            display:block;
+        }
+        .gnb3dep:after {
+            display:none;
+        }
+    }   
+    &.chk3 {
         .gnb2dep:after {
             display:none;
         }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
     GNB
 */
@@ -344,6 +343,7 @@
 }
 
 .gnb2dep:after {
+  display: none;
   position: absolute;
   right: -122px;
   bottom: 0;
@@ -351,18 +351,29 @@
   height: 86px;
   background: url("../images/layout/gnb_action.svg") center/100% no-repeat;
   content: "";
+  -webkit-animation: fade both 0.6s;
+          animation: fade both 0.6s;
 }
 
 .gnb3dep {
   margin-top: 30px;
-  /*&:after {
-        position:absolute;right:-170px;bottom:30px;width:150px;height:150px;background:rgba(80, 85, 177, 0.12);content:"모션 자리!";
-        text-align:center;line-height:150px;display:none;animation:fade both 0.6s;
-    }*/
 }
 
 .gnb3dep .gnb_menu_area {
   display: none;
+  -webkit-animation: fade both 0.6s;
+          animation: fade both 0.6s;
+}
+
+.gnb3dep:after {
+  display: none;
+  position: absolute;
+  right: -122px;
+  bottom: 30px;
+  width: 126px;
+  height: 86px;
+  background: url("../images/layout/gnb_action.svg") center/100% no-repeat;
+  content: "";
   -webkit-animation: fade both 0.6s;
           animation: fade both 0.6s;
 }
@@ -382,10 +393,18 @@
   display: none;
 }
 
-.ht_gnb_cont.chk .gnb2dep:after {
+.ht_gnb_cont.chk2 .gnb2dep:after {
+  display: block;
+}
+
+.ht_gnb_cont.chk2 .gnb3dep:after {
   display: none;
 }
 
-.ht_gnb_cont.chk .gnb3dep:after {
+.ht_gnb_cont.chk3 .gnb2dep:after {
+  display: none;
+}
+
+.ht_gnb_cont.chk3 .gnb3dep:after {
   display: block;
 }
