@@ -313,6 +313,41 @@
 			top:0;
 		}
 	}
+	.evt_good_count {
+		display: block;
+		padding:5px 12px;
+		height:24px;
+		position:absolute;
+		border-radius: 35px;
+		color:#fff;
+		font-size: 10px;
+		right:8px;
+		bottom:8px;
+		background-color: rgba(0,0,0,0.5);
+		z-index:5;
+		.icon {
+			float:left;
+			width:12px;
+			height:14px;
+			margin-top:-1px;
+			background:url(../images/guide/ico_prod_like_icon.svg) no-repeat center center /12px;
+		}
+		.txt {
+			float:left;
+			margin-left:3px;
+			line-height:14px;
+			width: auto;
+		}
+		
+	}
+	.evt_good_count.active {
+		.icon {
+			float:left;
+			width:12px;
+			height:14px;
+			background:url(../images/guide/ico_prod_like_icon_active.svg) no-repeat center center /12px;
+		}
+	}
 	.company{
 		font-size: 12px;
 		color:#767676;
