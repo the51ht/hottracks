@@ -113,6 +113,9 @@
             <button class="btn_lg btn_primary"  onclick ="toastBtn5();">
                 <span class="text">이벤트 토스트 메세지</span>
             </button>         
+            <button class="btn_lg btn_primary"  onclick ="toastBtn6();">
+                <span class="text">핫트랙스 MD가 고른 추천 상품</span>
+            </button>         
             
         </main>
         <!-- // 컨텐츠 -->
@@ -141,6 +144,10 @@
     /* 이벤트 토스트 메세지 */
     function toastBtn5(){
         setToastMessage2('<div class="icon_toast"><img src="../../images/main/ico_wel_pop_event.svg" alt=""/></div>', '<div class="txt_toast"><span>홍길동</span>님! 다양한 이벤트가 진행 중입니다. <br><p class="btn_txt_more"><a href="#"><span>이벤트를 보러가세요</span></a></p></div>', 3000);
+    }
+    /* 상품상세 그리팅 토스트 메세지 */
+    function toastBtn6(){
+        setToastMessage2('<div class="icon_toast icon_toast_greeting"><img src="../../images/main/ico_prd_greeting.svg" alt=""/></div>', '<div class="txt_toast"><span>핫트랙스 MD</span>가 고른 추천 상품</div>', 3000);
     }
 
 
