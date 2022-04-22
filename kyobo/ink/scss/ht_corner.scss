@@ -181,6 +181,43 @@
 
 
 
+/***** 무료배송 *****/
+.deadline_character_area {
+    &.ht_del_deadline {
+        position:sticky;top:50%;width:auto;height:0;z-index:4;
+        .deadline_bubble{
+            right:-15px;top:0;padding:14px 20px 10px 25px;animation:evtMsg both infinite 6s;
+            &:before {
+                display:none;
+            }
+            &:after{
+                display:inline-block;position:absolute;right:-118px;top:-34px;width:148px;height:119px;background:url('../images/main/ico_side_float03.svg') no-repeat;content:"";
+            }
+            .txt {
+                img {
+                    margin-top:-5px;margin-left:5px;transform:rotate(180deg);
+                }
+                &:before{
+                    right:-9px;transform:rotate(180deg);
+                }
+                &:after{
+                    margin-top:-6px;border-width:0 10px 12px 10px;transform:rotate(90deg);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 /***** 브랜드샵 *****/
 /** 브랜드 정보 **/
 .brad_main_info{
