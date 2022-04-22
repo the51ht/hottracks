@@ -57,7 +57,6 @@
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
 </head>
-
 <body>
 <!-- skip_nav_wrap -->
 <div class="skip_nav_wrap">
@@ -118,8 +117,8 @@
 
 <script>
 $(function(){
-	$('#popbrand_search').dialog({
-		//autoOpen: true
+	$('#pop_fountainPen').dialog({
+		autoOpen: true
 	});
 });
 </script>
@@ -233,23 +232,92 @@ $(function(){
 			<!-- 만년필 브랜드 스토리 -->
 			<div class="tab_cont on" id="t01">
 				<div class="pen_title">고급필기구의 진정한 가치를 말해주는 브랜드 스토리를 모았습니다.</div>
-
+				<script>
+					//부모 탭 tabTy 함수와 충돌되어서  tabSubTy로 컨트롤
+					$(function(){
+						$.fn.tabSubTy = function(){
+							   $.each(this, function(i,v){
+								$(v).closest('.tab_sub_link').find('a').removeClass('on');
+								$(v).addClass('on');
+								var s = $(v).attr('href');
+								console.log($(s).parent().find('.pen_cont').length);
+								$(s).parent().find('.pen_cont').removeClass('on');
+								$(s).addClass('on');
+				
+							});
+						};
+						$('.tab_sub_link a').click(function(){    
+							$(this).tabSubTy();
+							return false;
+						});
+					})
+				</script>
 				<!-- 플로팅 메뉴-->
 				<div class="tab_swiper tab_ty tab_sm pen_sub_menu_wrap">
-					<ul class="swiper-wrapper">
+					<ul class="swiper-wrapper  tab_sub_link">
 						<li class="swiper-slide">
-							<a href="#n" class="on"><!-- 활성화  class="on" -->
+							<a href="#parker" class="on"><!-- 활성화  class="on" -->
 								<span>파카</span>
 							</a>
 						</li>
 						<li class="swiper-slide">
-							<a href="#n">
+							<a href="#waterman">
 								<span>워터맨</span>
 							</a>
 						</li>
 						<li class="swiper-slide">
-							<a href="#n">
+							<a href="#pelican">
 								<span>팰리칸</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#cross">
+								<span>크로스</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#sheaffer">
+								<span>쉐퍼</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#faver">
+								<span>파버카스텔</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#lamy">
+								<span>라미</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#caran">
+								<span>까렌디쉬</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#grafvon">
+								<span>그리폰</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#swiss">
+								<span>스위스밀리터리</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#platinum">
+								<span>플래티넘</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#sailor">
+								<span>세일러</span>
+							</a>
+						</li>  
+						<li class="swiper-slide">
+							<a href="#pierre">
+								<span>피에르가르뎅</span>
 							</a>
 						</li>  
 					</ul>
@@ -257,26 +325,58 @@ $(function(){
 				<!-- //플로팅 메뉴-->
 
 				<!--교보 http://www.hottracks.co.kr/ht/fountainPen?type=1-->
-				<div style="text-align:center;">
-					<div class="brand-name">
-						<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/service/brand_title01.gif" alt="파카">
-					</div><!-- end  brand-name -->
-					<div class="brand-explain01">
-						<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/service/brand01_sub01.gif" alt="만년필의 명가의 탄생">
-					</div><!-- end brand-explain02  -->
-					<div class="brand-explain02">
-						<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/service/brand01_sub02.gif" alt="역사 중심에선 파카">
-					</div><!-- end brand-explain02  -->
-					<div class="brand-explain03">
-						<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/service/brand01_sub03.gif" alt="파카를 사랑한 사람들">
-					</div><!-- end brand-explain03  -->
-						
+				<ul class="pen_story">
+					<!-- pen_cont -->
+					<li class="pen_cont on" id="parker">
+						<div class = "cont_in">
+							<img src="../../images/guide/brand_parker01.png" alt="파카">
+						</div>
+						<div class="cont_in">
+							<h2 class="ht_tit05"><strong class="point_line ty11"><em>만년필 명가(名家)의 탄생</em></strong></h2>
+							<div class="desc">
+								인류의 위대한 발명품 중에는 생활 속의 작은 불편함에서 시작되는 경우가 많다.<br>
+								만년필의 명가 파카(Parker)의 시작도 미국의 한 도시에서 교사로 재직하던 평범한 남자의 생각의 전환에서 시작되었다.<br><br>
+                                1888년, 교사로 재직하던 조지 새포트 파카(George Safford Parker)는 부업으로 만년필을 판매했다. 그런데 당시 만년필들은 잉크가 자주 새는 문제점이 있어
+							    고객들은 늘 불만이었고, 결국 그는 자신이 직접 만년필을 만들기로 결심한다. 계속되는 연구와 실패를 거듭한 끝에 1894년, 잉크 유출방지 기술인 “Lucky Curve” 시스템을 발명하여 특허를 받게 된다. 이것이 오늘날 파카의 탄생인 것이다.
+							</div>
+						</div>
+						<div class="cont_in">
+							<h2 class="ht_tit05"><strong class="point_line ty11"><em>역사의 중심에 선 파카</em></strong></h2>
+							<div class="desc">
+								<div class="txt">
+									필기는 역사를 발전시키는 중요한 수단이 되었으며 파카는 그 중심에 서 있었다. 20세기 초 미국경제가 급성장하는 동안, 만년필은 단순한 필기구에서 나아가 개인의 스타일을 대변해 주는 액세서리가 되었다.<br><br>
+									파카 역시 금과 은은 물론 진주 등으로 세공한 만년필로 트랜드를 이끌었다. 그 당시 읽고 쓸 수 있었던 사람은 지식인층으로 한정되어 만년필의 소유자체가 교양있는 사람임을 보여주는 상징이었다.<br><br>
+									그 후 제 1차 세계대전으로 미국은 경제위기를 맞이하게 되지만 반면 필기구 산업은 전성기를 맞게 된다.<br>
+									가족들에게 편지를 쓰기 위해 펜이 필요했던 군인에게 파카가 펜을 제공했기 때문이다. 전쟁을 거치며 큰 성장을 이룩한 파카는 끊임없는 연구를 통해 듀오폴드, 파카51 등 그 장시를 대표하는 아이콘적인 모델을 선보이면서 그 명성을 이어가게 된다.
+								</div>
+								<div class="img">
+									<img src="../../images/guide/brand_parker02.png" alt="파카">
+								</div>
+							</div>
+						</div>
+						<div class="cont_in">
+							<h2 class="ht_tit05"><strong class="point_line ty11"><em>파카를 사랑한 사람들</em></strong></h2>
+							<div class="desc">
+								<div class="txt">
+									파카 펜은 100여 년 동안 경제계, 정계, 그리고 예술계의 리더들로부터 사랑을 받아왔다.<br><br>
+									셜록홈즈의 작가 아더 코난 도일경은 1920년대에 내가 평생 찾던 펜은 바로 파카라고 할 만큼 파카펜을 애용했고, 마가렛 대처 전 영국수상은 1988년 파카의 영국공장을 방문하고 “어린시절, 파카펜을 갖는 것은 나의 꿈이었으며, 지금도 모든 서명에 G7 정상회담 때 받은 듀오폴더 펜을 사용한다.” 고 밝힌 바 있다.<br>
+									또한 파카펜은 역사적으로 중요한 순간에도 사용되었다.<br>
+									맥아더 장군은 태평양 전쟁 당시 일본의 항복문서에 서명할 때 그의 20년 된 파카듀오폴더펜을 사용했다.<br> 
+									1990년 6월 부시 대통령과 고르바쵸프 대통령은 백악광네서 파카 펜으로 자유 무역 협정을 체결하고 사실상 냉전을 종식 시켰고, 영국 왕실은 파카를 공식 지정펜으로 사용하고 있다.
+								</div>
+								<div class="img">
+									<img src="../../images/guide/brand_parker03.png" alt="파카를 사랑한 사람들">
+								</div>
+							</div>
+						</div>
+					</li>
+					<!-- //pen_cont -->
+					<li class="pen_cont" id="waterman"></li>
 				</div>
-				<!--교보 http://www.hottracks.co.kr/ht/fountainPen?type=1-->
-			</div>
+			</ul>
 			<!-- //만년필 브랜드 스토리 -->
 
-
+           
 			<!-- 만년필 사용법 -->
 			<div class="tab_cont" id="t02">
 				<!-- 플로팅 메뉴-->

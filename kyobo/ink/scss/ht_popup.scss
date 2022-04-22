@@ -181,16 +181,56 @@
             padding-top:20px;
         }
     }
-    .pen_sub_menu_wrap {
-        margin:0;padding-bottom:20px;
-
-    }
     .sc_pop_btn {
         min-height:calc(85vh - 200px) !important;
     }
 
     //교보 http://www.hottracks.co.kr/ht/fountainPen?type=1
     .mgt10 { margin-top:10px !important } 
+}
+
+.tab_ty.pen_sub_menu_wrap {
+    margin:0;padding:20px 0;
+    li:not(:first-of-type) {
+        margin-left:6px;
+    }
+    li a {
+        padding:0 13px;
+    }
+}
+.pen_story {
+    border:1px solid #000; text-align:center; padding:40px 40px 0 40px; border-radius: 12px;text-align:left;
+    .pen_cont {
+        margin-bottom: 40px;display:none;
+        &.on {
+            display: block;animation:fade both .5s;
+        }
+    }
+    .cont_in {
+        margin-bottom:40px;
+        .ht_tit05 {
+            margin-bottom: 25px;
+            .point_line:before {
+                height:11px;top:16px;
+            }
+        }
+        img {
+            width: 100%;
+        }
+        .desc {
+            line-height:21px;position:relative;overflow:hidden;
+            &:before{
+                display:block;clear:both; content:'';
+            }
+            .txt {
+                width:412px;margin-right: 36px;float:left;
+            }
+            .img {
+                width: 410px;float:left;
+            }
+        }
+    }  
+
 }
 
 

@@ -379,6 +379,7 @@ $(function(){
             var s = $(v).attr('href');
             $(s).parent().find('.tab_cont').removeClass('on');
             $(s).addClass('on');
+
         });
     };
     $('.tab_link a').click(function(){    
