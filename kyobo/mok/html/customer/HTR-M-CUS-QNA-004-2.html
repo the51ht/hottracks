@@ -311,35 +311,52 @@ $(function(){
                 <!-- //form_box -->
 
                 <!-- form_box -->
-                <div class="form_box">
+                <div class="form_box line_form_box">
+                    <h2 class="mc_tit03">답변 수신 방법</h2>
+
                     <div class="form_title">
-                        <p class="form_label">답변 수신 방법<em class="required"></em><p>
+                        <p class="form_label">휴대전화번호<em class="required"></em></p>
                     </div>
+                    
+                    
+
                     <div class="form_cont">
-                        <!-- chk_row_list -->
-                        <ul class="chk_row_list">
-                            <li class="chk_row_item">
-                                <!-- form_rdo -->
-                                <span class="form_rdo">
-                                    <input id="receive_type01" type="radio" name="receive_type" value="1" checked="">
-                                    <label for="receive_type01">휴대전화번호</label>
-                                </span>
-                                <!-- //form_rdo -->
-                            </li>
-                            <li class="chk_row_item">
-                                <!-- form_rdo -->
-                                <span class="form_rdo">
-                                    <input id="receive_type02" type="radio" name="receive_type" value="2">
-                                    <label for="receive_type02">이메일</label>
-                                </span>
-                                <!-- //form_rdo -->
-                            </li>
-                        </ul>
-                        <!-- //chk_row_list -->
+                        <!-- valid_check -->
+                        <div class="valid_check"><!-- 에러메세지 class="fail" -->
+                            <input type="number" class="form_ip" placeholder="-없이 숫자만 입력" title="휴대전화번호">
+                            <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
+                        </div>
+                        <!-- //valid_check -->
+
+                        <!-- valid_check -->
+                        <div class="valid_check fail">
+                            <input type="number" class="form_ip" placeholder="-없이 숫자만 입력" title="휴대전화번호">
+                            <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
+                        </div>
+                        <!-- //valid_check -->
+
+                        <!-- valid_check -->
+                        <div class="valid_check"><!-- 에러메세지 class="fail" -->
+                            <input type="email" class="form_ip" placeholder="@ 포함 이메일 입력" title="이메일">
+                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
+                        </div>
+                        <!-- //valid_check -->   
+
+                        <!-- valid_check -->
+                        <div class="valid_check fail">
+                            <input type="email" class="form_ip" placeholder="@ 포함 이메일 입력" title="이메일">
+                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
+                        </div>
+                        <!-- //valid_check -->  
                     </div>
+                    <!-- form_chk -->
+                    <span class="form_chk">
+                        <input id="chk_agree01" type="checkbox">
+                        <label for="chk_agree01">답변 메일 받기</label>
+                    </span>
+                    <!-- //form_chk -->
                 </div>
                 <!-- //form_box -->
-
 <script>
 /* 확인용 */
 $(function(){
@@ -355,54 +372,7 @@ $(function(){
         }
     }); 
 });
-</script>
-</script> 
-
-                <!-- form_box -->
-                <div class="form_box" id="chk01">
-                    <div class="form_title">
-                        <p class="form_label">휴대전화번호</p>
-                    </div>
-                    <div class="form_cont">
-                        <!-- valid_check -->
-                        <div class="valid_check"><!-- 에러메세지 class="fail" -->
-                            <input type="number" class="form_ip" placeholder="-없이 숫자만 입력" title="휴대전화번호">
-                            <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
-                        </div>
-                        <!-- //valid_check -->
-
-                        <!-- valid_check -->
-                        <div class="valid_check fail">
-                            <input type="number" class="form_ip" placeholder="-없이 숫자만 입력" title="휴대전화번호">
-                            <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
-                        </div>
-                        <!-- //valid_check -->
-                    </div>
-                </div>
-                <!-- //form_box -->
-
-                <!-- form_box -->
-                <div class="form_box" id="chk02" style="display:none;">
-                    <div class="form_title">
-                        <p class="form_label">이메일<p>
-                    </div>
-                    <div class="form_cont">
-                        <!-- valid_check -->
-                        <div class="valid_check"><!-- 에러메세지 class="fail" -->
-                            <input type="email" class="form_ip" placeholder="@ 포함 이메일 입력" title="이메일">
-                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
-                        </div>
-                        <!-- //valid_check -->   
-
-                        <!-- valid_check -->
-                        <div class="valid_check fail">
-                            <input type="email" class="form_ip" placeholder="@ 포함 이메일 입력" title="이메일">
-                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
-                        </div>
-                        <!-- //valid_check -->  
-                    </div>
-                </div>
-                <!-- //form_box -->
+</script>            
             </div>
             <!-- //form_wrap -->
 

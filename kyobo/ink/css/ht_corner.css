@@ -233,6 +233,59 @@
           transform: rotate(90deg);
 }
 
+/***** 무료배송 *****/
+.deadline_character_area.ht_del_deadline {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  width: auto;
+  height: 0;
+  z-index: 4;
+}
+
+.deadline_character_area.ht_del_deadline .deadline_bubble {
+  right: -15px;
+  top: 0;
+  padding: 14px 20px 10px 25px;
+  -webkit-animation: evtMsg both infinite 6s;
+          animation: evtMsg both infinite 6s;
+}
+
+.deadline_character_area.ht_del_deadline .deadline_bubble:before {
+  display: none;
+}
+
+.deadline_character_area.ht_del_deadline .deadline_bubble:after {
+  display: inline-block;
+  position: absolute;
+  right: -118px;
+  top: -34px;
+  width: 148px;
+  height: 119px;
+  background: url("../images/main/ico_side_float03.svg") no-repeat;
+  content: "";
+}
+
+.deadline_character_area.ht_del_deadline .deadline_bubble .txt img {
+  margin-top: -5px;
+  margin-left: 5px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.deadline_character_area.ht_del_deadline .deadline_bubble .txt:before {
+  right: -9px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.deadline_character_area.ht_del_deadline .deadline_bubble .txt:after {
+  margin-top: -6px;
+  border-width: 0 10px 12px 10px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 /***** 브랜드샵 *****/
 /** 브랜드 정보 **/
 .brad_main_info {
@@ -962,28 +1015,24 @@
 }
 
 .gft_slide_view.len4 .evt_products {
-  display: block;
-  margin: 0px 0 0 -18px;
+  /*display:block;*/
+  margin: 0px -18px 0 -18px;
   padding: 0px;
   background: none;
-}
-
-.gft_slide_view.len4 .evt_products .prod_item {
-  float: left;
-  width: calc(25% - 36px);
-  margin: 40px 18px 0 18px;
-}
-
-.gft_slide_view.len4 .evt_products .product_pic {
-  margin: 0;
-}
-
-.gft_slide_view.len4 .evt_products .evt_good_count {
-  display: inline-block;
-}
-
-.gft_slide_view.len4 .evt_products .product_info {
-  display: inline-block;
+  /*
+            .prod_item {
+                float:left;width:calc(25% - 36px);margin:40px 18px 0 18px;
+            }
+            
+            .product_pic {
+                margin:0;
+            }
+            .evt_good_count {
+                display:inline-block;
+            }
+            .product_info {
+                display:inline-block;
+            }*/
 }
 
 .gft_slide_view.len2 {
