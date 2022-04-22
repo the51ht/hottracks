@@ -558,6 +558,31 @@
 .wel_today_cont .swiper-slide {
   width: 58%;
   padding: 15px 0 30px 0;
+  position: relative;
+}
+
+.wel_today_cont .swiper-slide:before {
+  content: '';
+  position: absolute;
+  width: 61%;
+  height: 35%;
+  z-index: 3;
+  bottom: 110px;
+  right: -28%;
+  background: url(../images/main/wel_tod_banner_bubble.svg) no-repeat center/95%;
+  opacity: 0;
+  -webkit-transform: translateY(15px) rotate(15deg);
+          transform: translateY(15px) rotate(15deg);
+  -webkit-transition: all 0.4s 0s;
+  transition: all 0.4s 0s;
+}
+
+.wel_today_cont .swiper-slide.swiper-slide-active:before {
+  opacity: 1;
+  -webkit-transform: translateY(0) rotate(15deg);
+          transform: translateY(0) rotate(15deg);
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 
 .wel_today_cont .swiper-slide .today_box {
@@ -9479,7 +9504,7 @@
   content: "";
 }
 
-.mus_mc_classic_msg:after {
+/* .mus_mc_classic_msg:after {
   position: absolute;
   left: 50%;
   top: -12px;
@@ -9491,7 +9516,7 @@
   border-right: 12px solid transparent;
   content: "";
   z-index: 1;
-}
+} */
 
 .mus_mc_classic_msg .s1 {
   position: relative;

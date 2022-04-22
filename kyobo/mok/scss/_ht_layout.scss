@@ -19,7 +19,6 @@ body {
 
 
 
-
 .ht_ {
     #containerWrapper {
         background-color: #fff;
@@ -76,12 +75,39 @@ body {
                                 top:13px;
                             }
                         }
+                        &.on a{
+                            position:relative;
+                            &:before {
+                                content:"";
+                                position:absolute;
+                                width:calc(100% - 30px);
+                                height:2px;
+                                background-color: #000;
+                                left:30px;
+                                bottom:-2px;
+                            }
+                        }
+                        &.p_line {
+                            position:relative;
+                            a {
+                                position:relative; z-index:5;
+                            }
+                            &:before {
+                                position:absolute;left:39px;top:25px;width:calc(100% - 54px);height:14px;background:#FFD3EC;content:"";z-index:0;animation:pLine both ease-in infinite 3s;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
+@keyframes pLine {
+    0% {width:0;}
+    12% {width:calc(100% - 54px);}
+    100% {width:calc(100% - 54px);}
+}
+
 .dialog_wrapper.open {
     .ui-dialog.dialog_menu { 
         animation: bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;

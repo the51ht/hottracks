@@ -575,10 +575,12 @@
 .wel_today_time .wel_today_balloon {
   position: absolute;
   left: 50%;
-  bottom: -41px;
+  bottom: -46px;
   padding: 0 14px;
   background-color: #ffee24;
-  border: 2px solid;
+  border-style: solid;
+  border-width: 2px 2px 3px 2px;
+  border-color: #000;
   border-radius: 40px;
   font-size: 15px;
   font-weight: 500;
@@ -586,19 +588,22 @@
   letter-spacing: -1px;
   -webkit-transform: translateX(-60%);
           transform: translateX(-60%);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
   z-index: 3;
-  /*animation:musMembMsg both infinite 5s;*/
+  -webkit-animation: welTodMsg both infinite 5s;
+          animation: welTodMsg both infinite 5s;
 }
 
 .wel_today_time .wel_today_balloon:before {
   position: absolute;
   left: 50%;
   top: 0;
-  margin-top: -12px;
+  margin-top: -10px;
   margin-left: 1px;
-  border-top: 8px solid transparent;
+  border-top: 6px solid transparent;
   border-right: 8px solid #ffee24;
-  border-bottom: 8px solid transparent;
+  border-bottom: 6px solid transparent;
   border-left: 0 solid transparent;
   z-index: 5;
   -webkit-transform: rotate(90deg);
@@ -613,12 +618,139 @@
   top: 0px;
   width: 0;
   margin-top: -11px;
-  margin-left: -5px;
-  border-width: 0 10px 10px 10px;
+  margin-left: -3px;
+  border-width: 0 8px 10px 8px;
   border-style: solid;
   border-color: #000 transparent;
   content: "";
   z-index: 0;
+}
+
+.wel_today_time .wel_today_balloon_img {
+  position: absolute;
+  width: 205px;
+  height: 140px;
+  top: 237px;
+  left: 50%;
+  z-index: 3;
+  margin-left: -90px;
+  background: url(../images/main/wel_today_balloon.svg) no-repeat center/99%;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-animation: welTodImgMsg both infinite 5s;
+          animation: welTodImgMsg both infinite 5s;
+}
+
+@-webkit-keyframes welTodMsg {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5) translateX(-60%);
+            transform: scale(0.5) translateX(-60%);
+  }
+  7% {
+    opacity: 0;
+    -webkit-transform: scale(1) translateX(-60%);
+            transform: scale(1) translateX(-60%);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(-60%);
+            transform: scale(1) translateX(-60%);
+  }
+  95% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(-60%);
+            transform: scale(1) translateX(-60%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5) translateX(-60%);
+            transform: scale(0.5) translateX(-60%);
+  }
+}
+
+@keyframes welTodMsg {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5) translateX(-60%);
+            transform: scale(0.5) translateX(-60%);
+  }
+  7% {
+    opacity: 0;
+    -webkit-transform: scale(1) translateX(-60%);
+            transform: scale(1) translateX(-60%);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(-60%);
+            transform: scale(1) translateX(-60%);
+  }
+  95% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(-60%);
+            transform: scale(1) translateX(-60%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5) translateX(-60%);
+            transform: scale(0.5) translateX(-60%);
+  }
+}
+
+@-webkit-keyframes welTodImgMsg {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5) rotate(20deg);
+            transform: scale(0.5) rotate(20deg);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(-3deg);
+            transform: scale(1) rotate(-3deg);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(-3deg);
+            transform: scale(1) rotate(-3deg);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(-3deg);
+            transform: scale(1) rotate(-3deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5) rotate(20deg);
+            transform: scale(0.5) rotate(20deg);
+  }
+}
+
+@keyframes welTodImgMsg {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5) rotate(20deg);
+            transform: scale(0.5) rotate(20deg);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(-3deg);
+            transform: scale(1) rotate(-3deg);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(-3deg);
+            transform: scale(1) rotate(-3deg);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(-3deg);
+            transform: scale(1) rotate(-3deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5) rotate(20deg);
+            transform: scale(0.5) rotate(20deg);
+  }
 }
 
 /*** 핫트랙스 라이브 : .wel_live ***/
