@@ -104,6 +104,12 @@ button.btn_lg {
 .ui-selectmenu-menu .ui-menu {
     max-height:45vh;
 }
+.form_sel {
+     width:auto;
+}
+.form_sel .ui-selectmenu-button:focus {
+    outline:1px;
+}
 
 
 
@@ -128,6 +134,22 @@ button.btn_lg {
     height:80px;
 }
 
+/* byte_chack_footer : 오타 추가 */
+.byte_check_wrap .byte_chack_footer {
+	display:-webkit-box;display:flex;display:-webkit-flex;justify-content:flex-end;align-items:center;flex-direction:row;padding:10px 10px 10px 14px;text-align:right;transition:background 0.2s ease-out;
+}
+.byte_check_wrap .byte_chack_footer .byte_check {
+	margin-top:2px;
+}
+.byte_check_wrap .byte_chack_footer .btn_wrap {
+	display:inline-block;
+}
+.byte_check_wrap .byte_chack_footer .btn_wrap [class^=btn_] + [class^=btn_] {
+	margin-left:4px;
+}
+.byte_check_wrap .byte_chack_footer .byte_check + .btn_wrap {
+	margin-left:10px;
+}
 
 
 .file_list .file_item .btn_box {

@@ -23,9 +23,8 @@
 
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<!--<link rel="stylesheet" href="https://pub-onk.ndev.kyobobook.co.kr/assets/common/css/style_ink.css">--><!-- 현재 교보 DEV 가이드 확인 -->
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
-<!--<link rel="stylesheet" href="https://pub-onk.ndev.kyobobook.co.kr/assets/common/css/style_ink.css">--><!-- 추후 교보css  확인 -->
-
 
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
@@ -59,8 +58,89 @@
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
 
-<link rel="stylesheet" href="../../css/ht_gnb.css">
-<script src="../../js/ht_gnb.js"></script>
+<script>
+/* HT GNB 확인용 */
+$(function(){
+    /* 1Depth */
+    $('.btn_anb').click(function(e){
+        if($('.anb_wrap').hasClass('active')){
+            $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+            $('.ht_gnb_tab a').removeClass('active');
+            $('.gnb_menu a').removeClass('active');
+            $('.ht_gnb_box').hide();
+            $('.gnb3dep .gnb_menu_area, .gnb4dep .gnb_menu_area').hide();
+    
+
+            $('.ht_gnb_tab li').eq(0).find('a').addClass('active');
+            $('#htGnbCate01').show();
+            $('#htGnbCate01 .ht_gnb_cont').addClass('chk2');
+        }else{
+
+        }
+    });
+
+    /* 1Depth */
+    $('.ht_gnb_tab a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+        $('.gnb_menu_area').hide();
+        $('.ht_gnb_box').hide();
+
+        /* 1Depth 메뉴 활성화 */
+        $('.gnb_menu a').removeClass('active');
+		$(this).parent().parent().find('a').removeClass('active');
+        $(this).addClass('active');
+
+        var s = $(this).attr('href');
+        $(s).show();
+        $(s).find('.ht_gnb_cont').addClass('chk2'); // 곰돌이 아이콘 2Depth
+        e.preventDefault();
+    });
+
+    /* 2Depth */
+    $('.gnb2dep a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+        $('.gnb3dep .gnb_menu_area, .gnb4dep .gnb_menu_area').hide();
+
+        /* 2Depth 메뉴 활성화 */
+        $('.gnb_menu a').removeClass('active');
+        $(this).addClass('active');
+
+        /* 확인용 */
+        if($(this).hasClass('ht_gnb_arrow')) {
+            var s = $(this).attr('href');
+            $(s).show();
+            $(this).closest('.ht_gnb_cont').addClass('chk3'); // 곰돌이 아이콘 3Depth
+        } else {
+            alert('링크연결');
+            $(this).closest('.ht_gnb_cont').addClass('chk2'); // 확인용 곰돌이 아이콘 2Depth
+        }
+        e.preventDefault();
+    });
+
+    /* 3Depth */
+    $('.gnb3dep a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+        $('.gnb4dep .gnb_menu_area').hide();
+        
+        /* 3Depth 메뉴 활성화 */
+		$(this).parent().parent().find('a').removeClass('active');
+        $(this).addClass('active');
+
+        /* 확인용 */
+        if($(this).hasClass('ht_gnb_arrow')) {
+            var s = $(this).attr('href');
+            $(s).show();
+        } else {
+            alert('링크연결');
+            $(this).closest('.ht_gnb_cont').addClass('chk3'); // 확인용 곰돌이 아이콘 3Depth
+        }
+        e.preventDefault();
+    });
+});
+</script>
 </head>
 <body>
 <!-- skip_nav_wrap -->
@@ -220,7 +300,7 @@
 			<!-- gnb_wrap -->
 			<nav class="gnb_wrap">
 				<!-- anb_wrap -->
-				<div class="anb_wrap active animated">
+				<div class="anb_wrap">
 					<button type="button" class="btn_anb"><span class="hidden">전체메뉴</span></button>
 					<div class="anb_area">
 						<!-- tab_wrap -->
@@ -242,9 +322,7 @@
 									<div class="tab_list_wrap">
 										<ul class="tabs">
 											<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
-
-											<li class="tab_item"><a href="#tabAnbCategoryHotTracks" class="tab_link"><span class="tab_text">핫트랙스</span></a></li>
-
+											<li class="tab_item"><a href="#tabAnbCategoryHotTracks" class="tab_link"><span class="tab_text">핫트랙스</span></a></li><!-- 핫트랙스 탭 위치 변경 : 1번으로 나와 된다고 합니다 -->
 											<li class="tab_item"><a href="#tabAnbCategoryKyobo" class="tab_link"><span class="tab_text">교보문고</span></a></li>
 											<li class="tab_item"><a href="#tabAnbCategoryEbook" class="tab_link"><span class="tab_text">eBook</span></a></li>
 											<li class="tab_item"><a href="#tabAnbCategorySam" class="tab_link"><span class="tab_text">sam</span></a></li>
@@ -1259,9 +1337,9 @@
 												<div class="ht_gnb_area">
 
 													<!-- 디자인 문구 -->
-													<div class="ht_gnb_box" id="htGnbCate01" style="display:block;">
+													<div class="ht_gnb_box" id="htGnbCate01">
 														<!-- ht_gnb_cont -->
-														<div class="ht_gnb_cont chk2">
+														<div class="ht_gnb_cont chk2"><!-- 곰돌이 위치 : chk2 chk3 -->
 															<!-- ht_gnb -->
 															<ul class="ht_gnb">
 																<!-- GNB 2Dep -->
@@ -1274,16 +1352,16 @@
 																			<li><a href="#htGnbCate01_1" class="ht_gnb_arrow"><span>다이어리/스케쥴러</span></a></li><!-- 하위메뉴 있을 시 class="ht_gnb_arrow" -->
 																			<li><a href="#htGnbCate01_2" class="ht_gnb_arrow"><span>비즈니스플래너/노트</span></a></li>
 																			<li><a href="#"><span>캘린더/만년</span></a></li>
-																			<li><a href="#htGnbCate01_4" class="ht_gnb_arrow"><span>필통/파우치</span></a></li>
-																			<li><a href="#htGnbCate01_5" class="ht_gnb_arrow"><span>노트/메모</span></a></li>
-																			<li><a href="#htGnbCate01_6" class="ht_gnb_arrow"><span>포토앨범/스크랩북</span></a></li>
-																			<li><a href="#htGnbCate01_7" class="ht_gnb_arrow"><span>포장/데코용품</span></a></li>
-																			<li><a href="#htGnbCate01_8" class="ht_gnb_arrow"><span>BOOK</span></a></li>
-																			<li><a href="#htGnbCate01_9" class="ht_gnb_arrow"><span>편지/카드/봉투</span></a></li>
-																			<li><a href="#htGnbCate01_10" class="ht_gnb_arrow"><span>컬러링/캘리/문구세트</span></a></li>
-																			<li><a href="#htGnbCate01_11" class="ht_gnb_arrow"><span>화방용품</span></a></li>
-																			<li><a href="#htGnbCate01_12" class="ht_gnb_arrow"><span>스티커/스탬프</span></a></li>
-																			<li><a href="#htGnbCate01_13" class="ht_gnb_arrow"><span>데코/디자인테이프</span></a></li>
+																			<li><a href="#"><span>필통/파우치</span></a></li>
+																			<li><a href="#"><span>노트/메모</span></a></li>
+																			<li><a href="#"><span>포토앨범/스크랩북</span></a></li>
+																			<li><a href="#"><span>포장/데코용품</span></a></li>
+																			<li><a href="#"><span>BOOK</span></a></li>
+																			<li><a href="#"><span>편지/카드/봉투</span></a></li>
+																			<li><a href="#"><span>컬러링/캘리/문구세트</span></a></li>
+																			<li><a href="#"><span>화방용품</span></a></li>
+																			<li><a href="#"><span>스티커/스탬프</span></a></li>
+																			<li><a href="#"><span>데코/디자인테이프</span></a></li>
 																		</ul>
 																	</div>
 																	<!-- //custom_scroll_wrap -->
@@ -1408,6 +1486,90 @@
 														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">디지털/자동차</div>
 													</div>
 													<!-- //디지털/자동차 -->
+
+													<!-- 필기구 -->
+													<div class="ht_gnb_box" id="htGnbCate03">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">필기구</div>
+													</div>
+													<!-- //필기구 -->
+
+													<!-- 오피스 -->
+													<div class="ht_gnb_box" id="htGnbCate04">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">오피스</div>
+													</div>
+													<!-- //오피스 -->
+
+													<!-- 리빙/생활가전 -->
+													<div class="ht_gnb_box" id="htGnbCate05">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">리빙/생활가전</div>
+													</div>
+													<!-- //리빙/생활가전 -->
+
+													<!-- 키친 -->
+													<div class="ht_gnb_box" id="htGnbCate06">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">키친</div>
+													</div>
+													<!-- //키친 -->
+
+													<!-- 푸드 -->
+													<div class="ht_gnb_box" id="htGnbCate07">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">푸드</div>
+													</div>
+													<!-- //푸드 -->
+
+													<!-- 가구/수납 -->
+													<div class="ht_gnb_box" id="htGnbCate08">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">가구/수납</div>
+													</div>
+													<!-- //가구/수납 -->
+
+													<!-- 패션잡화 -->
+													<div class="ht_gnb_box" id="htGnbCate09">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">패션잡화</div>
+													</div>
+													<!-- //패션잡화 -->
+
+													<!-- 여행/취미 -->
+													<div class="ht_gnb_box" id="htGnbCate10">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">여행/취미</div>
+													</div>
+													<!-- //여행/취미 -->
+
+													<!-- 푸드 -->
+													<div class="ht_gnb_box" id="htGnbCate11">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">푸드</div>
+													</div>
+													<!-- //푸드 -->
+
+													<!-- 유아동 -->
+													<div class="ht_gnb_box" id="htGnbCate12">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">유아동</div>
+													</div>
+													<!-- //유아동 -->
+
+													<!-- CD/LP -->
+													<div class="ht_gnb_box" id="htGnbCate13">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">CD/LP</div>
+													</div>
+													<!-- //CD/LP -->
+
+													<!-- DVD -->
+													<div class="ht_gnb_box" id="htGnbCate14">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">DVD</div>
+													</div>
+													<!-- //DVD -->
+
+													<!-- BLU-RAY -->
+													<div class="ht_gnb_box" id="htGnbCate15">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">BLU-RAY</div>
+													</div>
+													<!-- //BLU-RAY -->
+
+													<!-- Only Hottracks -->
+													<div class="ht_gnb_box" id="htGnbCate16">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">Only Hottracks</div>
+													</div>
+													<!-- //Only Hottracks -->
 												</div>
 												<!-- //ht_gnb_area -->
 											</div>
@@ -1889,7 +2051,7 @@
 			<div class="footer_inner">
 				<div class="logo_box">
 					<a href="#" class="logo_link">
-						<img srcset="https://pub-onk.ndev.kyobobook.co.kr/assets/common/images/img_logo_kyobo_footer.png 1x, https://pub-onk.ndev.kyobobook.co.kr/assets/common/images/img_logo_kyobo_footer@1.5x.png 1.5x, https://pub-onk.ndev.kyobobook.co.kr/assets/common/images/img_logo_kyobo_footer@2x.png 2x" src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/images/img_logo_kyobo_footer.png" alt="KYOBO 교보문고" /><!-- 수정 220412 단일태그 닫기 추가 -->
+						<img srcset="../../images/layout/img_logo_kyobo_footer.png" alt="KYOBO 교보문고">
 					</a>
 					<div class="right_box">
 						<div class="family_site_box">
