@@ -1639,7 +1639,7 @@
     }
 }
 .select_li_view {
-    display:none;position:absolute;left:0;top:44px;width:100%;background-color:#fff;border:solid #000;border-width:0 1px 1px 1px;box-sizing:border-box;border-radius:0 0 6px 6px;overflow:hidden;
+    display:none;position:absolute;left:0;top:44px;width:100%;background-color:#fff;border:solid #000;border-width:0 1px 1px 1px;box-sizing:border-box;border-radius:0 0 6px 6px;overflow:hidden;padding-bottom: 20px;
     .form_sel {
         display:block;
     }
@@ -1647,7 +1647,7 @@
         width:100%;height:120px;
     }
     .btn_area {
-        margin-top:12px;
+        margin-top:0;padding-top: 12px;
     }
 }
 .select_li_list {
@@ -1676,7 +1676,22 @@
     }
 }
 .select_li_bottom {
-    position: relative;padding:15px 14px 20px 14px;
+    position: relative;padding:15px 14px 0px 14px;
+}
+.ht_prod_info{
+    .ht_option_list{
+        +  .select_li_bottom{
+            padding:15px 0 0 0;
+            .form_sel{
+                display: block;
+                textarea{
+                    width: 100%;
+                    height: 120px;
+                }
+                
+            }
+        }
+    }
 }
 
 

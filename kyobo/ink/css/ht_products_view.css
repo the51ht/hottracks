@@ -2968,6 +2968,7 @@
           box-sizing: border-box;
   border-radius: 0 0 6px 6px;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 
 .select_li_view .form_sel {
@@ -2980,7 +2981,8 @@
 }
 
 .select_li_view .btn_area {
-  margin-top: 12px;
+  margin-top: 0;
+  padding-top: 12px;
 }
 
 .select_li_list {
@@ -3044,5 +3046,18 @@
 
 .select_li_bottom {
   position: relative;
-  padding: 15px 14px 20px 14px;
+  padding: 15px 14px 0px 14px;
+}
+
+.ht_prod_info .ht_option_list + .select_li_bottom {
+  padding: 15px 0 0 0;
+}
+
+.ht_prod_info .ht_option_list + .select_li_bottom .form_sel {
+  display: block;
+}
+
+.ht_prod_info .ht_option_list + .select_li_bottom .form_sel textarea {
+  width: 100%;
+  height: 120px;
 }
