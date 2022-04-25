@@ -267,6 +267,8 @@
                                     </tr>
                                 </tbody>
                             </table>
+
+                            <!-- 22.04.26 답변수신방법 수정 -->
                             <table class="tbl_row">
                                 <caption>답변 수신 방법 테이블로 휴대전화번호 필수 입력, 이메일 입력, 답변 메일 받기 체크 여부, 회원 정보 변경하기 버튼 링크를 나타낸 표입니다.</caption>
                                 <colgroup>
@@ -306,36 +308,9 @@
                                             </p>
                                         </td>
                                     </tr>
-<script>
-/* 확인용 */
-$(function(){
-    $('input[name=exRdoName01]').click(function(){ 
-        
-        var chkVar = $('input[name=exRdoName01]:checked').val();
-        if(chkVar=='1'){
-            $('#chk01').removeAttr("disabled");
-            $('#chk02').attr("disabled", true);
-        }else if(chkVar=='2'){
-            $('#chk01').attr("disabled", true);
-            $('#chk02').removeAttr("disabled");
-        }
-    }); 
-
-    $('input[name=exRdoName02]').click(function(){ 
-
-        var chkVar2 = $('input[name=exRdoName02]:checked').val();
-        if(chkVar2=='3'){
-            $('#chk03').removeAttr("disabled");
-            $('#chk04').attr("disabled", true);
-        }else if(chkVar2=='4'){
-            $('#chk03').attr("disabled", true);
-            $('#chk04').removeAttr("disabled");
-        }
-    }); 
-});                    
-</script>
                                 </tbody>
                             </table>
+                            <!-- //22.04.26 답변수신방법 수정 -->
                         </div>
                         <!-- //tbl_row_wrap -->
 
