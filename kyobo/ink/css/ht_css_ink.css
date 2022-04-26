@@ -603,6 +603,144 @@ button.btn_lg {
   max-height: inherit !important;
 }
 
+/* 메뉴 > 최근 본 */
+.dialog_wrapper .ui-dialog.dialog_history {
+  width: 460px;
+  height: calc(100% - 40px) !important;
+  max-height: none;
+  margin: 0 0 0 auto;
+  padding: 20px;
+  animation: historyPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
+  -webkit-animation: historyPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01);
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content {
+  height: 100% !important;
+  max-height: none !important;
+  border-radius: 20px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .sort_list_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 29px 0 12px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .history_list_wrap .history_list .history_item {
+  padding: 17px 17px 19px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .history_list_wrap .history_list .history_item .prod_area {
+  width: 280px;
+  margin-right: 8px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .history_list_wrap .history_list .history_item .prod_area .prod_info_box {
+  margin-left: 12px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .history_list_wrap .history_list .history_item .prod_area .prod_info_box .prod_period {
+  display: block;
+  margin-top: 0px;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: #595959;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .prod_area.horizontal .prod_thumb_box.size_sm {
+  width: 84px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .tab_ty li {
+  margin-left: 7px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .tab_ty li:first-child {
+  margin-left: 0;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .tab_ty li a {
+  padding: 10px 16px 8px 17px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .btn_delete_text {
+  color: #767676;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .btn_delete_text .ico_delete {
+  width: 13px;
+  height: 15px;
+  margin-top: 1px;
+  background-size: 13px 15px;
+  background-image: url(../../../assets/common/images/ico_delete@2x.png);
+  margin-right: 4px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .prod_area .prod_info_box.size_sm .prod_author {
+  font-size: 13px;
+  line-height: 19px;
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 38px;
+  line-height: 19px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: -o-ellipsis-lastline;
+  white-space: normal;
+  margin-top: 0;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .prod_area .prod_info_box .prod_name {
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 46px;
+  line-height: 23px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: -o-ellipsis-lastline;
+  white-space: normal;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  height: 23px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_history .prod_area .prod_info_box .prod_name.ellipsis_single {
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  -webkit-box-orient: inherit;
+  -webkit-line-clamp: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 22px;
+}
+
 /* 3교제 Custom */
 /*
     Layout
