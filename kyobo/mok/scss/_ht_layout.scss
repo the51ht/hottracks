@@ -87,13 +87,15 @@ body {
                                 bottom:-2px;
                             }
                         }
-                        &.p_line {
-                            position:relative;
-                            a {
-                                position:relative; z-index:5;
+                        &.act {
+                            span {
+                                display:inline-block;position:relative;
+                                &:before {
+                                    position:absolute;left:0;top:23px;width:100%;height:14px;background:#ffd3ec;content:"";z-index:0;animation:pointLine both ease-in infinite 3s;
+                                }
                             }
-                            &:before {
-                                position:absolute;left:39px;top:25px;width:calc(100% - 54px);height:14px;background:#FFD3EC;content:"";z-index:0;animation:pLine both ease-in infinite 3s;
+                            em {
+                                position: relative;
                             }
                         }
                     }
@@ -102,11 +104,7 @@ body {
         }
     }
 }
-@keyframes pLine {
-    0% {width:0;}
-    12% {width:calc(100% - 54px);}
-    100% {width:calc(100% - 54px);}
-}
+
 
 .dialog_wrapper.open {
     .ui-dialog.dialog_menu { 
