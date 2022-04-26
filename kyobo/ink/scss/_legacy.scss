@@ -460,60 +460,84 @@ button.btn_lg {
 
 
 
-/* 메뉴 > 최근 본 */
+/*** 메뉴 > 최근 본 ***/
 .dialog_wrapper .ui-dialog.dialog_history {
     width: 460px;height: calc(100% - 40px) !important;max-height: none;margin: 0 0 0 auto;padding: 20px;animation: historyPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;-webkit-animation: historyPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) ;
+
+    
+
+
     .dialog_wrap.ui-dialog-content {
         height: 100% !important;max-height: none !important;border-radius: 20px;
+
         .dialog_contents {
+            /* dialog_contents 상단 */
+            .prod_area.horizontal .prod_thumb_box.size_sm {
+                width: 84px;
+            }
+            .tab_ty {
+                li{
+                    margin-left: 7px;
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    a{
+                        padding: 10px 16px 8px 17px;font-size: 14px;line-height: 22px;
+                    }
+                }
+            }
+            .btn_delete_text {
+                color: #767676;font-size: 12px;line-height: 18px;text-align: left;
+                .ico_delete {
+                    width: 13px;height: 15px;margin-top: 1px;background-size: 13px 15px;background-image: url(../../../assets/common/images/ico_delete@2x.png);margin-right: 4px;
+                }
+            }
             .sort_list_header{
                 display: -webkit-box;display: -ms-flexbox;display: flex;display: -webkit-flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-justify-content: space-between;-webkit-box-align: center;-moz-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-moz-box-orient: horizontal;-moz-box-direction: normal;-ms-flex-direction: row;-webkit-flex-direction: row;flex-direction: row; margin: 29px 0 12px;
             }
+
+
+            /* History List */
             .history_list_wrap .history_list{
                 .history_item{
                     padding:17px 17px 19px;
                     .prod_area {
                         width: 280px;margin-right: 8px;
-                    }
-                    .prod_area .prod_info_box {
-                        margin-left: 12px;
-                        .prod_period {
-                            display: block;margin-top: 0px;font-size: 13px;line-height: 19px;letter-spacing: -0.01em;color: #595959;
+                        &.horizontal .prod_thumb_box.type_brand .img_box, .prod_area.horizontal .prod_thumb_box.type_caster .img_box {
+                            border-radius: 50px;
+                                overflow: hidden;
+                                position: relative;
+                                display: block;
+                                box-sizing: border-box;
+                                border: 1px solid #eaeaea;
+                        }
+                        .prod_thumb_box{
+                            border: 0;
+                        }
+                        .prod_info_box {
+                            margin-left: 12px;
+                            .prod_period {
+                                display: block;margin-top: 0px;font-size: 13px;line-height: 19px;letter-spacing: -0.01em;color: #595959;
+                            }
+                            &.size_sm .prod_author {
+                                font-size: 13px;line-height: 19px;display: block;display: -webkit-box;overflow: hidden;max-height: 38px;line-height: 19px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: -o-ellipsis-lastline;white-space: normal;margin-top:0;
+                            }
+                            .prod_name {
+                                display: block;display: -webkit-box;overflow: hidden;max-height: 46px;line-height: 23px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: -o-ellipsis-lastline;white-space: normal;font-size: 15px;line-height: 23px;letter-spacing: -0.01em;font-weight: 500;height: 23px;
+                                
+                                &.ellipsis_single {
+                                    overflow: hidden;display: inline-block;max-width: 100%;height: auto;max-height: none;-webkit-box-orient: inherit;-webkit-line-clamp: inherit;text-overflow: ellipsis;white-space: nowrap;font-size: 14px;line-height: 22px;
+                                }
+                            }
+                            .prod_price .price{
+                                margin-left: 2px;
+                            }
                         }
                     }
+                    .history_control_box .btn_history_delete {
+                        margin-left: 5px;
+                    }
                 }
-            }
-        }
-    }
-    .prod_area.horizontal .prod_thumb_box.size_sm {
-        width: 84px;
-    }
-    .tab_ty {
-        li{
-            &:first-child{
-                margin-left: 0;
-            }
-            margin-left: 7px;
-            a{
-                padding: 10px 16px 8px 17px;font-size: 14px;line-height: 22px;
-            }
-        }
-    }
-    .btn_delete_text {
-        color: #767676;font-size: 12px;line-height: 18px;text-align: left;
-        .ico_delete {
-            width: 13px;height: 15px;margin-top: 1px;background-size: 13px 15px;background-image: url(../../../assets/common/images/ico_delete@2x.png);margin-right: 4px;
-        }
-    }
-    .prod_area .prod_info_box{
-        &.size_sm .prod_author {
-            font-size: 13px;line-height: 19px;display: block;display: -webkit-box;overflow: hidden;max-height: 38px;line-height: 19px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: -o-ellipsis-lastline;white-space: normal;margin-top:0;
-        }
-        .prod_name {
-            display: block;display: -webkit-box;overflow: hidden;max-height: 46px;line-height: 23px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;text-overflow: -o-ellipsis-lastline;white-space: normal;font-size: 15px;line-height: 23px;letter-spacing: -0.01em;font-weight: 500;height: 23px;
-            
-            &.ellipsis_single {
-                overflow: hidden;display: inline-block;max-width: 100%;height: auto;max-height: none;-webkit-box-orient: inherit;-webkit-line-clamp: inherit;text-overflow: ellipsis;white-space: nowrap;font-size: 14px;line-height: 22px;
             }
         }
     }
