@@ -219,21 +219,23 @@
                                         <a href="#none" class="link_delivery ico_more">묶음배송 상품 보기</a>
                                     </dd>
                                 </dl>
+                                <!-- 22.04.26 사은품 수정 -->
                                 <dl class="list_info free_gift">
                                     <dt class="txt_dt col_4">사은품</dt>
                                     <dd class="txt_dd col_8">
                                         <div>
                                             <strong>플레플레 다이어리 1+1</strong>
                                             <p>기간 : 2021.11~2021.11.23</p>
-                                            <img src="../../images/temp/@free_gift.png">
+                                            <p class="img"></p><!-- 사은품 이미지 없을 시 공백 -->
                                         </div>
                                         <div>
                                             <strong>핫트랙스 특전 : 홀로그램 포토카드</strong>
                                             <p>8종 중 랜덤 1종 증정</p>
-                                            <img src="../../images/main/ico_free_gift.png">
+                                            <p class="img"><img src="../../images/temp/@free_gift.png"></p>
                                         </div>
                                     </dd>
                                 </dl>
+                                <!-- //22.04.26 사은품 수정 -->
                             </div>
                             <!-- 필요할경우 사용 
                                     <div class="btn_wrap">
@@ -472,21 +474,24 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- 22.04.26 수정 -->
             <div class="selec_lb">각인 문구 입력</div>
             <div class="cmt_box">
                 <!--mycomment_box  에 notice class 추가 시 20자 이내 경고 문구 보이고 빨간색 보더 처리됨-->
                 <div class="mycomment_box">
                     <textarea name="" id="" placeholder="각인 문구를 입력해 주세요(20자 이내)"></textarea>
                     <div class="mycomment_box_bottom">
-                        <button class="btn_primary btn_cmt">확인</button>
+                        <button class="btn_primary btn_cmt">신청</button>
                     </div>
                 </div> 
                 <div class="notice_txt">20자 이내로 입력해주세요. </div>
             </div>
+
             <div class="selec_lb">주문 제작 내용 입력</div>
             <div class="cmt_box">
                 <!--mycomment_box  에 notice class 추가 시 100자 이내 경고 문구 보이고 빨간색 보더 처리됨-->
-                <div class="mycomment_box">
+                <div class="mycomment_box notice">
                     <textarea name="" id="" placeholder="주문 제작 내용을 입력해주세요(100자 이내)"></textarea>
                     <div class="mycomment_box_bottom">
                         <button class="btn_primary btn_cmt">신청</button>
@@ -494,6 +499,9 @@
                 </div> 
                 <div class="notice_txt">100자 이내로 입력해주세요. </div>
             </div>
+            <!-- //.04.26 수정 -->
+
+            
             <div class="buy_result">
                 <span class="result">
                     총<em>0</em>개

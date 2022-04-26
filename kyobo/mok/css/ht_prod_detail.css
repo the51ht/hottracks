@@ -1597,14 +1597,23 @@ button.btn_md_second {
   padding-right: 44px;
 }
 
-.product_deliinfo_area .info_wrap .list_info.free_gift .txt_dd.col_8 div img {
+.product_deliinfo_area .info_wrap .list_info.free_gift .txt_dd.col_8 div .img {
   position: absolute;
   right: 0px;
   top: 0;
   width: 40px;
   height: 40px;
+  background: url("../images/main/ico_free_gift.png") center/100% no-repeat;
   border-radius: 4px;
   overflow: hidden;
+}
+
+.product_deliinfo_area .info_wrap .list_info.free_gift .txt_dd.col_8 div .img img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product_deliinfo_area .info_wrap .list_info.free_gift .txt_dd.col_8 div + div {
@@ -5613,6 +5622,11 @@ button.btn_md_second {
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .selec_lb {
   margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .selec_lb + .cmt_box .mycomment_box {
+  margin-top: 0;
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec {
@@ -5707,7 +5721,7 @@ button.btn_md_second {
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec + .selec_lb {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .cmt_box .notice_txt {
@@ -5719,7 +5733,7 @@ button.btn_md_second {
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .cmt_box + .selec_lb {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .buy_info {
@@ -5848,7 +5862,7 @@ button.btn_md_second {
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .buy_info + .selec_lb {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .buy_result {
