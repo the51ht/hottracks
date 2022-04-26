@@ -310,32 +310,32 @@ $(function(){
                 <!-- form_box -->
                 <div class="form_box line_form_box">
                     <h2 class="mc_tit03">답변 수신 방법</h2>
-
+                    
+                    <!-- form_title -->
                     <div class="form_title">
                         <p class="form_label">휴대전화번호<em class="required"></em></p>
-
                         <p class="btn_txt_more">
-                            <a href="#"><span>회원정보 변경하기</span></a><!-- 22.03.11 수정 -->
+                            <a href="#"><span>회원정보 변경하기</span></a>
                         </p>
                     </div>
-                    
-                    
+                    <!-- //form_title -->
 
+                    <!-- form_cont -->
                     <div class="form_cont">
                         <!-- valid_check -->
-                        <div class="valid_check"><!-- 에러메세지 class="fail" -->
+                        <div class="valid_check">
                             <input type="number" class="form_ip" placeholder="-없이 숫자만 입력" value="01012345678" title="휴대전화번호" readonly>
-                            <span class="valid_desc">전화번호 자리 수를 확인해주세요</span>
                         </div>
                         <!-- //valid_check -->
 
                         <!-- valid_check -->
-                        <div class="valid_check"><!-- 에러메세지 class="fail" -->
+                        <div class="valid_check">
                             <input type="email" class="form_ip" placeholder="@ 포함 이메일 입력" value="mimikim99@naver.com" title="이메일" readonly>
-                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
                         </div>
                         <!-- //valid_check -->   
                     </div>
+                    <!-- //form_cont -->
+
                     <!-- form_chk -->
                     <span class="form_chk">
                         <input id="chk_agree01" type="checkbox">
@@ -344,22 +344,6 @@ $(function(){
                     <!-- //form_chk -->
                 </div>
                 <!-- //form_box -->
-<script>
-/* 확인용 */
-$(function(){
-    $('input[name=receive_type]').click(function(){ 
-        var chkVar = $('input[name=receive_type]:checked').val();
-        if(chkVar=='1'){
-            $('#chk01').css('display', 'block');
-            $('#chk02').css('display', 'none');
-        }else if(chkVar=='2'){
-            $('#chk01').css('display', 'none');
-            $('#chk02').css('display', 'block');
-            
-        }
-    }); 
-});
-</script>
             </div>
             <!-- //form_wrap -->
 
