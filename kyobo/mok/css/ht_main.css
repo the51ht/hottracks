@@ -475,7 +475,7 @@
 }
 
 .wel_today .mc_tit img {
-  width: 270px;
+  width: 232px;
 }
 
 .wel_today .wel_today_time_inner {
@@ -485,11 +485,11 @@
 
 .wel_today .time_bar {
   position: absolute;
-  left: 60px;
-  bottom: 20px;
+  left: 48px;
+  bottom: 0px;
   width: 120px;
   color: #fff;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 34px;
   text-align: center;
@@ -555,6 +555,10 @@
   position: relative;
 }
 
+.wel_today_cont.wel_today_msg .swiper-slide:before {
+  display: block;
+}
+
 .wel_today_cont .swiper-slide {
   width: 58%;
   padding: 15px 0 30px 0;
@@ -562,19 +566,20 @@
 }
 
 .wel_today_cont .swiper-slide:before {
-  content: '';
   position: absolute;
+  right: -26%;
+  bottom: 125px;
   width: 61%;
   height: 28%;
-  z-index: 3;
-  bottom: 125px;
-  right: -26%;
   background: url(../images/main/wel_tod_banner_bubble.svg) no-repeat center/95%;
+  content: '';
+  z-index: 3;
   opacity: 0;
   -webkit-transform: translateY(15px) rotate(15deg);
           transform: translateY(15px) rotate(15deg);
   -webkit-transition: all 0.4s 0s;
   transition: all 0.4s 0s;
+  display: none;
 }
 
 .wel_today_cont .swiper-slide.swiper-slide-active:before {
