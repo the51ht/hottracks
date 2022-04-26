@@ -23,9 +23,8 @@
 
 <!-- ht_ Hottracks css : 공통작업 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<!--<link rel="stylesheet" href="https://pub-onk.ndev.kyobobook.co.kr/assets/common/css/style_ink.css">--><!-- 현재 교보 DEV 가이드 확인 -->
 <link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
-<!--<link rel="stylesheet" href="https://pub-onk.ndev.kyobobook.co.kr/assets/common/css/style_ink.css">--><!-- 추후 교보css  확인 -->
-
 
 <link rel="stylesheet" href="../../css/ht_css_ink.css">
 <link rel="stylesheet" href="../../css/ht_template_ink.css">
@@ -59,8 +58,89 @@
 <script src="../../js/ht_template.js"></script>
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
 
-<link rel="stylesheet" href="../../css/ht_gnb.css">
-<script src="../../js/ht_gnb.js"></script>
+<script>
+/* HT GNB 확인용 */
+$(function(){
+    /* 1Depth */
+    $('.btn_anb').click(function(e){
+        if($('.anb_wrap').hasClass('active')){
+            $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+            $('.ht_gnb_tab a').removeClass('active');
+            $('.gnb_menu a').removeClass('active');
+            $('.ht_gnb_box').hide();
+            $('.gnb3dep .gnb_menu_area, .gnb4dep .gnb_menu_area').hide();
+    
+
+            $('.ht_gnb_tab li').eq(0).find('a').addClass('active');
+            $('#htGnbCate01').show();
+            $('#htGnbCate01 .ht_gnb_cont').addClass('chk2');
+        }else{
+
+        }
+    });
+
+    /* 1Depth */
+    $('.ht_gnb_tab a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+        $('.gnb_menu_area').hide();
+        $('.ht_gnb_box').hide();
+
+        /* 1Depth 메뉴 활성화 */
+        $('.gnb_menu a').removeClass('active');
+		$(this).parent().parent().find('a').removeClass('active');
+        $(this).addClass('active');
+
+        var s = $(this).attr('href');
+        $(s).show();
+        $(s).find('.ht_gnb_cont').addClass('chk2'); // 곰돌이 아이콘 2Depth
+        e.preventDefault();
+    });
+
+    /* 2Depth */
+    $('.gnb2dep a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+        $('.gnb3dep .gnb_menu_area, .gnb4dep .gnb_menu_area').hide();
+
+        /* 2Depth 메뉴 활성화 */
+        $('.gnb_menu a').removeClass('active');
+        $(this).addClass('active');
+
+        /* 확인용 */
+        if($(this).hasClass('ht_gnb_arrow')) {
+            var s = $(this).attr('href');
+            $(s).show();
+            $(this).closest('.ht_gnb_cont').addClass('chk3'); // 곰돌이 아이콘 3Depth
+        } else {
+            alert('링크연결');
+            $(this).closest('.ht_gnb_cont').addClass('chk2'); // 확인용 곰돌이 아이콘 2Depth
+        }
+        e.preventDefault();
+    });
+
+    /* 3Depth */
+    $('.gnb3dep a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+        $('.gnb4dep .gnb_menu_area').hide();
+        
+        /* 3Depth 메뉴 활성화 */
+		$(this).parent().parent().find('a').removeClass('active');
+        $(this).addClass('active');
+
+        /* 확인용 */
+        if($(this).hasClass('ht_gnb_arrow')) {
+            var s = $(this).attr('href');
+            $(s).show();
+        } else {
+            alert('링크연결');
+            $(this).closest('.ht_gnb_cont').addClass('chk3'); // 확인용 곰돌이 아이콘 3Depth
+        }
+        e.preventDefault();
+    });
+});
+</script>
 </head>
 <body>
 <!-- skip_nav_wrap -->
@@ -84,22 +164,28 @@
 							<svg xmlns="http://www.w3.org/2000/svg" width="565" height="33" viewBox="0 0 565 33">
 								<g transform="translate(0 0)">
 									<a href="#" class="service_mall_link">
+										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#3E43A4" stroke="rgba(0,0,0,0)" />
+									</a>
+									<text x="64" y="15" text-anchor="middle" fill="#fff" font-size="14px" pointer-events="none" dy=".5em" font-family="Noto Sans KR" font-weight="700">교보문고</text>
+								</g>
+								<g transform="translate(87 0)">
+									<a href="#" class="service_mall_link">
 										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#156CDD" stroke="rgba(0,0,0,0)" />
 									</a>
 									<text x="64" y="15" text-anchor="middle" fill="#fff" font-size="14px" pointer-events="none" dy=".5em" font-family="Roboto" font-weight="700">eBook</text>
 								</g>
-								<g transform="translate(87 0)">
+								<g transform="translate(174 0)">
 									<a href="#" class="service_mall_link">
 										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#06BBC0" stroke="rgba(0,0,0,0)" />
 									</a>
 									<text x="64" y="13" text-anchor="middle" fill="#fff" font-size="15px" pointer-events="none" dy=".5em" font-family="Roboto" font-weight="700">sam</text>
 								</g>
-								<g transform="translate(174 0)">
+								<!--<g transform="translate(174 0)">
 									<a href="#" class="service_mall_link">
 										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#E8422F" stroke="rgba(0,0,0,0)" />
 									</a>
 									<text x="64" y="15" text-anchor="middle" fill="#fff" font-size="13px" pointer-events="none" dy=".5em" font-family="Noto Sans KR" font-weight="700">핫트랙스</text>
-								</g>
+								</g>-->
 								<g transform="translate(261 0)">
 									<a href="#" class="service_mall_link">
 										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#8F603D" stroke="rgba(0,0,0,0)" />
@@ -220,7 +306,7 @@
 			<!-- gnb_wrap -->
 			<nav class="gnb_wrap">
 				<!-- anb_wrap -->
-				<div class="anb_wrap active animated">
+				<div class="anb_wrap">
 					<button type="button" class="btn_anb"><span class="hidden">전체메뉴</span></button>
 					<div class="anb_area">
 						<!-- tab_wrap -->
@@ -242,9 +328,7 @@
 									<div class="tab_list_wrap">
 										<ul class="tabs">
 											<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
-
-											<li class="tab_item"><a href="#tabAnbCategoryHotTracks" class="tab_link"><span class="tab_text">핫트랙스</span></a></li>
-
+											<li class="tab_item"><a href="#tabAnbCategoryHotTracks" class="tab_link"><span class="tab_text">핫트랙스</span></a></li><!-- 핫트랙스 탭 위치 변경 : 1번으로 나와 된다고 합니다 -->
 											<li class="tab_item"><a href="#tabAnbCategoryKyobo" class="tab_link"><span class="tab_text">교보문고</span></a></li>
 											<li class="tab_item"><a href="#tabAnbCategoryEbook" class="tab_link"><span class="tab_text">eBook</span></a></li>
 											<li class="tab_item"><a href="#tabAnbCategorySam" class="tab_link"><span class="tab_text">sam</span></a></li>
@@ -1259,9 +1343,9 @@
 												<div class="ht_gnb_area">
 
 													<!-- 디자인 문구 -->
-													<div class="ht_gnb_box" id="htGnbCate01" style="display:block;">
+													<div class="ht_gnb_box" id="htGnbCate01">
 														<!-- ht_gnb_cont -->
-														<div class="ht_gnb_cont chk2">
+														<div class="ht_gnb_cont chk2"><!-- 곰돌이 위치 : chk2 chk3 -->
 															<!-- ht_gnb -->
 															<ul class="ht_gnb">
 																<!-- GNB 2Dep -->
@@ -1274,16 +1358,16 @@
 																			<li><a href="#htGnbCate01_1" class="ht_gnb_arrow"><span>다이어리/스케쥴러</span></a></li><!-- 하위메뉴 있을 시 class="ht_gnb_arrow" -->
 																			<li><a href="#htGnbCate01_2" class="ht_gnb_arrow"><span>비즈니스플래너/노트</span></a></li>
 																			<li><a href="#"><span>캘린더/만년</span></a></li>
-																			<li><a href="#htGnbCate01_4" class="ht_gnb_arrow"><span>필통/파우치</span></a></li>
-																			<li><a href="#htGnbCate01_5" class="ht_gnb_arrow"><span>노트/메모</span></a></li>
-																			<li><a href="#htGnbCate01_6" class="ht_gnb_arrow"><span>포토앨범/스크랩북</span></a></li>
-																			<li><a href="#htGnbCate01_7" class="ht_gnb_arrow"><span>포장/데코용품</span></a></li>
-																			<li><a href="#htGnbCate01_8" class="ht_gnb_arrow"><span>BOOK</span></a></li>
-																			<li><a href="#htGnbCate01_9" class="ht_gnb_arrow"><span>편지/카드/봉투</span></a></li>
-																			<li><a href="#htGnbCate01_10" class="ht_gnb_arrow"><span>컬러링/캘리/문구세트</span></a></li>
-																			<li><a href="#htGnbCate01_11" class="ht_gnb_arrow"><span>화방용품</span></a></li>
-																			<li><a href="#htGnbCate01_12" class="ht_gnb_arrow"><span>스티커/스탬프</span></a></li>
-																			<li><a href="#htGnbCate01_13" class="ht_gnb_arrow"><span>데코/디자인테이프</span></a></li>
+																			<li><a href="#"><span>필통/파우치</span></a></li>
+																			<li><a href="#"><span>노트/메모</span></a></li>
+																			<li><a href="#"><span>포토앨범/스크랩북</span></a></li>
+																			<li><a href="#"><span>포장/데코용품</span></a></li>
+																			<li><a href="#"><span>BOOK</span></a></li>
+																			<li><a href="#"><span>편지/카드/봉투</span></a></li>
+																			<li><a href="#"><span>컬러링/캘리/문구세트</span></a></li>
+																			<li><a href="#"><span>화방용품</span></a></li>
+																			<li><a href="#"><span>스티커/스탬프</span></a></li>
+																			<li><a href="#"><span>데코/디자인테이프</span></a></li>
 																		</ul>
 																	</div>
 																	<!-- //custom_scroll_wrap -->
@@ -1408,6 +1492,90 @@
 														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">디지털/자동차</div>
 													</div>
 													<!-- //디지털/자동차 -->
+
+													<!-- 필기구 -->
+													<div class="ht_gnb_box" id="htGnbCate03">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">필기구</div>
+													</div>
+													<!-- //필기구 -->
+
+													<!-- 오피스 -->
+													<div class="ht_gnb_box" id="htGnbCate04">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">오피스</div>
+													</div>
+													<!-- //오피스 -->
+
+													<!-- 리빙/생활가전 -->
+													<div class="ht_gnb_box" id="htGnbCate05">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">리빙/생활가전</div>
+													</div>
+													<!-- //리빙/생활가전 -->
+
+													<!-- 키친 -->
+													<div class="ht_gnb_box" id="htGnbCate06">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">키친</div>
+													</div>
+													<!-- //키친 -->
+
+													<!-- 푸드 -->
+													<div class="ht_gnb_box" id="htGnbCate07">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">푸드</div>
+													</div>
+													<!-- //푸드 -->
+
+													<!-- 가구/수납 -->
+													<div class="ht_gnb_box" id="htGnbCate08">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">가구/수납</div>
+													</div>
+													<!-- //가구/수납 -->
+
+													<!-- 패션잡화 -->
+													<div class="ht_gnb_box" id="htGnbCate09">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">패션잡화</div>
+													</div>
+													<!-- //패션잡화 -->
+
+													<!-- 여행/취미 -->
+													<div class="ht_gnb_box" id="htGnbCate10">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">여행/취미</div>
+													</div>
+													<!-- //여행/취미 -->
+
+													<!-- 푸드 -->
+													<div class="ht_gnb_box" id="htGnbCate11">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">푸드</div>
+													</div>
+													<!-- //푸드 -->
+
+													<!-- 유아동 -->
+													<div class="ht_gnb_box" id="htGnbCate12">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">유아동</div>
+													</div>
+													<!-- //유아동 -->
+
+													<!-- CD/LP -->
+													<div class="ht_gnb_box" id="htGnbCate13">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">CD/LP</div>
+													</div>
+													<!-- //CD/LP -->
+
+													<!-- DVD -->
+													<div class="ht_gnb_box" id="htGnbCate14">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">DVD</div>
+													</div>
+													<!-- //DVD -->
+
+													<!-- BLU-RAY -->
+													<div class="ht_gnb_box" id="htGnbCate15">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">BLU-RAY</div>
+													</div>
+													<!-- //BLU-RAY -->
+
+													<!-- Only Hottracks -->
+													<div class="ht_gnb_box" id="htGnbCate16">
+														<div style="height:370px;background-color:#f7f7f7;font-size:16px;font-weight:500;text-align:center;line-height:370px;">Only Hottracks</div>
+													</div>
+													<!-- //Only Hottracks -->
 												</div>
 												<!-- //ht_gnb_area -->
 											</div>
@@ -1689,13 +1857,13 @@
 				
 				<!-- gnb_list -->
 				<ul class="gnb_list">
-					<li class="gnb_item"><a href="#" class="gnb_link gnb_marker"><img src="../../images/layout/ico_main_menu_music.svg" alt="">음반·영상</a></li>
-					<li class="gnb_item"><a href="#" class="gnb_link gnb_marker">라이브</a></li>
-					<li class="gnb_item"><a href="#" class="gnb_link">오늘만 특가</a></li>
-					<li class="gnb_item"><a href="#" class="gnb_link">스티커샵</a></li>
-					<li class="gnb_item"><a href="#" class="gnb_link">필기구</a></li>
-					<li class="gnb_item"><a href="#" class="gnb_link">선물추천</a></li>
-					<li class="gnb_item"><a href="#" class="gnb_link">큐레이션</a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link gnb_marker act"><img src="../../images/layout/ico_main_menu_music.svg" alt=""><span><em>음반·영상</em></span></a></li><!-- 활성화 class="on" -->
+					<li class="gnb_item"><a href="#" class="gnb_link gnb_marker"><span><em>라이브</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>오늘만 특가</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>스티커샵</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>필기구</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>선물추천</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>큐레이션</em></span></a></li>
 				</ul>
 				<!-- //gnb_list -->
 
@@ -1889,7 +2057,7 @@
 			<div class="footer_inner">
 				<div class="logo_box">
 					<a href="#" class="logo_link">
-						<img srcset="https://pub-onk.ndev.kyobobook.co.kr/assets/common/images/img_logo_kyobo_footer.png 1x, https://pub-onk.ndev.kyobobook.co.kr/assets/common/images/img_logo_kyobo_footer@1.5x.png 1.5x, https://pub-onk.ndev.kyobobook.co.kr/assets/common/images/img_logo_kyobo_footer@2x.png 2x" src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/images/img_logo_kyobo_footer.png" alt="KYOBO 교보문고" /><!-- 수정 220412 단일태그 닫기 추가 -->
+						<img srcset="../../images/layout/img_logo_kyobo_footer.png" alt="KYOBO 교보문고">
 					</a>
 					<div class="right_box">
 						<div class="family_site_box">
@@ -2025,5 +2193,297 @@
 	<!-- // 탑버튼 -->
 </div>
 <!-- // wrapper -->
+
+	<!-- LayerPopup area -->
+	<!-- 팝업 - 최근 본 컨텐츠 -->
+	<div id="popHistoryContents" class="dialog_wrap" data-class="dialog_history">
+		<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+		<!-- dialog_header -->
+		<div class="dialog_header">
+			<div class="dialog_title">최근 본</div>
+		</div>
+		<!-- //dialog_header -->
+		<!-- dialog_contents -->
+		<div class="dialog_contents">
+			<div class="tag_wrap size_lg" data-tag-toggle>
+				<!-- DESC : 선택 시, tag active class toggle -->
+				<button type="button" class="tag active"><span class="text">전체</span></button>
+				<button type="button" class="tag"><span class="text">상품</span></button>
+				<button type="button" class="tag"><span class="text">기획전</span></button>
+				<button type="button" class="tag"><span class="text">이벤트</span></button>
+				<button type="button" class="tag"><span class="text">브랜드</span></button>
+			</div>
+			<div class="sort_list_header">
+				<span class="sort_result_desc"><span class="val">35</span>개</span><!-- 220215 : 최근 본 상품 갯수 텍스트 "전체" 삭제 -->
+				<button type="button" class="btn_delete_text"><span class="ico_delete"></span><span class="text">전체삭제</span></button> <!-- 수정 220107 클래스 수정 / btn_delete > btn_delete_text -->
+			</div>
+			<div class="history_list_wrap">
+				<div class="custom_scroll_wrap">
+					<ul class="history_list">
+						<!-- 수정 220107 전시템플릿 가이드 작업으로 상품영역 현행화 -->
+						<!-- CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box type_cover size_sm">
+									<a href="#" class="prod_link">
+										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product1.png);">
+											<img src="/assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box size_sm">
+									<a href="#" class="prod_info">
+										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+									</a>
+									<span class="prod_author">강민우(돈깡)</span>
+
+									<span class="prod_price">
+										<span class="percent">20%</span>
+										<span class="price">
+											<span class="val">55,268,800</span>
+											<span class="unit">원</span>
+										</span>
+									</span>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- // CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+						<!-- CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box type_cover size_sm">
+									<a href="#" class="prod_link">
+										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product2.png);">
+											<img src="/assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box size_sm">
+									<a href="#" class="prod_info">
+										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+									</a>
+									<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+								<button type="button" class="btn_history_wish active"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- // CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+						<!-- CASE 03. 이벤트 -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box type_cover size_sm">
+									<a href="#" class="prod_link">
+										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product2.png);">
+											<img src="/assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box size_sm">
+									<a href="#" class="prod_info">
+										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+									</a>
+									<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+										<span class="prod_price">
+											<span class="percent">20%</span>
+											<span class="price">
+												<span class="val">55,268,800</span>
+												<span class="unit">원</span>
+											</span>
+										</span>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- // CASE 03. 이벤트 -->
+						<!-- CASE 04. 핫트랙스 상품 -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box type_cover size_sm">
+									<a href="#" class="prod_link">
+										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product1.png);">
+											<img src="/assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box size_sm">
+									<a href="#" class="prod_info">
+										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+									</a>
+									<span class="prod_price">
+											<span class="percent">20%</span>
+											<span class="price">
+												<span class="val">55,268,800</span>
+												<span class="unit">원</span>
+											</span>
+										</span>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- // CASE 04. 핫트랙스 상품 -->
+						<!-- CASE 05. 브랜드 -->
+						<!-- 수정 220422 최근 본 컨텐츠 브랜드 타입 추가 -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box size_sm type_brand">
+									<a href="#" class="prod_link">
+										<span class="img_box">
+											<img src="/assets/common/temporary/temp_brand.png" alt="상품 임시이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box">
+									<a href="#" class="prod_info">
+										<span class="prod_name">브랜드이름이름이름</span>
+									</a>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- //수정 220422 최근 본 컨텐츠 브랜드 타입 추가 -->
+						<!-- // CASE 04. 핫트랙스 상품 -->
+						<!-- CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box type_cover size_sm">
+									<a href="#" class="prod_link">
+										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product1.png);">
+											<img src="/assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box size_sm">
+									<a href="#" class="prod_info">
+										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+									</a>
+									<span class="prod_author">강민우(돈깡)</span>
+
+									<span class="prod_price">
+										<span class="percent">20%</span>
+										<span class="price">
+											<span class="val">55,268,800</span>
+											<span class="unit">원</span>
+										</span>
+									</span>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- // CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+						<!-- CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box type_cover size_sm">
+									<a href="#" class="prod_link">
+										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product2.png);">
+											<img src="/assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box size_sm">
+									<a href="#" class="prod_info">
+										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+									</a>
+									<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+								<button type="button" class="btn_history_wish active"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- // CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+						<!-- CASE 03. 이벤트 -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box type_cover size_sm">
+									<a href="#" class="prod_link">
+										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product2.png);">
+											<img src="/assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box size_sm">
+									<a href="#" class="prod_info">
+										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+									</a>
+									<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+										<span class="prod_price">
+											<span class="percent">20%</span>
+											<span class="price">
+												<span class="val">55,268,800</span>
+												<span class="unit">원</span>
+											</span>
+										</span>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- // CASE 03. 이벤트 -->
+						<!-- CASE 04. 핫트랙스 상품 -->
+						<li class="history_item">
+							<div class="prod_area horizontal">
+								<div class="prod_thumb_box type_cover size_sm">
+									<a href="#" class="prod_link">
+										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product1.png);">
+											<img src="/assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+										</span>
+									</a>
+								</div>
+								<div class="prod_info_box size_sm">
+									<a href="#" class="prod_info">
+										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+									</a>
+									<span class="prod_price">
+											<span class="percent">20%</span>
+											<span class="price">
+												<span class="val">55,268,800</span>
+												<span class="unit">원</span>
+											</span>
+										</span>
+								</div>
+							</div>
+							<div class="history_control_box">
+								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+							</div>
+						</li>
+						<!-- // CASE 04. 핫트랙스 상품 -->
+						<!-- // 수정 220107 전시템플릿 가이드 작업으로 상품영역 현행화 -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //dialog_contents -->
+	</div>
+	<!-- //팝업 - 최근 본 컨텐츠 -->
+	<!-- // LayerPopup area -->
 </body>
 </html>

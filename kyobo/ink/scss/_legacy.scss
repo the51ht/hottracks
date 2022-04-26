@@ -104,6 +104,12 @@ button.btn_lg {
 .ui-selectmenu-menu .ui-menu {
     max-height:45vh;
 }
+.form_sel {
+     width:auto;
+}
+.form_sel .ui-selectmenu-button:focus {
+    outline:1px;
+}
 
 
 
@@ -128,6 +134,22 @@ button.btn_lg {
     height:80px;
 }
 
+/* byte_chack_footer : 오타 추가 */
+.byte_check_wrap .byte_chack_footer {
+	display:-webkit-box;display:flex;display:-webkit-flex;justify-content:flex-end;align-items:center;flex-direction:row;padding:10px 10px 10px 14px;text-align:right;transition:background 0.2s ease-out;
+}
+.byte_check_wrap .byte_chack_footer .byte_check {
+	margin-top:2px;
+}
+.byte_check_wrap .byte_chack_footer .btn_wrap {
+	display:inline-block;
+}
+.byte_check_wrap .byte_chack_footer .btn_wrap [class^=btn_] + [class^=btn_] {
+	margin-left:4px;
+}
+.byte_check_wrap .byte_chack_footer .byte_check + .btn_wrap {
+	margin-left:10px;
+}
 
 
 .file_list .file_item .btn_box {
@@ -336,6 +358,17 @@ button.btn_lg {
         position:absolute;right:0;top:0;width:4px;height:4px;background-color:#da2128;border-radius:50%;content:"";
     }
 }
+.wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list .gnb_item .act {
+    span {
+        display:inline-block;position:relative;
+        &:before {
+            position:absolute;left:0;top:11px;width:100%;height:14px;background:#ffd3ec;content:"";z-index:0;animation:pointLine both ease-in infinite 3s;
+        }
+    }
+    em {
+        position: relative;
+    }
+}
 
 
 .wrapper .header_wrapper .service_mall_wrap .service_mall_inner:before,
@@ -414,4 +447,8 @@ button.btn_lg {
 }
 .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .recommend_service_list .recommend_service_item .recommend_service_link .title {
     margin:6px -10px 0 -10px;
+}
+
+.history_list_wrap .custom_scroll_wrap {
+    max-height:inherit !important;
 }

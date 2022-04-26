@@ -461,6 +461,8 @@
 											<p>2021.11.03~2021.12.30</p>
 										</dd>  
 									</dl>
+
+									<!-- 22.04.26 사은품 추가 -->
 									<dl class="free_gift">          
 										<dt>사은품</dt>
 										<dd>
@@ -468,35 +470,19 @@
 												<li>
 													<strong>플레플레 다이어리 1+1</strong>
 													<p>기간 : 2021.11~2021.11.23</p>
-													<img src="../../images/temp/@free_gift.png">
+													<p class="img"></p><!-- 사은품 이미지 없을 시 공백 -->
 												</li>
 												<li>
 													<strong>핫트랙스 특전 : 홀로그램 포토카드</strong>
 													<p>8종 중 랜덤 1종 증정</p>
-													<img src="../../images/main/ico_free_gift.png">
+													<p class="img"><img src="../../images/temp/@free_gift.png"></p>
 												</li>
 											</ul>
 										</dd>
 									</dl>
+									<!-- 22.04.26 사은품 추가 -->
 								</div>
 								<!-- //정보 안내 : .list_info -->
-
-								<!-- 사은품 : .freebie_wrap -->
-								<!-- <ul class="freebie_wrap">
-									<li>
-										<p><strong>사은품</strong></p>
-										<p>
-											핫트랙스 특전<br>홀로그램 포토카드 8종 중 랜덤 1종 증정
-										</p>
-									</li>
-									<li>
-										<p><strong>사은품2</strong></p>
-										<p>
-											핫트랙스 특전<br>홀로그램 포토카드 8종 중 랜덤 1종 증정
-										</p>
-									</li>
-								</ul> -->
-								<!-- //사은품 : .freebie_wrap -->
 							</div>
 							<!-- //정보 안내 / 사은품 -->
 
@@ -565,6 +551,7 @@ $(function(){
         if (foldingChk){
 			tar.removeClass('on');
         } else {
+			$('.select_li_form').removeClass('on');
             tar.addClass('on');
         }
     };
@@ -598,72 +585,93 @@ function btnSelectChk(val){
 												<button type="button" class="select_li_op" onclick="btnSelectLi(this);"><span>각인 서체를 선택하세요</span></button>
 												<!-- select_li_view -->
 												<div class="select_li_view">
-													<!-- select_li_list -->
-													<ul class="select_li_list">
-														<li>
-															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
-															<label>
-																<strong>필기체</strong>
-																<span><img src="../../images/guide/img_cus_initials_sample01.jpg" alt=""></span>
-															</label>
-														</li>
-														<li>
-															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
-															<label>
-																<strong>잉크버로우체</strong>
-																<span><img src="../../images/guide/img_cus_initials_sample02.jpg" alt=""></span>
-															</label>
-														</li>
-														<li>
-															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
-															<label>
-																<strong>모토테입체</strong>
-																<span><img src="../../images/guide/img_cus_initials_sample03.jpg" alt=""></span>
-															</label>
-														</li>
-														<li>
-															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
-															<label>
-																<strong>양지난초체</strong>
-																<span><img src="../../images/guide/img_cus_initials_sample04.jpg" alt=""></span>
-															</label>
-														</li>
-														<li>
-															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
-															<label>
-																<strong>브랜들리 핸드체</strong>
-																<span><img src="../../images/guide/img_cus_initials_sample05.jpg" alt=""></span>
-															</label>
-														</li>
-														<li>
-															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
-															<label>
-																<strong>고딕체</strong>
-																<span><img src="../../images/guide/img_cus_initials_sample06.jpg" alt=""></span>
-															</label>
-														</li>
-														<li>
-															<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
-															<label>
-																<strong>명조체</strong>
-																<span><img src="../../images/guide/img_cus_initials_sample07.jpg" alt=""></span>
-															</label>
-														</li>
-													</ul>
-													<!-- //select_li_list -->
-
-													<!-- select_li_bottom -->
-													<div class="select_li_bottom">
-														<!-- valid_check -->
-														<div class="valid_check fail">
-															<!-- form_sel -->
-															<div class="form_sel">
-																<textarea class="form_textarea" title="타이틀 입력" placeholder="각인 문구를 입력해주세요(20자 이내)"></textarea>
+													<!-- custom_scroll_wrap -->
+													<div class="custom_scroll_wrap sc_option">
+														<!-- select_li_list -->
+														<ul class="select_li_list">
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>필기체</strong>
+																	<span><img src="../../images/guide/img_cus_initials_sample01.jpg" alt=""></span>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>잉크버로우체</strong>
+																	<span><img src="../../images/guide/img_cus_initials_sample02.jpg" alt=""></span>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>모토테입체</strong>
+																	<span><img src="../../images/guide/img_cus_initials_sample03.jpg" alt=""></span>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>양지난초체</strong>
+																	<span><img src="../../images/guide/img_cus_initials_sample04.jpg" alt=""></span>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>브랜들리 핸드체</strong>
+																	<span><img src="../../images/guide/img_cus_initials_sample05.jpg" alt=""></span>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>고딕체</strong>
+																	<span><img src="../../images/guide/img_cus_initials_sample06.jpg" alt=""></span>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>명조체</strong>
+																	<span><img src="../../images/guide/img_cus_initials_sample07.jpg" alt=""></span>
+																</label>
+															</li>
+														</ul>
+														<!-- //select_li_list -->
+														
+														<!-- select_li_bottom -->
+														<div class="select_li_bottom">
+															<h3 class="select_li_tit">각인 문구 입력</h3>
+															<!-- valid_check -->
+															<div class="valid_check fail">
+																<!-- form_sel -->
+																<div class="form_sel">
+																	<textarea class="form_textarea" title="타이틀 입력" placeholder="각인 문구를 입력해주세요(20자 이내)"></textarea>
+																</div>
+																<!-- //form_sel -->
+																<span class="valid_desc">20자 이내로 입력해주세요</span>
 															</div>
-															<!-- //form_sel -->
-															<span class="valid_desc">20자 이내로 입력해주세요</span>
+															<!-- //valid_check -->
 														</div>
-														<!-- //valid_check -->
+														<!-- //select_li_bottom -->
+														
+														<!-- select_li_bottom -->
+														<div class="select_li_bottom">
+															<h3 class="select_li_tit">주문 제작 내용 입력</h3>
+															<!-- valid_check -->
+															<div class="valid_check fail">
+																<!-- form_sel -->
+																<div class="form_sel">
+																	<textarea class="form_textarea" title="타이틀 입력" placeholder="주문 제작 내용을 입력해주세요(100자 이내)"></textarea>
+																</div>
+																<!-- //form_sel -->
+																<span class="valid_desc">100자 이내로 입력해주세요</span>
+															</div>
+															<!-- //valid_check -->
+														</div>
+														<!-- //select_li_bottom -->
 
 														<!-- btn_area -->
 														<div class="btn_area">
@@ -672,7 +680,7 @@ function btnSelectChk(val){
 														</div>
 														<!-- //btn_area -->
 													</div>
-													<!-- //select_li_bottom -->
+													<!-- //custom_scroll_wrap -->
 												</div>
 												<!-- //select_li_view -->
 											</div>
@@ -682,7 +690,93 @@ function btnSelectChk(val){
 									</li>
 									<!-- //22.04 각인서비스 추가 -->
 
+									<!-- 22.04 주문제작 -->
+									<li class="li">
+										<p class="option_msg">↓ 22.04.26 주문제작 추가</p>
+									</li>
+									<li class="li">
+										<!-- form_sel -->
+										<div class="form_sel w_full">
+											<!-- select_li_form -->
+											<div class="select_li_form">
+												<button type="button" class="select_li_op" onclick="btnSelectLi(this);"><span>디자인을 선택하세요</span></button>
+												<!-- select_li_view -->
+												<div class="select_li_view">
+													<!-- custom_scroll_wrap -->
+													<div class="custom_scroll_wrap sc_option">
+														<!-- select_li_list -->
+														<ul class="select_li_list">
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>누구린</strong>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>누핑크(그리드)</strong>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>블랙스팟(무지)</strong>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>어반 레드(그리드)</strong>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>어반 블루(그리드)</strong>
+																</label>
+															</li>
+															<li>
+																<input type="radio" name="selecy_li_txt" onclick="btnSelectChk(this);">
+																<label>
+																	<strong>어반 화이트(그리드)</strong>
+																</label>
+															</li>
+														</ul>
+														<!-- //select_li_list -->
 
+														<!-- select_li_bottom -->
+														<div class="select_li_bottom">
+															<h3 class="select_li_tit">주문 제작 내용 입력</h3>
+															<!-- valid_check -->
+															<div class="valid_check fail">
+																<!-- form_sel -->
+																<div class="form_sel">
+																	<textarea class="form_textarea" title="타이틀 입력" placeholder="주문 제작 내용을 입력해주세요(100자 이내)"></textarea>
+																</div>
+																<!-- //form_sel -->
+																<span class="valid_desc">100자 이내로 입력해주세요</span>
+															</div>
+															<!-- //valid_check -->
+														</div>
+														<!-- //select_li_bottom -->
+
+														<!-- btn_area -->
+														<div class="btn_area">
+															<button type="button" class="btn_md btn_primary"><span>신청</span></button>
+															<button type="button" class="btn_md btn_primary" disabled><span>신청</span></button>
+														</div>
+														<!-- //btn_area -->
+													</div>
+													<!-- //custom_scroll_wrap -->
+												</div>
+												<!-- //select_li_view -->
+											</div>
+											<!-- //select_li_form -->
+										</div>
+										<!-- //form_sel -->
+									</li>
+									<!-- //22.04 각인서비스 추가 -->
 
 									<li class="li">
 										<!-- custom_scroll_wrap : .sc_option -->
@@ -882,6 +976,22 @@ function btnSelectChk(val){
 									</li>
 								</ul>
 								<!-- //ht_option_list -->
+								
+								<!-- select_li_bottom -->
+								<div class="select_li_bottom md">
+									<h3 class="select_li_tit">주문 제작 내용 입력</h3>
+									<!-- valid_check -->
+									<div class="valid_check fail">
+										<!-- form_sel -->
+										<div class="form_sel">
+											<textarea class="form_textarea" title="타이틀 입력" placeholder="주문 제작 내용을 입력해주세요(100자 이내)"></textarea>
+										</div>
+										<!-- //form_sel -->
+										<span class="valid_desc">100자 이내로 입력해주세요</span>
+									</div>
+									<!-- //valid_check -->
+								</div>
+								<!-- //select_li_bottom -->
 							</div>
 							<!-- //옵션선택 -->
 						</div>
@@ -1210,8 +1320,7 @@ function btnSelectChk(val){
 												</h3>
 											</div>
 											<div class="txt_dec">
-												<strong class="txt_primary">본 상품은 2021년 11월 30일 발송 예정인 예약판매 음반 입니다.</strong> 예약 상품의 경우 발매일은 제작사의 사정에 따라 연기 될 수도 있으며, <br>
-												<strong class="txt_primary">예약 상품과 같이 주문하시는 상품은 예약상품 발매 후 같이 발송 됩니다. 먼저 출시된 다른 상품을 먼저 받아보시려면 예약 상품과 별도의 주문을 하셔야 합니다.</strong>
+												<strong class="txt_primary">본 상품은 2021년 11월 30일 발송 예정인 예약판매 음반 입니다.</strong> 예약 상품의 경우 발매일은 제작사의 사정에 따라 연기 될 수도 있으며,<br><strong class="txt_primary">예약 상품과 같이 주문하시는 상품은 예약상품 발매 후 같이 발송 됩니다. 먼저 출시된 다른 상품을 먼저 받아보시려면 예약 상품과 별도의 주문을 하셔야 합니다.</strong><!-- 22.04.26 수정 -->
 											</div>
 										</div>
 										<!-- //info_area -->
