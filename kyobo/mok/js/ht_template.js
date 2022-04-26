@@ -1107,19 +1107,19 @@ $(function(){
 	// 	$(this).addClass('active').siblings().removeClass('active');
 	// })
     
-	//상품 리스트 정렬 방식 토글 버튼
+	//상품 리스트 정렬 방식 토글 버튼 [2022-04-26] 토글 row_dir 버그 => 순서 변경
 	$('.ctg_prod_wrap .ctg_list_icon').click(function(){
 	//품절 대체 스왑 display:none으로 초기화 
 		$('.show_bubble.show_bubble').removeClass('show_bubble');
 
 		if ($(this).hasClass('row_list')) {
 			$(this).removeClass('row_list');
-			$('.evt_products').removeClass('row_dir');
+			$('.evt_products').addClass('row_dir');
 			$('.list_sort_txt').text('두줄보기');
 
 		} else {
 			$(this).addClass('row_list');
-			$('.evt_products').addClass('row_dir');
+			$('.evt_products').removeClass('row_dir');
 			$('.list_sort_txt').text('한줄보기');
 		}
 	 });
