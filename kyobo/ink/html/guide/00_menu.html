@@ -2205,14 +2205,46 @@ $(function(){
 		<!-- //dialog_header -->
 		<!-- dialog_contents -->
 		<div class="dialog_contents">
-			<div class="tag_wrap size_lg" data-tag-toggle>
-				<!-- DESC : 선택 시, tag active class toggle -->
-				<button type="button" class="tag active"><span class="text">전체</span></button>
-				<button type="button" class="tag"><span class="text">상품</span></button>
-				<button type="button" class="tag"><span class="text">기획전</span></button>
-				<button type="button" class="tag"><span class="text">이벤트</span></button>
-				<button type="button" class="tag"><span class="text">브랜드</span></button>
+			<!-- tab_ty -->
+			<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+				<!-- swiper-wrapper -->
+				<ul class="swiper-wrapper">
+					<li>
+						<a href="#n" class="on"><!-- 활성화  class="on" -->
+							<span>전체</span>
+						</a>
+					</li>
+					<li>
+						<a href="#n">
+							<span>상품</span>
+						</a>
+					</li>
+					<li>
+						<a href="#n">
+							<span>기획전</span>
+						</a>
+					</li>
+					<li>
+						<a href="#n">
+							<span>이벤트</span>
+						</a>
+					</li>
+					<li>
+						<a href="#n">
+							<span>브랜드</span>
+						</a>
+					</li>
+				</ul>
+				<!-- //swiper-wrapper -->
+
+				<!-- swiper_control -->
+				<div class="swiper_control">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+				<!-- //swiper_control -->
 			</div>
+			<!-- //tab_ty -->
 			<div class="sort_list_header">
 				<span class="sort_result_desc"><span class="val">35</span>개</span><!-- 220215 : 최근 본 상품 갯수 텍스트 "전체" 삭제 -->
 				<button type="button" class="btn_delete_text"><span class="ico_delete"></span><span class="text">전체삭제</span></button> <!-- 수정 220107 클래스 수정 / btn_delete > btn_delete_text -->
@@ -2226,8 +2258,8 @@ $(function(){
 							<div class="prod_area horizontal">
 								<div class="prod_thumb_box type_cover size_sm">
 									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product1.png);">
-											<img src="/assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
+											<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
 										</span>
 									</a>
 								</div>
@@ -2258,8 +2290,8 @@ $(function(){
 							<div class="prod_area horizontal">
 								<div class="prod_thumb_box type_cover size_sm">
 									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product2.png);">
-											<img src="/assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
+											<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
 										</span>
 									</a>
 								</div>
@@ -2282,8 +2314,8 @@ $(function(){
 							<div class="prod_area horizontal">
 								<div class="prod_thumb_box type_cover size_sm">
 									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product2.png);">
-											<img src="/assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
+											<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
 										</span>
 									</a>
 								</div>
@@ -2311,8 +2343,8 @@ $(function(){
 							<div class="prod_area horizontal">
 								<div class="prod_thumb_box type_cover size_sm">
 									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product1.png);">
-											<img src="/assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
+											<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
 										</span>
 									</a>
 								</div>
@@ -2343,7 +2375,7 @@ $(function(){
 								<div class="prod_thumb_box size_sm type_brand">
 									<a href="#" class="prod_link">
 										<span class="img_box">
-											<img src="/assets/common/temporary/temp_brand.png" alt="상품 임시이미지">
+											<img src="../../../../assets/common/temporary/temp_brand.png" alt="상품 임시이미지">
 										</span>
 									</a>
 								</div>
@@ -2366,8 +2398,8 @@ $(function(){
 							<div class="prod_area horizontal">
 								<div class="prod_thumb_box type_cover size_sm">
 									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product1.png);">
-											<img src="/assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
+											<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
 										</span>
 									</a>
 								</div>
@@ -2398,8 +2430,8 @@ $(function(){
 							<div class="prod_area horizontal">
 								<div class="prod_thumb_box type_cover size_sm">
 									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product2.png);">
-											<img src="/assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
+											<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
 										</span>
 									</a>
 								</div>
@@ -2422,8 +2454,8 @@ $(function(){
 							<div class="prod_area horizontal">
 								<div class="prod_thumb_box type_cover size_sm">
 									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product2.png);">
-											<img src="/assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
+											<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
 										</span>
 									</a>
 								</div>
@@ -2451,8 +2483,8 @@ $(function(){
 							<div class="prod_area horizontal">
 								<div class="prod_thumb_box type_cover size_sm">
 									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(/assets/common/temporary/temp_thumbnail_product1.png);">
-											<img src="/assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
+											<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
 										</span>
 									</a>
 								</div>
