@@ -4527,17 +4527,14 @@ body.dialog_open {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .share_sns_wrap span {
   display: block;
-  width: calc(100% / 3);
-}
-
-.share_sns_wrap span:nth-of-type(4) {
-  margin-top: 20px;
+  width: calc(100% / 4);
 }
 
 .share_sns_wrap span:nth-of-type(5) {
@@ -4545,6 +4542,10 @@ body.dialog_open {
 }
 
 .share_sns_wrap span:nth-of-type(6) {
+  margin-top: 20px;
+}
+
+.share_sns_wrap span:nth-of-type(7) {
   margin-top: 20px;
 }
 

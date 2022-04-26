@@ -1878,11 +1878,11 @@ body.dialog_open {
 	padding:0 10px 30px 10px;
 	display:flex;
 	flex-flow:row wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
 	span{
 		display: block;
-		width:calc(100% / 3);
-		@for $sns from 4 through 6 {
+		width:calc(100% / 4);
+		@for $sns from 5 through 7 {
 			&:nth-of-type(#{$sns}){
 				margin-top:20px;
 			}
