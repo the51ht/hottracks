@@ -8071,8 +8071,7 @@ body:before {
   min-height: 64px;
   margin: 20px 20px 0 20px;
   padding: 8px 65px;
-  background: -webkit-gradient(linear, left top, right top, from(#936dfc), to(#FA9BF5));
-  background: linear-gradient(to right, #936dfc, #FA9BF5);
+  background: linear-gradient(-45deg, #936dfc, #FA9BF5 40%, #FA9BF5 50%, #936dfc);
   border-radius: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8084,6 +8083,8 @@ body:before {
   word-wrap: break-word;
   word-break: keep-all;
   white-space: normal;
+  -webkit-animation: visual_txt both infinite 6s;
+          animation: visual_txt both infinite 6s;
 }
 
 .all_menu_banner:before {
@@ -8109,6 +8110,36 @@ body:before {
 .all_menu_banner p {
   position: relative;
   padding-top: 4px;
+}
+
+@-webkit-keyframes visual_txt {
+  0% {
+    background-size: 200% 100%;
+    background-position: 0 center;
+  }
+  50% {
+    background-size: 200% 100%;
+    background-position: 100% center;
+  }
+  100% {
+    background-size: 200% 100%;
+    background-position: 0 center;
+  }
+}
+
+@keyframes visual_txt {
+  0% {
+    background-size: 200% 100%;
+    background-position: 0 center;
+  }
+  50% {
+    background-size: 200% 100%;
+    background-position: 100% center;
+  }
+  100% {
+    background-size: 200% 100%;
+    background-position: 0 center;
+  }
 }
 
 .ht_ .container_wrapper {
@@ -8598,20 +8629,22 @@ body:before {
 
 .ht_ .header_wrapper.header_main .header_top_wrap .logo_box {
   position: absolute;
-  bottom: 13px;
-  left: 22px;
-  width: 100px;
-  height: 29px;
+  left: 4px;
+  top: 7px;
+  width: 113px;
+  height: 63px;
   z-index: 2;
 }
 
 .ht_ .header_wrapper.header_main .header_top_wrap .logo_box .logo_link {
   display: block;
   height: 100%;
+  background: url("../images/main/logo_ht_mo.svg") left center/113px 63px no-repeat;
 }
 
 .ht_ .header_wrapper.header_main .header_top_wrap .logo_box .logo_link img {
   width: 100%;
+  opacity: 0;
 }
 
 .ht_ .header_wrapper.header_main .header_top_wrap .logo_box .logo_link .ht_logo {
