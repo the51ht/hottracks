@@ -2286,3 +2286,35 @@ $(function(){
 
 
 
+
+
+
+/* Scroll Event */
+$(window).on('scroll', feScrollFn);
+$.fn.feScrollGet = function(){
+    var offset = $(window).scrollTop() + $(window).height() * 0.9;
+	$animate = $('.mc_cont, .wel_cont, .li_box_ty .li, .li_ty .li, .tab_swiper, .li_resp_ty.ty02 .li');
+    $animate.each(function(i){
+        var $ani = $(this),
+            ani = $ani,
+            item_top = $ani.offset().top,
+            item_h = $ani.height();
+		if(($ani.offset().top) < offset){
+            if(!$ani.hasClass('active')){
+                $ani.addClass('active');	
+            }
+        }else{
+            if($ani.hasClass('active')){
+            	$ani.removeClass('active');
+            }
+        }
+
+    });
+	
+};
+
+function feScrollFn(){
+    $.fn.feScrollGet();
+}
+
+

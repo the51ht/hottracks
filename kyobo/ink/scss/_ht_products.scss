@@ -44,7 +44,7 @@
 	}
 }
 .rangking {
-	position:absolute;left:-11px;top:0;width:70px;height:70px;padding-top:1px;background:url('../images/guide/lank_noraml.svg') center/70px no-repeat;box-sizing:border-box;color:#000;font-size:0;font-weight:700;line-height:70px;text-align:center;z-index:4;
+	position:absolute;left:-11px;top:0;width:70px;height:70px;padding-top:1px;background:url('../images/guide/rank_noraml.svg') center/70px no-repeat;box-sizing:border-box;color:#000;font-size:0;font-weight:700;line-height:70px;text-align:center;z-index:4;
 	.rank {
 		display:inline-block;position:relative;font-size:20px;vertical-align:top;
 	}
@@ -52,10 +52,10 @@
 		display:inline-block;position:relative;top:8px;width:15px;height:18px;background:center/14px 18px no-repeat;
 	}
 	&.up .rank_icon {
-		background-image:url('../images/guide/lank_noraml_up.svg');
+		background-image:url('../images/guide/rank_noraml_up.svg');
 	}
 	&.down .rank_icon {
-		background-image:url('../images/guide/lank_noraml_up.svg');transform:rotate(180deg);
+		background-image:url('../images/guide/rank_noraml_down.svg');
 	}
 	&.same .rank_icon {
 		&:before {
@@ -65,15 +65,17 @@
 }
 @for $lank from 1 through 5 {
 	.evt_products:first-of-type .prod_item:nth-of-type(#{$lank}) .rangking {
-		background-image:url('../images/guide/lank_hot.svg');color:#fff;
+		background-image:url('../images/guide/rank_hot.svg');color:#fff;
 		&.none_icon {
 			.rank_icon{
 				display:none;
 			}
 		}    
-		&.up .rank_icon,
+		&.up .rank_icon {
+			background-image:url('../images/guide/rank_hot_up.svg');
+		}
 		&.down .rank_icon { 
-			background-image:url('../images/guide/lank_hot_up.svg');
+			background-image:url('../images/guide/rank_hot_down.svg');
 		}
 		&.same .rank_icon {
 			&:before {
@@ -369,7 +371,7 @@
 		}
 	}
 	.discount_icon {
-		position:absolute;left:-12px;top:0;width:80px;height:80px;background:url('../images/guide/lank_hot.svg') center/100% no-repeat;color:#fff;font-size:19px;font-weight:700;line-height:80px;text-align:center;z-index:1;
+		position:absolute;left:-12px;top:0;width:80px;height:80px;background:url('../images/guide/rank_hot.svg') center/100% no-repeat;color:#fff;font-size:19px;font-weight:700;line-height:80px;text-align:center;z-index:1;
 	}
 }
 
