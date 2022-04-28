@@ -297,6 +297,10 @@
   border: 1px solid #000;
 }
 
+.dialog_wrapper .ui-dialog.dialog_lg {
+  height: auto !important;
+}
+
 /* 만년필이 궁금하세요 */
 .pen_pop_wrap {
   margin-top: -1px !important;
@@ -395,13 +399,12 @@
 .pen_story {
   border: 1px solid #000;
   text-align: center;
-  padding: 40px 40px 0 40px;
+  padding: 40px 20px 40px 40px;
   border-radius: 12px;
   text-align: left;
 }
 
 .pen_story .pen_cont {
-  margin-bottom: 40px;
   display: none;
 }
 
@@ -413,6 +416,10 @@
 
 .pen_story .cont_in {
   margin-bottom: 40px;
+}
+
+.pen_story .cont_in:last-of-type {
+  margin-bottom: 0;
 }
 
 .pen_story .cont_in .ht_tit05 {
@@ -432,23 +439,93 @@
   line-height: 21px;
   position: relative;
   overflow: hidden;
-}
-
-.pen_story .cont_in .desc:before {
-  display: block;
-  clear: both;
-  content: '';
+  letter-spacing: -0.03em;
 }
 
 .pen_story .cont_in .desc .txt {
-  width: 412px;
-  margin-right: 36px;
+  width: 420px;
+  margin-right: 40px;
   float: left;
 }
 
 .pen_story .cont_in .desc .img {
-  width: 410px;
+  width: 420px;
   float: left;
+}
+
+.pen_story .cont_in .desc .img + .img {
+  margin-top: 15px;
+}
+
+.pen_story .cont_in .desc.ty_left .txt {
+  margin-right: 0;
+}
+
+.pen_story .cont_in .desc.ty_left .img {
+  margin-right: 40px;
+}
+
+.pen_story .cont_in .desc.ty_Imgs .img {
+  margin: 0;
+}
+
+.pen_story .cont_in .desc.ty_Imgs .img:first-of-type {
+  margin-right: 40px;
+}
+
+.pen_story .desc_list .li {
+  padding: 20px 0;
+  line-height: 21px;
+  letter-spacing: -0.03em;
+  border-bottom: 1px solid #EAEAEA;
+  overflow: hidden;
+}
+
+.pen_story .desc_list .li:last-of-type {
+  border-bottom: none;
+}
+
+.pen_story .desc_list .li .desc {
+  float: left;
+  width: 420px;
+  margin-right: 40px;
+}
+
+.pen_story .desc_list .li .desc .txt {
+  margin-right: 0;
+}
+
+.pen_story .desc_list .li .img {
+  float: left;
+}
+
+.pen_story .desc_list .tit {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.pen_story .desc_list .gen {
+  color: #474C98;
+  margin-right: 5px;
+}
+
+.pen_story .desc_list.ty_tits {
+  width: 420px;
+  margin-right: 40px;
+  float: left;
+}
+
+.pen_story .desc_list.ty_tits .li {
+  padding: 9px 0;
+}
+
+.pen_story .desc_list.ty_tits .li:first-of-type {
+  padding-top: 0;
+}
+
+.pen_story .desc_list.ty_tits .tit {
+  margin-bottom: 0;
+  line-height: 21px;
 }
 
 /***** 3교제 커스텀 *****/

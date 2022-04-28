@@ -150,7 +150,9 @@
         }
     }
 }
-
+.dialog_wrapper .ui-dialog.dialog_lg {
+    height: auto !important;
+}
 /* 만년필이 궁금하세요 */
 .pen_pop_wrap {
     margin-top:-1px !important;padding-top:1px;background:#fff;
@@ -199,15 +201,18 @@
     }
 }
 .pen_story {
-    border:1px solid #000; text-align:center; padding:40px 40px 0 40px; border-radius: 12px;text-align:left;
+    border:1px solid #000; text-align:center; padding:40px 20px 40px 40px; border-radius: 12px;text-align:left;
     .pen_cont {
-        margin-bottom: 40px;display:none;
+       display:none;
         &.on {
-            display: block;animation:fade both .5s;
+            display: block; animation:fade both .5s;
         }
     }
     .cont_in {
         margin-bottom:40px;
+        &:last-of-type {
+            margin-bottom:0;
+        }
         .ht_tit05 {
             margin-bottom: 25px;
             .point_line:before {
@@ -218,15 +223,66 @@
             width: 100%;
         }
         .desc {
-            line-height:21px;position:relative;overflow:hidden;
-            &:before{
-                display:block;clear:both; content:'';
-            }
+            line-height:21px;position:relative;overflow:hidden;letter-spacing:-0.03em;
             .txt {
-                width:412px;margin-right: 36px;float:left;
+                width:420px;margin-right: 40px;float:left;
             }
             .img {
-                width: 410px;float:left;
+                width: 420px;float:left;
+                & + .img {
+                    margin-top:15px;
+                }
+            }
+            &.ty_left {
+                .txt {
+                    margin-right:0;
+                }
+                .img {
+                    margin-right: 40px
+                }
+            }
+            &.ty_Imgs {
+                .img {
+                    margin:0;
+                    &:first-of-type {
+                        margin-right:40px;
+                    }
+                }
+            }
+        }
+    } 
+    .desc_list {
+        .li {
+          padding: 20px 0;line-height:21px;letter-spacing: -0.03em; border-bottom: 1px solid #EAEAEA;overflow:hidden;   
+          &:last-of-type {
+              border-bottom: none;
+          }
+          .desc {
+            float:left;width:420px;margin-right:40px;
+            .txt {
+                margin-right:0;
+            }
+          }
+          .img {
+            float:left;
+          }
+        }
+        .tit {
+            font-weight: 700;margin-bottom:20px;
+        }
+        .gen {
+            color:#474C98;margin-right:5px;
+        }
+        &.ty_tits{
+            width:420px;margin-right:40px;float:left;
+            .li {
+                padding:9px 0;
+                &:first-of-type {
+                    padding-top:0;
+                }
+            }
+            .tit {
+                margin-bottom:0;line-height: 21px;
             }
         }
     }  
