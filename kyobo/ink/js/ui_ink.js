@@ -954,21 +954,21 @@ KyoboBookPub.ink = (function () {
 	 */
 	function dialogAutoHeight(){
 		if($('.dialog_wrapper.open').length > 0){
-			$('.dialog_wrapper.open').each(function(){
-				var containerId = $(this).attr('id');
-				if($(window).height() < dialogHeight[containerId]){
-					$(this).find('.ui-dialog').addClass('h_auto');
+			// $('.dialog_wrapper.open').each(function(){
+			// 	var containerId = $(this).attr('id');
+			// 	if($(window).height() < dialogHeight[containerId]){
+			// 		$(this).find('.ui-dialog').addClass('h_auto');
 
-					if ($(this).parent().find('.custom_scroll_wrap').length > 0) {
-						$(this).parent().find('.custom_scroll_wrap').each(function (index) {
-							this.simpleBar.recalculate();
-						});
-					}
+			// 		if ($(this).parent().find('.custom_scroll_wrap').length > 0) {
+			// 			$(this).parent().find('.custom_scroll_wrap').each(function (index) {
+			// 				this.simpleBar.recalculate();
+			// 			});
+			// 		}
 
-				} else {
-					$(this).find('.ui-dialog').removeClass('h_auto');
-				}
-			})
+			// 	} else {
+			// 		$(this).find('.ui-dialog').removeClass('h_auto');
+			// 	}
+			// })
 		}
 	}
 

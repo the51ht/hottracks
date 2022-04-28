@@ -150,9 +150,6 @@
         }
     }
 }
-.dialog_wrapper .ui-dialog.dialog_lg {
-    height: auto !important;
-}
 /* 만년필이 궁금하세요 */
 .pen_pop_wrap {
     margin-top:-1px !important;padding-top:1px;background:#fff;
@@ -225,10 +222,10 @@
         .desc {
             line-height:21px;position:relative;overflow:hidden;letter-spacing:-0.03em;
             .txt {
-                width:420px;margin-right: 40px;float:left;
+                width:calc(50% - 20px);margin-right: 40px;float:left;
             }
             .img {
-                width: 420px;float:left;
+                width:calc(50% - 20px);float:left;
                 & + .img {
                     margin-top:15px;
                 }
@@ -258,7 +255,7 @@
               border-bottom: none;
           }
           .desc {
-            float:left;width:420px;margin-right:40px;
+            float:left;width:calc(50% - 20px);margin-right:40px;
             .txt {
                 margin-right:0;
             }
@@ -274,7 +271,7 @@
             color:#474C98;margin-right:5px;
         }
         &.ty_tits{
-            width:420px;margin-right:40px;float:left;
+            width:calc(50% - 20px);margin-right:40px;float:left;
             .li {
                 padding:9px 0;
                 &:first-of-type {
