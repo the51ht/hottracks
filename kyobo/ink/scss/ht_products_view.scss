@@ -39,11 +39,15 @@
         width:640px;height:640px;
     }
     .img {
-        position:relative;width:100%;height:640px;background:#f7f7f7;border-radius:12px;overflow:hidden;
+        position:relative;width:100%;height:640px;background:#fff;border-radius:12px;overflow:hidden;
         img {
-            width:100% !important;
+            width:100%;height:100%;object-fit:cover;
         }
-
+        &.ob_contain {
+            img {
+                object-fit:contain;
+            }
+        }
     }
 }
 
@@ -61,11 +65,16 @@
         .img {
             position:relative;height:0;padding-top:100%;background:#f7f7f7;border-radius:6px;overflow:hidden;opacity:0.5;transition:opacity 0.4s;
             img {
-                position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);
+                position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);object-fit:cover;
             }
             &:after {
                 position:absolute;left:0;top:0;width:100%;height:100%;border:2px solid #000;border-radius:8px;box-sizing:border-box;content:"";opacity:0;transition:opacity 0.4s;
             }
+            &.ob_contain {
+                img {
+                    left:0;top:0;height:100%;transform:translate(0,0);object-fit:contain;
+                }
+            }         
         }
         &.swiper-slide-thumb-active {
             .img {
@@ -340,7 +349,7 @@
         ul{
             width:100%;
             li{
-                position:relative;
+                position:relative;padding-right:54px;
                 .img {
                     position:absolute;right:0px;top:0;width:44px;height:44px;background:url('../images/main/ico_free_gift.png') center/100% no-repeat;border-radius:6px;overflow:hidden;
                     img {
@@ -1435,7 +1444,7 @@
 .txt_secret02 {
     position:relative;padding-left:23px;
     &:before {
-        position:absolute;left:0;top:2px;width:17px;height:17px;background:url('../images/guide/ico_info.svg') center/100% no-repeat;content:"";
+        position:absolute;left:0;top:1px;width:17px;height:17px;background:url('../images/guide/ico_info.svg') center/100% no-repeat;content:"";
     }
 }
 

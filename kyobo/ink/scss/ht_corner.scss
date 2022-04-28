@@ -5,7 +5,7 @@
 
 /***** 오늘만 특가 *****/
 .tod_full_banner {
-    margin-bottom:60px;padding-bottom:0;background:#ffeb01;
+    position:relative;margin-bottom:60px;padding-bottom:0;background:#ffeb01;z-index:10;
     .time_bar {
         position:absolute;left:49.5%;top:183px;width:215px;color:#fff;font-family:'Gmarket Sans';font-size:26px;line-height:78px;font-weight:700;text-align:center;transform:translateX(-50%);
     }
@@ -844,7 +844,7 @@
 .gft_question_tit {
     position:relative;z-index:3;
     .s1 {
-        margin-bottom:14px;color:#767676;font-size:12px;;
+        color:#767676;font-size:12px;;
         span {
             position:relative;display:inline-block;margin-left:12px;color:#767676;font-size:12px;line-height:16px;white-space:nowrap;
             &:before{ 
@@ -862,7 +862,7 @@
         }
     }
     .s2 {
-        color:#000;font-size:14px;font-weight:400;line-height:22px;;/*display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;*/overflow:hidden;min-height:66px;
+        margin-top:14px;color:#000;font-size:14px;font-weight:400;line-height:22px;;/*display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:3;-webkit-box-orient:vertical;*/overflow:hidden;min-height:66px;
     }
     .badge_line{
         margin-top:14px;
@@ -875,6 +875,9 @@
                 position:absolute;left:0;top:-3px;width:20px;height:20px;background:url("../images/main/ico_participate_num.svg") center/100% no-repeat;content:"";
             }
         }
+    }
+    .box_msg {
+        display:flex;justify-content:center;align-items:center;height:98px;margin-top:21px;padding-bottom:15px;background-color:#f7f7f7;border:1px solid #eaeaea;box-sizing:border-box;
     }
 }
 
@@ -2402,7 +2405,7 @@
         position:absolute;right:34px;top:33px;width:62px;height:64px;background:url('../images/main/ico_wel_curation01.svg') center no-repeat;content:"";transform:scaleY(-1);
     }
     &:after {
-        position:absolute;right:-60px;bottom:-90px;width:220px;height:255px;background:url('../images/main/ico_cur_curation01.svg') center no-repeat;content:"";;
+        position:absolute;right:23px;bottom:35px;width:140px;height:130px;background:url('../images/main/ico_cur_curation01.svg') center no-repeat;content:"";;
     }
 }
 

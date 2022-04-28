@@ -1,11 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="24" viewBox="0 0 20 24">
 <style type="text/css">
-.fire {animation:fire both infinite 2s 0.3s; transform-origin:50% 100%;}
+.fire {animation:fire both infinite linear 0.6s; transform-origin:50% 100%;}
 
 @keyframes fire {
-0% {transform:rotateX(10deg); width:18px;}
-50% {transform:rotateX(45deg); width:14px;}
-100% {transform:rotateX(10deg); width:18px;}
+0% {transform:scaleX(-1);}
+19.5% {transform:scaleX(-1);}
+20% {transform:scaleX(1);}
+69.5% {transform:scaleX(1);}
+70% {transform:scaleX(-1);}
+100% {transform:scaleX(-1);}
 }
 </style>
   <defs>
