@@ -371,12 +371,22 @@
   padding-top: 20px;
 }
 
-.pen_pop_wrap .sc_pop_btn {
-  min-height: calc(85vh - 200px) !important;
+.pen_pop_wrap .sc_box_s1 {
+  position: relative;
+  min-height: calc(75vh - 200px) !important;
 }
 
-.pen_pop_wrap .mgt10 {
-  margin-top: 10px !important;
+.pen_pop_wrap .sc_box_s1:before {
+  position: absolute;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: #f0f0f0;
+  content: "";
+}
+
+.pen_pop_wrap .sc_box_s1 .simplebar-content {
+  padding-right: 0 !important;
 }
 
 .tab_ty.pen_sub_menu_wrap {
@@ -392,136 +402,135 @@
   padding: 0 13px;
 }
 
+/* pen_story */
 .pen_story {
+  position: relative;
+  min-height: calc(75vh - 200px);
+  margin-right: 18px;
+  padding: 40px;
   border: 1px solid #000;
-  text-align: center;
-  padding: 40px 20px 40px 40px;
   border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   text-align: left;
 }
 
-.pen_story .pen_cont {
+.pen_cont {
   display: none;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.3px;
 }
 
-.pen_story .pen_cont.on {
+.pen_cont.on {
   display: block;
   -webkit-animation: fade both .5s;
           animation: fade both .5s;
 }
 
-.pen_story .cont_in {
-  margin-bottom: 40px;
+.pen_cont .ht_tit05 {
+  margin-bottom: 22px;
 }
 
-.pen_story .cont_in:last-of-type {
-  margin-bottom: 0;
-}
-
-.pen_story .cont_in .ht_tit05 {
-  margin-bottom: 25px;
-}
-
-.pen_story .cont_in .ht_tit05 .point_line:before {
+.pen_cont .ht_tit05 .point_line:before {
+  top: 15px;
   height: 11px;
-  top: 16px;
 }
 
-.pen_story .cont_in img {
+.pen_cont img {
   width: 100%;
 }
 
-.pen_story .cont_in .desc {
-  line-height: 21px;
+.pen_cont .desc {
   position: relative;
+  margin-bottom: 40px;
   overflow: hidden;
-  letter-spacing: -0.03em;
 }
 
-.pen_story .cont_in .desc .txt {
-  width: calc(50% - 20px);
-  margin-right: 40px;
+.pen_cont .desc:last-child {
+  margin-bottom: 0;
+}
+
+.pen_cont .desc .txt {
   float: left;
-}
-
-.pen_story .cont_in .desc .img {
   width: calc(50% - 20px);
-  float: left;
 }
 
-.pen_story .cont_in .desc .img + .img {
+.pen_cont .desc .img {
+  float: right;
+  width: calc(50% - 20px);
+}
+
+.pen_cont .desc p {
   margin-top: 15px;
 }
 
-.pen_story .cont_in .desc.ty_left .txt {
-  margin-right: 0;
+.pen_cont .desc p:first-child {
+  margin-top: 0;
 }
 
-.pen_story .cont_in .desc.ty_left .img {
-  margin-right: 40px;
+.pen_cont .desc.left .txt {
+  float: right;
 }
 
-.pen_story .cont_in .desc.ty_Imgs .img {
-  margin: 0;
-}
-
-.pen_story .cont_in .desc.ty_Imgs .img:first-of-type {
-  margin-right: 40px;
-}
-
-.pen_story .desc_list .li {
-  padding: 20px 0;
-  line-height: 21px;
-  letter-spacing: -0.03em;
-  border-bottom: 1px solid #EAEAEA;
-  overflow: hidden;
-}
-
-.pen_story .desc_list .li:last-of-type {
-  border-bottom: none;
-}
-
-.pen_story .desc_list .li .desc {
-  float: left;
-  width: calc(50% - 20px);
-  margin-right: 40px;
-}
-
-.pen_story .desc_list .li .desc .txt {
-  margin-right: 0;
-}
-
-.pen_story .desc_list .li .img {
+.pen_cont .desc.left .img {
   float: left;
 }
 
-.pen_story .desc_list .tit {
+.pen_cont .img_resp {
+  margin-top: 25px;
+}
+
+.pen_cont .img_resp02 {
+  margin-top: 40px;
+}
+
+.desc_li {
+  position: relative;
+}
+
+.desc_li .li {
+  position: relative;
+  padding: 10px 0 8px 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.desc_li .li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.desc_li .li .tit {
+  position: relative;
+  padding-left: 55px;
   font-weight: 700;
-  margin-bottom: 20px;
 }
 
-.pen_story .desc_list .gen {
-  color: #474C98;
-  margin-right: 5px;
+.desc_li .li .tit em {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #474c98;
 }
 
-.pen_story .desc_list.ty_tits {
-  width: calc(50% - 20px);
-  margin-right: 40px;
-  float: left;
+.desc_li.desc_li_big .li {
+  padding: 20px 0;
 }
 
-.pen_story .desc_list.ty_tits .li {
-  padding: 9px 0;
-}
-
-.pen_story .desc_list.ty_tits .li:first-of-type {
+.desc_li.desc_li_big .li:first-child {
   padding-top: 0;
 }
 
-.pen_story .desc_list.ty_tits .tit {
-  margin-bottom: 0;
-  line-height: 21px;
+.desc_li.desc_li_big .li .txt_s {
+  margin: 15px 0 0 55px;
+}
+
+.desc_li.desc_li_big .li .img_s {
+  margin: 10px 0 0 55px;
+}
+
+.desc_li.desc_li_big .li .img_s img {
+  width: 410px;
 }
 
 /***** 3교제 커스텀 *****/
