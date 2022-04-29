@@ -912,31 +912,46 @@
         }
     }
     .bul_list li {
-        margin-top:8px !important;color:#292929;font-size:14px;line-height:22px;
+        margin-top:8px !important;color:#000;font-size:14px;line-height:22px;
         &:before {
             background-color:#000;
         }
         strong {
-            color:#000;
+            font-weight:700;
         }
         .lighter {
             color:#767676;
         }
     }
     &.ty01 {
-        background:url(../images/guide/cus_font_box.png) no-repeat center /cover;
+        background:url('../images/guide/cus_font_box.png') center /cover no-repeat;
+        .ht_tit05 {
+            color:#fff;
+            img {
+                display:none;
+            }
+        }
         .point_line:before {
-            background-color:#ffc09f;
+            display:none;
+        }
+        .bul_list li {
+            color:#fff;
+            &:before {
+                background-color:#fff;
+            }
+            .lighter {
+                color:rgba(255,255,255,0.8);
+            }
         }
     }
     &.ty02 {
-        background:url(../images/guide/cus_package_box.svg) no-repeat center /cover;
+        background:url('../images/guide/cus_package_box.svg') center /cover no-repeat;
         .point_line:before {
             background-color:#ffe65c;
         }
     }
     &.ty03 {
-        background:url(../images/guide/cus_card_box.svg) no-repeat center /cover;
+        background:url('../images/guide/cus_card_box.svg') center /cover no-repeat;
         .point_line:before {
             background-color:#9af8c2;
         }
