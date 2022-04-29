@@ -534,7 +534,9 @@
 
 /* wel_today_time */
 .wel_today_time {
+  position: relative;
   margin-bottom: 24px;
+  z-index: 20;
 }
 
 .wel_today_time .wel_today_time_inner {
@@ -2750,6 +2752,8 @@
 .btn_gift_warp .btn_wrap {
   float: left;
   padding-right: 20px;
+  -webkit-animation: evtMsg both infinite 5s;
+          animation: evtMsg both infinite 5s;
 }
 
 .btn_gift_warp .btn_wrap .btn_gift {
@@ -2814,8 +2818,8 @@
 }
 
 .btn_gift_warp .icon_wrap img {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  width: 63px;
+  height: 106px;
 }
 
 /* wel_gift_cont */
@@ -5189,4 +5193,109 @@
 .mus_mc_special_cont .price_origin {
   color: #d5d5d5;
   font-size: 14px;
+}
+
+/***** 모션 인터렉션 *****/
+/** 웰컴메인 **/
+.wel_main_warp .ht_tit_big,
+.wel_main_warp .tab_ty,
+.wel_main_warp .tab_under,
+.wel_main_warp .ht_under_banner,
+.wel_main_warp .ht_belt_banner,
+.wel_main_warp .wel_today_time,
+.wel_main_warp .wel_exehibition_banner {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s 0s;
+  transition: opacity 0.5s 0s;
+}
+
+.wel_main_warp .ht_tit_big.ht_ani,
+.wel_main_warp .tab_ty.ht_ani,
+.wel_main_warp .tab_under.ht_ani,
+.wel_main_warp .ht_under_banner.ht_ani,
+.wel_main_warp .ht_belt_banner.ht_ani,
+.wel_main_warp .wel_today_time.ht_ani,
+.wel_main_warp .wel_exehibition_banner.ht_ani {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.wel_main_warp .ht_today_banner,
+.wel_main_warp .evt_products,
+.wel_main_warp .btn_gift_warp,
+.wel_main_warp .wel_cont,
+.wel_main_warp .wel_now_banner,
+.wel_main_warp .wel_gift_cont,
+.wel_main_warp .wel_category_banner {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s 0s;
+  transition: opacity 0.5s 0s;
+}
+
+.wel_main_warp .ht_today_banner.ht_ani,
+.wel_main_warp .evt_products.ht_ani,
+.wel_main_warp .btn_gift_warp.ht_ani,
+.wel_main_warp .wel_cont.ht_ani,
+.wel_main_warp .wel_now_banner.ht_ani,
+.wel_main_warp .wel_gift_cont.ht_ani,
+.wel_main_warp .wel_category_banner.ht_ani {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+/** 음반메인 **/
+.mus_main_warp .ht_tit_big02,
+.mus_main_warp .tab_ty,
+.mus_main_warp .tab_under,
+.mus_main_warp .ht_under_banner,
+.mus_main_warp .ht_belt_banner,
+.mus_main_warp .wel_quick_menu_cont,
+.mus_main_warp .mus_mc_order .contents_inner {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s 0s;
+  transition: opacity 0.5s 0s;
+}
+
+.mus_main_warp .ht_tit_big02.ht_ani,
+.mus_main_warp .tab_ty.ht_ani,
+.mus_main_warp .tab_under.ht_ani,
+.mus_main_warp .ht_under_banner.ht_ani,
+.mus_main_warp .ht_belt_banner.ht_ani,
+.mus_main_warp .wel_quick_menu_cont.ht_ani,
+.mus_main_warp .mus_mc_order .contents_inner.ht_ani {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.mus_main_warp .evt_products,
+.mus_main_warp .mus_mc_reserved_cont,
+.mus_main_warp .mus_mc_chart_cont,
+.mus_main_warp .mus_mc_new_album_cont,
+.mus_main_warp .mus_mc_fan_cont,
+.mus_main_warp .mus_mc_fansign .contents_inner,
+.mus_main_warp .mus_mc_classic_msg ul,
+.mus_main_warp .mus_mc_lpshop_cont,
+.mus_main_warp .mus_tab_box,
+.mus_main_warp .mus_mc_special_cont {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s 0s;
+  transition: opacity 0.5s 0s;
+}
+
+.mus_main_warp .evt_products.ht_ani,
+.mus_main_warp .mus_mc_reserved_cont.ht_ani,
+.mus_main_warp .mus_mc_chart_cont.ht_ani,
+.mus_main_warp .mus_mc_new_album_cont.ht_ani,
+.mus_main_warp .mus_mc_fan_cont.ht_ani,
+.mus_main_warp .mus_mc_fansign .contents_inner.ht_ani,
+.mus_main_warp .mus_mc_classic_msg ul.ht_ani,
+.mus_main_warp .mus_mc_lpshop_cont.ht_ani,
+.mus_main_warp .mus_tab_box.ht_ani,
+.mus_main_warp .mus_mc_special_cont.ht_ani {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
