@@ -34,32 +34,33 @@
 }
 //메인 메뉴
 .tod_menu_wrap {
-  display: flex;
-  flex-flow: row nowrap;
-  border-top:1px solid rgba(0,0,0,0.2);
-  .tod_menu {
-      display: block;
-      width:50%;
-      line-height:21px; 
-      font-size: 15px;
-      font-weight: 500;
-      color:rgba(0,0,0,0.2);
-      text-align: center;
-      padding:15px 10px;  
-      &.active{
-          color:#000;
-          position: relative;
-          &:before{
-              content:"";
-              position: absolute;
-              left:0;
-              bottom:0;
-              width:100%;
-              height:2px;
-              background-color:#000;
-          }
-      }
-  }
+    position: relative;z-index:10;background-color:#fff;
+    display: flex;
+    flex-flow: row nowrap;
+    border-top:1px solid rgba(0,0,0,0.2);
+    .tod_menu {
+        display: block;
+        width:50%;
+        line-height:21px; 
+        font-size: 15px;
+        font-weight: 500;
+        color:rgba(0,0,0,0.2);
+        text-align: center;
+        padding:15px 10px;  
+        &.active{
+            color:#000;
+            position: relative;
+            &:before{
+                content:"";
+                position: absolute;
+                left:0;
+                bottom:0;
+                width:100%;
+                height:2px;
+                background-color:#000;
+            }
+        }
+    }
 
 }
 //타이머 배너 영역
@@ -68,7 +69,7 @@
     text-align: center;
     background-color: #FFEB01;
     height:150px;
-    overflow:hidden;
+    overflow:hidden;z-index:10;
     &.none_timer{
         padding:0;
         background-color:#86CCFF;

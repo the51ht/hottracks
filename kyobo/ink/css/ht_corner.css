@@ -4,9 +4,11 @@
 */
 /***** 오늘만 특가 *****/
 .tod_full_banner {
+  position: relative;
   margin-bottom: 60px;
   padding-bottom: 0;
   background: #ffeb01;
+  z-index: 10;
 }
 
 .tod_full_banner .time_bar {
@@ -200,6 +202,10 @@
   right: -15px;
   top: 0;
   padding: 14px 20px 10px 25px;
+}
+
+.deadline_character_area.ht_new_deadline .deadline_bubble:before {
+  display: none;
 }
 
 .deadline_character_area.ht_new_deadline .deadline_bubble:after {
@@ -441,6 +447,14 @@
   font-size: 15px;
   line-height: 30px;
   letter-spacing: -0.5px;
+}
+
+.brad_main_prod .evt_prod_list_wrap {
+  clear: both;
+}
+
+.brad_main_prod .evt_prod_list_wrap .evt_products {
+  margin-top: 0;
 }
 
 /** brad_main_viewer **/
@@ -1500,7 +1514,6 @@
 }
 
 .gft_question_tit .s1 {
-  margin-bottom: 14px;
   color: #767676;
   font-size: 12px;
 }
@@ -1538,6 +1551,7 @@
 }
 
 .gft_question_tit .s2 {
+  margin-top: 14px;
   color: #000;
   font-size: 14px;
   font-weight: 400;
@@ -1574,6 +1588,25 @@
   height: 20px;
   background: url("../images/main/ico_participate_num.svg") center/100% no-repeat;
   content: "";
+}
+
+.gft_question_tit .box_msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 98px;
+  margin-top: 21px;
+  padding-bottom: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* gft_question_chk */
@@ -4716,10 +4749,10 @@
 
 .cur_detail_txt_warp:after {
   position: absolute;
-  right: -60px;
-  bottom: -90px;
-  width: 220px;
-  height: 255px;
+  right: 23px;
+  bottom: 35px;
+  width: 140px;
+  height: 130px;
   background: url("../images/main/ico_cur_curation01.svg") center no-repeat;
   content: "";
 }

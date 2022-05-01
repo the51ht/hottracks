@@ -450,8 +450,19 @@ button.btn_lg {
 }
 
 /* 레이아웃 */
+.wrapper .header_wrapper .header_inner {
+  z-index: 150;
+}
+
+.wrapper .header_wrapper .header_inner .gnb_search_wrap .logo_box {
+  left: -57px;
+  top: -35px;
+  width: 230px;
+  height: 136px;
+}
+
 .wrapper .header_wrapper .header_inner .gnb_search_wrap .logo_box .logo_link {
-  background: url("../images/layout/logo.svg") left center/100px 28px no-repeat;
+  background: url("../images/layout/logo_ht_pc.svg") left center/230px 136px no-repeat;
 }
 
 .wrapper .header_wrapper.sps.sps-blw .gnb_search_wrap .logo_box .logo_link {
@@ -1273,9 +1284,11 @@ body {
 /***** ht_tit_nav : 상단 탭 *****/
 .ht_tit_nav {
   position: relative;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
   font-size: 0;
   text-align: center;
+  z-index: 10;
 }
 
 .ht_tit_nav .ht_tit_nav_txt {
@@ -1784,10 +1797,11 @@ body {
 .tab_ty a img {
   display: inline-block;
   position: relative;
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
   margin-right: 5px;
   overflow: hidden;
+  vertical-align: top;
 }
 
 .tab_ty.mdl_sticky_mn {
@@ -3163,7 +3177,7 @@ body {
   width: 70px;
   height: 70px;
   padding-top: 1px;
-  background: url("../images/guide/lank_noraml.svg") center/70px no-repeat;
+  background: url("../images/guide/rank_noraml.svg") center/70px no-repeat;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #000;
@@ -3191,13 +3205,11 @@ body {
 }
 
 .rangking.up .rank_icon {
-  background-image: url("../images/guide/lank_noraml_up.svg");
+  background-image: url("../images/guide/rank_noraml_up.svg");
 }
 
 .rangking.down .rank_icon {
-  background-image: url("../images/guide/lank_noraml_up.svg");
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  background-image: url("../images/guide/rank_noraml_down.svg");
 }
 
 .rangking.same .rank_icon:before {
@@ -3212,7 +3224,7 @@ body {
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(1) .rangking {
-  background-image: url("../images/guide/lank_hot.svg");
+  background-image: url("../images/guide/rank_hot.svg");
   color: #fff;
 }
 
@@ -3220,9 +3232,12 @@ body {
   display: none;
 }
 
-.evt_products:first-of-type .prod_item:nth-of-type(1) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(1) .rangking.up .rank_icon {
+  background-image: url("../images/guide/rank_hot_up.svg");
+}
+
 .evt_products:first-of-type .prod_item:nth-of-type(1) .rangking.down .rank_icon {
-  background-image: url("../images/guide/lank_hot_up.svg");
+  background-image: url("../images/guide/rank_hot_down.svg");
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(1) .rangking.same .rank_icon:before {
@@ -3230,7 +3245,7 @@ body {
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(2) .rangking {
-  background-image: url("../images/guide/lank_hot.svg");
+  background-image: url("../images/guide/rank_hot.svg");
   color: #fff;
 }
 
@@ -3238,9 +3253,12 @@ body {
   display: none;
 }
 
-.evt_products:first-of-type .prod_item:nth-of-type(2) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(2) .rangking.up .rank_icon {
+  background-image: url("../images/guide/rank_hot_up.svg");
+}
+
 .evt_products:first-of-type .prod_item:nth-of-type(2) .rangking.down .rank_icon {
-  background-image: url("../images/guide/lank_hot_up.svg");
+  background-image: url("../images/guide/rank_hot_down.svg");
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(2) .rangking.same .rank_icon:before {
@@ -3248,7 +3266,7 @@ body {
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(3) .rangking {
-  background-image: url("../images/guide/lank_hot.svg");
+  background-image: url("../images/guide/rank_hot.svg");
   color: #fff;
 }
 
@@ -3256,9 +3274,12 @@ body {
   display: none;
 }
 
-.evt_products:first-of-type .prod_item:nth-of-type(3) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(3) .rangking.up .rank_icon {
+  background-image: url("../images/guide/rank_hot_up.svg");
+}
+
 .evt_products:first-of-type .prod_item:nth-of-type(3) .rangking.down .rank_icon {
-  background-image: url("../images/guide/lank_hot_up.svg");
+  background-image: url("../images/guide/rank_hot_down.svg");
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(3) .rangking.same .rank_icon:before {
@@ -3266,7 +3287,7 @@ body {
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(4) .rangking {
-  background-image: url("../images/guide/lank_hot.svg");
+  background-image: url("../images/guide/rank_hot.svg");
   color: #fff;
 }
 
@@ -3274,9 +3295,12 @@ body {
   display: none;
 }
 
-.evt_products:first-of-type .prod_item:nth-of-type(4) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(4) .rangking.up .rank_icon {
+  background-image: url("../images/guide/rank_hot_up.svg");
+}
+
 .evt_products:first-of-type .prod_item:nth-of-type(4) .rangking.down .rank_icon {
-  background-image: url("../images/guide/lank_hot_up.svg");
+  background-image: url("../images/guide/rank_hot_down.svg");
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(4) .rangking.same .rank_icon:before {
@@ -3284,7 +3308,7 @@ body {
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(5) .rangking {
-  background-image: url("../images/guide/lank_hot.svg");
+  background-image: url("../images/guide/rank_hot.svg");
   color: #fff;
 }
 
@@ -3292,9 +3316,12 @@ body {
   display: none;
 }
 
-.evt_products:first-of-type .prod_item:nth-of-type(5) .rangking.up .rank_icon,
+.evt_products:first-of-type .prod_item:nth-of-type(5) .rangking.up .rank_icon {
+  background-image: url("../images/guide/rank_hot_up.svg");
+}
+
 .evt_products:first-of-type .prod_item:nth-of-type(5) .rangking.down .rank_icon {
-  background-image: url("../images/guide/lank_hot_up.svg");
+  background-image: url("../images/guide/rank_hot_down.svg");
 }
 
 .evt_products:first-of-type .prod_item:nth-of-type(5) .rangking.same .rank_icon:before {
@@ -3937,7 +3964,7 @@ body {
   top: 0;
   width: 80px;
   height: 80px;
-  background: url("../images/guide/lank_hot.svg") center/100% no-repeat;
+  background: url("../images/guide/rank_hot.svg") center/100% no-repeat;
   color: #fff;
   font-size: 19px;
   font-weight: 700;

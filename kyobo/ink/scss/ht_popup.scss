@@ -151,6 +151,7 @@
     }
 }
 
+
 /* 만년필이 궁금하세요 */
 .pen_pop_wrap {
     margin-top:-1px !important;padding-top:1px;background:#fff;
@@ -181,12 +182,15 @@
             padding-top:20px;
         }
     }
-    .sc_pop_btn {
-        min-height:calc(85vh - 200px) !important;
+    .sc_box_s1 {
+        position:relative;min-height:calc(75vh - 200px) !important;
+        &:before {
+            position:absolute;right:0;width:2px;height:100%;background:#f0f0f0;content:"";
+        }
+        .simplebar-content {
+            padding-right:0 !important;
+        }    
     }
-
-    //교보 http://www.hottracks.co.kr/ht/fountainPen?type=1
-    .mgt10 { margin-top:10px !important } 
 }
 
 .tab_ty.pen_sub_menu_wrap {
@@ -198,40 +202,94 @@
         padding:0 13px;
     }
 }
+
+
+/* pen_story */
 .pen_story {
-    border:1px solid #000; text-align:center; padding:40px 40px 0 40px; border-radius: 12px;text-align:left;
-    .pen_cont {
-        margin-bottom: 40px;display:none;
-        &.on {
-            display: block;animation:fade both .5s;
+    position:relative;min-height:calc(75vh - 200px);margin-right:18px;;padding:40px;border:1px solid #000;border-radius:12px;box-sizing:border-box;text-align:left;
+}
+.pen_cont {
+    display:none;font-size:14px;line-height:22px;letter-spacing:-0.3px;
+    &.on {
+        display:block;animation:fade both .5s;
+    }
+    .ht_tit05 {
+        margin-bottom:22px;
+        .point_line:before {
+            top:15px;height:11px;
         }
     }
-    .cont_in {
-        margin-bottom:40px;
-        .ht_tit05 {
-            margin-bottom: 25px;
-            .point_line:before {
-                height:11px;top:16px;
+    img {
+        width:100%;
+    }
+    .desc {
+        position:relative;margin-bottom:40px;overflow:hidden;
+        &:last-child {
+            margin-bottom:0;
+        }
+        .txt {
+            float:left;width:calc(50% - 20px);
+        }
+        .img {
+            float:right;width:calc(50% - 20px);
+        }
+        p {
+            margin-top:15px;
+            &:first-child {
+                margin-top:0;
             }
         }
-        img {
-            width: 100%;
-        }
-        .desc {
-            line-height:21px;position:relative;overflow:hidden;
-            &:before{
-                display:block;clear:both; content:'';
-            }
+        &.left {
             .txt {
-                width:412px;margin-right: 36px;float:left;
+                float:right;
             }
             .img {
-                width: 410px;float:left;
+                float:left;
             }
         }
-    }  
-
+    }
+    .img_resp {
+        margin-top:25px;
+    }
+    .img_resp02 {
+        margin-top:40px;
+    }
 }
+
+.desc_li {
+    position:relative;
+    .li {
+        position:relative;padding:10px 0 8px 0;border-top:1px solid #eaeaea;
+        &:first-child {
+            padding-top:0;border-top:0;
+        }
+        .tit {
+            position:relative;padding-left:55px;font-weight:700;
+            em {
+                position:absolute;left:0;top:0;color:#474c98;
+            }
+        }
+    }
+    &.desc_li_big {
+        .li {
+            padding:20px 0;
+            &:first-child {
+                padding-top:0;
+            }
+            .txt_s {
+                margin:15px 0 0 55px;
+            }
+            .img_s {
+                margin:10px 0 0 55px;
+                img {
+                    width:410px;
+                }
+            }
+        }
+    }
+} 
+
+
 
 
 

@@ -54,13 +54,21 @@
   position: relative;
   width: 100%;
   height: 640px;
-  background: #f7f7f7;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
 }
 
 .prod_view_img .img img {
-  width: 100% !important;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.prod_view_img .img.ob_contain img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* prod_view_img_thumb */
@@ -108,6 +116,8 @@
   height: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .prod_view_img_thumb .swiper-slide .img:after {
@@ -124,6 +134,16 @@
   opacity: 0;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
+}
+
+.prod_view_img_thumb .swiper-slide .img.ob_contain img {
+  left: 0;
+  top: 0;
+  height: 100%;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .prod_view_img_thumb .swiper-slide.swiper-slide-thumb-active .img {
@@ -647,6 +667,7 @@
 
 .list_info .free_gift ul li {
   position: relative;
+  padding-right: 54px;
 }
 
 .list_info .free_gift ul li .img {
@@ -2582,7 +2603,7 @@
 .txt_secret02:before {
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 1px;
   width: 17px;
   height: 17px;
   background: url("../images/guide/ico_info.svg") center/100% no-repeat;

@@ -674,9 +674,18 @@
 /**** 핫트랙스 서비스 안내 ****/
 .cus_cont_view {
     padding:0;
+    &#cus_sv01 {
+        .img_tit_area {
+            .mc_tit03 {
+                color:#fff;
+                &:before, &:after {
+                    display:none;
+                }
+            }
+        }
+    }
     &#cus_sv02 {
         .mc_tit03 {
-
             &:before {
                 background:url(../images/guide/cus_ribbon.svg) no-repeat center / 18px;
             }
@@ -779,7 +788,7 @@
             float:right;text-align:right;
         }
         img {
-            height:26px;
+            height:24px;
         }
         &:first-child {
             padding-top:0;border-top:0;

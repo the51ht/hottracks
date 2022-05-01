@@ -565,7 +565,7 @@ body {
 }
 
 .all_menu_banner {
-    display:flex;width:calc(100% - 40px);justify-content:center;align-items:center;position:relative;min-height:64px;margin:20px 20px 0 20px;padding:8px 65px;background:linear-gradient( to right, #936dfc, #FA9BF5);;border-radius:8px;box-sizing:border-box;color:#fff;font-size:14px;font-weight:700;line-height:22px;text-align:center;word-wrap:break-word;word-break:keep-all;white-space:normal;
+    display:flex;width:calc(100% - 40px);justify-content:center;align-items:center;position:relative;min-height:64px;margin:20px 20px 0 20px;padding:8px 65px;background:linear-gradient(-45deg, #936dfc, #FA9BF5 40%, #FA9BF5 50%, #936dfc);;border-radius:8px;box-sizing:border-box;color:#fff;font-size:14px;font-weight:700;line-height:22px;text-align:center;word-wrap:break-word;word-break:keep-all;white-space:normal;animation:visual_txt both infinite 6s;
     &:before {
         position:absolute;left:13px;top:-18px;width:63px;height:72px;background:url('../images/guide/ico_all_menu_banner03.svg') center/100% no-repeat;content:"";
     }
@@ -576,6 +576,13 @@ body {
         position:relative;padding-top:4px;
     }
 }
+
+@keyframes visual_txt {
+0% {background-size:200% 100%;background-position:0 center}
+50% {background-size:200% 100%;background-position:100% center}
+100% {background-size:200% 100%;background-position:0 center}
+}
+
   
 
 
@@ -1006,19 +1013,11 @@ body {
                 }
 
                 .logo_box {
-                    position: absolute;
-                    bottom: 13px;
-                    left: 22px;
-                    width: 100px;
-                    height: 29px;
-                    z-index: 2;
-
+                    position:absolute;left:4px;top:7px;width:113px;height:63px;z-index: 2;
                     .logo_link {
-                        display: block;
-                        height: 100%;
-
+                        display:block;height:100%;background:url('../images/main/logo_ht_mo.svg') left center/113px 63px no-repeat;
                         img {
-                            width: 100%;
+                            width:100%;opacity:0;
                         }
                         .ht_logo {
                             width:auto;height:21px;margin:4px 0 0 2px;
