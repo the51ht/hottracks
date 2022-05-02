@@ -249,8 +249,20 @@
             }
         }
     }
+    .desc_txt {
+        margin:-10px 0 25px 0;
+    }
+    .point {
+        color:#da2128;
+    }
+    .mt {
+        margin-top:15px;
+    }
+    .desc + .img_resp {
+        margin-top:-25px;
+    }
     .img_resp {
-        margin-top:25px;
+        margin-top:15px;
     }
     .img_resp02 {
         margin-top:40px;
@@ -285,6 +297,15 @@
             }
             .txt_s {
                 margin:15px 0 0 55px;
+                li {
+                    position:relative;margin-top:10px;padding-left:34px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    em {
+                        position:absolute;left:0;top:0;
+                    }
+                }
             }
             .img_s {
                 margin:10px 0 0 55px;
@@ -293,8 +314,50 @@
                 }
             }
         }
+        &.ty02 {
+            .tit {
+                padding-left:0;
+            }
+            .txt_s {
+                margin-left:0;
+            }
+        }
     }
 }
+
+/* 필기구 용어사전 */
+.desc_li02 {
+    position:relative;
+    .li {
+        position:relative;padding:20px 0;border-top:1px solid #eaeaea;
+        .tit {
+            position:absolute;left:0;top:13px;color:#da2128;font-size:36px;font-weight:700;line-height:36px;
+        }
+        li {
+            position:relative;margin-top:20px;padding-left:120px;
+            &:first-child {
+                margin-top:0;
+            }
+            strong {
+                display: block;margin-bottom:10px;font-weight:700;
+            }
+        }
+    }
+}
+
+/* desc_num */
+.desc_num {
+    li {
+        position:relative;margin-top:4px;padding-left:25px;
+        &:first-child {
+            margin-top:0;
+        }
+        em {
+            position:absolute;left:0;top:0;
+        }
+    }
+}
+
 
 /* .pop_qna */
 .pen_qna {
