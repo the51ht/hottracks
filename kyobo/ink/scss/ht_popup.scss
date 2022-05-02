@@ -154,7 +154,7 @@
 
 /* 만년필이 궁금하세요 */
 .pen_pop_wrap {
-    margin-top:-1px !important;padding-top:1px;background:#fff;
+    margin-top:-1px !important;padding-top:1px;background:#fff;font-size:14px;line-height:22px;
     .tab_menu_a {
         display:table;width:100%;table-layout:fixed;height:42px;border-bottom:2px solid #000;margin-bottom:30px;
         a {
@@ -177,13 +177,11 @@
         }
     }
     .pen_title {
-        color:#595959;
-        &+.pen_sub_menu_wrap {
-            padding-top:20px;
-        }
+        margin-bottom:20px;color:#595959;
     }
-    .sc_box_s1 {
-        position:relative;min-height:calc(75vh - 200px) !important;
+    .sc_box_s1,
+    .sc_box_s3,
+    .sc_box_s4 {
         &:before {
             position:absolute;right:0;width:2px;height:100%;background:#f0f0f0;content:"";
         }
@@ -191,10 +189,19 @@
             padding-right:0 !important;
         }    
     }
+    .sc_box_s1 {
+        position:relative;min-height:calc(75vh - 200px) !important;
+    }
+    .sc_box_s3 {
+        position:relative;min-height:calc(75vh - 147px) !important; 
+    }
+    .sc_box_s4 {
+        position:relative;min-height:calc(75vh - 158px) !important; 
+    }
 }
 
 .tab_ty.pen_sub_menu_wrap {
-    margin:0;padding:20px 0;
+    margin:0;padding:0 0 20px 0;
     li:not(:first-of-type) {
         margin-left:6px;
     }
@@ -206,13 +213,7 @@
 
 /* pen_story */
 .pen_story {
-    position:relative;min-height:calc(75vh - 200px);margin-right:18px;;padding:40px;border:1px solid #000;border-radius:12px;box-sizing:border-box;text-align:left;
-}
-.pen_cont {
-    display:none;font-size:14px;line-height:22px;letter-spacing:-0.3px;
-    &.on {
-        display:block;animation:fade both .5s;
-    }
+    position:relative;min-height:calc(75vh - 200px);margin-right:18px;;padding:40px;border:1px solid #000;border-radius:12px;box-sizing:border-box;letter-spacing:-0.3px;text-align:left;
     .ht_tit05 {
         margin-bottom:22px;
         .point_line:before {
@@ -255,6 +256,12 @@
         margin-top:40px;
     }
 }
+.pen_cont {
+    display:none;
+    &.on {
+        display:block;animation:fade both .5s;
+    }
+}
 
 .desc_li {
     position:relative;
@@ -287,7 +294,33 @@
             }
         }
     }
-} 
+}
+
+/* .pop_qna */
+.pen_qna {
+    .ht_tit05 {
+        margin-bottom:12px;
+    }
+}
+.pop_qna {
+    position:relative;
+    li {
+        padding:20px 0;border-top:1px solid #eaeaea;
+        &:first-child {
+            border-top:2px solid #000;
+        }
+    }
+    .fold_question + .fold_question {
+        margin-top:16px;padding-top:0;border-top:0;
+        &:before {
+            top:0;
+        }
+        &:after {
+            top:21px;
+        }
+    }
+}
+
 
 
 
