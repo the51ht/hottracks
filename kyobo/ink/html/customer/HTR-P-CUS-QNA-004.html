@@ -268,7 +268,6 @@
                                 </tbody>
                             </table>
 
-                            <!-- 22.04.26 답변수신방법 수정 -->
                             <table class="tbl_row">
                                 <caption>답변 수신 방법 테이블로 휴대전화번호 필수 입력, 이메일 입력, 답변 메일 받기 체크 여부, 회원 정보 변경하기 버튼 링크를 나타낸 표입니다.</caption>
                                 <colgroup>
@@ -281,6 +280,20 @@
                                             <h3 class="ht_tit06">답변수신방법</h3>
                                         </th>
                                     </tr>
+                                    <!-- 22.05.03 이름 항목추가 -->
+                                    <tr>
+                                        <th scope="row" class="has_btn_sm">이름<span class="required"><span class="hidden">필수입력</span></span></th>
+                                        <td>
+                                            <ul class="chk_col_list">
+                                                <li class="chk_col_item">
+                                                    <div class="valid_check">
+                                                        <input type="tel" id="chk01" class="form_ip" placeholder="이름을 입력해 주세요" value="홍길동" readonly>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <!-- //22.05.03 이름 항목추가 -->
                                     <tr>
                                         <th scope="row" class="has_btn_sm">휴대전화번호<span class="required"><span class="hidden">필수입력</span></span></th>
                                         <td>
@@ -315,6 +328,18 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <th scope="row" class="has_btn_sm">이름<span class="required"><span class="hidden">필수입력</span></span></th>
+                                        <td>
+                                            <ul class="chk_col_list">
+                                                <li class="chk_col_item">
+                                                    <div class="valid_check">
+                                                        <input type="tel" id="chk01" class="form_ip" placeholder="이름을 입력해 주세요">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <th scope="row" class="has_btn_sm">휴대전화번호<span class="required"><span class="hidden">필수입력</span></span></th>
                                         <td>
                                             <ul class="chk_col_list">
@@ -343,12 +368,12 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <!-- //22.04.26 답변수신방법 수정 -->
                         </div>
                         <!-- //tbl_row_wrap -->
 
                         <!-- btn_area -->
                         <div class="btn_area">
+                            <button class="btn_lg btn_black"><span>취소</span></button><!-- 22.05.03 취소 버튼 추가 : 부정 버튼 class="btn_black" (취소, 삭제) -->
                             <button class="btn_lg btn_primary"><span>등록</span></button>
                         </div>
                         <!-- //btn_area -->
