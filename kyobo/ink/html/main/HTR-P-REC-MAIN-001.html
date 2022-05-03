@@ -754,6 +754,7 @@ $(function(){
 		if($('.cur_prod_list_wrap').hasClass('len')) {
 			var idx = $(this).closest('.swiper-slide').index();
 			curProdViewSwiperCont.slideTo(idx);
+			console.log('sss')
 		}
 
 		$('.cur_prod_view_list a').removeClass('on');
@@ -762,6 +763,11 @@ $(function(){
 		$(s).parent().find('.tab_cont').removeClass('on');
 		$(s).addClass('on');
 
+        e.preventDefault();
+    });
+
+    $('.cur_prod_list_wrap .swiper-button-prev, .cur_prod_list_wrap .swiper-button-next').click(function(e){
+		$('.cur_prod_view_list .swiper-slide-active a').trigger('click');
         e.preventDefault();
     });
 });

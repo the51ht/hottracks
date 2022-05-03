@@ -221,7 +221,7 @@
 
 
 
-<!--  이미지 팝업(하단) : popImgBn01 -->
+<!--  이미지 팝업(하단) : popImgBn01 --><!-- 22.05.03 전체 구조 변경 -->
 <div id="popImgBn01" class="dialog_wrap btm_wel_wrap" data-class="dialog_bottom">
 	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
     <!-- dialog_header -->
@@ -235,17 +235,58 @@
 
 	<!-- dialog_contents -->
 	<div class="dialog_contents">
-        <div class="pop_belt_banner">
-            <img src="../../images/temp/@img_wel_pop_holiday_belt.jpg" alt="">
-        </div>
+        <!-- ht_under_banner -->
+        <div class="ht_under_banner">
+            <div class="swiper-container">
+                <!-- swiper-wrapper -->
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="pop_belt_banner">
+                                <img src="../../images/temp/@img_wel_pop_holiday_belt.jpg" alt="">
+                            </div>
+                            <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
+                                <div class="tag_wrap">
+                                    <span class="tag_item">10%</span>
+                                </div>
+                                <div class="main_msg">배송비 걱정 없이 쇼핑하는 거 어떠세요?</div>
+                                <div class="sub_txt">한 번만 써본 사람은 없는 마스크 믿고 쓰는 아에르!</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="pop_belt_banner">
+                                <img src="../../images/temp/@img_under_banner02.jpg" alt="">
+                            </div>   
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="pop_belt_banner">
+                                <img src="../../images/temp/@img_under_banner03.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- //swiper-wrapper -->
 
-        <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
-            <div class="tag_wrap">
-                <span class="tag_item">10%</span>
+                <!-- ht_option_box -->
+                <div class="ht_option_box">
+
+                    <!-- swiper_control -->
+                    <div class="swiper_control02">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <!-- //swiper_control -->
+                </div>
+                <!-- //ht_option_box -->
             </div>
-            <div class="main_msg">배송비 걱정 없이 쇼핑하는 거 어떠세요?</div>
-            <div class="sub_txt">한 번만 써본 사람은 없는 마스크 믿고 쓰는 아에르!</div>
         </div>
+        <!-- //ht_under_banner -->
+
 	</div>
 	<!-- //dialog_contents -->
 </div>

@@ -1756,7 +1756,8 @@ function curProdViewSwiper(){
                 activeIndexChange: function () {
                     setTimeout(function(){
                         $('.cur_prod_view_list a').removeClass('on')
-                        $('.cur_prod_view_list .swiper-slide-active a').trigger('click');
+                        //$('.cur_prod_view_list .swiper-slide-active a').trigger('click');
+                        $('.cur_prod_view_list .swiper-slide-active a').addClass('on')
                     }, 100);
                 }
             },
