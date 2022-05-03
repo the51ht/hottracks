@@ -116,7 +116,7 @@
 
 
 /***** 카테고리 메인 *****/
-/* 브랜드 골라보기 */
+/*** 브랜드 골라보기 ***/
 .brand_search_wrap {
     position:relative;margin-top:-1px !important;z-index:2;
     .form_search_box {
@@ -152,9 +152,10 @@
 }
 
 
-/* 만년필이 궁금하세요 */
+
+/*** 만년필이 궁금하세요 ***/
 .pen_pop_wrap {
-    margin-top:-1px !important;padding-top:1px;background:#fff;
+    margin-top:-1px !important;padding-top:1px;background:#fff;font-size:14px;line-height:22px;
     .tab_menu_a {
         display:table;width:100%;table-layout:fixed;height:42px;border-bottom:2px solid #000;margin-bottom:30px;
         a {
@@ -177,13 +178,11 @@
         }
     }
     .pen_title {
-        color:#595959;
-        &+.pen_sub_menu_wrap {
-            padding-top:20px;
-        }
+        margin-bottom:20px;color:#595959;
     }
-    .sc_box_s1 {
-        position:relative;min-height:calc(75vh - 200px) !important;
+    .sc_box_s1,
+    .sc_box_s3,
+    .sc_box_s4 {
         &:before {
             position:absolute;right:0;width:2px;height:100%;background:#f0f0f0;content:"";
         }
@@ -191,10 +190,28 @@
             padding-right:0 !important;
         }    
     }
+    .sc_box_s1 {
+        position:relative;min-height:calc(75vh - 200px) !important;
+        .pen_story {
+            min-height:calc(75vh - 200px);
+        }
+    }
+    .sc_box_s3 {
+        position:relative;min-height:calc(75vh - 147px) !important;
+        .pen_story {
+            min-height:calc(75vh - 147px);
+        }
+    }
+    .sc_box_s4 {
+        position:relative;min-height:calc(75vh - 158px) !important;
+        .pen_story {
+            min-height:calc(75vh - 158px);
+        }
+    }
 }
 
 .tab_ty.pen_sub_menu_wrap {
-    margin:0;padding:20px 0;
+    margin:0;padding:0 0 20px 0;
     li:not(:first-of-type) {
         margin-left:6px;
     }
@@ -204,14 +221,17 @@
 }
 
 
-/* pen_story */
+/** pen_story **/
 .pen_story {
-    position:relative;min-height:calc(75vh - 200px);margin-right:18px;;padding:40px;border:1px solid #000;border-radius:12px;box-sizing:border-box;text-align:left;
-}
-.pen_cont {
-    display:none;font-size:14px;line-height:22px;letter-spacing:-0.3px;
-    &.on {
-        display:block;animation:fade both .5s;
+    position:relative;margin-right:18px;;padding:40px;border:1px solid #000;border-radius:12px;box-sizing:border-box;letter-spacing:-0.3px;text-align:left;
+    .ht_cont_s {
+        overflow:hidden;
+    }
+    .pen_half {
+        float:left;width:calc(50% - 20px);margin-left:40px;
+        &:first-child {
+            margin-left:0;
+        }
     }
     .ht_tit05 {
         margin-bottom:22px;
@@ -227,6 +247,9 @@
         &:last-child {
             margin-bottom:0;
         }
+        .tit {
+            margin-bottom:15px;color:#000;font-size:14px;font-weight:700;line-height:22px;
+        }
         .txt {
             float:left;width:calc(50% - 20px);
         }
@@ -239,6 +262,14 @@
                 margin-top:0;
             }
         }
+        p + ul,
+        p + ol {
+            margin-top:15px;
+        }
+        img + ul,
+        img + ol {
+            margin-top:20px;
+        }
         &.left {
             .txt {
                 float:right;
@@ -248,14 +279,33 @@
             }
         }
     }
-    .img_resp {
-        margin-top:25px;
+    .desc_txt {
+        margin:-10px 0 25px 0;
     }
-    .img_resp02 {
-        margin-top:40px;
+    .point {
+        color:#da2128 !important;
+    }
+    .desc_color {
+        color:#595959;
+    }
+    .desc_bold {
+        font-weight:500;
+    }
+    .desc + .img_resp {
+        margin-top:-25px;
+    }
+    .img_resp {
+        margin-top:15px;
+    }
+}
+.pen_cont {
+    display:none;
+    &.on {
+        display:block;animation:fade both .5s;
     }
 }
 
+/* desc_li */
 .desc_li {
     position:relative;
     .li {
@@ -278,6 +328,15 @@
             }
             .txt_s {
                 margin:15px 0 0 55px;
+                li {
+                    position:relative;margin-top:10px;padding-left:34px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    em {
+                        position:absolute;left:0;top:0;
+                    }
+                }
             }
             .img_s {
                 margin:10px 0 0 55px;
@@ -286,10 +345,89 @@
                 }
             }
         }
+        &.ty02 {
+            .tit {
+                padding-left:0;
+            }
+            .txt_s {
+                margin-left:0;
+            }
+        }
     }
-} 
+}
 
+/* 필기구 용어사전 */
+.desc_li02 {
+    position:relative;
+    .li {
+        position:relative;padding:20px 0;border-top:1px solid #eaeaea;
+        .tit {
+            position:absolute;left:0;top:13px;color:#da2128;font-size:36px;font-weight:700;line-height:36px;
+        }
+        li {
+            position:relative;margin-top:20px;padding-left:120px;
+            &:first-child {
+                margin-top:0;
+            }
+            strong {
+                display: block;margin-bottom:10px;font-weight:700;
+            }
+        }
+    }
+}
 
+/* desc_num */
+.desc_num {
+    li {
+        position:relative;margin-top:4px;padding-left:24px;
+        &:first-child {
+            margin-top:0;
+        }
+        em {
+            position:absolute;left:0;top:0;
+        }
+    }
+    .desc_br {
+        li {
+            margin-top:4px;
+        }
+    }
+}
+
+/* desc_br */
+.desc_br {
+    li {
+        position:relative;margin-top:4px;padding-left:8px;color:#595959;
+        &:before {
+            position:absolute;left:0;top:8px;width:3px;height:3px;background-color:#999;border-radius:50%;content:"";
+        }
+    }
+}
+
+/* pop_qna */
+.pen_qna {
+    .ht_tit05 {
+        margin-bottom:12px;
+    }
+}
+.pop_qna {
+    position:relative;
+    li {
+        padding:20px 0;border-top:1px solid #eaeaea;
+        &:first-child {
+            border-top:2px solid #000;
+        }
+    }
+    .fold_question + .fold_question {
+        margin-top:16px;padding-top:0;border-top:0;
+        &:before {
+            top:0;
+        }
+        &:after {
+            top:21px;
+        }
+    }
+}
 
 
 
