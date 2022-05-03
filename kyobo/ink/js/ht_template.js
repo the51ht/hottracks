@@ -388,7 +388,7 @@ function mktPop(){
         },
     };
     if($parent.find('.swiper-slide').length > 1) {
-        musOrderSwiper = new Swiper($target.get(), slideOption);
+        mktPopSwiper = new Swiper($target.get(), slideOption);
         $parent.addClass('swiper-on');
     }
 }

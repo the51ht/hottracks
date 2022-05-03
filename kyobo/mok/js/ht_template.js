@@ -1550,3 +1550,53 @@ $(function(){
 
 
 
+/* 마케팅 팝업 */
+function mktPop(){
+    var $target = $('.ht_mkt_pop .swiper-container');
+
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.ht_mkt_pop');
+        $parent.addClass('ht_mkt_idx_' + index);
+        var slideOption = {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 'auto',
+            centeredSlides: false,
+            loop: true,
+            loopsSlide: 1,
+            spaceBetween: 0,
+            /*effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },*/ 
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            speed: 700,
+            pagination: {
+                el: ('.ht_mkt_idx_' + index + ' .swiper-pagination'),
+                type: 'fraction',
+                formatFractionCurrent: function (number) {
+                    return KyoboHottracks.mok.setPrependZero(number, 2);
+                },
+                formatFractionTotal: function (number) {
+                    return KyoboHottracks.mok.setPrependZero(number, 2);
+                },
+            }
+        };
+        if($parent.find('.swiper-slide').length > 1) {
+            mktPopSwiper = new Swiper(this, slideOption);
+            $('.ht_mkt_pop .option_box').css('display','flex');
+        }
+    });
+}
+
+$(function(){
+    if(!$('.ht_mkt_pop').length) return;
+    mktPop();
+});
+
+
+
+
