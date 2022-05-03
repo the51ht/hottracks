@@ -1004,6 +1004,170 @@
 
 
 
+/*** 이전 주문 정보 ***/
+.order_his_list_wrap{
+    margin-top: 32px;
+    .info_select_a{
+        display: flex; justify-content: center;margin: 0 0 0 0;
+        .btn_select_ty + .btn_select_ty {
+            margin-left: 5px;
+        }
+    }
+    .order_his_list{
+        margin-top: 16px;
+        > li{
+            margin-bottom: 20px; padding: 0 0 20px; border-bottom: 1px solid #EAEAEA;
+        }
+    }
+    .order_his_tit{
+        height: 44px;padding: 0 19px;background: #f7f7f7;-webkit-box-sizing: border-box;box-sizing: border-box;overflow: hidden;font-size: 12px;line-height: 44px;background-color: #F2F2F2;border-radius: 4px;
+        &.order_st1{
+            background-color: #F5F5FA;
+            .order_st{
+                color: #474C98;
+            }
+        }
+        .order_st{
+            font-size: 12px;color: #767676;font-weight: 500;
+            + strong{
+                color: #000000;margin-left: 13px;position: relative;
+                &:before{
+                    content: "";position: absolute;width: 1px;height: 10px;background-color: #D5D5D5;left: -8px;top: 2px;
+                }
+                + span{
+                    color: #000000;margin-left: 5px;
+                }
+            }
+        }
+    }
+    .order_his_item{
+        li{
+            border-bottom: 1px dashed #D5D5D5; padding: 0 0 15px; margin:16px 4px 0;
+            &:last-child{
+                border: 0; padding-bottom: 0;
+            }
+            .order_his_item_info{
+                float: left;width: calc(76.1% - 12px); margin-left: 12px;
+                .info_s1{
+                    font-size: 13px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;display: inline-block;max-width: calc(100% - 10px);font-weight: 500; margin-top: 2px;
+                }
+                .info_s2{
+                    font-size: 12px;color: #767676;margin-top: 3px; display: flex;justify-content: start;
+                    p + span{
+                        margin-left: 16px;position: relative;
+                        &:before{
+                            content: "";position: absolute;width: 1px;height: 10px;background-color: #D5D5D5;left: -8px;top: 3px;
+                        }
+                    }
+                }
+                .info_s3{
+                    font-size: 12px;color: #000000;margin-top: 5px;font-weight: 700;margin-top: 12px; display: inline-block;
+                }
+            }
+            .order_his_item_img{
+                float: left;width: 78px;border-radius: 4px;overflow: hidden;
+            }
+            &:after{
+                clear: both; content: ""; display: block;
+            }
+        }
+        .order_his_item_btn{
+            .btn_area{
+                justify-content: center;display: flex;width: 100%;padding-top: 14px;
+                button + button{
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+/*** 주문/배송내역 ***/
+.cus_order_detail_wrap{
+    margin-top: 32px;
+    .cus_order_detail_box{
+        border: 1px solid #EAEAEA;border-radius: 4px;padding: 19px 19px 16px; margin-top: 8px; 
+    }
+    .cus_order_tit{
+        margin-top: 34px;font-size: 14px;color: #767676;font-weight: 400;
+    }
+    .cus_order_num{
+        display: flex;justify-content: start;
+        span{
+            font-size: 14px;font-weight: 500;color: #000;line-height: 29px;
+        }
+        strong{
+            font-size: 20px;font-weight: 700;color: #DA2128;margin-left: auto;
+        }
+    }
+    .item_dd_left, .item_dd_right{
+        padding: 14px 19px 10px;
+        dl{
+            display: flex;flex-wrap: wrap;
+        }
+        dt, dd{
+            padding: 7px 0 6px; font-size: 14px;
+        }
+        dt{
+            flex: 0 0 34%;width: 20px;
+        }
+        dd{
+            flex: 0 0 66%;width: 40px;
+        }
+    }
+    .item_dd_right{
+        dd{
+            text-align: right;
+        }
+    }
+    .price_normal_size span{
+        font-size: 14px; font-weight: 700;
+    }
+    .price_color span{
+        color: #DA2128; font-size: 14px; font-weight: 700;
+    }
+    .price_total_size span{
+        color: #DA2128; font-size: 20px; font-weight: 700;line-height: 14px;
+    }
+    .cus_price_total_tit{
+        font-weight: 700;
+    }
+    dt.total_border, dt.total_border + dd{
+        border-top:1px solid #EAEAEA;padding: 22px 0 6px;margin-top: 10px;
+    }
+
+
+    /* 주문취소상품 정보 */
+    .cancel_info_list{
+        .cancel_info_1 span{
+            font-size: 12px;color: #767676;margin-top: 4px;display: inline-block;
+        }
+        .cancel_info_2 span{
+            font-size: 14px; font-weight: 500;
+        }
+    }
+    .btn_txt_more{
+        margin: -18px 0 10px 0;
+    }
+
+    /* 주문내용 */
+    .earn_points{
+        border-top: 1px solid #EAEAEA;padding: 20px 0 7px;margin-top: 12px;
+        strong{
+            font-size: 13px;
+            span{
+                color: #DA2128;
+            }
+        }
+        p{
+            font-size: 12px;color: #767676;margin-top: 4px;
+        }
+    }
+}
+
+
+
+
 
 
 

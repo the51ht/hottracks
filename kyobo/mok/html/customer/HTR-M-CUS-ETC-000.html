@@ -89,7 +89,7 @@
         <!-- tab_nav -->
         <div class="tab_nav_area">
             <a href="#n" class="active">이전 주문 정보</a><!-- 활성화 class="active" -->
-            <a href="#n" style="width:60%;">핫트랙스 예치금 환불 신청</a>
+            <a href="#n" style="width:60%;">예치금 환불 신청</a>
         </div>
         <!-- //tab_nav-->
 
@@ -99,11 +99,257 @@
             <div class="info_text_box mb">
                 <ul class="bul_list">
                     <li class="bul_item_dot font_size_xs">2022년 8월 통합 이후 주문 내역은 <a href="#n">[마이룸 > 주문내역]</a>에서 조회하실 수 있습니다.</li>
+                    <li class="bul_item_dot font_size_xs">PC에서 주문하신 내역은 모바일에서 취소/반품/교환이 불가합니다.</li>
+                    <li class="bul_item_dot font_size_xs">상품준비 이전 단계까지만 주문 취소가 가능합니다.</li>
+                    <li class="bul_item_dot font_size_xs">상품준비 이전 단계에서의 부분취소는 [1:1문의]를 이용하시거나 고객센터로 연락주시기 바랍니다.</li>
+                    <li class="bul_item_dot font_size_xs">상품평 작성에 대한 포인트 적립은 작성 후 익일 23시경 적립됩니다.</li>
+                    <li class="bul_item_dot font_size_xs">CD, DVD 관련 상품은 상품평을 작성하셔도 후기 포인트가 적립되지 않습니다.</li>
                 </ul>
             </div>
             <!-- //info_text_box -->
 
-            <p style="height:300px;background-color:#f7f7f7;color:#000;font-size:15px;line-height:300px;text-align:center;">ASIS  주문내역 화면호출 </p>
+            
+
+            <div class="order_his_list_wrap">
+                
+                <!-- info_select_a -->
+                <div class="info_select_a">
+                    <button class="btn_select_ty btn_select1" data-role="btn-dialog" data-target="#popSelectCate"><span>최근 6개월</span></button>
+                    <button class="btn_select_ty btn_select2" data-role="btn-dialog" data-target="#popSelectCate2"><span>주문상태 전체</span></button>
+                </div>
+                <!-- //info_select_a -->
+
+                <!-- 팝업 : popSelectCate -->
+                <div id="popSelectCate" class="dialog_wrap has_btn checkbox_btm" data-class="dialog_bottom">
+                    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+                    <!-- dialog_header -->
+                    <div class="dialog_header">
+                        <div class="dialog_title">조회기간 선택</div>
+                    </div>
+                    <!-- //dialog_header -->
+
+                    <!-- dialog_contents -->
+                    <div class="dialog_contents checkbox_type">
+                        <!-- cks_list -->
+                        <ul class="cks_list">
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate" class="checkbox_cm" value="최근 6개월">
+                                    <span class="label_for_sp">최근 6개월</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate" class="checkbox_cm" value="6개월 이전">
+                                    <span class="label_for_sp">6개월 이전</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <!-- //cks_list -->
+                    </div>
+                    <!-- //dialog_contents -->
+
+                    <!-- dialog_footer -->
+                    <div class="dialog_footer ctg_cks"></div>
+                    <!-- //dialog_footer -->
+                </div>
+                <!-- //팝업 : popSelectCate -->
+
+                <!-- 팝업 : popSelectCate2 -->
+                <div id="popSelectCate2" class="dialog_wrap has_btn checkbox_btm" data-class="dialog_bottom">
+                    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+                    <!-- dialog_header -->
+                    <div class="dialog_header">
+                        <div class="dialog_title">주문상태 선택</div>
+                    </div>
+                    <!-- //dialog_header -->
+
+                    <!-- dialog_contents -->
+                    <div class="dialog_contents checkbox_type">
+                        <!-- cks_list -->
+                        <ul class="cks_list">
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate2" class="checkbox_cm" value="주문상태 전체">
+                                    <span class="label_for_sp">주문상태 전체</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate2" class="checkbox_cm" value="결제대기">
+                                    <span class="label_for_sp">결제대기</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate2" class="checkbox_cm" value="결제완료">
+                                    <span class="label_for_sp">결제완료</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate2" class="checkbox_cm" value="상품준비">
+                                    <span class="label_for_sp">상품준비</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate2" class="checkbox_cm" value="배송중">
+                                    <span class="label_for_sp">배송중</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate2" class="checkbox_cm" value="배송완료">
+                                    <span class="label_for_sp">배송완료</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="ck_label_wrap">
+                                    <input type="radio" name="popSelectCate2" class="checkbox_cm" value="취소/반품/교환">
+                                    <span class="label_for_sp">취소/반품/교환</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <!-- //cks_list -->
+                    </div>
+                    <!-- //dialog_contents -->
+
+                    <!-- dialog_footer -->
+                    <div class="dialog_footer ctg_cks"></div>
+                    <!-- //dialog_footer -->
+                </div>
+                <!-- //팝업 : popSelectCate -->
+
+<script>
+/* 확인용 */
+$(function(){
+    $('#popSelectCate .btn_dialog_close').click(function(){ 
+        var listVar = $('input[name=popSelectCate]:checked').val();
+        $('.btn_select1').data('target', '#popSelectCate').find('span').text(listVar);
+    }); 
+});
+
+$(function(){
+    $('#popSelectCate2 .btn_dialog_close').click(function(){ 
+        var listVar = $('input[name=popSelectCate2]:checked').val();
+        $('.btn_select2').data('target', '#popSelectCate2').find('span').text(listVar);
+    }); 
+});
+</script>
+
+                <ul class="order_his_list">
+                    <li>
+                        <div class="order_his_tit">
+                            <p>
+                                <span class="order_st">취소</span>
+                                <strong>2021.11.23</strong>
+                                <span>101112400407</span>
+                            </p>
+                        </div>
+                        <ul class="order_his_item">
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <div class="info_s2">
+                                        <p>나무(Green)</p>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3">4,420원</span>
+                                </div>
+                                <div class="order_his_item_btn">
+                                    <div class="btn_area">
+                                        <button type="button" class="btn_md btn_line_gray"><span class="text">배송조회</span></button>
+                                        <button type="button" class="btn_md btn_line_gray"><span class="text">상품후기 작성</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="order_his_tit">
+                            <p>
+                                <span class="order_st">배송완료</span>
+                                <strong>2021.11.23</strong>
+                                <span>101112400407</span>
+                            </p>
+                        </div>
+                        <ul class="order_his_item">
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <div class="info_s2">
+                                        <p>나무(Green)</p>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3">4,420원</span>
+                                </div>
+                                <div class="order_his_item_btn">
+                                    <div class="btn_area">
+                                        <button type="button" class="btn_md btn_line_gray"><span class="text">배송조회</span></button>
+                                        <button type="button" class="btn_md btn_line_gray"><span class="text">상품후기 작성</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="order_his_tit order_st1">
+                            <p>
+                                <span class="order_st">결제완료</span>
+                                <strong>2021.11.23</strong>
+                                <span>101112400407</span>
+                            </p>
+                        </div>
+                        <ul class="order_his_item">
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <div class="info_s2">
+                                        <p>나무(Green)</p>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3">4,420원</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <div class="info_s2">
+                                        <p>나무(Green)</p>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3">4,420원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 더보기 버튼 more_btn에 hidden Class  추가하면 버튼 안보임 -->
+            <div class="btn_more_div">
+                <button class="more_btn">
+                    <span class="txt">더보기</span>
+                    <span class="btn_more_icon"></span>
+                </button>
+            </div>
+            <!-- //더보기 -->
+            
         </div>
         <!-- //이전 주문 정보 -->
     </div>
