@@ -116,7 +116,7 @@
 
 
 /***** 카테고리 메인 *****/
-/* 브랜드 골라보기 */
+/*** 브랜드 골라보기 ***/
 .brand_search_wrap {
     position:relative;margin-top:-1px !important;z-index:2;
     .form_search_box {
@@ -152,7 +152,8 @@
 }
 
 
-/* 만년필이 궁금하세요 */
+
+/*** 만년필이 궁금하세요 ***/
 .pen_pop_wrap {
     margin-top:-1px !important;padding-top:1px;background:#fff;font-size:14px;line-height:22px;
     .tab_menu_a {
@@ -211,9 +212,18 @@
 }
 
 
-/* pen_story */
+/** pen_story **/
 .pen_story {
     position:relative;min-height:calc(75vh - 200px);margin-right:18px;;padding:40px;border:1px solid #000;border-radius:12px;box-sizing:border-box;letter-spacing:-0.3px;text-align:left;
+    .ht_cont_s {
+        overflow:hidden;
+    }
+    .pen_half {
+        float:left;width:calc(50% - 20px);margin-left:40px;
+        &:first-child {
+            margin-left:0;
+        }
+    }
     .ht_tit05 {
         margin-bottom:22px;
         .point_line:before {
@@ -228,6 +238,9 @@
         &:last-child {
             margin-bottom:0;
         }
+        .tit {
+            margin-bottom:15px;color:#000;font-size:14px;font-weight:700;line-height:22px;
+        }
         .txt {
             float:left;width:calc(50% - 20px);
         }
@@ -239,6 +252,14 @@
             &:first-child {
                 margin-top:0;
             }
+        }
+        p + ul,
+        p + ol {
+            margin-top:15px;
+        }
+        img + ul,
+        img + ol {
+            margin-top:20px;
         }
         &.left {
             .txt {
@@ -253,19 +274,19 @@
         margin:-10px 0 25px 0;
     }
     .point {
-        color:#da2128;
+        color:#da2128 !important;
     }
-    .mt {
-        margin-top:15px;
+    .desc_color {
+        color:#595959;
+    }
+    .desc_bold {
+        font-weight:500;
     }
     .desc + .img_resp {
         margin-top:-25px;
     }
     .img_resp {
         margin-top:15px;
-    }
-    .img_resp02 {
-        margin-top:40px;
     }
 }
 .pen_cont {
@@ -275,6 +296,7 @@
     }
 }
 
+/* desc_li */
 .desc_li {
     position:relative;
     .li {
@@ -348,7 +370,7 @@
 /* desc_num */
 .desc_num {
     li {
-        position:relative;margin-top:4px;padding-left:25px;
+        position:relative;margin-top:4px;padding-left:24px;
         &:first-child {
             margin-top:0;
         }
@@ -356,10 +378,24 @@
             position:absolute;left:0;top:0;
         }
     }
+    .desc_br {
+        li {
+            margin-top:4px;
+        }
+    }
 }
 
+/* desc_br */
+.desc_br {
+    li {
+        position:relative;margin-top:4px;padding-left:8px;color:#595959;
+        &:before {
+            position:absolute;left:0;top:8px;width:3px;height:3px;background-color:#999;border-radius:50%;content:"";
+        }
+    }
+}
 
-/* .pop_qna */
+/* pop_qna */
 .pen_qna {
     .ht_tit05 {
         margin-bottom:12px;
@@ -383,9 +419,6 @@
         }
     }
 }
-
-
-
 
 
 
