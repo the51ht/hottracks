@@ -777,6 +777,11 @@ button.btn_black:active, button.btn_black:focus {
   background: #000;
 }
 
+button.btn_black:disabled {
+  background: #bebebe;
+  border-color: #bebebe;
+}
+
 a.btn_black.disabled [class^=ico_], a.btn_black[aria-disabled] [class^=ico_], a.btn_black[disabled] [class^=ico_] {
   opacity: .4;
 }
@@ -1842,11 +1847,17 @@ button.btn_text_link:active .text, button.btn_text_link:focus .text {
 
 /* Btn : Contents */
 .mc_cont .btn_area {
-  margin-top: 30px;
+  margin: 30px -2px 0 -2px;
   padding: 0;
+  font-size: 0;
 }
 
 .mc_cont .btn_area button, .mc_cont .btn_area a {
+  width: calc(50% - 4px);
+  margin: 0 2px;
+}
+
+.mc_cont .btn_area button:only-child, .mc_cont .btn_area a:only-child {
   width: 100%;
 }
 

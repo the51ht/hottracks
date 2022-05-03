@@ -1531,7 +1531,7 @@ function curProdA(){
                 }
             }
         };
-        if($target.find('.swiper-slide').length > 2) {
+        if($target.find('.swiper-slide').length > 1) {
             $('.cur_prod_swiper_area').addClass('swiper-on');
             curProdASwiper = new Swiper(this, slideOption);
         }
