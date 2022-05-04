@@ -1260,45 +1260,24 @@
         .shopping_img {
             position:absolute;
             left:50%;
-            top:-50px;
+            top:-100px;
             margin-left:-80px;
-            height:335px;
+            width:160px;
             z-index: 1;
-            animation:wel_pickup_shoppingbag .5s both 1 .7s;
             img {
                 height:100%;
             }
         }
-        @keyframes wel_pickup_shoppingbag  {
-            0% {
-                transform: translateY(0%);
-            }
-            50% {
-                transform: translateY(-5%);
-            }
-            100% {
-                transform: translateY(0%);
-            }
-        }
         .pick_up_bubble {
-            width: 0;
+            width:92px;
             height:54px;
             position:absolute;
             background:url(../images/guide/wel_pickup_bubble.svg) no-repeat center center/ 99%;
             left:50%;
-            top:38%;
+            top:33%;
             transform: translateX(-100%);
             z-index: 2;
             animation: wel_pick_up_bubble forwards 1 .5s .5s;
-        }
-        @keyframes wel_pick_up_bubble {
-            0% {
-                width:0;  
-            }
-     
-            100% {
-                width:92px;
-            }
         }
     }
     .tit {
@@ -1334,20 +1313,22 @@
             .num_icon {
                 width:34px;
                 height:34px;
+                left:2px;
                 flex-shrink: 0;
                 position:relative;
                 z-index: 2;
                 line-height:34px;
                 text-align: center;
                 font-weight: 700;
-                margin-right:10px;
+                
                 background: url(../images/guide/wel_pickup_num.svg) no-repeat center /99%;
             }
             .step_icon {
-                width:75px;
-                height:78px;
-                margin-right:24px;
+                position:relative;
+                width:98px;
+                height:80px;
                 flex-shrink: 0;
+                margin-right:15px;
             }
             .desc {
                 min-width:130px;
@@ -1361,8 +1342,13 @@
             }
             @for $pkn from 1 through 3 {
                 &:nth-of-type(#{$pkn})  .step_icon {
-                    background:url(../images/guide/wel_pickup_step#{$pkn}.svg) no-repeat center /contain;
+                    background:url(../images/guide/wel_pickup_step#{$pkn}.svg) no-repeat center;
                     
+                }
+            }
+            &:nth-child(3) {
+                .step_icon {
+                    left:-5px;
                 }
             }
         }

@@ -5444,6 +5444,8 @@
   line-height: 18px;
   -webkit-animation: livNewMsg both infinite 5s;
           animation: livNewMsg both infinite 5s;
+  -webkit-transform-origin: 80% center;
+          transform-origin: 80% center;
 }
 
 .liv_new_msg p:before {
@@ -6592,16 +6594,31 @@
 .gft_main {
   padding: 40px 20px 50px 20px !important;
   background: #8965ff;
+  text-align: center;
 }
 
 .gft_main .mc_tit {
+  position: relative;
+  display: inline-block;
   height: 91px;
   text-align: center;
   opacity: 1 !important;
 }
 
 .gft_main .mc_tit img {
+  position: relative;
   height: 91px;
+}
+
+.gft_main .mc_tit:before {
+  position: absolute;
+  left: 118px;
+  top: 3px;
+  width: 83px;
+  height: 51px;
+  background: url("../images/main/tit_gft_main02.svg") center/100% no-repeat;
+  content: "";
+  opacity: 0.6;
 }
 
 .gft_main .btn_more_view span {
@@ -6656,6 +6673,7 @@
   top: 7px;
   width: 100%;
   z-index: 2;
+  text-align: left;
 }
 
 .gft_main_msg p {
@@ -6875,6 +6893,7 @@
 /* gft_slide_view */
 .gft_slide_view {
   margin-top: 24px;
+  text-align: left;
 }
 
 .gft_slide_view .prod_list {

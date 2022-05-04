@@ -2407,7 +2407,7 @@
 .liv_new_msg {
     position:absolute;right:0;top:30px;z-index:2;
     p {
-        position:relative;right:11px;top:0;padding:11px 10px 9px 10px;background:#d4ff1a;border:solid #000;border-width:2px 3px 3px 2px;border-radius:30px;color:#000;font-size:12px;font-weight:500;line-height:18px;animation:livNewMsg both infinite 5s;
+        position:relative;right:11px;top:0;padding:11px 10px 9px 10px;background:#d4ff1a;border:solid #000;border-width:2px 3px 3px 2px;border-radius:30px;color:#000;font-size:12px;font-weight:500;line-height:18px;animation:livNewMsg both infinite 5s;transform-origin:80% center;
         &:before {
             position:absolute;right:16px;bottom:-11px;width:0;height:0;border-top:10px solid #000;border-left:9px solid transparent;border-right:9px solid transparent;content:"";z-index:2; 
         }
@@ -2917,11 +2917,16 @@
 
 /* .gft_main */
 .gft_main {
-    padding:40px 20px 50px 20px !important;background:#8965ff;
+    padding:40px 20px 50px 20px !important;background:#8965ff;text-align:center;
     .mc_tit {
+        position:relative;
+        display:inline-block;
         height:91px;text-align:center;opacity:1 !important;
         img {
-            height:91px;
+            position:relative;height:91px;
+        }
+        &:before {
+            position:absolute;left:118px;top:3px;width:83px;height:51px;background:url('../images/main/tit_gft_main02.svg') center/100% no-repeat;content:"";opacity:0.6;
         }
     }
     .btn_more_view span {
@@ -2949,7 +2954,7 @@
 
 /* .gft_main_msg */
 .gft_main_msg {
-    position:absolute;left:0;top:7px;width:100%;z-index:2;
+    position:absolute;left:0;top:7px;width:100%;z-index:2;text-align:left;
     p {
         display:inline-block;position:relative;left:50%;padding:11px 10px 9px 10px;background:#ffee24;border:solid #000;border-width:2px 3px 3px 2px;border-radius:30px;color:#000;font-size:12px;font-weight:500;line-height:18px;transform:translateX(-50%);animation:gftMainMsg both infinite 10s;
         &:before {
@@ -3015,7 +3020,7 @@
 
 /* gft_slide_view */
 .gft_slide_view {
-    margin-top:24px;
+    margin-top:24px;text-align:left;
     .prod_list {
         overflow:hidden;
         .txt {

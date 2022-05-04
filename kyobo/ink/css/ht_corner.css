@@ -685,8 +685,20 @@
 }
 
 .gft_main .ht_tit_big02 img {
+  position: relative;
   height: 69px;
   margin-left: 40px;
+}
+
+.gft_main .ht_tit_big02:before {
+  position: absolute;
+  left: 39.5%;
+  top: 8%;
+  width: 100px;
+  height: 62px;
+  background: url("../images/main/tit_gft_main02.svg") center/100% no-repeat;
+  content: "";
+  opacity: 0.6;
 }
 
 .gft_main .btn_more_view span {
@@ -3049,8 +3061,8 @@
   line-height: 24px;
   -webkit-animation: livNewMsg both infinite 5s;
           animation: livNewMsg both infinite 5s;
-  -webkit-transform-origin: 80% 10%;
-          transform-origin: 80% 10%;
+  -webkit-transform-origin: 80% 85%;
+          transform-origin: 80% 85%;
 }
 
 .liv_new_msg p:before {
