@@ -2194,328 +2194,330 @@ $(function(){
 </div>
 <!-- //wrapper -->
 
-	<!-- LayerPopup area -->
-	<!-- 팝업 - 최근 본 컨텐츠 -->
-	<div id="popHistoryContents" class="dialog_wrap" data-class="dialog_history">
-		<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
-		<!-- dialog_header -->
-		<div class="dialog_header">
-			<div class="dialog_title">최근 본</div>
-		</div>
-		<!-- //dialog_header -->
-		<!-- dialog_contents -->
-		<div class="dialog_contents">
-			<!-- tab_ty -->
-			<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
-				<!-- swiper-wrapper -->
-				<ul class="swiper-wrapper">
-					<li>
-						<a href="#n" class="on"><!-- 활성화  class="on" -->
-							<span>전체</span>
-						</a>
-					</li>
-					<li>
-						<a href="#n">
-							<span>상품</span>
-						</a>
-					</li>
-					<li>
-						<a href="#n">
-							<span>기획전</span>
-						</a>
-					</li>
-					<li>
-						<a href="#n">
-							<span>이벤트</span>
-						</a>
-					</li>
-					<li>
-						<a href="#n">
-							<span>브랜드</span>
-						</a>
-					</li>
-				</ul>
-				<!-- //swiper-wrapper -->
 
-				<!-- swiper_control -->
-				<div class="swiper_control">
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-				</div>
-				<!-- //swiper_control -->
-			</div>
-			<!-- //tab_ty -->
-			<div class="sort_list_header">
-				<span class="sort_result_desc"><span class="val">35</span>개</span><!-- 220215 : 최근 본 상품 갯수 텍스트 "전체" 삭제 -->
-				<button type="button" class="btn_delete_text"><span class="ico_delete"></span><span class="text">전체삭제</span></button> <!-- 수정 220107 클래스 수정 / btn_delete > btn_delete_text -->
-			</div>
-			<div class="history_list_wrap">
-				<div class="custom_scroll_wrap">
-					<ul class="history_list">
-						<!-- 수정 220107 전시템플릿 가이드 작업으로 상품영역 현행화 -->
-						<!-- CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box type_cover size_sm">
-									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
-											<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box size_sm">
-									<a href="#" class="prod_info">
-										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
-									</a>
-									<span class="prod_author">강민우(돈깡)</span>
-
-									<span class="prod_price">
-										<span class="percent">20%</span>
-										<span class="price">
-											<span class="val">55,268,800</span>
-											<span class="unit">원</span>
-										</span>
-									</span>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
-								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- // CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
-						<!-- CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box type_cover size_sm">
-									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
-											<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box size_sm">
-									<a href="#" class="prod_info">
-										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
-									</a>
-									<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
-								<button type="button" class="btn_history_wish active"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- // CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
-						<!-- CASE 03. 이벤트 -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box type_cover size_sm">
-									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
-											<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box size_sm">
-									<a href="#" class="prod_info">
-										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
-									</a>
-									<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
-										<span class="prod_price">
-											<span class="percent">20%</span>
-											<span class="price">
-												<span class="val">55,268,800</span>
-												<span class="unit">원</span>
-											</span>
-										</span>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- // CASE 03. 이벤트 -->
-						<!-- CASE 04. 핫트랙스 상품 -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box type_cover size_sm">
-									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
-											<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box size_sm">
-									<a href="#" class="prod_info">
-										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
-									</a>
-									<span class="prod_price">
-											<span class="percent">20%</span>
-											<span class="price">
-												<span class="val">55,268,800</span>
-												<span class="unit">원</span>
-											</span>
-										</span>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
-								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- // CASE 04. 핫트랙스 상품 -->
-						<!-- CASE 05. 브랜드 -->
-						<!-- 수정 220422 최근 본 컨텐츠 브랜드 타입 추가 -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box size_sm type_brand">
-									<a href="#" class="prod_link">
-										<span class="img_box">
-											<img src="../../../../assets/common/temporary/temp_brand.png" alt="상품 임시이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box">
-									<a href="#" class="prod_info">
-										<span class="prod_name">브랜드이름이름이름</span>
-									</a>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
-								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- //수정 220422 최근 본 컨텐츠 브랜드 타입 추가 -->
-						<!-- // CASE 04. 핫트랙스 상품 -->
-						<!-- CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box type_cover size_sm">
-									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
-											<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box size_sm">
-									<a href="#" class="prod_info">
-										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
-									</a>
-									<span class="prod_author">강민우(돈깡)</span>
-
-									<span class="prod_price">
-										<span class="percent">20%</span>
-										<span class="price">
-											<span class="val">55,268,800</span>
-											<span class="unit">원</span>
-										</span>
-									</span>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
-								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- // CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
-						<!-- CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box type_cover size_sm">
-									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
-											<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box size_sm">
-									<a href="#" class="prod_info">
-										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
-									</a>
-									<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
-								<button type="button" class="btn_history_wish active"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- // CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
-						<!-- CASE 03. 이벤트 -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box type_cover size_sm">
-									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
-											<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box size_sm">
-									<a href="#" class="prod_info">
-										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
-									</a>
-									<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
-										<span class="prod_price">
-											<span class="percent">20%</span>
-											<span class="price">
-												<span class="val">55,268,800</span>
-												<span class="unit">원</span>
-											</span>
-										</span>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- // CASE 03. 이벤트 -->
-						<!-- CASE 04. 핫트랙스 상품 -->
-						<li class="history_item">
-							<div class="prod_area horizontal">
-								<div class="prod_thumb_box type_cover size_sm">
-									<a href="#" class="prod_link">
-										<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
-											<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
-										</span>
-									</a>
-								</div>
-								<div class="prod_info_box size_sm">
-									<a href="#" class="prod_info">
-										<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
-									</a>
-									<span class="prod_price">
-											<span class="percent">20%</span>
-											<span class="price">
-												<span class="val">55,268,800</span>
-												<span class="unit">원</span>
-											</span>
-										</span>
-								</div>
-							</div>
-							<div class="history_control_box">
-								<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
-								<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
-								<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
-							</div>
-						</li>
-						<!-- // CASE 04. 핫트랙스 상품 -->
-						<!-- // 수정 220107 전시템플릿 가이드 작업으로 상품영역 현행화 -->
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- //dialog_contents -->
+<!-- LayerPopup area -->
+<!-- 팝업 - 최근 본 컨텐츠 -->
+<div id="popHistoryContents" class="dialog_wrap" data-class="dialog_history">
+	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+	<!-- dialog_header -->
+	<div class="dialog_header">
+		<div class="dialog_title">최근 본</div>
 	</div>
-	<!-- //팝업 - 최근 본 컨텐츠 -->
-	<!-- // LayerPopup area -->
+	<!-- //dialog_header -->
+
+	<!-- dialog_contents -->
+	<div class="dialog_contents">
+		<!-- tab_ty -->
+		<div class="tab_swiper tab_ty tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
+			<!-- swiper-wrapper -->
+			<ul class="swiper-wrapper">
+				<li>
+					<a href="#n" class="on"><!-- 활성화  class="on" -->
+						<span>전체</span>
+					</a>
+				</li>
+				<li>
+					<a href="#n">
+						<span>상품</span>
+					</a>
+				</li>
+				<li>
+					<a href="#n">
+						<span>기획전</span>
+					</a>
+				</li>
+				<li>
+					<a href="#n">
+						<span>이벤트</span>
+					</a>
+				</li>
+				<li>
+					<a href="#n">
+						<span>브랜드</span>
+					</a>
+				</li>
+			</ul>
+			<!-- //swiper-wrapper -->
+
+			<!-- swiper_control -->
+			<div class="swiper_control">
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			<!-- //swiper_control -->
+		</div>
+		<!-- //tab_ty -->
+
+		<div class="sort_list_header">
+			<span class="sort_result_desc"><span class="val">35</span>개</span>
+			<button type="button" class="btn_delete_text"><span class="ico_delete"></span><span class="text">전체삭제</span></button>
+		</div>
+
+		<div class="history_list_wrap">
+			<div class="custom_scroll_wrap">
+				<ul class="history_list">
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box type_cover size_sm">
+								<a href="#" class="prod_link">
+									<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
+										<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box size_sm">
+								<a href="#" class="prod_info">
+									<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+								</a>
+								<span class="prod_author">강민우(돈깡)</span>
+
+								<span class="prod_price">
+									<span class="percent">20%</span>
+									<span class="price">
+										<span class="val">55,268,800</span>
+										<span class="unit">원</span>
+									</span>
+								</span>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+							<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- // CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+					<!-- CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box type_cover size_sm">
+								<a href="#" class="prod_link">
+									<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
+										<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box size_sm">
+								<a href="#" class="prod_info">
+									<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+								</a>
+								<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+							<button type="button" class="btn_history_wish active"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- // CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+					<!-- CASE 03. 이벤트 -->
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box type_cover size_sm">
+								<a href="#" class="prod_link">
+									<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
+										<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box size_sm">
+								<a href="#" class="prod_info">
+									<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+								</a>
+								<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+									<span class="prod_price">
+										<span class="percent">20%</span>
+										<span class="price">
+											<span class="val">55,268,800</span>
+											<span class="unit">원</span>
+										</span>
+									</span>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- // CASE 03. 이벤트 -->
+					<!-- CASE 04. 핫트랙스 상품 -->
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box type_cover size_sm">
+								<a href="#" class="prod_link">
+									<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
+										<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box size_sm">
+								<a href="#" class="prod_info">
+									<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+								</a>
+								<span class="prod_price">
+										<span class="percent">20%</span>
+										<span class="price">
+											<span class="val">55,268,800</span>
+											<span class="unit">원</span>
+										</span>
+									</span>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+							<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- // CASE 04. 핫트랙스 상품 -->
+					<!-- CASE 05. 브랜드 -->
+					<!-- 수정 220422 최근 본 컨텐츠 브랜드 타입 추가 -->
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box size_sm type_brand">
+								<a href="#" class="prod_link">
+									<span class="img_box">
+										<img src="../../../../assets/common/temporary/temp_brand.png" alt="상품 임시이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box">
+								<a href="#" class="prod_info">
+									<span class="prod_name">브랜드이름이름이름</span>
+								</a>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+							<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- //수정 220422 최근 본 컨텐츠 브랜드 타입 추가 -->
+					<!-- // CASE 04. 핫트랙스 상품 -->
+					<!-- CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box type_cover size_sm">
+								<a href="#" class="prod_link">
+									<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
+										<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box size_sm">
+								<a href="#" class="prod_info">
+									<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+								</a>
+								<span class="prod_author">강민우(돈깡)</span>
+
+								<span class="prod_price">
+									<span class="percent">20%</span>
+									<span class="price">
+										<span class="val">55,268,800</span>
+										<span class="unit">원</span>
+									</span>
+								</span>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+							<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- // CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+					<!-- CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box type_cover size_sm">
+								<a href="#" class="prod_link">
+									<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
+										<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box size_sm">
+								<a href="#" class="prod_info">
+									<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+								</a>
+								<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+							<button type="button" class="btn_history_wish active"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- // CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+					<!-- CASE 03. 이벤트 -->
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box type_cover size_sm">
+								<a href="#" class="prod_link">
+									<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product2.png);">
+										<img src="../../../../assets/common/temporary/temp_thumbnail_product2.png" alt="상품 임시 이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box size_sm">
+								<a href="#" class="prod_info">
+									<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+								</a>
+								<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+									<span class="prod_price">
+										<span class="percent">20%</span>
+										<span class="price">
+											<span class="val">55,268,800</span>
+											<span class="unit">원</span>
+										</span>
+									</span>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- // CASE 03. 이벤트 -->
+					<!-- CASE 04. 핫트랙스 상품 -->
+					<li class="history_item">
+						<div class="prod_area horizontal">
+							<div class="prod_thumb_box type_cover size_sm">
+								<a href="#" class="prod_link">
+									<span class="img_box" style="background-image: url(../../../../assets/common/temporary/temp_thumbnail_product1.png);">
+										<img src="../../../../assets/common/temporary/temp_thumbnail_product1.png" alt="상품 임시 이미지">
+									</span>
+								</a>
+							</div>
+							<div class="prod_info_box size_sm">
+								<a href="#" class="prod_info">
+									<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+								</a>
+								<span class="prod_price">
+										<span class="percent">20%</span>
+										<span class="price">
+											<span class="val">55,268,800</span>
+											<span class="unit">원</span>
+										</span>
+									</span>
+							</div>
+						</div>
+						<div class="history_control_box">
+							<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+							<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+							<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+						</div>
+					</li>
+					<!-- // CASE 04. 핫트랙스 상품 -->
+					<!-- // 수정 220107 전시템플릿 가이드 작업으로 상품영역 현행화 -->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //dialog_contents -->
+</div>
+<!-- //팝업 - 최근 본 컨텐츠 -->
+<!-- // LayerPopup area -->
 </body>
 </html>
