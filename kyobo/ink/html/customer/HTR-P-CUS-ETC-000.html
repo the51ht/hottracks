@@ -149,9 +149,101 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- //tab_box -->  
+                        <!-- //tab_box -->   
 
-                        <div style="height:500px;background-color:#d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:500px;text-align:center;">AS-IS</div>
+                        <div class="order_his_list_wrap">
+							<ul class="bul_list">
+                                <li class="bul_item_dot font_size_xs">주문내역은 최대 1년 까지 조회 가능합니다.</li>
+                                <li class="bul_item_dot font_size_xs">주문번호, 상품명을 클릭하시면 주문상세내역 및 배송현황을 확인하실 수 있습니다.</li>
+                                <li class="bul_item_dot font_size_xs">상품준비 이전 단계 시 주문 취소 가능합니다.</li>
+                                <li class="bul_item_dot font_size_xs">주문취소/변경은 [주문취소/변경] 메뉴를 통해 가능합니다.</li>
+                            </ul>
+
+							<!-- tit_form_wrap -->
+							<div class="tit_form_wrap">
+								<div class="form_sel">
+									<select>
+										<option>최근 6개월 주문</option>
+										<option>6개월 이전 주문</option>
+										<option>취소주문조회</option>
+									</select>
+								</div>
+							</div>
+							<!-- //tit_form_wrap -->
+
+							<div class="order_his_table_wrap">
+								<table class="order_his_table">
+									<caption>이전 주문 조회에서 주문/배송조회 목록 표.</caption>
+									<colgroup>
+										<col style="width: 147px;">
+										<col style="width: 120px;">
+										<col style="width: 460px;">
+										<col style="width: 137px;">
+										<col style="width: 130px;">
+									</colgroup>
+									<tbody>  
+										<tr>
+											<th>주문일</th>
+											<th>주문번호</th>
+											<th>주문상품</th>
+											<th>주문금액</th>
+											<th>주문상태</th>
+										</tr>
+										<tr>
+											<td>2022.03.01</td>
+											<td>101112500263</td>
+											<td class="td_item_left">
+												<p>2022 먼슬리매트+일정관리스티커</p>
+												<span>2.gray(그레이)</span>
+											</td>
+											<td>4,240 원</td>
+											<td class="order_st">주문취소</td>
+										</tr>
+										<tr>
+											<td>2022.03.01</td>
+											<td>101112500263</td>
+											<td class="td_item_left">
+												<p>2022 먼슬리매트+일정관리스티커 2022 먼슬리매트+일정관리스티커202</p>
+												<span>2.gray(그레이)</span>
+												<a href="#n" target="_blank" class="btn_more_view_box ty02"><strong>상품평 작성<em></em></strong></a>
+											</td>
+											<td>4,240,999,999 원</td>
+											<td class="order_st">주문취소</td>
+										</tr>
+										<tr>
+											<td>2022.03.01</td>
+											<td>101112500263</td>
+											<td class="td_item_left">
+												<p>2022 먼슬리매트+일정관리스티커</p>
+												<span>2.gray(그레이)</span>
+											</td>
+											<td>4,240 원</td>
+											<td class="order_st">주문취소</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<!-- pagination -->
+                        <div class="pagination">
+                            <button class="btn_page prev"><span class="hidden">이전</span></button>
+                            <div class="page_num">
+                                <!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+                                <a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+                                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+                                <a href="#" class="btn_page_num active" title="현재페이지">10</a>
+                                <a href="#" class="btn_page_num">11</a>
+                                <a href="#" class="btn_page_num">12</a>
+                                <a href="#" class="btn_page_num">13</a>
+                                <a href="#" class="btn_page_num">14</a>
+                                <a href="#" class="btn_page_num">15</a>
+                                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+                                <a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+                            </div>
+                            <button class="btn_page next"><span class="hidden">다음</span></button>
+                        </div>
+                        <!-- //pagination -->
                     </div>
                     <!-- //이전 주문 조회 -->
 

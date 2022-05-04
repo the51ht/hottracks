@@ -136,10 +136,10 @@
                         <div class="tab_box tab_link"><!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
                             <ul>
                                 <li>
-                                    <a href="#n" class="on"><span>주문/배송조회</span></a><!-- 활성화  class="on" -->
+                                    <a href="#n"><span>주문/배송조회</span></a>
                                 </li>
                                 <li>
-                                    <a href="#n"><span>주문취소/변경</span></a>
+                                    <a href="#n" class="on"><span>주문취소/변경</span></a><!-- 활성화  class="on" -->
                                 </li>
                                 <li>
                                     <a href="#n"><span>반품/교환신청</span></a>
@@ -149,205 +149,102 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- //tab_box -->  
+                        <!-- //tab_box -->   
 
-                        <div class="cus_order_detail_wrap">
-							<div class="ht_cont_s">
-								<h2 class="ht_tit05">주문배송조회</h2>
-								<div class="cus_order_detail_box cus_order_num">
-									<span>주문번호</span>
-                    				<strong>101112500263</strong>
-								</div>
-							</div>
+                        <div class="order_his_list_wrap">
+							<ul class="bul_list">
+                                <li class="bul_item_dot font_size_xs">주문취소 및 배송지 변경이 가능한 주문내역만 보여집니다.</li>
+                                <li class="bul_item_dot font_size_xs">상품준비 이전 단계에서는 주문 전체취소 및 주소변경이 가능하며, [주문/배송조회]에서 확인하실 수 있습니다.</li>
+                                <li class="bul_item_dot font_size_xs">상품준비 이전 단계에서의 부분취소는 [1:1 문의]를 이용하시거나 고객센터로 연락주시기 바랍니다.</li>
+                                <li class="bul_item_dot font_size_xs">주문취소 시에는 고객님께서 결제한 계좌로 환불처리 됩니다.(신용카드 : 즉시, 계좌이체 : 최대3일 소요)</li>
+                                <li class="bul_item_dot font_size_xs">일부 환불이 불가능한 경우에는 교보핫트랙스 온라인 예치금으로 자동 예치됩니다.[예치금 환불 신청] 메뉴에서 환불 요청 가능</li>
+                                <li class="bul_item_dot font_size_xs">상품준비 이후 단계에서는 [1:1 문의] 또는 고객센터를 통해 신청이 가능하나, 상품이 이미 출고된 경우에는 취소 및 변경이 불가능합니다. 출고 이후 주문취소는 반품접수를 이용해주시기 바랍니다.</li>
+                            </ul>
 
-							<div class="ht_cont_s">
-								<h2 class="ht_tit05">주문/배송 상세 정보</h2>
-								<div class="order_his_table_wrap">
-									<table class="order_his_table table_bott_bor">
-										<caption>이전 주문 조회에서 주문/배송조회 상세 표.</caption>
-										<colgroup>
-											<col style="width: 169px;">
-											<col style="width: 103px;">
-											<col style="width: 444px;">
-											<col style="width: 42px;">
-											<col style="width: 113px;">
-											<col style="width: 133px;">
-										</colgroup>
-										<tbody>  
-											<tr>
-												<th>상품코드</th>
-												<th>상품</th>
-												<th>상품명</th>
-												<th>수량</th>
-												<th>처리상태</th>
-												<th>배송조회</th>
-											</tr>
-											<tr>
-												<td>
-													101112500263<br>
-													[핫트랙스배송]
-												</td>
-												<td>
-													<div class="order_thumb_prod">
-														<img src="../../images/temp/@img_cur_main_prod01.png" alt="">
-													</div>
-												</td>
-												<td class="td_item_left">
-													<p>2022 먼슬리매트+일정관리스티커</p>
-													<span>2.gray(그레이)</span>
-												</td>
-												<td>1</td>
-												<td>배송대기</td>
-												<td>
-													CJ 대한통운<br>
-													647577432774
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-
-							<div class="ht_cont_s">
-								<h2 class="ht_tit05">결제 정보</h2>
-								<div class="order_table_pay">
-									<div class="order_pay_price">
-										<dl>
-											<dt class="price_total_tit">총 결제금액</dt>
-											<dd class="price_total_price">6,520원</dd>
-
-											<dt>상품금액</dt>
-											<dd>2,000원</dd>
-
-											<dt>배송비</dt>
-											<dd>1,000원</dd>
-										</dl>
-									</div>
-									<div class="order_pay_dis">
-										<dl>
-											<dt class="price_total_tit">총 할인금액</dt>
-											<dd class="price_total_price">10원</dd>
-
-											<dt>교보핫트랙스 온라인 예치금</dt>
-											<dd>100,000,000원</dd>
-											
-											<dt>마일리지</dt>
-											<dd>0원</dd>
-
-											<dt>통합포인트</dt>
-											<dd>0원</dd>
-
-											<dt>쿠폰</dt>
-											<dd>0원</dd>
-											
-											<dt>GS&POINT</dt>
-											<dd>0원</dd>
-
-											<dt>L.POINT</dt>
-											<dd>0원</dd>
-
-											<dt>OK캐쉬백</dt>
-											<dd>0원</dd>
-											
-											<dt>Oh POINT</dt>
-											<dd>0원</dd>
-										</dl>
-									</div>
-									<div class="order_pay_total">
-										<dl>
-											<dt class="price_total_tit">결제금액</dt>
-											<dd class="price_total_price">6,420원</dd>
-
-											<dt>결제일시</dt>
-											<dd>2022.03.01</dd>
-										</dl>
-										<a href="#n" target="_blank" class="btn_more_view_box ty02"><strong>거래명세서 출력<em></em></strong></a>
-									</div>
-								</div>
-							</div>
-
-							<div class="ht_cont_s">
-								<h2 class="ht_tit05">주문자 정보</h2>
-								<div class="deli_his_table_wrap">
-									<table class="deli_his_table table_bott_bor">
-										<caption>이전 주문 조회에서 주문자 정보 상세 표.</caption>
-										<colgroup>
-											<col style="width:141px;">
-											<col style="width:360px;">
-											<col style="width:141px;">
-											<col style="width:360px;">
-										</colgroup>
-										<tbody>  
-											<tr>
-												<th>이름</th>
-												<td class="str_info">
-													김미미
-												</td>
-												<th>이메일</th>
-												<td class="str_info">
-													mimikim99@naver.com
-												</td>
-											</tr>
-											<tr>
-												<th>휴대폰</th>
-												<td class="str_info">
-													010-1234-5678
-												</td>
-												<th>전화번호</th>
-												<td class="str_info">
-													-
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-
-							<div class="ht_cont_s">
-								<h2 class="ht_tit05">배송지 정보</h2>
-								<div class="deli_his_table_wrap">
-									<table class="deli_his_table table_bott_bor">
-										<caption>이전 주문 조회에서 배송지 정보 상세 표.</caption>
-										<colgroup>
-											<col style="width:141px;">
-											<col style="width:auto;">
-										</colgroup>
-										<tbody>  
-											<tr>
-												<th>기본정보</th>
-												<td class="str_info">
-													<span>김미미 / 010-1234-5678</span>
-													<span>[144-78] 경기 부천시 까치로6번길 7-4 2층</span>
-												</td>
-											</tr>
-											<tr>
-												<th>전달메시지</th>
-												<td>
-													조심히 배달해주세요.
-												</td>
-											</tr>
-											<tr>
-												<th>주문 요청사항</th>
-												<td>
-													-
-												</td>
-											</tr>
-											<tr>
-												<th>배송 요청사항</th>
-												<td>
-													부재시 경비실에 맡겨주세요.<br>
-													관리도구에서 입력된 배송요청사항이 입력됩니다. 말줄임 없이 모두 노출됩니다. 최대 길이 확인필요 길어지는 경우입니다.
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+							<div class="order_his_table_wrap">
+								<table class="order_his_table">
+									<caption>이전 주문 조회에서 주문취소/변경 목록 표.</caption>
+									<colgroup>
+										<col style="width: 125px;">
+										<col style="width: 120px;">
+										<col style="width: 400px;">
+										<col style="width: 135px;">
+										<col style="width: 130px;">
+										<col style="width: 140px;">
+									</colgroup>
+									<tbody>  
+										<tr>
+											<th>주문일</th>
+											<th>주문번호</th>
+											<th>주문상품</th>
+											<th>결제금액</th>
+											<th>처리상태</th>
+											<th>처리상태</th>
+										</tr>
+										<tr>
+											<td>2022.03.01</td>
+											<td>101112500263</td>
+											<td class="td_text_left">
+												<p>2022 먼슬리매트+일정관리스티커</p>
+												<span>2.gray(그레이)</span>
+											</td>
+											<td>4,240 원</td>
+											<td class="order_st">배송대기</td>
+											<td>
+                                                <button type="button" class="btn_sm btn_line_gray"><span class="text">주문취소</span></button>
+                                                <button type="button" class="btn_sm btn_line_gray"><span class="text">배송지변경</span></button>
+                                            </td>
+										<tr>
+											<td>2022.03.01</td>
+											<td>101112500263</td>
+											<td class="td_text_left">
+												<p>2022 먼슬리매트+일정관리스티커</p>
+												<span>2.gray(그레이)</span>
+											</td>
+											<td>4,240 원</td>
+											<td class="order_st">배송대기</td>
+											<td>
+                                                <button type="button" class="btn_sm btn_line_gray"><span class="text">주문취소</span></button>
+                                                <button type="button" class="btn_sm btn_line_gray"><span class="text">배송지변경</span></button>
+                                            </td>
+										<tr>
+											<td>2022.03.01</td>
+											<td>101112500263</td>
+											<td class="td_text_left">
+												<p>2022 먼슬리매트+일정관리스티커</p>
+												<span>2.gray(그레이)</span>
+											</td>
+											<td>4,240 원</td>
+											<td class="order_st">배송대기</td>
+											<td>
+                                                <button type="button" class="btn_sm btn_line_gray"><span class="text">주문취소</span></button>
+                                                <button type="button" class="btn_sm btn_line_gray"><span class="text">배송지변경</span></button>
+                                            </td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
-						<div class="btn_area">
-							<button class="btn_lg btn_line_gray">목록</button>
-						</div>
 
+						<!-- pagination -->
+                        <div class="pagination">
+                            <button class="btn_page prev"><span class="hidden">이전</span></button>
+                            <div class="page_num">
+                                <!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+                                <a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+                                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+                                <a href="#" class="btn_page_num active" title="현재페이지">10</a>
+                                <a href="#" class="btn_page_num">11</a>
+                                <a href="#" class="btn_page_num">12</a>
+                                <a href="#" class="btn_page_num">13</a>
+                                <a href="#" class="btn_page_num">14</a>
+                                <a href="#" class="btn_page_num">15</a>
+                                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+                                <a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+                            </div>
+                            <button class="btn_page next"><span class="hidden">다음</span></button>
+                        </div>
+                        <!-- //pagination -->
                     </div>
                     <!-- //이전 주문 조회 -->
 
