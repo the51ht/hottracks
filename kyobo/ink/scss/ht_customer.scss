@@ -1064,12 +1064,23 @@
 
 
 /**** 이전 주문 정보 ****/
-/** 주문/배송조회 목록 페이지**/
+/** 이전 주문 정보 > 목록 페이지들 **/
 .order_his_list_wrap{
     .bul_list{padding: 40px 0;}
     .tit_form_wrap {
         border: 0;
         .form_sel .ui-selectmenu-button{width: 160px;}
+    }
+    .btn_re_ex{
+        margin-top: 0;
+        margin-bottom: 15px;
+        text-align: right;
+    }
+}
+.input_address_box{
+    width: calc(100% - 136px);
+    + .input_address_search{
+        margin-left: 9px;width: 125px;
     }
 }
 
@@ -1087,10 +1098,10 @@
                 border-top: 0;
             }
             th{
-                color: #767676;padding: 17px 0 13px;
+                color: #767676;padding: 17px 0 13px; text-align: center;
             }
             td{
-                padding: 22px 0 18px;text-align: center;font-weight: 500;font-size: 14px; position: relative;
+                padding: 22px 0 18px;text-align: center;font-weight: 500;font-size: 14px; position: relative;color:#000;
                 p + span{
                     color: #767676;font-size: 13px; display: inline-block; margin-top: 4px;
                 }
@@ -1108,6 +1119,9 @@
                     + .btn_sm{
                         margin-top: 5px;
                     }
+                }
+                &.emp{
+                    color: #767676; padding:62px 0 58px;
                 }
             }
             .order_thumb_prod{
@@ -1253,4 +1267,162 @@
     }
 }
 
+.order_re_ex_wrap{
+    background: #F7F7F7;border-radius: 12px;padding: 42px 40px;margin-top:60px; display: table; width: 100%;box-sizing: border-box;
+    &:after{
+        clear: both; display: block; content: "";
+    }
+    .order_re_ex {
+        box-sizing: border-box;display: table-cell; vertical-align: top;
+        + .order_re_ex{
+            padding-left: 80px; position: relative;
+            &:before{
+                border-left: 1px dashed #D5D5D5; position: absolute; left: 40px; top: 0; width: 1px; height: 100%;content: "";
+            }
+        }
+        ul {
+            margin-top: 18px;
+            &:after{
+                clear: both; content: ""; display: block;
+            }
+            li{
+                width: 79px; float: left; text-align: center;padding-right: 54px;position: relative;
+                span{
+                    margin-top: 12px; display: inline-block;width: 103%;
+                }
+                &:last-child{padding-right: 0;}
+    
+                &:before{
+                    content: "";width: 78px;height: 78px;display: inline-block;background-size: 44px 44px;background-color: #fff;border-radius: 50%;box-sizing: border-box;background-position: 50% 50%; background-repeat: no-repeat; border:1px solid #EAEAEA
+                }
+                &:last-child:after{
+                    background: initial;
+                }
+                &:after{
+                    content: "";width: 6px;height: 12px;display: inline-block;background-repeat: no-repeat; background-size: contain;
+                    background-image: url(../../../assets/common/images/btn_more_view@2x.png);position: absolute;
+                    right: 23px;
+                    top: 35px;
+                }
+            }
+        }
+        .order_re_01:before {
+            background-image: url(../images/guide/cus_return01.png);
+        }
+        .order_re_02:before {
+            background-image: url(../images/guide/cus_return02.png);
+        }
+        .order_re_03:before {
+            background-image: url(../images/guide/cus_return03.png);
+        }
+        .order_re_04:before {
+            background-image: url(../images/guide/cus_return04.png);
+        }
+        .order_ex_01:before {
+            background-image: url(../images/guide/cus_exchange01.png);
+        }
+        .order_ex_02:before {
+            background-image: url(../images/guide/cus_exchange02.png);
+        }
+        .order_ex_03:before {
+            background-image: url(../images/guide/cus_exchange03.png);
+        }
+    }
+    .order_re_ex_tit{
+        font-size: 15px;
+    }
+    .order_re_wrap{
+        width: 52.5%;
+    }
+    .order_ex_wrap{
+        width: 47.5%;
+    }
+}
+
+/* 반품/교환신청 */
+.order_his_list_wrap{
+    .form_rdo{
+        + .form_rdo{
+            margin-left: 23px;
+        }
+    }
+}
+.tbl_row_wrap .tbl_row {
+    .table_inner_table{
+        width: 814px;display: inline-block;
+        .order_his_table{
+            border-bottom: 1px solid #EAEAEA;
+            tr {
+                th {
+                    background-color: #F7F7F7;
+                }
+                td{
+                    vertical-align: middle;padding: 19px 0 15px;
+                    &.emp {
+                        color: #767676;
+                        padding: 62px 0 58px;
+                    }
+                }
+                .td_item_left{
+                    padding-left:  50px;
+                }
+            }
+        }
+         .form_sel{
+            width: 100%;
+            .btn_area{
+                text-align: right;
+                button{
+                    padding: 0 23px 1px;
+                }
+            }
+        }
+    }
+}
+.cus_form_sel_wrap{
+    .form_sel{
+        + .form_sel{
+            margin-top: 10px;
+        }
+    }
+    .form_side_btn{
+        position: relative;
+        .btn_file_add {
+            right: -113px;position: absolute;top: 0;cursor: pointer;padding: 0 23px 1px;
+        }
+    }
+    .text_file_noti{
+        width: 519px;margin-top: 10px;
+    }
+}
+
+/* 반품/교환 상품 조회 팝업 */
+.pop_inner_table{
+    margin-top: 24px;
+    .order_his_table_wrap .order_his_table {
+        border-collapse: separate;border-spacing: 0 5px;
+        tr td{
+            border-top: 1px solid #EAEAEA;
+        }
+        tr .td_item_left{
+            padding-left:  15px;padding-right: 0;
+        }
+        .order_list_detail{
+            background: #F7F7F7;border-top: 0;
+            > td:first-child { border-top-left-radius: 6px; }
+            > td:last-child { border-top-right-radius: 6px; }
+            > td:first-child { border-bottom-left-radius: 6px; }
+            > td:last-child { border-bottom-right-radius: 6px; }
+            .td_form_chk{
+                text-align: right;
+            }
+            .td_item_left{
+                padding-left: 30px;
+            }
+            td{
+                border-top: 0;
+            }
+        }
+    }
+}
 

@@ -99,6 +99,7 @@
 						<h2 class="ht_tit05">팝업</h2>
 
 						<button type="button" class="btn_md btn_light_gray" data-role="btn-dialog" data-target="#evtApplyPop"><span class="text">배송지변경 / #evtApplyPop</span></button>
+						<button type="button" class="btn_md btn_light_gray" data-role="btn-dialog" data-target="#evtApplyPop2"><span class="text">주문취소 / #evtApplyPop2</span></button>
 					</div>
 					<!-- //팝업 -->
 					
@@ -132,34 +133,35 @@
 			<div class="form_wrap type_md">
 				<div class="form_box">
 					<div class="form_title">
-						<span class="form_label">수취인명</span>
+						<span class="form_label">수취인명<span class="required"><span class="hidden">필수입력</span></span></span>
 					</div>
 					<div class="form_cont">
-						<input type="text" class="form_ip" value="" disabled>
+						<input type="text" class="form_ip" value="김미미">
 					</div>
 				</div>
 				<div class="form_box">
 					<div class="form_title">
-						<span class="form_label">휴대폰</span>
+						<span class="form_label">휴대폰<span class="required"><span class="hidden">필수입력</span></span></span>
 					</div>
 					<div class="form_cont">
-						<input type="text" class="form_ip">
+						<input type="tel" class="form_ip" value="010-8888-8888">
 					</div>
 				</div>
 				<div class="form_box">
 					<div class="form_title">
-						<span class="form_label">전화번호</span>
+						<span class="form_label">전화번호<span class="required"><span class="hidden">필수입력</span></span></span>
 					</div>
 					<div class="form_cont">
-						<input type="tel" class="form_ip">
+						<input type="tel" class="form_ip" value="010-8888-8888">
 					</div>
 				</div>
 				<div class="form_box">
 					<div class="form_title">
-						<span class="form_label">주소</span>
+						<span class="form_label">주소<span class="required"><span class="hidden">필수입력</span></span></span>
 					</div>
 					<div class="form_cont">
-						<input type="tel" class="form_ip">
+						<input type="text" class="form_ip input_address_box" value="(144-78) 경기 부천시 까치로6번길 7-4"><button type="button" class="btn_ip btn_black input_address_search"><span>우편번호검색</span></button>
+						<input type="text" class="form_ip" value="2층">
 					</div>
 				</div>
 			</div>
@@ -168,14 +170,73 @@
 		<!-- //스크롤 영역-->
 
 		<!-- btn_area -->
-		<div class="btn_area">
-			<button type="text" class="btn_md btn_primary"><span>배송지변경</span></button>
-		</div>
+        <div class="btn_area">
+            <button type="button" class="btn_md btn_black" data-role="btn-dialog" data-target="#popAlert01"><span class="text">취소</span></button>
+            <button type="button" class="btn_md btn_primary" data-dialog-close=""><span class="text">변경</span></button>
+        </div>
 		<!-- //btn_area -->
     </div>
     <!-- //dialog_contents -->
 </div>
 <!-- //배송지변경 : evtApplyPop --> 
+
+<!-- 팝업 : 배송지 변경 취소 : popAlert01 -->
+<div id="popAlert01" class="dialog_wrap" data-class="dialog_alert">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">배송지 변경 취소</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <div class="evt_pop_content">
+            배송지 주소를 변경하지 않고 <br>
+            나가시겠습니까?
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_black" data-dialog-close><span class="text">취소</span></button>
+        <button type="button" class="btn_md btn_primary" data-dialog-close><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- //팝업 : 배송지 변경 취소 : popAlert01 -->
+
+<!-- 팝업 : 주문취소 : evtApplyPop2 -->
+<div id="evtApplyPop2" class="dialog_wrap" data-class="dialog_alert">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">주문취소</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <div class="evt_pop_content">
+            취소하시겠습니까?
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_black" data-dialog-close><span class="text">취소</span></button>
+        <button type="button" class="btn_md btn_primary" data-dialog-close><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- //팝업 : 주문취소 : evtApplyPop2 -->
+
+<style>
+    .input_address_box{width: calc(100% - 136px);}
+    .input_address_box + .input_address_search{margin-left: 9px;width: 125px;}
+</style>
 
 <script>
 $(function(){
