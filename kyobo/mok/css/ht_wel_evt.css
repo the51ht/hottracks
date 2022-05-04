@@ -69,7 +69,7 @@
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel.dialog_wrap_full {
-  margin: -20px;
+  margin: 0 -20px;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.push_pop .dialog_contents {
@@ -154,6 +154,61 @@
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .pop_phone_info_msg.icon_system_check p:before {
   background: url(../images/main/ico_wel_pop01.svg) center/100% no-repeat;
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .option_box {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .swiper-pagination.swiper-pagination-fraction {
+  position: static;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .swiper-pagination.swiper-pagination-fraction .swiper-pagination-current,
+.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .swiper-pagination.swiper-pagination-fraction .swiper-pagination-total {
+  line-height: 25px;
+}
+
+.ui-dialog.dialog_top {
+  margin: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-animation: topPopAnimation 0.35s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
+          animation: topPopAnimation 0.35s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
+}
+
+@-webkit-keyframes topPopAnimation {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes topPopAnimation {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 /* 웰컴메인 팝업 - 페이지 */

@@ -319,48 +319,75 @@ $(function(){
                 </div>
                 <!-- //form_box -->
 
-                <!-- form_box --><!-- 22.04.26 답변수신방법 수정 -->
+                <!-- form_box : 답변수신방법 -->
                 <div class="form_box line_form_box">
-                    <h2 class="mc_tit03">답변 수신 방법</h2>
+                    <h2 class="mc_tit03">답변수신방법</h2><!-- 22.05.03 띄어쓰기 수정 -->
+
+                    <!-- form_box --><!-- 22.05.03 이름 항목추가 -->
+                    <div class="form_box">
+                        <!-- form_title -->
+                        <div class="form_title">
+                            <p class="form_label">이름<em class="required"></em></p>
+                        </div>
+                        <!-- //form_title -->
+
+                        <!-- form_cont -->
+                        <div class="form_cont">
+                            <!-- valid_check -->
+                            <div class="valid_check">
+                                <input type="text" class="form_ip" placeholder="이름을 입력해 주세요" value="홍길동" title="이름" readonly>
+                            </div>
+                            <!-- //valid_check -->
+                        </div>
+                        <!-- //form_cont -->    
+                    </div>
+                    <!-- //form_box -->           
                     
-                    <!-- form_title -->
-                    <div class="form_title">
-                        <p class="form_label">휴대전화번호<em class="required"></em></p>
-                        <p class="btn_txt_more">
-                            <a href="#"><span>회원정보 변경하기</span></a>
-                        </p>
-                    </div>
-                    <!-- //form_title -->
-
-                    <!-- form_cont -->
-                    <div class="form_cont">
-                        <!-- valid_check -->
-                        <div class="valid_check">
-                            <input type="number" class="form_ip" placeholder="-없이 숫자만 입력" value="01012345678" title="휴대전화번호" readonly>
+                    <!-- form_box -->
+                    <div class="form_box"><!-- 22.05.03 휴대전화번호 : form_box로 group 부탁드립니다. -->
+                        <!-- form_title -->
+                        <div class="form_title">
+                            <p class="form_label">휴대전화번호<em class="required"></em></p>
+                            <p class="btn_txt_more">
+                                <a href="#"><span>회원정보 변경하기</span></a>
+                            </p>
                         </div>
-                        <!-- //valid_check -->
+                        <!-- //form_title -->
 
-                        <!-- valid_check -->
-                        <div class="valid_check">
-                            <input type="email" class="form_ip" placeholder="@ 포함 이메일 입력" value="mimikim99@naver.com" title="이메일" readonly>
+                        <!-- form_cont -->
+                        <div class="form_cont">
+                            <!-- valid_check -->
+                            <div class="valid_check">
+                                <input type="number" class="form_ip" placeholder="-없이 숫자만 입력" value="01012345678" title="휴대전화번호" readonly>
+                            </div>
+                            <!-- //valid_check -->
+
+                            <!-- valid_check -->
+                            <div class="valid_check">
+                                <input type="email" class="form_ip" placeholder="@ 포함 이메일 입력" value="mimikim99@naver.com" title="이메일" readonly>
+                            </div>
+                            <!-- //valid_check -->   
                         </div>
-                        <!-- //valid_check -->   
-                    </div>
-                    <!-- //form_cont -->
+                        <!-- //form_cont -->
 
-                    <!-- form_chk -->
-                    <span class="form_chk">
-                        <input id="chk_agree01" type="checkbox">
-                        <label for="chk_agree01">답변 메일 받기</label>
-                    </span>
-                    <!-- //form_chk -->
+                        <!-- form_chk -->
+                        <span class="form_chk">
+                            <input id="chk_agree01" type="checkbox">
+                            <label for="chk_agree01">답변 메일 받기</label>
+                        </span>
+                        <!-- //form_chk -->
+                    </div>
+                    <!-- //form_box -->
                 </div>
-                <!-- //form_box --><!-- 22.04.26 답변수신방법 수정 -->
+                <!-- //form_box : 답변수신방법 -->   
             </div>
             <!-- //form_wrap -->
 
             <!-- btn_area -->
             <div class="btn_area">
+                <button type="button" class="btn_md btn_black" disabled><!-- 22.05.03 취소 버튼 추가 : 부정 버튼 class="btn_black" (취소, 삭제) -->
+                    <span class="text">취소</span>
+                </button>
                 <button type="button" class="btn_md btn_primary" disabled>
                     <span class="text">등록</span>
                 </button>

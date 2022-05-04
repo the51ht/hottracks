@@ -88,17 +88,6 @@
 
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">
-		<!-- breadcrumb_wrap -->
-		<section class="breadcrumb_wrap">
-			<div class="breadcrumb_inner">
-				<ol class="breadcrumb_list">
-					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
-				</ol>
-			</div>
-		</section>
-		<!-- //breadcrumb_wrap -->
-
-
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap">
 
@@ -754,6 +743,7 @@ $(function(){
 		if($('.cur_prod_list_wrap').hasClass('len')) {
 			var idx = $(this).closest('.swiper-slide').index();
 			curProdViewSwiperCont.slideTo(idx);
+			console.log('sss')
 		}
 
 		$('.cur_prod_view_list a').removeClass('on');
@@ -762,6 +752,11 @@ $(function(){
 		$(s).parent().find('.tab_cont').removeClass('on');
 		$(s).addClass('on');
 
+        e.preventDefault();
+    });
+
+    $('.cur_prod_list_wrap .swiper-button-prev, .cur_prod_list_wrap .swiper-button-next').click(function(e){
+		$('.cur_prod_view_list .swiper-slide-active a').trigger('click');
         e.preventDefault();
     });
 });
@@ -1404,7 +1399,7 @@ $(function(){
 	<!-- 윙배너 -->
 	<section class="fly_menu_wrapper sps">
 	</section>
-	<!-- // 윙배너 -->
+	<!-- //윙배너 -->
 
 
 	<!-- 탑버튼 -->
@@ -1412,6 +1407,6 @@ $(function(){
 	</div>
 	<!-- //탑버튼 -->
 </div>
-<!-- // wrapper -->
+<!-- //wrapper -->
 </body>
 </html>

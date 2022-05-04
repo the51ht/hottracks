@@ -88,7 +88,47 @@
 
 	<!-- Contents -->
 	<main id="containerWrapper" class="container_wrapper">
+		<!-- breadcrumb_wrap -->
+		<section class="breadcrumb_wrap">
+			<div class="breadcrumb_inner">
+				<ol class="breadcrumb_list">
+					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">1Depth 카테고리</a>
+						<div class="sub_depth_grid">
+							<!-- repeat -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<li class="depth_item active"><a href="#" class="depth_link">1Depth 카테고리</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">1Depth 카테고리</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">1Depth 카테고리</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">2Depth 카테고리</a>
+						<div class="sub_depth_grid">
+							<!-- repeat -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<li class="depth_item active"><a href="#" class="depth_link">2Depth 카테고리</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">2Depth 카테고리</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">2Depth 카테고리</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">2Depth 카테고리</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">2Depth 카테고리</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+		<!-- //breadcrumb_wrap -->
 
+        
 		<!-- ht_contents_wrap -->
 		<section class="ht_contents_wrap">
 
@@ -250,6 +290,20 @@
                                             <h3 class="ht_tit06">답변수신방법</h3>
                                         </th>
                                     </tr>
+                                    <!-- 22.05.03 이름 항목추가 -->
+                                    <tr>
+                                        <th scope="row" class="has_btn_sm">이름<span class="required"><span class="hidden">필수입력</span></span></th>
+                                        <td>
+                                            <ul class="chk_col_list">
+                                                <li class="chk_col_item">
+                                                    <div class="valid_check">
+                                                        <input type="text" class="form_ip" class="form_ip" placeholder="이름을 입력해 주세요" value="홍길동" readonly>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <!-- //22.05.03 이름 항목추가 -->
                                     <tr>
                                         <th scope="row" class="has_btn_sm">휴대전화번호<span class="required"><span class="hidden">필수입력</span></span></th>
                                         <td>
@@ -291,6 +345,7 @@
 
                         <!-- btn_area -->
                         <div class="btn_area">
+                            <button class="btn_lg btn_black"><span>취소</span></button><!-- 22.05.03 취소 버튼 추가 : 부정 버튼 class="btn_black" (취소, 삭제) -->
                             <button class="btn_lg btn_primary"><span>등록</span></button>
                         </div>
                         <!-- //btn_area -->
@@ -317,7 +372,7 @@
 	<!-- 윙배너 -->
 	<section class="fly_menu_wrapper sps">
 	</section>
-	<!-- // 윙배너 -->
+	<!-- //윙배너 -->
 
 
 	<!-- 탑버튼 -->

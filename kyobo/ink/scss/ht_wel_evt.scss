@@ -616,7 +616,7 @@
                     }
                 }
                 .evt_pop_content {
-                   display:block;width:calc(100% - 138px);padding-left:78px;position:absolute;z-index:2;left:60px;top:calc(50% - 10px);transform:translateY(-50%);text-align:left;color:#000;
+                   display:block;width:calc(100% - 138px);padding-left:78px;position:absolute;z-index:2;left:60px;top:calc(50% + 5px);transform:translateY(-50%);text-align:left;color:#000;
                    .tag_wrap {
                        position:absolute;top:5px;left:0;
                         .tag_item{
@@ -636,10 +636,14 @@
         // popImg02
         .dialog_wrap.dialog_wrap_wel { 
             padding:0;
+            &.img_pop_wrap {
+                background:none;overflow:initial;
+            }
             .dialog_contents {
                 &.img_pop{
-                    position:relative;padding:0;
+                    position:relative;padding:0;border-radius:16px 16px 0 0;overflow:initial;
                     .evt_pop_img{
+                        border-radius:16px 16px 0 0;overflow:hidden;;
                         img{
                             width:100%;
                         }
@@ -660,7 +664,8 @@
                     }
                 }
             }
-            .dialog_footer{
+            .dialog_footer {
+                background-color:#fff;border-radius:0 0 16px 16px;overflow:hidden;
                 &.no_margin_top{
                     margin-top:0;display:flex;
                     button.btn_line_white {

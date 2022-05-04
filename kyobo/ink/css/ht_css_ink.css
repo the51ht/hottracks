@@ -614,6 +614,11 @@ button.btn_lg {
   max-height: inherit !important;
 }
 
+.wrapper .container_wrapper .breadcrumb_wrap {
+  position: relative;
+  z-index: 20;
+}
+
 /*** 메뉴 > 최근 본 ***/
 .dialog_wrapper .ui-dialog.dialog_history {
   width: 460px;
@@ -621,8 +626,8 @@ button.btn_lg {
   max-height: none;
   margin: 0 0 0 auto;
   padding: 20px;
-  animation: historyPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
-  -webkit-animation: historyPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01);
+  -webkit-animation: historyPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
+          animation: historyPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
 }
 
 .dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content {
@@ -665,9 +670,8 @@ button.btn_lg {
   width: 13px;
   height: 15px;
   margin-top: 1px;
-  background-size: 13px 15px;
-  background-image: url(../../../assets/common/images/ico_delete@2x.png);
   margin-right: 4px;
+  background: url("../images/layout/ico_delete.png") center/13px 15px no-repeat;
 }
 
 .dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .sort_list_header {
@@ -703,13 +707,13 @@ button.btn_lg {
 }
 
 .dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .history_list_wrap .history_list .history_item .prod_area.horizontal .prod_thumb_box.type_brand .img_box, .dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .history_list_wrap .history_list .history_item .prod_area .prod_area.horizontal .prod_thumb_box.type_caster .img_box {
-  border-radius: 50px;
-  overflow: hidden;
   position: relative;
   display: block;
+  border: 1px solid #eaeaea;
+  border-radius: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #eaeaea;
+  overflow: hidden;
 }
 
 .dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .history_list_wrap .history_list .history_item .prod_area .prod_thumb_box {
@@ -781,6 +785,10 @@ button.btn_lg {
 
 .dialog_wrapper .ui-dialog.dialog_history .dialog_wrap.ui-dialog-content .dialog_contents .history_list_wrap .history_list .history_item .history_control_box .btn_history_delete {
   margin-left: 5px;
+}
+
+.prod_area .prod_info_box .prod_price .percent {
+  color: #da2128;
 }
 
 /* 3교제 Custom */
@@ -2267,8 +2275,17 @@ body {
   overflow: hidden;
 }
 
+.ht_under_banner .swiper-slide {
+  position: relative;
+}
+
 .ht_under_banner .swiper-slide img {
   width: 100%;
+}
+
+.ht_under_banner .swiper-slide a {
+  display: block;
+  position: relative;
 }
 
 /* ht_option_box  */

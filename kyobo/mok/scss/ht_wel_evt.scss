@@ -59,7 +59,7 @@
                 
             }
             &.dialog_wrap_full{
-                margin: -20px;
+                margin:0 -20px;
             }
 
             .dialog_contents.push_pop{
@@ -140,11 +140,28 @@
                     }
                 }
             }
-
-
+            .option_box {
+                display:none;position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:1;
+            }
+            .swiper-pagination.swiper-pagination-fraction {
+                position:static;height:25px;background-color:rgba(0,0,0,0.3);transform:translateX(0);
+                .swiper-pagination-current,
+                .swiper-pagination-total {
+                    line-height:25px;
+                }
+            }
         }
     }
 }
+
+.ui-dialog.dialog_top {
+    margin:0;transform:translateY(0);align-self:flex-start;animation:topPopAnimation 0.35s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
+}
+@keyframes topPopAnimation {
+0% {transform:translateY(-100%);}
+100% {transform:translateY(0);}
+} 
+
    
 
 /* 웰컴메인 팝업 - 페이지 */

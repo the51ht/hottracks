@@ -361,6 +361,45 @@ $(function(){
 
 
 
+/* 마케팅 팝업 */
+function mktPop(){
+    var $target = $('.ht_mkt_pop .swiper-container');
+    var $parent = $('.ht_mkt_pop');
+    var slideOption = {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        centeredSlides: false,
+        loop: true,
+        loopsSlide: 1,
+        spaceBetween: 0,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        }, 
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        speed: 700,
+        navigation: {
+            nextEl: '.ht_mkt_pop .swiper-button-next',
+            prevEl: '.ht_mkt_pop .swiper-button-prev',
+        },
+    };
+    if($parent.find('.swiper-slide').length > 1) {
+        mktPopSwiper = new Swiper($target.get(), slideOption);
+        $parent.addClass('swiper-on');
+    }
+}
+
+$(function(){
+    if(!$('.ht_mkt_pop').length) return;
+    mktPop();
+});
+
+
+
 
 
 
@@ -1531,7 +1570,7 @@ function curProdA(){
                 }
             }
         };
-        if($target.find('.swiper-slide').length > 2) {
+        if($target.find('.swiper-slide').length > 1) {
             $('.cur_prod_swiper_area').addClass('swiper-on');
             curProdASwiper = new Swiper(this, slideOption);
         }
@@ -1756,7 +1795,8 @@ function curProdViewSwiper(){
                 activeIndexChange: function () {
                     setTimeout(function(){
                         $('.cur_prod_view_list a').removeClass('on')
-                        $('.cur_prod_view_list .swiper-slide-active a').trigger('click');
+                        //$('.cur_prod_view_list .swiper-slide-active a').trigger('click');
+                        $('.cur_prod_view_list .swiper-slide-active a').addClass('on')
                     }, 100);
                 }
             },

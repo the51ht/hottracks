@@ -134,7 +134,7 @@
 	</main>
 	<!-- //Contents -->
 </div>
-<!-- // wrapper -->
+<!-- //wrapper -->
 
 
 <!-- 팝업 : 시스템 점검 사전 안내 / popSystem01 -->
@@ -221,7 +221,7 @@
 
 
 
-<!--  이미지 팝업(하단) : popImgBn01 -->
+<!--  이미지 팝업(하단) : popImgBn01 --><!-- 22.05.03 전체 구조 변경 -->
 <div id="popImgBn01" class="dialog_wrap btm_wel_wrap" data-class="dialog_bottom">
 	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
     <!-- dialog_header -->
@@ -235,42 +235,114 @@
 
 	<!-- dialog_contents -->
 	<div class="dialog_contents">
-        <div class="pop_belt_banner">
-            <img src="../../images/temp/@img_wel_pop_holiday_belt.jpg" alt="">
-        </div>
+        <!-- ht_under_banner -->
+        <div class="ht_under_banner">
+            <div class="swiper-container">
+                <!-- swiper-wrapper -->
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="pop_belt_banner">
+                                <img src="../../images/temp/@img_wel_pop_holiday_belt.jpg" alt="">
+                            </div>
+                            <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
+                                <div class="tag_wrap">
+                                    <span class="tag_item">10%</span>
+                                </div>
+                                <div class="main_msg">배송비 걱정 없이 쇼핑하는 거 어떠세요?</div>
+                                <div class="sub_txt">한 번만 써본 사람은 없는 마스크 믿고 쓰는 아에르!</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="pop_belt_banner">
+                                <img src="../../images/temp/@img_under_banner02.jpg" alt="">
+                            </div>   
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#n">
+                            <div class="pop_belt_banner">
+                                <img src="../../images/temp/@img_under_banner03.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- //swiper-wrapper -->
 
-        <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
-            <div class="tag_wrap">
-                <span class="tag_item">10%</span>
+                <!-- ht_option_box -->
+                <div class="ht_option_box">
+
+                    <!-- swiper_control -->
+                    <div class="swiper_control02">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <!-- //swiper_control -->
+                </div>
+                <!-- //ht_option_box -->
             </div>
-            <div class="main_msg">배송비 걱정 없이 쇼핑하는 거 어떠세요?</div>
-            <div class="sub_txt">한 번만 써본 사람은 없는 마스크 믿고 쓰는 아에르!</div>
         </div>
+        <!-- //ht_under_banner -->
+
 	</div>
 	<!-- //dialog_contents -->
 </div>
 <!-- //이미지 팝업(하단) : popImgBn01 -->
 
 
-<!-- 이미지 팝업(전체) : popImgBn02 -->
-<div id="popImgBn02" class="dialog_wrap dialog_wrap_wel" data-class="dialog_sm">
+<!-- 이미지 팝업(전체) : popImgBn02 --><!-- 22.05.03 전체 구조 변경 -->
+<div id="popImgBn02" class="dialog_wrap dialog_wrap_wel img_pop_wrap" data-class="dialog_sm"><!-- class="img_pop_wrap 추가" -->
     <!-- dialog_contents -->
-    <div class="dialog_contents evt_pop_cotent no_margin_top img_pop">
-        <div class="evt_pop_img">
-            <img src="../../images/temp/@img_wel_pop_holiday_full.jpg" alt="">
-        </div>
+    <div class="dialog_contents evt_pop_cotent no_margin_top img_pop"><!-- class="img_pop 추가" -->
+        <!-- ht_mkt_pop -->
+        <div class="ht_mkt_pop">
+            <div class="swiper-container">
+                <!-- swiper-wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- swiper-slide 반복 -->
+                    <div class="swiper-slide">
+                        <a href="#n">
+                            <div class="evt_pop_img">
+                                <img src="../../images/temp/@img_wel_pop_holiday_full.jpg" alt="">
+                            </div>
+                    
+                            <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
+                                <div class="tag_wrap">
+                                    <span class="tag_item">10%</span>
+                                </div>
+                                <div class="main_msg">
+                                    배송비 걱정 없이<br>쇼핑하는 거 어떠세요?
+                                </div>
+                                <div class="sub_txt">
+                                    설 선물 맛집 핫트랙스에서<br>새해 복 가득 담아 선물하세요
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- //swiper-slide 반복 -->
 
-        <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
-            <div class="tag_wrap">
-                <span class="tag_item">10%</span>
+                    <div class="swiper-slide">
+                        <a href="#n">
+                            <div class="evt_pop_img">
+                                <img src="../../images/temp/@img_wel_pop_holiday_full02.jpg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- //swiper-wrapper -->
             </div>
-            <div class="main_msg">
-                배송비 걱정 없이<br>쇼핑하는 거 어떠세요?
+
+            <!-- swiper_control -->
+            <div class="swiper_control_bk">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div class="sub_txt">
-                설 선물 맛집 핫트랙스에서<br>새해 복 가득 담아 선물하세요
-            </div>
+            <!-- //swiper_control -->
         </div>
+        <!-- //ht_mkt_pop -->
     </div>
     <!-- //dialog_contents -->
 
@@ -299,7 +371,7 @@ function popImgBn02(){
     $('#popImgBn02').dialog('open');
 }
 $(function(){
-    //popImgBn01()
+    //popImgBn02()
 });
 </script> 
 
@@ -332,7 +404,7 @@ function setToastMessage2(icon, msg, timer){
     var toastCont, dockerHeight, bottomMargin;
     toastCont = $("<div class='toast_wrap welcome_toast'><span class='toast_message'>" + icon + msg + "</span></div>");
     dockerHeight = $('.docker_wrapper').height();
-    bottomMargin = 36;ㅇ
+    bottomMargin = 36;
 
     if($('body').find('.toast_wrap').length < 1) $('body').append(toastCont);
 
