@@ -1503,10 +1503,10 @@ function musSpecial(){
         observer: true,
         observeParents: true,
         slidesPerView: 3,
-        spaceBetween: 20,
-        slidesPerGroup: 1,
+        spaceBetween: 15,
+        slidesPerGroup: 3,
         loop: true,
-        loopFillGroupWithBlank: true,
+        loopFillGroupWithBlank:false,
         loopsSlide:1,
         pagination: {
             el: ('.mus_mc_special_cont .swiper-pagination'),
@@ -1514,6 +1514,11 @@ function musSpecial(){
         navigation: {
             nextEl: '.mus_mc_special_cont .swiper-button-next',
             prevEl: '.mus_mc_special_cont .swiper-button-prev',
+        },
+        breakpoints: {
+            370:{
+                spaceBetween:20,
+            }
         }
     };
     musSpecialSwiper = new Swiper($target.get(), slideOption);

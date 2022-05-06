@@ -1189,6 +1189,16 @@ function musSpecial(){
             nextEl: '.mus_mc_special_cont .swiper-button-next',
             prevEl: '.mus_mc_special_cont .swiper-button-prev',
         },
+		pagination: {
+			el: $('.mus_mc_special_cont').find('.swiper-pagination')[0],
+			type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return KyoboBookPub.ink.setPrependZero(number, 2);
+            },
+            formatFractionTotal: function (number) {
+                return KyoboBookPub.ink.setPrependZero(number, 2);
+            }
+		},
         /*autoplay: {
             delay: 5000,
             disableOnInteraction: false,
