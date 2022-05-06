@@ -780,13 +780,13 @@
 }
 
 .pickup_step_area:before {
-  content: "";
   position: absolute;
   left: calc(100% / 6 - 20px);
   top: 19px;
   width: calc(100% / 3 * 2 + 40px);
   height: 1px;
   border-top: 1px dashed #000;
+  content: "";
 }
 
 .pickup_step {
@@ -1135,13 +1135,6 @@
           animation: bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
 }
 
-/*
-.dialog_wrapper.open {
-    display:flex;justify-content:center;align-items:center;flex-direction:row;position:fixed;left:0;top:0;width:100%;height:100%;overflow:hidden;
-    .ui-dialog.dialog_bottom {
-        
-    }
-}*/
 @-webkit-keyframes bottomPopAnimation {
   0% {
     -webkit-transform: translateY(100%);
@@ -1152,6 +1145,7 @@
             transform: translateY(0);
   }
 }
+
 @keyframes bottomPopAnimation {
   0% {
     -webkit-transform: translateY(100%);
@@ -1181,7 +1175,6 @@
 .dialog_wrapper .ui-dialog .dialog_wrap.btm_wel_wrap .dialog_header .form_chk input + label {
   font-size: 13px;
   line-height: 19px;
-  letter-spacing: -0.013px;
   color: #fff;
 }
 

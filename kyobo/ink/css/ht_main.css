@@ -645,7 +645,7 @@
   }
 }
 
-/*** 핫트랙스 라이브 : .wel_live ***/
+/*** 핫트랙스 라이브 :.wel_live ***/
 .wel_live {
   padding: 95px 0 80px 0;
   background-color: #000;
@@ -1484,8 +1484,8 @@
 
 .wel_md_pick .contents_inner {
   width: 100%;
-  overflow: hidden;
   max-width: 1800px;
+  overflow: hidden;
 }
 
 .wel_md_pick .star_fade_in02 img:nth-child(1) {
@@ -1549,7 +1549,10 @@
   opacity: 1;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
-  transition: transform 0.3s 0.4s, -webkit-transform 0.3s 0.4s, opacity 0.3s 0.4s;
+  -webkit-transition: opacity 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
+  transition: opacity 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
+  transition: transform 0.3s 0.4s, opacity 0.3s 0.4s;
+  transition: transform 0.3s 0.4s, opacity 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
 }
 
 .wel_md_pick_cont .swiper_control {
@@ -4370,7 +4373,7 @@
 }
 
 .mus_mc_fan .product_info .date {
-  color: #EAEAEA;
+  color: #eaeaea;
   font-size: 16px;
   margin-top: 16px;
 }
@@ -4401,12 +4404,14 @@
   font-weight: 700 !important;
 }
 
-.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-next:hover:after, .mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-prev:hover:after {
+.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-next:hover:after,
+.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-prev:hover:after {
   background-color: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.8);
 }
 
-.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-next:after, .mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-prev:after {
+.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-next:after,
+.mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-prev:after {
   background: #000 url(../images/guide/btn_banner_pagn_w.svg) center no-repeat;
   border-color: rgba(255, 255, 255, 0.4);
   -webkit-transition: all 0.4s;
@@ -4476,12 +4481,12 @@
   width: 118px;
   height: 80px;
   background: url("../images/main/ico_mus_mc_fan_cont.svg") center/100% no-repeat;
-  content: "";
   opacity: 0;
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
   -webkit-transition: all 0.4s 0s;
   transition: all 0.4s 0s;
+  content: "";
 }
 
 .mus_mc_fan_cont .swiper-slide:last-child {
@@ -5177,7 +5182,9 @@
   margin-right: 0;
 }
 
-.mus_mc_special_cont .company, .mus_mc_special_cont .title, .mus_mc_special_cont .final_price {
+.mus_mc_special_cont .company,
+.mus_mc_special_cont .title,
+.mus_mc_special_cont .final_price {
   color: #fff;
 }
 
