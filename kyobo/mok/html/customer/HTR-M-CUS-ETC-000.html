@@ -89,7 +89,7 @@
         <!-- tab_nav -->
         <div class="tab_nav_area">
             <a href="#n" class="active">이전 주문 조회</a><!-- 활성화 class="active" --><!-- 22.05.09 탭 명 수정 -->
-            <a href="#n" style="width:60%;">예치금 환불 신청</a><!-- 22.05.09 탭 명 수정 -->
+            <a href="#n">예치금 환불 신청</a><!-- 22.05.09 탭 명 수정 / width 삭제 -->
         </div>
         <!-- //tab_nav-->
 
@@ -108,10 +108,8 @@
             </div>
             <!-- //info_text_box -->
 
-            
-
+            <!-- order_his_list_wrap -->
             <div class="order_his_list_wrap">
-                
                 <!-- info_select_a -->
                 <div class="info_select_a">
                     <button class="btn_select_ty btn_select1" data-role="btn-dialog" data-target="#popSelectCate"><span>최근 6개월</span></button>
@@ -239,12 +237,65 @@ $(function(){
     }); 
 });
 </script>
-
+                
+                <!-- order_his_list -->
                 <ul class="order_his_list">
+                    <!-- li 반복 -->
                     <li>
                         <div class="order_his_tit">
                             <p>
                                 <span class="order_st">취소</span>
+                                <strong>2021.11.23</strong>
+                                <span>101112400407</span>
+                            </p>
+                        </div>
+                        <ul class="order_his_item">
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <div class="info_s2">
+                                        <p>나무(Green)</p>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3">4,420원</span>
+                                </div>
+                                <div class="order_his_item_btn">
+                                    <div class="btn_area">
+                                        <button type="button" class="btn_sm btn_line_gray"><span class="text">배송조회</span></button>
+                                        <button type="button" class="btn_sm btn_line_gray"><span class="text">상품후기 작성</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <div class="info_s2">
+                                        <p>나무(Green)</p>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3">4,420원</span>
+                                </div>
+                                <div class="order_his_item_btn">
+                                    <div class="btn_area">
+                                        <button type="button" class="btn_sm btn_line_gray"><span class="text">배송조회</span></button>
+                                        <button type="button" class="btn_sm btn_line_gray"><span class="text">상품후기 작성</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- //li 반복 -->
+
+                    <li>
+                        <div class="order_his_tit">
+                            <p>
+                                <span class="order_st">배송완료</span>
                                 <strong>2021.11.23</strong>
                                 <span>101112400407</span>
                             </p>
@@ -269,17 +320,6 @@ $(function(){
                                     </div>
                                 </div>
                             </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="order_his_tit">
-                            <p>
-                                <span class="order_st">배송완료</span>
-                                <strong>2021.11.23</strong>
-                                <span>101112400407</span>
-                            </p>
-                        </div>
-                        <ul class="order_his_item">
                             <li>
                                 <div class="order_his_item_img">
                                     <img src="../../images/temp/@cus_his_thumb.png" alt="">
@@ -339,17 +379,18 @@ $(function(){
                         </ul>
                     </li>
                 </ul>
-            </div>
+                <!-- //order_his_list -->
 
-            <!-- 더보기 버튼 more_btn에 hidden Class  추가하면 버튼 안보임 -->
-            <div class="btn_more_div">
-                <button class="more_btn">
-                    <span class="txt">더보기</span>
-                    <span class="btn_more_icon"></span>
-                </button>
+                <!-- 더보기 버튼 more_btn에 hidden Class  추가하면 버튼 안보임 -->
+                <div class="btn_more_div">
+                    <button class="more_btn">
+                        <span class="txt">더보기</span>
+                        <span class="btn_more_icon"></span>
+                    </button>
+                </div>
+                <!-- //더보기 -->
             </div>
-            <!-- //더보기 -->
-            
+            <!-- //order_his_list_wrap -->
         </div>
         <!-- //이전 주문 조회 -->
     </div>
