@@ -1992,6 +1992,10 @@
   border-bottom: 1px solid #eaeaea;
 }
 
+.order_his_list > li:last-child {
+  margin-bottom: 0;
+}
+
 .order_his_tit {
   height: 44px;
   padding: 1px 20px 0 20px;
@@ -2041,187 +2045,206 @@
   content: "";
 }
 
-.order_his_item {
-  /*
-    li{
-        border-bottom:1px dashed #D5D5D5; padding:0 0 15px; margin:16px 4px 0;
-        &:last-child{
-            border:0; padding-bottom:0;
-        }
-        .order_his_item_info{
-            float:left;width:calc(76.1% - 12px); margin-left:12px;
-            .info_s1{
-                font-size:13px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;display:inline-block;max-width:calc(100% - 10px);font-weight:500; margin-top:2px;
-            }
-            .info_s2{
-                font-size:12px;color:#767676;margin-top:3px; display:flex;justify-content:start;
-                p + span{
-                    margin-left:16px;position:relative;
-                    &:before{
-                        content:"";position:absolute;width:1px;height:10px;background-color:#D5D5D5;left:-8px;top:3px;
-                    }
-                }
-            }
-            .info_s3{
-                font-size:12px;color:#000000;margin-top:5px;font-weight:700;margin-top:12px; display:inline-block;
-            }
-        }
-        .order_his_item_img{
-            float:left;width:78px;border-radius:4px;overflow:hidden;
-        }
-        &:after{
-            clear:both; content:""; display:block;
-        }
-    }
-    .order_his_item_btn{
-        .btn_area{
-            justify-content:center;display:flex;width:100%;padding-top:14px;
-            button + button{
-                margin-left:5px;
-            }
-        }
-    }*/
+.order_his_item li {
+  margin: 16px 4px 0 4px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #d5d5d5;
+  overflow: hidden;
+}
+
+.order_his_item li:last-child {
+  padding-bottom: 0;
+  border: 0;
+}
+
+.order_his_item li .order_his_item_img {
+  float: left;
+  width: 78px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.order_his_item li .order_his_item_info {
+  float: right;
+  width: calc(100% - 90px);
+  color: #000;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.order_his_item li .order_his_item_info .info_s1 {
+  display: block;
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.order_his_item li .order_his_item_info .info_s2 {
+  margin-top: 8px;
+  color: #767676;
+  font-size: 0;
+}
+
+.order_his_item li .order_his_item_info .info_s2 span {
+  display: inline-block;
+  position: relative;
+  padding-left: 16px;
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align: top;
+}
+
+.order_his_item li .order_his_item_info .info_s2 span:before {
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 1px;
+  height: 10px;
+  background-color: #d5d5d5;
+  content: "";
+}
+
+.order_his_item li .order_his_item_info .info_s2 span:first-child {
+  padding-left: 0;
+}
+
+.order_his_item li .order_his_item_info .info_s2 span:first-child:before {
+  display: none;
+}
+
+.order_his_item li .order_his_item_info .info_s3 {
+  display: block;
+  margin-top: 12px;
+}
+
+.order_his_item li .order_his_item_info .info_s3 strong {
+  font-weight: 700;
+}
+
+.order_his_item li .order_his_item_btn {
+  clear: both;
+}
+
+.order_his_item li .order_his_item_btn .btn_area {
+  margin-top: 0;
+  padding-top: 16px;
 }
 
 /*** 주문/배송내역 ***/
 .cus_order_detail_wrap {
   margin-top: 32px;
-  /* 주문취소상품 정보 */
-  /* 주문내용 */
-}
-
-.cus_order_detail_wrap .cus_order_detail_box {
-  border: 1px solid #EAEAEA;
-  border-radius: 4px;
-  padding: 19px 19px 16px;
-  margin-top: 8px;
-}
-
-.cus_order_detail_wrap .cus_order_tit {
-  margin-top: 34px;
-  font-size: 14px;
-  color: #767676;
-  font-weight: 400;
-}
-
-.cus_order_detail_wrap .cus_order_num {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.cus_order_detail_wrap .cus_order_num span {
-  font-size: 14px;
-  font-weight: 500;
-  color: #000;
-  line-height: 29px;
-}
-
-.cus_order_detail_wrap .cus_order_num strong {
-  font-size: 20px;
-  font-weight: 700;
-  color: #DA2128;
-  margin-left: auto;
-}
-
-.cus_order_detail_wrap .item_dd_left, .cus_order_detail_wrap .item_dd_right {
-  padding: 14px 19px 10px;
-}
-
-.cus_order_detail_wrap .item_dd_left dl, .cus_order_detail_wrap .item_dd_right dl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.cus_order_detail_wrap .item_dd_left dt, .cus_order_detail_wrap .item_dd_left dd, .cus_order_detail_wrap .item_dd_right dt, .cus_order_detail_wrap .item_dd_right dd {
-  padding: 7px 0 6px;
-  font-size: 14px;
-}
-
-.cus_order_detail_wrap .item_dd_left dt, .cus_order_detail_wrap .item_dd_right dt {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 34%;
-          flex: 0 0 34%;
-  width: 20px;
-}
-
-.cus_order_detail_wrap .item_dd_left dd, .cus_order_detail_wrap .item_dd_right dd {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 66%;
-          flex: 0 0 66%;
-  width: 40px;
-}
-
-.cus_order_detail_wrap .item_dd_right dd {
-  text-align: right;
-}
-
-.cus_order_detail_wrap .price_normal_size span {
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.cus_order_detail_wrap .price_color span {
-  color: #DA2128;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.cus_order_detail_wrap .price_total_size span {
-  color: #DA2128;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 14px;
-}
-
-.cus_order_detail_wrap .cus_price_total_tit {
-  font-weight: 700;
-}
-
-.cus_order_detail_wrap dt.total_border, .cus_order_detail_wrap dt.total_border + dd {
-  border-top: 1px solid #EAEAEA;
-  padding: 22px 0 6px;
-  margin-top: 10px;
-}
-
-.cus_order_detail_wrap .cancel_info_list .cancel_info_1 span {
-  font-size: 12px;
-  color: #767676;
-  margin-top: 4px;
-  display: inline-block;
-}
-
-.cus_order_detail_wrap .cancel_info_list .cancel_info_2 span {
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .cus_order_detail_wrap .btn_txt_more {
-  margin: -18px 0 10px 0;
+  position: relative;
+  margin: -28px 0 8px 0;
 }
 
-.cus_order_detail_wrap .earn_points {
-  border-top: 1px solid #EAEAEA;
-  padding: 20px 0 7px;
-  margin-top: 12px;
-}
-
-.cus_order_detail_wrap .earn_points strong {
-  font-size: 13px;
-}
-
-.cus_order_detail_wrap .earn_points strong span {
-  color: #DA2128;
-}
-
-.cus_order_detail_wrap .earn_points p {
-  font-size: 12px;
+.cus_order_tit {
+  margin: 32px 0 8px;
   color: #767676;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.cus_order_detail_box {
+  position: relative;
+  padding: 20px 20px 18px 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cus_order_detail_box dl {
+  position: relative;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.cus_order_detail_box dl:first-child {
+  margin-top: 0;
+}
+
+.cus_order_detail_box dl.cus_order_bold dt {
+  font-weight: 700;
+}
+
+.cus_order_detail_box dl.cus_order_bold dd {
+  font-weight: 500;
+}
+
+.cus_order_detail_box dl.cus_order_bold dd strong {
+  position: relative;
+  top: -2px;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+.cus_order_detail_box dt {
+  float: left;
+  width: 100px;
+}
+
+.cus_order_detail_box dd {
+  float: right;
+  width: calc(100% - 100px);
+}
+
+.cus_order_detail_box dd span {
+  color: #767676;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.cus_order_detail_box dd strong {
+  display: inline-block;
+  padding: 0 4px;
+  font-weight: 700;
+  line-height: 22px;
+  vertical-align: middle;
+}
+
+.cus_order_detail_box.right dd {
+  text-align: right;
+}
+
+.cus_order_detail_box .t_point {
+  color: #da2128;
+}
+
+.cus_order_num dt {
+  position: relative;
+  top: 4px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.cus_order_num dd {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cus_price_total {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+/* 주문내용 */
+.earn_points strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.earn_points p {
   margin-top: 4px;
+  color: #767676;
+  font-size: 12px;
+  line-height: 18px;
 }

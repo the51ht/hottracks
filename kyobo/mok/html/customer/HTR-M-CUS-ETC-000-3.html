@@ -91,7 +91,7 @@
             <h2 class="mc_tit02">주문/배송내역</h2>
 
             <!-- info_text_box -->
-            <div class="info_text_box mb">
+            <div class="info_text_box">
                 <ul class="bul_list">
                     <li class="bul_item_dot font_size_xs">상품준비 이전 단계까지만 주문 취소가 가능합니다.</li>
                     <li class="bul_item_dot font_size_xs">상품준비 이전 단계에서의 부분취소는 [1:1문의]를 이용하시거나 고객센터로 연락주시기 바랍니다.</li>
@@ -99,170 +99,233 @@
             </div>
             <!-- //info_text_box -->
 
+            <!-- cus_order_detail_wrap -->
             <div class="cus_order_detail_wrap">
-                <div class="cus_order_detail_box cus_order_num">
-                    <span>주문번호</span>
-                    <strong>101112500263</strong>
+                <!-- 주문번호 -->
+                <div class="cus_order_detail_box right">
+                    <dl class="cus_order_num">
+                        <dt>주문번호</dt>
+                        <dd class="t_point">101112500263</dd>
+                    </dl>
                 </div>
+                <!-- //주문번호 -->
 
-                <h3 class="cus_order_tit">주문자정보</h2>
-                <div class="cus_order_detail_box item_dd_left cus_order_info">
+
+                <!-- 주문자정보 -->
+                <h3 class="cus_order_tit">주문자정보</h3>
+                <div class="cus_order_detail_box">
                     <dl>
                         <dt>주문하시는 분</dt>
-                        <dd><span>김미미</span></dd>
-
+                        <dd>김미미</dd>
+                    </dl>
+                    <dl>
                         <dt>주문접수</dt>
-                        <dd><span>2022.03.01</span></dd>
-
+                        <dd>2022.03.01</dd>
+                    </dl>
+                    <dl>
                         <dt>주문상태</dt>
-                        <dd><span>주문취소</span></dd>
+                        <dd>주문취소</dd>
                     </dl>
                 </div>
+                <!-- //주문자정보 -->
 
-                <h3 class="cus_order_tit">배송 정보</h2>
-                <div class="cus_order_detail_box item_dd_left cus_delivery_info">
+
+                <!-- 배송 정보 -->
+                <h3 class="cus_order_tit">배송 정보</h3>
+                <div class="cus_order_detail_box">
                     <dl>
                         <dt>받으실 분</dt>
-                        <dd><span>김미미</span></dd>
-
+                        <dd>김미미</dd>
+                    </dl>
+                    <dl>
                         <dt>받으실 분 주소</dt>
                         <dd>
-                            <span>
-                                [144-78] <br>
-                                경기도 부천시 까치로6번길 7-4 <br>
-                                2층
-                            </span>
+                            [144-78] <br>
+                            경기도 부천시 까치로6번길 7-4 2층
                         </dd>
-
+                    </dl>
+                    <dl>
                         <dt>전화번호</dt>
-                        <dd><span>-</span></dd>
-
+                        <dd>-</dd>
+                    </dl>
+                    <dl>
                         <dt>핸드폰번호</dt>
-                        <dd><span>010-2222-2222</span></dd>
+                        <dd>010-2222-2222</dd>
                     </dl>
                 </div>
+                <!-- //배송 정보 -->
 
-                <h3 class="cus_order_tit">주문취소상품 정보</h2>
-                <div class="cus_order_detail_box item_dd_right cancel_info_list">
+
+                <!-- 주문취소상품 정보 -->
+                <h3 class="cus_order_tit">주문취소상품 정보</h3>
+                <div class="cus_order_detail_box right">
                     <dl>
                         <dt>상품명</dt>
-                        <dd class="cancel_info_1">
+                        <dd>
                             <p>나무 마스킹테이프</p>
                             <span>나무 (GREEN)</span>
                         </dd>
-
-                        <dt>수량</dt>
-                        <dd><span>1개</span></dd>
-
-                        <dt>판매가</dt>
-                        <dd class="price_color"><span>4,420</span> 원</dd>
-
-                        <dt>판매자</dt>
-                        <dd><span>핫트랙스</span></dd>
-
-                        <dt>쿠폰사용금액</dt>
-                        <dd class="price_normal_size"><span>0</span> 원</dd>
-
-                        <dt>취소상태</dt>
-                        <dd><span>취소요청</span></dd>
-
-                        <dt>처리상태</dt>
-                        <dd><span>주문취소</span></dd>
-
-                        <dt class="cus_price_total_tit total_border">주문상품합계</dt>
-                        <dd class="cancel_info_2"><span>1종 0개</span></dd>
-
-                        <dt class="cus_price_total_tit">주문총액</dt>
-                        <dd class="price_total_size"><span>6,420</span> 원</dd>
                     </dl>
+                    <dl>
+                        <dt>수량</dt>
+                        <dd>1개</dd>
+                    </dl>
+                    <dl>
+                        <dt>판매가</dt>
+                        <dd><strong class="t_point">4,420</strong>원</dd>
+                    </dl>
+                    <dl>
+                        <dt>판매자</dt>
+                        <dd>핫트랙스</dd>
+                    </dl>
+                    <dl>
+                        <dt>쿠폰사용금액</dt>
+                        <dd><strong>0</strong>원</dd>
+                    </dl>
+                    <dl>
+                        <dt>취소상태</dt>
+                        <dd>취소요청</dd>
+                    </dl>
+                    <dl>
+                        <dt>처리상태</dt>
+                        <dd>주문취소</dd>
+                    </dl>
+                    <!-- cus_price_total -->
+                    <div class="cus_price_total">
+                        <dl class="cus_order_bold">
+                            <dt>주문상품합계</dt>
+                            <dd>1종 0개</dd>
+                        </dl>
+                        <dl class="cus_order_bold">
+                            <dt>주문총액</dt>
+                            <dd><strong class="t_point">6,420</strong>원</dd>
+                        </dl>
+                    </div>
+                    <!-- //cus_price_total -->
                 </div>
+                <!-- //주문취소상품 정보 -->
 
-                <h3 class="cus_order_tit">주문내용</h2>
-                <div class="cus_order_detail_box item_dd_right order_info_list">
+
+                <!-- 주문내용 -->
+                <h3 class="cus_order_tit">주문내용</h3>
+                <div class="cus_order_detail_box right">
                     <dl>
                         <dt>상품총금액</dt>
-                        <dd class="price_normal_size"><span>4,200</span> 원</dd>
-
-                        <dt>베송비</dt>
-                        <dd class="price_normal_size"><span>2,000</span> 원</dd>
-
-                        <dt class="cus_price_total_tit">주문합계</dt>
-                        <dd class="price_total_size"><span>6,420</span> 원</dd>
+                        <dd><strong>4,420</strong>원</dd>
                     </dl>
-                    <div class="earn_points">
-                        <strong>통합포인트 적립 예정액은 총 <span>60</span> 원 입니다.</strong>
-                        <p>
-                            쿠폰 또는 통합포인트 상용 시 예상적립 통합포인트는
-                            변동될 수 있습니다.
-                        </p>
+                    <dl>
+                        <dt>베송비</dt>
+                        <dd><strong>2,000</strong>원</dd>
+                    </dl>
+                    <dl class="cus_order_bold">
+                        <dt>주문합계</dt>
+                        <dd><strong class="t_point">6,420</strong>원</dd>
+                    </dl>
+                    <!-- cus_price_total -->
+                    <div class="cus_price_total earn_points">
+                        <strong>통합포인트 적립 예정액은 총 <span class="t_point">60</span> 원 입니다.</strong>
+                        <p>쿠폰 또는 통합포인트 상용 시 예상적립 통합포인트는 변동될 수 있습니다.</p>
                     </div>
+                    <!-- //cus_price_total -->
                 </div>
+                <!-- //주문내용 -->
 
-                <h3 class="cus_order_tit">할인내용</h2>
-                <div class="cus_order_detail_box item_dd_right discount_info_list">
+
+                <!-- 할인내용 -->
+                <h3 class="cus_order_tit">할인내용</h3>
+                <div class="cus_order_detail_box right">
                     <dl>
                         <dt>할인쿠폰</dt>
-                        <dd class="price_normal_size"><span>0</span> 원</dd>
-
-                        <dt>통합포인트</dt>
-                        <dd class="price_normal_size"><span>0</span> 원</dd>
-
-                        <dt>마일리지</dt>
-                        <dd class="price_normal_size"><span>0</span> 원</dd>
-
-                        <dt>예치금</dt>
-                        <dd class="price_normal_size"><span>0</span> 원</dd>
-
-                        <dt class="cus_price_total_tit total_border">할인총금액</dt>
-                        <dd class="price_total_size"><span>0</span> 원</dd>
+                        <dd><strong>0</strong>원</dd>
                     </dl>
+                    <dl>
+                        <dt>통합포인트</dt>
+                        <dd><strong>0</strong>원</dd>
+                    </dl>
+                    <dl>
+                        <dt>마일리지</dt>
+                        <dd><strong>0</strong>원</dd>
+                    </dl>
+                    <dl>
+                        <dt>예치금</dt>
+                        <dd><strong>0</strong>원</dd>
+                    </dl>
+                    <!-- cus_price_total -->
+                    <div class="cus_price_total">
+                        <dl class="cus_order_bold">
+                            <dt>할인총금액</dt>
+                            <dd><strong class="t_point">0</strong>원</dd>
+                        </dl>
+                    </div>
+                    <!-- //cus_price_total -->
                 </div>
+                <!-- //할인내용 -->
 
-                <h3 class="cus_order_tit">결제내용</h2>
-                <div class="cus_order_detail_box item_dd_right payment_info_list">
+
+                <!-- 결제내용 -->
+                <h3 class="cus_order_tit">결제내용</h3>
+                <div class="cus_order_detail_box right">
                     <dl>
                         <dt>주문금액</dt>
-                        <dd class="price_color"><span>4,420</span> 원</dd>
-
+                        <dd><strong class="t_point">6,420</strong>원</dd>
+                    </dl>
+                    <dl>
                         <dt>할인금액</dt>
-                        <dd><span>0</span> 원</dd>
-
-                        <dt class="cus_price_total_tit">총결제금액</dt>
-                        <dd class="price_total_size"><span>4,420</span> 원</dd>
-
+                        <dd><strong>0</strong>원</dd>
+                    </dl>
+                    <dl class="cus_order_bold">
+                        <dt>총결제금액</dt>
+                        <dd><strong class="t_point">6,420</strong>원</dd>
+                    </dl>
+                    <dl>
                         <dt>결제방식</dt>
-                        <dd><span>토스</span></dd>
-
+                        <dd>토스</dd>
+                    </dl>
+                    <dl>
                         <dt>금액</dt>
-                        <dd class="price_normal_size"><span>0</span> 원</dd>
-
+                        <dd><strong>6,420</strong>원</dd>
+                    </dl>
+                    <dl>
                         <dt>일자</dt>
-                        <dd><span>2022.03.01</span></dd>
-
+                        <dd>2022.03.01</dd>
+                    </dl>
+                    <dl>
                         <dt>비고</dt>
-                        <dd><span>결제완료</span></dd>
+                        <dd>결제완료</dd>
                     </dl>
                 </div>
+                <!-- //결제내용 -->
 
-                <h3 class="cus_order_tit">환불정보</h2>
-                <div class="cus_order_detail_box item_dd_right refund_info_list">
+
+                <!-- 환불정보 -->
+                <h3 class="cus_order_tit">환불정보</h3>
+                <div class="cus_order_detail_box right">
                     <dl>
                         <dt>취소금액</dt>
-                        <dd class="price_color"><span>4,420</span> 원</dd>
-
+                        <dd><strong class="t_point">6,420</strong>원</dd>
+                    </dl>
+                    <dl>
                         <dt>환불상세</dt>
                         <dd class="price_normal_size">
-                            <p>토스 <span>0</span> 원</p>
-                            <p>배송비 공제 <span>0</span> 원</p>
-                            <p>쿠폰 공제 <span>0</span> 원</p>
+                            <ul>
+                                <li>토스<strong>6,420</strong>원</li>
+                                <li>배송비 공제<strong>0</strong>원</li>
+                                <li>쿠폰 공제<strong>0</strong>원</li>
+                            </ul>
                         </dd>
-
-                        <dt class="cus_price_total_tit total_border">환불금액</dt>
-                        <dd class="price_total_size"><span>6,420</span> 원</dd>
                     </dl>
+                    <!-- cus_price_total -->
+                    <div class="cus_price_total">
+                        <dl class="cus_order_bold">
+                            <dt>환불금액</dt>
+                            <dd><strong class="t_point">6,420</strong>원</dd>
+                        </dl>
+                    </div>
+                    <!-- //cus_price_total -->
                 </div>
-
+                <!-- //환불정보 -->
             </div>
+            <!-- //cus_order_detail_wrap -->
         </div>
         <!-- //주문/배송내역 -->
     </div>
