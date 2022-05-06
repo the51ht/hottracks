@@ -253,21 +253,21 @@
 /* 웰컴메인 팝업 - 토스트 메시지*/
 .welcome_toast {
     .toast_message {
-        background:#fff;padding:15px 22px 11px;justify-content:start;min-height:72px;
+        min-height:72px;background:#fff;padding:15px 22px 11px;justify-content:start;
     }
     .icon_toast_greeting {
         margin-left:27px;margin-bottom:2px;
     }
     .txt_toast {
         padding-left:13px;color:#000;font-size:13px;text-align:left;
-        .btn_txt_more{
+        .btn_txt_more {
             display:inline-block;
             a {
-                font-size:12px;color:#595959;
+                color:#595959;font-size:12px;
             }
         }
-        span{
-            font-weight:bold;
+        span {
+            font-weight:700;
         }
     }
 }
@@ -283,38 +283,38 @@
 
 /***** 알림 페이지 ******/
 .wel_alm_wrapper {
-    .dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content{
+    .dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
         border-radius:4px;
     }
-    .header_wrapper .btn_header_setting:after{
+    .header_wrapper .btn_header_setting:after {
         background-image:url(../images/main/ico_wel_setting.svg);
     }
 }
 .alm_list_header {
-    &.mc_cont{
+    &.mc_cont {
         padding-bottom:0;
     }
-    .mc_tit02{
+    .mc_tit02 {
         margin-bottom:3px;
     }
-    .alm_list_sub{
-        font-size:14px;line-height:22px;color:#595959;margin-bottom:16px;
+    .alm_list_sub {
+        margin-bottom:16px;color:#595959;font-size:14px;line-height:22px;
     }
 }
-.alm_lst_wrap{
+.alm_lst_wrap {
     .form_toggle{
-        width:33px;float:left;
+        float:left;width:33px;
     }
-    .form_toggle input[type=checkbox]{
-        &+label{
-            height:45.5%;width:83%;background:#CCCCCC;margin-top:4px;
-            &:before{
+    .form_toggle input[type=checkbox] {
+        &+label {
+            height:45.5%;width:83%;background:#ccc;margin-top:4px;
+            &:before {
                 left:27px;top:2px;margin-left:-27px;border:1px solid #ccc;box-shadow:0 1px 5px -2px rgba(0, 0, 0, 1);width:14px;height:14px;
             }
         }
         &:checked+label{
             background:#000;
-            &:before{
+            &:before {
                 border:1px solid #000;left:42px;
             }
         }
