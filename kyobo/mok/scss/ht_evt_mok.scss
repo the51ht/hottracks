@@ -1303,8 +1303,17 @@
 	} 
 	
 	.to_event_list_btn {
-		border-radius: 4px;
-		background:url(../images/guide/evt_list_showMore.svg) no-repeat center center / 99%;	
+		position: relative;
+		background-color:#f7f7f7;border-radius:8px;
+		.pic_wrap {
+			&:before {
+				position:absolute;left:calc(48% + 25px);top:calc(50% + 5px);width:6px;height:6px;border:solid #595959;border-width: 1px 1px 0 0;transform:translate(-50%, -50%);transform:rotate(45deg);content:"";overflow:hidden;
+			}
+			&:after {
+				position:absolute;left:48%;top:50%;width:45px;color:#595959;font-size:12px;font-weight:500;line-height:16px;text-align:right;transform:translate(-50%, -50%);content:"기획전 바로가기";
+			}
+		}
+
 	}
 
 	.txt_title {
@@ -1673,7 +1682,7 @@
 
 }
 .evt_end_dim:before{
-	content:"기획전 종료";
+	content:"종료되었습니다.";
 	position:absolute;
 	width:100%;
 	top:40%;

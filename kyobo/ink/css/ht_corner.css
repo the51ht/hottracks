@@ -64,7 +64,7 @@
 
 /***** 핫딜특가 *****/
 .tod_full_banner.tod_hot_benner {
-  background: #F4F4F4;
+  background: #f4f4f4;
 }
 
 .tod_full_banner + .mdl_contents_wrap .mdl004 {
@@ -1041,24 +1041,9 @@
 }
 
 .gft_slide_view.len4 .evt_products {
-  /*display:block;*/
   margin: 0px -18px 0 -18px;
   padding: 0px;
   background: none;
-  /*
-            .prod_item {
-                float:left;width:calc(25% - 36px);margin:40px 18px 0 18px;
-            }
-            
-            .product_pic {
-                margin:0;
-            }
-            .evt_good_count {
-                display:inline-block;
-            }
-            .product_info {
-                display:inline-block;
-            }*/
 }
 
 .gft_slide_view.len2 {
@@ -1261,13 +1246,13 @@
 }
 
 .gft_need_main .gft_need_main_cont .product_info .desc_line:before {
-  content: "“";
+  position: absolute;
+  top: 38px;
   display: inline-block;
   font-size: 54px;
   font-family: 'Gmarket Sans';
   font-weight: 700;
-  position: absolute;
-  top: 38px;
+  content: "“";
 }
 
 .gft_need_main .list_lenght_warp {
@@ -2539,12 +2524,12 @@
 
 /* liv_txt_list */
 .liv_txt_list {
-  width: 1200px;
-  margin: 0 auto;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
   height: 600px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -2577,23 +2562,23 @@
 }
 
 .liv_txt_list .title {
-  line-height: 50px;
-  letter-spacing: -1px;
+  margin-bottom: 12px;
   font-size: 38px;
   font-weight: 700;
-  margin-bottom: 12px;
+  line-height: 50px;
+  letter-spacing: -1px;
 }
 
 .liv_txt_list .sub_title {
+  color: rgba(0, 0, 0, 0.8);
   font-size: 20px;
   font-weight: 500;
   line-height: 34px;
-  color: rgba(0, 0, 0, 0.8);
 }
 
 .liv_txt_list .liv_btn_area {
-  text-align: left;
   margin-top: 42px;
+  text-align: left;
 }
 
 .liv_txt_list .liv_btn_area a, .liv_txt_list .liv_btn_area button {
@@ -3299,10 +3284,10 @@
 }
 
 .calendar_tab .swiper-slide {
+  width: 60px;
   padding: 0 2px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 60px;
 }
 
 .calendar_tab .li {
@@ -3392,10 +3377,10 @@
 }
 
 .ht_msg_box .txt {
-  line-height: 24px;
-  letter-spacing: -1px;
   font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -1px;
 }
 
 /* liv_timeline */
@@ -3539,7 +3524,7 @@
 
 .liv_timeline_marker > strong.d_day {
   background-color: #fff;
-  color: #FF2700;
+  color: #ff2700;
 }
 
 .liv_timeline_marker p {
@@ -3946,7 +3931,7 @@
   padding: 60px 20px;
   /*
     .tab_ty {
-        margin-bottom:20px; 
+        margin-bottom:20px;
     }*/
 }
 
@@ -4083,6 +4068,7 @@
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s;
 }
 
 .cur_prod_bottom .cur_prod_item .cur_product_info_inner .title {

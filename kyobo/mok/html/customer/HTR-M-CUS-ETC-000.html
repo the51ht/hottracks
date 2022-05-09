@@ -88,12 +88,12 @@
     <div class="wel_main_wrap">
         <!-- tab_nav -->
         <div class="tab_nav_area">
-            <a href="#n" class="active">이전 주문 정보</a><!-- 활성화 class="active" -->
-            <a href="#n" style="width:60%;">예치금 환불 신청</a>
+            <a href="#n" class="active">이전 주문 조회</a><!-- 활성화 class="active" --><!-- 22.05.09 탭 명 수정 -->
+            <a href="#n">예치금 환불 신청</a><!-- 22.05.09 탭 명 수정 / width 삭제 -->
         </div>
         <!-- //tab_nav-->
 
-        <!-- 이전 주문 정보 -->
+        <!-- 이전 주문 조회 -->
         <div class="mc_cont cus_cont">
             <!-- info_text_box -->
             <div class="info_text_box mb">
@@ -108,10 +108,8 @@
             </div>
             <!-- //info_text_box -->
 
-            
-
+            <!-- order_his_list_wrap -->
             <div class="order_his_list_wrap">
-                
                 <!-- info_select_a -->
                 <div class="info_select_a">
                     <button class="btn_select_ty btn_select1" data-role="btn-dialog" data-target="#popSelectCate"><span>최근 6개월</span></button>
@@ -239,10 +237,17 @@ $(function(){
     }); 
 });
 </script>
-
+                
+                <!-- order_his_list -->
                 <ul class="order_his_list">
+                    <!-- li 반복 -->
                     <li>
                         <div class="order_his_tit">
+                            <!--
+                                기본 : .order_his_tit - 취소, 반품, 교환, 결제대기, 결제완료
+                                red : .order_his_tit.order_st - 상품준비, 배송중
+                                blue : .order_his_tit.order_st2 - 배송완료
+                            -->
                             <p>
                                 <span class="order_st">취소</span>
                                 <strong>2021.11.23</strong>
@@ -250,6 +255,22 @@ $(function(){
                             </p>
                         </div>
                         <ul class="order_his_item">
+                            <!-- li 반복 -->
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링 엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <div class="info_s2">
+                                        <span>나무(Green)</span>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3"><strong>4,420</strong>원</span>
+                                </div>
+                            </li>
+                            <!-- //li 반복 -->
+
                             <li>
                                 <div class="order_his_item_img">
                                     <img src="../../images/temp/@cus_his_thumb.png" alt="">
@@ -257,24 +278,19 @@ $(function(){
                                 <div class="order_his_item_info">
                                     <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
                                     <div class="info_s2">
-                                        <p>나무(Green)</p>
+                                        <span>나무(Green)</span>
                                         <span>1개</span>
                                     </div>
-                                    <span class="info_s3">4,420원</span>
+                                    <span class="info_s3"><strong>4,420</strong>원</span>
                                 </div>
-                                <div class="order_his_item_btn">
-                                    <div class="btn_area">
-                                        <button type="button" class="btn_md btn_line_gray"><span class="text">배송조회</span></button>
-                                        <button type="button" class="btn_md btn_line_gray"><span class="text">상품후기 작성</span></button>
-                                    </div>
-                                </div>
-                            </li>
                         </ul>
                     </li>
+                    <!-- //li 반복 -->
+
                     <li>
                         <div class="order_his_tit">
                             <p>
-                                <span class="order_st">배송완료</span>
+                                <span class="order_st">결제대기</span>
                                 <strong>2021.11.23</strong>
                                 <span>101112400407</span>
                             </p>
@@ -285,24 +301,18 @@ $(function(){
                                     <img src="../../images/temp/@cus_his_thumb.png" alt="">
                                 </div>
                                 <div class="order_his_item_info">
-                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <strong class="info_s1">2022 먼슬리매트+일정관리스티커</strong>
                                     <div class="info_s2">
-                                        <p>나무(Green)</p>
+                                        <span>나무(Green)</span>
                                         <span>1개</span>
                                     </div>
-                                    <span class="info_s3">4,420원</span>
-                                </div>
-                                <div class="order_his_item_btn">
-                                    <div class="btn_area">
-                                        <button type="button" class="btn_md btn_line_gray"><span class="text">배송조회</span></button>
-                                        <button type="button" class="btn_md btn_line_gray"><span class="text">상품후기 작성</span></button>
-                                    </div>
+                                    <span class="info_s3"><strong>4,420</strong>원</span>
                                 </div>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <div class="order_his_tit order_st1">
+                        <div class="order_his_tit">
                             <p>
                                 <span class="order_st">결제완료</span>
                                 <strong>2021.11.23</strong>
@@ -315,12 +325,66 @@ $(function(){
                                     <img src="../../images/temp/@cus_his_thumb.png" alt="">
                                 </div>
                                 <div class="order_his_item_info">
-                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <strong class="info_s1">2022 먼슬리매트+일정관리스티커</strong>
                                     <div class="info_s2">
-                                        <p>나무(Green)</p>
+                                        <span>나무(Green)</span>
                                         <span>1개</span>
                                     </div>
-                                    <span class="info_s3">4,420원</span>
+                                    <span class="info_s3"><strong>4,420</strong>원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="order_his_tit order_st"><!-- 상품준비 class="order_st" -->
+                            <p>
+                                <span class="order_st">상품준비</span>
+                                <strong>2021.11.23</strong>
+                                <span>101112400407</span>
+                            </p>
+                        </div>
+                        <ul class="order_his_item">
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">2022 먼슬리매트+일정관리스티커</strong>
+                                    <div class="info_s2">
+                                        <span>나무(Green)</span>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3"><strong>4,420</strong>원</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="order_his_tit order_st"><!-- 배송중 class="order_st" -->
+                            <p>
+                                <span class="order_st">배송중</span>
+                                <strong>2021.11.23</strong>
+                                <span>101112400407</span>
+                            </p>
+                        </div>
+                        <ul class="order_his_item">
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">2022 먼슬리매트+일정관리스티커</strong>
+                                    <div class="info_s2">
+                                        <span>나무(Green)</span>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3"><strong>4,420</strong>원</span>
+                                </div>
+                                <div class="order_his_item_btn">
+                                    <div class="btn_area">
+                                        <button type="button" class="btn_sm btn_line_gray"><span class="text">배송조회</span></button>
+                                    </div>
                                 </div>
                             </li>
                             <li>
@@ -328,30 +392,61 @@ $(function(){
                                     <img src="../../images/temp/@cus_his_thumb.png" alt="">
                                 </div>
                                 <div class="order_his_item_info">
-                                    <strong class="info_s1">엑토 레트로 미니 블루투스 멀티페어링</strong>
+                                    <strong class="info_s1">2022 먼슬리매트+일정관리스티커</strong>
                                     <div class="info_s2">
-                                        <p>나무(Green)</p>
+                                        <span>나무(Green)</span>
                                         <span>1개</span>
                                     </div>
-                                    <span class="info_s3">4,420원</span>
+                                    <span class="info_s3"><strong>4,420</strong>원</span>
+                                </div>
+                                <div class="order_his_item_btn">
+                                    <div class="btn_area">
+                                        <button type="button" class="btn_sm btn_line_gray"><span class="text">배송조회</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="order_his_tit order_st2"><!-- 결제완료 class="order_st1" -->
+                            <p>
+                                <span class="order_st">배송완료</span>
+                                <strong>2021.11.23</strong>
+                                <span>101112400407</span>
+                            </p>
+                        </div>
+                        <ul class="order_his_item">
+                            <li>
+                                <div class="order_his_item_img">
+                                    <img src="../../images/temp/@cus_his_thumb.png" alt="">
+                                </div>
+                                <div class="order_his_item_info">
+                                    <strong class="info_s1">2022 먼슬리매트+일정관리스티커</strong>
+                                    <div class="info_s2">
+                                        <span>나무(Green)</span>
+                                        <span>1개</span>
+                                    </div>
+                                    <span class="info_s3"><strong>4,420</strong>원</span>
+                                </div>
+                                <div class="order_his_item_btn">
+                                    <div class="btn_area">
+                                        <button type="button" class="btn_sm btn_line_gray"><span class="text">배송조회</span></button>
+                                        <button type="button" class="btn_sm btn_line_gray"><span class="text">상품후기 작성</span></button>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
                     </li>
                 </ul>
-            </div>
+                <!-- //order_his_list -->
 
-            <!-- 더보기 버튼 more_btn에 hidden Class  추가하면 버튼 안보임 -->
-            <div class="btn_more_div">
-                <button class="more_btn">
-                    <span class="txt">더보기</span>
-                    <span class="btn_more_icon"></span>
-                </button>
+                <button class="btn_more_view"><span><em class="hidden">공지사항</em>더보기(<em>10</em>/<em>59</em>)</span></button>
+
             </div>
-            <!-- //더보기 -->
-            
+            <!-- //order_his_list_wrap -->
         </div>
-        <!-- //이전 주문 정보 -->
+        <!-- //이전 주문 조회 -->
     </div>
     <!-- //고객센터 컨텐츠 -->
 
