@@ -560,6 +560,7 @@
 }
 
 .wel_today_cont .swiper-slide {
+  position: relative;
   width: 58%;
   padding: 15px 0 30px 0;
   position: relative;
@@ -9678,9 +9679,6 @@
   margin: -4px -20px 24px -20px;
   padding: 0 20px;
   overflow-x: auto;
-  opacity: 1 !important;
-  -webkit-animation: none !important;
-          animation: none !important;
 }
 
 .mus_tab_box a {
@@ -9840,71 +9838,109 @@
   border-radius: 17px !important;
 }
 
-/** 모션 재정의 **/
-.mc_tit {
+/***** 모션 인터렉션 *****/
+/** 웰컴메인 **/
+.wel_main_warp .mc_tit,
+.wel_main_warp .mc_tit02,
+.wel_main_warp .tab_ty,
+.wel_main_warp .li_resp_ty.ty02 .li,
+.wel_main_warp .wel_belt_banner,
+.wel_main_warp .wel_today_time,
+.wel_main_warp .wel_exehibition_banner {
   opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
 }
 
-.mc_txt {
+.wel_main_warp .mc_tit.active,
+.wel_main_warp .mc_tit02.active,
+.wel_main_warp .tab_ty.active,
+.wel_main_warp .li_resp_ty.ty02 .li.active,
+.wel_main_warp .wel_belt_banner.active,
+.wel_main_warp .wel_today_time.active,
+.wel_main_warp .wel_exehibition_banner.active {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.wel_main_warp .ht_today_banner,
+.wel_main_warp .li_ty .li,
+.wel_main_warp .li_box_ty .li,
+.wel_main_warp .btn_gift_warp,
+.wel_main_warp .wel_cont,
+.wel_main_warp .wel_now_banner,
+.wel_main_warp .wel_gift_cont,
+.wel_main_warp .wel_category_banner {
   opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
 }
 
-.mc_cont.active .mc_tit {
-  -webkit-animation: fade both 0.6s 0.1s;
-          animation: fade both 0.6s 0.1s;
+.wel_main_warp .ht_today_banner.active,
+.wel_main_warp .li_ty .li.active,
+.wel_main_warp .li_box_ty .li.active,
+.wel_main_warp .btn_gift_warp.active,
+.wel_main_warp .wel_cont.active,
+.wel_main_warp .wel_now_banner.active,
+.wel_main_warp .wel_gift_cont.active,
+.wel_main_warp .wel_category_banner.active {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
-.mc_cont.active .mc_txt {
-  -webkit-animation: fade both 0.6s 0.4s;
-          animation: fade both 0.6s 0.4s;
-}
-
-.wel_cont {
-  position: relative;
+/** 음반메인 **/
+.mus_main_warp .mc_tit02,
+.mus_main_warp .tab_ty,
+.mus_main_warp .wel_belt_banner,
+.mus_main_warp .wel_quick_menu_cont,
+.mus_main_warp .mus_mc_order_cont {
   opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
 }
 
-.wel_cont.active {
-  -webkit-animation: fade both 0.6s 0.1s;
-          animation: fade both 0.6s 0.1s;
+.mus_main_warp .mc_tit02.active,
+.mus_main_warp .tab_ty.active,
+.mus_main_warp .wel_belt_banner.active,
+.mus_main_warp .wel_quick_menu_cont.active,
+.mus_main_warp .mus_mc_order_cont.active {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
-.li_ty .li {
-  position: relative;
+.mus_main_warp .evt_products,
+.mus_main_warp .mus_mc_reserved_cont,
+.mus_main_warp .mus_mc_chart_cont,
+.mus_main_warp .mus_mc_new_album_cont,
+.mus_main_warp .mus_mc_fan_cont,
+.mus_main_warp .mus_mc_fansign,
+.mus_main_warp .mus_mc_pop_cont,
+.mus_main_warp .mus_mc_classic_msg ul,
+.mus_main_warp .mus_mc_lpshop_cont,
+.mus_main_warp .mus_tab_box,
+.mus_main_warp .mus_mc_special_cont {
   opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
 }
 
-.li_ty .li.active {
-  -webkit-animation: fade both 0.6s 0.1s;
-          animation: fade both 0.6s 0.1s;
-}
-
-.li_box_ty .li {
-  position: relative;
-  opacity: 0;
-}
-
-.li_box_ty .li.active {
-  -webkit-animation: fade both 0.6s 0.1s;
-          animation: fade both 0.6s 0.1s;
-}
-
-.tab_swiper {
-  opacity: 0;
-}
-
-.tab_swiper.active {
-  -webkit-animation: fade both 0.6s 0.1s;
-          animation: fade both 0.6s 0.1s;
-}
-
-.li_resp_ty.ty02 .li {
-  opacity: 0;
-}
-
-.li_resp_ty.ty02 .li.active {
-  -webkit-animation: fade both 0.6s 0.1s;
-          animation: fade both 0.6s 0.1s;
+.mus_main_warp .evt_products.active,
+.mus_main_warp .mus_mc_reserved_cont.active,
+.mus_main_warp .mus_mc_chart_cont.active,
+.mus_main_warp .mus_mc_new_album_cont.active,
+.mus_main_warp .mus_mc_fan_cont.active,
+.mus_main_warp .mus_mc_fansign.active,
+.mus_main_warp .mus_mc_pop_cont.active,
+.mus_main_warp .mus_mc_classic_msg ul.active,
+.mus_main_warp .mus_mc_lpshop_cont.active,
+.mus_main_warp .mus_tab_box.active,
+.mus_main_warp .mus_mc_special_cont.active {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 /** 이사 예정 **/
