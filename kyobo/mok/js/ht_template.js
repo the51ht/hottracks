@@ -89,10 +89,10 @@ function welToday(){
         loop: true,
         loopsSlide: 1,
         spaceBetween: 20,
-        autoplay: {
+        /*autoplay: {
             delay: 5000,
             disableOnInteraction: false,
-        },
+        },*/
         speed: 700,
 		pagination: {
 			el: $('.wel_today_cont').find('.swiper-pagination')[0],
