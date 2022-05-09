@@ -1071,10 +1071,20 @@
         border: 0;
         .form_sel .ui-selectmenu-button{width: 160px;}
     }
-    .btn_re_ex{
-        margin-top: 0;
-        margin-bottom: 15px;
+    .btn_area{
         text-align: right;
+        button{
+            padding: 0 23px 1px;
+        }
+    }
+}
+.btn_re_ex{
+    margin-top: 0;margin-bottom: 15px;text-align: right;
+}
+
+.ht_tit05 + .order_his_list_wrap{
+    .bul_list{
+        padding: 0 0 27px 0;border-bottom: 1px solid #EAEAEA;
     }
 }
 .input_address_box{
@@ -1405,7 +1415,10 @@
             border-top: 1px solid #EAEAEA;
         }
         tr .td_item_left{
-            padding-left:  15px;padding-right: 0;
+            padding-left:  6px;padding-right: 0;
+        }
+        tr th {
+            padding: 12px 0 8px;
         }
         .order_list_detail{
             background: #F7F7F7;border-top: 0;
@@ -1415,14 +1428,61 @@
             > td:last-child { border-bottom-right-radius: 6px; }
             .td_form_chk{
                 text-align: right;
+                .form_chk, .form_rdo{
+                    width: 22px;
+                }
             }
             .td_item_left{
-                padding-left: 30px;
+                padding-left: 24px;
             }
             td{
                 border-top: 0;
             }
         }
+        .tit_form_wrap {
+            padding-bottom: 0;border-bottom: 0;
+            .form_sel {
+                float: initial;
+                .ui-selectmenu-button{
+                    width: 70px;
+                }
+            }
+        }
     }
 }
+
+/* 신청 결제월 선택 */
+.tit_form_wrap {
+    &.y_m_sel{
+        .form_sel .ui-selectmenu-button {
+            width: 160px;
+        }
+    }
+}
+
+/* 사업자등록증 등록 및 조회 */
+.add_btn_area{
+    position: relative;
+    .btn_area{
+        position: absolute;right: -186px;top: 0;cursor: pointer; margin-top: 0;
+    }
+}
+
+.info_text_box.info_text_box_bott{
+    margin-top: 60px;
+    .btn_set_space_between{
+        justify-content: space-between;
+        .btn_more_view_box_ty02{
+            background: #fff;
+            strong{
+                height: 23px;line-height: 23px;font-size: 12px;padding: 0 1px 0 5px;
+            }
+            em:after {
+                width: 3px;height: 3px;margin-top: -6px;right: 5px;
+            }
+        }
+    }
+}
+
+
 
