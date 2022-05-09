@@ -1215,7 +1215,7 @@
 
     /* 결제정보, 환불정보 */
     .order_table_pay{
-        border-top: 1px solid #000;padding: 34px 10px;display: table;border-bottom: 1px solid #EAEAEA;box-sizing: border-box;
+        border-top: 1px solid #000;padding: 34px 10px;display: table;border-bottom: 1px solid #EAEAEA;box-sizing: border-box;width: 100%;
         &::after{
             content: ""; display: block; clear: both;
         }
@@ -1236,6 +1236,19 @@
             &:last-child{
                 padding-right: 0;
             }
+            > dl{
+                &.cus_order_bold{
+                    margin-bottom: 14px;
+                }
+                &:first-child{
+                    dt{
+                        margin-top: 0px;
+                    }
+                    dd{
+                        margin-top: 0px;
+                    }
+                }
+            }
         }
         dl{
             display: flex;flex-wrap: wrap;justify-content: space-between;
@@ -1243,28 +1256,29 @@
                 color: #767676; font-weight: 500; font-size: 13px;
             }
             dt{
-                flex: 0 0 57%;
+                flex: 0 0 57%;margin-top: 6px;
                 + dd{
                     margin-top: 6px;
                 }
             }
             dd{
-                flex: 0 0 43%; text-align: right;max-width: 119px;
+                flex: 0 0 43%; text-align: right;max-width: 119px;margin-top: 6px;
                 + dt{
                     margin-top: 6px;
                 }
             }
         }
-        .price_total_price{
-            color: #000; font-size: 16px; font-weight: 700;margin-top:0;
-            + dt{
-                margin-top: 19px;
-                + dd{
-                    margin-top: 19px;
+        .cus_order_bold{
+            dt{
+                color: #000; font-size: 14px; font-weight: 500;
+            }
+            dd{
+                color: #000;
+                strong{
+                    color: #000; font-size: 16px; font-weight: 700;margin-top:0;
                 }
             }
         }
-        .price_total_tit{color: #000; font-size: 14px; font-weight: 500;}
         .btn_more_view_box {
             margin-top: 19px;float: right;margin-right: 3px;
             em:after{

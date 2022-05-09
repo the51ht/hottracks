@@ -2104,6 +2104,7 @@
   border-bottom: 1px solid #EAEAEA;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 100%;
 }
 
 .cus_order_detail_wrap .order_table_pay::after {
@@ -2143,6 +2144,18 @@
   padding-right: 0;
 }
 
+.cus_order_detail_wrap .order_table_pay > div > dl.cus_order_bold {
+  margin-bottom: 14px;
+}
+
+.cus_order_detail_wrap .order_table_pay > div > dl:first-child dt {
+  margin-top: 0px;
+}
+
+.cus_order_detail_wrap .order_table_pay > div > dl:first-child dd {
+  margin-top: 0px;
+}
+
 .cus_order_detail_wrap .order_table_pay dl {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2164,6 +2177,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 57%;
           flex: 0 0 57%;
+  margin-top: 6px;
 }
 
 .cus_order_detail_wrap .order_table_pay dl dt + dd {
@@ -2176,31 +2190,28 @@
           flex: 0 0 43%;
   text-align: right;
   max-width: 119px;
+  margin-top: 6px;
 }
 
 .cus_order_detail_wrap .order_table_pay dl dd + dt {
   margin-top: 6px;
 }
 
-.cus_order_detail_wrap .order_table_pay .price_total_price {
+.cus_order_detail_wrap .order_table_pay .cus_order_bold dt {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cus_order_detail_wrap .order_table_pay .cus_order_bold dd {
+  color: #000;
+}
+
+.cus_order_detail_wrap .order_table_pay .cus_order_bold dd strong {
   color: #000;
   font-size: 16px;
   font-weight: 700;
   margin-top: 0;
-}
-
-.cus_order_detail_wrap .order_table_pay .price_total_price + dt {
-  margin-top: 19px;
-}
-
-.cus_order_detail_wrap .order_table_pay .price_total_price + dt + dd {
-  margin-top: 19px;
-}
-
-.cus_order_detail_wrap .order_table_pay .price_total_tit {
-  color: #000;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .cus_order_detail_wrap .order_table_pay .btn_more_view_box {
