@@ -1865,10 +1865,23 @@
   width: 160px;
 }
 
-.order_his_list_wrap .btn_re_ex {
+.order_his_list_wrap .btn_area {
+  text-align: right;
+}
+
+.order_his_list_wrap .btn_area button {
+  padding: 0 23px 1px;
+}
+
+.btn_re_ex {
   margin-top: 0;
   margin-bottom: 15px;
   text-align: right;
+}
+
+.ht_tit05 + .order_his_list_wrap .bul_list {
+  padding: 0 0 27px 0;
+  border-bottom: 1px solid #EAEAEA;
 }
 
 .input_address_box {
@@ -2091,6 +2104,7 @@
   border-bottom: 1px solid #EAEAEA;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 100%;
 }
 
 .cus_order_detail_wrap .order_table_pay::after {
@@ -2130,6 +2144,18 @@
   padding-right: 0;
 }
 
+.cus_order_detail_wrap .order_table_pay > div > dl.cus_order_bold {
+  margin-bottom: 14px;
+}
+
+.cus_order_detail_wrap .order_table_pay > div > dl:first-child dt {
+  margin-top: 0px;
+}
+
+.cus_order_detail_wrap .order_table_pay > div > dl:first-child dd {
+  margin-top: 0px;
+}
+
 .cus_order_detail_wrap .order_table_pay dl {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2151,6 +2177,7 @@
   -webkit-box-flex: 0;
       -ms-flex: 0 0 57%;
           flex: 0 0 57%;
+  margin-top: 6px;
 }
 
 .cus_order_detail_wrap .order_table_pay dl dt + dd {
@@ -2163,31 +2190,28 @@
           flex: 0 0 43%;
   text-align: right;
   max-width: 119px;
+  margin-top: 6px;
 }
 
 .cus_order_detail_wrap .order_table_pay dl dd + dt {
   margin-top: 6px;
 }
 
-.cus_order_detail_wrap .order_table_pay .price_total_price {
+.cus_order_detail_wrap .order_table_pay .cus_order_bold dt {
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.cus_order_detail_wrap .order_table_pay .cus_order_bold dd {
+  color: #000;
+}
+
+.cus_order_detail_wrap .order_table_pay .cus_order_bold dd strong {
   color: #000;
   font-size: 16px;
   font-weight: 700;
   margin-top: 0;
-}
-
-.cus_order_detail_wrap .order_table_pay .price_total_price + dt {
-  margin-top: 19px;
-}
-
-.cus_order_detail_wrap .order_table_pay .price_total_price + dt + dd {
-  margin-top: 19px;
-}
-
-.cus_order_detail_wrap .order_table_pay .price_total_tit {
-  color: #000;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .cus_order_detail_wrap .order_table_pay .btn_more_view_box {
@@ -2430,8 +2454,12 @@
 }
 
 .pop_inner_table .order_his_table_wrap .order_his_table tr .td_item_left {
-  padding-left: 15px;
+  padding-left: 6px;
   padding-right: 0;
+}
+
+.pop_inner_table .order_his_table_wrap .order_his_table tr th {
+  padding: 12px 0 8px;
 }
 
 .pop_inner_table .order_his_table_wrap .order_his_table .order_list_detail {
@@ -2459,10 +2487,73 @@
   text-align: right;
 }
 
+.pop_inner_table .order_his_table_wrap .order_his_table .order_list_detail .td_form_chk .form_chk, .pop_inner_table .order_his_table_wrap .order_his_table .order_list_detail .td_form_chk .form_rdo {
+  width: 22px;
+}
+
 .pop_inner_table .order_his_table_wrap .order_his_table .order_list_detail .td_item_left {
-  padding-left: 30px;
+  padding-left: 24px;
 }
 
 .pop_inner_table .order_his_table_wrap .order_his_table .order_list_detail td {
   border-top: 0;
+}
+
+.pop_inner_table .order_his_table_wrap .order_his_table .tit_form_wrap {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.pop_inner_table .order_his_table_wrap .order_his_table .tit_form_wrap .form_sel {
+  float: initial;
+}
+
+.pop_inner_table .order_his_table_wrap .order_his_table .tit_form_wrap .form_sel .ui-selectmenu-button {
+  width: 70px;
+}
+
+/* 신청 결제월 선택 */
+.tit_form_wrap.y_m_sel .form_sel .ui-selectmenu-button {
+  width: 160px;
+}
+
+/* 사업자등록증 등록 및 조회 */
+.add_btn_area {
+  position: relative;
+}
+
+.add_btn_area .btn_area {
+  position: absolute;
+  right: -186px;
+  top: 0;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.info_text_box.info_text_box_bott {
+  margin-top: 60px;
+}
+
+.info_text_box.info_text_box_bott .btn_set_space_between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info_text_box.info_text_box_bott .btn_set_space_between .btn_more_view_box_ty02 {
+  background: #fff;
+}
+
+.info_text_box.info_text_box_bott .btn_set_space_between .btn_more_view_box_ty02 strong {
+  height: 23px;
+  line-height: 23px;
+  font-size: 12px;
+  padding: 0 1px 0 5px;
+}
+
+.info_text_box.info_text_box_bott .btn_set_space_between .btn_more_view_box_ty02 em:after {
+  width: 3px;
+  height: 3px;
+  margin-top: -6px;
+  right: 5px;
 }
