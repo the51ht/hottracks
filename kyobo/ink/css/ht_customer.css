@@ -2236,7 +2236,7 @@
   border-radius: 4px;
 }
 
-.order_re_ex_wrap {
+.order_re_ex_wrap, .order_processing_wrap {
   background: #F7F7F7;
   border-radius: 12px;
   padding: 42px 40px;
@@ -2247,25 +2247,25 @@
           box-sizing: border-box;
 }
 
-.order_re_ex_wrap:after {
+.order_re_ex_wrap:after, .order_processing_wrap:after {
   clear: both;
   display: block;
   content: "";
 }
 
-.order_re_ex_wrap .order_re_ex {
+.order_re_ex_wrap .order_re_ex, .order_re_ex_wrap .order_processing_box, .order_processing_wrap .order_re_ex, .order_processing_wrap .order_processing_box {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: table-cell;
   vertical-align: top;
 }
 
-.order_re_ex_wrap .order_re_ex + .order_re_ex {
+.order_re_ex_wrap .order_re_ex + .order_re_ex, .order_re_ex_wrap .order_processing_box + .order_re_ex, .order_processing_wrap .order_re_ex + .order_re_ex, .order_processing_wrap .order_processing_box + .order_re_ex {
   padding-left: 80px;
   position: relative;
 }
 
-.order_re_ex_wrap .order_re_ex + .order_re_ex:before {
+.order_re_ex_wrap .order_re_ex + .order_re_ex:before, .order_re_ex_wrap .order_processing_box + .order_re_ex:before, .order_processing_wrap .order_re_ex + .order_re_ex:before, .order_processing_wrap .order_processing_box + .order_re_ex:before {
   border-left: 1px dashed #D5D5D5;
   position: absolute;
   left: 40px;
@@ -2275,17 +2275,17 @@
   content: "";
 }
 
-.order_re_ex_wrap .order_re_ex ul {
+.order_re_ex_wrap .order_re_ex ul, .order_re_ex_wrap .order_processing_box ul, .order_processing_wrap .order_re_ex ul, .order_processing_wrap .order_processing_box ul {
   margin-top: 18px;
 }
 
-.order_re_ex_wrap .order_re_ex ul:after {
+.order_re_ex_wrap .order_re_ex ul:after, .order_re_ex_wrap .order_processing_box ul:after, .order_processing_wrap .order_re_ex ul:after, .order_processing_wrap .order_processing_box ul:after {
   clear: both;
   content: "";
   display: block;
 }
 
-.order_re_ex_wrap .order_re_ex ul li {
+.order_re_ex_wrap .order_re_ex ul li, .order_re_ex_wrap .order_processing_box ul li, .order_processing_wrap .order_re_ex ul li, .order_processing_wrap .order_processing_box ul li {
   width: 79px;
   float: left;
   text-align: center;
@@ -2293,17 +2293,17 @@
   position: relative;
 }
 
-.order_re_ex_wrap .order_re_ex ul li span {
+.order_re_ex_wrap .order_re_ex ul li span, .order_re_ex_wrap .order_processing_box ul li span, .order_processing_wrap .order_re_ex ul li span, .order_processing_wrap .order_processing_box ul li span {
   margin-top: 12px;
   display: inline-block;
   width: 103%;
 }
 
-.order_re_ex_wrap .order_re_ex ul li:last-child {
+.order_re_ex_wrap .order_re_ex ul li:last-child, .order_re_ex_wrap .order_processing_box ul li:last-child, .order_processing_wrap .order_re_ex ul li:last-child, .order_processing_wrap .order_processing_box ul li:last-child {
   padding-right: 0;
 }
 
-.order_re_ex_wrap .order_re_ex ul li:before {
+.order_re_ex_wrap .order_re_ex ul li:before, .order_re_ex_wrap .order_processing_box ul li:before, .order_processing_wrap .order_re_ex ul li:before, .order_processing_wrap .order_processing_box ul li:before {
   content: "";
   width: 78px;
   height: 78px;
@@ -2318,11 +2318,11 @@
   border: 1px solid #EAEAEA;
 }
 
-.order_re_ex_wrap .order_re_ex ul li:last-child:after {
+.order_re_ex_wrap .order_re_ex ul li:last-child:after, .order_re_ex_wrap .order_processing_box ul li:last-child:after, .order_processing_wrap .order_re_ex ul li:last-child:after, .order_processing_wrap .order_processing_box ul li:last-child:after {
   background: initial;
 }
 
-.order_re_ex_wrap .order_re_ex ul li:after {
+.order_re_ex_wrap .order_re_ex ul li:after, .order_re_ex_wrap .order_processing_box ul li:after, .order_processing_wrap .order_re_ex ul li:after, .order_processing_wrap .order_processing_box ul li:after {
   content: "";
   width: 6px;
   height: 12px;
@@ -2335,44 +2335,90 @@
   top: 35px;
 }
 
-.order_re_ex_wrap .order_re_ex .order_re_01:before {
+.order_re_ex_wrap .order_re_ex .order_re_01:before, .order_re_ex_wrap .order_processing_box .order_re_01:before, .order_processing_wrap .order_re_ex .order_re_01:before, .order_processing_wrap .order_processing_box .order_re_01:before {
   background-image: url(../images/guide/cus_return01.png);
 }
 
-.order_re_ex_wrap .order_re_ex .order_re_02:before {
+.order_re_ex_wrap .order_re_ex .order_re_02:before, .order_re_ex_wrap .order_processing_box .order_re_02:before, .order_processing_wrap .order_re_ex .order_re_02:before, .order_processing_wrap .order_processing_box .order_re_02:before {
   background-image: url(../images/guide/cus_return02.png);
 }
 
-.order_re_ex_wrap .order_re_ex .order_re_03:before {
+.order_re_ex_wrap .order_re_ex .order_re_03:before, .order_re_ex_wrap .order_processing_box .order_re_03:before, .order_processing_wrap .order_re_ex .order_re_03:before, .order_processing_wrap .order_processing_box .order_re_03:before {
   background-image: url(../images/guide/cus_return03.png);
 }
 
-.order_re_ex_wrap .order_re_ex .order_re_04:before {
+.order_re_ex_wrap .order_re_ex .order_re_04:before, .order_re_ex_wrap .order_processing_box .order_re_04:before, .order_processing_wrap .order_re_ex .order_re_04:before, .order_processing_wrap .order_processing_box .order_re_04:before {
   background-image: url(../images/guide/cus_return04.png);
 }
 
-.order_re_ex_wrap .order_re_ex .order_ex_01:before {
+.order_re_ex_wrap .order_re_ex .order_ex_01:before, .order_re_ex_wrap .order_processing_box .order_ex_01:before, .order_processing_wrap .order_re_ex .order_ex_01:before, .order_processing_wrap .order_processing_box .order_ex_01:before {
   background-image: url(../images/guide/cus_exchange01.png);
 }
 
-.order_re_ex_wrap .order_re_ex .order_ex_02:before {
+.order_re_ex_wrap .order_re_ex .order_ex_02:before, .order_re_ex_wrap .order_processing_box .order_ex_02:before, .order_processing_wrap .order_re_ex .order_ex_02:before, .order_processing_wrap .order_processing_box .order_ex_02:before {
   background-image: url(../images/guide/cus_exchange02.png);
 }
 
-.order_re_ex_wrap .order_re_ex .order_ex_03:before {
+.order_re_ex_wrap .order_re_ex .order_ex_03:before, .order_re_ex_wrap .order_processing_box .order_ex_03:before, .order_processing_wrap .order_re_ex .order_ex_03:before, .order_processing_wrap .order_processing_box .order_ex_03:before {
   background-image: url(../images/guide/cus_exchange03.png);
 }
 
-.order_re_ex_wrap .order_re_ex_tit {
+.order_re_ex_wrap .order_re_ex_tit, .order_processing_wrap .order_re_ex_tit {
   font-size: 15px;
 }
 
-.order_re_ex_wrap .order_re_wrap {
+.order_re_ex_wrap .order_re_wrap, .order_processing_wrap .order_re_wrap {
   width: 52.5%;
 }
 
-.order_re_ex_wrap .order_ex_wrap {
+.order_re_ex_wrap .order_ex_wrap, .order_processing_wrap .order_ex_wrap {
   width: 47.5%;
+}
+
+.order_processing_wrap {
+  text-align: center;
+}
+
+.order_processing_wrap .order_processing_box ul {
+  display: inline-block;
+}
+
+.order_processing_wrap .order_processing_box ul li {
+  padding-right: 75px;
+}
+
+.order_processing_wrap .order_processing_box ul li:after {
+  right: 35px;
+  top: 33px;
+}
+
+.order_processing_wrap .order_processing_box ul li strong {
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.order_processing_wrap .order_processing_box ul li span {
+  margin-top: 6px;
+}
+
+.order_processing_wrap .order_processing_box .order_processing_tit {
+  display: block;
+}
+
+.order_processing_wrap .order_processing_01:before {
+  background-image: url(../images/guide/cus_order01.png);
+}
+
+.order_processing_wrap .order_processing_02:before {
+  background-image: url(../images/guide/cus_order02.png);
+}
+
+.order_processing_wrap .order_processing_03:before {
+  background-image: url(../images/guide/cus_order03.png);
+}
+
+.order_processing_wrap .order_processing_04:before {
+  background-image: url(../images/guide/cus_order04.png);
 }
 
 /* 반품/교환신청 */
