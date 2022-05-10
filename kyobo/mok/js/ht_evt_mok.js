@@ -263,7 +263,8 @@ $(function(){
             $('.evt_step_wrap').find('.step_item').css('width', wRate +'%');
         }
 
-    /*=================================== HTR-M-EVT-LIST =================================*/ 
+    /*=================================== HTR-M-EVT-LIST =================================*/
+    /*
     //스크롤 애니메이션(마감임박 말풍선)
         if(document.querySelector('.evt_slider_wrap.deadline_section .deadline_bubble')){
             window.addEventListener('scroll', promotionEffect);
@@ -286,5 +287,5 @@ $(function(){
             isShow = offsetTop - headerHeight - topMenuHeight - 220 < scrolltop;
 
             return isShow; 
-        }    
+        }   */ 
 });

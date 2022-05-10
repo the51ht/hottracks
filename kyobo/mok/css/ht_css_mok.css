@@ -13435,6 +13435,474 @@ body:before {
   }
 }
 
+/*** 다이나믹 메시지 ***/
+.deadline_character_area:after {
+  display: inline-block;
+  position: absolute;
+  right: -10px;
+  top: 5px;
+  width: 46px;
+  height: 43px;
+  background: center/100% no-repeat;
+  content: "";
+}
+
+.deadline_character_area span:after {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 1px 0 0 4px;
+  background: center/100% no-repeat;
+  vertical-align: top;
+  content: "";
+}
+
+.deadline_bubble {
+  display: inline-block;
+  position: absolute;
+  right: 45px;
+  top: 0;
+}
+
+.deadline_bubble .txt {
+  padding: 8px 18px 5px 18px;
+  background-color: #d4ff1a;
+  border: solid #000;
+  border-width: 2px 2px 3px 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-animation: evtMsg both infinite 5s;
+          animation: evtMsg both infinite 5s;
+}
+
+.deadline_bubble .txt:before, .deadline_bubble .txt:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 0;
+  border-style: solid;
+  content: "";
+}
+
+.deadline_bubble .txt:before {
+  right: -10px;
+  margin-top: -9px;
+  border-color: transparent #000;
+  border-width: 8px 0 8px 10px;
+  z-index: 1;
+}
+
+.deadline_bubble .txt:after {
+  right: -6px;
+  margin-top: -8px;
+  border-color: transparent #d4ff1a;
+  border-width: 6px 0 6px 8px;
+  z-index: 5;
+}
+
+.ht_best_deadline,
+.ht_new_deadline,
+.ht_del_deadline,
+.ht_cate_deadline,
+.ht_info_deadline {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
+  width: auto;
+  height: 0;
+  z-index: 6;
+}
+
+/* 베스트 */
+.ht_best_deadline .deadline_bubble {
+  right: 55px;
+}
+
+.ht_best_deadline:after {
+  right: -17px;
+  top: -20px;
+  width: 60px;
+  height: 93px;
+  background-image: url("../images/main/ico_side_best_list.svg");
+}
+
+.ht_best_deadline span:after {
+  background-image: url("../images/main/ico_side_best_list_br.png");
+}
+
+/* 신상픔 */
+.ht_new_deadline .deadline_bubble {
+  right: 0;
+}
+
+.ht_new_deadline:after {
+  right: 56px;
+  top: -20px;
+  width: 64px;
+  height: 35px;
+  background-image: url("../images/main/ico_side_new_list.svg");
+  -webkit-animation: evtMsg both infinite 5s;
+          animation: evtMsg both infinite 5s;
+}
+
+.ht_new_deadline .txt {
+  padding: 11px 18px 8px 18px;
+}
+
+.ht_new_deadline span:after {
+  background-image: url("../images/main/ico_side_best_list_br.png");
+}
+
+/* 무료배송 */
+.ht_del_deadline:after {
+  background-image: url("../images/main/ico_side_del_list.svg");
+}
+
+.ht_del_deadline span:after {
+  background-image: url("../images/main/ico_side_del_list_br.png");
+}
+
+/* 카테고리 메인 */
+.ht_cate_deadline_fixed {
+  position: absolute;
+  right: 45px;
+  top: 64px;
+  width: 100%;
+  z-index: 2;
+}
+
+.ht_cate_deadline_fixed:after {
+  right: -40px;
+  top: -5px;
+  width: 76px;
+  height: 72px;
+  background-image: url("../images/main/ico_side_cate_top.svg");
+}
+
+.ht_cate_deadline_fixed span:after {
+  display: none;
+}
+
+.ht_cate_deadline:after {
+  background-image: url("../images/main/ico_side_cate_list.svg");
+}
+
+.ht_cate_deadline span:after {
+  background-image: url("../images/main/ico_side_cate_list_br.png");
+}
+
+/* 제품상세 */
+.ht_info_deadline_fixed {
+  position: absolute;
+  right: 50px;
+  top: 32px;
+  width: 100%;
+  z-index: 2;
+}
+
+.ht_info_deadline_fixed:after {
+  right: -40px;
+  top: -17px;
+  width: 72px;
+  height: 68px;
+  background-image: url("../images/main/ico_side_info_top.svg");
+}
+
+.ht_info_deadline_fixed .deadline_bubble {
+  right: 35px;
+}
+
+.ht_info_deadline_fixed span:after {
+  display: none;
+}
+
+.ht_info_deadline:after {
+  background-image: url("../images/main/ico_side_info_list.svg");
+}
+
+.ht_info_deadline span:after {
+  background-image: url("../images/main/ico_side_info_list_br.png");
+}
+
+/* 이벤트 : 마감임박 */
+.ht_evt_deadline_fixed {
+  position: absolute;
+  right: 94px;
+  top: -25px;
+  width: 100%;
+  z-index: 5;
+}
+
+.ht_evt_deadline_fixed:after {
+  right: -80px;
+  top: 27px;
+  width: 80px;
+  height: 88px;
+  background-image: url("../images/main/ico_side_evt_top.svg");
+}
+
+.ht_evt_deadline_fixed .deadline_bubble {
+  right: 2px;
+}
+
+.ht_evt_deadline_fixed .deadline_bubble .txt {
+  font-size: 12px;
+}
+
+.ht_evt_deadline_fixed .deadline_bubble .txt:before {
+  display: block;
+  position: absolute;
+  right: -6px;
+  bottom: 3px;
+  width: 0;
+  border-width: 0 10px 10px 8px;
+  border-color: #000 transparent;
+  border-style: solid;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  content: '';
+}
+
+.ht_evt_deadline_fixed .deadline_bubble .txt:after {
+  display: block;
+  position: absolute;
+  right: -1px;
+  bottom: 6px;
+  width: 0;
+  border-width: 0 9px 9px 7px;
+  border-color: #d4ff1a transparent;
+  border-style: solid;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  content: '';
+}
+
+.ht_evt_deadline_fixed span:after {
+  display: none;
+}
+
+.ht_evt_deadline_fixed span em {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 0 0 4px;
+  background: url("../images/main/ico_side_evt_top_br.png") center/100% no-repeat;
+  vertical-align: top;
+}
+
+/* 선물추천 : gft_need_msg */
+.gft_need_msg {
+  position: absolute;
+  right: -15px;
+  top: -24px;
+  z-index: 2;
+}
+
+.gft_need_msg:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 53px;
+  background: url("../images/main/ico_gft_need_msg.svg") center/100% no-repeat;
+  content: "";
+}
+
+.gft_need_msg p {
+  position: relative;
+  right: 45px;
+  top: 2px;
+  padding: 9px 15px 7px 15px;
+  background: #d4ff1a;
+  border: solid #000;
+  border-width: 2px 2px 3px 2px;
+  border-radius: 30px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-animation: evtMsg both infinite 5s;
+          animation: evtMsg both infinite 5s;
+}
+
+.gft_need_msg p:before {
+  position: absolute;
+  right: -11px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #000;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  content: "";
+  -webkit-transform: translateY(-51%);
+          transform: translateY(-51%);
+  z-index: 2;
+}
+
+.gft_need_msg p:after {
+  position: absolute;
+  right: -7px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #d4ff1a;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  content: "";
+  -webkit-transform: translateY(-52%);
+          transform: translateY(-52%);
+  z-index: 2;
+}
+
+.gft_need_msg.ty02 {
+  top: -6px;
+}
+
+.gft_need_msg.ty02:before {
+  background-image: url("../images/main/ico_cur_new02.svg");
+}
+
+/* 큐레이션 : cur_new_msg */
+.cur_new_msg {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: 2;
+}
+
+.cur_new_msg:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 77px;
+  height: 78px;
+  background: url("../images/main/ico_cur_new.svg") center/100% no-repeat;
+  content: "";
+}
+
+.cur_new_msg p {
+  position: relative;
+  right: 70px;
+  top: 22px;
+  padding: 9px 15px 7px 15px;
+  background: #d4ff1a;
+  border: solid #000;
+  border-width: 2px 2px 3px 2px;
+  border-radius: 30px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-animation: evtMsg both infinite 5s;
+          animation: evtMsg both infinite 5s;
+}
+
+.cur_new_msg p:before {
+  position: absolute;
+  right: -11px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #000;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  content: "";
+  -webkit-transform: translateY(-51%);
+          transform: translateY(-51%);
+  z-index: 2;
+}
+
+.cur_new_msg p:after {
+  position: absolute;
+  right: -7px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid #d4ff1a;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  content: "";
+  -webkit-transform: translateY(-52%);
+          transform: translateY(-52%);
+  z-index: 2;
+}
+
+.cur_new_msg.ty02 {
+  top: -6px;
+}
+
+.cur_new_msg.ty02:before {
+  background-image: url("../images/main/ico_cur_new02.svg");
+}
+
+@-webkit-keyframes evtMsg {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(5%) scale(0.5);
+            transform: translateX(5%) scale(0.5);
+  }
+  10% {
+    opacity: 0;
+    -webkit-transform: translateX(5%) scale(0.5);
+            transform: translateX(5%) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) scale(1);
+            transform: translateX(0%) scale(1);
+  }
+  95% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) scale(1);
+            transform: translateX(0%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(5%) scale(0.5);
+            transform: translateX(5%) scale(0.5);
+  }
+}
+
+@keyframes evtMsg {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(5%) scale(0.5);
+            transform: translateX(5%) scale(0.5);
+  }
+  10% {
+    opacity: 0;
+    -webkit-transform: translateX(5%) scale(0.5);
+            transform: translateX(5%) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) scale(1);
+            transform: translateX(0%) scale(1);
+  }
+  95% {
+    opacity: 1;
+    -webkit-transform: translateX(0%) scale(1);
+            transform: translateX(0%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(5%) scale(0.5);
+            transform: translateX(5%) scale(0.5);
+  }
+}
+
 /*** 상품 리스트 : prod_list ***/
 .prod_list {
   display: -webkit-box;
