@@ -151,6 +151,7 @@
                         </div>
                         <!-- //tab_box -->   
 
+						<!-- order_his_list_wrap -->
                         <div class="order_his_list_wrap">
 							<ul class="bul_list">
                                 <li class="bul_item_dot font_size_xs">주문내역은 최대 1년 까지 조회 가능합니다.</li>
@@ -171,6 +172,7 @@
 							</div>
 							<!-- //tit_form_wrap -->
 
+							<!-- order_his_table_wrap -->
 							<div class="order_his_table_wrap">
 								<table class="order_his_table">
 									<caption>이전 주문 조회에서 주문/배송조회 목록 표.</caption>
@@ -205,7 +207,7 @@
 											<td class="td_item_left">
 												<p>2022 먼슬리매트+일정관리스티커 2022 먼슬리매트+일정관리스티커202</p>
 												<span>2.gray(그레이)</span>
-												<a href="#n" target="_blank" class="btn_more_view_box ty02"><strong>상품평 작성<em></em></strong></a>
+												<a href="#n" target="_blank" class="btn_more_view_box ty02"><strong>상품평작성<em></em></strong></a>
 											</td>
 											<td>4,240,999,999 원</td>
 											<td class="order_st">결재완료</td>
@@ -228,17 +230,13 @@
 											<td class="td_item_left">
 												<p>2022 먼슬리매트+일정관리스티커</p>
 												<span>2.gray(그레이)</span>
-												<a href="#n" target="_blank" class="btn_more_view_box ty02"><strong>상품평 작성<em></em></strong></a>
+												<a href="#n" target="_blank" class="btn_more_view_box ty02"><strong>상품평작성<em></em></strong></a>
 											</td>
 											<td>4,240 원</td>
 											
 											<td class="order_st">결재완료</td>
 										</tr>
 										<tr>
-											<!-- 
-											<td>2022.03.01</td>
-											<td>101112500263</td> 
-											-->
 											<td class="td_item_left">
 												<p>2022 먼슬리매트+일정관리스티커 2022 먼슬리매트+일정관리스티커202</p>
 												<span>2.gray(그레이)</span>
@@ -247,10 +245,6 @@
 											<td class="order_st">주문취소</td>
 										</tr>
 										<tr>
-											<!-- 
-											<td>2022.03.01</td>
-											<td>101112500263</td> 
-											-->
 											<td class="td_item_left">
 												<p>2022 먼슬리매트+일정관리스티커</p>
 												<span>2.gray(그레이)</span>
@@ -266,28 +260,31 @@
 									</tbody>
 								</table>
 							</div>
+							<!-- //order_his_table_wrap -->
+
+							<!-- pagination -->
+							<div class="pagination">
+								<button class="btn_page prev"><span class="hidden">이전</span></button>
+								<div class="page_num">
+									<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+									<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+									<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+									<a href="#" class="btn_page_num active" title="현재페이지">10</a>
+									<a href="#" class="btn_page_num">11</a>
+									<a href="#" class="btn_page_num">12</a>
+									<a href="#" class="btn_page_num">13</a>
+									<a href="#" class="btn_page_num">14</a>
+									<a href="#" class="btn_page_num">15</a>
+									<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+									<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+								</div>
+								<button class="btn_page next"><span class="hidden">다음</span></button>
+							</div>
+							<!-- //pagination -->
 						</div>
+						<!-- //order_his_list_wrap -->
 
-						<!-- pagination -->
-                        <div class="pagination">
-                            <button class="btn_page prev"><span class="hidden">이전</span></button>
-                            <div class="page_num">
-                                <!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
-                                <a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
-                                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-                                <a href="#" class="btn_page_num active" title="현재페이지">10</a>
-                                <a href="#" class="btn_page_num">11</a>
-                                <a href="#" class="btn_page_num">12</a>
-                                <a href="#" class="btn_page_num">13</a>
-                                <a href="#" class="btn_page_num">14</a>
-                                <a href="#" class="btn_page_num">15</a>
-                                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-                                <a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
-                            </div>
-                            <button class="btn_page next"><span class="hidden">다음</span></button>
-                        </div>
-                        <!-- //pagination -->
-
+						<!-- 주문처리 안내 : order_processing_wrap -->
 						<div class="order_processing_wrap">
                             <div class="order_processing_box">
                                 <strong class="order_processing_tit">주문처리 안내</strong>
@@ -311,6 +308,7 @@
                                 </ul>
                             </div>
                         </div>
+						<!-- //주문처리 안내 : order_processing_wrap -->
                     </div>
                     <!-- //이전 주문 조회 -->
 
