@@ -357,7 +357,7 @@
 /*** 다이나믹 메시지 ***/
 .deadline_character_area {
     &:after {
-        display:inline-block;position:absolute;right:-10px;top:5px;width:66px;height:64px;background:center/100% no-repeat;content:"";animation:evtMsg both infinite 5s;
+        display:inline-block;position:absolute;right:-10px;top:-7px;width:70px;height:65px;background:center/100% no-repeat;content:"";animation:evtMsg both infinite 5s;
     }
     span {
         &:after {
@@ -366,7 +366,7 @@
     }
 }
 .deadline_bubble {
-    display:inline-block;position:absolute;right:45px;top:0;
+    display:inline-block;position:absolute;right:60px;top:0;
     .txt {
         padding:8px 18px 5px 18px;background-color:#d4ff1a;border:solid #000;border-width:2px 2px 3px 2px;box-sizing:border-box;border-radius:40px;font-size:14px;line-height:18px;font-weight:700;letter-spacing:-0.5px;transform-origin:right center;animation:evtMsg both infinite 5s;
         &:before,
@@ -395,10 +395,10 @@
 /* 베스트 */
 .ht_best_deadline {
     .deadline_bubble {
-        right:55px;
+        right:60px;
     }
     &:after {
-        right:-17px;top:-20px;width:60px;height:93px;background-image:url('../images/main/ico_side_best_list.svg');
+        right:-12px;top:-20px;width:60px;height:93px;background-image:url('../images/main/ico_side_best_list.svg');
     } 
     span {
         &:after {
@@ -443,6 +443,9 @@
     &:after {
         right:-40px;top:-5px;width:76px;height:72px;background-image:url('../images/main/ico_side_cate_top.svg');
     }
+    .deadline_bubble {
+        right:40px;
+    }
     span {
         &:after {
             display:none;
@@ -478,6 +481,9 @@
 .ht_info_deadline {
     &:after {
         background-image:url('../images/main/ico_side_info_list.svg');
+    }
+    .deadline_bubble {
+        right:70px;
     }
     span {
         &:after {
