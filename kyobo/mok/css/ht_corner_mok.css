@@ -364,102 +364,6 @@
   background: url(../images/guide/btn_tooltip_mok.png) no-repeat center center/15px;
 }
 
-.ranking_bubble_area {
-  position: absolute;
-  right: 0;
-  bottom: 47vw;
-  padding-right: 40px;
-  z-index: 10;
-}
-
-.ranking_bubble_area .rank_icon {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  right: -15px;
-  top: -14px;
-  z-index: 13;
-  background: url(../images/guide/lanking_bubble_thumb.svg) no-repeat center center/55px;
-}
-
-.ranking_bubble_area .icon_show {
-  width: 55px;
-  height: 70px;
-  -webkit-transition: width 0.2s ease-in-out;
-  transition: width 0.2s ease-in-out;
-}
-
-.ranking_bubble_area .ranking_bubble {
-  position: relative;
-  width: 130px;
-  height: 56px;
-  padding: 10px 20px;
-  line-height: 20px;
-  font-weight: 700;
-  background: url(../images/guide/lanking_bubble.svg) no-repeat center center/120px;
-}
-
-.ranking_bubble_area .ranking_bubble:before {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 15px;
-  background: url(../images/guide/lanking_bubble_icon.svg) no-repeat center center/10px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  bottom: 8px;
-  right: 38px;
-}
-
-.ranking_bubble_area.new {
-  position: absolute;
-  padding-right: 0;
-  right: 0px;
-  bottom: 80vw;
-  z-index: 10;
-}
-
-.ranking_bubble_area.new .rank_icon {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  top: -15px;
-  left: 5px;
-  z-index: 13;
-  background: url(../images/guide/lanking_bubble_new.svg) no-repeat center center/65px;
-}
-
-.ranking_bubble_area.new .icon_show {
-  width: 70px;
-  height: 30px;
-  -webkit-transition: height 0.2s ease-in-out;
-  transition: height 0.2s ease-in-out;
-}
-
-.ranking_bubble_area.new .ranking_bubble {
-  position: relative;
-  width: 140px;
-  height: 68px;
-  padding: 15px 20px;
-  line-height: 20px;
-  font-weight: 700;
-  background: url(../images/guide/lanking_bubble.svg) no-repeat center center/135px;
-}
-
-.ranking_bubble_area.new .ranking_bubble:before {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 15px;
-  background: url(../images/guide/lanking_bubble_icon.svg) no-repeat center center/10px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  bottom: 18px;
-  right: 68px;
-}
-
 /*====================  //코너메뉴 베스트, 신상품, 무료 배송 =========================*/
 /*================================  카테고리 메인 ===================================*/
 .ctg_topMenu.depth1 {
@@ -624,9 +528,10 @@
 }
 
 .ctg_top_wrap {
+  position: relative;
+  padding: 32px 0;
   background-color: #fff;
   overflow: hidden;
-  padding: 32px 0;
 }
 
 .ctg_top_wrap .swiper {

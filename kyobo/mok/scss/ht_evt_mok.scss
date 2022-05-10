@@ -1330,9 +1330,6 @@
 		line-height: 26px;
 		color:#da2128;
 	}
-	.deadline_section  .deadline_bubble {
-		padding:12px 27px;
-	}
 	.promotion_end_txt{
 		display:none;
 	}
@@ -1392,87 +1389,8 @@
 	position:relative;
 	background-color: #fff4f1;
 	margin-top:60px;
-	.deadline_bubble {
-		width:auto;
-		max-width:85%;
-		position: absolute;
-		z-index:5;
-		border-radius:30px;
-		background-color: #D4FF1A;
-		padding:6px 14px 5px 13px;
-		border-top: 2px solid #000;
-		border-left: 3px solid #000;
-		border-right: 2px solid #000;
-		border-bottom: 3px solid #000;
-		top:0;
-		right:98px;
-		transform: translateY(-50%);
-		&:before {
-			content:"";
-			position: absolute;
-			border-top: 7px solid transparent;
-			border-left: 0 solid transparent;
-			border-right: 9px solid #D4FF1A;
-			border-bottom: 7px solid transparent;
-			transform: rotate(92deg);
-			z-index: 2;
-			bottom: 3px;
-			right: 2px;
-		}
-		&:after {
-			border-color: #000 transparent;
-			border-style: solid;
-			border-width: 0 10px 10px 8px; 
-			content: '';
-			display: block;
-			position: absolute;
-			bottom: 3px;
-		 	right: -6px;
-			width: 0;
-			z-index: 0;
-			transform: rotate(2deg);
-		  }
-		.txt {
-			width:100%;
-			font-weight: 700;
-			font-size: 12px;
-			line-height: 18px;
-			letter-spacing: -0.12px;
-			position:relative;
-			white-space: nowrap;
-			&:before {
-				content:'';
-				position:absolute;
-				z-index: 1;
-				width:9px;
-				height:13px;
-				background:url(../images/guide/thunder_icon.svg) no-repeat center center/ 9px;
-				top:2px;
-				left:130px;
-			}
-		}
-	}
+}
 
-}
-.deadline_character_area {
-	display: block;
-	position: absolute;	
-	width:100%; 
-	top:0;
-	left:0;
-	right:0;
-    display: none;
-	.deadline_character {
-		position: absolute;
-		width:80px;
-		height:90px;
-		right:18px;
-		top:0px;
-		img{
-			width:100%;
-		}
-	}
-}
 
 //이벤트 목록 없음
 .empty_evt_list {
