@@ -486,6 +486,207 @@
 
 
 
+/*** 다이나믹 메시지 ***/
+.deadline_character_area {
+    &:after {
+        display:inline-block;position:absolute;right:-120px;top:-12px;width:105px;height:98px;background:center/100% no-repeat;content:"";
+    }
+    span {
+        &:after {
+            display:inline-block;width:20px;height:20px;margin-left:2px;background:center/100% no-repeat;vertical-align:top;content:"";
+        }
+    }
+}
+.deadline_bubble {
+    display:inline-block;position:absolute;right:-8px;top:0;
+    .txt {
+        padding:13px 27px 10px 27px;background-color:#d4ff1a;border:3px solid #000;box-sizing:border-box;border-radius:40px;font-size:16px;line-height:24px;font-weight:700;letter-spacing:-0.5px;transform-origin:right center;animation:evtMsg both infinite 5s;
+        &:before,
+        &:after {
+            display:block;position:absolute;top:50%;width:0;border-style:solid;content:"";
+        }
+        &:before {
+            right:-11px;margin-top:-10px;border-color:transparent #000;border-width:9px 0 9px 11px;z-index:1;
+        }
+        &:after {
+            right:-7px;margin-top:-8px;border-color:transparent #d4ff1a;border-width:7px 0 7px 9px;z-index:5;
+        }
+    }
+}
+
+.ht_best_deadline,
+.ht_new_deadline,
+.ht_del_deadline,
+.ht_cate_deadline,
+.ht_info_deadline {
+    position:sticky;top:50%;width:auto;height:0;z-index:4;margin-bottom:80px;
+}
+.ht_best_deadline,
+.ht_new_deadline,
+.ht_del_deadline,
+.ht_cate_deadline,
+.ht_info_deadline {
+    & + div {
+        position:relative;top:-55px;
+    }
+    & + .evt_products {
+        position:relative;top:-95px;
+    }
+}
+
+
+/* 베스트 */
+.ht_best_deadline {
+    &:after {
+        right:-106px;width:86px;height:105px;background-image:url('../images/main/ico_side_best_list.svg');
+    } 
+    span {
+        &:after {
+            background-image:url('../images/main/ico_side_best_list_br.png');
+        }
+    }
+}
+
+/* 신상픔 */
+.ht_new_deadline {
+    &:after {
+        right:72px;top:-18px;width:69px;height:38px;background-image:url('../images/main/ico_side_new_list.svg');animation:evtMsg both infinite 5s;
+    }
+    span {
+        &:after {
+            background-image:url('../images/main/ico_side_best_list_br.png');
+        }
+    }
+}
+
+/* 무료배송 */
+.ht_del_deadline {
+    &:after {
+        background-image:url('../images/main/ico_side_del_list.svg');
+    }
+    span {
+        &:after {
+            background-image:url('../images/main/ico_side_del_list_br.png');
+        }
+    }
+}
+
+/* 카테고리 메인 */
+.ht_cate_deadline_fixed {
+    position:absolute;right:104px;top:-17px;width:100%;
+    &:after {
+        right:-104px;top:-16px;width:89px;height:84px;background-image:url('../images/main/ico_side_cate_top.svg');
+    }
+    span {
+        &:after {
+            display:none;
+        }
+    }
+}
+.ht_cate_deadline {
+    &:after {
+        background-image:url('../images/main/ico_side_cate_list.svg');
+    }
+    span {
+        &:after {
+            background-image:url('../images/main/ico_side_cate_list_br.png');
+        }
+    }
+}
+
+/* 제품상세 */
+.ht_info_deadline_fixed {
+    position:absolute;right:114px;top:38px;width:100%;z-index:5;
+    &:after {
+        right:-103px;top:-18px;width:89px;height:84px;background-image:url('../images/main/ico_side_info_top.svg');
+    }
+    span {
+        &:after {
+            display:none;
+        }
+    }
+}
+.ht_info_deadline {
+    &:after {
+        background-image:url('../images/main/ico_side_info_list.svg');
+    }
+    span {
+        &:after {
+            background-image:url('../images/main/ico_side_info_list_br.png');
+        }
+    }
+}
+
+/* 이벤트 : 마감임박 */
+.ht_evt_deadline_fixed {
+    position:absolute;right:115px;top:-25px;width:100%;z-index:5;
+    &:after {
+        right:-115px;top:-5px;width:95px;height:105px;background-image:url('../images/main/ico_side_evt_top.svg');
+    }
+    .deadline_bubble {
+        right:2px;
+    }
+    span {
+        &:after {
+            display:none;
+        }
+        em {
+            display:inline-block;width:20px;height:20px;margin-left:2px;background:url('../images/main/ico_side_evt_top_br.png') center/100% no-repeat;vertical-align:top;
+        }
+
+
+    }
+}
+
+/* 선뭉추천 : gft_need_msg */
+.gft_need_msg {
+    position:absolute;right:20px;top:-31px;z-index:2;
+    &:before {
+        position:absolute;right:0;top:0;width:68px;height:73px;background:url("../images/main/ico_gft_need_msg.svg") center/100% no-repeat;content:"";
+    }
+    p {
+        position:relative;right:63px;top:11px;padding:13px 27px 10px 27px;background-color:#d4ff1a;border:3px solid #000;box-sizing:border-box;border-radius:40px;font-size:16px;line-height:24px;font-weight:700;letter-spacing:-0.5px;transform-origin:right center;animation:evtMsg both infinite 5s;
+        &:before {
+            position:absolute;right:-11px;top:50%;width:0;height:0;border-left:10px solid #000;border-top:7px solid transparent;border-bottom:7px solid transparent;content:"";transform:translateY(-51%);z-index:2;
+        }
+        &:after {
+            position:absolute;right:-7px;top:50%;width:0;height:0;border-left:10px solid #d4ff1a;border-top:7px solid transparent;border-bottom:7px solid transparent;content:"";transform:translateY(-52%);z-index:2;
+        }
+    }
+}
+
+/* 큐레이션 : cur_new_msg */
+.cur_new_msg {
+    position:absolute;right:0px;top:40px;z-index:2;
+    &.ty02 {
+        top:65px;
+        &:before {
+            background-image:url("../images/main/ico_cur_new02.svg");
+        } 
+    }
+    &:before {
+        position:absolute;right:0;top:-75px;width:80px;height:80px;background:url("../images/main/ico_cur_new.svg") center no-repeat;content:"";
+    }
+    p {
+        position:relative;right:78px;top:-52px;padding:13px 27px 10px 27px;background-color:#d4ff1a;border:3px solid #000;box-sizing:border-box;border-radius:40px;font-size:16px;line-height:24px;font-weight:700;letter-spacing:-0.5px;transform-origin:right center;animation:evtMsg both infinite 5s;
+        &:before {
+            position:absolute;right:-11px;top:50%;width:0;height:0;border-left:10px solid #000;border-top:7px solid transparent;border-bottom:7px solid transparent;content:"";transform:translateY(-51%);z-index:2;
+        }
+        &:after {
+            position:absolute;right:-7px;top:50%;width:0;height:0;border-left:10px solid #d4ff1a;border-top:7px solid transparent;border-bottom:7px solid transparent;content:"";transform:translateY(-52%);z-index:2;
+        }
+    }
+}
+
+@keyframes evtMsg{
+0% {opacity:0;transform:translateX(5%) scale(0.5);}
+10% {opacity:0;transform:translateX(5%) scale(0.5);}
+20% {opacity:1;transform:translateX(0%) scale(1);}
+95% {opacity:1;transform:translateX(0%) scale(1);}
+100% {opacity:0;transform:translateX(5%) scale(0.5);}
+}
+
+
 
 /***** Button *****/
 /* Btn : Contents */
