@@ -348,7 +348,6 @@
 .module6_item {
   width: 100%;
   margin-top: 20px;
-  cursor: pointer;
 }
 
 .module6_item:first-child {
@@ -358,16 +357,19 @@
 .module6_item .product_pic {
   position: relative;
   height: 0;
+  margin-bottom: 12px;
   padding-top: 100%;
   overflow: hidden;
-  margin-bottom: 12px;
 }
 
 .module6_item .product_pic img {
-  width: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .module6_item .evt_good_count {
@@ -499,18 +501,17 @@
 }
 
 .module6_item.sold_out .show_replace {
-  display: block;
-  width: 100%;
   position: absolute;
-  text-align: center;
+  left: 0;
+  top: 50%;
+  width: 100%;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
-  z-index: 2;
-  top: 50%;
-  left: 0;
+  text-align: center;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 3;
 }
 
 .module6_item.sold_out .show_replace div {
@@ -518,17 +519,30 @@
   letter-spacing: -0.013em;
 }
 
+.module6_item.sold_out .show_replace a {
+  position: absolute;
+  left: 0;
+  top: -400%;
+  width: 100%;
+  height: 900%;
+  background: #000;
+  opacity: 0;
+  z-index: 1;
+}
+
 .module6_item.sold_out .replace_prod_btn {
+  display: block;
+  position: relative;
+  height: 24px;
   margin: 0 auto;
   margin-top: 11px;
-  height: 24px;
   padding: 0 6px;
   background-color: #fff;
   border-radius: 4px;
-  line-height: 24px;
   color: #000;
   font-size: 12px;
-  display: block;
+  line-height: 24px;
+  z-index: 2;
 }
 
 /*=======================     모듈 007 영역   =====================*/

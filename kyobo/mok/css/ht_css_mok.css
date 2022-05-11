@@ -11800,10 +11800,10 @@ body:before {
 
 .prod-wrapper .product_pic img,
 .evt_products .product_pic img {
-  width: 100%;
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -11818,15 +11818,15 @@ body:before {
 .prod-wrapper .product_pic .evt_good_count,
 .evt_products .product_pic .evt_good_count {
   display: block;
-  padding: 5px 12px;
-  height: 24px;
   position: absolute;
+  right: 8px;
+  bottom: 8px;
+  height: 24px;
+  padding: 5px 12px;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 35px;
   color: #fff;
   font-size: 10px;
-  right: 8px;
-  bottom: 8px;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 5;
 }
 
@@ -11842,9 +11842,9 @@ body:before {
 .prod-wrapper .product_pic .evt_good_count .txt,
 .evt_products .product_pic .evt_good_count .txt {
   float: left;
+  width: auto;
   margin-left: 3px;
   line-height: 14px;
-  width: auto;
 }
 
 .prod-wrapper .evt_good_count.active .icon,
@@ -12343,6 +12343,8 @@ body:before {
   width: 100%;
   padding-top: 100%;
   position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .evt_products .product_info {
@@ -12364,17 +12366,17 @@ body:before {
 
 .evt_products .show_replace {
   display: none;
-  width: 100%;
   position: absolute;
-  text-align: center;
+  left: 0;
+  top: 50%;
+  width: 100%;
   color: #fff;
   font-size: 13px;
   font-weight: 700;
-  z-index: 2;
-  top: 50%;
-  left: 0;
+  text-align: center;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 3;
 }
 
 .evt_products .show_replace div {
@@ -12382,17 +12384,30 @@ body:before {
   letter-spacing: -0.013em;
 }
 
+.evt_products .show_replace a {
+  position: absolute;
+  left: 0;
+  top: -400%;
+  width: 100%;
+  height: 900%;
+  background: #000;
+  opacity: 0;
+  z-index: 1;
+}
+
 .evt_products .replace_prod_btn {
+  display: none;
+  position: relative;
+  height: 24px;
   margin: 0 auto;
   margin-top: 11px;
-  height: 24px;
   padding: 0 6px;
   background-color: #fff;
   border-radius: 4px;
-  line-height: 24px;
   color: #000;
   font-size: 12px;
-  display: none;
+  line-height: 24px;
+  z-index: 2;
 }
 
 .evt_products .sold_out .show_replace {
@@ -14261,6 +14276,33 @@ body:before {
   width: 100%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.prod_soldout_msg_txt a {
+  position: absolute;
+  left: 0;
+  top: -300%;
+  width: 100%;
+  height: 700%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.prod_soldout_msg_txt .btn_prod_replace_chk {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  margin: 11px auto 0 auto;
+  padding: 0 6px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #000;
+  font-size: 12px;
+  line-height: 22px;
+  z-index: 2;
 }
 
 .prod_soldout_msg span {
