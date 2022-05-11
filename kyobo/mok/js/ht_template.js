@@ -1127,7 +1127,7 @@ $(function(){
 	 });
 	//품절 대체 상품 버튼 클릭
 	$(document).on('click', '.sold_out .replace_prod_btn', function(){
-		var replaceBubble = $(this).parents('li').children('article.replace_prod_swap');
+		var replaceBubble = $(this).parents('.sold_out').children('article.replace_prod_swap');
         //[2022-02-17] 다른 대체 상품 스왑 닫기 기능 추가 
         $('.replace_prod_swap').removeClass('show_bubble');
 		
