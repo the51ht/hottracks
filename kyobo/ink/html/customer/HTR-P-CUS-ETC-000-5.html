@@ -149,9 +149,12 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- //tab_box -->   
+                        <!-- //tab_box -->
 
+
+						<!-- order_his_list_wrap -->
                         <div class="order_his_list_wrap">
+							<!-- bul_list -->
 							<ul class="bul_list">
                                 <li class="bul_item_dot font_size_xs">주문취소 및 배송지 변경이 가능한 주문내역만 보여집니다.</li>
                                 <li class="bul_item_dot font_size_xs">상품준비 이전 단계에서는 주문 전체취소 및 주소변경이 가능하며, [주문/배송조회]에서 확인하실 수 있습니다.</li>
@@ -160,19 +163,21 @@
                                 <li class="bul_item_dot font_size_xs">일부 환불이 불가능한 경우에는 교보핫트랙스 온라인 예치금으로 자동 예치됩니다.[예치금 환불 신청] 메뉴에서 환불 요청 가능</li>
                                 <li class="bul_item_dot font_size_xs">상품준비 이후 단계에서는 [1:1 문의] 또는 고객센터를 통해 신청이 가능하나, 상품이 이미 출고된 경우에는 취소 및 변경이 불가능합니다. 출고 이후 주문취소는 반품접수를 이용해주시기 바랍니다.</li>
                             </ul>
+							<!-- //bul_list -->
 
-							<div class="order_his_table_wrap">
-								<table class="order_his_table">
+							<!-- order_his_table -->
+							<div class="order_his_table">
+								<table>
 									<caption>이전 주문 조회에서 주문취소/변경 목록 표.</caption>
 									<colgroup>
-										<col style="width: 125px;">
-										<col style="width: 120px;">
-										<col style="width: 400px;">
-										<col style="width: 135px;">
-										<col style="width: 130px;">
-										<col style="width: 140px;">
+										<col style="width:125px;">
+										<col style="width:120px;">
+										<col style="width:400px;">
+										<col style="width:135px;">
+										<col style="width:130px;">
+										<col style="width:140px;">
 									</colgroup>
-									<tbody>  
+									<thead>
 										<tr>
 											<th scope="col">주문일</th>
 											<th scope="col">주문번호</th>
@@ -181,6 +186,8 @@
 											<th scope="col">처리상태</th>
 											<th scope="col">처리상태</th>
 										</tr>
+									</thead>
+									<tbody>  
 										<tr>
 											<td>2022.03.01</td>
 											<td>101112500263</td>
@@ -222,32 +229,34 @@
                                             </td>
 										</tr>
                                         <tr>
-											<td colspan="6" class="emp">검색된 신청 내역이 없습니다.</td>
+											<td colspan="6" class="emp">주문취소/변경 내역이 없습니다.</td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-						</div>
+							<!-- //order_his_table -->
 
-						<!-- pagination -->
-                        <div class="pagination">
-                            <button class="btn_page prev"><span class="hidden">이전</span></button>
-                            <div class="page_num">
-                                <!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
-                                <a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
-                                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-                                <a href="#" class="btn_page_num active" title="현재페이지">10</a>
-                                <a href="#" class="btn_page_num">11</a>
-                                <a href="#" class="btn_page_num">12</a>
-                                <a href="#" class="btn_page_num">13</a>
-                                <a href="#" class="btn_page_num">14</a>
-                                <a href="#" class="btn_page_num">15</a>
-                                <span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
-                                <a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
-                            </div>
-                            <button class="btn_page next"><span class="hidden">다음</span></button>
-                        </div>
-                        <!-- //pagination -->
+							<!-- pagination -->
+							<div class="pagination">
+								<button class="btn_page prev"><span class="hidden">이전</span></button>
+								<div class="page_num">
+									<!-- DESC : 페이징 버튼 활성화 클래스 - [ .active ] -->
+									<a href="#" class="btn_page_num">1</a><!-- DESC : 첫 페이지 -->
+									<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+									<a href="#" class="btn_page_num active" title="현재페이지">10</a>
+									<a href="#" class="btn_page_num">11</a>
+									<a href="#" class="btn_page_num">12</a>
+									<a href="#" class="btn_page_num">13</a>
+									<a href="#" class="btn_page_num">14</a>
+									<a href="#" class="btn_page_num">15</a>
+									<span class="text_ellipsis"><span class="hidden">...</span></span> <!-- DESC : 중간에 페이지 넘버가 있을 경우 노출 -->
+									<a href="#" class="btn_page_num">99</a><!-- DESC : 마지막 페이지 -->
+								</div>
+								<button class="btn_page next"><span class="hidden">다음</span></button>
+							</div>
+							<!-- //pagination -->
+						</div>
+						<!-- //order_his_list_wrap -->
                     </div>
                     <!-- //이전 주문 조회 -->
 

@@ -149,16 +149,19 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- //tab_box -->   
+                        <!-- //tab_box -->
+
 
 						<!-- order_his_list_wrap -->
                         <div class="order_his_list_wrap">
+							<!-- bul_list -->
 							<ul class="bul_list">
                                 <li class="bul_item_dot font_size_xs">주문내역은 최대 1년 까지 조회 가능합니다.</li>
                                 <li class="bul_item_dot font_size_xs">주문번호, 상품명을 클릭하시면 주문상세내역 및 배송현황을 확인하실 수 있습니다.</li>
                                 <li class="bul_item_dot font_size_xs">상품준비 이전 단계 시 주문 취소 가능합니다.</li>
                                 <li class="bul_item_dot font_size_xs">주문취소/변경은 [주문취소/변경] 메뉴를 통해 가능합니다.</li>
                             </ul>
+							<!-- //bul_list -->
 
 							<!-- tit_form_wrap -->
 							<div class="tit_form_wrap">
@@ -172,18 +175,18 @@
 							</div>
 							<!-- //tit_form_wrap -->
 
-							<!-- order_his_table_wrap -->
-							<div class="order_his_table_wrap">
-								<table class="order_his_table">
+							<!-- order_his_table -->
+							<div class="order_his_table">
+								<table>
 									<caption>이전 주문 조회에서 주문/배송조회 목록 표.</caption>
 									<colgroup>
-										<col style="width: 147px;">
-										<col style="width: 120px;">
-										<col style="width: 460px;">
-										<col style="width: 137px;">
-										<col style="width: 130px;">
+										<col style="width:147px;">
+										<col style="width:120px;">
+										<col style="width:460px;">
+										<col style="width:137px;">
+										<col style="width:130px;">
 									</colgroup>
-									<tbody>  
+									<thead>
 										<tr>
 											<th scope="col">주문일</th>
 											<th scope="col">주문번호</th>
@@ -191,6 +194,8 @@
 											<th scope="col">주문금액</th>
 											<th scope="col">주문상태</th>
 										</tr>
+									</thead>
+									<tbody>  
 										<tr>
 											<td>2022.03.01</td>
 											<td>101112500263</td>
@@ -255,12 +260,12 @@
 										<!-- //주문 한 건에 여러 상품인 경우 -->
 
 										<tr>
-											<td colspan="5" class="emp">검색된 신청 내역이 없습니다.</td>
+											<td colspan="5" class="emp">주문/배송 내역이 없습니다.</td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
-							<!-- //order_his_table_wrap -->
+							<!-- //order_his_table -->
 
 							<!-- pagination -->
 							<div class="pagination">
@@ -283,6 +288,7 @@
 							<!-- //pagination -->
 						</div>
 						<!-- //order_his_list_wrap -->
+						
 
 						<!-- 주문처리 안내 : order_processing_wrap -->
 						<div class="order_processing_wrap">

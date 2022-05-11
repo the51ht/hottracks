@@ -151,15 +151,18 @@
                         </div>
                         <!-- //tab_box -->   
 
+                        <!-- order_his_list_wrap -->
                         <div class="order_his_list_wrap">
+                            <!-- bul_list -->
 							<ul class="bul_list">
                                 <li class="bul_item_dot font_size_xs">핫트랙스 배송상품의 경우, 반품신청을 하시면 지정 택배사로 방문회수 접수를 해드립니다.</li>
                                 <li class="bul_item_dot font_size_xs">업체개별 배송상품의 경우, 수령하신 택배사를 통해 해당업체로 직접 반품해주시기 바랍니다.</li>
                                 <li class="bul_item_dot font_size_xs">교환신청은 동일상품(옵션 포함)으로의 교환만 가능하며, 재발송 상품과 하자상품과의 교환으로 진행됩니다.</li>
                                 <li class="bul_item_dot font_size_xs">단, 업체개별 배송상품의 경우 교환방법이 다를 수 있으니 해당업체에 미리 확인하시기 바랍니다.</li>
                             </ul>
+                            <!-- //bul_list -->
 
-                            <!-- 대량구매상담 -->
+                            <!-- 반품/교환신청 -->
                             <div class="ht_cont_s ht_cus_cont">
                                 <!-- tbl_row_wrap -->
                                 <div class="tbl_row_wrap">
@@ -167,45 +170,56 @@
                                         <caption>반품/교환신청에서 선택한 상품 표</caption>
                                         <colgroup>
                                             <col style="width:160px;">
-                                            <col style="width:160px;">
-                                            <col style="width:160px;">
                                             <col style="width:auto;">
                                         </colgroup>
                                         <tbody>
                                             <tr>
                                                 <th scope="row" class="has_btn_sm">신청구분<span class="required"><span class="hidden">필수입력</span></span></th>
                                                 <td>
-                                                    <div class="form_sel">
-                                                        <span class="form_rdo">
-                                                            <input id="exRdo01" type="radio" name="exRdoName01" checked="">
-                                                            <label for="exRdo01">반품</label>
-                                                        </span>
-                                                        <span class="form_rdo">
-                                                            <input id="exRdo02" type="radio" name="exRdoName01">
-                                                            <label for="exRdo02">교환</label>
-                                                        </span>
-                                                    </div>
+                                                    <!-- chk_row_list -->
+                                                    <ul class="chk_row_list">
+                                                        <li class="chk_row_item">
+                                                            <!-- form_rdo -->
+                                                            <span class="form_rdo">
+                                                                <input id="exRdo01" type="radio" name="exRdoName01" checked="">
+                                                                <label for="exRdo01">반품</label>
+                                                            </span>
+                                                            <!-- //form_rdo -->
+                                                        </li>
+                                                        <li class="chk_row_item">
+                                                            <!-- form_rdo -->
+                                                            <span class="form_rdo">
+                                                                <input id="exRdo02" type="radio" name="exRdoName01">
+                                                                <label for="exRdo02">교환</label>
+                                                            </span>
+                                                            <!-- //form_rdo -->
+                                                        </li>
+                                                    </ul>
+                                                    <!-- //chk_row_list -->
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th scope="row" class="has_btn_sm">상품선택<span class="required"><span class="hidden">필수입력</span></span></th>
-                                                <td class="table_inner_table">
-                                                    <div class="order_his_table_wrap">
-                                                        <table class="order_his_table">
+                                                <td>
+                                                    <!-- order_his_table -->
+                                                    <div class="order_his_table">
+                                                        <table>
                                                             <caption>반품/교환신청에서 선택한 상품 표.</caption>
                                                             <colgroup>
-                                                                <col style="width: 152px;">
-                                                                <col style="width: 406px;">
-                                                                <col style="width: 146px;">
-                                                                <col style="width: 110px;">
+                                                                <col style="width:152px;">
+                                                                <col style="width:406px;">
+                                                                <col style="width:146px;">
+                                                                <col style="width:110px;">
                                                             </colgroup>
-                                                            <tbody>  
+                                                            <thead>
                                                                 <tr>
                                                                     <th scope="col">주문번호</th>
                                                                     <th scope="col">상품명</th>
                                                                     <th scope="col">가격</th>
                                                                     <th scope="col">신청수량</th>
                                                                 </tr>
+                                                            </thead>
+                                                            <tbody>  
                                                                 <tr>
                                                                     <td>101112500263</td>
                                                                     <td class="td_item_left">
@@ -216,60 +230,69 @@
                                                                     <td>1</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td colspan="4" class="emp">선택된 상품 내역이 없습니다.</td>
+                                                                    <td colspan="4" class="emp">반품/교환 상품을 선택해 주세요.</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <div class="form_sel">
-                                                        <div class="btn_area">
-                                                            <button type="button" class="btn_ip btn_black"><span>상품 조회</span></button>
-                                                        </div>
+                                                    <!-- //order_his_table -->
+                                                    <!-- btn_area -->
+                                                    <div class="btn_area right">
+                                                        <button type="button" class="btn_ip btn_black"><span>상품 조회</span></button>
                                                     </div>
+                                                    <!-- //btn_area -->
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <th scope="row" class="has_btn_sm">신청사유<span class="required"><span class="hidden">필수입력</span></span></th>
                                                 <td class="cus_form_sel_wrap">
-                                                    <!-- form_sel -->
-                                                    <div class="form_sel">
-                                                        <select title="타이틀">
-                                                            <option>선택해주세요</option>
-                                                            <option>고객변심</option>
-                                                            <option>상품분실</option>
-                                                            <option>상품파손</option>
-                                                            <option>상품누락</option>
-                                                            <option>오베송</option>
-                                                            <option>배송지연</option>
-                                                            <option>기타사유</option>
-                                                            <option>품절</option>
-                                                            <option>상품불량</option>
-                                                            <option>상품셋트구성오류</option>
-                                                            <option>케이스파손</option>
-                                                        </select>
-                                                    </div>
-                                                    <!-- //form_sel -->
-
-                                                     <!-- byte_check_wrap -->
-                                                    <div class="form_sel byte_check_wrap">
-                                                        <textarea id="" class="form_textarea" placeholder="빠른 확인처리를 위해 &#13;&#10;상세한 반품/교환 사유를 써주세요.(100자이내)" style="height: 120px;"></textarea>
-                                                        <div class="byte_chack_footer">
-                                                            <div class="byte_check">
-                                                                <span class="count">0</span>
-                                                                <span class="total">100자</span>
+                                                    <!-- chk_col_list -->
+                                                    <ul class="chk_col_list">
+                                                        <li class="chk_col_item">
+                                                            <!-- form_sel -->
+                                                            <div class="form_sel">
+                                                                <select title="타이틀">
+                                                                    <option>선택해주세요</option>
+                                                                    <option>고객변심</option>
+                                                                    <option>상품분실</option>
+                                                                    <option>상품파손</option>
+                                                                    <option>상품누락</option>
+                                                                    <option>오베송</option>
+                                                                    <option>배송지연</option>
+                                                                    <option>기타사유</option>
+                                                                    <option>품절</option>
+                                                                    <option>상품불량</option>
+                                                                    <option>상품셋트구성오류</option>
+                                                                    <option>케이스파손</option>
+                                                                </select>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- //byte_check_wrap -->
-
-                                                    <div class="form_sel form_side_btn">
-                                                        <input type="text" class="form_ip" placeholder="파일을 첨부해 주세요">
-                                                        <button type="button" class="btn_ip btn_black btn_file_add"><span>파일 찾기</span></button>
-                                                    </div>
-                                                    
-                                                    <p class="text_file_noti">
-                                                        ※사진첨부. 500KB 용량 이하의 GIF, JPEG, PNG, ZIP, 파일형태만 첨부 가능합니다.
-                                                    </p>
+                                                            <!-- //form_sel -->
+                                                        </li>
+                                                        <li class="chk_col_item">
+                                                            <!-- byte_check_wrap -->
+                                                            <div class="form_sel byte_check_wrap">
+                                                                <textarea id="" class="form_textarea" placeholder="빠른 확인처리를 위해 &#13;&#10;상세한 반품/교환 사유를 써주세요.(100자이내)" style="height: 120px;"></textarea>
+                                                                <div class="byte_chack_footer">
+                                                                    <div class="byte_check">
+                                                                        <span class="count">0</span>
+                                                                        <span class="total">100자</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //byte_check_wrap -->
+                                                        </li>
+                                                        <li class="chk_col_item">
+                                                            <div class="form_sel form_side_btn">
+                                                                <input type="text" class="form_ip" id="btn_file_add_view" placeholder="파일을 첨부해 주세요" readonly>
+                                                                <button type="button" class="btn_ip btn_black btn_file_add"><span>파일 찾기</span></button>
+                                                                <input type="file" class="btn_file_add_chk" onchange="javascript:document.getElementById('btn_file_add_view').value = this.value">
+                                                            </div>
+                                                            <ul class="text_file_noti">
+                                                                <li>사진첨부. 500KB 용량 이하의 GIF, JPEG, PNG, ZIP, 파일형태만 첨부 가능합니다.</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- //chk_col_list -->
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -279,13 +302,14 @@
 
                                 <!-- btn_area -->
                                 <div class="btn_area">
-                                    <button type="button" class="btn_md btn_black" data-dialog-close=""><span class="text">취소</span></button>
-                                    <button type="button" class="btn_md btn_primary" data-dialog-close=""><span class="text">신청</span></button>
+                                    <button type="button" class="btn_lg btn_black" data-dialog-close=""><span class="text">취소</span></button>
+                                    <button type="button" class="btn_lg btn_primary" data-dialog-close=""><span class="text">신청</span></button>
                                 </div>
                                 <!-- //btn_area -->
                             </div>
-                            <!-- //대량구매상담 -->
+                            <!-- //반품/교환신청 -->
 						</div>
+                        <!-- //order_his_list_wrap -->
                     </div>
                     <!-- //이전 주문 조회 -->
 

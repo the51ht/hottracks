@@ -126,31 +126,36 @@
 
     <!-- dialog_contents -->
     <div class="dialog_contents">
-        <div class="info_text_box ty02">
+        <div class="info_text_box ty02 pop_mb30">
             <ul class="bul_list">
                 <li class="bul_item_dot font_size_xs">반품/교환 신청은 발송 완료일로부터 7일 이내에 가능합니다.</li>
                 <li class="bul_item_dot font_size_xs">반품/교환을 원하시는 상품 및 수량을 선택하세요.</li>
             </ul>
         </div>
+
 		<!-- 스크롤 영역 -->
 		<div class="custom_scroll_wrap sc_pop_lg03">
+            <!-- pop_inner_table -->
             <div class="pop_inner_table">
-                <div class="order_his_table_wrap">
-                    <table class="order_his_table">
+                <!-- order_his_table -->
+                <div class="order_his_table">
+                    <table>
                         <caption>반품/교환신청에서 선택한 상품 표.</caption>
                         <colgroup>
-                            <col style="width: 95px;">
-                            <col style="width: 220px;">
-                            <col style="width: 170px;">
-                            <col style="width: 140px;">
+                            <col style="width:13%;">
+                            <col style="width:47%;">
+                            <col style="width:20%;">
+                            <col style="width:20%;">
                         </colgroup>
-                        <tbody>  
+                        <thead>
                             <tr>
                                 <th scope="col">선택</th>
                                 <th scope="col">상품명</th>
                                 <th scope="col">가격</th>
                                 <th scope="col">신청수량</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td>
                                     <span class="form_rdo">
@@ -166,7 +171,6 @@
                                 </td>
                                 <td></td>
                                 <td>
-
                                 </td>
                             </tr>
                             <tr class="order_list_detail">
@@ -231,7 +235,9 @@
                         </tbody>
                     </table>
                 </div>
+                <!-- //order_his_table -->
             </div>
+            <!-- //pop_inner_table -->
 
             <!-- pagination -->
             <div class="pagination">
@@ -265,16 +271,10 @@
 </div>
 <!-- //반품/교환 상품 조회 : evtApplyPop --> 
 
-
-
-<style>
-    
-</style>
-
 <script>
 $(function(){
 	$('#evtApplyPop').dialog({
-		//autoOpen: true
+		autoOpen: true
 	});
 });
 </script>

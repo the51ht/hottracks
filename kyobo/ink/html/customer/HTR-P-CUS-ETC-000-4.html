@@ -149,9 +149,12 @@
                                 </li>
                             </ul>
                         </div>
-                        <!-- //tab_box -->  
+                        <!-- //tab_box -->
 
+
+						<!-- cus_order_detail_wrap -->
                         <div class="cus_order_detail_wrap">
+							<!-- 주문배송조회 -->
 							<div class="ht_cont_s">
 								<h2 class="ht_tit05">주문배송조회</h2>
 								<div class="cus_order_detail_box cus_order_num">
@@ -159,11 +162,16 @@
                     				<strong>101112500263</strong>
 								</div>
 							</div>
+							<!-- //주문배송조회 -->
 
+
+							<!-- 취소/반품 정보 -->
 							<div class="ht_cont_s">
 								<h2 class="ht_tit05">취소/반품 정보</h2>
-								<div class="order_his_table_wrap">
-									<table class="order_his_table table_bott_bor">
+
+								<!-- order_his_table -->
+								<div class="order_his_table">
+									<table>
 										<caption>이전 주문 조회에서 취소/반품 정보 상세 표.</caption>
 										<colgroup>
 											<col style="width: 169px;">
@@ -173,7 +181,7 @@
 											<col style="width: 63px;">
 											<col style="width: 133px;">
 										</colgroup>
-										<tbody>  
+										<thead>
 											<tr>
 												<th scope="col">상품코드</th>
 												<th scope="col">상품</th>
@@ -182,6 +190,8 @@
 												<th scope="col">수량</th>
 												<th scope="col">처리상태</th>
 											</tr>
+										</thead>
+										<tbody>  
 											<tr>
 												<td>
 													101112500263<br>
@@ -203,14 +213,21 @@
 												<td>배송대기</td>
 											</tr>
 										</tbody>
+										</tbody>
 									</table>
 								</div>
+								<!-- //order_his_table -->
 							</div>
+							<!-- //취소/반품 정보 -->
 
+
+							<!-- 결제 정보 -->
 							<div class="ht_cont_s">
 								<h2 class="ht_tit05">결제 정보</h2>
-								<div class="order_table_pay">
-									<div class="order_pay_price">
+
+								<!-- order_table_pay -->
+								<ul class="order_table_pay">
+									<li>
 										<dl class="cus_order_bold">
 											<dt>총 결제금액</dt>
 											<dd>
@@ -225,8 +242,8 @@
 											<dt>배송비</dt>
 											<dd>1,000원</dd>
 										</dl>
-									</div>
-									<div class="order_pay_dis">
+									</li>
+									<li>
 										<dl class="cus_order_bold">
 											<dt>총 할인금액</dt>
 											<dd>
@@ -265,8 +282,8 @@
 											<dt>Oh POINT</dt>
 											<dd>0원</dd>
 										</dl>
-									</div>
-									<div class="order_pay_total">
+									</li>
+									<li>
 										<dl class="cus_order_bold">
 											<dt>결제금액</dt>
 											<dd>
@@ -277,14 +294,20 @@
 											<dt>결제일시</dt>
 											<dd>2022.03.01</dd>
 										</dl>
-									</div>
-								</div>
+									</li>
+								</ul>
+								<!-- //order_table_pay -->
 							</div>
+							<!-- //결제 정보 -->
 
-                            <div class="ht_cont_s">
+
+							<!-- 환불정보 -->
+							<div class="ht_cont_s">
 								<h2 class="ht_tit05">환불정보</h2>
-								<div class="order_table_pay table_pay_h">
-									<div class="order_pay_price">
+
+								<!-- order_table_pay -->
+								<ul class="order_table_pay">
+									<li>
 										<dl class="cus_order_bold">
 											<dt>총 취소 금액</dt>
 											<dd>
@@ -293,8 +316,8 @@
 												</strong>
 											</dd>
 										</dl>
-									</div>
-									<div class="order_pay_dis">
+									</li>
+									<li>
 										<dl class="cus_order_bold">
 											<dt>환불 금액</dt>
 											<dd>
@@ -315,14 +338,20 @@
 											<dt>쿠폰 공제</dt>
 											<dd>0원</dd>
 										</dl>
-									</div>
-								</div>
+									</li>
+								</ul>
+								<!-- //order_table_pay -->
 							</div>
+							<!-- //환불정보 -->
 
+
+							<!-- 주문자 정보 -->
 							<div class="ht_cont_s">
 								<h2 class="ht_tit05">주문자 정보</h2>
-								<div class="deli_his_table_wrap">
-									<table class="deli_his_table table_bott_bor">
+
+								<!-- deli_his_table -->
+								<div class="deli_his_table">
+									<table>
 										<caption>이전 주문 조회에서 주문자 정보 상세 표.</caption>
 										<colgroup>
 											<col style="width:141px;">
@@ -354,12 +383,18 @@
 										</tbody>
 									</table>
 								</div>
+								<!-- //deli_his_table -->
 							</div>
+							<!-- //주문자 정보 -->
 
+
+							<!-- 배송지 정보 -->
 							<div class="ht_cont_s">
 								<h2 class="ht_tit05">배송지 정보</h2>
-								<div class="deli_his_table_wrap">
-									<table class="deli_his_table table_bott_bor">
+
+								<!-- deli_his_table -->
+								<div class="deli_his_table">
+									<table>
 										<caption>이전 주문 조회에서 배송지 정보 상세 표.</caption>
 										<colgroup>
 											<col style="width:141px;">
@@ -386,8 +421,8 @@
 												</td>
 											</tr>
 											<tr>
-												<th scope="row">배송 요청사항</th>
-												<td>
+												<th>배송 요청사항</th>
+												<td scope="row">
 													부재시 경비실에 맡겨주세요.<br>
 													관리도구에서 입력된 배송요청사항이 입력됩니다. 말줄임 없이 모두 노출됩니다. 최대 길이 확인필요 길어지는 경우입니다.
 												</td>
@@ -395,12 +430,17 @@
 										</tbody>
 									</table>
 								</div>
+								<!-- //deli_his_table -->
 							</div>
+							<!-- //배송지 정보 -->
 						</div>
+						<!-- //cus_order_detail_wrap -->
+
+						<!-- btn_area -->
 						<div class="btn_area">
 							<button class="btn_lg btn_line_gray">목록</button>
 						</div>
-
+						<!-- //btn_area -->
                     </div>
                     <!-- //이전 주문 조회 -->
 

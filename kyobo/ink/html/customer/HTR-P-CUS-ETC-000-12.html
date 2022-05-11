@@ -11,7 +11,7 @@
 <meta property="og:image" content="../../images/layout/sns.jpg">
 <link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
-<title>이벤트 모듈 : 핫트랙스</title>
+<title>고객센터 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
@@ -98,7 +98,8 @@
 					<div class="ht_cont">
 						<h2 class="ht_tit05">팝업</h2>
 
-						<button type="button" class="btn_md btn_light_gray" data-role="btn-dialog" data-target="#evtApplyPop"><span class="text">사업자등록증 조회 / #evtApplyPop</span></button>
+						<button type="button" class="btn_md btn_light_gray" data-role="btn-dialog" data-target="#evtApplyPop02"><span class="text">사업자등록증 조회 / #evtApplyPop02</span></button>
+                        <button type="button" class="btn_md btn_light_gray" data-role="btn-dialog" data-target="#evtApplyPop03"><span class="text">사업자등록번호 등록 / #evtApplyPop03</span></button>
 					</div>
 					<!-- //팝업 -->
 					
@@ -114,8 +115,8 @@
 <!-- // wrapper -->
 
 
-<!-- 사업자등록증 조회 : evtApplyPop --> 
-<div id="evtApplyPop" class="dialog_wrap" data-class="dialog_md">
+<!-- 사업자등록증 조회 : evtApplyPop02 --> 
+<div id="evtApplyPop02" class="dialog_wrap" data-class="dialog_md">
     <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
 
     <!-- dialog_header -->
@@ -128,63 +129,71 @@
     <div class="dialog_contents">
 		<!-- 스크롤 영역 -->
 		<div class="custom_scroll_wrap sc_pop_lg03">
-            <div class="btn_area btn_re_ex">
-                <button class="btn_sm btn_black">신규등록</button>
-            </div>
-            <div class="pop_inner_table">
-                <div class="order_his_table_wrap">
-                    <table class="order_his_table">
-                        <caption>사업자등록증 조회 표.</caption>
-                        <colgroup>
-                            <col style="width: 46px;">
-                            <col style="width: 200px;">
-                            <col style="width: 110px;">
-                            <col style="width: 165px;">
-                            <col style="width: 140px;">
-                            <col style="width: 140px;">
-                        </colgroup>
-                        <tbody>  
-                            <tr>
-                                <th scope="col">선택</th>
-                                <th scope="col">상호명(법인명)</th>
-                                <th scope="col">대표자명</th> 
-                                <th scope="col">사업자등록번호</th>
-                                <th scope="col">업태</th>
-                                <th scope="col">종목</th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="form_rdo">
-                                        <input id="exRdo01" type="radio" name="exRdoName01">
-                                        <label for="exRdo01"></label>
-                                    </span>
-                                </td>
-                                <td>교보핫트랙스(주)</td>
-                                <td>김미미</td>
-                                <td>111-22-33333</td>
-                                <td>통신판매업</td>
-                                <td>의류/패션/잡화/뷰티</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span class="form_rdo">
-                                        <input id="exRdo02" type="radio" name="exRdoName01">
-                                        <label for="exRdo02"></label>
-                                    </span>
-                                </td>
-                                <td>교보핫트랙스(주)</td>
-                                <td>김미미</td>
-                                <td>111-22-33333</td>
-                                <td>통신판매업</td>
-                                <td>의류/패션/잡화/뷰티</td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" class="emp">검색된 사업자등록번호가 없습니다.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- tit_form_wrap -->
+            <div class="tit_form_wrap">
+                <div class="btn_area">
+                    <button class="btn_sm btn_black">신규등록</button>
                 </div>
             </div>
+            <!-- //tit_form_wrap -->    
+
+            <!-- order_his_table -->
+            <div class="order_his_table">
+                <table>
+                    <caption>사업자등록증 조회 표.</caption>
+                    <colgroup>
+                        <col style="width:46px;">
+                        <col style="width:200px;">
+                        <col style="width:110px;">
+                        <col style="width:165px;">
+                        <col style="width:140px;">
+                        <col style="width:140px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">선택</th>
+                            <th scope="col">상호명(법인명)</th>
+                            <th scope="col">대표자명</th> 
+                            <th scope="col">사업자등록번호</th>
+                            <th scope="col">업태</th>
+                            <th scope="col">종목</th>
+                        </tr>
+                    </thead>
+                    <tbody>  
+                        <tr>
+                            <td>
+                                <span class="form_rdo">
+                                    <input id="exRdo01" type="radio" name="exRdoName01">
+                                    <label for="exRdo01"></label>
+                                </span>
+                            </td>
+                            <td>교보핫트랙스(주)</td>
+                            <td>김미미</td>
+                            <td>111-22-33333</td>
+                            <td>통신판매업</td>
+                            <td>의류/패션/잡화/뷰티</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="form_rdo">
+                                    <input id="exRdo02" type="radio" name="exRdoName01">
+                                    <label for="exRdo02"></label>
+                                </span>
+                            </td>
+                            <td>교보핫트랙스(주)</td>
+                            <td>김미미</td>
+                            <td>111-22-33333</td>
+                            <td>통신판매업</td>
+                            <td>의류/패션/잡화/뷰티</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="emp">검색된 사업자등록번호가 없습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- //order_his_table -->
+
 
             <!-- pagination -->
             <div class="pagination">
@@ -216,17 +225,118 @@
     </div>
     <!-- //dialog_contents -->
 </div>
-<!-- //사업자등록증 조회 : evtApplyPop --> 
+<!-- //사업자등록증 조회 : evtApplyPop02 --> 
 
 
 
-<style>
-    
-</style>
+<!-- 사업자등록번호 등록 : evtApplyPop03 --> 
+<div id="evtApplyPop03" class="dialog_wrap" data-class="dialog_md">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">사업자등록번호 등록</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+		<!-- 스크롤 영역 -->
+		<div class="custom_scroll_wrap sc_pop_lg03">
+            <!-- form_wrap -->
+			<div class="form_wrap type_md">
+                <div class="form_box">
+					<div class="form_title">
+						<span class="form_label">사업자등록번호<span class="required"><span class="hidden">필수입력</span></span></span>
+					</div>
+					<div class="form_cont">
+						<input type="number" class="form_ip" placeholder="-없이 숫자만 입력" value="">
+					</div>
+				</div>
+
+				<div class="form_box">
+					<div class="form_title">
+						<span class="form_label">상호명(법인명)<span class="required"><span class="hidden">필수입력</span></span></span>
+					</div>
+					<div class="form_cont">
+						<input type="text" class="form_ip" placeholder="상호명을 입력해 주세요" value="">
+					</div>
+				</div>
+				<div class="form_box">
+					<div class="form_title">
+						<span class="form_label">대표자명<span class="required"><span class="hidden">필수입력</span></span></span>
+					</div>
+					<div class="form_cont">
+						<input type="text" class="form_ip" placeholder="대표자명을 입력해 주세요" value="">
+					</div>
+				</div>
+				<div class="form_box">
+					<div class="form_title">
+						<span class="form_label">업태<span class="required"><span class="hidden">필수입력</span></span></span>
+					</div>
+					<div class="form_cont">
+						<input type="text" class="form_ip" placeholder="업태를 입력해 주세요" value="">
+					</div>
+				</div>
+				<div class="form_box">
+					<div class="form_title">
+						<span class="form_label">종목<span class="required"><span class="hidden">필수입력</span></span></span>
+					</div>
+					<div class="form_cont">
+						<input type="text" class="form_ip" placeholder="종목을 입력해 주세요" value="">
+					</div>
+				</div>
+				<div class="form_box">
+					<div class="form_title">
+						<span class="form_label">사업자 소재지<span class="required"><span class="hidden">필수입력</span></span></span>
+					</div>
+					<div class="form_cont">
+						<input type="text" class="form_ip" placeholder="사업자 소재지를 입력해 주세요" value="">
+					</div>
+				</div>
+				<div class="form_box">
+					<div class="form_title">
+						<span class="form_label">담당자명<span class="required"><span class="hidden">필수입력</span></span></span>
+					</div>
+					<div class="form_cont">
+						<input type="text" class="form_ip" placeholder="담당자명을 입력해 주세요" value="">
+					</div>
+				</div>
+				<div class="form_box">
+					<div class="form_title">
+						<span class="form_label">이메일<span class="required"><span class="hidden">필수입력</span></span></span>
+					</div>
+					<div class="form_cont">
+						<div class="valid_check">
+                            <input type="email" id="chk01" class="form_ip" placeholder="@ 포함 이메일 입력" value="">
+                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
+                        </div>
+                        <div class="valid_check fail">
+                            <input type="email" id="chk01_1" class="form_ip" placeholder="@ 포함 이메일 입력" value="">
+                            <span class="valid_desc">메일 주소의 형식이 올바르지 않습니다</span>
+                        </div>
+					</div>
+                    
+				</div>
+			</div>
+			<!-- //form_wrap -->
+		</div>
+		<!-- //스크롤 영역-->
+
+		<!-- btn_area -->
+        <div class="btn_area">
+            <button type="button" class="btn_md btn_primary" data-dialog-close=""><span class="text">등록</span></button>
+        </div>
+		<!-- //btn_area -->
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //사업자등록번호 등록 : evtApplyPop03 --> 
+
 
 <script>
 $(function(){
-	$('#evtApplyPop').dialog({
+	$('#evtApplyPop02').dialog({
 		//autoOpen: true
 	});
 });
