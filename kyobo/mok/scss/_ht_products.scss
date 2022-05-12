@@ -230,7 +230,6 @@
 .evt_products {
 	padding-top:20px;
 	.prod_item {
-		cursor:pointer;
 		&:first-of-type {
 			margin:0;
 		}
@@ -247,7 +246,7 @@
 			}
 		}
 		.evt_good_count {
-			display: block;position:absolute;right:8px;bottom:8px;height:24px;padding:5px 12px;background-color: rgba(0,0,0,0.5);border-radius: 35px;color:#fff;font-size: 10px;z-index:5;
+			display: block;position:absolute;right:8px;bottom:8px;height:24px;padding:5px 12px;background-color: rgba(0,0,0,0.5);border-radius: 35px;color:#fff;font-size:10px;z-index:5;cursor:pointer;
 			.icon {
 				float:left;width:12px;height:14px;margin-top:0;background:url(../images/guide/ico_prod_like_icon.svg) no-repeat center center /12px;
 			}
@@ -384,7 +383,7 @@
 	.final_price {
 		font-size: 16px;
 		line-height:22px;
-	  }	
+	}	
 	.price_origin {
 		font-size: 12px;
 		line-height:22px;
@@ -400,6 +399,9 @@
 	}
 	.product_pic {
 		padding-top:140px;margin-bottom:12px !important;
+	}
+	.product_pic + a {
+		display:block;
 	}			
 	.title {
 		margin-bottom:8px !important;font-size:13px !important;line-height:19px !important;
@@ -606,7 +608,6 @@
 	align-content: flex-start;
 	.prod_item {
 		width: calc((100% - 20px)/2);
-		cursor:pointer;
 		margin-top:24px;
 		&:nth-of-type(2){
 			margin-top:0;
@@ -620,6 +621,9 @@
 	}
 	.product_info {
 		width:100%;
+		& > a {
+			display:block;
+		}
 	}
 	.sold_out .product_pic:before {
 		content:"";
