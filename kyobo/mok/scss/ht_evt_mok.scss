@@ -291,12 +291,12 @@
 }
 /*=======================     모듈 006 영역   =====================*/
 .module6_item {
-	width:100%;margin-top:20px;
+	width:100%;margin-top:24px;
 	&:first-child {
 		margin-top:0;
 	}
 	.product_pic{
-		position:relative;height:0;margin-bottom: 12px;padding-top:100%;overflow:hidden;
+		position:relative;height:0;margin-bottom:10px;padding-top:100%;overflow:hidden;
 		img {
 			position:absolute;left:0;top:0;width:100%;height:100%; object-fit:cover;
 		}
@@ -336,53 +336,38 @@
 			background:url(../images/guide/ico_prod_like_icon_active.svg) no-repeat center center /12px;
 		}
 	}
-	.company{
-		font-size: 12px;
+	.company {
+		font-size:14px; font-weight:400; line-height:22px;
 		color:#767676;
 		margin-top:8px;
 	}
 	.title{
-		width:100%;
-		margin-bottom: 5px;
-		font-size: 16px;                  
-		font-weight: 500;
-		line-height: 23px;
-		letter-spacing: -0.13px;
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: normal;
-		word-break: keep-all;
+		display: -webkit-box;width:100%;margin:2px 0 0 0;color:#000;font-size:16px;font-weight:500;line-height:26px;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;white-space: normal;word-break: keep-all;
 	}
 	.price_area{
-		margin-top:px;
+		margin-top:0px;
 		display:flex;
 		flex-flow: row wrap;
 		justify-content: flex-start;
 		align-items: center;
 		align-content: center;
-		font-size: 15px;
 	}
 	.discount_rate,
 	.fianl_price{
-		margin-left:4px;
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 23px;
+		margin-left:4px;color:#000;font-size:18px;font-weight:700;line-height: 28px;
 	}
 	.discount_rate{
 		color:#da2128;
 		margin:0;
 	}
 	.price_origin{
-		margin-left:4px;
+		margin:4px 0 0 4px;
 		font-size: 14px;
-		line-height: 23px;
+		line-height: 28px;
 		text-decoration: line-through;
 		color:#767676;
 		&.no_discount {
+			margin-top:0;
 			text-decoration: none;
 			font-size:18px;
 			font-weight: 700;
@@ -390,10 +375,9 @@
 		}
 	}  
     .badge_line {
-        margin-top:8px;
+        margin-top:12px;
         .badge {
-            margin-top:4px;
-            font-size:12px;
+			height:23px;margin-top:0;font-size:12px;line-height:24px;
         }
     }
 
@@ -420,7 +404,7 @@
 			}
 		}
 		.replace_prod_btn {
-			display:block;position:relative;height:24px;margin:0 auto;margin-top:11px;padding:0 6px;background-color: #fff;border-radius:4px;color:#000;font-size: 12px;line-height:24px;z-index:2;
+			display:block;position:relative;height:24px;margin:0 auto;margin-top:11px;padding:0 6px;background-color: #fff;border-radius:4px;color:#000;font-size:12px;line-height:24px;z-index:2;cursor:pointer;
 		}
 	}
 }
