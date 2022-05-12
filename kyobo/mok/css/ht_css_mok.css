@@ -11775,11 +11775,6 @@ body:before {
   padding-top: 20px;
 }
 
-.prod-wrapper .prod_item,
-.evt_products .prod_item {
-  cursor: pointer;
-}
-
 .prod-wrapper .prod_item:first-of-type,
 .evt_products .prod_item:first-of-type {
   margin: 0;
@@ -11828,6 +11823,7 @@ body:before {
   color: #fff;
   font-size: 10px;
   z-index: 5;
+  cursor: pointer;
 }
 
 .prod-wrapper .product_pic .evt_good_count .icon,
@@ -12074,6 +12070,10 @@ body:before {
 .type_sm .product_pic {
   padding-top: 140px;
   margin-bottom: 12px !important;
+}
+
+.type_sm .product_pic + a {
+  display: block;
 }
 
 .type_sm .title {
@@ -12331,7 +12331,6 @@ body:before {
 
 .evt_products .prod_item {
   width: calc((100% - 20px)/2);
-  cursor: pointer;
   margin-top: 24px;
 }
 
@@ -12349,6 +12348,10 @@ body:before {
 
 .evt_products .product_info {
   width: 100%;
+}
+
+.evt_products .product_info > a {
+  display: block;
 }
 
 .evt_products .sold_out .product_pic:before {
