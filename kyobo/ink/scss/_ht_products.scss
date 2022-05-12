@@ -103,7 +103,7 @@
 	}
 	.cpon {
 		display:inline-block;padding:3px 9px 2px 9px;border-radius:25px;box-sizing:border-box;font-size:12px;line-height:18px;
-		background-color:#d4ff1a;border-color:#292929;border-style:solid;border-width:2px 2px 3px 2px;font-weight:700;position:absolute;left:10px;top:10px;z-index:2;
+		background-color:#d4ff1a;border-color:#292929;border-style:solid;border-width:2px 2px 3px 2px;font-weight:700;position:absolute;left:10px;top:10px;z-index:3;
 	}
 }
 
@@ -142,7 +142,7 @@
 	&>div {
 		position:absolute;left:0;top:50%;width:100%;color:#fff;font-size:16px;font-weight:500;line-height:24px;text-align:center;transform:translateY(-50%);z-index:4;
 		a {
-			position:absolute;left:0;top:-200%;width:100%;height:500%;background:rgba(0,0,0,0);z-index:1;
+			position:absolute;left:0;top:-300%;width:100%;height:700%;background:rgba(0,0,0,0);z-index:1;
 		}
 	}
 	.replace_prod_btn {
@@ -176,6 +176,9 @@
 .product_info,
 .evt_products.row_dir.type5 {
 	position:relative;width:100%;margin-top:12px;
+	& > a {
+		display:block;
+	}
 	.company {
 		margin-bottom:8px;color:#767676;font-size:14px;line-height:22px;
 	}
@@ -358,7 +361,7 @@
 		position:relative;margin-top:28px;
 	}
 	.img {
-		position:relative;width:100%;height:0;padding-top:57.2%;background-color:#f7f7f7;border-radius:12px;overflow:hidden;
+		position:relative;width:100%;height:0;padding-top:58%;background-color:#f7f7f7;border-radius:12px;overflow:hidden;
 		img {
 			position:absolute;left:50%;top:50%;width:100%;height:100%;transform:translate(-50%,-50%);object-fit:cover;
 		}
@@ -399,14 +402,45 @@
 
 /* 기획전 종료 */ 
 .evt_end_msg {
-	display:flex;justify-content:center;align-items:center;position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);border-radius:12px;color:#fff;font-size:20px;font-weight:700;line-height:30px;overflow:hidden;
+	display:flex !important;justify-content:center;align-items:center;position:absolute !important;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);border-radius:12px;color:#fff;font-size:20px;font-weight:700;line-height:30px;overflow:hidden;
+}
+.evt_end {
+	.img_wrap {
+		&:before {
+			display:flex;justify-content:center;align-items:center;position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);border-radius:12px;color:#fff;font-size:20px;font-weight:700;line-height:30px;overflow:hidden;content:"";
+		}
+		.img {
+			background-color:#000;
+			img {
+				opacity:0.5;
+			}
+		}
+	}
+	.small_pics_area {
+		z-index: 2;
+		li {
+			background-color:#000;
+		}
+		img,
+		.small_pics_more {
+			opacity:0.5;
+		}
+		li:nth-child(4) {
+			img {
+				opacity:0;
+			}
+		}
+	}
+	.evt_end_msg {
+		background:none;
+	}
 }
 
 /* 제품 Thumb */
 .small_pics_area {
 	position:relative;display:flex;flex-wrap:wrap;margin:14px -7px 0 -7px;
 	li {
-		position:relative;width:calc(25% - 14px);margin:0 7px;border-radius:12px;overflow:hidden;
+		position:relative;width:calc(25% - 14px);margin:0 7px;background-color:#fff;border-radius:12px;overflow:hidden;
 		img {
 			width:100%;
 		}

@@ -1148,7 +1148,7 @@ $(function(){
 		if($parent.find('.swiper-slide').length > 1) {
 			var replaceSwiper = new CustomSwiper(this, {
 			slidesPerView: 'auto',
-			spaceBetween: 16,
+			spaceBetween:20,   // 22.05.12
 			freeMode: true,
 			observer: true,
 			observeParents: true,

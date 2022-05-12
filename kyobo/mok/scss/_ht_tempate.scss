@@ -613,10 +613,10 @@
             margin-bottom:4px;color:#767676;font-size:12px;line-height:18px;
         }
         .s1 {
-            display:-webkit-box;color:#000;font-size:13px;font-weight:500;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+            display:-webkit-box;color:#000;font-size:13px;font-weight:500;line-height:19px;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
         }
         .s2 {
-            margin-top:7px;font-size:0;font-weight:700;line-height:18px;
+            margin-top:8px;font-size:0;font-weight:700;line-height:18px;
             strong {
                 padding-right:4px;color:#da2128;font-size:16px;
             }
@@ -624,7 +624,7 @@
                 padding-right:4px;font-size:16px;
             } 
             em {
-                display:inline-block;color:#767676;font-size:12px;font-weight:400;text-decoration:line-through;
+                display:inline-block;color:#767676;font-size:11px;font-weight:400;text-decoration:line-through;
             }
         }
     }
@@ -643,8 +643,8 @@
             width:calc(50% - 10px);
         }
         .replace_prod_swap {
-            .tit{
-                .txt{
+            .tit {
+                .txt {
                     width: auto;
                 }
             }
@@ -738,7 +738,13 @@
     position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);color:#fff;text-align:center;
 }
 .prod_soldout_msg_txt {
-    position:absolute;left:0;top:50%;width:100%;transform:translateY(-50%);
+    position:absolute;left:0;top:50%;width:100%;transform:translateY(-50%);font-size:13px;font-weight:700;line-height:19px;
+    a {
+        position:absolute;left:0;top:-300%;width:100%;height:700%;background:rgba(0,0,0,0);z-index:1;
+    }
+    .btn_prod_replace_chk {
+        display:inline-block;position: relative;  height:22px;margin:11px auto 0 auto;padding:0 6px;background-color:#fff;border-radius:4px;color:#000;font-size:12px;line-height:22px;z-index:2;
+    }
 }
 .prod_soldout_msg span {
     display:inline-block;height:22px;margin:11px auto 0 auto;padding:0 6px;background-color:#fff;border-radius:4px;color:#000;font-size:12px;line-height:22px;
