@@ -3893,7 +3893,7 @@ body {
   position: absolute;
   left: 10px;
   top: 10px;
-  z-index: 2;
+  z-index: 3;
 }
 
 /* 좋아요 :.evt_good_count */
@@ -4105,6 +4105,11 @@ body {
   position: relative;
   width: 100%;
   margin-top: 12px;
+}
+
+.product_info > a,
+.evt_products.row_dir.type5 > a {
+  display: block;
 }
 
 .product_info .company,
@@ -4429,7 +4434,7 @@ body {
   position: relative;
   width: 100%;
   height: 0;
-  padding-top: 57.2%;
+  padding-top: 58%;
   background-color: #f7f7f7;
   border-radius: 12px;
   overflow: hidden;
@@ -4521,6 +4526,30 @@ body {
 
 /* 기획전 종료 */
 .evt_end_msg {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  overflow: hidden;
+}
+
+.evt_end .img_wrap:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4542,6 +4571,36 @@ body {
   font-weight: 700;
   line-height: 30px;
   overflow: hidden;
+  content: "";
+}
+
+.evt_end .img_wrap .img {
+  background-color: #000;
+}
+
+.evt_end .img_wrap .img img {
+  opacity: 0.5;
+}
+
+.evt_end .small_pics_area {
+  z-index: 2;
+}
+
+.evt_end .small_pics_area li {
+  background-color: #000;
+}
+
+.evt_end .small_pics_area img,
+.evt_end .small_pics_area .small_pics_more {
+  opacity: 0.5;
+}
+
+.evt_end .small_pics_area li:nth-child(4) img {
+  opacity: 0;
+}
+
+.evt_end .evt_end_msg {
+  background: none;
 }
 
 /* 제품 Thumb */
@@ -4559,6 +4618,7 @@ body {
   position: relative;
   width: calc(25% - 14px);
   margin: 0 7px;
+  background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
 }
