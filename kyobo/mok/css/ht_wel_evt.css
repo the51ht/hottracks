@@ -2454,3 +2454,93 @@
   top: 0;
   background: url(../images/ico/toLivePage_arrow.svg) no-repeat right 2px/5px;
 }
+
+/* form - toggle */
+.form_toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form_toggle input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.form_toggle input[type=checkbox] + label {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+  border-radius: 22px;
+  font-size: 0;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+}
+
+.form_toggle input[type=checkbox] + label:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  left: 2px;
+  top: 2px;
+  z-index: 2;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+}
+
+.form_toggle input[type=checkbox]:checked + label {
+  background: #5055b1;
+}
+
+.form_toggle input[type=checkbox]:checked + label:before {
+  left: 100%;
+  margin-left: -20px;
+}
+
+.form_toggle input[type=checkbox][aria-disabled], .form_toggle input[type=checkbox][disabled], .form_toggle input[type=checkbox][readonly] {
+  pointer-events: none;
+}
+
+.form_toggle input[type=checkbox][aria-disabled] + label, .form_toggle input[type=checkbox][disabled] + label, .form_toggle input[type=checkbox][readonly] + label {
+  opacity: .5;
+  cursor: default;
+}
+
+.form_toggle_box {
+  display: inline-block;
+  font-size: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form_toggle_box .toggle_text {
+  display: inline-block;
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -.01em;
+  color: #767676;
+  vertical-align: top;
+}
+
+.form_toggle_box .toggle_text .val {
+  font-weight: 700;
+}
+
+.form_toggle_box .toggle_text + .form_toggle {
+  margin-left: 6px;
+}
