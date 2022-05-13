@@ -10315,10 +10315,19 @@ header.scroll_down + .container_wrapper .sticky_selec.anchor {
 .ht_info_deadline {
   position: -webkit-sticky;
   position: sticky;
-  top: 50%;
+  top: 60%;
   width: auto;
   height: 0;
-  z-index: 6;
+  z-index: 10;
+}
+
+/* 위치 활성화 */
+.character_sc_chk .deadline_character_area {
+  display: none;
+}
+
+.character_sc_chk.on .deadline_character_area {
+  display: block;
 }
 
 /* 베스트 */
