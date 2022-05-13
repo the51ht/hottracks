@@ -468,41 +468,6 @@ input[type=number] {
 // }
 
 
-/* form 공통 - 하단 메시지 */
-.form_desc {
-    display: inline-block;
-    position: relative;
-    margin-top: 6px;
-    font-size: 13px;
-    line-height: 19px;
-    letter-spacing: -0.01em;
-    color: #767676;
-    &.tip {
-        padding-left: 33px;
-        &:before {
-            content: "";
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 28px;
-            height: 17px;
-            background-image: url('../images/ico_tip_mok.png');
-            background-size: 28px 17px;
-        }
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 2) {
-    .form_desc.tip:before {
-        background-image: url('../images/ico_tip_mok@2x.png');
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 3) {
-    .form_desc.tip:before {
-        background-image: url('../images/ico_tip_mok@3x.png');
-    }
-}
-
 
 /* form - input */
 [class^=form_] {
@@ -602,23 +567,6 @@ input[type=number] {
     position: relative;
     .form_ip {
         padding: 0 48px 0 14px;
-    }
-    .btn_toggle_pw {
-        display: inline-block;
-        position: absolute;
-        right: 14px;
-        top: 50%;
-        width: 22px;
-        height: 20px;
-        background-image: url('../images/ico_eye_mok.png');
-        background-size: 22px 20px;
-        transition: background 0.2s ease-out;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        &.active {
-            background-image: url('../images/ico_eye_active_mok.png');
-            background-size: 22px 20px;
-        }
     }
     ~ .form_ip_pw {
         margin-top: 8px;
