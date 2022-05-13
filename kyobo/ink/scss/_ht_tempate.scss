@@ -489,7 +489,7 @@
 /*** 다이나믹 메시지 ***/
 .deadline_character_area {
     &:after {
-        display:inline-block;position:absolute;right:-120px;top:-12px;width:105px;height:98px;background:center/100% no-repeat;content:"";animation:evtMsg both infinite 5s;
+        display:inline-block;position:absolute;right:-120px;top:-12px;width:105px;height:98px;background:center/100% no-repeat;content:"";animation:evtMsg both 1 5s;
     }
     span {
         &:after {
@@ -522,6 +522,8 @@
     position:sticky;top:50%;width:auto;height:0;;z-index:20;
 }
 
+
+/* 위치 활성화 */
 .character_sc_chk {
     .deadline_character_area {
         display:none;

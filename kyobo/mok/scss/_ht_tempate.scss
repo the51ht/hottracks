@@ -387,9 +387,21 @@
 .ht_del_deadline,
 .ht_cate_deadline,
 .ht_info_deadline {
-    position:sticky;top:50%;width:auto;height:0;z-index:6;
+    position:sticky;top:60%;width:auto;height:0;z-index:10;
 }
 
+
+/* 위치 활성화 */
+.character_sc_chk {
+    .deadline_character_area {
+        display:none;
+    }
+    &.on {
+        .deadline_character_area {
+            display:block;
+        }
+    }
+}
 
 
 /* 베스트 */
