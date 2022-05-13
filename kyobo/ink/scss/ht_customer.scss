@@ -1120,6 +1120,11 @@
                 strong {
                     height:24px;font-size:12px;line-height:24px;padding:0 3px;border-radius:4px;
                 }
+                &:disabled{
+                    strong{
+                        color: #999999;
+                    }
+                }
             }
             button.btn_sm {
                 width:87px;padding:0 10px 1px;font-weight:400;
@@ -1138,13 +1143,13 @@
             }
         }
         .td_item_left {
-            text-align:left;padding-left:38px;padding-right:105px;width:335px;
+            text-align:left;padding-left:38px;padding-right:120px;width:335px;
         }
         .td_text_left {
             text-align:left;padding-left:38px;padding-right:38px;
         }
         .order_st {
-            color:#767676;
+            color:#767676 !important;
         }
     }
 }
@@ -1271,10 +1276,10 @@
     font-size:15px;
 }
 .order_re_wrap{
-    width:52.5%;
+    width:52.5%;text-align: left;
 }
 .order_ex_wrap{
-    width:47.5%;
+    width:47.5%;text-align: left;
 }
 
 
@@ -1506,9 +1511,29 @@
     }
 }
 
-
-
-
+/* 세금계산서 신청 > 세금계산서 신청 내역 팝업 */
+.ht_tbl_row_wrap table.ht_tbl_row .tr_text_left{
+    text-align: left;
+    th, td{
+        font-weight: 500;
+    }
+}
+.info_text_box_h{
+    ul{
+        &:after{
+            display: block; clear: both; content: "";
+        }
+        li{
+            width: calc(48% - 15px); float: left; margin-top: 0 !important;
+            &:nth-child(n + 3){
+                margin-top: 6px !important;
+            }
+            &:nth-child(2n){
+                margin-left: 29px;
+            }
+        }
+    }
+}
 
 
 
