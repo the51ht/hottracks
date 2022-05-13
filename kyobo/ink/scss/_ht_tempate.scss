@@ -519,18 +519,17 @@
 .ht_del_deadline,
 .ht_cate_deadline,
 .ht_info_deadline {
-    position:sticky;top:50%;width:auto;height:0;margin-bottom:80px;z-index:20;
+    position:sticky;top:50%;width:auto;height:0;;z-index:20;
 }
-.ht_best_deadline,
-.ht_new_deadline,
-.ht_del_deadline,
-.ht_cate_deadline,
-.ht_info_deadline {
-    & + div {
-        position:relative;top:-55px;
+
+.character_sc_chk {
+    .deadline_character_area {
+        display:none;
     }
-    & + .evt_products {
-        position:relative;top:-95px;
+    &.on {
+        .deadline_character_area {
+            display:block;
+        }
     }
 }
 

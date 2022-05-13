@@ -581,6 +581,34 @@ $(function(){
 });
 
 
+/* 다이나믹 메세지 */
+$.fn.feScrollDynamicGet = function(){
+    var offset = $(window).scrollTop() + $(window).height() * 0.7;
+	$animate =$('.character_sc_chk');
+    $animate.each(function(i){
+        var $ani = $(this)
+		if(($ani.offset().top ) < (offset)){
+            if(!$ani.hasClass('chks')){
+                $ani.addClass('chks');
+                $ani.find('.deadline_character_area').show();
+                setTimeout(function(){
+                    $ani.find('.deadline_character_area').remove();
+                }, 5000);
+            }
+        }
+    });
+};
+
+function feScrollDynamic(){
+    $.fn.feScrollDynamicGet();
+}
+
+$(function(){
+    if(!$('.character_sc_chk').length) return;
+    $(window).on('scroll', feScrollDynamic);
+});
+
+
 
 
 
