@@ -1946,6 +1946,10 @@
   border-radius: 4px;
 }
 
+.order_his_table tr td .btn_more_view_box:disabled strong {
+  color: #999999;
+}
+
 .order_his_table tr td button.btn_sm {
   width: 87px;
   padding: 0 10px 1px;
@@ -1980,7 +1984,7 @@
 .order_his_table tr .td_item_left {
   text-align: left;
   padding-left: 38px;
-  padding-right: 105px;
+  padding-right: 120px;
   width: 335px;
 }
 
@@ -1991,7 +1995,7 @@
 }
 
 .order_his_table tr .order_st {
-  color: #767676;
+  color: #767676 !important;
 }
 
 .order_his_table + .pagination {
@@ -2226,10 +2230,12 @@
 
 .order_re_wrap {
   width: 52.5%;
+  text-align: left;
 }
 
 .order_ex_wrap {
   width: 47.5%;
+  text-align: left;
 }
 
 /** 주문/배송조회 상세 페이지 **/
@@ -2604,4 +2610,33 @@
 
 .pop_inner_table .order_his_table .tit_form_wrap .form_sel .ui-selectmenu-button {
   width: 70px;
+}
+
+/* 세금계산서 신청 > 세금계산서 신청 내역 팝업 */
+.ht_tbl_row_wrap table.ht_tbl_row .tr_text_left {
+  text-align: left;
+}
+
+.ht_tbl_row_wrap table.ht_tbl_row .tr_text_left th, .ht_tbl_row_wrap table.ht_tbl_row .tr_text_left td {
+  font-weight: 500;
+}
+
+.info_text_box_h ul:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.info_text_box_h ul li {
+  width: calc(48% - 15px);
+  float: left;
+  margin-top: 0 !important;
+}
+
+.info_text_box_h ul li:nth-child(n + 3) {
+  margin-top: 6px !important;
+}
+
+.info_text_box_h ul li:nth-child(2n) {
+  margin-left: 29px;
 }
