@@ -624,26 +624,6 @@ input[type=number] {
         margin-top: 8px;
     }
 }
-@media(-webkit-min-device-pixel-ratio: 2) {
-    .form_ip_pw .btn_toggle_pw {
-        background-image: url('../images/ico_eye_mok@2x.png');
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 3) {
-    .form_ip_pw .btn_toggle_pw {
-        background-image: url('../images/ico_eye_mok@3x.png');
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 2) {
-    .form_ip_pw .btn_toggle_pw.active {
-        background-image: url('../images/ico_eye_active_mok@2x.png');
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 3) {
-    .form_ip_pw .btn_toggle_pw.active {
-        background-image: url('../images/ico_eye_active_mok@3x.png');
-    }
-}
 
 
 /* input - 검색 */
@@ -669,16 +649,6 @@ input[type=number] {
         .btn_ip_clear {
             display: block;
         }
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 2) {
-    .form_ip_search .btn_ip_clear {
-        background-image: url('../images/btn_ip_reset_mok@2x.png');
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 3) {
-    .form_ip_search .btn_ip_clear {
-        background-image: url('../images/btn_ip_reset_mok@3x.png');
     }
 }
 .form_search_box {
@@ -993,99 +963,6 @@ input[type=number] {
     }
 }
 
-.form_filter_box {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    .form_chk_filter {
-        flex: 0 auto;
-        input {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-            + label {
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: row;
-                position: relative;
-                z-index: 1;
-                min-width: 71px;
-                height: 50px;
-                padding: 0 11px;
-                overflow: hidden;
-                color: #767676;
-                font-size: 14px;
-                line-height: 22px;
-                letter-spacing: -0.01em;
-                font-family: "Noto Sans KR", sans-serif;
-                background-color: #fff;
-                border: 1px solid #d5d5d5;
-                box-sizing: border-box;
-                text-align: center;
-                cursor: pointer;
-                vertical-align: top;
-                transition: border-color 0.2s ease-out;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                .text {
-                    position: relative;
-                    padding-left: 16px;
-                    padding-bottom: 2px;
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        top: 50%;
-                        width: 10px;
-                        height: 7px;
-                        margin-top: -3px;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-image: url('../images/ico_checkbox_mok.png');
-                        background-size: 10px 7px;
-                        transition: background 0.2s ease-out;
-                    }
-                }
-            }
-            &:checked + label {
-                z-index: 2;
-                border-color: #5055b1;
-                color: #5055b1;
-                .text:before {
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-image: url('../images/ico_checkbox_active_02_mok.png');
-                    background-size: 10px 7px;
-                }
-            }
-            &:focus + label {
-                outline: 2px solid Highlight;
-                outline: 2px solid -webkit-focus-ring-color;
-            }
-        }
-        &:first-child input + label {
-            border-radius: 6px 0 0 6px;
-        }
-        &:last-child input + label {
-            border-radius: 0 6px 6px 0;
-        }
-        &:only-child input + label {
-            border-radius: 6px;
-        }
-        ~ .form_chk_filter input + label {
-            margin-left: -1px;
-        }
-    }
-}
-
 
 /** 공통 체크박스 **/
 .checkbox_cm{
@@ -1127,26 +1004,6 @@ input[type=number] {
 }
 
 /*//공통 */
-@media(-webkit-min-device-pixel-ratio: 2) {
-    .form_filter_box .form_chk_filter input + label .text:before {
-        background-image: url('../images/ico_checkbox_mok@2x.png');
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 3) {
-    .form_filter_box .form_chk_filter input + label .text:before {
-        background-image: url('../images/ico_checkbox_mok@3x.png');
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 2) {
-    .form_filter_box .form_chk_filter input:checked + label .text:before {
-        background-image: url('../images/ico_checkbox_active_02_mok@2x.png');
-    }
-}
-@media(-webkit-min-device-pixel-ratio: 3) {
-    .form_filter_box .form_chk_filter input:checked + label .text:before {
-        background-image: url('../images/ico_checkbox_active_02_mok@3x.png');
-    }
-}
 
 /* checkbox & radio list */
 .chk_row_list {
@@ -1911,23 +1768,6 @@ input[type=number] {
     }
 }
 
-.bul_item_branch {
-    padding-left: 11px;
-
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 5px;
-        width: 6px;
-        height: 6px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-image: url(../images/bul_branch_mok.png);
-        background-size: 6px 6px;
-    }
-}
 
 /* decimal 리스트 */
 .decimal_item {
