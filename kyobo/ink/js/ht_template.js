@@ -425,6 +425,11 @@ $(function(){
         $(this).tabTy();
         return false;
     });
+    $('.tap_prod_link a').click(function(){    
+        ht_CurDetailJs.getCrtProdList($('.tab_swiper .swiper-wrapper .swiper-slide .on'));
+        return false;
+    });
+    
 });
 
 
