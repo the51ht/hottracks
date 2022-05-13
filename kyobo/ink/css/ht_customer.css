@@ -1922,10 +1922,12 @@
   font-size: 13px !important;
 }
 
-.order_his_table tr td .btn_more_view_box {
+.order_his_table tr td .btn_order_area {
   position: absolute;
-  right: 10px;
+  right: 0;
   top: 50%;
+  width: 110px;
+  text-align: center;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -1942,12 +1944,16 @@
   height: 24px;
   font-size: 12px;
   line-height: 24px;
-  padding: 0 3px;
+  padding: 0 5px;
   border-radius: 4px;
 }
 
 .order_his_table tr td .btn_more_view_box:disabled strong {
   color: #999999;
+}
+
+.order_his_table tr td .btn_more_view_box:disabled em {
+  display: none;
 }
 
 .order_his_table tr td button.btn_sm {
@@ -1992,8 +1998,7 @@
 .order_his_table tr .td_item_left {
   text-align: left;
   padding-left: 38px;
-  padding-right: 120px;
-  width: 335px;
+  padding-right: 125px;
 }
 
 .order_his_table tr .td_text_left {
@@ -2008,6 +2013,15 @@
 
 .order_his_table + .pagination {
   border-top: 0;
+}
+
+.table_link {
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.table_link:hover {
+  color: #da2128;
 }
 
 /* order_processing_wrap : 주문처리 안내 */

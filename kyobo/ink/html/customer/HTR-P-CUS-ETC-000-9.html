@@ -99,6 +99,7 @@
 						<h2 class="ht_tit05">팝업</h2>
 
 						<button type="button" class="btn_md btn_light_gray" data-role="btn-dialog" data-target="#evtApplyPop"><span class="text">반품/교환 상품 조회 / #evtApplyPop</span></button>
+                        <button type="button" class="btn_md btn_light_gray" data-role="btn-dialog" data-target="#popDel01"><span class="text">배송정보안내 / #popDel01</span></button>
 					</div>
 					<!-- //팝업 -->
 					
@@ -271,10 +272,50 @@
 </div>
 <!-- //반품/교환 상품 조회 : evtApplyPop --> 
 
+
+<!-- 팝업 : 배송정보안내 : popDel01 -->
+<div id="popDel01" class="dialog_wrap" data-class="dialog_md">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">배송정보안내</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <div class="ht_tbl_row_wrap">
+            <table class="ht_tbl_row">
+                <caption>
+                    택배사, 운송장 정보를 나타낸 배송정보안내 표
+                </caption>
+                <colgroup>
+                    <col style="width:50%;">
+                    <col style="width:50%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">택배사</th>
+                        <th scope="col">운송장번호</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">롯대택배(구 현대택배)</td>
+                        <td class="center">308235848185</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //팝업 : 배송정보안내 : popDel01 -->
+
 <script>
 $(function(){
 	$('#evtApplyPop').dialog({
-		autoOpen: true
+		//autoOpen: true
 	});
 });
 </script>
