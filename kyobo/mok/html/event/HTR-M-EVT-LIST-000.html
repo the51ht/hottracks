@@ -187,7 +187,8 @@
                      <!--이벤트 기획전 리스트-->
                     <div class="list_evt_area spe_evt_area">
                         <!--div.evt_item 반복-->
-                        <div class="evt_item">
+                        <div class="evt_item evt_end"><!-- 22.05.16 수정 -->
+                            <div class="discount_icon">~25%</div><!-- 22.05.16 수정 -->
                             <span class="promotion_upper_wrap"><!-- 22.03.15 수정 -->
                                 <div class="thumnail_evt" onclick="location.href='../event/HTR-M-EVT-VIEW-000.html'">
                                     <img class="bd_img" src="../../images/temp/@evt_thumnail_02.png" >
@@ -213,20 +214,24 @@
                                         <div class="pic_wrap"></div>
                                     </li>
                                 </ul>
-                                <span class="mc_end_msg"><em>기획전 종료</em></span><!-- 22.03.15 수정 -->
+                                <a href="javascript:alert('제품상세');"><!-- 22.05.16 수정 -->
+                                    <span class="mc_end_msg"><em>기획전 종료</em></span><!-- 22.03.15 수정 -->
+                                </a>
                             </span>
-                            <div class="txt_account">
-                                <h3 class="txt_heading">
-                                    <em class="discount">~15%</em>
-                                    오븐없이 만드는 달콤한 디저트
-                                </h3>
-                                <p class="txt_sub">최종 수상작 발표 (대상/우수상/참가상)</p>
-                                <p class="txt_period">2021.11.04 ~ 2021.11.15</p>
-                            </div>                                            
+                            <a href="javascript:alert('제품상세');"><!-- 22.05.16 수정 -->
+                                <div class="txt_account">
+                                    <h3 class="txt_heading">
+                                        오븐없이 만드는 달콤한 디저트
+                                    </h3>
+                                    <p class="txt_sub">최종 수상작 발표 (대상/우수상/참가상)</p>
+                                    <p class="txt_period">2021.11.04 ~ 2021.11.15</p>
+                                </div>      
+                            </a>                                      
                         </div>
                         <!--//div.evt_item 반복-->
 
                         <div class="evt_item">
+                            <div class="discount_icon">~25%</div>
                             <span class="promotion_upper_wrap">
 
                                 <div class="thumnail_evt">
@@ -254,15 +259,17 @@
                                     </li>
                                 </ul>
                             </span>
-                            <div class="txt_account">
-                                <h3 class="txt_heading">
-                                    <!--할인 적용 안될때-->
-                                    <!-- <em class="discount">~15%</em> -->
-                                    오븐없이 만드는 달콤한 디저트
-                                </h3>
-                                <p class="txt_sub">최종 수상작 발표 (대상/우수상/참가상)</p>
-                                <p class="txt_period">2021.11.04 ~ 2021.11.15</p>
-                            </div>                                            
+                            <a href="javascript:alert('제품상세');"><!-- 22.05.16 수정 -->
+                                <div class="txt_account">
+                                    <h3 class="txt_heading">
+                                        <!--할인 적용 안될때-->
+                                        <!-- <em class="discount">~15%</em> -->
+                                        오븐없이 만드는 달콤한 디저트
+                                    </h3>
+                                    <p class="txt_sub">최종 수상작 발표 (대상/우수상/참가상)</p>
+                                    <p class="txt_period">2021.11.04 ~ 2021.11.15</p>
+                                </div>                              
+                            </a>              
                         </div>
                     </div>  
                     <!--//이벤트 기획전 리스트-->
@@ -321,13 +328,14 @@
                          <!--//evt_item 반복-->
 
                         <div class="evt_item">
+                            <div class="discount_icon">~25%</div>
                             <!--이벤트 종료 Class:  promotion_end-->
                             <div class="thumnail_evt promotion_end" >
                                 <div class="promotion_status_txt">이벤트 종료</div>
                                 <img class="bd_img" src="../../images/temp/@evt_thumnail_01.png"  alt="" >
                             </div>
                             <div class="txt_account">
-                                <h3 class="txt_heading"><em class="discount">~15%</em>제3회 라이징스타 공모전 최종 수상작 발표!</h3>
+                                <h3 class="txt_heading">제3회 라이징스타 공모전 최종 수상작 발표!</h3>
                                 <p class="txt_sub">최종 수상작 발표 (대상/우수상/참가상)</p>
                                 <p class="txt_period">2021.11.04 ~ 2021.11.15</p>
                             </div>
@@ -346,13 +354,11 @@
 
             </section>
             
-            <!--[2022-02-21] hr 추가-->
-            <hr class="divide_hr"> 
 
             <!-- 반응 최고 -->
             <!--[2022-02-15 디자인 변경 및 마크업 변경]-->
-            <section class="evt_slider_wrap">
-                <h2>반응최고</h2>
+            <section class="evt_slider_wrap best_reaction_section">
+                <h2>반응최고<em class="heart_emoji"></em></h2>
                 <div class="swiper mySwiper evt">
                     <!--상품 개수 2개이하일때  ul class="evt_slider nonswipe"로 설정-->
                     <ul class="swiper-wrapper evt_slider">
@@ -391,18 +397,16 @@
             <!-- //반응 최고 -->
 
 
-            <!--[2022-02-21] hr 추가-->
-            <hr class="devide_underline_thin">
-
-
             <!-- 오늘만 특가 -->
             <section class="hot_deal_wrap">
                 <div class="hot_deal_area">
                     <div class="title_area">
-                        <h2>오늘만 특가</h2>
-                        <div class="countdown">
-                            <span class="time">05:53:02</span>
+                        <h2>오늘만 특가<em class="hotdeal_shine"></em></h2>
+                        <!-- 타이머 영역 -->
+                        <div class="timer_area">
+                            <div class="timer">05:23:15</div>
                         </div>
+                        <!-- //타이머 영역 -->
                     </div> 
                     <div class="swiper mySwiper hotdeal">
                         <ul class="swiper-wrapper prod-wrapper type_xs">
