@@ -820,8 +820,8 @@ body.dialog_open {
 	justify-content: flex-start;
 	span{
 		display: block;
-		width:calc(100% / 4);
-		@for $sns from 5 through 8 {
+		width:calc(100% / 3);
+		@for $sns from 4 through 7 {
 			&:nth-of-type(#{$sns}){
 				margin-top:20px;
 			}
@@ -844,7 +844,36 @@ body.dialog_open {
 		text-align: center;
 		margin-top:5px;
 	}
-
+    .form_wrap .form_box .form_cont{
+        width: 336px;
+        justify-content: space-between;
+        margin-top: 19px;
+        margin-left: -10px;
+        &:after{
+            clear: both;
+            content: "";
+            display: block;
+        }
+        input{
+            width: calc(100% - 86px);
+            float: left;
+            border-radius: 6px 0 0 6px;
+            color: #767676;
+        }
+        button{
+            width: 85px;
+            font-size: 14px;
+            color: #000;
+            border-top: 1px solid #d5d5d5;
+            border-right: 1px solid #d5d5d5;
+            border-bottom: 1px solid #d5d5d5;
+            border-radius: 0 6px 6px 0;
+            float: left;
+            line-height: 48px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+    }
 }
 @media(max-width: 374px) {
     .dialog_wrapper .ui-dialog {
