@@ -252,7 +252,7 @@ body {
 }
 
 /* Header */
-.ht_ header.scroll_down {
+.wrapper.ht_ header.scroll_down {
     transform:translateY(-100%);
 }
 .ht_.contents_detail_view header.scroll_down {
@@ -265,18 +265,23 @@ body {
 .sticky_selec {
     transition:top 0.23s;
 }
-header.scroll_down + .cont_wrap .ctg_topMenu,
-header.scroll_down + .cont_wrap .ctg_floating_line,
-header.scroll_down + .wel_main_wrap .ctg_topMenu {
-    top:-1px;
-}
+.wrapper.ht_ {
+    header.scroll_down + .cont_wrap .ctg_topMenu,
+    header.scroll_down + .cont_wrap .ctg_floating_line,
+    header.scroll_down + .wel_main_wrap .ctg_topMenu,
 
-header.scroll_down + .evt_list_header + .evt_quick_menu_slide  {
-    top:-1px;padding-top:15px;
-}
-header.scroll_down + .cont_wrap .sticky_selec,
-header.scroll_down + .container_wrapper .sticky_selec {
-    top:-1px;
+    header.scroll_down + .container_wrapper .ctg_topMenu,
+    header.scroll_down + .container_wrapper .ctg_floating_line {
+        top:-1px;
+    }
+
+    header.scroll_down + .evt_list_header + .evt_quick_menu_slide  {
+        top:-1px;padding-top:15px;
+    }
+    header.scroll_down + .cont_wrap .sticky_selec,
+    header.scroll_down + .container_wrapper .sticky_selec {
+        top:-1px;
+    }
 }
 
 
@@ -292,7 +297,7 @@ header.scroll_down + .container_wrapper .sticky_selec {
     .main_menu_wrap {
         position:sticky;left:0;top:0;background-color:#fff;z-index:10;
         .main_menu_list_wrap {
-            left:0;top:0;max-width:750px;;border-bottom:1px solid #d5d5d5;overflow-x:auto;-webkit-overflow-scrolling:touch;
+            left:0;top:0;width:100%;max-width:750px;;background-color:#fff;border-bottom:1px solid #d5d5d5;overflow-x:auto;-webkit-overflow-scrolling:touch;
             .menu_list {
                 white-space:nowrap;
                 .menu_list_item {
@@ -489,7 +494,9 @@ header.scroll_down + .container_wrapper .sticky_selec {
 }
 
 @media (max-width:400px) {
-	.wrapper .footer_wrapper .footer_body .footer_info_box .info_text .btn_footer_link {margin-top:3px;}
+	.wrapper.ht_ .footer_wrapper .footer_body .footer_info_box .info_text .btn_footer_link {
+        margin-top:3px;
+    }
 }
 
 
@@ -905,7 +912,7 @@ header.scroll_down + .container_wrapper .sticky_selec {
   
 
 
-.ht_ {
+.wrapper.ht_ {
     .product_wrap_li {
         width:100px;
         img {
@@ -949,7 +956,7 @@ header.scroll_down + .container_wrapper .sticky_selec {
 }
 
 /* swiper custom */
-.ht_ {
+.wrapper.ht_ {
     .swiper-scrollbar {
         width:100%;left:0;right:0;bottom:0;height:2px;border-radius:0;background-color:rgb(213,213,213);
     }

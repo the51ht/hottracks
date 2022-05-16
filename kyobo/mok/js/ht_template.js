@@ -628,7 +628,6 @@ $(function(){
 
 
 /* Scroll Event */
-$(window).on('scroll', feScrollFn);
 $.fn.feScrollGet = function(){
     var offset = $(window).scrollTop() + $(window).height() * 0.9;
 	$animate = $('.li_box_ty .li, .li_ty .li, .tab_ty, .li_resp_ty.ty02 .li, .mc_tit, .mc_tit02, .wel_belt_banner, .evt_products, .wel_cont, .ht_today_banner, .wel_today_time, .wel_now_banner, .wel_exehibition_banner, .wel_gift_cont, .wel_category_banner, .btn_gift_warp, .wel_quick_menu_cont, .mus_mc_reserved_cont, .mus_mc_order_cont, .mus_mc_chart_cont, .mus_mc_new_album_cont, .mus_mc_fan_cont, .mus_mc_fansign, .mus_mc_pop_cont, .mus_mc_lpshop_cont, .mus_mc_classic_msg ul, .mus_mc_special_cont, .mus_tab_box');
@@ -658,6 +657,8 @@ $(function(){
     $(window).on('scroll', feScrollFn);
     feScrollFn();
 });
+
+
 
 
 

@@ -74,15 +74,9 @@
         <div class="header_left">
             <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
         </div>
-        <div class="header_center">
-            <div class="page_title prod_detail"></div>
-        </div>
         <div class="header_right">
-            <!-- DESC : 상품정보 부터 검색버튼 비활성화 -->
-            <a href="#" class="btn_header_search"><span class="hidden">검색</span></a>
             <a href="#" class="btn_header_cart">
                 <span class="hidden">장바구니</span>
-                <!-- DESC :: 0개인경우 count 영역 미노출 / 최대 99 -->
                 <span class="count">99</span>
             </a>
         </div>
@@ -90,80 +84,87 @@
     <!-- //header -->
 
 
-    <!-- cont_wrap -->
-    <section class="cont_wrap"><!-- 22.02 : 코너메뉴 : class="cont_wrap" 통일 -->
-		<!-- 1depth 메뉴 -->
-		<div class="ctg_topMenu depth1">
-			<div class="inner_wrap">
-				<a href="#" class="active">디자인 문구</a>
-				<a href="#" >필기구</a>
-				<a href="#">오피스</a>
-				<a href="#">디지털/자동차</a>
-				<a href="#">가전</a>
-				<a href="#">유아동 용품</a>
-				<a href="#">오피스</a>
-			</div>
-		</div> 
-		<!-- //1depth 메뉴 -->
+    <!-- container_wrapper -->
+    <main id="containerWrapper" class="container_wrapper">
+        <!-- contents_wrap -->
+        <section class="contents_wrap">
 
-		<!-- 2depth 메뉴 -->
-		<div class="ctg_topMenu depth2">
-			<div class="inner_wrap">
-				<a href="#" class="active depth3_none">전체</a>
-				<a href="#">다이어리/스케줄러</a>
-				<a href="#">캘린더/만년</a>
-				<a href="#">디지털/자동차</a>
-				<a href="#">노트/메모</a>
-				<a href="#">포토앨범</a>
-				<a href="#">달력/포스터</a>
-			</div>
-		</div> 
-		<!-- //2depth 메뉴-->
+			<!-- cont_wrap -->
+			<section class="cont_wrap"><!-- 22.02 : 코너메뉴 : class="cont_wrap" 통일 -->
+				<!-- 1depth 메뉴 -->
+				<div class="ctg_topMenu depth1">
+					<div class="inner_wrap">
+						<a href="#" class="active">디자인 문구</a>
+						<a href="#" >필기구</a>
+						<a href="#">오피스</a>
+						<a href="#">디지털/자동차</a>
+						<a href="#">가전</a>
+						<a href="#">유아동 용품</a>
+						<a href="#">오피스</a>
+					</div>
+				</div> 
+				<!-- //1depth 메뉴 -->
 
-		<!-- 3depth 메뉴-->
-		<div class="sub_menu_wrap">
-			<div class="ctg_subMenu">
-				<a href="#" class="active">전체</a>
-				<a href="#">비즈니스 플래너</a>
-				<a href="#">만년 다이어리</a>
-				<a href="#">디지털/자동차</a>
-				<a href="#">노트/메모</a>
-				<a href="#">포토앨범</a>
-				<a href="#">달력/포스터</a>
-				<a href="#">노트/메모</a>
-				<a href="#">포토앨범</a>
-				<a href="#">달력/포스터</a>
-				<a href="#">노트/메모</a>
-				<a href="#">포토앨범</a>
-				<a href="#">달력/포스터</a>
-			</div>
-			<div class="subMenu_btn_area">
-				<button type="button" class="subMenu_btn"></button>
-			</div>   
-		</div>
-		<!-- //3depth 메뉴-->	
+				<!-- 2depth 메뉴 -->
+				<div class="ctg_topMenu depth2">
+					<div class="inner_wrap">
+						<a href="#" class="active depth3_none">전체</a>
+						<a href="#">다이어리/스케줄러</a>
+						<a href="#">캘린더/만년</a>
+						<a href="#">디지털/자동차</a>
+						<a href="#">노트/메모</a>
+						<a href="#">포토앨범</a>
+						<a href="#">달력/포스터</a>
+					</div>
+				</div> 
+				<!-- //2depth 메뉴-->
+
+				<!-- 3depth 메뉴-->
+				<div class="sub_menu_wrap">
+					<div class="ctg_subMenu">
+						<a href="#" class="active">전체</a>
+						<a href="#">비즈니스 플래너</a>
+						<a href="#">만년 다이어리</a>
+						<a href="#">디지털/자동차</a>
+						<a href="#">노트/메모</a>
+						<a href="#">포토앨범</a>
+						<a href="#">달력/포스터</a>
+						<a href="#">노트/메모</a>
+						<a href="#">포토앨범</a>
+						<a href="#">달력/포스터</a>
+						<a href="#">노트/메모</a>
+						<a href="#">포토앨범</a>
+						<a href="#">달력/포스터</a>
+					</div>
+					<div class="subMenu_btn_area">
+						<button type="button" class="subMenu_btn"></button>
+					</div>   
+				</div>
+				<!-- //3depth 메뉴-->	
+
+
 
 <script>
-/* 확인용 */
-$(function(){
+	/* 확인용 */
+	$(function(){
 		if($('.swiper-container.ctg_top_swiper').length == 0 ) return;
 		$('.swiper-container.ctg_top_swiper').each(function(i, ele){
 		var ctgSwiper = new Swiper(this,  {
-				observer: true,
-				observeParents: true,
-				slidesPerView: 'auto',
-				centeredSlides: true,
-				loop: true,
-				loopsSlide: 1,
-				spaceBetween: 20,
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false,
-				},
-				speed: 700,
-				pagination: {
-				el: $(ele).find('.swiper-pagination')[0],
-				type: 'fraction',
+			observer: true,
+			observeParents: true,
+			slidesPerView: 'auto',
+			centeredSlides: true,
+			loop: true,
+			loopsSlide: 1,
+			spaceBetween: 20,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false,
+			},
+			speed: 700,
+			pagination: {
+			el: $(ele).find('.swiper-pagination')[0],
+			type: 'fraction',
 				formatFractionCurrent: function (number) {
 					return KyoboHottracks.mok.setPrependZero(number, 2);
 				},
@@ -171,306 +172,227 @@ $(function(){
 					return KyoboHottracks.mok.setPrependZero(number, 2);
 				}
 				}
+			});
 		});
-		});
-});
-</script>  
-		<!-- MD추천 배너-->
-		<!--[2022-02-21] div 클래스module_wrap -> ctg_top_wrap 으로 변경-->
-		<div class="ctg_top_wrap character_sc_chk on"><!-- 22.05.16 class="character_sc_chk" 추가 -->
-			<span class="md_tab">
-				<a href="#" class="md_anchor active">MD추천</a>
-				<a href="#" class="md_anchor">베스트</a>
-			</span>
+	});
+	</script>   
+				<!-- MD추천 배너-->
+				<div class="ctg_top_wrap character_sc_chk on"><!-- 22.05.16 class="character_sc_chk" 추가 -->
+					<span class="md_tab">
+						<a href="#" class="md_anchor active">MD추천</a>
+						<a href="#" class="md_anchor">베스트</a>
+					</span>
 
-			<!-- 슬라이드 영역 -->
-			<div class="swiper-container ctg_top_swiper">
-				<ul class="swiper-wrapper prod-wrapper">
-					<!-- prod_item 반복 -->
-					<li class="swiper-slide prod_item">
-						<div class="product_pic">
-							<button class="evt_good_count">
-								<div class="icon"></div>
-								<div class="txt">80</div>
-							</button>
-							<a href="#"><img src="../../images/temp/@img_wel_hero_banner05.jpg"></a>
-						</div>
-						<div class="product_info">
-							<div class="company">dretec</div>
-							<div class="title">루나 달나라 꿈나라 침실 LED 무드등</div>
-							<div class="price_line">
-								<span class="discount_rate">50%</span>
-								<!-- <span class="final_price">9,234,000</span> -->
-								<!--할인 적용 없을때 금액표기-->
-								<span class="price_origin no_discount">134,000</span>
-							</div>
-							<div class="badge_line">
-								<span class="badge rounded badge_primary_evt">쿠폰</span>
-								<span class="badge rounded badge_default_evt">사은품</span>
-								<span class="badge rounded badge_default_evt">무료배송</span>
-							</div>
-						</div>
-					</li>
-					<!-- //prod_item 반복 -->
+					<!-- 슬라이드 영역 -->
+					<div class="swiper-container ctg_top_swiper">
+						<ul class="swiper-wrapper prod-wrapper">
+							<!-- prod_item 반복 -->
+							<li class="swiper-slide prod_item">
+								<div class="product_pic">
+									<button class="evt_good_count">
+										<div class="icon"></div>
+										<div class="txt">80</div>
+									</button>
+									<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+								</div>
+								<div class="product_info">
+									<a href="javascript:alert('제품상세');">
+										<div class="company">dretec</div>
+										<div class="title">루나 달나라 꿈나라 침실 LED 무드등</div>
+										<div class="price_line">
+											<span class="discount_rate">50%</span>
+											<!-- <span class="final_price">9,234,000</span> -->
+											<!--할인 적용 없을때 금액표기-->
+											<span class="price_origin no_discount">134,000</span>
+										</div>
+										<!--<div class="badge_line">
+											<span class="badge rounded badge_primary_evt">쿠폰</span>
+											<span class="badge rounded badge_default_evt">사은품</span>
+											<span class="badge rounded badge_default_evt">무료배송</span>
+										</div>-->
+									</a>
+								</div>
+							</li>
+							<!-- //prod_item 반복 -->
 
-					<li class="swiper-slide prod_item">
-						<div class="product_pic">
-							<button class="evt_good_count">
-								<div class="icon"></div>
-								<div class="txt">80</div>
-							</button>
-							<a href="#"><img src="../../images/temp/@evt_thumnail.png"></a>
-						</div>
-						<div class="product_info">
-							<div class="company">dretec</div>
-							<div class="title">루나 달나라 꿈나라 침실 LED 무드등</div>
-							<div class="price_line">
-								<span class="discount_rate">15%</span>
-								<span class="final_price">9,234,000</span>
-								<span class="price_origin">9,200,000</span>
-							</div>
-							<div class="badge_line">
-								<span class="badge rounded badge_primary_evt">쿠폰</span>
-								<span class="badge rounded badge_default_evt">사은품</span>
-								<span class="badge rounded badge_default_evt">무료배송</span>
-							</div>
-						</div>
-					</li>	
-					<li class="swiper-slide prod_item">
-						<div class="product_pic">
-							<button class="evt_good_count">
-								<div class="icon"></div>
-								<div class="txt">80</div>
-							</button>
-							<a href="#"><img src="../../images/temp/@img_wel_hero_banner05.jpg"></a>
-						</div>
-						<div class="product_info">
-							<div class="company">dretec</div>
-							<div class="title">루나 달나라 꿈나라 침실 LED 무드등</div>
-							<div class="price_line">
-								<span class="discount_rate">15%</span>
-								<span class="final_price">9,234,000</span>
-								<span class="price_origin">9,200,000</span>
-							</div>
-							<div class="badge_line">
-								<span class="badge rounded badge_primary_evt">쿠폰</span>
-								<span class="badge rounded badge_default_evt">사은품</span>
-								<span class="badge rounded badge_default_evt">무료배송</span>
-							</div>
-						</div>
-					</li>	
-					<li class="swiper-slide prod_item">
-						<div class="product_pic">
-							<button class="evt_good_count">
-								<div class="icon"></div>
-								<div class="txt">80</div>
-							</button>
-							<a href="#"><img src="../../images/temp/@evt_thumnail.png"></a>
-						</div>
-						<div class="product_info">
-							<div class="company">dretec</div>
-							<div class="title">루나 달나라 꿈나라 침실 LED 무드등</div>
-							<div class="price_line">
-								<span class="discount_rate">15%</span>
-								<span class="final_price">9,234,000</span>
-								<span class="price_origin">9,200,000</span>
-							</div>
-							<div class="badge_line">
-								<span class="badge rounded badge_primary_evt">쿠폰</span>
-								<span class="badge rounded badge_default_evt">사은품</span>
-								<span class="badge rounded badge_default_evt">무료배송</span>
-							</div>
-						</div>
-					</li>	
-				</ul>
-				<div class="swiper-pagination out_bottom"></div>
-			</div>
-			<!-- //슬라이드 영역 -->
-
-
-			<!-- 다이나믹 메시지 --><!-- 22.05.16 추가 -->
-			<div class="deadline_character_area ht_cate_deadline_fixed">
-				<div class="deadline_bubble">
-					<div class="txt">
-						<span>지금은 쇼핑<br>TIME~</span>
+							<li class="swiper-slide prod_item">
+								<div class="product_pic">
+									<button class="evt_good_count">
+										<div class="icon"></div>
+										<div class="txt">80</div>
+									</button>
+									<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod02.jpg" alt=""></a>
+								</div>
+								<div class="product_info">
+									<a href="javascript:alert('제품상세');">
+										<div class="company">dretec</div>
+										<div class="title">루나 달나라 꿈나라</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">9,234,000</span>
+											<span class="price_origin">9,200,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge rounded badge_primary_evt">쿠폰</span>
+											<span class="badge rounded badge_default_evt">사은품</span>
+											<span class="badge rounded badge_default_evt">무료배송</span>
+										</div>
+									</a>
+								</div>
+							</li>	
+							<li class="swiper-slide prod_item">
+								<div class="product_pic">
+									<button class="evt_good_count">
+										<div class="icon"></div>
+										<div class="txt">80</div>
+									</button>
+									<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+								</div>
+								<div class="product_info">
+									<a href="javascript:alert('제품상세');">
+										<div class="company">dretec</div>
+										<div class="title">루나 달나라 꿈나라</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">9,234,000</span>
+											<span class="price_origin">9,200,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge rounded badge_primary_evt">쿠폰</span>
+											<span class="badge rounded badge_default_evt">사은품</span>
+											<span class="badge rounded badge_default_evt">무료배송</span>
+										</div>
+									</a>
+								</div>
+							</li>	
+							<li class="swiper-slide prod_item">
+								<div class="product_pic">
+									<button class="evt_good_count">
+										<div class="icon"></div>
+										<div class="txt">80</div>
+									</button>
+									<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+								</div>
+								<div class="product_info">
+									<a href="javascript:alert('제품상세');">
+										<div class="company">dretec</div>
+										<div class="title">루나 달나라 꿈나라</div>
+										<div class="price_line">
+											<span class="discount_rate">15%</span>
+											<span class="final_price">9,234,000</span>
+											<span class="price_origin">9,200,000</span>
+										</div>
+										<div class="badge_line">
+											<span class="badge rounded badge_primary_evt">쿠폰</span>
+											<span class="badge rounded badge_default_evt">사은품</span>
+											<span class="badge rounded badge_default_evt">무료배송</span>
+										</div>
+									</a>
+								</div>
+							</li>	
+						</ul>
+						<div class="swiper-pagination out_bottom"></div>
 					</div>
-				</div>
-			</div>
-			<!-- //다이나믹 메시지 -->
-		</div>
-		<!-- //MD추천 배너-->
+					<!-- //슬라이드 영역 -->
 
 
-		<!-- wel_belt_banner -->
-		<div class="wel_belt_banner wel_cont">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<a href="#n"><img src="../../images/temp/@ctg_wel_banner.png" alt=""></a>
-				</div>
-				<div class="swiper-slide">
-					<a href="#n"><img src="../../images/temp/@img_mus_belt_banner.jpg" alt=""></a>
-				</div>
-				<div class="swiper-slide">
-					<a href="#n"><img src="../../images/wel_main/@img_belt_banner.jpg" alt=""></a>
-				</div>
-				</div>
-			</div>
-			<div class="swiper-pagination out_bottom"></div>
-		</div>
-		<hr class="divide_hr">
-		<!-- //wel_belt_banner -->
-
-			
-		<!-- 스티키 메뉴 -->
-		<article class="ctg_floating_line">
-			<div class="menu_nm"  data-role="btn-dialog" data-target="#popBottomHasBtnEx">
-				<h3>스터디 플래너 전체</h3>
-				<span class="menu_nm_icon"></span>
-			</div>
-			<ul class="ctg_floating_menues">
-				<!--체크 리스트 넘버링 Class:checked_status-->
-				<li class="arrow_li checked_status" data-role="btn-dialog" data-target="#popBottomBrand"><em>3</em>브랜드</li>
-				<li>할인</li>
-				<li>쿠폰</li>
-				<li>핫트랙스 배송</li>
-				<li>무료 배송</li>
-				<li>품절포함</li>
-			</ul>
-		</article>
-		<!-- //스티키 메뉴 -->
-
-		<!-- 스터디 플래너 -->
-		<section class="ctg_prod_wrap character_sc_chk"><!-- 22.05.16 class="character_sc_chk" 추가 -->
-			<!-- prod_list_info -->
-			<div class="prod_list_info">
-				<span class="prod_ea">10,264개의 상품</span>
-				<span class="right_side">
-					<div class="sort_nm" data-role="btn-dialog" data-target="#ClickCksClose">신상품순</div>
-					<div class="ctg_list_icon row_list">
-						<span class="hidden list_sort_txt">두줄보기</span>
-					</div>
-				</span>
-			</div>
-			<!-- //prod_list_info -->
-
-
-			<!-- 다이나믹 메시지 --><!-- 22.05.16 추가 -->
-			<div class="deadline_character_area ht_cate_deadline">
-				<div class="deadline_bubble">
-					<div class="txt">
-						<span>모두가 찜하기<br>누르는중</span>
-					</div>
-				</div>
-			</div>
-			<!-- //다이나믹 메시지 -->
-
-
-			<!-- 상품 리스트 -->
-			<ul class="prod-wrapper evt_products row_dir"><!-- row_dir : row type -->
-				<!-- prod_item 반복 -->
-				<li class="prod_item">
-					<div class="product_pic">
-						<button class="evt_good_count">
-							<div class="icon"></div>
-							<div class="txt">80</div>
-						</button>
-						<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_wel_hero_banner04.jpg" class="bd_img" alt=""></a>
-					</div>
-					<div class="product_info">
-						<div class="company">dretec</div>
-						<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-						<div class="price_line">
-							<span class="discount_rate">15%</span>
-							<span class="final_price">9,234,000</span>
-							<span class="price_origin">9,200,000</span>
-						</div>
-						<div class="badge_line">
-							<span class="badge rounded badge_primary_evt">쿠폰</span>
-							<span class="badge rounded badge_default_evt">사은품</span>
-							<span class="badge rounded badge_default_evt">무료배송</span>
+					<!-- 다이나믹 메시지 --><!-- 22.05.16 추가 -->
+					<div class="deadline_character_area ht_cate_deadline_fixed">
+						<div class="deadline_bubble">
+							<div class="txt">
+								<span>지금은 쇼핑<br>TIME~</span>
+							</div>
 						</div>
 					</div>
-				</li>
-				<!-- //prod_item 반복 -->
+					<!-- //다이나믹 메시지 -->
+				</div>
+				<!-- //MD추천 배너-->
 
-				<!-- 19 세 상품 -->
-				<li class="prod_item adult_prod"><!-- 19세 : class="adult_prod" -->
-					<div class="product_pic bd_img">
-						<button class="evt_good_count">
-							<div class="icon"></div>
-							<div class="txt">80</div>
-						</button> 
-						<span class="adult_block">
-							<div>19세 이상만<br>구매 가능해요.</div>
+
+
+				<!-- wel_belt_banner -->
+				<div class="wel_belt_banner wel_cont">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#n"><img src="../../images/temp/@ctg_wel_banner.png" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#n"><img src="../../images/temp/@img_mus_belt_banner.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#n"><img src="../../images/wel_main/@img_belt_banner.jpg" alt=""></a>
+						</div>
+						</div>
+					</div>
+					<div class="swiper-pagination out_bottom"></div>
+				</div>
+				<hr class="divide_hr">
+				<!-- //wel_belt_banner -->
+
+
+					
+				<!-- 스티키 메뉴 -->
+				<article class="ctg_floating_line">
+					<div class="menu_nm"  data-role="btn-dialog" data-target="#popBottomHasBtnEx">
+						<h3>스터디 플래너 전체</h3>
+						<span class="menu_nm_icon"></span>
+					</div>
+					<ul class="ctg_floating_menues">
+						<!--체크 리스트 넘버링 Class:checked_status-->
+						<li class="arrow_li checked_status" data-role="btn-dialog" data-target="#popBottomBrand"><em>3</em>브랜드</li>
+						<li>할인</li>
+						<li>쿠폰</li>
+						<li>핫트랙스 배송</li>
+						<li>무료 배송</li>
+						<li>품절포함</li>
+					</ul>
+				</article>
+				<!-- //스티키 메뉴 -->
+
+				<!-- 스터디 플래너 -->
+				<section class="ctg_prod_wrap character_sc_chk"><!-- 22.05.16 class="character_sc_chk" 추가 -->
+					<!-- prod_list_info -->
+					<div class="prod_list_info">
+						<span class="prod_ea">10,264개의 상품</span>
+						<span class="right_side">
+							<div class="sort_nm" data-role="btn-dialog" data-target="#ClickCksClose">신상품순</div>
+							<div class="ctg_list_icon row_list">
+								<span class="hidden list_sort_txt">두줄보기</span>
+							</div>
 						</span>
-					</div> 
-					<div class="product_info">
-						<div class="company">dretec</div>
-						<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-						<div class="price_line">
-							<span class="discount_rate">15%</span>
-							<span class="final_price">9,234,000</span>
-							<span class="price_origin">9,200,000</span>
-						</div>
-						<div class="badge_line">
-							<span class="badge rounded badge_primary_evt">쿠폰</span>
-							<span class="badge rounded badge_default_evt">사은품</span>
-							<span class="badge rounded badge_default_evt">무료배송</span>
-						</div>
 					</div>
-				</li>
-				<!-- //19 세 상품 -->
+					<!-- //prod_list_info -->
 
-				<!-- prod_item : 대체 상품 -->
-				<li class="prod_item sold_out replace_prod"><!-- 품절 : class="sold_out" / 대체 상품 : class="replace_prod" -->
-					<div class="product_pic">
-						<span class="show_replace">
-							<div>아쉽지만!<br>품절이예요</div>
-							<button type="button" class="replace_prod_btn">대체상품</button>
-						</span>
-						<!--
-							<button class="evt_good_count">
-								<div class="icon"></div>
-								<div class="txt">80</div>
-							</button>
-						-->
-						<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_now11.jpg" class="bd_img" alt=""></a>
-					</div>
-					<div class="product_info">
-						<div class="company">dretec</div>
-						<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-						<div class="price_line">
-							<span class="discount_rate">15%</span>
-							<span class="final_price">9,234,000</span>
-							<span class="price_origin">9,200,000</span>
-						</div>
-						<div class="badge_line">
-							<span class="badge rounded badge_primary_evt">쿠폰</span>
-							<span class="badge rounded badge_default_evt">사은품</span>
-							<span class="badge rounded badge_default_evt">무료배송</span>
-						</div>
-					</div>
 
-					<!-- 대체 상품 컨텐츠 : replace_prod_swap -->
-					<article class="replace_prod_swap">
-						<h4 class="tit">
-							<em class="txt">하필 딱! 품절이지만 괜찮아요</em>
-							<em class="replace_icon"></em>
-						</h4>
-						<div class="sub_title">찾으시는 상품과 비슷한 상품이 여기 있어요!</div>
-						<!-- swiper -->
-						<div class="swiper mySwiper">
-							<ul class="swiper-wrapper prod-wrapper type_sm">
-								<!-- li.prod_item 반복 -->
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<button class="evt_good_count">
-											<div class="icon"></div>
-											<div class="txt">80</div>
-										</button>
-										<a href="#"><img src="../../images/temp/@img_rank11.jpg" class="bd_img" alt=""></a>
-									</div>
+					<!-- 다이나믹 메시지 --><!-- 22.05.16 추가 -->
+					<div class="deadline_character_area ht_cate_deadline">
+						<div class="deadline_bubble">
+							<div class="txt">
+								<span>모두가 찜하기<br>누르는중</span>
+							</div>
+						</div>
+					</div>
+					<!-- //다이나믹 메시지 -->
+
+
+					<!-- 상품 리스트 -->
+					<ul class="prod-wrapper evt_products row_dir"><!-- 2단 class="row_dir" -->
+						<!-- prod_item 반복 -->
+						<li class="prod_item">
+							<!-- product_pic -->
+							<div class="product_pic">
+								<button class="evt_good_count">
+									<div class="icon"></div>
+									<div class="txt">80</div>
+								</button>
+								<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
+							</div>
+							<!-- //product_pic -->
+
+							<!-- product_info -->
+							<div class="product_info">
+								<a href="javascript:alert('제품상세');">
 									<div class="company">dretec</div>
 									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
 									<div class="price_line">
@@ -478,259 +400,615 @@ $(function(){
 										<span class="final_price">9,234,000</span>
 										<span class="price_origin">9,200,000</span>
 									</div>
-								</li>
-								<!-- //li.prod_item 반복 -->
+									<div class="badge_line">
+										<span class="badge rounded badge_primary_evt">쿠폰</span>
+										<span class="badge rounded badge_default_evt">사은품</span>
+										<span class="badge rounded badge_default_evt">무료배송</span>
+									</div>
+								</a>
+							</div>
+							<!-- //product_info -->
+						</li>
+						<!-- //prod_item 반복 -->
 
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<button class="evt_good_count">
-											<div class="icon"></div>
-											<!-- <div class="txt">80</div> -->
-										</button>
-										<a href="#"><img src="../../images/temp/@img_now11.jpg" class="bd_img" alt=""></a>
-									</div>
-									<div class="company">dretec</div>
-									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">9,234,000</span>
-										<span class="price_origin">9,200,000</span>
-									</div>
-								</li>
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<img src="../../images/temp/@img_wel_hero_banner04.jpg" class="bd_img">
-									</div>
-									<div class="company">dretec</div>
-									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">9,234,000</span>
-										<span class="price_origin">9,200,000</span>
-									</div>
-								</li>
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<a href="#"><img src="../../images/temp/@img_now11.jpg" class="bd_img" alt=""></a>
-									</div>
-									<div class="company">dretec</div>
-									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">9,234,000</span>
-										<span class="price_origin">9,200,000</span>
-									</div>
-								</li>
-								<li class="swiper-slide prod_item">
-									<div class="product_pic">
-										<a href="#"><img src="../../images/temp/@img_now11.jpg" class="bd_img" alt=""></a>
-									</div>
-									<div class="company">dretec</div>
-									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-									<div class="price_line">
-										<span class="discount_rate">15%</span>
-										<span class="final_price">9,234,000</span>
-										<span class="price_origin">9,200,000</span>
-									</div>
-								</li>
-							</ul>
-							<!-- //swiper -->
-						</div>
-						<!--닫기 버튼-->	
-						<button type="button" class="close_swap"></button>	
-					</article>
-					<!-- //대체 상품 컨텐츠 : replace_prod_swap -->
-				</li>
-				<!-- //prod_item : 대체 상품 -->
 
-				<!-- prod_item : 대체 상품 (품절) -->
-				<li class="prod_item sold_out replace_prod"><!-- 품절 : class="sold_out" -->
-					<div class="product_pic">
-						<span class="show_replace">
-							<div>아쉽지만!<br>품절이예요</div>
-							<!-- <button type="button" class="replace_prod_btn">대체상품</button> -->
-						</span>
-						<!--
-						<button class="evt_good_count">
-							<div class="icon"></div>
-							<div class="txt">80</div>
-						</button> 
-						-->
-						<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_wel_hero_banner04.jpg" class="bd_img" alt=""></a>
-					</div>
-					<div class="product_info">
-						<div class="company">dretec</div>
-						<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-						<div class="price_line">
-							<span class="discount_rate">15%</span>
-							<!--할인 적용 없는 경우 no_discount Class추가-->
-							<!-- <span class="final_price">9,234,000</span> -->
-							<span class="price_origin no_discount">9,200,000</span>
-						</div>
-						<div class="badge_line">
-							<span class="badge rounded badge_primary_evt">쿠폰</span>
-							<span class="badge rounded badge_default_evt">사은품</span>
-							<span class="badge rounded badge_default_evt">무료배송</span>
-						</div>
-					</div>
-				</li>		
-				<!-- //prod_item : 대체 상품 (품절) -->
+						<!-- 19 세 상품 -->
+						<li class="prod_item"><!-- 22.05.11 성인 class 삭제 -->
+							<!-- product_pic -->
+							<div class="product_pic">
+								<a href="javascript:alert('19세');"><img src="../../images/guide/img_19.jpg" class="bd_img" alt=""></a><!-- 22.05.11 수정 -->
+							</div>
+							<!-- //product_pic -->
 
-				<!-- 상품배너 : 16개(8줄) 마다 노출 : 만약 li 안으로 들어가야 할경우
-				<li class="prod_resp">
-					<div class="prod_solo_banner">
+							<!-- product_info -->
+							<div class="product_info">
+								<a href="javascript:alert('19세');">
+									<div class="company">dretec</div>
+									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">9,234,000</span>
+										<span class="price_origin">9,200,000</span>
+									</div>
+									<div class="badge_line">
+										<span class="badge rounded badge_primary_evt">쿠폰</span>
+										<span class="badge rounded badge_default_evt">사은품</span>
+										<span class="badge rounded badge_default_evt">무료배송</span>
+									</div>
+								</a>
+							</div>
+							<!-- //product_info -->
+						</li>
+						<!-- //19 세 상품 -->
+
+
+						<!-- prod_item : 대체 상품 -->
+						<li class="prod_item sold_out replace_prod"><!-- 품절 : class="sold_out" / 대체 상품 : class="replace_prod" -->
+							<!-- product_pic -->
+							<div class="product_pic">
+								<span class="show_replace">
+									<div>아쉽지만!<br>품절이예요</div>
+									<a href="javascript:alert('품절 제품상세');"><em class="hidden">제품상세</em></a><!-- 22.05.11 추가 -->
+									<button type="button" class="replace_prod_btn">대체상품</button>
+								</span>
+								<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod02.jpg" class="bd_img" alt=""></a>
+							</div>
+							<!-- //product_pic -->
+
+							<!-- product_info -->
+							<div class="product_info">
+								<a href="javascript:alert('품절 제품상세');">
+									<div class="company">dretec</div>
+									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">9,234,000</span>
+										<span class="price_origin">9,200,000</span>
+									</div>
+									<div class="badge_line">
+										<span class="badge rounded badge_primary_evt">쿠폰</span>
+										<span class="badge rounded badge_default_evt">사은품</span>
+										<span class="badge rounded badge_default_evt">무료배송</span>
+									</div>
+								</a>
+							</div>
+							<!-- //product_info -->
+
+							<!-- 대체 상품 컨텐츠 : replace_prod_swap -->
+							<article class="replace_prod_swap">
+								<h4 class="tit">
+									<em class="txt">하필 딱! 품절이지만 괜찮아요</em>
+									<em class="replace_icon"></em>
+								</h4>
+								<div class="sub_title">찾으시는 상품과 비슷한 상품이 여기 있어요!</div>
+
+								<!-- swiper -->
+								<div class="swiper mySwiper">
+									<ul class="swiper-wrapper prod-wrapper type_sm">
+										<!-- li.prod_item 반복 -->
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+										<!-- //li.prod_item 반복 -->
+
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod02.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod03.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod04.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod05.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<!-- //swiper -->
+								</div>
+								<!--닫기 버튼-->	
+								<button type="button" class="close_swap"></button>	
+							</article>
+							<!-- //대체 상품 컨텐츠 : replace_prod_swap -->
+						</li>
+						<!-- //prod_item : 대체 상품 -->
+
+
+						<!-- prod_item : 대체 상품 (품절) -->
+						<li class="prod_item sold_out replace_prod"><!-- 품절 : class="sold_out" -->
+							<!-- product_pic -->
+							<div class="product_pic">
+								<span class="show_replace">
+									<div>아쉽지만!<br>품절이예요</div>
+									<a href="javascript:alert('품절 제품상세');"><em class="hidden">제품상세</em></a><!-- 22.05.11 추가 -->
+									<!-- <button type="button" class="replace_prod_btn">대체상품</button> -->
+								</span>
+								<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod03.jpg" class="bd_img" alt=""></a>
+							</div>
+							<!-- product_pic -->
+
+							<!-- product_info -->
+							<div class="product_info">
+								<a href="javascript:alert('품절 제품상세');">
+									<div class="company">dretec</div>
+									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">9,234,000</span>
+										<span class="price_origin">9,200,000</span>
+									</div>
+									<div class="badge_line">
+										<span class="badge rounded badge_primary_evt">쿠폰</span>
+										<span class="badge rounded badge_default_evt">사은품</span>
+										<span class="badge rounded badge_default_evt">무료배송</span>
+									</div>
+								</a>
+							</div>
+							<!-- //product_info -->
+						</li>		
+						<!-- //prod_item : 대체 상품 (품절) -->
+					</ul>
+					<!-- //상품 리스트-->
+					
+					<!-- solo_banner -->
+					<div class="solo_banner">
 						<a href="#n"><img src="../../images/temp/@img_mus_belt_banner03.jpg" class="bd_img" alt="" ></a>
 					</div>
-				</li>
-				//상품배너 : 16개(8줄) 마다 노출 -->
-			</ul>
-			<!-- //상품 리스트-->
+					<!-- //solo_banner -->
 
-			<!-- solo_banner -->
-			<div class="solo_banner">
-				<a href="#n"><img src="../../images/temp/@img_mus_belt_banner03.jpg" class="bd_img" alt="" ></a>
-			</div>
-			<!-- //solo_banner -->
-		</section>	
-		<!-- //스터디 플래너 -->
+					<!-- 상품 리스트 -->
+					<ul class="prod-wrapper evt_products row_dir"><!-- 2단 class="row_dir" -->
+						<!-- prod_item 반복 -->
+						<li class="prod_item">
+							<!-- product_pic -->
+							<div class="product_pic">
+								<button class="evt_good_count">
+									<div class="icon"></div>
+									<div class="txt">80</div>
+								</button>
+								<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
+							</div>
+							<!-- //product_pic -->
 
-        <!-- 더보기 버튼 more_btn에 hidden Class  추가하면 버튼 안보임 -->
-        <div class="btn_more_div">
-            <button class="more_btn">
-                <span class="txt">더보기</span>
-                <span class="btn_more_icon"></span>
-            </button>
-        </div>
-        <!-- //더보기 -->
-		<!--[2022-02-22] hr 추가-->
-		<hr class="divide_hr">
+							<!-- product_info -->
+							<div class="product_info">
+								<a href="javascript:alert('제품상세');">
+									<div class="company">dretec</div>
+									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">9,234,000</span>
+										<span class="price_origin">9,200,000</span>
+									</div>
+									<div class="badge_line">
+										<span class="badge rounded badge_primary_evt">쿠폰</span>
+										<span class="badge rounded badge_default_evt">사은품</span>
+										<span class="badge rounded badge_default_evt">무료배송</span>
+									</div>
+								</a>
+							</div>
+							<!-- //product_info -->
+						</li>
+						<!-- //prod_item 반복 -->
 
-		<!-- 320 * 190 배너 -->
-		<section class="evt_slider_wrap evt">
-			<div class="swiper mySwiper">
-				<ul class="swiper-wrapper  evt_slider">
-					<li class="swiper-slide evt_item">
-						<div class="img_wrap">
-							<img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+
+						<!-- 19 세 상품 -->
+						<li class="prod_item"><!-- 22.05.11 성인 class 삭제 -->
+							<!-- product_pic -->
+							<div class="product_pic">
+								<a href="javascript:alert('19세');"><img src="../../images/guide/img_19.jpg" class="bd_img" alt=""></a><!-- 22.05.11 수정 -->
+							</div>
+							<!-- //product_pic -->
+
+							<!-- product_info -->
+							<div class="product_info">
+								<a href="javascript:alert('19세');">
+									<div class="company">dretec</div>
+									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">9,234,000</span>
+										<span class="price_origin">9,200,000</span>
+									</div>
+									<div class="badge_line">
+										<span class="badge rounded badge_primary_evt">쿠폰</span>
+										<span class="badge rounded badge_default_evt">사은품</span>
+										<span class="badge rounded badge_default_evt">무료배송</span>
+									</div>
+								</a>
+							</div>
+							<!-- //product_info -->
+						</li>
+						<!-- //19 세 상품 -->
+
+
+						<!-- prod_item : 대체 상품 -->
+						<li class="prod_item sold_out replace_prod"><!-- 품절 : class="sold_out" / 대체 상품 : class="replace_prod" -->
+							<!-- product_pic -->
+							<div class="product_pic">
+								<span class="show_replace">
+									<div>아쉽지만!<br>품절이예요</div>
+									<a href="javascript:alert('품절 제품상세');"><em class="hidden">제품상세</em></a><!-- 22.05.11 추가 -->
+									<button type="button" class="replace_prod_btn">대체상품</button>
+								</span>
+								<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod02.jpg" class="bd_img" alt=""></a>
+							</div>
+							<!-- //product_pic -->
+
+							<!-- product_info -->
+							<div class="product_info">
+								<a href="javascript:alert('품절 제품상세');">
+									<div class="company">dretec</div>
+									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">9,234,000</span>
+										<span class="price_origin">9,200,000</span>
+									</div>
+									<div class="badge_line">
+										<span class="badge rounded badge_primary_evt">쿠폰</span>
+										<span class="badge rounded badge_default_evt">사은품</span>
+										<span class="badge rounded badge_default_evt">무료배송</span>
+									</div>
+								</a>
+							</div>
+							<!-- //product_info -->
+
+							<!-- 대체 상품 컨텐츠 : replace_prod_swap -->
+							<article class="replace_prod_swap">
+								<h4 class="tit">
+									<em class="txt">하필 딱! 품절이지만 괜찮아요</em>
+									<em class="replace_icon"></em>
+								</h4>
+								<div class="sub_title">찾으시는 상품과 비슷한 상품이 여기 있어요!</div>
+
+								<!-- swiper -->
+								<div class="swiper mySwiper">
+									<ul class="swiper-wrapper prod-wrapper type_sm">
+										<!-- li.prod_item 반복 -->
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+										<!-- //li.prod_item 반복 -->
+
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod02.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod03.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod04.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+										<li class="swiper-slide prod_item">
+											<div class="product_pic">
+												<button class="evt_good_count">
+													<div class="icon"></div>
+													<div class="txt">80</div>
+												</button>
+												<a href="javascript:alert('대체상품 상세');"><img src="../../images/temp/@img_prod05.jpg" class="bd_img" alt=""></a>
+											</div>
+											<a href="javascript:alert('대체상품 상세');">
+												<div class="company">dretec</div>
+												<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+												<div class="price_line">
+													<span class="discount_rate">15%</span>
+													<span class="final_price">9,234,000</span>
+													<span class="price_origin">9,200,000</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<!-- //swiper -->
+								</div>
+								<!--닫기 버튼-->	
+								<button type="button" class="close_swap"></button>	
+							</article>
+							<!-- //대체 상품 컨텐츠 : replace_prod_swap -->
+						</li>
+						<!-- //prod_item : 대체 상품 -->
+
+
+						<!-- prod_item : 대체 상품 (품절) -->
+						<li class="prod_item sold_out replace_prod"><!-- 품절 : class="sold_out" -->
+							<!-- product_pic -->
+							<div class="product_pic">
+								<span class="show_replace">
+									<div>아쉽지만!<br>품절이예요</div>
+									<a href="javascript:alert('품절 제품상세');"><em class="hidden">제품상세</em></a><!-- 22.05.11 추가 -->
+									<!-- <button type="button" class="replace_prod_btn">대체상품</button> -->
+								</span>
+								<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod03.jpg" class="bd_img" alt=""></a>
+							</div>
+							<!-- product_pic -->
+
+							<!-- product_info -->
+							<div class="product_info">
+								<a href="javascript:alert('품절 제품상세');">
+									<div class="company">dretec</div>
+									<div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+									<div class="price_line">
+										<span class="discount_rate">15%</span>
+										<span class="final_price">9,234,000</span>
+										<span class="price_origin">9,200,000</span>
+									</div>
+									<div class="badge_line">
+										<span class="badge rounded badge_primary_evt">쿠폰</span>
+										<span class="badge rounded badge_default_evt">사은품</span>
+										<span class="badge rounded badge_default_evt">무료배송</span>
+									</div>
+								</a>
+							</div>
+							<!-- //product_info -->
+						</li>		
+						<!-- //prod_item : 대체 상품 (품절) -->
+					</ul>
+					<!-- //상품 리스트-->
+				</section>	
+				<!-- //스터디 플래너 -->
+
+				<!-- 더보기 버튼 more_btn에 hidden Class  추가하면 버튼 안보임 -->
+				<div class="btn_more_div">
+					<button class="more_btn">
+						<span class="txt">더보기</span>
+						<span class="btn_more_icon"></span>
+					</button>
+				</div>
+				<!-- //더보기 -->
+				<hr class="divide_hr">
+
+
+
+				<!-- 320 * 190 배너 --><!-- 22.05.17 디자인 UI 변경 -->
+				<section class="evt_slider_wrap">
+					<div class="swiper brandSwiper">
+						<ul class="swiper-wrapper evt_slider">
+							<li class="swiper-slide evt_item">
+								<div class="discount_icon">~25%</div>
+								<div class="img_wrap">
+									<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod_resp03.jpg" class="bd_img" alt=""></a>
+								</div>
+								<div class="item_info">
+									<a href="javascript:alert('제품상세');">
+										<span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
+										<span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+									</a>
+								</div>
+							</li>
+							<li class="swiper-slide evt_item">
+								<div class="discount_icon">~25%</div>
+								<div class="img_wrap">
+									<img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+								</div>
+								<div class="item_info">
+									<span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
+									<span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+								</div>
+							</li>
+							<li class="swiper-slide evt_item">
+								<div class="img_wrap">
+									<img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+								</div>
+								<div class="item_info">
+									<span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
+									<span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+								</div>
+							</li>
+							<li class="swiper-slide evt_item">
+								<div class="img_wrap">
+									<img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+								</div>
+								<div class="item_info">
+									<span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
+									<span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+								</div>
+							</li>
+							<li class="swiper-slide evt_item more_items">
+								<a href="#none">
+									<div class="more_txt">기획전<br>더보기</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- //320 * 190 배너 -->
+
+
+
+				<!-- mc_cont : 광고배너 -->
+				<div class="mc_cont wel_belt02">
+					<h2 class="hidden">광고배너</h2>
+					<!-- wel_belt_banner -->
+					<div class="wel_belt_banner">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#n"><img src="../../images/temp/@img_belt_banner02.jpg" alt="모바일 첫 구매 3,000원 쿠폰"></a>
+								</div>
+							</div>
 						</div>
-						<div class="item_info">
-							<span class="discount">33%</span>
-							<span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
-							<span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
-						</div>
-					</li>
-					<li class="swiper-slide evt_item">
-						<div class="img_wrap">
-							<img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
-						</div>
-						<div class="item_info">
-							<span class="discount">33%</span>
-							<span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
-							<span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
-						</div>
-					</li>
-					<li class="swiper-slide evt_item">
-						<div class="img_wrap">
-							<img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
-						</div>
-						<div class="item_info">
-							<span class="discount">33%</span>
-							<span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
-							<span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
-						</div>
-					</li>
-					<li class="swiper-slide evt_item">
-						<div class="img_wrap">
-							<img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
-						</div>
-						<div class="item_info">
-							<span class="discount">33%</span>
-							<span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
-							<span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
-						</div>
-					</li>
-					<li class="swiper-slide evt_item more_items">
-						<a href="#none">
-							<div class="more_txt">기획전<br>더보기</div>
-						</a>
-					</li>
-				</ul>
-			</div>
+						<div class="swiper-pagination out_bottom"></div>
+					</div>
+					<!-- //wel_belt_banner -->
+				</div>
+				<!-- //mc_cont : 광고배너 -->
+			</section>
+			<!-- //cont_wrap -->
+
 		</section>
-		<!-- //320 * 190 배너 -->
-
-
-        <!-- mc_cont : 광고배너 --><!-- 22.02 : 코너메뉴 배너 통일 -->
-        <div class="mc_cont wel_belt02">
-            <h2 class="hidden">광고배너</h2>
-            <!-- wel_belt_banner -->
-            <div class="wel_belt_banner">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="#n"><img src="../../images/temp/@img_belt_banner02.jpg" alt="모바일 첫 구매 3,000원 쿠폰"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination out_bottom"></div>
-            </div>
-            <!-- //wel_belt_banner -->
-        </div>
-        <!-- //mc_cont : 광고배너 -->
-    </section>
-    <!-- //cont_wrap -->
+		<!-- //contents_wrap -->
+	</main>
+	<!-- //container_wrapper -->
 
 
     <!-- footer -->
     <footer class="footer_wrapper">
-        <div class="notice_wrap">
-            <span class="notice_text">공지사항</span>
-            <a href="#" class="notice_link">교보문고 개인정보 처리방침 개정안내</a>
-        </div>
-
-        <div class="footer_body">
-            <div class="logo_box">
-                <a href="#" class="logo_link">
-                    <img src="../../images/guide/ico_logo.svg" alt="핫트랙스">
-                </a>
-            </div>
-
-            <div class="footer_info_box">
-                <div class="info_text_multi">
-                    <span class="info_text">대표이사 : 김상훈</span>
-                    <span class="gap">|</span>
-                    <address class="info_text">경기도 파주시 회동길 78(출판단지내)</address>
-                </div>
-                <span class="info_text">사업자등록번호 : 102-81-29258</span>
-                <span class="info_text">개인정보보호책임자 : 김상훈</span>
-                <span class="info_text"><span class="text_inner">통신판매업신고번호 : 제 2012-경기파주-3911호</span><a href="#" class="btn_footer_link">사업자정보확인</a></span>
-            </div>
-
-            <div class="footer_menu_box">
-                <ul class="footer_menu_list">
-                    <li class="footer_menu_item"><a href="#" class="footer_menu_link">핫트합니다</a></li>
-                    <li class="footer_menu_item"><a href="#" class="footer_menu_link">공지사항</a></li>
-                    <li class="footer_menu_item privacy"><a href="#" class="footer_menu_link">개인정보처리방침</a></li>
-                    <li class="footer_menu_item"><a href="#" class="footer_menu_link">이용약관</a></li>
-                </ul>
-            </div>
-
-            <div class="footer_call_box"><span class="call_text">대표전화</span><span class="call_num"><a href="tel:16661112">1666-1112</a></span> <br><span class="call_text_sm">(평일 09:00~18:00 점심시간 12:00~13:00 )</span></div>
-
-            <div class="copyright_box">
-                <div class="copyright">@Hottracks Centre</div>
-                <div class="sns_share_box">
-                    <a href="#" class="btn_sns_share insta"><span class="hidden">instagram 공유</span></a>
-                    <a href="#" class="btn_sns_share fb"><span class="hidden">facebook 공유</span></a>
-                    <a href="#" class="btn_sns_share youtube"><span class="hidden">youtube 공유</span></a>
-                    <a href="#" class="btn_sns_share twt"><span class="hidden">twitter 공유</span></a>
-                    <a href="#" class="btn_sns_share blog"><span class="hidden">blog 공유</span></a>
-                    
-                </div>
-            </div>
-        </div>
+        <div style="height:500px;background-color:#fff;;border-top:1px solid #d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:500px;text-align:center;">Footer</div>
     </footer>
     <!-- //footer -->
+
+
+    <!-- docker_wrapper -->
+    <section class="docker_wrapper">
+        <!-- 탑버튼 -->
+        <div class="floating_wrapper">
+            <a href="#top" class="btn_go_top"><span class="hidden">최상위 화면으로</span></a>
+        </div>
+        <!-- //탑버튼 -->
+
+        <!-- docker_list -->
+        <ul class="docker_list">
+            <li class="docker_item"><a href="#" class="btn_docker_home"><span class="hidden">홈</span></a></li>
+            <li class="docker_item"><a href="#" class="btn_docker_search"><span class="hidden">검색</span></a></li>
+            <li class="docker_item my"><!-- 로그인 시 class="login" 추가 -->
+                <a href="#" class="btn_docker_my">
+                    <span class="img_box">
+                        <img src="http://image.kyobobook.co.kr/ink/html/ux/next/mok/assets/common/temporary/temp_docker_login_mok.png" alt="마이룸 임시이미지" />
+                    </span>
+                    <span class="hidden">마이룸</span>
+                </a>
+            </li>
+            <li class="docker_item"><a href="#" class="btn_docker_history"><span class="hidden">최근본상품</span></a></li>
+            <li class="docker_item"><a href="../guide/HTR-M-COM-CAT-001.html" class="btn_docker_menu"><span class="hidden">전체메뉴</span></a></li>
+        </ul>
+        <!-- //docker_list -->
+    </section>
+    <!-- //docker_wrapper -->
 </div>
 <!-- //wrapper -->
 
