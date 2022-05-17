@@ -1,324 +1,307 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="utf-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" >
-    <meta name="Author" content="SEO 기획 정의 내용 반영" >
-    <meta name="keywords" content="SEO 기획 정의 내용 반영" >
-    <meta name="description" content="SEO 기획 정의 내용 반영" >
-    <meta name="subject" content="SEO 기획 정의 내용 반영" >
-    <!-- DESC : 성인컨텐츠인 경우 추가하는 meta tag -->
-    <!--<meta name="rating" content="adult" >-->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+<meta name="msapplication-TileColor" content="#da212">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/guide/sns.jpg">
+<link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
+<title>알림 : 핫트랙스</title>
 
-    <meta name="Robots" content="noindex, nofollow" >
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta property="og:title" content="핫트랙스">
-    <meta property="og:description" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="../../images/guide/sns.jpg">
-    <link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
-    <title>웹컴메인 공통 - 알림내역</title>
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/swiper-7.2.0/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css" />
+<!-- // Plug-In css -->
 
-    <!-- Plug-In css -->
-    <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" >
-    <link rel="stylesheet" href="../../vendors/lib/swiper-7.2.0/css/swiper-bundle.min.css" >
-    <link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css" >
-    <!-- // Plug-In css -->
+<!-- font css -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
+<!-- // font css -->
 
-    <!-- font css -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" >
-    <!-- // font css -->
-
-    <!-- ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
-    <link rel="stylesheet" href="../../css/ht_css_mok.css">
-    <link rel="stylesheet" href="../../css/ht_template_mok.css">
-    <!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+<!-- ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+<link rel="stylesheet" href="../../css/ht_css_mok.css">
+<link rel="stylesheet" href="../../css/ht_template_mok.css">
+<!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
 
 
-    <!-- Plug-In javascript -->
-    <script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-    <script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
-    <script src="../../vendors/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-    <script src="../../vendors/lib/swiper-7.2.0/js/swiper-bundle.min.js"></script>
-    <script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
-    <script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
-    <script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
-    <script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
-    <script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
-    <script src="../../vendors/lib/vanillajs-scrollspy/vanillajs-scrollspy.min.js"></script>
-    <!-- // Plug-In javascript -->
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script src="../../vendors/lib/swiper-7.2.0/js/swiper-bundle.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/vanillajs-scrollspy/vanillajs-scrollspy.min.js"></script>
+<!-- // Plug-In javascript -->
 
-
-    <!-- ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
-    <script src="../../js/front_bak.js"></script>
-    <script src="../../js/mok.ui.js"></script>
-    <script src="../../js/ht_lib.js"></script>
-    <script src="../../js/ht_template.js"></script>
-    <script src="../../js/ht_evt_mok.js"></script>
-    <!-- //ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
-        
+<!-- ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
+<script src="../../js/front_bak.js"></script>
+<script src="../../js/mok.ui.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
 </head>
 
 <body>
-    <!-- SkipNav -->
-    <div class="skip_nav_wrap">
-        <a href="#headerWrapper">메뉴 바로가기</a>
-        <a href="#containerWrapper">본문 바로가기</a>
+<!-- SkipNav -->
+<div class="skip_nav_wrap">
+    <a href="#headerWrapper">메뉴 바로가기</a>
+    <a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //SkipNav -->
+
+<!-- wrapper -->
+<div class="ht_ wrapper">
+    <!-- header -->
+    <header id="headerWrapper" class="ht_ header_wrapper">
+        <div class="header_left">
+            <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
+        </div>
+        <div class="header_right">
+            <a href="#" class="btn_header_setting"><span class="hidden">설정</span></a>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div class="alm_list_header mc_cont cus_cont">
+        <h2 class="mc_tit02">알림</h2>
+        <p class="alm_list_sub">최근 30일간 알림 내역이 표시됩니다.</p>
     </div>
-    <!-- //SkipNav -->
 
-    <!-- wrapper -->
-    <!-- ht_ Hottracks ht_ 클래스 추가 -->
-    <!-- DESC : footer 없는 경우 [ no-footer ] 클래스 추가 -->
-    <!-- DESC : 상품상세와 같이 하단 구매 영역 있는 경우 클래스 .contents_detail_view 추가 -->
-    <div class="ht_ wrapper contents_detail_view wel_alm_wrapper" style="padding-bottom:50px;">
-        <!--DESC : 하단 라인있는경우, [ has_line ] class 추가 / 버튼 컬러 흰색인경우, [ type_white ] class 추가 -->
-        <header id="headerWrapper" class="ht_ header_wrapper">
-            <div class="header_left">
-                <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
-            </div>
-            <div class="header_center">
-                <div class="page_title prod_detail"></div>
-            </div>
-            <div class="header_right">
-                <!-- DESC : 상품정보 부터 검색버튼 비활성화 -->
-                <a href="#" class="btn_header_setting"><span class="hidden">설정</span></a>
-            </div>
-        </header>
-        <!-- // 헤더 -->
-        
-        <div class="alm_list_header mc_cont cus_cont">
-            <h2 class="mc_tit02">알림</h2>
-            <p class="alm_list_sub">최근 30일간 알림 내역이 표시됩니다.</p>
-        </div>
-
-        <ul class="wel_ad_banner">
-            <li><a href="#n"><img src="../../images/temp/@img_wel_pop_banner.jpg" alt="다꾸러들을 위한 꾸밍 앱 출시 기념 이벤트"></a></li>
-        </ul>
-        <div class=" mc_cont cus_cont">
-        <!-- 컨텐츠 -->
-            <!-- CASE1 : 알림 리스트 노출 -->
-            <section class="alm_lst_wrap">
-                <article class="alm_list_area_mn">
-                    <div class="alm_menu">
-                        <div class="alm_menu_rd">
-                            <div class="alm_sort">
-                                <div class="form_toggle">
-                                    <input id="chkToggle01" type="checkbox">
-                                    <label for="chkToggle01"><span class="hidden">MY 알림 토글</span></label>
-                                </div>
-                                <div class="desc_sort_alm">
-                                    <p><span>#김미미</span>님 알림</p>
-                                </div>
+    <ul class="wel_ad_banner">
+        <li><a href="#n"><img src="../../images/temp/@img_wel_pop_banner.jpg" alt="다꾸러들을 위한 꾸밍 앱 출시 기념 이벤트"></a></li>
+    </ul>
+    <div class=" mc_cont cus_cont">
+    <!-- 컨텐츠 -->
+        <!-- CASE1 : 알림 리스트 노출 -->
+        <section class="alm_lst_wrap">
+            <article class="alm_list_area_mn">
+                <div class="alm_menu">
+                    <div class="alm_menu_rd">
+                        <div class="alm_sort">
+                            <div class="form_toggle">
+                                <input id="chkToggle01" type="checkbox">
+                                <label for="chkToggle01"><span class="hidden">MY 알림 토글</span></label>
                             </div>
-                            <button type="button" class="btn_delete">
-                                <span class="ico_delete"></span>
-                                <span class="text">삭제</span>
-                                <span class="text_cancel">취소</span>
-                            </button>
-                        </div>
-                        <div class="alm_menu_btn_del_wrap">
-                            <div class="alm_menu_btn_del_area btn_wrap">
-                                <button type="button" class="btn_sm btn_line_gray" onclick ="toastBtn1();"><span class="text">선택삭제</span></button>
-                                <button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popAlert01"><span class="text">전체삭제</span></button>
-                            </div>
-                            <hr class="divide_hr">
-                        </div>
-                    </div>
-
-                    
-                    <div class="alm_list_area">
-                        <ul class="alm_list">
-                            <li class="alm_ad">
-                                <span class="form_chk">
-                                    <input id="chk_alarm01" type="checkbox">
-                                    <label for="chk_alarm01">
-                                    </label>
-                                </span>
-                                <a href="#">
-                                    <div class="alm_content_inner">
-                                        <p class="alm_desc">
-                                            (광고) 2022년 설레이는 열 두 달의 기억, 아르디움
-                                            다이어리 선착순 1+1
-                                        </p>
-                                        <p class="alm_date">
-                                            2021.12.07
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="alm_ad">
-                                <span class="form_chk">
-                                    <input id="chk_alarm02" type="checkbox">
-                                    <label for="chk_alarm02">
-                                    </label>
-                                </span>
-                                <a href="#">
-                                    <div class="alm_content_inner">
-                                        <p class="alm_desc">
-                                            (광고) 깜짝 ★ 알림 동의한 고객님께만 드리는
-                                            첫번째 혜택! 500포인트 받아가세요!  
-                                        </p>
-                                        <p class="alm_date">
-                                            2021.12.07
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="alm_my">
-                                <span class="form_chk">
-                                    <input id="chk_alarm03" type="checkbox">
-                                    <label for="chk_alarm03">
-                                        
-                                    </label>
-                                </span>
-                                <a href="#">
-                                    <div class="alm_content_inner">
-                                        <p class="alm_desc">
-                                            Kep1er(케플러) - FIRST IMPACT 발매기념
-                                            Q팬사인회 당첨자 발표 결과를 확인해보세요!
-                                        </p>
-                                        <p class="alm_date">
-                                            2021.12.07
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="alm_ad">
-                                <span class="form_chk">
-                                    <input id="chk_alarm04" type="checkbox">
-                                    <label for="chk_alarm04">
-                                        
-                                    </label>
-                                </span>
-                                <a href="#">
-                                    <div class="alm_content_inner">
-                                        <p class="alm_desc">
-                                            1월 10일 저녁 6시 30분 핫트랙스 LIVE 붐펫
-                                            초특가 할인! 라이브 중에만 받을 수 있는 역대급
-                                            기회를 놓치지 마세요! 
-                                        </p>
-                                        <p class="alm_date">
-                                            2021.12.07
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="alm_my">
-                                <span class="form_chk">
-                                    <input id="chk_alarm05" type="checkbox">
-                                    <label for="chk_alarm05">
-                                    </label>
-                                </span>
-                                <a href="#">
-                                    <div class="alm_content_inner">
-                                        <p class="alm_desc">
-                                            핫트랙스 LIVE 붐펫 초특가 할인! 라이브
-                                            방송이 잠시 후 오후 6시 30분에 시작됩니다.
-                                        </p>
-                                        <p class="alm_date">
-                                            2021.12.07
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="alm_my">
-                                <span class="form_chk">
-                                    <input id="chk_alarm06" type="checkbox">
-                                    <label for="chk_alarm06">
-                                        
-                                    </label>
-                                </span>
-                                <a href="#">
-                                    <div class="alm_content_inner">
-                                        <p class="alm_desc">
-                                            예약 구매하신 PENTAGON(펜타곤)-IN:VITE U
-                                            [미니 12집] [Nouveau VER] 발매일 입니다. 주문
-                                            시점에 따라 배송 일정에 차이가 있을 수 있습니다.
-                                        </p>
-                                        <p class="alm_date">
-                                            2021.12.07
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="alm_desc_check">
-                            <p>
-                                최근 30일 동안 받은 알림을 모두 확인했습니다.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <!-- //CASE1 : 알림 리스트 노출 -->
-
-            <!-- CASE2 : 알림 리스트 없음 -->
-            <section class="alm_lst_wrap">
-                <article class="alm_list_area_mn">
-                    <div class="alm_list_area active">
-                        <ul class="alm_list notice_ty">
-                            <li class="emp">
-                                 <p>알림 내역이 없습니다.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-            </section>
-            <!-- // CASE2 : 알림 리스트 없음 -->
-
-            <!-- CASE3 : 알림 설정 확인하기 -->
-            <section class="alm_lst_wrap">
-                <article class="alm_list_area_mn">
-                    <div class="alm_list_area active">
-                        <div class="alarm_setting_wrap">
-                            <p>
-                                알림 수신 설정을 확인해주세요! 더 많은<br>
-                                쿠폰, 상품 할인 혜택을 받으실 수 있습니다.
-                            </p>
-                            <div class="btn_alm_setting_wrap">
-                                <div class="btn_alm_setting_area btn_wrap auto">
-                                    <a aref="#" class="btn_sm btn_black"><span class="text">알림설정 확인하기</span></a>
-                                </div>
+                            <div class="desc_sort_alm">
+                                <p><span>#김미미</span>님 알림</p>
                             </div>
                         </div>
+                        <button type="button" class="btn_delete">
+                            <span class="ico_delete"></span>
+                            <span class="text">삭제</span>
+                            <span class="text_cancel">취소</span>
+                        </button>
                     </div>
-                </article>
-            </section>
-            <!-- // CASE3 : 알림 설정 확인하기  -->
-        <!-- // 컨텐츠 -->
-        </div>
-
-        <!-- 팝업 : 알림 전체삭제 확인 팝업 -->
-        <div id="popAlert01" class="dialog_wrap has_btn ui-dialog-content ui-widget-content dialog_wrap_wel">
-            <!-- dialog_header -->
-            <div class="dialog_header">
-                <div class="dialog_title">알림</div>
-            </div>
-            <!-- //dialog_header -->
-        
-            <!-- dialog_contents -->
-            <div class="dialog_contents">
-                <div class="evt_pop_content">
-                    알림을 전체삭제 하시겠습니까?
+                    <div class="alm_menu_btn_del_wrap">
+                        <div class="alm_menu_btn_del_area btn_wrap">
+                            <button type="button" class="btn_sm btn_line_gray" onclick ="toastBtn1();"><span class="text">선택삭제</span></button>
+                            <button type="button" class="btn_sm btn_black" data-role="btn-dialog" data-target="#popAlert01"><span class="text">전체삭제</span></button>
+                        </div>
+                        <hr class="divide_hr">
+                    </div>
                 </div>
-            </div>
-            <!-- //dialog_contents -->
-        
-            <!-- dialog_footer -->
-            <div class="dialog_footer">
-                <button type="button" class="btn_md btn_black" data-dialog-close=""><span class="text">취소</span></button>
-                <button type="button" class="btn_md btn_primary" data-dialog-close="" onclick ="toastBtn1();"><span class="text">확인</span></button>
-            </div>
-            <!-- //dialog_footer -->
-        </div>
-        <!-- //팝업 : 알림 전체삭제 확인 팝업 -->
-    <!-- //wrapper -->
+
+                
+                <div class="alm_list_area">
+                    <ul class="alm_list">
+                        <li class="alm_ad">
+                            <span class="form_chk">
+                                <input id="chk_alarm01" type="checkbox">
+                                <label for="chk_alarm01">
+                                </label>
+                            </span>
+                            <a href="#">
+                                <div class="alm_content_inner">
+                                    <p class="alm_desc">
+                                        (광고) 2022년 설레이는 열 두 달의 기억, 아르디움
+                                        다이어리 선착순 1+1
+                                    </p>
+                                    <p class="alm_date">
+                                        2021.12.07
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="alm_ad">
+                            <span class="form_chk">
+                                <input id="chk_alarm02" type="checkbox">
+                                <label for="chk_alarm02">
+                                </label>
+                            </span>
+                            <a href="#">
+                                <div class="alm_content_inner">
+                                    <p class="alm_desc">
+                                        (광고) 깜짝 ★ 알림 동의한 고객님께만 드리는
+                                        첫번째 혜택! 500포인트 받아가세요!  
+                                    </p>
+                                    <p class="alm_date">
+                                        2021.12.07
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="alm_my">
+                            <span class="form_chk">
+                                <input id="chk_alarm03" type="checkbox">
+                                <label for="chk_alarm03">
+                                    
+                                </label>
+                            </span>
+                            <a href="#">
+                                <div class="alm_content_inner">
+                                    <p class="alm_desc">
+                                        Kep1er(케플러) - FIRST IMPACT 발매기념
+                                        Q팬사인회 당첨자 발표 결과를 확인해보세요!
+                                    </p>
+                                    <p class="alm_date">
+                                        2021.12.07
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="alm_ad">
+                            <span class="form_chk">
+                                <input id="chk_alarm04" type="checkbox">
+                                <label for="chk_alarm04">
+                                    
+                                </label>
+                            </span>
+                            <a href="#">
+                                <div class="alm_content_inner">
+                                    <p class="alm_desc">
+                                        1월 10일 저녁 6시 30분 핫트랙스 LIVE 붐펫
+                                        초특가 할인! 라이브 중에만 받을 수 있는 역대급
+                                        기회를 놓치지 마세요! 
+                                    </p>
+                                    <p class="alm_date">
+                                        2021.12.07
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="alm_my">
+                            <span class="form_chk">
+                                <input id="chk_alarm05" type="checkbox">
+                                <label for="chk_alarm05">
+                                </label>
+                            </span>
+                            <a href="#">
+                                <div class="alm_content_inner">
+                                    <p class="alm_desc">
+                                        핫트랙스 LIVE 붐펫 초특가 할인! 라이브
+                                        방송이 잠시 후 오후 6시 30분에 시작됩니다.
+                                    </p>
+                                    <p class="alm_date">
+                                        2021.12.07
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="alm_my">
+                            <span class="form_chk">
+                                <input id="chk_alarm06" type="checkbox">
+                                <label for="chk_alarm06">
+                                    
+                                </label>
+                            </span>
+                            <a href="#">
+                                <div class="alm_content_inner">
+                                    <p class="alm_desc">
+                                        예약 구매하신 PENTAGON(펜타곤)-IN:VITE U
+                                        [미니 12집] [Nouveau VER] 발매일 입니다. 주문
+                                        시점에 따라 배송 일정에 차이가 있을 수 있습니다.
+                                    </p>
+                                    <p class="alm_date">
+                                        2021.12.07
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="alm_desc_check">
+                        <p>
+                            최근 30일 동안 받은 알림을 모두 확인했습니다.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- //CASE1 : 알림 리스트 노출 -->
+
+        <!-- CASE2 : 알림 리스트 없음 -->
+        <section class="alm_lst_wrap">
+            <article class="alm_list_area_mn">
+                <div class="alm_list_area active">
+                    <ul class="alm_list notice_ty">
+                        <li class="emp">
+                                <p>알림 내역이 없습니다.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <!-- // CASE2 : 알림 리스트 없음 -->
+
+        <!-- CASE3 : 알림 설정 확인하기 -->
+        <section class="alm_lst_wrap">
+            <article class="alm_list_area_mn">
+                <div class="alm_list_area active">
+                    <div class="alarm_setting_wrap">
+                        <p>
+                            알림 수신 설정을 확인해주세요! 더 많은<br>
+                            쿠폰, 상품 할인 혜택을 받으실 수 있습니다.
+                        </p>
+                        <div class="btn_alm_setting_wrap">
+                            <div class="btn_alm_setting_area btn_wrap auto">
+                                <a aref="#" class="btn_sm btn_black"><span class="text">알림설정 확인하기</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- // CASE3 : 알림 설정 확인하기  -->
+    <!-- // 컨텐츠 -->
     </div>
+
+</div>
+<!-- //wrapper -->
+
+
+<!-- 팝업 : 알림 전체삭제 확인 팝업 -->
+<div id="popAlert01" class="dialog_wrap has_btn ui-dialog-content ui-widget-content dialog_wrap_wel">
+    <!-- dialog_header -->
+    <div class="dialog_header">
+        <div class="dialog_title">알림</div>
+    </div>
+    <!-- //dialog_header -->
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents">
+        <div class="evt_pop_content">
+            알림을 전체삭제 하시겠습니까?
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_black" data-dialog-close=""><span class="text">취소</span></button>
+        <button type="button" class="btn_md btn_primary" data-dialog-close="" onclick ="toastBtn1();"><span class="text">확인</span></button>
+    </div>
+    <!-- //dialog_footer -->
+</div>
+<!-- //팝업 : 알림 전체삭제 확인 팝업 -->
 </body>
 
 <script>

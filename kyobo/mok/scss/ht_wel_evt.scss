@@ -282,13 +282,14 @@
 
 
 /***** 알림 페이지 ******/
+.btn_header_setting:after {
+    background-image:url(../images/main/ico_wel_setting.svg);
+}
 .wel_alm_wrapper {
     .dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
         border-radius:4px;
     }
-    .header_wrapper .btn_header_setting:after {
-        background-image:url(../images/main/ico_wel_setting.svg);
-    }
+
 }
 .alm_list_header {
     &.mc_cont {
@@ -644,7 +645,7 @@
 
 /***** 쿠폰/ 혜택 *****/
 .wel_marketing_top_area {
-    padding:60px 20px 40px 20px;
+    padding:60px 20px;
     background-color:#000;
     color:#fff;
     .title_wrap {
@@ -676,7 +677,6 @@
         margin-top:8px;
     }
     .cpon_subscription_wrap {
-        margin-top:24px;
         .cpon {
             position:relative;
             padding:20px;
@@ -749,7 +749,6 @@
         }
     }
     .join_btn_area {
-        margin-bottom:27px;
         text-align:center;
         .join_btn {
             padding:14px 40px;
@@ -803,12 +802,10 @@
 }
 //다양한 혜택
 .wel_benefits_area {
-    padding:20px;
+    padding:60px 20px;
     &.ty02 {
         background-color:#F7F7F7;
-        &>.tit {
-            margin-top:40px !important;
-        }
+
     } 
     .tit {
         width:100%;
@@ -817,7 +814,7 @@
         line-height:38px;
         font-family:'Gmarket Sans';
         font-weight:500;
-        margin-top:33px;
+
 
         .point_line:before{
             height:20px;
@@ -826,7 +823,7 @@
         }
     }
     .benefits {
-        margin:20px 0;
+        margin-top:20px;
         .benefit_item {
             padding:20px 12px;
             border-bottom:1px dotted #ccc;
@@ -836,7 +833,7 @@
             align-content:center;
             align-items:center;
             &:last-of-type {
-                border-bottom:none;
+                padding-bottom:0;border-bottom:none;
             }
             .icon {
                width:34px;
@@ -965,13 +962,15 @@
 //또다른 혜택 하단
 .bnf_card_area_btm {
     padding-top:32px;
-    margin-bottom:40px;
     border-top:1px dotted #ccc;
 }
 .bnf_card_default {
     overflow:hidden;
     margin-bottom:20px;
     background-color:#fff;
+    &:last-child {
+        margin-bottom:0;;
+    }
     .card_body {
         position:relative;
         padding:18px 20px 0px 20px;
@@ -1204,32 +1203,16 @@
 }
 
 .evt_slider_wrap.type_wel_evt {
-  .tit_gmarket {
-    line-height:30px;
-    font-size:26px;
-    font-weight:500;
-    letter-spacing:-0.01em;
-    font-family:'Gmarket Sans';
-   & + .brandSwiper .evt_slider{
-        padding-top:20px;
-   } 
-  }  
-  .swap_eye {
-      width:32px;
-      height:32px;
-      display:inline-block;
-      position:relative;
-
-      top:8px;
-      margin-left:5px;
-      background:url(../images/guide/ico_swap_eye.svg) no-repeat center / 30px;
-  }
-  .evt_item {
-      width:335px;
-      .img_wrap {
-        padding-top:57.3%;
+    padding-bottom:0;
+    .tit_gmarket {
+        font-family:'Gmarket Sans';font-size:26px;font-weight:500;line-height:38px;
+        & + .brandSwiper .evt_slider{
+            padding-top:20px;
+        } 
+    }  
+    .swap_eye {
+        display:inline-block;position:relative;top:8px;width:32px;height:32px; margin-left:5px;background:url(../images/guide/ico_swap_eye.svg) no-repeat center / 30px;
     }
-  }
 }
 
 
@@ -1243,9 +1226,10 @@
 
 /***** 바로드림 ******/
 .pickup_wrap {
+    margin-bottom:-60px;;
     background-color:#F4F4F4;
     margin-top:16px;
-    padding-bottom:28px;
+    padding-bottom:60px;
     .pickup_top_area {
         height:285px;
         position:relative;
@@ -1497,6 +1481,9 @@
     .req_stock_form table tr { height:35px;}
     .req_stock_form div.tb_box { padding-left:8px;}
 
+}
+#content + .wel_belt02 {
+    margin-top:0;
 }
 
 

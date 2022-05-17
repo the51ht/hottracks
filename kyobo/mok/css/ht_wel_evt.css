@@ -357,12 +357,12 @@
 }
 
 /***** 알림 페이지 ******/
-.wel_alm_wrapper .dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
-  border-radius: 4px;
+.btn_header_setting:after {
+  background-image: url(../images/main/ico_wel_setting.svg);
 }
 
-.wel_alm_wrapper .header_wrapper .btn_header_setting:after {
-  background-image: url(../images/main/ico_wel_setting.svg);
+.wel_alm_wrapper .dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
+  border-radius: 4px;
 }
 
 .alm_list_header.mc_cont {
@@ -884,7 +884,7 @@
 
 /***** 쿠폰/ 혜택 *****/
 .wel_marketing_top_area {
-  padding: 60px 20px 40px 20px;
+  padding: 60px 20px;
   background-color: #000;
   color: #fff;
 }
@@ -918,10 +918,6 @@
   letter-spacing: -0.025em;
   color: rgba(255, 255, 255, 0.8);
   margin-top: 8px;
-}
-
-.wel_marketing_top_area .cpon_subscription_wrap {
-  margin-top: 24px;
 }
 
 .wel_marketing_top_area .cpon_subscription_wrap .cpon {
@@ -1002,7 +998,6 @@
 }
 
 .wel_marketing_top_area .join_btn_area {
-  margin-bottom: 27px;
   text-align: center;
 }
 
@@ -1068,15 +1063,11 @@
 }
 
 .wel_benefits_area {
-  padding: 20px;
+  padding: 60px 20px;
 }
 
 .wel_benefits_area.ty02 {
   background-color: #F7F7F7;
-}
-
-.wel_benefits_area.ty02 > .tit {
-  margin-top: 40px !important;
 }
 
 .wel_benefits_area .tit {
@@ -1086,7 +1077,6 @@
   line-height: 38px;
   font-family: 'Gmarket Sans';
   font-weight: 500;
-  margin-top: 33px;
 }
 
 .wel_benefits_area .tit .point_line:before {
@@ -1096,7 +1086,7 @@
 }
 
 .wel_benefits_area .benefits {
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .wel_benefits_area .benefits .benefit_item {
@@ -1120,6 +1110,7 @@
 }
 
 .wel_benefits_area .benefits .benefit_item:last-of-type {
+  padding-bottom: 0;
   border-bottom: none;
 }
 
@@ -1266,7 +1257,6 @@
 
 .bnf_card_area_btm {
   padding-top: 32px;
-  margin-bottom: 40px;
   border-top: 1px dotted #ccc;
 }
 
@@ -1274,6 +1264,10 @@
   overflow: hidden;
   margin-bottom: 20px;
   background-color: #fff;
+}
+
+.bnf_card_default:last-child {
+  margin-bottom: 0;
 }
 
 .bnf_card_default .card_body {
@@ -1534,12 +1528,15 @@
   background-color: #999;
 }
 
+.evt_slider_wrap.type_wel_evt {
+  padding-bottom: 0;
+}
+
 .evt_slider_wrap.type_wel_evt .tit_gmarket {
-  line-height: 30px;
+  font-family: 'Gmarket Sans';
   font-size: 26px;
   font-weight: 500;
-  letter-spacing: -0.01em;
-  font-family: 'Gmarket Sans';
+  line-height: 38px;
 }
 
 .evt_slider_wrap.type_wel_evt .tit_gmarket + .brandSwiper .evt_slider {
@@ -1547,28 +1544,21 @@
 }
 
 .evt_slider_wrap.type_wel_evt .swap_eye {
-  width: 32px;
-  height: 32px;
   display: inline-block;
   position: relative;
   top: 8px;
+  width: 32px;
+  height: 32px;
   margin-left: 5px;
   background: url(../images/guide/ico_swap_eye.svg) no-repeat center/30px;
 }
 
-.evt_slider_wrap.type_wel_evt .evt_item {
-  width: 335px;
-}
-
-.evt_slider_wrap.type_wel_evt .evt_item .img_wrap {
-  padding-top: 57.3%;
-}
-
 /***** 바로드림 ******/
 .pickup_wrap {
+  margin-bottom: -60px;
   background-color: #F4F4F4;
   margin-top: 16px;
-  padding-bottom: 28px;
+  padding-bottom: 60px;
 }
 
 .pickup_wrap .pickup_top_area {
@@ -2297,6 +2287,10 @@
 
 #content .req_stock_form div.tb_box {
   padding-left: 8px;
+}
+
+#content + .wel_belt02 {
+  margin-top: 0;
 }
 
 /***** 라이브 알림 팝업 *****/

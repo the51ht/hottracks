@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<meta name="Author" content="SEO 기획 정의 내용 반영" />
-<meta name="keywords" content="SEO 기획 정의 내용 반영" />
-<meta name="description" content="SEO 기획 정의 내용 반영" />
-<meta name="subject" content="SEO 기획 정의 내용 반영" />
-<!-- DESC : 성인컨텐츠인 경우 추가하는 meta tag -->
-<!--<meta name="rating" content="adult" />-->
-
-<meta name="Robots" content="noindex, nofollow" />
-<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileColor" content="#da212">
 <meta property="og:title" content="핫트랙스">
 <meta property="og:description" content="">
 <meta property="og:type" content="website">
@@ -36,6 +27,7 @@
 <link rel="stylesheet" href="../../css/ht_css_mok.css">
 <link rel="stylesheet" href="../../css/ht_template_mok.css">
 <!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+
 
 <!-- Plug-In javascript -->
 <script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -61,563 +53,562 @@
 </head>
 
 <body class="dialog_open"> <!-- todo : 메뉴 오픈시 스크롤 방지 처리 -->
-    <div class="skip_nav_wrap">
-        <a href="#headerWrapper">메뉴 바로가기</a>
-        <a href="#containerWrapper">본문 바로가기</a>
-    </div>
-    <!-- wrapper -->
-    <!--DESC : 에러페이지인 경우 [error] 클래스 추가 -->
-    <!-- ht_ Hottracks ht_ 클래스 추가 -->
-    <div class="wrapper ht_">
+<!-- SkipNav -->
+<div class="skip_nav_wrap">
+    <a href="#headerWrapper">메뉴 바로가기</a>
+    <a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //SkipNav -->
 
-        <!-- 카테고리 메뉴 -->
-        <section id="categoryMenu" class="category_menu">
-            <!-- 상단 공통 -->
-            <div class="category_menu_top">
-                <!-- personaliz_box -->
-                <div class="personaliz_box">
-                    <div class="logo"><a href="../main/HTR-M-WEL-MAIN-000.html"><img src="../../images/main/logo.svg" alt="핫트랙스" class="ht_logo"></a></div>
-                    <div class="btn_box">
-                        <a href="../guide/HTR-M-UTL-MSG-000.html" class="new"><img src="../../images/guide/ico_alarm.png" alt=""></a> <!-- 신규 알림있으면 new class -->
-                        <button onclick="history.back();"><img src="../../images/guide/btn_closed_menu.png" alt="닫기"></button>
-                    </div>
+<!-- wrapper -->
+<div class="ht_ wrapper">
+    <!-- 카테고리 메뉴 -->
+    <section id="categoryMenu" class="category_menu">
+        <!-- 상단 공통 -->
+        <div class="category_menu_top">
+            <!-- personaliz_box -->
+            <div class="personaliz_box">
+                <div class="logo"><a href="../main/HTR-M-WEL-MAIN-000.html"><img src="../../images/main/logo.svg" alt="핫트랙스" class="ht_logo"></a></div>
+                <div class="btn_box">
+                    <a href="../guide/HTR-M-UTL-MSG-000.html" class="new"><img src="../../images/guide/ico_alarm.png" alt=""></a> <!-- 신규 알림있으면 new class -->
+                    <button onclick="history.back();"><img src="../../images/guide/btn_closed_menu.png" alt="닫기"></button>
                 </div>
-                <!-- //personaliz_box -->
+            </div>
+            <!-- //personaliz_box -->
 
 
-                <!-- 로그인 전 -->
-                <!-- <div class="user_login_box">
-                    <div class="user_box">
-                        <a href="#a" class="before_login"><b>로그인</b>&nbsp;해주세요.</a>
-                    </div>
-                </div> -->
-                <!-- //로그인 전 -->
-
-
-                <!-- 로그인 후 -->
-                <div class="user_login_box">
-                    <div class="user_box">
-                        <a href="#a">
-                            <img src="../../images/guide/ico_member_grade@3x.png" alt="F등급" class="ico_grade">
-                            <b class="user_name">김교보</b>
-                        </a>
-                        <div class="user_branch">광화문점</div>
-                    </div>
+            <!-- 로그인 전 -->
+            <!-- <div class="user_login_box">
+                <div class="user_box">
+                    <a href="#a" class="before_login"><b>로그인</b>&nbsp;해주세요.</a>
                 </div>
-                <!-- //로그인 후 -->
+            </div> -->
+            <!-- //로그인 전 -->
 
-                <!-- link list -->
-                <ul class="mypage_list">
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/ico_cate_01.svg" alt="">
-                            <p>주문배송</p>
-                        </a>
-                    </li>
-                    <li class="notify_push">
-                        <a href="#a">
-                            <img src="../../images/guide/ico_cate_02.svg" alt="">
-                            <p>장바구니</p>
-                            <span>3</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/ico_cate_03.svg" alt="">
-                            <p>쿠폰/헤택</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/ico_cate_04.svg" alt="">
-                            <p>출석체크</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/ico_cate_05.svg" alt="">
-                            <p>바로드림</p>
-                        </a>
-                    </li>
-                </ul>
-                <!-- link list -->
-            </div>
-            <!--// 상단 공통 -->
-            <hr class="devider">
 
-            
-            <!--앵커메뉴-->
-            <div class="main_top_mn_list">
-                <a href="#a" class="active">카테고리 </a>
-                <a href="#a">서비스</a>
-                <a href="#a">즐겨찾기</a>
+            <!-- 로그인 후 -->
+            <div class="user_login_box">
+                <div class="user_box">
+                    <a href="#a">
+                        <img src="../../images/guide/ico_member_grade@3x.png" alt="F등급" class="ico_grade">
+                        <b class="user_name">김교보</b>
+                    </a>
+                    <div class="user_branch">광화문점</div>
+                </div>
             </div>
-            <!--앵커메뉴-->
-            <script>
-                $(function(){
-                    $(document).on('click', '.main_top_mn_list a', function(){
-                        $(this).addClass('active').siblings().removeClass('active');
-                    });
+            <!-- //로그인 후 -->
+
+            <!-- link list -->
+            <ul class="mypage_list">
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/ico_cate_01.svg" alt="">
+                        <p>주문배송</p>
+                    </a>
+                </li>
+                <li class="notify_push">
+                    <a href="#a">
+                        <img src="../../images/guide/ico_cate_02.svg" alt="">
+                        <p>장바구니</p>
+                        <span>3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/ico_cate_03.svg" alt="">
+                        <p>쿠폰/헤택</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/ico_cate_04.svg" alt="">
+                        <p>출석체크</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/ico_cate_05.svg" alt="">
+                        <p>바로드림</p>
+                    </a>
+                </li>
+            </ul>
+            <!-- link list -->
+        </div>
+        <!--// 상단 공통 -->
+        <hr class="devider">
+
+        
+        <!--앵커메뉴-->
+        <div class="main_top_mn_list">
+            <a href="#a" class="active">카테고리 </a>
+            <a href="#a">서비스</a>
+            <a href="#a">즐겨찾기</a>
+        </div>
+        <!--앵커메뉴-->
+        <script>
+            $(function(){
+                $(document).on('click', '.main_top_mn_list a', function(){
+                    $(this).addClass('active').siblings().removeClass('active');
                 });
-            </script>
-
-          
-            <!-- 주요 메뉴 -->
-            <div class="main_list">
-                <a href="../main/HTR-M-LIV-MAIN-000.html">
-                    <img src="../../images/guide/main_list_mn1.svg" alt="">
-                    <p>라이브</p>
-                </a>
-                <a href="../main/HTR-M-TOD-MAIN-000.html">
-                    <img src="../../images/guide/main_list_mn2.svg" alt="">
-                    <p>오늘만특가</p>
-                </a>
-                <a href="../main/HTR-M-GFT-MAIN-000.html">
-                    <img src="../../images/guide/main_list_mn3.svg" alt="">
-                    <p>선물추천</p>
-                </a>
-                <a href="../main/HTR-M-BES-MAIN-000.html">
-                    <img src="../../images/guide/main_list_mn4.svg" alt="">
-                    <p>베스트</p>
-                </a>
-                <a href="../main/HTR-M-CUR-MAIN-000.html">
-                    <img src="../../images/guide/main_list_mn5.svg" alt="">
-                    <p>큐레이션</p>
-                </a>
-            </div>
-            <!-- 주요 메뉴 -->
+            });
+        </script>
 
         
-            <!-- all_menu_banner --><!-- 22.03.17 구조수정 -->
-            <div class="all_menu_banner">
-                <p>핫트랙스 LIVE X 가네샤 이벤트<br>당첨자 발표</p>
-            </div>
-            <!-- //all_menu_banner -->
+        <!-- 주요 메뉴 -->
+        <div class="main_list">
+            <a href="../main/HTR-M-LIV-MAIN-000.html">
+                <img src="../../images/guide/main_list_mn1.svg" alt="">
+                <p>라이브</p>
+            </a>
+            <a href="../main/HTR-M-TOD-MAIN-000.html">
+                <img src="../../images/guide/main_list_mn2.svg" alt="">
+                <p>오늘만특가</p>
+            </a>
+            <a href="../main/HTR-M-GFT-MAIN-000.html">
+                <img src="../../images/guide/main_list_mn3.svg" alt="">
+                <p>선물추천</p>
+            </a>
+            <a href="../main/HTR-M-BES-MAIN-000.html">
+                <img src="../../images/guide/main_list_mn4.svg" alt="">
+                <p>베스트</p>
+            </a>
+            <a href="../main/HTR-M-CUR-MAIN-000.html">
+                <img src="../../images/guide/main_list_mn5.svg" alt="">
+                <p>큐레이션</p>
+            </a>
+        </div>
+        <!-- 주요 메뉴 -->
 
-            <!-- menu list --><!-- 22.03.17 구조수정 -->
-            <div class="menu_list">
-                <ul class="fixing">
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/menu_list_mn1.svg" alt="">
-                            <p>음반&middot;영상</p>
-                        </a>
+    
+        <!-- all_menu_banner --><!-- 22.03.17 구조수정 -->
+        <div class="all_menu_banner">
+            <p>핫트랙스 LIVE X 가네샤 이벤트<br>당첨자 발표</p>
+        </div>
+        <!-- //all_menu_banner -->
+
+        <!-- menu list --><!-- 22.03.17 구조수정 -->
+        <div class="menu_list">
+            <ul class="fixing">
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/menu_list_mn1.svg" alt="">
+                        <p>음반&middot;영상</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/menu_list_mn3.svg" alt="">
+                        <p>신상품</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/menu_list_mn5.svg" alt="">
+                        <p>이벤트</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/menu_list_mn7.svg" alt="">
+                        <p>무료배송</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="fixing">
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/menu_list_mn2.svg" alt="">
+                        <p>2022다이어리<br>다이어리</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/menu_list_mn4.svg" alt="">
+                        <p>스티커샵</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/menu_list_mn6.svg" alt="">
+                        <p>필기구</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <img src="../../images/guide/menu_list_mn8.svg" alt="">
+                        <p>블프데이</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--// menu list -->
+        <hr class="devider">
+
+
+        <!-- 카테고리 목록 -->
+        <div class="cagetory_list">
+            <ul>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn1.png" alt="">
+                        </div>
+                        <p>CD/LP</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn2.png" alt="">
+                        </div>
+                        <p>DVD</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn3.png" alt="">
+                        </div>
+                        <p>BLU-RAY</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../category/HTR-M-CTG-LIST-001.html">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn4.png" alt="">
+                        </div>
+                        <p>디자인문구</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn5.png" alt="">
+                        </div>
+                        <p>디지털/자동차</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn6.png" alt="">
+                        </div>
+                        <p>필기구</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn7.png" alt="">
+                        </div>
+                        <p>오피스</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn8.png" alt="">
+                        </div>
+                        <p>리빙/생활가전</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn9.png" alt="">
+                        </div>
+                        <p>키친</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn10.png" alt="">
+                        </div>
+                        <p>푸드</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn11.png" alt="">
+                        </div>
+                        <p>가구/수납</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn12.png" alt="">
+                        </div>
+                        <p>패션잡화</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn13.png" alt="">
+                        </div>
+                        <p>뷰티/헬스</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn14.png" alt="">
+                        </div>
+                        <p>여행/취미</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn15.png" alt="">
+                        </div>
+                        <p>유아동</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#a">
+                        <div class="img_wrap">
+                            <img src="../../images/temp/@cagetory_list_mn16.png" alt="">
+                        </div>
+                        <p>Only<br>Hottracks</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--// 카테고리 목록 -->
+        <hr class="divide_hr">
+
+    
+        <!-- 320 * 190 배너 -->
+        <section class="evt_slider_wrap evt">
+            <div class="swiper mySwiper">
+                <ul class="swiper-wrapper  evt_slider">
+                    <li class="swiper-slide evt_item">
+                        <div class="discount_icon">~25%</div>
+                        <div class="img_wrap">
+                            <img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+                        </div>
+                        <div class="item_info">
+                            <span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
+                            <span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/menu_list_mn3.svg" alt="">
-                            <p>신상품</p>
-                        </a>
+                    <li class="swiper-slide evt_item">
+                        <div class="discount_icon">~25%</div>
+                        <div class="img_wrap">
+                            <img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+                        </div>
+                        <div class="item_info">
+                            <span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
+                            <span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/menu_list_mn5.svg" alt="">
-                            <p>이벤트</p>
-                        </a>
+                    <li class="swiper-slide evt_item">
+                        <div class="img_wrap">
+                            <img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+                        </div>
+                        <div class="item_info">
+                            <span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
+                            <span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/menu_list_mn7.svg" alt="">
-                            <p>무료배송</p>
+                    <li class="swiper-slide evt_item">
+                        <div class="img_wrap">
+                            <img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+                        </div>
+                        <div class="item_info">
+                            <span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
+                            <span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide evt_item more_items">
+                        <a href="#none">
+                            <div class="more_txt">기획전<br>더보기</div>
                         </a>
                     </li>
                 </ul>
-                <ul class="fixing">
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/menu_list_mn2.svg" alt="">
-                            <p>2022다이어리<br>다이어리</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/menu_list_mn4.svg" alt="">
-                            <p>스티커샵</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/menu_list_mn6.svg" alt="">
-                            <p>필기구</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <img src="../../images/guide/menu_list_mn8.svg" alt="">
-                            <p>블프데이</p>
-                        </a>
-                    </li>
-                </ul>
             </div>
-            <!--// menu list -->
-            <hr class="devider">
+        </section>
+        <!-- //320 * 190 배너 -->
+        <hr class="devider">
 
 
-            <!-- 카테고리 목록 -->
-            <div class="cagetory_list">
-                <ul>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn1.png" alt="">
-                            </div>
-                            <p>CD/LP</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn2.png" alt="">
-                            </div>
-                            <p>DVD</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn3.png" alt="">
-                            </div>
-                            <p>BLU-RAY</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../category/HTR-M-CTG-LIST-001.html">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn4.png" alt="">
-                            </div>
-                            <p>디자인문구</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn5.png" alt="">
-                            </div>
-                            <p>디지털/자동차</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn6.png" alt="">
-                            </div>
-                            <p>필기구</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn7.png" alt="">
-                            </div>
-                            <p>오피스</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn8.png" alt="">
-                            </div>
-                            <p>리빙/생활가전</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn9.png" alt="">
-                            </div>
-                            <p>키친</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn10.png" alt="">
-                            </div>
-                            <p>푸드</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn11.png" alt="">
-                            </div>
-                            <p>가구/수납</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn12.png" alt="">
-                            </div>
-                            <p>패션잡화</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn13.png" alt="">
-                            </div>
-                            <p>뷰티/헬스</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn14.png" alt="">
-                            </div>
-                            <p>여행/취미</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn15.png" alt="">
-                            </div>
-                            <p>유아동</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#a">
-                            <div class="img_wrap">
-                                <img src="../../images/temp/@cagetory_list_mn16.png" alt="">
-                            </div>
-                            <p>Only<br>Hottracks</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--// 카테고리 목록 -->
-            <hr class="divide_hr">
-
-        
-            <!-- 320 * 190 배너 -->
-            <section class="evt_slider_wrap evt">
-                <div class="swiper mySwiper">
-                    <ul class="swiper-wrapper  evt_slider">
-                        <li class="swiper-slide evt_item">
-                            <div class="discount_icon">~25%</div>
-                            <div class="img_wrap">
-                                <img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
-                            </div>
-                            <div class="item_info">
-                                <span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
-                                <span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+        <!-- moudule 018 -->
+        <section class="hot_deal_wrap">
+            <div class="hot_deal_area">
+                <div class="title_area">
+                    <h2>지금, 인기있는 브랜드 상품<em class="emoji"></em></h2>
+                </div> 
+                <div class="ctg_floating_menues">
+                    <button class="active">비움</button>
+                    <button>아이코닉</buttoni>
+                    <button>인디고</button>
+                    <button>JellyCrew</button>
+                </div>
+                <script>
+                    // todo : ui.js 로 공통 처리할 것
+                    $('.ctg_floating_menues > button').on('click',function(){
+                        $(this).addClass('active').siblings('button').removeClass('active');
+                    });
+                </script>
+                <div class="swiper mySwiper hotdeal">
+                    <ul class="swiper-wrapper prod-wrapper type_xs">
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <button class="evt_good_count">
+                                    <div class="icon"></div>
+                                    <div class="txt">80</div>
+                                </button>
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
+                            </div>                          <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <!-- <span class="final_price">17,500</span> -->
+                                <!--할인 적용 안된 경우 no_discount 추가-->
+                                <span class="price_origin no_discount">19,100</span>
                             </div>
                         </li>
-                        <li class="swiper-slide evt_item">
-                            <div class="discount_icon">~25%</div>
-                            <div class="img_wrap">
-                                <img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
                             </div>
-                            <div class="item_info">
-                                <span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
-                                <span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
-                            </div>
-                        </li>
-                        <li class="swiper-slide evt_item">
-                            <div class="img_wrap">
-                                <img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
-                            </div>
-                            <div class="item_info">
-                                <span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
-                                <span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+                            <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <span class="final_price">17,500</span>
+                                <span class="price_origin">19,100</span>
                             </div>
                         </li>
-                        <li class="swiper-slide evt_item">
-                            <div class="img_wrap">
-                                <img class="bd_img" src="../../images/temp/@img_prod_resp03.jpg">
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
                             </div>
-                            <div class="item_info">
-                                <span class="title">가장 많이 사랑 받은 필기구 베스트 50</span>
-                                <span class="sub">로이텀부터 킹짐 파일까지 만나보세요</span>
+                            <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <span class="final_price">17,500</span>
+                                <span class="price_origin">19,100</span>
                             </div>
                         </li>
-                        <li class="swiper-slide evt_item more_items">
-                            <a href="#none">
-                                <div class="more_txt">기획전<br>더보기</div>
-                            </a>
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
+                            </div>
+                            <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <span class="final_price">17,500</span>
+                                <span class="price_origin">19,100</span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
+                            </div>
+                            <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <span class="final_price">17,500</span>
+                                <span class="price_origin">19,100</span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
+                            </div>
+                            <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <span class="final_price">17,500</span>
+                                <span class="price_origin">19,100</span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img"alt="" >
+                            </div>
+                            <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <span class="final_price">17,500</span>
+                                <span class="price_origin">19,100</span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
+                            </div>
+                            <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <span class="final_price">17,500</span>
+                                <span class="price_origin">19,100</span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide prod_item">
+                            <div class="product_pic">
+                                <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
+                            </div>
+                            <div class="price_line">
+                                <span class="discount_rate">12%</span>
+                                <span class="final_price">17,500</span>
+                                <span class="price_origin">19,100</span>
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </section>
-            <!-- //320 * 190 배너 -->
-            <hr class="devider">
-
-
-            <!-- moudule 018 -->
-            <section class="hot_deal_wrap">
-                <div class="hot_deal_area">
-                    <div class="title_area">
-                        <h2>지금, 인기있는 브랜드 상품<em class="emoji"></em></h2>
-                    </div> 
-                    <div class="ctg_floating_menues">
-                        <button class="active">비움</button>
-                        <button>아이코닉</buttoni>
-                        <button>인디고</button>
-                        <button>JellyCrew</button>
-                    </div>
-                    <script>
-                        // todo : ui.js 로 공통 처리할 것
-                        $('.ctg_floating_menues > button').on('click',function(){
-                            $(this).addClass('active').siblings('button').removeClass('active');
-                        });
-                    </script>
-                    <div class="swiper mySwiper hotdeal">
-                        <ul class="swiper-wrapper prod-wrapper type_xs">
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <button class="evt_good_count">
-                                        <div class="icon"></div>
-                                        <div class="txt">80</div>
-                                    </button>
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
-                                </div>                          <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <!-- <span class="final_price">17,500</span> -->
-                                    <!--할인 적용 안된 경우 no_discount 추가-->
-                                    <span class="price_origin no_discount">19,100</span>
-                                </div>
-                            </li>
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
-                                </div>
-                                <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <span class="final_price">17,500</span>
-                                    <span class="price_origin">19,100</span>
-                                </div>
-                            </li>
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
-                                </div>
-                                <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <span class="final_price">17,500</span>
-                                    <span class="price_origin">19,100</span>
-                                </div>
-                            </li>
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
-                                </div>
-                                <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <span class="final_price">17,500</span>
-                                    <span class="price_origin">19,100</span>
-                                </div>
-                            </li>
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
-                                </div>
-                                <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <span class="final_price">17,500</span>
-                                    <span class="price_origin">19,100</span>
-                                </div>
-                            </li>
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
-                                </div>
-                                <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <span class="final_price">17,500</span>
-                                    <span class="price_origin">19,100</span>
-                                </div>
-                            </li>
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img"alt="" >
-                                </div>
-                                <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <span class="final_price">17,500</span>
-                                    <span class="price_origin">19,100</span>
-                                </div>
-                            </li>
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
-                                </div>
-                                <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <span class="final_price">17,500</span>
-                                    <span class="price_origin">19,100</span>
-                                </div>
-                            </li>
-                            <li class="swiper-slide prod_item">
-                                <div class="product_pic">
-                                    <img src="../../images/temp/@img_now04.jpg" class="bd_img" alt="" >
-                                </div>
-                                <div class="price_line">
-                                    <span class="discount_rate">12%</span>
-                                    <span class="final_price">17,500</span>
-                                    <span class="price_origin">19,100</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- //moudule 018 -->
-            <hr class="devider">
+            </div>
+        </section>
+        <!-- //moudule 018 -->
+        <hr class="devider">
 <script>
 $(function(){
-    // 오늘만 특가 스와이프
-    if($('.mySwiper.hotdeal').length == 0 ) return;
-    $('.mySwiper.hotdeal').each(function(i, ele){
-        var horDealSwiper = new CustomSwiper(this, {
-            slidesPerView: 'auto',
-            spaceBetween: 12,
-            freeMode: true,
-            observer: true,
-            observeParents: true,
-        });
+// 오늘만 특가 스와이프
+if($('.mySwiper.hotdeal').length == 0 ) return;
+$('.mySwiper.hotdeal').each(function(i, ele){
+    var horDealSwiper = new CustomSwiper(this, {
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        freeMode: true,
+        observer: true,
+        observeParents: true,
     });
+});
 });
 </script>
 
 
-            <!-- 링크 -->
-            <div class="link_box">
-                <a href="../customer/HTR-M-CUS-MAIN-000.html">고객센터</a>
-                <a href="#a">매장안내</a>
-                <a href="../guide/HTR-M-UTL-SET-000.html">설정</a>
-            </div>
-            <!--// 링크 -->
-            <hr class="devider">
+        <!-- 링크 -->
+        <div class="link_box">
+            <a href="../customer/HTR-M-CUS-MAIN-000.html">고객센터</a>
+            <a href="#a">매장안내</a>
+            <a href="../guide/HTR-M-UTL-SET-000.html">설정</a>
+        </div>
+        <!--// 링크 -->
+        <hr class="devider">
 
 
-            <div class="menu_footer_box">
-                <!-- 메뉴 하단 -->
-                <div class="help_box">
-                    <h2>도움이 필요하신가요?</h2>
-                    <a href="tel:16611112">1661-1112</a>
-                    <!-- btn_wrap -->
-                    <div class="btn_wrap">
-                        <button type="button" class="btn_sm btn_line_gray"><span class="text">FAQ</span></button>
-                        <button type="button" class="btn_sm btn_line_gray"><span class="text">1:1 문의하기</span></button>
-                    </div>
-                    <!-- //btn_wrap -->
+        <div class="menu_footer_box">
+            <!-- 메뉴 하단 -->
+            <div class="help_box">
+                <h2>도움이 필요하신가요?</h2>
+                <a href="tel:16611112">1661-1112</a>
+                <!-- btn_wrap -->
+                <div class="btn_wrap">
+                    <button type="button" class="btn_sm btn_line_gray"><span class="text">FAQ</span></button>
+                    <button type="button" class="btn_sm btn_line_gray"><span class="text">1:1 문의하기</span></button>
                 </div>
-                <!--// 메뉴 하단 -->
-
-                <!-- sns list -->
-                <div class="sns_list">
-                    <a href="#a"><img src="../../images/guide/ico_instar.png" alt="instargram"></a>
-                    <a href="#a"><img src="../../images/guide/ico_facebook.png" alt="facebook"></a>
-                    <a href="#a"><img src="../../images/guide/ico_youtube.png" alt="youtube"></a>
-                    <a href="#a"><img src="../../images/guide/ico_twitter.png" alt="twitter"></a>
-                    <a href="#a"><img src="../../images/guide/ico_blog.png" alt="blog"></a>
-                </div>
+                <!-- //btn_wrap -->
             </div>
-        </section>
-        <!-- 카테고리 메뉴 -->
-    </div>
-    <!-- //wrapper -->
+            <!--// 메뉴 하단 -->
+
+            <!-- sns list -->
+            <div class="sns_list">
+                <a href="#a"><img src="../../images/guide/ico_instar.png" alt="instargram"></a>
+                <a href="#a"><img src="../../images/guide/ico_facebook.png" alt="facebook"></a>
+                <a href="#a"><img src="../../images/guide/ico_youtube.png" alt="youtube"></a>
+                <a href="#a"><img src="../../images/guide/ico_twitter.png" alt="twitter"></a>
+                <a href="#a"><img src="../../images/guide/ico_blog.png" alt="blog"></a>
+            </div>
+        </div>
+    </section>
+    <!-- 카테고리 메뉴 -->
+</div>
+<!-- //wrapper -->
 </body>
-
 </html>
