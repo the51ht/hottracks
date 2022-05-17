@@ -8303,6 +8303,14 @@
 }
 
 /*** 실시간 차트 : .mus_mc_chart ***/
+.mus_mc_chart {
+  padding-top: 40px;
+}
+
+.mus_mc_chart:before {
+  display: none;
+}
+
 .mus_mc_chart .mc_tit02 img {
   display: inline-block;
   height: 20px;
@@ -8578,7 +8586,7 @@
 /* .mus_mc_order_cont */
 .mus_mc_order_cont {
   position: relative;
-  margin: 20px -20px 20px -12px;
+  margin: 0 -20px 0 -12px;
 }
 
 .mus_mc_order_cont .swiper-slide {
@@ -9261,6 +9269,7 @@
   opacity: 0.5;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
+  cursor: pointer;
 }
 
 .mus_mc_pop_thumb .swiper-slide .img img {
@@ -9305,9 +9314,10 @@
 /* mus_mc_classic_msg */
 .mus_mc_classic_msg {
   position: relative;
-  margin: 44px -20px -50px -20px;
+  margin: 44px -20px -40px -20px;
   padding: 44px 24px 34px 24px;
   background: url("../images/main/img_mus_mc_classic_msg.png") center top/27px repeat;
+  overflow: hidden;
 }
 
 .mus_mc_classic_msg:before {
@@ -9425,11 +9435,20 @@
 
 /*** 특별한 할인상품 놓치지 마세요 : .mus_mc_special ***/
 .mus_mc_special {
+  padding-bottom: 40px !important;
   background: #464dff;
 }
 
 .mus_mc_special .mc_tit02 {
   color: #fff;
+}
+
+.mus_mc_special:last-child {
+  margin-bottom: -60px;
+}
+
+.mus_mc_special + .wel_belt02 {
+  margin-top: 0;
 }
 
 /* mus_tab_box */
@@ -9711,6 +9730,14 @@
   /*.wel_belt02 {
         margin:40px 0 -40px 0;
     }*/
+  /*
+    &.main_cont_wrap{
+        .btn_more_div{
+            + .wel_belt02{
+                margin:60px 0 0px 0;
+            }
+        }
+    }*/
 }
 
 .cont_wrap .mdl_selec_list_wrap:last-child {
@@ -9727,10 +9754,6 @@
   opacity: 1 !important;
   -webkit-animation: none !important;
           animation: none !important;
-}
-
-.cont_wrap.main_cont_wrap .btn_more_div + .wel_belt02 {
-  margin: 60px 0 0px 0;
 }
 
 .cont_wrap.main_cont_wrap {
