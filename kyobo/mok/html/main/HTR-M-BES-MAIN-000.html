@@ -76,15 +76,8 @@
     <!-- //header -->
 
 
-    <!-- container_wrapper -->
-    <main id="containerWrapper" class="container_wrapper">
-        <!-- contents_wrap -->
-        <section class="contents_wrap">
-
-			<!-- cont_wrap -->
-			<section class="cont_wrap">
-
-
+    <!-- cont_wrap -->
+    <section class="cont_wrap">
         <h3 class="tit">베스트</h3>
 
         <!-- 탑메뉴 -->
@@ -103,13 +96,15 @@
         <!-- //탑메뉴 -->
 
 
-        <!-- 소팅 메뉴 --><!-- 22.02.17 구조 변경-->
+
+        <!-- 소팅 메뉴 -->
         <div class="menu_sort">
             <button type="button" class="btn_sort active">많이 구매한 상품</button>
             <button type="button" class="btn_sort">리뷰가 많은 상품</button>
             <button type="button" class="btn_sort">많이 찜한 상품</button>
         </div> 
         <!-- //소팅 메뉴 -->
+
 
 
         <!-- 업데이트 타이머
@@ -120,21 +115,22 @@
         </div>
         //업데이트 타이머 -->
 
-        
+
+
         <!-- 상품 리스트 (랭킹) -->
         <section class="list_section character_sc_chk"><!-- 22.05.16 class="character_sc_chk" 추가 -->
-			<!-- 다이나믹 메시지 --><!-- 22.05.16 수정 -->
-			<div class="deadline_character_area ht_best_deadline">
-				<div class="deadline_bubble">
-					<div class="txt">
-						<span>요즘 불티나게<br>팔리는중</span>
-					</div>
-				</div>
-			</div>
-			<!-- //다이나믹 메시지 -->
+            <!-- 다이나믹 메시지 --><!-- 22.05.16 수정 -->
+            <div class="deadline_character_area ht_best_deadline">
+                <div class="deadline_bubble">
+                    <div class="txt">
+                        <span>요즘 불티나게<br>팔리는중</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //다이나믹 메시지 -->
 
 
-            <!--[2022-02-15] class :prod-wrapper row_dir =>  prod-wrapper evt_products row_dir로 변경-->
+            <!-- evt_products -->
             <ul class="prod-wrapper evt_products row_dir">
                 <!-- li.prod_item 반복-->
                 <li class="prod_item">
@@ -142,76 +138,149 @@
                         <em class="rank">01</em>
                         <em class="rank_icon"></em>
                     </div>
+                    
+                    <!-- product_pic -->
                     <div class="product_pic">
-                        <button class="evt_good_count">
-                            <div class="icon"></div>
-                            <!-- <div class="txt"></div> -->
-                        </button>
-                        <img src="../../images/temp/@img_now01.jpg" class="bd_img" alt="" >
-                    </div>
-                    <div class="product_info">
-                        <div class="company">dretec</div>
-                        <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-                        <div class="price_line">
-                            <span class="discount_rate">15%</span>
-                            <span class="final_price">99,000</span>
-                            <span class="price_origin">120,000</span>
-                        </div>
-                        <div class="badge_line">
-                            <span class="badge rounded badge_primary_evt">쿠폰</span>
-                            <span class="badge rounded badge_default_evt">사은품</span>
-                            <span class="badge rounded badge_default_evt">무료배송</span>
-                        </div>
-                    </div>
-                </li>
-                <!-- //li.prod_item 반복-->
-
-                <!-- 품절 - sold_out, 대체 상품 - replace_prod -->
-                <li class="prod_item sold_out replace_prod">
-                    <!--<div class="rangking down">
-                        <em class="rank">02</em>
-                        <em class="rank_icon"></em>
-                    </div>--><!-- 22.02.24 랭킹 없을 시 전체영역 삭제 -->
-                    <div class="product_pic">
-                        <span class="show_replace">
-                            <div>아쉽지만!<br/>품절이예요</div>
-                            <button type="button" class="replace_prod_btn">대체상품</button>
-                            </span> 
                         <button class="evt_good_count">
                             <div class="icon"></div>
                             <div class="txt">80</div>
-                        </button>                  
-                        <img src="../../images/temp/@img_now11.jpg" class="bd_img" >
+                        </button>
+                        <a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
                     </div>
+                    <!-- //product_pic -->
+
+                    <!-- product_info -->
                     <div class="product_info">
-                        <div class="company">dretec</div>
-                        <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-                        <div class="price_line">
-                            <span class="discount_rate">15%</span>
-                            <span class="final_price">9,234,000</span>
-                            <span class="price_origin">9,200,000</span>
-                        </div>
-                        <div class="badge_line">
-                            <span class="badge rounded badge_primary_evt">포스터</span>
-                            <span class="badge rounded badge_default_evt">사은품</span>
-                            <span class="badge rounded badge_default_evt">무료배송</span>
-                        </div>
+                        <a href="javascript:alert('제품상세');">
+                            <div class="company">dretec</div>
+                            <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">9,234,000</span>
+                                <span class="price_origin">9,200,000</span>
+                            </div>
+                            <div class="badge_line">
+                                <span class="badge rounded badge_primary_evt">쿠폰</span>
+                                <span class="badge rounded badge_default_evt">사은품</span>
+                                <span class="badge rounded badge_default_evt">무료배송</span>
+                            </div>
+                        </a>
                     </div>
+                    <!-- //product_info -->
+                </li>
+                <!-- //li.prod_item 반복-->
+
+
+                <!-- 19 세 상품 -->
+                <li class="prod_item"><!-- 22.05.11 성인 class 삭제 -->
+                    <div class="rangking down">
+                        <em class="rank">02</em>
+                        <em class="rank_icon"></em>
+                    </div>
+
+                    <!-- product_pic -->
+                    <div class="product_pic">
+                        <a href="javascript:alert('19세');"><img src="../../images/guide/img_19.jpg" class="bd_img" alt=""></a><!-- 22.05.11 수정 -->
+                    </div>
+                    <!-- //product_pic -->
+
+                    <!-- product_info -->
+                    <div class="product_info">
+                        <a href="javascript:alert('19세');">
+                            <div class="company">dretec</div>
+                            <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">9,234,000</span>
+                                <span class="price_origin">9,200,000</span>
+                            </div>
+                            <div class="badge_line">
+                                <span class="badge rounded badge_primary_evt">쿠폰</span>
+                                <span class="badge rounded badge_default_evt">사은품</span>
+                                <span class="badge rounded badge_default_evt">무료배송</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- //product_info -->
+                </li>
+                <!-- //19 세 상품 -->
+
+
+                <!-- prod_item : 대체 상품 -->
+                <li class="prod_item sold_out replace_prod"><!-- 품절 : class="sold_out" / 대체 상품 : class="replace_prod" -->
+                    <div class="rangking same">
+                        <em class="rank">03</em>
+                        <em class="rank_icon"></em>
+                    </div>
+
+                    <!-- product_pic -->
+                    <div class="product_pic">
+                        <span class="show_replace">
+                            <div>아쉽지만!<br>품절이예요</div>
+                            <a href="javascript:alert('품절 제품상세');"><em class="hidden">제품상세</em></a><!-- 22.05.11 추가 -->
+                            <button type="button" class="replace_prod_btn">대체상품</button>
+                        </span>
+                        <a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod02.jpg" class="bd_img" alt=""></a>
+                    </div>
+                    <!-- //product_pic -->
+
+                    <!-- product_info -->
+                    <div class="product_info">
+                        <a href="javascript:alert('품절 제품상세');">
+                            <div class="company">dretec</div>
+                            <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">9,234,000</span>
+                                <span class="price_origin">9,200,000</span>
+                            </div>
+                            <div class="badge_line">
+                                <span class="badge rounded badge_primary_evt">쿠폰</span>
+                                <span class="badge rounded badge_default_evt">사은품</span>
+                                <span class="badge rounded badge_default_evt">무료배송</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- //product_info -->
+
+                    <!-- 대체 상품 컨텐츠 : replace_prod_swap -->
                     <article class="replace_prod_swap">
                         <h4 class="tit">
                             <em class="txt">하필 딱! 품절이지만 괜찮아요</em>
                             <em class="replace_icon"></em>
                         </h4>
                         <div class="sub_title">찾으시는 상품과 비슷한 상품이 여기 있어요!</div>
+
+                        <!-- swiper -->
                         <div class="swiper mySwiper">
+                            <!-- prod-wrapper -->
                             <ul class="swiper-wrapper prod-wrapper type_sm">
+                                <!-- li.prod_item 반복 -->
                                 <li class="swiper-slide prod_item">
                                     <div class="product_pic">
                                         <button class="evt_good_count">
                                             <div class="icon"></div>
                                             <div class="txt">80</div>
                                         </button>
-                                        <img src="../../images/temp/@img_now11.jpg" class="bd_img" alt="">
+                                        <a href="#"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
+                                    </div>
+                                    <div class="company">dretec</div>
+                                    <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+                                    <div class="price_line">
+                                        <span class="discount_rate">15%</span>
+                                        <span class="final_price">9,234,000</span>
+                                        <span class="price_origin">9,200,000</span>
+                                    </div>
+                                </li>
+                                <!-- //li.prod_item 반복 -->
+
+                                <li class="swiper-slide prod_item">
+                                    <div class="product_pic">
+                                        <button class="evt_good_count">
+                                            <div class="icon"></div>
+                                            <div class="txt">80</div>
+                                        </button>
+                                        <a href="#"><img src="../../images/temp/@img_prod02.jpg" class="bd_img" alt=""></a>
                                     </div>
                                     <div class="company">dretec</div>
                                     <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
@@ -225,9 +294,9 @@
                                     <div class="product_pic">
                                         <button class="evt_good_count">
                                             <div class="icon"></div>
-                                            <!-- <div class="txt">80</div> -->
+                                            <div class="txt">80</div>
                                         </button>
-                                        <img src="../../images/temp/@img_rank11.jpg" class="bd_img" alt="">
+                                        <a href="#"><img src="../../images/temp/@img_prod03.jpg" class="bd_img" alt=""></a>
                                     </div>
                                     <div class="company">dretec</div>
                                     <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
@@ -239,7 +308,11 @@
                                 </li>
                                 <li class="swiper-slide prod_item">
                                     <div class="product_pic">
-                                        <img src="../../images/temp/@img_wel_hero_banner04.jpg" class="bd_img" alt="">
+                                        <button class="evt_good_count">
+                                            <div class="icon"></div>
+                                            <div class="txt">80</div>
+                                        </button>
+                                        <a href="#"><img src="../../images/temp/@img_prod04.jpg" class="bd_img" alt=""></a>
                                     </div>
                                     <div class="company">dretec</div>
                                     <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
@@ -251,7 +324,11 @@
                                 </li>
                                 <li class="swiper-slide prod_item">
                                     <div class="product_pic">
-                                        <img src="../../images/temp/@img_now11.jpg" class="bd_img" alt="">
+                                        <button class="evt_good_count">
+                                            <div class="icon"></div>
+                                            <div class="txt">80</div>
+                                        </button>
+                                        <a href="#"><img src="../../images/temp/@img_prod05.jpg" class="bd_img" alt=""></a>
                                     </div>
                                     <div class="company">dretec</div>
                                     <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
@@ -262,113 +339,164 @@
                                     </div>
                                 </li>
                             </ul>
+                            <!-- //prod-wrapper -->
                         </div>
-                        <!--닫기 버튼-->	
-                        <button type="button" class="close_swap"></button>	
+                        <!-- //swiper -->
+                            
+                        <button type="button" class="close_swap"></button><!-- 닫기 버튼 -->
                     </article>
+                    <!-- //대체 상품 컨텐츠 : replace_prod_swap -->
                 </li>
-                <!-- //품절 - sold_out, 대체 상품 - replace_prod -->
+                <!-- //prod_item : 대체 상품 -->
 
-                <li class="prod_item sold_out replace_prod">
-                    <div class="rangking down">
-                        <em class="rank">100</em>
-                        <em class="rank_icon"></em>
-                    </div>
-                    <div class="product_pic">
-                        <span class="show_replace">
-                            <div>아쉽지만!<br/>품절이예요</div>
-                        </span>
-                    <!-- 
-                    <button class="evt_good_count">
-                        <div class="icon"></div>
-                        <div class="txt">80</div>
-                    </button> 
-                    -->
-                        <img src="../../images/temp/@img_now11.jpg" class="bd_img" >
-                    </div>
-                    <div class="product_info">
-                        <div class="company">dretec</div>
-                        <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-                        <div class="price_line">
-                            <span class="discount_rate">15%</span>
-                            <span class="final_price">9,234,000</span>
-                            <span class="price_origin">9,200,000</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="prod_item">
-                    <div class="rangking down">
-                        <em class="rank">100</em>
-                        <em class="rank_icon"></em>
-                    </div>
-                    <div class="product_pic">
-                        <button class="evt_good_count">
-                            <div class="icon"></div>
-                            <div class="txt">80</div>
-                        </button>
-                        <img src="../../images/temp/@img_md_pick03.jpg" class="bd_img" alt="" >
-                    </div>
-                    <div class="product_info">
-                        <div class="company">dretec</div>
-                        <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-                        <div class="price_line">
-                            <span class="discount_rate">15%</span>
-                            <span class="final_price">9,234,000</span>
-                            <span class="price_origin">9,200,000</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="prod_item">
+
+                <!-- prod_item : 대체 상품 (품절) -->
+                <li class="prod_item sold_out replace_prod"><!-- 품절 : class="sold_out" -->
                     <div class="rangking same">
-                        <em class="rank">03</em>
-                        <em class="rank_icon"></em>
-                    </div>
-                    <div class="product_pic">
-                        <button class="evt_good_count">
-                            <div class="icon"></div>
-                            <!-- <div class="txt"></div> -->
-                        </button>
-                        <img src="../../images/temp/@img_now01.jpg" class="bd_img" alt="" >
-                    </div>
-                    <div class="product_info">
-                        <div class="company">dretec</div>
-                        <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-                        <div class="price_line">
-                            <span class="discount_rate">15%</span>
-                            <span class="final_price">9,234,000</span>
-                            <span class="price_origin">9,200,000</span>
-                        </div>
-                    </div>
-                </li>
-                <li class="prod_item">
-                    <div class="rangking up">
                         <em class="rank">04</em>
                         <em class="rank_icon"></em>
                     </div>
+
+                    <!-- product_pic -->
+                    <div class="product_pic">
+                        <span class="show_replace">
+                            <div>아쉽지만!<br>품절이예요</div>
+                            <a href="javascript:alert('품절 제품상세');"><em class="hidden">제품상세</em></a><!-- 22.05.11 추가 -->
+                            <!-- <button type="button" class="replace_prod_btn">대체상품</button> -->
+                        </span>
+                        <a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod03.jpg" class="bd_img" alt=""></a>
+                    </div>
+                    <!-- product_pic -->
+
+                    <!-- product_info -->
+                    <div class="product_info">
+                        <a href="javascript:alert('품절 제품상세');">
+                            <div class="company">dretec</div>
+                            <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">9,234,000</span>
+                                <span class="price_origin">9,200,000</span>
+                            </div>
+                            <div class="badge_line">
+                                <span class="badge rounded badge_primary_evt">쿠폰</span>
+                                <span class="badge rounded badge_default_evt">사은품</span>
+                                <span class="badge rounded badge_default_evt">무료배송</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- //product_info -->
+                </li>		
+                <!-- //prod_item : 대체 상품 (품절) -->
+
+
+                <li class="prod_item">
+                    <div class="rangking up">
+                        <em class="rank">05</em>
+                        <em class="rank_icon"></em>
+                    </div>
+
+                    <!-- product_pic -->
                     <div class="product_pic">
                         <button class="evt_good_count">
                             <div class="icon"></div>
                             <div class="txt">80</div>
                         </button>
-                        <img src="../../images/temp/@img_rank11.jpg" class="bd_img" alt="">
+                        <a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
                     </div>
+                    <!-- //product_pic -->
+
+                    <!-- product_info -->
                     <div class="product_info">
-                        <div class="company">dretec</div>
-                        <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
-                        <div class="price_line">
-                            <span class="discount_rate">15%</span>
-                            <span class="final_price">9,234,000</span>
-                            <span class="price_origin">9,200,000</span>
-                        </div>
-                        <div class="badge_line">
-                            <span class="badge rounded badge_primary_evt">쿠폰</span>
-                            <span class="badge rounded badge_default_evt">사은품</span>
-                            <span class="badge rounded badge_default_evt">무료배송</span>
-                        </div>
+                        <a href="javascript:alert('제품상세');">
+                            <div class="company">dretec</div>
+                            <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">9,234,000</span>
+                                <span class="price_origin">9,200,000</span>
+                            </div>
+                            <div class="badge_line">
+                                <span class="badge rounded badge_primary_evt">쿠폰</span>
+                                <span class="badge rounded badge_default_evt">사은품</span>
+                                <span class="badge rounded badge_default_evt">무료배송</span>
+                            </div>
+                        </a>
                     </div>
+                    <!-- //product_info -->
+                </li>
+                <li class="prod_item">
+                    <div class="rangking same">
+                        <em class="rank">06</em>
+                        <em class="rank_icon"></em>
+                    </div>
+
+                    <!-- product_pic -->
+                    <div class="product_pic">
+                        <button class="evt_good_count">
+                            <div class="icon"></div>
+                            <div class="txt">80</div>
+                        </button>
+                        <a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
+                    </div>
+                    <!-- //product_pic -->
+
+                    <!-- product_info -->
+                    <div class="product_info">
+                        <a href="javascript:alert('제품상세');">
+                            <div class="company">dretec</div>
+                            <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">9,234,000</span>
+                                <span class="price_origin">9,200,000</span>
+                            </div>
+                            <div class="badge_line">
+                                <span class="badge rounded badge_primary_evt">쿠폰</span>
+                                <span class="badge rounded badge_default_evt">사은품</span>
+                                <span class="badge rounded badge_default_evt">무료배송</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- //product_info -->
+                </li>
+                <li class="prod_item">
+                    <div class="rangking down">
+                        <em class="rank">07</em>
+                        <em class="rank_icon"></em>
+                    </div>
+
+                    <!-- product_pic -->
+                    <div class="product_pic">
+                        <button class="evt_good_count">
+                            <div class="icon"></div>
+                            <div class="txt">80</div>
+                        </button>
+                        <a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod01.jpg" class="bd_img" alt=""></a>
+                    </div>
+                    <!-- //product_pic -->
+
+                    <!-- product_info -->
+                    <div class="product_info">
+                        <a href="javascript:alert('제품상세');">
+                            <div class="company">dretec</div>
+                            <div class="title">[HBAF] 바프 시즈닝 아몬드 10종 1+1골라담기 말줄임 테스트</div>
+                            <div class="price_line">
+                                <span class="discount_rate">15%</span>
+                                <span class="final_price">9,234,000</span>
+                                <span class="price_origin">9,200,000</span>
+                            </div>
+                            <div class="badge_line">
+                                <span class="badge rounded badge_primary_evt">쿠폰</span>
+                                <span class="badge rounded badge_default_evt">사은품</span>
+                                <span class="badge rounded badge_default_evt">무료배송</span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- //product_info -->
                 </li>
             </ul>
-
+            <!-- //evt_products -->
             <!-- ranking_bubble_area --><!-- 22.05.11 삭제 -->
         </section>
         <!-- //상품 리스트 (랭킹) -->
@@ -383,35 +511,31 @@
         <!-- //더보기 -->
 
 
-				<!-- mc_cont : 광고배너 -->
-				<div class="mc_cont wel_belt02">
-					<h2 class="hidden">광고배너</h2>
-					<!-- wel_belt_banner -->
-					<div class="wel_belt_banner">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<a href="#n"><img src="../../images/temp/@img_belt_banner02.jpg" alt="모바일 첫 구매 3,000원 쿠폰"></a>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-pagination out_bottom"></div>
-					</div>
-					<!-- //wel_belt_banner -->
-				</div>
-				<!-- //mc_cont : 광고배너 -->
-			</section>
-			<!-- //cont_wrap -->
 
-		</section>
-		<!-- //contents_wrap -->
-	</main>
-	<!-- //container_wrapper -->
+        <!-- mc_cont : 광고배너 -->
+        <div class="mc_cont wel_belt02">
+            <h2 class="hidden">광고배너</h2>
+            <!-- wel_belt_banner -->
+            <div class="wel_belt_banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#n"><img src="../../images/temp/@img_belt_banner02.jpg" alt="모바일 첫 구매 3,000원 쿠폰"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination out_bottom"></div>
+            </div>
+            <!-- //wel_belt_banner -->
+        </div>
+        <!-- //mc_cont : 광고배너 -->
+    </section>
+    <!-- //cont_wrap -->
 
 
     <!-- footer -->
     <footer class="footer_wrapper">
-        <div style="height:500px;background-color:#fff;;border-top:1px solid #d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:500px;text-align:center;">Footer</div>
+        <div style="height:300px;background-color:#fff;;border-top:1px solid #d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:300px;text-align:center;">Footer</div>
     </footer>
     <!-- //footer -->
 

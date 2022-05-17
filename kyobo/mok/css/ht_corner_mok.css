@@ -302,27 +302,79 @@
 /*=========================== //TOD 메뉴 메인 (오늘만 특가)============================*/
 /*====================  코너메뉴 베스트, 신상품, 무료 배송 ============================*/
 .cont_wrap > .tit {
+  margin-bottom: 12px;
   padding: 0 20px;
   font-size: 20px;
-  line-height: 32px;
-  letter-spacing: -0.18px;
-  text-align: left;
-  margin-bottom: 7px;
   font-weight: 700;
+  line-height: 32px;
+  text-align: left;
 }
 
 .cont_wrap .mbt30 {
   margin-bottom: 30px;
 }
 
+/** MD 추천 (코너 메뉴 -신상품) **/
+.ctg_top_swiper {
+  margin-bottom: 40px;
+}
+
+.ctg_top_swiper .swiper-slide {
+  position: relative;
+  width: 217px;
+  border-radius: 12px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: auto;
+  min-height: 100% !important;
+}
+
+.ctg_top_swiper .swiper-slide .product_pic {
+  padding-top: 217px;
+  margin-bottom: 0;
+}
+
+.ctg_top_swiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.ctg_top_swiper .swiper-slide .product_info {
+  padding: 12px 20px 20px 20px;
+  background-color: #fff;
+}
+
+.ctg_top_swiper .swiper-pagination.out_bottom {
+  height: auto;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  bottom: 38px;
+  line-height: 16px;
+}
+
+.ctg_top_swiper .swiper-pagination.out_bottom .swiper-pagination-current {
+  color: #000;
+  line-height: 16px;
+}
+
+.ctg_top_swiper .swiper-pagination.out_bottom .swiper-pagination-total {
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.ctg_top_swiper .swiper-pagination.out_bottom .swiper-pagination-total:before {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .ctg_top_swiper {
   background: url(../images/guide/md_top_banner_bg.svg) no-repeat;
   background-size: cover;
-  padding: 30px 0 60px 0;
+  padding: 34px 0 68px 0;
 }
 
 .ctg_top_swiper .banner_title {
-  padding: 30px 20px 4px 20px;
+  padding: 30px 20px 0 20px;
   background: url(../images/guide/banr_title_bg.svg) no-repeat center top;
   background-size: auto 83px;
 }
@@ -793,12 +845,11 @@
 }
 
 .ctg_prod_wrap > .tit {
+  margin-bottom: 12px;
+  padding-top: 40px;
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: -0.2px;
-  line-height: 29px;
-  margin-bottom: 12px;
-  padding-top: 30px;
+  line-height: 32px;
 }
 
 .ctg_prod_wrap .ctg_floating_menues {
@@ -834,6 +885,7 @@
 
 .ctg_prod_wrap span {
   display: block;
+  font-size: 13px;
   line-height: 19px;
 }
 
@@ -868,6 +920,10 @@
 
 .ctg_prod_wrap .ctg_list_icon.row_list {
   background: url(../images/guide/ico_ctg_list_type2.svg) no-repeat center center/14px;
+}
+
+.evt_slider_wrap.evt {
+  padding-bottom: 0;
 }
 
 /*
@@ -939,11 +995,13 @@
         }
     }
 }*/
-.tit + .evt_slider_wrap.evt .evt_slider,
-.tit + .brandSwiper .evt_slider {
-  padding-top: 20px;
-}
-
+/*
+.tit + .evt_slider_wrap.evt,
+.tit + .brandSwiper {
+    .evt_slider{
+        padding-top:12px; 
+    }
+}*/
 /*================================  //카테고리 메인 ===================================*/
 /*==================================  브랜드 메인 =====================================*/
 .brand_card {
@@ -1105,41 +1163,45 @@
 }
 
 .vodeo_wrap {
-  padding: 30px 20px 0 20px;
+  padding: 40px 20px 0 20px;
 }
 
 .vodeo_wrap .tit {
+  padding-right: 20px;
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: -0.2px;
-  line-height: 29px;
-  padding-right: 20px;
+  line-height: 32px;
 }
 
 .vodeo_wrap .sub_tit {
   margin-top: 5px;
-  line-height: 20px;
   color: #595959;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .vodeo_wrap .video_item {
   position: relative;
-  margin-top: 20px;
+  margin-top: 12px;
   padding-top: 56.25%;
   overflow: hidden;
 }
 
 .vodeo_wrap .video_item .evt_video {
   position: absolute;
-  width: 100%;
-  height: 100%;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
 }
 
 .coupon_swiper {
-  padding: 30px 0 0 20px;
+  padding: 40px 0 0 20px;
+}
+
+.coupon_swiper .evt_slider {
+  padding-top: 12px;
 }
 
 .coupon_swiper .evt_slider .evt_item {
@@ -1151,9 +1213,17 @@
 }
 
 .coupon_swiper .evt_slider .cupon_info .discount {
+  position: static;
   float: none;
-  font-size: 20px;
+  width: auto;
+  height: auto;
+  background: none;
   margin: 0;
+  color: #da2128;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
 }
 
 .coupon_swiper .evt_slider .cupon_info .title {
