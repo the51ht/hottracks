@@ -623,10 +623,22 @@ button.btn_lg {
   z-index: 20;
 }
 
+.wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item .sub_depth_grid {
+  width: inherit;
+}
+
+.wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item .sub_depth_grid .sub_depth_box {
+  width: 146px;
+}
+
 .wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item:nth-child(n+3) {
   position: relative;
   margin-left: 0;
   padding-left: 20px;
+}
+
+.wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item:nth-child(n+3) .btn_sub_depth {
+  max-width: 280px;
 }
 
 .wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item:nth-child(n+3):before {
@@ -645,7 +657,8 @@ button.btn_lg {
 }
 
 .sub_depth_grid_evt .sub_depth_box {
-  width: 280px !important;
+  width: 312px !important;
+  padding: 0 17px 0 15px !important;
 }
 
 /*** 메뉴 > 최근 본 ***/
