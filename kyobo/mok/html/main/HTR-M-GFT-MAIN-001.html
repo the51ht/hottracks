@@ -4,22 +4,14 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<meta name="Author" content="SEO 기획 정의 내용 반영" />
-<meta name="keywords" content="SEO 기획 정의 내용 반영" />
-<meta name="description" content="SEO 기획 정의 내용 반영" />
-<meta name="subject" content="SEO 기획 정의 내용 반영" />
-<!-- DESC : 성인컨텐츠인 경우 추가하는 meta tag -->
-<!--<meta name="rating" content="adult" />-->
-
-<meta name="Robots" content="noindex, nofollow" />
-<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileColor" content="#da212">
 <meta property="og:title" content="핫트랙스">
 <meta property="og:description" content="">
 <meta property="og:type" content="website">
 <meta property="og:image" content="../../images/guide/sns.jpg">
 <link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
-<title>선물추천</title>
+<title>선물추천 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
@@ -60,8 +52,8 @@
 </head>
 
 <body>
- <!-- SkipNav -->
- <div class="skip_nav_wrap">
+<!-- SkipNav -->
+<div class="skip_nav_wrap">
     <a href="#headerWrapper">메뉴 바로가기</a>
     <a href="#containerWrapper">본문 바로가기</a>
 </div>
@@ -73,12 +65,13 @@
     <header id="headerWrapper" class="ht_ header_wrapper">
         <div class="header_left">
             <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
-            <!--<a href="../main/HTR-M-WEL-MAIN-000.html" class="btn_header_home"><span class="hidden">홈으로</span></a>-->
         </div>
-        <div class="header_center">
-            <div class="page_title prod_detail"></div>
-        </div>
-
+        <!--<div class="header_right">
+            <a href="#" class="btn_header_cart">
+                <span class="hidden">장바구니</span>
+                <span class="count">99</span>
+            </a>
+        </div>-->
     </header>
     <!-- //header -->
 
@@ -293,7 +286,42 @@ $(function(){
         <!-- //mc_cont : 내가 쓴 고민 -->
     </div>
     <!-- //선물추천 컨텐츠 -->
-</div>   
+
+
+    <!-- footer -->
+    <footer class="footer_wrapper">
+        <div style="height:500px;background-color:#fff;;border-top:1px solid #d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:500px;text-align:center;">Footer</div>
+    </footer>
+    <!-- //footer -->
+
+
+    <!-- docker_wrapper -->
+    <section class="docker_wrapper">
+        <!-- 탑버튼 -->
+        <div class="floating_wrapper">
+            <a href="#top" class="btn_go_top"><span class="hidden">최상위 화면으로</span></a>
+        </div>
+        <!-- //탑버튼 -->
+
+        <!-- docker_list -->
+        <ul class="docker_list">
+            <li class="docker_item"><a href="#" class="btn_docker_home"><span class="hidden">홈</span></a></li>
+            <li class="docker_item"><a href="#" class="btn_docker_search"><span class="hidden">검색</span></a></li>
+            <li class="docker_item my"><!-- 로그인 시 class="login" 추가 -->
+                <a href="#" class="btn_docker_my">
+                    <span class="img_box">
+                        <img src="http://image.kyobobook.co.kr/ink/html/ux/next/mok/assets/common/temporary/temp_docker_login_mok.png" alt="마이룸 임시이미지" />
+                    </span>
+                    <span class="hidden">마이룸</span>
+                </a>
+            </li>
+            <li class="docker_item"><a href="#" class="btn_docker_history"><span class="hidden">최근본상품</span></a></li>
+            <li class="docker_item"><a href="../guide/HTR-M-COM-CAT-001.html" class="btn_docker_menu"><span class="hidden">전체메뉴</span></a></li>
+        </ul>
+        <!-- //docker_list -->
+    </section>
+    <!-- //docker_wrapper -->
+</div>
 <!-- //wrapper -->
 </body>
 </html>

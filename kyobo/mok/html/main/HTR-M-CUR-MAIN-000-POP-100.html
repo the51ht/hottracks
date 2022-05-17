@@ -4,22 +4,14 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<meta name="Author" content="SEO 기획 정의 내용 반영" />
-<meta name="keywords" content="SEO 기획 정의 내용 반영"/>
-<meta name="description" content="SEO 기획 정의 내용 반영" />
-<meta name="subject" content="SEO 기획 정의 내용 반영" />
-<!-- DESC : 성인컨텐츠인 경우 추가하는 meta tag -->
-<!--<meta name="rating" content="adult" />-->
-
-<meta name="Robots" content="noindex, nofollow" />
-<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileColor" content="#da212">
 <meta property="og:title" content="핫트랙스">
 <meta property="og:description" content="">
 <meta property="og:type" content="website">
 <meta property="og:image" content="../../images/guide/sns.jpg">
 <link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
-<title>큐레이션 메인 - 취향 발견</title>
+<title>큐레이션 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
@@ -35,6 +27,7 @@
 <link rel="stylesheet" href="../../css/ht_css_mok.css">
 <link rel="stylesheet" href="../../css/ht_template_mok.css">
 <!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+
 
 <!-- Plug-In javascript -->
 <script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -59,11 +52,20 @@
 </head>
 
 <body>
+<!-- SkipNav -->
+<div class="skip_nav_wrap">
+    <a href="#headerWrapper">메뉴 바로가기</a>
+    <a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //SkipNav -->
+
+<!-- wrapper -->
 <div class="ht_ wrapper">
 	<p style="margin:50px 0;">
 		<button type="button" class="btn_sm btn_primary" data-role="btn-dialog" data-target="#popProd" style="width:100%;"><span class="text">이럴 땐? 이런상품 / #popProd</span></button>
 	</p>
 </div>
+
 <script>
 $(function(){
 	$('#popProd').dialog({
@@ -85,47 +87,51 @@ $(function(){
 	<!-- dialog_contents -->
 	<div class="dialog_contents">
 		<!-- prod_list -->
-		<ul class="prod_list">
+		<ul class="prod_list"><!-- 1단 class="ty02" -->
 			<!-- .li 반복 -->
 			<li class="li">
-				<a href="#n">
-					<div class="img">
-						<img src="../../images/temp/@img_prod01.jpg" alt="">
-						<p class="prod_like_count active"><span>999+</span></p><!-- 좋아요 활성화 class="active" -->
-						<!-- prod_soldout_msg -->
-						<!--<div class="prod_soldout_msg">
-							<div class="prod_soldout_msg_txt">
-								<p>아쉽지만<br>품절이에요!</p>
-								<span>대체상품</span>
-							</div>
-						</div>-->
-						<!-- //prod_soldout_msg -->
-					</div>
+				<div class="img">
+					<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod01.jpg" alt=""></a>
+					<button class="prod_like_count active"><span>999+</span></button><!-- 좋아요 활성화 class="active" -->
+				</div>
+				<a href="javascript:alert('제품상세');">
 					<ul class="txt">
-						<!--<li class="s0">dretec</li>-->
 						<li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
 						<li class="s2">
 							<strong>50%</strong>
 							<span>134,000</span>
 							<em>129,000</em>
 						</li>
-						<!--<li class="ico_marker_area">
-							<span class="ico_marker on">쿠폰</span>
-							<span class="ico_marker">사은품</span>
-							<span class="ico_marker">무료배송</span>
-						</li>-->
 					</ul>
 				</a>
 			</li>
 			<!-- //.li 반복 -->
 
 
+			<!-- 19 세 상품 -->
 			<li class="li">
-				<a href="#n">
-					<div class="img">
-						<img src="../../images/temp/@img_prod02.jpg" alt="">
-						<p class="prod_like_count"><span>999+</span></p>
-					</div>
+				<div class="img">
+					<a href="javascript:alert('19세');"><img src="../../images/guide/img_19.jpg" alt=""></a>
+				</div>
+				<a href="javascript:alert('제품상세');">
+					<ul class="txt">
+						<li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
+						<li class="s2">
+							<strong>50%</strong>
+							<span>134,000</span>
+							<em>129,000</em>
+						</li>
+					</ul>
+				</a>
+			</li>
+			<!-- //19 세 상품 -->
+
+			<li class="li">
+				<div class="img">
+					<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod03.jpg" alt=""></a>
+					<button class="prod_like_count active"><span>999+</span></button><!-- 좋아요 활성화 class="active" -->
+				</div>
+				<a href="javascript:alert('제품상세');">
 					<ul class="txt">
 						<li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
 						<li class="s2">
@@ -137,11 +143,11 @@ $(function(){
 				</a>
 			</li>
 			<li class="li">
-				<a href="#n">
-					<div class="img">
-						<img src="../../images/temp/@img_prod03.jpg" alt="">
-						<p class="prod_like_count"><span>999+</span></p>
-					</div>
+				<div class="img">
+					<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod04.jpg" alt=""></a>
+					<button class="prod_like_count active"><span>999+</span></button><!-- 좋아요 활성화 class="active" -->
+				</div>
+				<a href="javascript:alert('제품상세');">
 					<ul class="txt">
 						<li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
 						<li class="s2">
@@ -153,11 +159,11 @@ $(function(){
 				</a>
 			</li>
 			<li class="li">
-				<a href="#n">
-					<div class="img">
-						<img src="../../images/temp/@img_prod04.jpg" alt="">
-						<p class="prod_like_count"><span>999+</span></p>
-					</div>
+				<div class="img">
+					<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod05.jpg" alt=""></a>
+					<button class="prod_like_count active"><span>999+</span></button><!-- 좋아요 활성화 class="active" -->
+				</div>
+				<a href="javascript:alert('제품상세');">
 					<ul class="txt">
 						<li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
 						<li class="s2">
@@ -169,27 +175,11 @@ $(function(){
 				</a>
 			</li>
 			<li class="li">
-				<a href="#n">
-					<div class="img">
-						<img src="../../images/temp/@img_prod05.jpg" alt="">
-						<p class="prod_like_count"><span>999+</span></p>
-					</div>
-					<ul class="txt">
-						<li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
-						<li class="s2">
-							<strong>50%</strong>
-							<span>134,000</span>
-							<em>129,000</em>
-						</li>
-					</ul>
-				</a>
-			</li>
-			<li class="li">
-				<a href="#n">
-					<div class="img">
-						<img src="../../images/temp/@img_prod06.jpg" alt="">
-						<p class="prod_like_count"><span>999+</span></p>
-					</div>
+				<div class="img">
+					<a href="javascript:alert('제품상세');"><img src="../../images/temp/@img_prod06.jpg" alt=""></a>
+					<button class="prod_like_count active"><span>999+</span></button><!-- 좋아요 활성화 class="active" -->
+				</div>
+				<a href="javascript:alert('제품상세');">
 					<ul class="txt">
 						<li class="s1">엑토 레트로 블루투스 멀티페어링 풀배열 키보드 B503</li>
 						<li class="s2">
@@ -202,6 +192,7 @@ $(function(){
 			</li>
 		</ul>
 		<!-- //prod_list  -->
+
 
 		<button class="btn_more_view"><span><em class="hidden">잊고 있는 그 상품</em>더보기</span></button>
 	</div>

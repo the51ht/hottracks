@@ -2239,7 +2239,7 @@
 
 /*** 실시간 쇼핑 검색어 : .wel_search ***/
 .wel_search {
-  padding-top: 45px;
+  padding: 45px 20px 40px 20px !important;
   background: #eee;
 }
 
@@ -2259,6 +2259,14 @@
   height: 108px;
   background: url("../images/main/ico_wel_search.svg") center/100% no-repeat;
   content: "";
+}
+
+.wel_search:last-child {
+  margin-bottom: -60px;
+}
+
+.wel_search + .wel_belt02 {
+  margin-top: 0;
 }
 
 /* wel_search_cont  */
@@ -3169,7 +3177,7 @@
 }
 
 .wel_belt02 {
-  margin: 60px 0 -20px 0;
+  margin: 60px 0 -60px 0;
   padding: 0;
 }
 
@@ -3964,10 +3972,6 @@
 }
 
 /*** 이럴 땐? 이런상품 : .cur_prod ***/
-.cur_prod {
-  padding: 60px 20px;
-}
-
 .cur_prod .mc_tit {
   margin-bottom: 20px;
   font-size: 30px;
@@ -4526,7 +4530,7 @@
 
 /*** 큐레이션 상세 : .cur_view ***/
 .cur_view {
-  padding: 0 0 45px 0;
+  padding: 0 0 40px 0;
   overflow: hidden;
 }
 
@@ -4600,7 +4604,13 @@
 
 /*** 더 많은 라이프스타일 큐레이션 보기 : .cur_more_cont ***/
 .cur_more_cont {
+  margin-bottom: -60px;
+  padding: 40px 20px !important;
   background: #f7f7f7;
+}
+
+.cur_more_cont + .wel_belt02 {
+  margin-top: 60px;
 }
 
 .tag_li {
@@ -6475,7 +6485,7 @@
 
 /* .gft_main */
 .gft_main {
-  padding: 40px 20px 50px 20px !important;
+  padding: 40px 20px !important;
   background: #8965ff;
   text-align: center;
 }
@@ -6936,7 +6946,7 @@
 /* gft_need_area */
 .gft_need_area {
   position: relative;
-  margin: 0 -20px 40px -20px;
+  margin: 0 -20px 45px -20px;
   background: #fff url("../images/main/bg_wel_md_pick.jpg") center top/950px auto repeat;
 }
 
@@ -6947,7 +6957,7 @@
 
 .gft_need_cont .swiper-slide {
   width: 58%;
-  padding: 30px 0 50px 0;
+  padding: 30px 0 40px 0;
 }
 
 .gft_need_cont .swiper-slide .today_box {
@@ -7191,7 +7201,7 @@
 
 /** 선물이 고민된다면, 핫트에 물어보세요 : .gft_question **/
 .gft_question {
-  padding: 48px 20px 40px 20px !important;
+  padding: 48px 20px 0 20px !important;
   overflow: hidden;
 }
 
@@ -7756,6 +7766,10 @@
 }
 
 /*** 선물 상세 : .gft_prod ***/
+.gft_prod {
+  padding-bottom: 0;
+}
+
 .gft_prod .mc_tit02 img {
   height: 27px;
   margin-left: 10px;
@@ -9694,6 +9708,9 @@
 /** 이사 예정 **/
 .cont_wrap {
   /*position:relative;padding-bottom:40px;background:#fff;*/
+  /*.wel_belt02 {
+        margin:40px 0 -40px 0;
+    }*/
 }
 
 .cont_wrap .mdl_selec_list_wrap:last-child {
@@ -9710,10 +9727,6 @@
   opacity: 1 !important;
   -webkit-animation: none !important;
           animation: none !important;
-}
-
-.cont_wrap .wel_belt02 {
-  /*margin:40px 0 -40px 0;*/
 }
 
 .cont_wrap.main_cont_wrap .btn_more_div + .wel_belt02 {
