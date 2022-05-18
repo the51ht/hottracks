@@ -1111,23 +1111,21 @@
 	flex-flow: row nowrap;
     margin-bottom:16px;
 	.cmt_img_item {
-		width:36px;
-		height:36px;
-		margin-right:12px;
-		flex-shrink: 0;
-		border-radius: 4px;
-		overflow:hidden;
+		position: relative;width:36px;height:36px;margin-right:12px;flex-shrink: 0;border-radius:50%;overflow:hidden;transition:all 0.4s;
 		&:last-of-type {
 			margin-right: 0px;
 		}
 		img {
 			width:100%;height:100%;object-fit:scale-down;
 		}
-		&.active {
-			border:4px solid #000;
-		}
-		&.active_non img {
-			opacity: 0.6;
+        &.active {
+            overflow:hidden;
+            &:before {
+                position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;border:2px solid #000;box-sizing:border-box;content:"";
+            }
+        }
+		&.active_non {
+			opacity: 0.4;
 		}
 	}
 }
