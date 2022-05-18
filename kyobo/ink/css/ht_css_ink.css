@@ -480,6 +480,11 @@ button.btn_lg {
   vertical-align: top;
 }
 
+.wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list .gnb_item:nth-child(2) img {
+  height: 24px;
+  margin: -1px 3px 0 0;
+}
+
 .wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list .gnb_item .gnb_marker {
   position: relative;
   padding-right: 6px;
@@ -623,12 +628,32 @@ button.btn_lg {
   z-index: 20;
 }
 
+.wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item .btn_sub_depth {
+  max-width: 135px;
+  padding-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item .btn_sub_depth:after {
+  position: absolute;
+  right: 0px;
+}
+
 .wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item .sub_depth_grid {
   width: inherit;
 }
 
 .wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item .sub_depth_grid .sub_depth_box {
   width: 146px;
+}
+
+.wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item .sub_depth_grid .sub_depth_box .sub_depth_list .depth_item .depth_link {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inherit;
 }
 
 .wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item:nth-child(n+3) {
@@ -638,7 +663,7 @@ button.btn_lg {
 }
 
 .wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item:nth-child(n+3) .btn_sub_depth {
-  max-width: 280px;
+  max-width: 300px;
 }
 
 .wrapper .container_wrapper .breadcrumb_wrap .breadcrumb_inner .breadcrumb_list .breadcrumb_item:nth-child(n+3):before {
@@ -657,8 +682,10 @@ button.btn_lg {
 }
 
 .sub_depth_grid_evt .sub_depth_box {
-  width: 312px !important;
+  width: auto !important;
+  max-width: 312px;
   padding: 0 17px 0 15px !important;
+  min-width: 142px !important;
 }
 
 /*** 메뉴 > 최근 본 ***/
