@@ -1174,7 +1174,7 @@ button.btn_text_link:active .text, button.btn_text_link:focus .text {
 
 /* Btn : Contents */
 .mc_cont .btn_area {
-  margin: 30px -2px 0 -2px;
+  margin: 32px -2px 0 -2px;
   padding: 0;
   font-size: 0;
 }
@@ -5086,9 +5086,12 @@ body:before {
   padding-bottom: 80px;
 }
 
-.wrapper.ht_ .cont_wrap,
-.wrapper.ht_ .container_wrapper {
+.wrapper.ht_ .cont_wrap {
   padding-bottom: 60px;
+}
+
+.wrapper.ht_ .container_wrapper {
+  padding-bottom: 0px;
 }
 
 .wrapper.ht_ .cont_wrap + .wel_main_wrap {
@@ -5717,6 +5720,7 @@ body:before {
 }
 
 .wrapper.ht_ header.scroll_down + .cont_wrap .sticky_selec,
+.wrapper.ht_ header.scroll_down + .content_wrap .sticky_selec,
 .wrapper.ht_ header.scroll_down + .container_wrapper .sticky_selec {
   top: -1px;
 }
@@ -7993,16 +7997,22 @@ body:before {
 }
 
 .list_evt_area {
-  padding-top: 20px;
+  padding-top: 24px;
 }
 
 .list_evt_area .evt_item {
-  margin-top: 42px;
+  position: relative;
+  margin-top: 24px;
   padding: 0 20px;
 }
 
-.list_evt_area .evt_item:first-of-type {
+.list_evt_area .evt_item:first-child {
   margin: 0;
+}
+
+.list_evt_area .evt_item:first-child .promotion_upper_wrap,
+.list_evt_area .evt_item:first-child .thumnail_evt {
+  margin-top: 0px !important;
 }
 
 .list_evt_area .thumnail_evt {
@@ -8123,6 +8133,12 @@ body:before {
      object-fit: contain;
 }
 
+.list_evt_area .discount_icon + .promotion_upper_wrap,
+.list_evt_area .discount_icon + .thumnail_evt,
+.list_evt_area .discount_icon + a .thumnail_evt {
+  margin-top: 40px;
+}
+
 .evt_slider {
   padding-top: 20px;
   padding-right: 20px;
@@ -8151,7 +8167,7 @@ body:before {
   font-weight: 700;
   line-height: 48px;
   text-align: center;
-  z-index: 10;
+  z-index: 3;
 }
 
 .evt_slider .evt_item .img_wrap {
@@ -8279,16 +8295,16 @@ body:before {
 
 .list_evt_area .evt_item .discount_icon {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   color: #fff;
   text-align: center;
   line-height: 48px;
-  left: 13px;
-  top: -17px;
+  left: 12px;
+  top: -18px;
   z-index: 10;
   font-size: 12px;
-  background: url(../images/guide/lank_hot.svg) no-repeat center bottom/50px;
+  background: url(../images/guide/lank_hot.svg) no-repeat center bottom/52px;
   font-weight: 700;
 }
 
