@@ -462,7 +462,7 @@ function tabSwiper(){
             tabListWidthTotal += tabList.eq(i).width();
         };
 
-        if(tabListWidthTotal > 1200){
+        if(tabListWidthTotal > 1000){
             tabSwiperCont = new Swiper(this, slideOption);
         }
 
