@@ -114,7 +114,10 @@
 		float:left;width:13px;height:14px;margin-top:6px;background:url(../images/guide/ico_prod_like_icon.svg) center /13px no-repeat
 	}
 	.txt {
-		float:left;margin-left:4px;
+		float:left;min-height:28px;margin-left:4px;
+		&:empty {
+			margin-left:0;
+		}
 	}
 	&.active {
 		.icon {
