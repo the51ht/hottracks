@@ -265,14 +265,12 @@ body {
 .wrapper.ht_ header.scroll_down {
     transform:translateY(-100%);
 }
-.ht_.contents_detail_view header.scroll_down {
-    transform:translateY(0);
-}
 
 .evt_quick_menu_slide,
 .ctg_topMenu,
 .ctg_floating_line,
-.sticky_selec {
+.sticky_selec,
+.tab_wrap .tab_list_wrap {
     transition:top 0.23s;
 }
 .wrapper.ht_ {
@@ -292,6 +290,9 @@ body {
     header.scroll_down + .content_wrap .sticky_selec,
     header.scroll_down + .container_wrapper .sticky_selec {
         top:-1px;
+    }
+    header.scroll_down + .container_wrapper .tab_wrap .tab_list_wrap {
+        top:0;
     }
 }
 
@@ -382,7 +383,10 @@ body {
             }
         }
         .prod_purchase_info_wrap {
-            padding:6px 9px;
+            padding:6px 9px 20px 9px;
+        }
+        .btn_go_back {
+            display:none;
         }
     }
     .footer_wrapper {
@@ -584,16 +588,6 @@ body {
                 left:auto;right:0;margin-left:0;margin-right:-60px;
             }
         }
-
-        .btn_go_top {
-            display:block;position:fixed;right:-18px;bottom:92px;width:47px;height:47px;background-color:#fff;border:1px solid #d5d5d5;border-radius:100%;box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.1);transform:translateY(calc(constant(safe-area-inset-bottom) * -1));transform:translateY(calc(env(safe-area-inset-bottom) * -1));opacity:0;z-index:100;transition:right .23s,opacity .23s;
-            &:before {
-                display:block;width:13px;height:18px;margin:13px auto 0;background-image:url(../images/guide/arw_go_top_mok.png);background-size:13px 18px;content:"";
-            }
-            &.active {
-                opacity:1;right:18px;
-            }
-        }
         &:not(.docker_fixed):after {
             position:absolute;left:0;bottom:0;width:100%;padding-bottom:calc(constant(safe-area-inset-bottom));padding-bottom:calc(env(safe-area-inset-bottom));background-color:#fff;content:"";
         }
@@ -603,6 +597,16 @@ body {
         &.docker_fixed {
             padding-bottom:calc(constant(safe-area-inset-bottom));padding-bottom:calc(env(safe-area-inset-bottom));background-color:#fff;
         }
+    }
+}
+
+.btn_go_top {
+    display:block;position:fixed;right:-18px;bottom:92px;width:47px;height:47px;background-color:#fff;border:1px solid #d5d5d5;border-radius:100%;box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.1);transform:translateY(calc(constant(safe-area-inset-bottom) * -1));transform:translateY(calc(env(safe-area-inset-bottom) * -1));opacity:0;z-index:100;transition:right .23s,opacity .23s;
+    &:before {
+        display:block;width:13px;height:18px;margin:13px auto 0;background-image:url(../images/guide/arw_go_top_mok.png);background-size:13px 18px;content:"";
+    }
+    &.active {
+        opacity:1;right:18px;
     }
 }
 

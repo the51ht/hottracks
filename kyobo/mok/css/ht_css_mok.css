@@ -5693,15 +5693,11 @@ body:before {
           transform: translateY(-100%);
 }
 
-.ht_.contents_detail_view header.scroll_down {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .evt_quick_menu_slide,
 .ctg_topMenu,
 .ctg_floating_line,
-.sticky_selec {
+.sticky_selec,
+.tab_wrap .tab_list_wrap {
   -webkit-transition: top 0.23s;
   transition: top 0.23s;
 }
@@ -5723,6 +5719,10 @@ body:before {
 .wrapper.ht_ header.scroll_down + .content_wrap .sticky_selec,
 .wrapper.ht_ header.scroll_down + .container_wrapper .sticky_selec {
   top: -1px;
+}
+
+.wrapper.ht_ header.scroll_down + .container_wrapper .tab_wrap .tab_list_wrap {
+  top: 0;
 }
 
 /*** Contents ***/
@@ -5852,7 +5852,11 @@ body:before {
 }
 
 .wrapper.ht_ .footer_wrap .prod_purchase_info_wrap {
-  padding: 6px 9px;
+  padding: 6px 9px 20px 9px;
+}
+
+.wrapper.ht_ .footer_wrap .btn_go_back {
+  display: none;
 }
 
 .wrapper.ht_ .footer_wrapper {
@@ -6325,7 +6329,29 @@ body:before {
   margin-right: -60px;
 }
 
-.wrapper.ht_ .docker_wrapper .btn_go_top {
+.wrapper.ht_ .docker_wrapper:not(.docker_fixed):after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: calc(constant(safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  background-color: #fff;
+  content: "";
+}
+
+.wrapper.ht_ .docker_wrapper.scroll_down {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.wrapper.ht_ .docker_wrapper.docker_fixed {
+  padding-bottom: calc(constant(safe-area-inset-bottom));
+  padding-bottom: calc(env(safe-area-inset-bottom));
+  background-color: #fff;
+}
+
+.btn_go_top {
   display: block;
   position: fixed;
   right: -18px;
@@ -6347,7 +6373,7 @@ body:before {
   transition: right .23s,opacity .23s;
 }
 
-.wrapper.ht_ .docker_wrapper .btn_go_top:before {
+.btn_go_top:before {
   display: block;
   width: 13px;
   height: 18px;
@@ -6357,31 +6383,9 @@ body:before {
   content: "";
 }
 
-.wrapper.ht_ .docker_wrapper .btn_go_top.active {
+.btn_go_top.active {
   opacity: 1;
   right: 18px;
-}
-
-.wrapper.ht_ .docker_wrapper:not(.docker_fixed):after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding-bottom: calc(constant(safe-area-inset-bottom));
-  padding-bottom: calc(env(safe-area-inset-bottom));
-  background-color: #fff;
-  content: "";
-}
-
-.wrapper.ht_ .docker_wrapper.scroll_down {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-}
-
-.wrapper.ht_ .docker_wrapper.docker_fixed {
-  padding-bottom: calc(constant(safe-area-inset-bottom));
-  padding-bottom: calc(env(safe-area-inset-bottom));
-  background-color: #fff;
 }
 
 @media only screen and (min-width: 750px) {

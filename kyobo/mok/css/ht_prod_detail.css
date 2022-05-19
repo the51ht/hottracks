@@ -209,7 +209,10 @@ button.btn_md_second {
 .link_delivery {
   position: relative;
   display: inline-block;
-  font-size: 14px;
+  margin-top: 4px;
+  color: #595959;
+  font-size: 13px;
+  line-height: 19px;
 }
 
 .link_delivery.ico_more {
@@ -308,31 +311,33 @@ button.btn_md_second {
 
 /* content title */
 .tit_con_area {
-  padding: 16px 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .tit_con_area .tit {
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: 700;
+  line-height: 32px;
 }
 
 .tit_con_area .sub {
-  font-size: 14px;
+  margin-top: 8px;
   color: #767676;
-}
-
-.tit_sub_area {
-  padding: 20px 0;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .tit_sub_area .tit {
-  font-size: 22px;
-  font-weight: bolder;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
 }
 
 .tit_sub_area .sub {
-  font-size: 14px;
+  margin-top: 4px;
   color: #767676;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .rating_score_wrap {
@@ -1204,21 +1209,11 @@ button.btn_md_second {
 
 /* hotpick 간격 */
 .hotpick_area {
-  padding-top: 12px;
-  margin-bottom: 22px;
-}
-
-.hotpick_area .tit_sub_area {
-  padding: 12px 0 16px 0;
-}
-
-.hotpick_area .tit_sub_area .tit {
-  font-size: 16px;
-  line-height: 26px;
+  margin: 32px 0;
 }
 
 .hotpick_area .hotpickslide_wrap {
-  margin-top: -4px;
+  margin-top: 16px;
   position: relative;
   overflow: hidden;
 }
@@ -1518,6 +1513,7 @@ button.btn_md_second {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: -10px;
 }
 
 .product_deliinfo_area .info_wrap .list_info .txt_dt {
@@ -1575,7 +1571,7 @@ button.btn_md_second {
   background-color: #F4F4F4;
   border: solid 1px #000;
   border-radius: 4px;
-  margin-bottom: 20px;
+  margin-top: 14px;
   padding: 12px 20px;
 }
 
@@ -1800,7 +1796,7 @@ button.btn_md_second {
 .rating_container .rating_stars .filled_stars .star.xsmall:after {
   content: "";
   display: inline-block;
-  background: url(../images/filled_star.svg) no-repeat 0 0;
+  background: url(../images/guide/filled_star.svg) no-repeat 0 0;
   background-size: 10px 10px;
   width: 10px;
   height: 10px;
@@ -1813,7 +1809,7 @@ button.btn_md_second {
 .rating_container .rating_stars .filled_stars .star.small:after {
   content: "";
   display: inline-block;
-  background: url(../images/filled_star.svg) no-repeat 0 0;
+  background: url(../images/guide/filled_star.svg) no-repeat 0 0;
   background-size: 13px 13px;
   width: 13px;
   height: 13px;
@@ -1826,7 +1822,7 @@ button.btn_md_second {
 .rating_container .rating_stars .filled_stars .star.large:after {
   content: "";
   display: inline-block;
-  background: url(../images/filled_star.svg) no-repeat 0 0;
+  background: url(../images/guide/filled_star.svg) no-repeat 0 0;
   background-size: 23px 23px;
   width: 23px;
   height: 23px;
@@ -1834,20 +1830,8 @@ button.btn_md_second {
 
 /*// 공통 별점 블럭 */
 /* 베스트 리뷰 */
-.review_best_area .tit_con_area {
-  margin-bottom: 24px;
-}
-
-.review_best_area .tit_con_area .tit {
-  margin-bottom: 8px;
-  line-height: 32px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.review_best_area .tit_con_area .sub {
-  font-size: 14px;
-  color: #767676;
+.review_best_area {
+  padding-top: 16px;
 }
 
 .review_best_area .rating_area {
@@ -2240,6 +2224,10 @@ button.btn_md_second {
   background-size: 17px 17px;
 }
 
+.all_qa_area {
+  padding: 16px 0;
+}
+
 .all_qa_area .all_qa_wrap {
   border-top: solid 1px #000;
   margin-top: 20px;
@@ -2446,6 +2434,10 @@ button.btn_md_second {
 
 .all_qa_area .review_inner.active .box_qa {
   display: block;
+}
+
+.all_qa_area .btn_more_area {
+  padding-bottom: 0;
 }
 
 /**/
@@ -2842,16 +2834,6 @@ button.btn_md_second {
 }
 
 /* recomend area  */
-.recomened_area {
-  padding-top: 16px;
-}
-
-.recomened_area .tit {
-  line-height: 32px;
-  font-size: 20px;
-  font-weight: 700;
-}
-
 .recomened_area .list_item {
   margin: 0 -10px;
 }
@@ -3059,6 +3041,10 @@ button.btn_md_second {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
+}
+
+.recomened_area .evt_products {
+  padding-top: 0;
 }
 
 /* 불릿 아이템 */
@@ -3435,19 +3421,14 @@ button.btn_md_second {
 
 .all_review_wrap + .btn_more_area {
   padding-top: 25px;
-  padding-bottom: 16px;
 }
 
 .delivery_area {
-  padding-bottom: 10px;
+  padding: 16px 0 6px 0;
 }
 
-.delivery_area .tit_con_area {
-  margin-bottom: -10px;
-}
-
-.recomened_area .tit_con_area {
-  padding-bottom: 0;
+.recomened_area {
+  padding-top: 16px;
 }
 
 /* 도서산간 배송메세지 */
@@ -3667,7 +3648,6 @@ button.btn_md_second {
 
 .ht_ .header_wrapper .header_center {
   position: relative;
-  height: 84px;
   padding: 4px 10px 4px;
 }
 
@@ -3677,14 +3657,14 @@ button.btn_md_second {
 
 .ht_ .header_wrapper .header_center .page_title img {
   width: 28px;
-  border-radius: 4px;
   margin-right: 10px;
+  border-radius: 4px;
 }
 
 .ht_ .header_wrapper .header_center .app_view {
   position: absolute;
-  top: 24px;
   left: 0;
+  top: 1px;
   width: 100%;
   height: 84px;
   text-align: center;
@@ -4022,7 +4002,7 @@ button.btn_md_second {
 }
 
 .ht_ .prod_detail_contents {
-  padding: 0 20px 112px;
+  padding: 0 20px 60px 20px;
 }
 
 .ht_ .prod_detail_contents .tab_content.sps-blw {
@@ -5437,7 +5417,7 @@ button.btn_md_second {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #f7f7f7;
-  margin-top: 8px;
+  margin-top: 12px;
   border-radius: 10px;
 }
 
@@ -5495,7 +5475,7 @@ button.btn_md_second {
 
 .all_review_wrap .review_reply {
   border-top: 1px solid #eaeaea;
-  padding: 10px 4px 0 4px;
+  padding: 12px 4px 0 4px;
   margin-top: 20px;
 }
 
@@ -5513,7 +5493,7 @@ button.btn_md_second {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #f7f7f7;
-  margin-top: 4px;
+  margin-top: 12px;
   border-radius: 10px;
 }
 
@@ -5908,4 +5888,8 @@ button.btn_md_second {
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .buy_result .total em {
   margin-right: 3px;
+}
+
+.wrapper.ht_.contents_detail_view {
+  padding-bottom: 79px;
 }
