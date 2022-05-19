@@ -288,11 +288,9 @@ body {
     }
     header.scroll_down + .cont_wrap .sticky_selec,
     header.scroll_down + .content_wrap .sticky_selec,
-    header.scroll_down + .container_wrapper .sticky_selec {
-        top:-1px;
-    }
+    header.scroll_down + .container_wrapper .sticky_selec,
     header.scroll_down + .container_wrapper .tab_wrap .tab_list_wrap {
-        top:0;
+        top:-1px;
     }
 }
 
@@ -376,18 +374,6 @@ body {
     /* .footer_wrap */
     .footer_wrap {
         background:#fff;
-        &.fixed_foot {
-            position:fixed;left:0;bottom:0;width:100%;z-index:10;
-            &.btm_pop_upper_foot {
-                z-index:200;
-            }
-        }
-        .prod_purchase_info_wrap {
-            padding:6px 9px 20px 9px;
-        }
-        .btn_go_back {
-            display:none;
-        }
     }
     .footer_wrapper {
         margin-top:0px;
@@ -610,9 +596,34 @@ body {
     }
 }
 
+
+
+/* 제품상세 */
+.wrapper.ht_ {
+    .fixed_foot {
+        position:fixed;left:0;bottom:0;width:100%;max-width:750px;z-index:10;
+        &.btm_pop_upper_foot {
+            z-index:200;
+        }
+    }
+    .prod_purchase_info_wrap {
+        padding:6px 9px 20px 9px;
+    }
+    .btn_go_back {
+        display:none;
+    }
+}
+
 @media only screen and (min-width:750px) {
-    .ht_.wrapper .docker_wrapper {
+    .ht_.wrapper .docker_wrapper,
+    .ht_.wrapper .fixed_foot {
         left:50%;margin-left:-375px;
+        .btn_go_top {
+            right:calc(50% - 393px);
+            &.active {
+                right:calc(50% - 375px);
+            }
+        }
     }
 }
 

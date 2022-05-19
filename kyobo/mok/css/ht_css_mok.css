@@ -5717,12 +5717,9 @@ body:before {
 
 .wrapper.ht_ header.scroll_down + .cont_wrap .sticky_selec,
 .wrapper.ht_ header.scroll_down + .content_wrap .sticky_selec,
-.wrapper.ht_ header.scroll_down + .container_wrapper .sticky_selec {
-  top: -1px;
-}
-
+.wrapper.ht_ header.scroll_down + .container_wrapper .sticky_selec,
 .wrapper.ht_ header.scroll_down + .container_wrapper .tab_wrap .tab_list_wrap {
-  top: 0;
+  top: -1px;
 }
 
 /*** Contents ***/
@@ -5837,26 +5834,6 @@ body:before {
 
 .wrapper.ht_ .footer_wrap {
   background: #fff;
-}
-
-.wrapper.ht_ .footer_wrap.fixed_foot {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.wrapper.ht_ .footer_wrap.fixed_foot.btm_pop_upper_foot {
-  z-index: 200;
-}
-
-.wrapper.ht_ .footer_wrap .prod_purchase_info_wrap {
-  padding: 6px 9px 20px 9px;
-}
-
-.wrapper.ht_ .footer_wrap .btn_go_back {
-  display: none;
 }
 
 .wrapper.ht_ .footer_wrapper {
@@ -6388,10 +6365,41 @@ body:before {
   right: 18px;
 }
 
+/* 제품상세 */
+.wrapper.ht_ .fixed_foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 750px;
+  z-index: 10;
+}
+
+.wrapper.ht_ .fixed_foot.btm_pop_upper_foot {
+  z-index: 200;
+}
+
+.wrapper.ht_ .prod_purchase_info_wrap {
+  padding: 6px 9px 20px 9px;
+}
+
+.wrapper.ht_ .btn_go_back {
+  display: none;
+}
+
 @media only screen and (min-width: 750px) {
-  .ht_.wrapper .docker_wrapper {
+  .ht_.wrapper .docker_wrapper,
+  .ht_.wrapper .fixed_foot {
     left: 50%;
     margin-left: -375px;
+  }
+  .ht_.wrapper .docker_wrapper .btn_go_top,
+  .ht_.wrapper .fixed_foot .btn_go_top {
+    right: calc(50% - 393px);
+  }
+  .ht_.wrapper .docker_wrapper .btn_go_top.active,
+  .ht_.wrapper .fixed_foot .btn_go_top.active {
+    right: calc(50% - 375px);
   }
 }
 
