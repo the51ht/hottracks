@@ -595,15 +595,17 @@
 .cmt_emoji_list {
     clear:both;height:24px;margin-top:10px;
     .emoji {
-        position:relative;float:left;width:24px;height:24px;margin-right:10px;border-radius:50%;cursor:pointer;transition:all 0.4s;
+        position:relative;float:left;width:24px;height:24px;margin-right:10px;border-radius:50%;overflow:hidden;cursor:pointer;transition:all 0.4s;
         img{
             width:100%;object-fit:cover;
         }
         &.off {
             opacity:0.2;
         }
-        &.on:before {
-            position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;border:2px solid #000;box-sizing:border-box;content:"";
+        &.on {
+            &:before {
+                position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;border:2px solid #000;box-sizing:border-box;content:"";
+            }
         }
     }
 }

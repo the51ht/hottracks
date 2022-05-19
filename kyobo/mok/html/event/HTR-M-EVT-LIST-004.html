@@ -1,168 +1,160 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <meta name="Author" content="SEO 기획 정의 내용 반영" />
-    <meta name="keywords" content="SEO 기획 정의 내용 반영" />
-    <meta name="description" content="SEO 기획 정의 내용 반영" />
-    <meta name="subject" content="SEO 기획 정의 내용 반영" />
-    <!-- DESC : 성인컨텐츠인 경우 추가하는 meta tag -->
-    <!--<meta name="rating" content="adult" />-->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+<meta name="msapplication-TileColor" content="#da212">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/guide/sns.jpg">
+<link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
+<title>이벤트 : 핫트랙스</title>
 
-    <meta name="Robots" content="noindex, nofollow" />
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta property="og:title" content="핫트랙스">
-    <meta property="og:description" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="../../images/guide/sns.jpg">
-    <link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
-    <title>교보핫트랙스-이벤트 당첨자 발표</title>
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/swiper-7.2.0/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css" />
+<!-- // Plug-In css -->
 
-    <!-- Plug-In css -->
-    <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
-    <link rel="stylesheet" href="../../vendors/lib/swiper-7.2.0/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css" />
-    <!-- // Plug-In css -->
+<!-- font css -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
+<!-- // font css -->
 
-    <!-- font css -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
-    <!-- // font css -->
+<!-- ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+<link rel="stylesheet" href="../../css/ht_css_mok.css">
+<link rel="stylesheet" href="../../css/ht_template_mok.css">
+<!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
 
 
-    <!-- ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
-    <link rel="stylesheet" href="../../css/ht_css_mok.css">
-    <link rel="stylesheet" href="../../css/ht_template_mok.css">
-    <!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script src="../../vendors/lib/swiper-7.2.0/js/swiper-bundle.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/vanillajs-scrollspy/vanillajs-scrollspy.min.js"></script>
+<!-- // Plug-In javascript -->
 
-
-    <!-- Plug-In javascript -->
-    <script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-    <script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
-    <script src="../../vendors/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-    <script src="../../vendors/lib/swiper-7.2.0/js/swiper-bundle.min.js"></script>
-    <script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
-    <script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
-    <script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
-    <script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
-    <script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
-    <script src="../../vendors/lib/vanillajs-scrollspy/vanillajs-scrollspy.min.js"></script>
-    <!-- // Plug-In javascript -->
-
-
-    <!-- ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
-    <script src="../../js/front_bak.js"></script>
-    <script src="../../js/mok.ui.js"></script>
-    <script src="../../js/ht_lib.js"></script>
-    <script src="../../js/ht_template.js"></script>
-    <script src="../../js/ht_evt_mok.js"></script>
-    <!-- //ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
+<!-- ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
+<script src="../../js/front_bak.js"></script>
+<script src="../../js/mok.ui.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<script src="../../js/ht_evt_mok.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
 </head>
 
 <body>
-    <!-- SkipNav -->
-    <div class="skip_nav_wrap">
-        <a href="#headerWrapper">메뉴 바로가기</a>
-        <a href="#containerWrapper">본문 바로가기</a>
-    </div>
-    <!-- //SkipNav -->
+<!-- SkipNav -->
+<div class="skip_nav_wrap">
+    <a href="#headerWrapper">메뉴 바로가기</a>
+    <a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //SkipNav -->
 
-    <!-- wrapper -->
-    <div class="ht_ wrapper">
-        <!-- header -->
-        <header id="headerWrapper" class="ht_ header_wrapper">
-            <div class="header_left">
-                <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
-            </div>
-            <div class="header_right">
-                <a href="#" class="btn_header_cart">
-                    <span class="hidden">장바구니</span>
-                    <span class="count">99</span>
-                </a>
-            </div>
-        </header>
-        <!-- //header -->
-         
-        <div class="evt_list_header">
-            <h2>이벤트</h2>
+<!-- wrapper -->
+<div class="ht_ wrapper">
+    <!-- header -->
+    <header id="headerWrapper" class="ht_ header_wrapper">
+        <div class="header_left">
+            <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
         </div>
+        <div class="header_right">
+            <a href="#" class="btn_header_cart">
+                <span class="hidden">장바구니</span>
+                <span class="count">99</span>
+            </a>
+        </div>
+    </header>
+    <!-- //header -->
         
-        <!-- 이벤트 퀵메뉴 -->
-        <div class="evt_quick_menu_slide">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#a">
-                            <span class="ico"></span>
-                            <span class="txt">기획전</span>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#a">
-                            <span class="ico"></span>
-                            <span class="txt">쇼핑이벤트</span>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#a">
-                            <span class="ico"></span>
-                            <span class="txt">쿠폰상품존</span>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#a">
-                            <span class="ico"></span>
-                            <span class="txt">매장이벤트</span>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#a">
-                            <span class="ico"></span>
-                            <span class="txt">컬처이벤트</span>
-                        </a>
-                    </div>
-                    <div class="swiper-slide active">
-                        <a href="#a">
-                            <span class="ico"></span>
-                            <span class="txt">당첨자발표</span>
-                        </a>
-                    </div>
+    <div class="evt_list_header">
+        <h2>이벤트</h2>
+    </div>
+    
+    <!-- 이벤트 퀵메뉴 -->
+    <div class="evt_quick_menu_slide">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#a">
+                        <span class="ico"></span>
+                        <span class="txt">기획전</span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#a">
+                        <span class="ico"></span>
+                        <span class="txt">쇼핑이벤트</span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#a">
+                        <span class="ico"></span>
+                        <span class="txt">쿠폰상품존</span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#a">
+                        <span class="ico"></span>
+                        <span class="txt">매장이벤트</span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#a">
+                        <span class="ico"></span>
+                        <span class="txt">컬처이벤트</span>
+                    </a>
+                </div>
+                <div class="swiper-slide active">
+                    <a href="#a">
+                        <span class="ico"></span>
+                        <span class="txt">당첨자발표</span>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- //이벤트 퀵메뉴 -->
 
-        <!-- 컨텐츠 -->
-        <main class="container_wrapper">
-            <section class="contents_evt_wrap">
-               <!--[2022-02-15 :scroll_tab  디자인 변경으로 마크업 변경]-->
-               <!--이벤트 메뉴 영역-->
-               <div class="scroll_tab type_black scroll_hide">
-                    <a href="#a" class="active"><span>전체</span></a>
-                    <a href="#a"><span>라이브</span></a>
-                    <a href="#a"><span>음반/영상</span></a>
-                    <a href="#a"><span>컬쳐</span></a>
-                    <a href="#a"><span>이벤트</span></a><!-- 22.03.11 수정 -->
-                </div>
-                <!--이벤트 리스트 영역-->
-                <ul class="evt_list_card_ul">
-                    <!--[2022-02-15 :scroll_tab  디자인 변경으로 마크업 변경]-->
-                    <!--최근 7일 이내 게시글인 경우 evt_list_item 에 status_new 클래스 추가-->
-                    <li class="evt_list_item status_new">
-                        <div class="category_area">
-                            <span>라이브</span>
-                        </div>
-                        <div class="list_title_area">
-                            핫트랙스 LIVE X 단순 생활 이벤트 당첨자 발표
-                        </div>
-                        <div class="list_date_area">
-                            2021.11.08
-                        </div>
-                    </li>
-                    <li class="evt_list_item">
+    <!-- 컨텐츠 -->
+    <main class="container_wrapper">
+        <!-- contents_evt_wrap -->
+        <section class="contents_evt_wrap">
+            <!-- 이벤트 메뉴 영역 -->
+            <div class="scroll_tab type_black scroll_hide">
+                <a href="#a" class="active"><span>전체</span></a>
+                <a href="#a"><span>라이브</span></a>
+                <a href="#a"><span>음반/영상</span></a>
+                <a href="#a"><span>컬쳐</span></a>
+                <a href="#a"><span>이벤트</span></a>
+            </div>
+            <!-- //이벤트 메뉴 영역 -->
+
+            <!-- 이벤트 리스트 영역 -->
+            <ul class="evt_list_card_ul">
+
+                <!--최근 7일 이내 게시글인 경우 evt_list_item 에 status_new 클래스 추가-->
+                <li class="evt_list_item status_new">
+                    <div class="category_area">
+                        <span>라이브</span>
+                    </div>
+                    <div class="list_title_area">
+                        핫트랙스 LIVE X 단순 생활 이벤트 당첨자 발표
+                    </div>
+                    <div class="list_date_area">
+                        2021.11.08
+                    </div>
+                </li>
+                <li class="evt_list_item">
                     <div class="category_area">
                         <span>일반</span>
                     </div>
@@ -172,8 +164,8 @@
                     <div class="list_date_area">
                         2021.11.08
                     </div>
-                    </li>
-                    <li class="evt_list_item">
+                </li>
+                <li class="evt_list_item">
                     <div class="category_area">
                         <span>음반/영상</span>
                     </div>
@@ -183,8 +175,8 @@
                     <div class="list_date_area">
                         2021.11.08
                     </div>
-                    </li>
-                    <li class="evt_list_item">
+                </li>
+                <li class="evt_list_item">
                     <div class="category_area">
                         <span>컬처</span>
                     </div>
@@ -194,8 +186,8 @@
                     <div class="list_date_area">
                         2021.11.08
                     </div>
-                    </li>
-                    <li class="evt_list_item">
+                </li>
+                <li class="evt_list_item">
                     <div class="category_area">
                         <span>음반/영상</span>
                     </div>
@@ -205,44 +197,74 @@
                     <div class="list_date_area">
                         2021.11.08
                     </div>
-                    </li>
-                </ul>
-                <!--더보기 버튼 more_btn에 hidden Class  추가하면 버튼 안보임-->
-                <div class="btn_more_div">
-                    <button class="more_btn">
-                        <span class="txt">더보기</span>
-                        <span class="btn_more_icon"></span>
-                    </button>
-                </div>
-            </section>
-            
-            <!-- mc_cont : 광고배너 --><!-- 22.03.11 추가 -->
-            <div class="mc_cont wel_belt02">
-                <h2 class="hidden">광고배너</h2>
-                <!-- wel_belt_banner -->
-                <div class="wel_belt_banner">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#n"><img src="../../images/temp/@img_belt_banner02.jpg" alt="모바일 첫 구매 3,000원 쿠폰"></a>
-                            </div>
+                </li>
+            </ul>
+            <!-- //이벤트 리스트 영역 -->
+
+            <!--더보기 버튼 more_btn에 hidden Class  추가하면 버튼 안보임-->
+            <div class="btn_more_div">
+                <button class="more_btn">
+                    <span class="txt">더보기(<em>10</em>/<em>59</em>) </span>
+                    <span class="btn_more_icon"></span>
+                </button>
+            </div>
+        </section>
+        <!-- //contents_evt_wrap -->
+
+        
+        <!-- mc_cont : 광고배너 --><!-- 22.03.11 추가 -->
+        <div class="mc_cont wel_belt02">
+            <h2 class="hidden">광고배너</h2>
+            <!-- wel_belt_banner -->
+            <div class="wel_belt_banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#n"><img src="../../images/temp/@img_belt_banner02.jpg" alt="모바일 첫 구매 3,000원 쿠폰"></a>
                         </div>
                     </div>
-                    <div class="swiper-pagination out_bottom"></div>
                 </div>
-                <!-- //wel_belt_banner -->
+                <div class="swiper-pagination out_bottom"></div>
             </div>
-            <!-- //mc_cont : 광고배너 -->
-        </main>
-        <!-- // 컨텐츠 -->
-        
-        <!-- footer -->
-        <footer class="footer_wrapper">
-            <div style="height:300px;background-color:#fff;;border-top:1px solid #d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:300px;text-align:center;">Footer</div>
-        </footer>
-        <!-- //footer -->
-        
-    </div>
-    <!-- //wrapper -->
+            <!-- //wel_belt_banner -->
+        </div>
+        <!-- //mc_cont : 광고배너 -->
+    </main>
+    <!-- // 컨텐츠 -->
+
+    
+    <!-- footer -->
+    <footer class="footer_wrapper">
+        <div style="height:300px;background-color:#fff;;border-top:1px solid #d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:300px;text-align:center;">Footer</div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- 독바 -->
+    <section class="docker_wrapper">
+        <!-- 탑버튼 -->
+        <div class="floating_wrapper">
+            <a href="#top" class="btn_go_top"><span class="hidden">최상위 화면으로</span></a>
+        </div>
+        <!-- // 탑버튼 -->
+
+        <ul class="docker_list">
+            <li class="docker_item"><a href="#" class="btn_docker_home"><span class="hidden">홈</span></a></li>
+            <li class="docker_item"><a href="#" class="btn_docker_search"><span class="hidden">검색</span></a></li>
+            <!-- DESC : 로그인 후 li.docker_item [ login ] class 추가 -->
+            <li class="docker_item my">
+                <a href="#" class="btn_docker_my">
+                    <span class="img_box">
+                        <img src="http://image.kyobobook.co.kr/ink/html/ux/next/mok/assets/common/temporary/temp_docker_login_mok.png" alt="" >
+                    </span>
+                    <span class="hidden">마이룸</span>
+                </a>
+            </li>
+            <li class="docker_item"><a href="#" class="btn_docker_history"><span class="hidden">최근본상품</span></a></li>
+            <li class="docker_item"><a href="../guide/HTR-M-COM-CAT-001.html" class="btn_docker_menu"><span class="hidden">전체메뉴</span></a></li>
+        </ul>
+    </section>
+    <!-- // 독바 -->
+</div>
+<!-- //wrapper -->
 </body>
 </html>

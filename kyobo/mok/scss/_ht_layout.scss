@@ -28,9 +28,11 @@ body {
     .wrap {
         background-color:#fff;padding-bottom:80px;
     }
-    .cont_wrap,
-    .container_wrapper {
+    .cont_wrap {
         padding-bottom:60px;
+    }
+    .container_wrapper {
+        padding-bottom:0px;
     }
     .cont_wrap + .wel_main_wrap {
         margin-top:-60px;
@@ -263,21 +265,18 @@ body {
 .wrapper.ht_ header.scroll_down {
     transform:translateY(-100%);
 }
-.ht_.contents_detail_view header.scroll_down {
-    transform:translateY(0);
-}
 
 .evt_quick_menu_slide,
 .ctg_topMenu,
 .ctg_floating_line,
-.sticky_selec {
+.sticky_selec,
+.tab_wrap .tab_list_wrap {
     transition:top 0.23s;
 }
 .wrapper.ht_ {
     header.scroll_down + .cont_wrap .ctg_topMenu,
     header.scroll_down + .cont_wrap .ctg_floating_line,
     header.scroll_down + .wel_main_wrap .ctg_topMenu,
-
     header.scroll_down + .container_wrapper .ctg_topMenu,
     header.scroll_down + .container_wrapper .ctg_floating_line {
         top:-1px;
@@ -287,7 +286,9 @@ body {
         top:-1px;padding-top:15px;
     }
     header.scroll_down + .cont_wrap .sticky_selec,
-    header.scroll_down + .container_wrapper .sticky_selec {
+    header.scroll_down + .content_wrap .sticky_selec,
+    header.scroll_down + .container_wrapper .sticky_selec,
+    header.scroll_down + .container_wrapper .tab_wrap .tab_list_wrap {
         top:-1px;
     }
 }
@@ -367,16 +368,18 @@ body {
 
 
 
-    /*** Footer : Old ***/
-    .wrapper.ht_ {
-        /* .footer_wrap */
-        .footer_wrap {
-            background:#fff;
-            &.fixed_foot {
-                position:fixed;left:0;bottom:0;width:100%;z-index:10;
-                &.btm_pop_upper_foot {
-                    z-index:200;
-                }
+/*** Footer : Old ***/
+.wrapper.ht_ {
+    /* .footer_wrap */
+    .footer_wrap {
+        background:#fff;
+    }
+    .footer_wrapper {
+        margin-top:0px;
+        .notice_wrap {
+            display:flex;display:-webkit-flex;justify-content:flex-start;align-items:center;flex-direction:row;height:60px;padding:0 20px;background-color:#f7f7f7;border-top:1px solid #d5d5d5;box-sizing:border-box;
+            .notice_text {
+                flex-shrink:0;display:inline-block;font-size:14px;font-weight:700;line-height:22px;letter-spacing:-.01em;vertical-align:top;
             }
             .prod_purchase_info_wrap {
                 padding:6px 9px;
@@ -612,7 +615,7 @@ body {
             }
         }
     }
-
+}
     @media (max-width:400px) {
         .wrapper.ht_ .footer_wrapper .footer_body .footer_info_box .info_text .btn_footer_link {
             margin-top:7px;
@@ -693,16 +696,6 @@ body {
                 left:auto;right:0;margin-left:0;margin-right:-60px;
             }
         }
-
-        .btn_go_top {
-            display:block;position:fixed;right:-18px;bottom:92px;width:47px;height:47px;background-color:#fff;border:1px solid #d5d5d5;border-radius:100%;box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.1);transform:translateY(calc(constant(safe-area-inset-bottom) * -1));transform:translateY(calc(env(safe-area-inset-bottom) * -1));opacity:0;z-index:100;transition:right .23s,opacity .23s;
-            &:before {
-                display:block;width:13px;height:18px;margin:13px auto 0;background-image:url(../images/guide/arw_go_top_mok.png);background-size:13px 18px;content:"";
-            }
-            &.active {
-                opacity:1;right:18px;
-            }
-        }
         &:not(.docker_fixed):after {
             position:absolute;left:0;bottom:0;width:100%;padding-bottom:calc(constant(safe-area-inset-bottom));padding-bottom:calc(env(safe-area-inset-bottom));background-color:#fff;content:"";
         }
@@ -715,9 +708,44 @@ body {
     }
 }
 
+.btn_go_top {
+    display:block;position:fixed;right:-18px;bottom:92px;width:47px;height:47px;background-color:#fff;border:1px solid #d5d5d5;border-radius:100%;box-shadow:0 5px 10px 0 rgba(0, 0, 0, 0.1);transform:translateY(calc(constant(safe-area-inset-bottom) * -1));transform:translateY(calc(env(safe-area-inset-bottom) * -1));opacity:0;z-index:100;transition:right .23s,opacity .23s;
+    &:before {
+        display:block;width:13px;height:18px;margin:13px auto 0;background-image:url(../images/guide/arw_go_top_mok.png);background-size:13px 18px;content:"";
+    }
+    &.active {
+        opacity:1;right:18px;
+    }
+}
+
+
+
+/* 제품상세 */
+.wrapper.ht_ {
+    .fixed_foot {
+        position:fixed;left:0;bottom:0;width:100%;max-width:750px;z-index:10;
+        &.btm_pop_upper_foot {
+            z-index:200;
+        }
+    }
+    .prod_purchase_info_wrap {
+        padding:6px 9px 20px 9px;
+    }
+    .btn_go_back {
+        display:none;
+    }
+}
+
 @media only screen and (min-width:750px) {
-    .ht_.wrapper .docker_wrapper {
+    .ht_.wrapper .docker_wrapper,
+    .ht_.wrapper .fixed_foot {
         left:50%;margin-left:-375px;
+        .btn_go_top {
+            right:calc(50% - 393px);
+            &.active {
+                right:calc(50% - 375px);
+            }
+        }
     }
 }
 

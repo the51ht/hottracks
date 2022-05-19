@@ -3,9 +3,10 @@
 .module_section_bg {
     background-color: #f7f7f7;
   }
+/*
  .list_uniq_btm  {
      padding-bottom:60px;
- }
+ }*/
   /*===============     모듈 001 영역(기획전 타이틀)   ==================*/
 .evt_mdl_title {
 	position: relative;
@@ -179,7 +180,7 @@
         margin-bottom:0px;
     }
 	&.type3 {
-		padding: 40px 0 40px 0;
+		padding: 40px 0 40px 0 !important;
 	}
     &.type_pic{
         padding-bottom: 32px;
@@ -188,6 +189,15 @@
 		padding-top:0;
 	}
 }
+.module_wrap + .module_wrap,
+.module_wrap + .evt_anchor_target + .module_wrap {
+	padding-top:0;
+}
+.module_wrap + .wel_belt02,
+.timer_bubble_area + .wel_belt02 {
+	margin-top:20px;
+}
+
 .video_item {
 	position:relative;
 	margin-top:20px;
@@ -545,9 +555,12 @@
 	padding-top:8px;
 	background-color: #f7f7f7;
 }
-.evt_mdl9_2 > .comment_list_area{
-	padding:0 20px 40px 20px;
+.evt_mdl9_2 > .comment_list_area {
+	padding:0 20px 40px 20px !important;
 	background-color: #fff;
+	&:last-child {
+		padding-bottom:40px !important;
+	}
 }
 
 .cmt_section_title{
@@ -568,6 +581,11 @@
 		padding-left:28px;
 	}
 }
+
+.comment_list_area:last-child {
+	padding-bottom:60px !important;
+}
+
 /*===============     모듈 010-2 영역(전체 레이어 팝업/응모하기)   ==================*/
 .evt_apply_wrap{
 	label{
@@ -936,7 +954,7 @@
 }
 /*===============================  모듈 017 영역  ===========================*/
 .card_module {
-	padding:40px 0;
+	padding:40px 0 !important;
 	.evt_cards {
 		display: flex;
 		flex-flow: row wrap;
@@ -944,10 +962,17 @@
 		.evt_card_item {
 			width:50%;
 			min-height:100% !important;
+			background-color:#f2f2f2;
 			padding:40px 20px;
 			div {
 				word-break: keep-all;
 			}
+			&:nth-child(1),
+			&:nth-child(4),
+			&:nth-child(5) {
+				background-color: #fafafa;
+			}
+			  
 		}
 		.discount {
 			font-size: 16px;
@@ -970,7 +995,7 @@
 		}
 	}
 	.btn_area {
-		margin-top:24px;
+		margin-top:32px;padding:0;
 		text-align: center;
 		button {
 			position:relative;
@@ -987,8 +1012,7 @@
 		}
 		.txt {
 			line-height:20px;
-			font-weight: 500px;
-			letter-spacing: -0.14px;
+			font-weight: 500;
 			line-height: 20px;
 		}
 		.icon {
@@ -999,6 +1023,9 @@
 			background: url(../images/guide/ico_arrow_right_btn.svg) no-repeat center top 40%/ 12px;
 		}
 	}
+}
+.module_wrap.type1 + .card_module {
+	padding-top:20px !important;
 }
 /*=======================MDL-018영역=====================*/
 
@@ -1025,24 +1052,14 @@
 		line-height: 32px;
 	}
 	.countdown {
-		.time {
-			position:relative;
-			font-size: 18px;
-			line-height: 32px;
-			font-weight: 500;
-			color:#da2128;
-			&:before{
-				content:"";
-				position: absolute;
-				width:18px;
-				height:18px;
-				left:-26px;
-				top:50%;
-				margin-top:-9px;
-				background:url(../images/guide/ico_clock.svg) no-repeat 0 0;
-				background-size: cover;;
-			}
-		}
+        display:inline-block;position:absolute;right: 21px;top: 40px;padding:7px 13px 2px 35px;background-color:#d4ff1a;border-radius:35px;z-index:1;
+        &:before {
+            position:absolute;left: 4px;top: -18px;width: 44px;height: 48px;background: url(../images/guide/timer_bomb.svg) center/45px no-repeat;content: "";z-index: 2;
+        }
+        .timer {
+
+            font-family:'Gmarket Sans';font-size:14px;font-weight:700;line-height:23px;
+        }
 	}
 	.emoji {
 		display: inline-block;
@@ -1061,17 +1078,6 @@
 		}
 	}
 
-	// 20220516 카운트다운 추가, 아이콘 추가
-	.timer_area {
-        display:inline-block;position:absolute;right: 21px;top: 40px;padding:7px 13px 2px 35px;background-color:#d4ff1a;border-radius:35px;z-index:1;
-        &:before {
-            position:absolute;left: 4px;top: -18px;width: 44px;height: 48px;background: url(../images/guide/timer_bomb.svg) center/45px no-repeat;content: "";z-index: 2;
-        }
-        .timer {
-
-            font-family:'Gmarket Sans';font-size:14px;font-weight:700;line-height:23px;
-        }
-    }
 	
 	.hotdeal_shine {
 		display: inline-block;
@@ -1083,9 +1089,12 @@
 	}
 }
 .hot_deal_wrap + .wel_belt02 {
-	margin-top:0;
+	margin-top:20px;
 }
 
+.hot_deal_wrap + .evt_mdl14 {
+	margin-top:-40px;
+}
 
 /*============================= 모듈 019 =============================*/
 .cmt_imgs_wrap {
@@ -1102,23 +1111,21 @@
 	flex-flow: row nowrap;
     margin-bottom:16px;
 	.cmt_img_item {
-		width:40px;
-		height:40px;
-		margin-right: 6px;
-		flex-shrink: 0;
-		border-radius: 4px;
-		overflow:hidden;
+		position: relative;width:36px;height:36px;margin-right:12px;flex-shrink: 0;border-radius:50%;overflow:hidden;transition:all 0.4s;
 		&:last-of-type {
 			margin-right: 0px;
 		}
 		img {
-			width:100%;
+			width:100%;height:100%;object-fit:scale-down;
 		}
-		&.active {
-			border:4px solid #000;
-		}
-		&.active_non img {
-			opacity: 0.6;
+        &.active {
+            overflow:hidden;
+            &:before {
+                position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;border:2px solid #000;box-sizing:border-box;content:"";
+            }
+        }
+		&.active_non {
+			opacity: 0.4;
 		}
 	}
 }
@@ -1421,11 +1428,12 @@
 	}
 }
 
-/*
-.evt_slider_wrap + .wel_belt02 {
-	margin-top:20px !important;
+
+.best_reaction_section + .wel_belt02,
+.deadline_section + .wel_belt02 {
+	margin-top:0px !important;
 }
-*/
+
 //슬라이더(마감임박)
 .evt_slider_wrap.deadline_section{
 	overflow: visible;
@@ -1448,11 +1456,15 @@
 
 /*=========================EVT-LST-004  ===========================*/
 .contents_evt_wrap {
-    padding:32px 20px 55px 20px;
+    padding:32px 20px 60px 20px;
 	&.pdt0 {
 		padding-top:0;
 	}
 }
+.contents_evt_wrap + .wel_belt02 {
+	margin-top:0;;
+}
+
 //이벤트 당첨자 발표 타이틀
 .evt_section_title {
   display: flex;
@@ -1472,7 +1484,7 @@
 }
 .evt_ck_area {
    line-height:26px;
-   padding:6px 0;
+   padding:6px 0 0 0;
 }
 
 //이벤트 목록 영역
@@ -1585,26 +1597,37 @@
 		cursor:pointer;
 		border-radius: 6px;  
 		appearance: none;
+		width:100%;
+	}
+
+}
+.tolist_btn_area {
+	margin:40px -2px 0 -2px;
+	padding-bottom:0;font-size:0;;
+	button, a {
+		width:calc(50% - 4px);margin:0 2px;
+		&:only-child {
+			width:calc(100% - 4px);
+		}
 	}
 	.evt_confirm_btn {
-		width:165px;
-		height:44px;
-		letter-spacing: -0.14px;
+
+		line-height:50px;
+		height:50px;
+		font-size:15px;
+		font-weight:700;
 		color:#fff;
 	}
 	.evt_list_btn {
-		width:100%;
-		line-height:48px;
+
+		line-height:50px;
 		font-size:15px;
 		font-weight:700;
 		color:#000;
-		letter-spacing: -0.15px;
 		border:1px solid #ccc;
 		
 	}
-}
-.tolist_btn_area  {
-	padding-bottom:5px;
+
 }
 .btn_area {
 	border:none;

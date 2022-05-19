@@ -462,7 +462,7 @@ function tabSwiper(){
             tabListWidthTotal += tabList.eq(i).width();
         };
 
-        if(tabListWidthTotal > 1200){
+        if(tabListWidthTotal > 1000){
             tabSwiperCont = new Swiper(this, slideOption);
         }
 
@@ -2266,13 +2266,14 @@ function mdl_prod_banner(){
         var slideOption = {
             observer: true,
             observeParents: true,
-            slidesPerView: 'auto',
+            slidesPerView: 2,
             slidesPerGroup: 2,
             centeredSlides: false,
-            spaceBetween:0,
+            spaceBetween:36,
             loop: true,
             loopsSlide: 1,
             speed: 700,
+            loopFillGroupWithBlank:false,
             navigation: {
                 nextEl: $(element).find('.swiper-button-next'),
                 prevEl: $(element).find('.swiper-button-prev'),
