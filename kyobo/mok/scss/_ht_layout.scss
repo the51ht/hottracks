@@ -305,6 +305,12 @@ body {
 .wrapper.ht_ {
     .main_menu_wrap {
         position:sticky;left:0;top:0;background-color:#fff;z-index:10;
+        &.on {
+            .main_menu_list_wrap {
+                position: fixed;
+            }
+            
+        }
         .main_menu_list_wrap {
             left:0;top:0;width:100%;max-width:750px;;background-color:#fff;border-bottom:1px solid #d5d5d5;overflow-x:auto;-webkit-overflow-scrolling:touch;
             .menu_list {

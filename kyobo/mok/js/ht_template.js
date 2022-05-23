@@ -1666,3 +1666,27 @@ $(function(){
 });
 
 
+
+/* main_menu_wrap */
+$(function(){
+    if(!$('.main_menu_wrap').length) return;
+	$(window).resize (resizeBox2).resize();
+	function resizeBox2(){
+		function scrollEvent() {
+		 	var locS =  $(window).scrollTop();
+            var locA1 = $('.main_menu_wrap').offset().top ;
+            if( locS < locA1) {
+                $('.main_menu_wrap').removeClass('on');
+            } else {
+                $('.main_menu_wrap').addClass('on');
+            }
+		}
+		$(window).scroll(function() {
+			scrollEvent();
+		});
+		$(window).resize(function() {
+			scrollEvent();  
+		});
+	}
+});
+
