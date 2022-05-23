@@ -443,19 +443,21 @@
 .small_pics_area {
 	position:relative;display:flex;flex-wrap:wrap;margin:14px -7px 0 -7px;
 	li {
-		position:relative;width:calc(25% - 14px);margin:0 7px;background-color:#fff;border-radius:12px;overflow:hidden;
+		position:relative;width:calc(25% - 14px);height:0;margin:0 7px;padding-top:calc(25% - 14px);background-color:#fff;border-radius:12px;overflow:hidden;
 		img {
-			width:100%;
+			width:100%;height:100%;object-fit:cover;
+			&.ob_contain {
+				object-fit:contain;
+			}
 		}
 	}
 	a {
-		display:block;
+		display:block;position:absolute;left:0;top:0;width:100%;height:100%;
 	}
 	.small_pics_more {
 		display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:#f7f7f7;cursor:pointer;
 		span {
-			display:inline-block;
-			position:absolute;left:50%;top:50%;padding-right:10px;transform:translate(-50%,-50%);color:#595959;font-size:14px;font-weight:500;line-height:20px;text-align:right;
+			display:inline-block;position:absolute;left:50%;top:50%;padding-right:10px;transform:translate(-50%,-50%);color:#595959;font-size:14px;font-weight:500;line-height:20px;text-align:right;
 			&:after {
 				position:absolute;right:0;bottom:7px;width:6px;height:6px;border:solid #595959;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
 			}
