@@ -604,17 +604,14 @@ button.btn_lg {
 	.footer_header {
 		border-top:1px solid #eaeaea;
 		.footer_inner {
-			display:flex;justify-content:flex-start;align-items:center;flex-direction:row;padding:19px 0 20px;
+			display:block;padding:19px 0 20px;overflow:hidden;
 		}
 		.notice_wrap {
-			display:flex;flex:1;justify-content:flex-start;align-items:center;flex-direction:row;overflow:hidden;
+			float:left;width:50%;padding-right:30px;box-sizing:border-box;
 			&.winner {
-				position:relative;margin:0px 0 0 -415px;padding-left:61px;
+				position:relative;margin:0;padding:0 0 0 30px;
 				&:before {
-					display:inline-block;position:absolute;left:30px;top:7px;width:1px;height:9px;background:#d5d5d5;content:"";
-				}
-				.notice_link {
-					width:333px;
+					display:inline-block;position:absolute;left:0;top:7px;width:1px;height:9px;background:#d5d5d5;content:"";
 				}
 			}
 			.notice_text {
@@ -716,7 +713,7 @@ button.btn_lg {
 			}
 		}
 		.footer_contents_wrap {
-			display:flex;justify-content:flex-start;align-items:flex-start;flex-direction:row;margin-top:28px;
+			display:block;margin-top:28px;overflow:hidden;
 			.btn_footer_link {
 				display:inline-block;padding:5px 5px;border:1px solid #ccc;border-radius:4px;font-size:12px;font-weight:500;line-height:12px;vertical-align:top;
 				&:after {
@@ -724,7 +721,7 @@ button.btn_lg {
 				}
 			}
 			.footer_contents_left {
-				flex:1;
+				float:left;width:calc(100% - 375px);
 				.footer_menu_box {
 					margin-top:2px;
 					.footer_menu_list {
@@ -763,7 +760,7 @@ button.btn_lg {
 				}
 			}
 			.footer_contents_right {
-				margin-left:auto;
+				float:right;margin-left:auto;width:355px;
 				.footer_service {
 					font-size:0;
 					.service_text {

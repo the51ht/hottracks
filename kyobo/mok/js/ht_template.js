@@ -1638,3 +1638,31 @@ $(function(){
 
 
 
+
+
+
+
+/**** Footer ***/
+$(function(){
+	// Footer 웰컴메인용 Tab
+	$('.notice_type_detail .ctg_topMenu a').click(function(){
+		var noticeTabId = $(this).attr("id");
+		$(".notice_content").removeClass("on");
+		$("." + noticeTabId).addClass("on");
+	});
+
+	// Footer 패밀리사이트 Select Box
+	$('.btn_family_site').on('click', function(){
+		if(!$('.family_site_box').hasClass('active')){
+			$('.family_site_box').addClass('active');
+
+			setTimeout(function() {
+				$('.family_site_box').addClass('animated');
+			}, 30);
+		}else{
+			$('.family_site_box').removeClass('active animated');
+		}
+	});
+});
+
+
