@@ -313,12 +313,21 @@
         }
     }
     dt {
-        width:105px;padding-right:15px;box-sizing:border-box;font-weight:700;
+        width:105px;padding-right:15px;box-sizing:border-box;color:#767676;font-weight:400;
     }
     dd {
         position:relative;width:calc(100% - 105px);padding-right:30px;box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:center;
         p {
-            width:100%;
+            width:100%;font-weight:500;
+        }
+        .t_info {
+            display:block;color:#767676;font-size:12px;font-weight:400;line-height:18px;;
+        }
+        .t_info02 {
+            display:block;color:#474c98;
+        }
+        .btn_arrow {
+            margin-top:8px;;
         }
     }
     .tooltip_wrap {
@@ -337,14 +346,14 @@
     .free_gift {
         padding:20px 20px 20px 20px;box-sizing:border-box;background:#f4f4f4;border-radius:6px;
         dt {
-            width:85px;
+            width:85px;color:#474c98;font-weight:700;
         }
         dd {
             width:calc(100% - 90px);padding-right:0;
         }
         ul{
             width:100%;
-            li{
+            li {
                 position:relative;padding-right:54px;
                 .img {
                     position:absolute;right:0px;top:0;width:44px;height:44px;background:url('../images/main/ico_free_gift.png') center/100% no-repeat;border-radius:6px;overflow:hidden;
@@ -354,6 +363,12 @@
                 }
                 + li {
                     margin-top:19px;
+                }
+                strong {
+                    font-weight:700;
+                }
+                p {
+                    font-weight:400;
                 }
             }
         }
@@ -736,8 +751,22 @@
 
 /** info_intro_area **/
 .info_intro_area {
-    position:relative;padding:40px;
-    text-align:center;
+    position:relative;padding:40px 40px 60px 40px;text-align:center;
+    p {
+        position: relative;padding-top:55px;
+        &:before {
+            position: absolute;left:50%;top:0;width:38px;height:38px;margin-left:-19px;background:url('../images/main/tit_mus_mc_chart.svg') center/ auto 38px no-repeat;content:"";
+        }
+    }
+    strong {
+        display:block;color:#000;font-size:14px;font-weight:700;line-height:22px;
+    }
+    span {
+        display:block;color:#767676;font-size:12px;line-height:18px;
+    }
+    strong + span {
+        padding-top:5px;
+    }
 }
 .info_intro_area + .info_all_area {
     margin-top:0;

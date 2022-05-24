@@ -596,7 +596,8 @@
   padding-right: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-weight: 700;
+  color: #767676;
+  font-weight: 400;
 }
 
 .list_info dd {
@@ -617,6 +618,24 @@
 
 .list_info dd p {
   width: 100%;
+  font-weight: 500;
+}
+
+.list_info dd .t_info {
+  display: block;
+  color: #767676;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.list_info dd .t_info02 {
+  display: block;
+  color: #474c98;
+}
+
+.list_info dd .btn_arrow {
+  margin-top: 8px;
 }
 
 .list_info .tooltip_wrap {
@@ -650,6 +669,8 @@
 
 .list_info .free_gift dt {
   width: 85px;
+  color: #474c98;
+  font-weight: 700;
 }
 
 .list_info .free_gift dd {
@@ -687,6 +708,14 @@
 
 .list_info .free_gift ul li + li {
   margin-top: 19px;
+}
+
+.list_info .free_gift ul li strong {
+  font-weight: 700;
+}
+
+.list_info .free_gift ul li p {
+  font-weight: 400;
 }
 
 /* 옵션선택 */
@@ -1275,8 +1304,43 @@
 /** info_intro_area **/
 .info_intro_area {
   position: relative;
-  padding: 40px;
+  padding: 40px 40px 60px 40px;
   text-align: center;
+}
+
+.info_intro_area p {
+  position: relative;
+  padding-top: 55px;
+}
+
+.info_intro_area p:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  margin-left: -19px;
+  background: url("../images/main/tit_mus_mc_chart.svg") center/auto 38px no-repeat;
+  content: "";
+}
+
+.info_intro_area strong {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.info_intro_area span {
+  display: block;
+  color: #767676;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.info_intro_area strong + span {
+  padding-top: 5px;
 }
 
 .info_intro_area + .info_all_area {
