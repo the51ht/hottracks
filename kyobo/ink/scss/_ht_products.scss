@@ -463,12 +463,18 @@
 		a:hover {
 			img {
 				transform:scale(1.15);
+				&.ob_19 {
+					transform:scale(1);
+				}
 			}
 		}
 		img {
 			width:100%;height:100%;object-fit:cover;transition:transform 0.4s;
 			&.ob_contain {
 				object-fit:contain;
+			}
+			&.ob_19 {
+				transition:none;border:1px solid #000;border-radius:12px;box-sizing:border-box;
 			}
 		}
 	}
