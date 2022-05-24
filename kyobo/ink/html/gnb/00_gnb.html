@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=1600">
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<title>핫트랙스</title>
+
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" href="../../vendors/lib/swiper-4.4.1/css/swiper.min.css">
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css">
+<link rel="stylesheet" href="../../vendors/lib/simplebar/5.3.3/simplebar.min.css">
+<!-- // Plug-In css -->
+
+
+<!-- ht_ Hottracks css : 공통작업 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/css/style_ink.css">
+<link rel="stylesheet" href="../../css/ht_css_ink.css">
+<link rel="stylesheet" href="../../css/ht_template_ink.css">
+<!-- //ht_ Hottracks css : 공통작업 -->
+
+
+<!-- Polyfill javascript -->
+<script src="../../vendors/polyfills/intersectionobserver/intersection-observer.js"></script>
+
+<!-- Plug-In javascript -->
+<script src="../../vendors/lib/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../../vendors/lib/jquery-ui-1.12.1/jquery.ui.spinner.js"></script>
+<script src="../../vendors/lib/swiper-4.4.1/js/swiper.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/star-rating.min.js"></script>
+<script src="../../vendors/lib/star-rating/js/locales/ko.js"></script>
+<script src="../../vendors/lib/star-rating/themes/krajee-gly/theme.min.js"></script>
+<script src="../../vendors/lib/scrollpos-styler/scrollPosStyler.min.js"></script>
+<script src="../../vendors/lib/css-element-queries/ResizeSensor.js"></script>
+<script src="../../vendors/lib/simplebar/5.3.3/simplebar.min.js"></script>
+<script src="../../vendors/lib/svgxuse/svgxuse.js"></script>
+<script src="../../vendors/lib/blurify-master/blurify.js"></script>
+<script src="../../vendors/lib/masonry/masonry.pkgd.min.js"></script>
+<script src="../../vendors/lib/awesomplete/awesomplete.min.js"></script>
+<!-- // Plug-In javascript -->
+
+
+<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
+<script src="../../js/ui_ink.js"></script>
+<script src="../../js/ht_lib.js"></script>
+<script src="../../js/ht_template.js"></script>
+<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
+
+<script>
+/* HT GNB 확인용 */
+$(function(){
+    /* 1Depth */
+    $('.btn_anb').click(function(e){
+        if($('.anb_wrap').hasClass('active')){
+            $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+            $('.ht_gnb_tab a').removeClass('active');
+            $('.gnb_menu a').removeClass('active');
+            $('.ht_gnb_box').hide();
+            $('.gnb3dep .gnb_menu_area, .gnb4dep .gnb_menu_area').hide();
+    
+
+            $('.ht_gnb_tab li').eq(0).find('a').addClass('active');
+            $('#htGnbCate01').show();
+            $('#htGnbCate01 .ht_gnb_cont').addClass('chk2');
+        }else{
+
+        }
+    });
+
+    /* 1Depth */
+    $('.ht_gnb_tab a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+        $('.gnb_menu_area').hide();
+        $('.ht_gnb_box').hide();
+
+        /* 1Depth 메뉴 활성화 */
+        $('.gnb_menu a').removeClass('active');
+		$(this).parent().parent().find('a').removeClass('active');
+        $(this).addClass('active');
+
+        var s = $(this).attr('href');
+        $(s).show();
+        $(s).find('.ht_gnb_cont').addClass('chk2'); // 곰돌이 아이콘 2Depth
+        e.preventDefault();
+    });
+
+    /* 2Depth */
+    $('.gnb2dep a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+
+        $('.gnb3dep .gnb_menu_area, .gnb4dep .gnb_menu_area').hide();
+
+        /* 2Depth 메뉴 활성화 */
+        $('.gnb_menu a').removeClass('active');
+        $(this).addClass('active');
+
+        /* 확인용 */
+        if($(this).hasClass('ht_gnb_arrow')) {
+            var s = $(this).attr('href');
+            $(s).show();
+            $(this).closest('.ht_gnb_cont').addClass('chk3'); // 곰돌이 아이콘 3Depth
+        } else {
+            alert('링크연결');
+            $(this).closest('.ht_gnb_cont').addClass('chk2'); // 확인용 곰돌이 아이콘 2Depth
+        }
+        e.preventDefault();
+    });
+
+    /* 3Depth */
+    $('.gnb3dep a').click(function(e){
+        $('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); // 곰돌이 아이콘 이미지 초기화
+        $('.gnb4dep .gnb_menu_area').hide();
+        
+        /* 3Depth 메뉴 활성화 */
+		$(this).parent().parent().find('a').removeClass('active');
+        $(this).addClass('active');
+
+        /* 확인용 */
+        if($(this).hasClass('ht_gnb_arrow')) {
+            var s = $(this).attr('href');
+            $(s).show();
+        } else {
+            alert('링크연결');
+            $(this).closest('.ht_gnb_cont').addClass('chk3'); // 확인용 곰돌이 아이콘 3Depth
+        }
+        e.preventDefault();
+    });
+});
+</script>
+</head>
+<body>
+<!-- skip_nav_wrap -->
+<div class="skip_nav_wrap">
+	<a href="#headerWrapper">메뉴 바로가기</a>
+	<a href="#containerWrapper">본문 바로가기</a>
+</div>
+<!-- //skip_nav_wrap -->
+
+<!-- wrapper -->
+<div class="wrapper">
+	<!-- Header -->
+	<header id="headerWrapper" class="header_wrapper sps">
+		<!-- service_mall_wrap -->
+		<div class="service_mall_wrap">
+			<div class="service_mall_inner">
+				<!-- service_mall_box -->
+				<div class="service_mall_box">
+					<ul class="service_mall_list">
+						<li class="service_mall_item">
+							<svg xmlns="http://www.w3.org/2000/svg" width="565" height="33" viewBox="0 0 565 33">
+								<g transform="translate(0 0)">
+									<a href="#" class="service_mall_link">
+										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#3E43A4" stroke="rgba(0,0,0,0)" />
+									</a>
+									<text x="64" y="15" text-anchor="middle" fill="#fff" font-size="14px" pointer-events="none" dy=".5em" font-family="Noto Sans KR" font-weight="700">교보문고</text>
+								</g>
+								<g transform="translate(87 0)">
+									<a href="#" class="service_mall_link">
+										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#156CDD" stroke="rgba(0,0,0,0)" />
+									</a>
+									<text x="64" y="15" text-anchor="middle" fill="#fff" font-size="14px" pointer-events="none" dy=".5em" font-family="Roboto" font-weight="700">eBook</text>
+								</g>
+								<g transform="translate(174 0)">
+									<a href="#" class="service_mall_link">
+										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#06BBC0" stroke="rgba(0,0,0,0)" />
+									</a>
+									<text x="64" y="13" text-anchor="middle" fill="#fff" font-size="15px" pointer-events="none" dy=".5em" font-family="Roboto" font-weight="700">sam</text>
+								</g>
+								<g transform="translate(261 0)">
+									<a href="#" class="service_mall_link">
+										<use href="../../images/layout/img_service_mall_tab.svg#pathTab" fill="#8F603D" stroke="rgba(0,0,0,0)" />
+									</a>
+									<text x="64" y="15" text-anchor="middle" fill="#fff" font-size="13px" pointer-events="none" dy=".5em" font-family="Noto Sans KR" font-weight="700">매장안내</text>
+								</g>
+								<g transform="translate(348 0)">
+									<a href="#" class="service_mall_link">
+										<use href="../../images/layout/img_service_mall_tab_link.svg#pathTabLink" />
+									</a>
+									<text x="64" y="15" text-anchor="middle" fill="#767676" font-size="13px" pointer-events="none" dy=".5em"  font-family="Noto Sans KR" font-weight="500">톡소다</text>
+								</g>
+								<g transform="translate(437 0)">
+									<a href="#" class="service_mall_link">
+										<use href="../../images/layout/img_service_mall_tab_link.svg#pathTabLink" />
+									</a>
+									<text x="64" y="15" text-anchor="middle" fill="#767676" font-size="13px" pointer-events="none" dy=".5em" font-family="Noto Sans KR" font-weight="500">스토리</text>
+								</g>
+							</svg>
+						</li>
+						<li class="service_mall_item brand_more">
+							<button type="button" class="btn_brand_more"><span class="text">브랜드 더보기</span></button>
+
+							<div class="brand_more_list_box">
+								<div class="custom_scroll_wrap">
+									<ul class="brand_more_list">
+										<li class="brand_more_item">
+											<a href="#" class="brand_more_link">
+												<span class="img_box"><img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_brand_more.png" alt="브랜드 임시 이미지"></span>
+												<span class="brand_name">브랜드명</span>
+											</a>
+										</li>
+										<li class="brand_more_item">
+											<a href="#" class="brand_more_link">
+												<span class="img_box"><img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_brand_more.png" alt="브랜드 임시 이미지"></span>
+												<span class="brand_name">브랜드명</span>
+											</a>
+										</li>
+										<li class="brand_more_item">
+											<a href="#" class="brand_more_link">
+												<span class="img_box"><img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_brand_more.png" alt="브랜드 임시 이미지"></span>
+												<span class="brand_name">브랜드명</span>
+											</a>
+										</li>
+										<li class="brand_more_item">
+											<a href="#" class="brand_more_link">
+												<span class="img_box"><img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_brand_more.png" alt="브랜드 임시 이미지"></span>
+												<span class="brand_name">브랜드명</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="customer_service_box">
+					<ul class="customer_service_list">
+						<li class="customer_service_item"><a href="#" class="util_link">로그인</a></li>
+						<li class="customer_service_item member_benefit">
+							<button type="button" class="btn_member_benefit"><span class="text">회원혜택</span></button>
+
+							<ul class="member_benefit_list">
+								<li class="member_benefit_item"><a href="#" class="member_benefit_link">교보북클럽</a></li>
+								<li class="member_benefit_item"><a href="#" class="member_benefit_link">등급별 회원혜택</a></li>
+								<li class="member_benefit_item"><a href="#" class="member_benefit_link">신규회원 혜택</a></li>
+								<li class="member_benefit_item"><a href="#" class="member_benefit_link">제휴포인트/상품권</a></li>
+								<li class="member_benefit_item"><a href="#" class="member_benefit_link">참좋은교보문고</a></li>
+								<li class="member_benefit_item"><a href="#" class="member_benefit_link">Prestige Lounge</a></li>
+							</ul>
+						</li>
+						<li class="customer_service_item"><a href="#" class="util_link">고객센터</a></li>
+					</ul>
+				</div>
+				<!-- //service_mall_box -->
+			</div>
+		</div>
+		<!-- //service_mall_wrap -->
+
+		<!-- header_inner -->
+		<div class="header_inner">
+			<!-- gnb_search_wrap -->
+			<div class="gnb_search_wrap">
+				<div class="logo_box">
+					<a href="#" class="logo_link"><span class="hidden">핫트랙스</span></a>
+				</div>
+				<div class="gnb_search_box">
+					<div class="form_sel" data-class="type_gnb">
+						<select title="검색유형선택">
+							<option>통합검색</option>
+							<option>교보문고</option>
+							<option>eBook</option>
+							<option>sam</option>
+							<option>핫트랙스</option>
+						</select>
+					</div>
+					<div class="search_input_wrap">
+						<input type="search" class="ip_gnb_search" title="통합검색어 입력" placeholder="이지성, 출간 즉시 종합 베스트!" />
+						<button type="button" class="btn_ip_clear"><span class="hidden">초기화</span></button>
+					</div>
+					<a href="#" class="btn_gnb_search"><span class="hidden">검색</span></a>
+				</div>
+				<ul class="user_menu_list">
+					<li class="user_menu_item cart"><a href="#" class="user_menu_link"><span class="hidden">장바구니</span><span class="cnt">3</span></a></li>
+					<!-- DESC : 로그인 후 li.user_menu_item [ login ] class 추가 -->
+					<li class="user_menu_item my">
+						<a href="#" class="user_menu_link">
+							<span class="img_box">
+								<img src="https://image.kyobobook.co.kr/ink/html/ux/next/ink/assets/common/temporary/temp_header_login.png" alt="마이룸 임시이미지" />
+							</span>
+							<span class="hidden">마이룸</span><span class="cnt">99</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //gnb_search_wrap -->
+
+			<!-- gnb_wrap -->
+			<nav class="gnb_wrap">
+				<!-- anb_wrap -->
+				<div class="anb_wrap">
+					<button type="button" class="btn_anb"><span class="hidden">전체메뉴</span></button>
+					<div class="anb_area">
+						<!-- tab_wrap -->
+						<div class="tab_wrap">
+							<!-- tab_list_wrap -->
+							<div class="tab_list_wrap">
+								<ul class="tabs">
+									<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
+									<li class="tab_item"><a href="#tabAnbCategory" class="tab_link"><span class="tab_text">카테고리 전체보기</span></a></li>
+									<li class="tab_item"><a href="#tabAnbService" class="tab_link"><span class="tab_text">서비스 전체보기</span></a></li>
+								</ul>
+							</div>
+							<!-- //tab_list_wrap -->
+							
+							<!-- 카테고리 전체보기 -->
+							<div id="tabAnbCategory" class="tab_content">
+								<div class="tab_wrap type_md channel">
+									<!-- tab_list_wrap -->
+									<div class="tab_list_wrap">
+										<ul class="tabs">
+											<!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
+											<li class="tab_item"><a href="#tabAnbCategoryHotTracks" class="tab_link"><span class="tab_text">핫트랙스</span></a></li><!-- 핫트랙스 탭 위치 변경 : 1번으로 나와 된다고 합니다 -->
+											<li class="tab_item"><a href="#tabAnbCategoryKyobo" class="tab_link"><span class="tab_text">교보문고</span></a></li>
+											<li class="tab_item"><a href="#tabAnbCategoryEbook" class="tab_link"><span class="tab_text">eBook</span></a></li>
+											<li class="tab_item"><a href="#tabAnbCategorySam" class="tab_link"><span class="tab_text">sam</span></a></li>
+										</ul>
+									</div>
+									<!-- //tab_list_wrap -->
+
+									<!-- 카테고리 - 교보문고 -->
+									
+									<div class="tabKyobo"></div>
+										
+										<!--<div data-include-path="tabAnbCategoryKyobo.html"></div>-->
+ 
+							
+									
+									<!-- //카테고리 - 교보문고 -->
+
+									<!-- 카테고리 - eBook -->
+
+									<!--<div id="tabAnbCategoryEbook" class="tab_content anb_category">
+										eBook
+									</div>-->
+									<!-- //카테고리 - eBook -->
+
+									<!-- 카테고리 - sam -->
+									<div id="tabAnbCategorySam" class="tab_content anb_category">
+										sam
+									</div>
+									<!-- //카테고리 - sam -->
+									
+									<!-- 카테고리 - 핫트랙스 -->
+									<div id="tabAnbCategoryHotTracks" class="tab_content anb_category">
+										핫트랙스
+									</div>
+									<!-- //카테고리 - 핫트랙스 -->
+
+									<script>
+									 /*
+										window.addEventListener('load', function() {
+											var allElements = document.getElementsByTagName('*');
+											Array.prototype.forEach.call(allElements, function(el) {
+												var includePath = el.dataset.includePath;
+												if (includePath) {
+													var xhttp = new XMLHttpRequest();
+													xhttp.onreadystatechange = function () {
+														if (this.readyState == 4 && this.status == 200) {
+															el.outerHTML = this.responseText;
+														}
+													};
+													xhttp.open('GET', includePath, true);
+													xhttp.send();
+												}
+											});
+										});
+								*/
+									//$(function(){
+
+										$.getScript("../../js/ui_ink.js", function(){
+
+});
+
+
+
+
+										//$('.tabKyobo').load('tabAnbCategoryKyobo.html',function(){
+											//$.getScript('../../js/ui_ink.js');
+										//});
+									//});
+
+									</script>			
+								</div>
+							</div>
+							<!-- //카테고리 전체보기 -->
+
+							<!-- 서비스 전체보기 -->
+							<div id="tabAnbService" class="tab_content anb_service">
+								<div class="custom_scroll_wrap">
+									<ul class="all_service_list">
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">국내도서</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">베스트셀러</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">신상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">출간예정상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">이벤트</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">사은품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">오늘의 책 / 교보, 오늘</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">정가인하</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">특가도서</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">추천도서</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">작가&작품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">교보문고 단독출판</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">바로드림 전용상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">Preview ZONE</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">개인출판/품절판북간</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">외국도서</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">베스트셀러</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">신상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">출간예정상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">이벤트</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">일본신간잡지</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">일본잡지정기구독</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<div class="title_wrap title_size_sm">
+												<p class="title_heading">중고장터</p>
+											</div>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">판매자페이지</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">중고책 판매방법</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">중고책 구매방법</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">중고책 구매방법</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">구매상품 배송조회</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">스마트비교서비스</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">북캐스트</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">홈</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">주제</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">북캐스터</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">구독</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">문화행사</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">문화행사</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">교보인문학석강</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">낭독공감</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">북모닝강연</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">교보인문기행</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">해외문학기행</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">교보아트스페이스</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">손글쓰기문화확산캠페인</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">교보Ssok!</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">출석체크</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">시그니처 향</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">손글쓰기캠페인</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">손글씨 폰트</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">책 그리고 꽃</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">배송라운지</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">문장수집</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">이달의 책</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">Picks</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">Klover 평점 좋은 책</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">이럴 땐 이런 책</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">IT를 읽다, Read IT</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">K:컬렉션</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">스펙비교</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">우리가 만드는 책</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">365 인생학교</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">명강의 Big10</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">대량구매 서비스</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">국내도서</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">베스트셀러</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">신상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">출간예정상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">이벤트</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">사은품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">오늘의 책 / 교보, 오늘</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">정가인하</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">특가도서</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">추천도서</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">작가&작품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">교보문고 단독출판</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">바로드림 전용상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">Preview ZONE</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">개인출판/품절판북간</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">외국도서</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">베스트셀러</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">신상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">출간예정상품</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">이벤트</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">일본신간잡지</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">일본잡지정기구독</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">중고장터</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">판매자페이지</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">중고책 판매방법</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">중고책 구매방법</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">구매상품 배송조회</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">스마트비교서비스</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">북캐스트</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">홈</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">주제</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">북캐스터</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">구독</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">문화행사</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">문화행사</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">교보인문학석강</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">낭독공감</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">북모닝강연</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">교보인문기행</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">해외문학기행</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">교보아트스페이스</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">손글쓰기문화확산캠페인</a></li>
+											</ul>
+										</li>
+										<li class="all_service_item">
+											<a href="#" class="btn_arw_link"><span class="text">교보Ssok!</span></a>
+											<ul class="sub_depth_list">
+												<li class="depth_item"><a href="#" class="depth_link">출석체크</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">시그니처 향</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">손글쓰기캠페인</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">손글씨 폰트</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">책 그리고 꽃</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">배송라운지</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">문장수집</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">이달의 책</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">Picks</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">Klover 평점 좋은 책</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">이럴 땐 이런 책</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">IT를 읽다, Read IT</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">K:컬렉션</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">스펙비교</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">우리가 만드는 책</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">365 인생학교</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">명강의 Big10</a></li>
+												<li class="depth_item"><a href="#" class="depth_link">대량구매 서비스</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //서비스 전체보기 -->
+						</div>
+						<!-- //tab_wrap -->
+					</div>
+				</div>
+				<!-- //anb_wrap -->
+				
+				<!-- gnb_list -->
+				<ul class="gnb_list">
+					<li class="gnb_item"><a href="#" class="gnb_link gnb_marker act"><img src="../../images/layout/ico_main_menu_music.svg" alt=""><span><em>음반·영상</em></span></a></li><!-- 활성화 class="on" -->
+					<li class="gnb_item"><a href="#" class="gnb_link gnb_marker"><img src="../../images/layout/ico_main_menu_live.svg" alt=""><span><em>라이브</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>오늘만 특가</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>스티커샵</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>필기구</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>선물추천</em></span></a></li>
+					<li class="gnb_item"><a href="#" class="gnb_link"><span><em>큐레이션</em></span></a></li>
+				</ul>
+				<!-- //gnb_list -->
+
+				<!-- gnb_sub_list -->
+				<ul class="gnb_sub_list">
+					<li class="gnb_sub_item"><a href="#" class="gnb_sub_link">이벤트</a></li>
+					<li class="gnb_sub_item"><a href="#" class="gnb_sub_link">베스트</a></li>
+					<li class="gnb_sub_item"><a href="#" class="gnb_sub_link">신상품</a></li>
+					<li class="gnb_sub_item"><a href="#" class="gnb_sub_link">무료배송</a></li>
+				</ul>
+				<!-- // -->
+			</nav>
+			<!-- //gnb_wrap -->
+		</div>
+		<!-- //header_inner -->
+	</header>
+	<!-- //Header -->
+
+
+	<!-- Contents -->
+	<main id="containerWrapper" class="container_wrapper">
+		<!-- breadcrumb_wrap -->
+		<section class="breadcrumb_wrap">
+			<div class="breadcrumb_inner">
+				<ol class="breadcrumb_list">
+					<li class="breadcrumb_item"><a href="#" class="home_link">HOME</a></li>
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">국내도서</a>
+						<!-- DESC : 서브메뉴 갯수에 따라 col이 나눠지는 경우, div.sub_depth_box 영역에 multiclass 부여 필요
+							1단 : default(multi class 없음) / 2단 : col2 / 3단 : col3
+							-->
+						<div class="sub_depth_grid">
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item active"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">소설</a>
+						<!-- DESC : 서브메뉴 갯수에 따라 col이 나눠지는 경우, div.sub_depth_box 영역에 multiclass 부여 필요
+							1단 : default(multi class 없음) / 2단 : col2 / 3단 : col3
+							-->
+						<div class="sub_depth_grid col2">
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item active"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">한국소설</a>
+						<!-- DESC : 서브메뉴 갯수에 따라 col이 나눠지는 경우, div.sub_depth_box 영역에 multiclass 부여 필요
+							1단 : default(multi class 없음) / 2단 : col2 / 3단 : col3
+							-->
+						<div class="sub_depth_grid col3">
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item active"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">Prestige Lounge</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+							<!-- repeat(li.depth_item 최대 10개) -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<!-- DESC : 활성화된 depth active class 추가 -->
+									<li class="depth_item"><a href="#" class="depth_link">교보북클럽</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">등급별 회원혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">신규회원 혜택</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">제휴포인트/상품권</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">참좋은교보문고</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+
+					<li class="breadcrumb_item">
+						<a href="#" class="btn_sub_depth">긴 breadcrumb 일때</a>
+						<div class="sub_depth_grid sub_depth_grid_evt"><!-- 긴 breadcrumb 일때 class="sub_depth_grid_evt" -->
+							<!-- repeat -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<li class="depth_item"><a href="#" class="depth_link">전체보기</a></li>
+									<li class="depth_item active"><a href="#" class="depth_link">핫트랙스LIVE 몽글몽글 고미콩 힐링방송핫트랙스LIVE 몽글몽글 고미콩 힐링방송핫트랙스LIVE 몽글몽글 고미콩 힐링방송핫트랙스LIVE 몽글몽글 고미콩 힐링방송</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">허전함 없이 꽉 찬 다꾸</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">핫트랙스 LIVE 세상엔 맛있는게 너무 많아♥</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">핫트LIVE X 피곤한 덤덤 "어우, 하기싫어!"</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">핫트LIVE X 눙눙이 "안녕, 나는 눙눙이야!"</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">아날로그와 트렌디함 그 사이 PENCO </a></li>
+									<li class="depth_item"><a href="#" class="depth_link">핫트랙스X일러스트코리아 하루 한 번, 핫-딜!</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">상큼 과즙상 봄의  '프롬이레'</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">몰입을 위한 시작 '에듀 앳 홈'</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+							<!-- repeat -->
+							<div class="sub_depth_box">
+								<ul class="sub_depth_list">
+									<li class="depth_item"><a href="#" class="depth_link">너무 귀엽지 마요, 나만 알고 싶으니까</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">기록 생활자들을 위한 스토리지 아카이빙</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">바스락,바스락- 코이가 귀여운 소리</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">보약 말고 돈약 ! 용돈봉투 모음전</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">★ Me①①ee  Festival ★</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">핫트LIVE X 일러스트코리아 All-Day!</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">책상 앞은 싫지만, 귀여운 건 죄가 없으니까 ♡</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">소중하게 아껴주세요.</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">오늘, 그리고 내일 나에 대한 물음표</a></li>
+									<li class="depth_item"><a href="#" class="depth_link">스티커 보관은 띠부띠부씰앨범으로★</a></li>
+								</ul>
+							</div>
+							<!-- // repeat -->
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+		<!-- // breadcrumb_wrap -->
+		
+		<!-- ht_contents_wrap -->
+		<section class="ht_contents_wrap">
+
+			<!-- ht_cont -->
+			<div class="ht_cont">
+				<div class="contents_inner">
+					<div style="height:500px;background-color:#d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:500px;text-align:center;">Contents Area</div>
+				</div>
+			</div>
+			<!-- //ht_cont -->
+			
+		</section>
+		<!-- /ht_contents_wrap -->
+	</main>
+	<!-- //Contents -->
+
+</div>
+<!-- //wrapper -->
+
+</body>
+</html>
