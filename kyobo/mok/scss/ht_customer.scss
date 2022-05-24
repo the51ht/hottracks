@@ -984,12 +984,6 @@
             color:#da2128;
         }
     }
-    &.order_st2 {
-        background-color:#f5f5fa;
-        .order_st {
-            color:#474c98;
-        }
-    }
     span,
     strong {
         position:relative;padding-left:8px;color:#000;font-size:12px;
@@ -997,13 +991,6 @@
             padding-left:0;
         }
     }
-    .order_st {
-        padding-right:9px;color:#767676;font-weight:500;
-        &:after {
-            position:absolute;right:0;top:2px;width:1px;height:10px;background-color:#d5d5d5;content:"";
-        }
-    }
-
 }
 .order_his_item {
     li {
@@ -1015,9 +1002,9 @@
             float:left;width:78px;border-radius:4px;overflow:hidden;
         }
         .order_his_item_info{
-            float:right;width:calc(100% - 90px);color:#000;font-size:13px;line-height:19px;
+            float:right;width:calc(100% - 90px);color:#000;font-size:13px;line-height:19px;position: relative;
             .info_s1 {
-                display:block;font-weight:500;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
+                width: calc(100% - 57px);display:block;font-weight:500;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
             }
             .info_s2 {
                 margin-top:8px;color:#767676;font-size:0;
@@ -1039,6 +1026,9 @@
                 strong {
                     font-weight:700;
                 }
+            }
+            .order_st {
+                font-size: 10px;font-weight:400;color: #292929;height: 20px;padding: 0 9px; padding-left: 9px !important;line-height: 21px;display: inline-block;background: #F5F5F5;border-radius: 10px;-webkit-box-sizing: border-box;box-sizing: border-box;position: absolute;right: 0;top: 0;
             }
         }
         .order_his_item_btn{
