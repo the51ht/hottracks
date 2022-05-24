@@ -51,9 +51,9 @@
 
 
 <!-- ht_ Hottracks UI JavaScript : 공통작업 -->
-
-<script src="../../js/commonJs.js"></script>
 <!--
+<script src="../../js/ui_ink.js"></script>
+
 html 이 load로 들어갈 시 - 로드 후 js파일 실행
 html 파일을 자체적으로 뿌려질 시 기존 방식으로 사용!
 
@@ -65,20 +65,12 @@ html 파일을 자체적으로 뿌려질 시 기존 방식으로 사용!
 
 <script>
 $(function(){
-	//ajax 방식
-	ht_AjaxJs.getAjaxResultHtml('./tabAnbCategoryKyobo.html',$('.tabKyobo'));
-	ht_AjaxJs.getAjaxResultHtml('./tabAnbCategoryEbook.html',$('.tabEbook'));
-	ht_AjaxJs.getAjaxResultHtml('./tabAnbCategorySam.html',$('.tabSam'));
-	ht_AjaxJs.getAjaxResultHtml('./tabAnbCategoryHotTracks.html',$('.tabHotTracks'));
-	$.getScript('../../js/ui_ink.js');
-	
-	//load 방식
-	//$('.tabKyobo').load('tabAnbCategoryKyobo.html');
-	//$('.tabEbook').load('tabAnbCategoryEbook.html');
-	//$('.tabSam').load('tabAnbCategorySam.html');
-	//$('.tabHotTracks').load('tabAnbCategoryHotTracks.html', function(){
-		//$.getScript('../../js/ui_ink.js');  // html 이 load로 들어갈 시 - 로드 후 js파일 실행
-	//});
+	$('.tabKyobo').load('tabAnbCategoryKyobo.html');
+	$('.tabEbook').load('tabAnbCategoryEbook.html');
+	$('.tabSam').load('tabAnbCategorySam.html');
+	$('.tabHotTracks').load('tabAnbCategoryHotTracks.html', function(){
+		$.getScript('../../js/ui_ink.js');  // html 이 load로 들어갈 시 - 로드 후 js파일 실행
+	});
 });
 </script>
 </head>
