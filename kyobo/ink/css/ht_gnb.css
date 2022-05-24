@@ -1,5 +1,6 @@
+@charset "UTF-8";
 /*
-    GNB
+    핫트랙스 GNB
 */
 /****** GNB *****/
 .gnb_hottracks_area {
@@ -38,7 +39,7 @@
 .ht_gnb_tab a span {
   display: inline-block;
   position: relative;
-  padding-right: 14px;
+  padding-right: 12px;
   vertical-align: top;
 }
 
@@ -46,9 +47,14 @@
   position: absolute;
   right: 0;
   top: 6px;
-  width: 5px;
-  height: 8px;
-  background: url("../images/layout/ico_gnb_menu_on.svg") center/100% no-repeat;
+  width: 9px;
+  height: 9px;
+  border: solid #da2128;
+  border-width: 2px 2px 0 0;
+  -webkit-transform: rotate(45deg) scale(0.48);
+          transform: rotate(45deg) scale(0.48);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
   content: "";
   opacity: 0;
   -webkit-transition: opacity 0.4s;
@@ -68,7 +74,7 @@
   opacity: 1;
 }
 
-/*** GNB 2Dep :ht_gnb_area ***/
+/*** GNB 2Dep : .ht_gnb_area ***/
 .ht_gnb_area {
   position: relative;
   overflow: hidden;
@@ -168,14 +174,29 @@
   vertical-align: top;
 }
 
-.ht_gnb .btn_ht_all span:after {
+.ht_gnb .btn_ht_all span:before {
   position: absolute;
   right: 0;
   top: 1px;
   width: 16px;
   height: 16px;
-  background: #eaeaea url("../images/layout/ico_gnb_b.svg") 52% 50%/4px 6px no-repeat;
+  background-color: #eaeaea;
   border-radius: 50%;
+  content: "";
+}
+
+.ht_gnb .btn_ht_all span:after {
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border: solid #000;
+  border-width: 2px 2px 0 0;
+  -webkit-transform: rotate(45deg) scale(0.46);
+          transform: rotate(45deg) scale(0.46);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
   content: "";
 }
 
@@ -221,15 +242,20 @@
 
 .gnb_menu li a.ht_gnb_arrow span:after {
   position: absolute;
-  right: 0;
+  right: 2px;
   top: 50%;
-  width: 5px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   margin-top: -4px;
-  background: url("../images/layout/ico_gnb_menu.svg") center/100% no-repeat;
+  border: solid #ccc;
+  border-width: 2px 2px 0 0;
+  -webkit-transform: rotate(45deg) scale(0.48);
+          transform: rotate(45deg) scale(0.48);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
   content: "";
-  -webkit-transition: background 0.4s;
-  transition: background 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .gnb_menu li a.active {
@@ -238,7 +264,7 @@
 }
 
 .gnb_menu li a.active span:after {
-  background-image: url("../images/layout/ico_gnb_menu_on.svg");
+  border-color: #da2128;
 }
 
 .gnb_menu li a:hover {
@@ -247,7 +273,7 @@
 }
 
 .gnb_menu li a:hover span:after {
-  background-image: url("../images/layout/ico_gnb_menu_on.svg");
+  border-color: #da2128;
 }
 
 .gnb_menu li span {
