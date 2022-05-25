@@ -209,7 +209,7 @@ button.btn_md_second {
 .link_delivery {
   position: relative;
   display: inline-block;
-  margin-top: 4px;
+  margin-top: 8px;
   color: #595959;
   font-size: 13px;
   line-height: 19px;
@@ -1517,12 +1517,16 @@ button.btn_md_second {
 }
 
 .product_deliinfo_area .info_wrap .list_info .txt_dt {
+  color: #767676;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .product_deliinfo_area .info_wrap .list_info .txt_dd {
   font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
 }
 
 .product_deliinfo_area .info_wrap .list_info .txt_dd .txt_info {
@@ -1556,15 +1560,30 @@ button.btn_md_second {
 }
 
 .product_deliinfo_area .info_wrap .list_info .col_4 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
+  width: 76px;
 }
 
 .product_deliinfo_area .info_wrap .list_info .col_8 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 70%;
-          flex: 0 0 70%;
+  width: calc(100% - 76px);
+}
+
+.product_deliinfo_area .info_wrap .list_info .t_info {
+  display: block;
+  margin-top: 2px;
+  color: #767676;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.product_deliinfo_area .info_wrap .list_info .t_info02 {
+  display: block;
+  color: #474c98;
+  font-weight: 400;
+}
+
+.product_deliinfo_area .info_wrap .list_info .t_info02 strong {
+  font-weight: 700;
 }
 
 .product_deliinfo_area .info_wrap .list_info.free_gift {
@@ -1572,25 +1591,27 @@ button.btn_md_second {
   border: solid 1px #000;
   border-radius: 4px;
   margin-top: 14px;
-  padding: 12px 20px;
+  padding: 12px 19px;
 }
 
 .product_deliinfo_area .info_wrap .list_info.free_gift .txt_dt.col_4 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 27%;
-          flex: 0 0 27%;
+  width: 60px;
+  color: #474c98;
+  font-weight: 700;
 }
 
 .product_deliinfo_area .info_wrap .list_info.free_gift .txt_dd.col_8 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 73%;
-          flex: 0 0 73%;
+  width: calc(100% - 60px);
 }
 
 .product_deliinfo_area .info_wrap .list_info.free_gift .txt_dd.col_8 div {
   width: 100%;
   position: relative;
   padding-right: 44px;
+}
+
+.product_deliinfo_area .info_wrap .list_info.free_gift .txt_dd.col_8 div p {
+  font-weight: 400;
 }
 
 .product_deliinfo_area .info_wrap .list_info.free_gift .txt_dd.col_8 div .img {
@@ -1616,10 +1637,47 @@ button.btn_md_second {
   margin-top: 19px;
 }
 
+.product_area .info_intro_area {
+  padding: 32px 20px;
+}
+
 .product_area .info_intro_area p {
+  position: relative;
+  padding-top: 50px;
+  color: #000;
   font-size: 14px;
   line-height: 22px;
-  color: #292929;
+  text-align: center;
+}
+
+.product_area .info_intro_area p:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 38px;
+  height: 38px;
+  margin-left: -19px;
+  background: url("../images/main/tit_mus_mc_chart.svg") center/auto 38px no-repeat;
+  content: "";
+}
+
+.product_area .info_intro_area p strong {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.product_area .info_intro_area p span {
+  display: block;
+  color: #767676;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.product_area .info_intro_area p strong + span {
+  padding-top: 8px;
 }
 
 .product_area .zoom_area {

@@ -210,6 +210,7 @@
                                         <button class="ico_info"><span class="hidden">정보보기</span></button>
                                     </span>
                                 </dd>
+
                                 <dt class="txt_dt col_4">카드 혜택</dt>
                                 <dd class="txt_dd col_8">
                                     <span class="txt_info">신용카드 할인안내
@@ -217,24 +218,27 @@
                                     </span>
                                     
                                 </dd>
+
                                 <dt class="txt_dt col_4">배송비</dt>
-                                <!--[2022-04-02] 배송비 툴팁: button.ico_info 삭제-->
                                 <dd class="txt_dd col_8">
                                     <span class="txt_info">핫트랙스 조건배송</span>
-                                    <span class="txt_info">2,000원 (20,000원 이상 구매 시 무료)</span>
-                                    <span class="txt_info">도서 산간 지역 추가 요금 있음 </span>
+                                    <span class="txt_info"><span class="t_info02"><strong>2,000원</strong> (20,000원 이상 구매 시 무료)</span></span><!-- 22.05.24 수정 -->
+                                    <span class="txt_info"><span class="t_info">도서 산간 지역 추가 요금 있음</span></span><!-- 22.05.24 수정 -->
+
+                                    <a href="#none" class="link_delivery ico_more">묶음배송 상품 보기</a>
                                 </dd>
-                                <!--//[2022-04-02] 배송비 툴팁: button.ico_info 삭제-->
+
                                 <dt class="txt_dt col_4">예약 상품</dt>
                                 <dd class="txt_dd col_8">
                                     <span class="txt_info">2021.12.24 발매 예정</span>
-                                </dd>                    
+                                </dd>    
+
                                 <dt class="txt_dt col_4">배송 안내</dt>
                                 <dd class="txt_dd col_8">
                                     <span class="txt_info">
                                         예상출고일 1일이내
                                     </span>
-                                    <span class="txt_info">(상품주문후 2~3일 이내 받을 수 있습니다.)</span>
+                                    <span class="txt_info"><span class="t_info">상품주문후 2~3일 이내 받을 수 있습니다.</span></span><!-- 22.05.24 수정 ()삭제 -->
                                 </dd>                                        
                             </dl>
                             <!-- 22.04.26 사은품 수정 -->
@@ -336,15 +340,52 @@
                         <!-- 상품정보 -->
                         <section id="scrollSpyProdEvent" class="tab_content sps" data-add-offset="112" data-height-observe>
                             <!-- 상품정보 -->
-                            <div class="product_area">            
-                                <div class="info_intro_area">
+                            <div class="product_area">
+                                <div class="info_all_area">
+                                    <div class="info_area">
+                                        <div class="tit_subin_area">
+                                            <h3 class="tit"><span class="ico_army"></span><span class="txt">군부대 배송 여부 안내</span></h3>
+                                        </div>
+                                        <p class="txt_dec">
+                                            본상품은<strong class="txt_primary">군부대배송 불가상품</strong>입니다
+                                            배송불가지역은 주문 취소 처리 될 수 있는 점 양해 부탁드립니다.
+                                        </p>
+                                    </div>
+                                    <div class="info_area">
+                                        <div class="tit_subin_area">
+                                            <h3 class="tit">
+                                                <span class="ico_mountain"></span>
+                                                <span class="txt">도서 산간 지역 추가 운임 안내</span>
+                                            </h3>
+                                        </div>
+                                        <p class="txt_dec">
+                                            제주지,도서 산간 지역 추가 배송비가 발생하니 주문시 확인 부탁드립니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- 22.05.24 삭제 
+                                    <div class="info_intro_area">
                                     <p>
-                                        음반 판매자료는 온/오프라인 동일하게 한터차트와 뮤직뱅크 차트, 가온차트 판매량 집계에 100% 반영됩니다.
-                        Music sales data from both ON&OFF LINE STORES, Would be 100% counted for HANTEO CHART/MUSIC BANK CHART/GAON CHART.                
+                                        음반 판매자료는 온/오프라인 동일하게 한터차트와 뮤직뱅크 차트, 가온차트 판매량 집계에 100% 반영됩니다. Music sales data from both ON&OFF LINE STORES, Would be 100% counted for HANTEO CHART/MUSIC BANK CHART/GAON CHART.                
                                     </p>
                                 </div>
-                                <div class="info_all_area mgt24">
-                                    <div class="info_area">
+                                -->
+                                <div class="info_all_area">
+                                    <div class="info_area">                                      
+                                        <div class="tit_subin_area">
+                                            <h3 class="tit">
+                                                <span class="ico_poster"></span>
+                                                <span class="txt">포스터 증정 안내</span>
+                                            </h3>
+                                        </div>
+                                        <p class="txt_dec">
+                                            포스터는 포스터 지관통에 담아 발송해 드립니다.<br>
+                                            (앨범을 2장 이상 구매 시 포스터는 구매 수량과 동일하게 증정되며, 포스터 지관통은 주문 건당 1개만 증정됩니다.)<br>              
+                                            * 단 해외 주문 건은 포스터가 발송 되지 않습니다.
+                                        </p>
+                                    </div>
+                                    <div class="info_area">                                      
                                         <div class="tit_subin_area">
                                             <h3 class="tit">
                                                 <span class="ico_reservation"></span>
@@ -367,11 +408,11 @@
                                         </div>
                                         <p class="txt_dec">
                                             출연자 : 시무 리우, 양조위, 아콰피나, 장멍, 양자경,
-                        진법랍, 원화, 플로리안 문테아누<br>
-                        감독 : 데스틴 크리튼 | 언어 : 영어, 한국어 | 자막 : 자막
-                        없음, 영어, 한국어<br>
-                        화면 : 2.39:1 1080P HD | 음향 : ENGLISH 7.1 DTS-HD MASTER AUDIO, 5.1 DOLBY DIGITAL<br>
-                        상영시간 : 132분 | 디스크 수 : 1 | 등급 : 12세 이용가
+                                            진법랍, 원화, 플로리안 문테아누<br>
+                                            감독 : 데스틴 크리튼 | 언어 : 영어, 한국어 | 자막 : 자막
+                                            없음, 영어, 한국어<br>
+                                            화면 : 2.39:1 1080P HD | 음향 : ENGLISH 7.1 DTS-HD MASTER AUDIO, 5.1 DOLBY DIGITAL<br>
+                                            상영시간 : 132분 | 디스크 수 : 1 | 등급 : 12세 이용가
                                         </p>
                                     </div>
 

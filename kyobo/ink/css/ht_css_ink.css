@@ -581,37 +581,6 @@ button.btn_lg {
   max-height: initial !important;
 }
 
-.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content .tab_wrap.category.gnb_hottracks .tab_list_wrap .tabs .tab_item ~ .tab_item {
-  margin-top: 9px;
-  font-size: 14px;
-}
-
-.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content .tab_wrap.category.gnb_hottracks .tab_list_wrap .tabs .tab_item .tab_link .tab_text {
-  font-size: 14px;
-}
-
-.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content .tab_wrap.category.gnb_hottracks .tab_list_wrap .tabs .tab_item.ui-state-active .tab_link .tab_text {
-  color: #da2128;
-}
-
-.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content .tab_wrap.category.gnb_hottracks .tab_list_wrap .tabs .tab_item.ui-state-active .tab_link:after {
-  background-image: url("../images/layout/arw_anb_category_tab_hot_tracks.png");
-}
-
-.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .recommend_service_list .recommend_service_item .recommend_service_link .img_box {
-  background: rgba(80, 85, 177, 0.06);
-  -webkit-transition: background 0.4s;
-  transition: background 0.4s;
-}
-
-.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .recommend_service_list .recommend_service_item .recommend_service_link .img_box:hover {
-  background: rgba(80, 85, 177, 0.12);
-}
-
-.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .recommend_service_list .recommend_service_item .recommend_service_link .title {
-  margin: 6px -10px 0 -10px;
-}
-
 .history_list_wrap .custom_scroll_wrap {
   max-height: inherit !important;
 }
@@ -6316,6 +6285,11 @@ body {
           transform: scale(1.15);
 }
 
+.small_pics_area li a:hover img.ob_19 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .small_pics_area li img {
   width: 100%;
   height: 100%;
@@ -6330,6 +6304,15 @@ body {
 .small_pics_area li img.ob_contain {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.small_pics_area li img.ob_19 {
+  -webkit-transition: none;
+  transition: none;
+  border: 1px solid #000;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .small_pics_area a {
