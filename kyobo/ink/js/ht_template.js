@@ -997,8 +997,14 @@ function musReserved(){
             on: {
                 slideChangeTransitionEnd: function(){
                     var circles = document.getElementsByClassName("circle_txt");
-                    for (var i = 0; i < circles.length; i++) {
-                        var circleType = new CircleType(circles.item(i));
+                    var agent = navigator.userAgent.toLowerCase();
+                    if ( (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+                         // ie일 경우
+                        $('.circle_txt').hide();
+                    }else{
+                        for (var i = 0; i < circles.length; i++) {
+                            var circleType = new CircleType(circles.item(i));
+                        }
                     }
                     $('.type5_banner01 .swiper-slide-active').addClass('zoom_in');
                 },
@@ -1173,10 +1179,11 @@ function musPop(){
             },
             on: {
                 slideChangeTransitionEnd: function(){
+                    /*
                     var circles = document.getElementsByClassName("circle_txt");
                     for (var i = 0; i < circles.length; i++) {
                         var circleType = new CircleType(circles.item(i));
-                    }
+                    }*/
                     $('.type5_banner02 .swiper-slide-active').addClass('zoom_in');
                 },
                 slideChange: function() {
