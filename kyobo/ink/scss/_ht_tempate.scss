@@ -599,8 +599,12 @@
 }
 
 /* 제품상세 */
+
 .ht_info_deadline_fixed {
     position:absolute;right:114px;top:38px;width:100%;z-index:5;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        left:-674px;
+    }
     .txt {
         animation-iteration-count:1;
     }
