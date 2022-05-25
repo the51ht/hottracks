@@ -2687,19 +2687,29 @@ body.dialog_open {
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.checkbox_btm .dialog_footer.ctg_cks.search {
+  display: block;
+  position: relative;
   padding-top: 20px;
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.checkbox_btm .dialog_footer.ctg_cks.search .btn_outline_primary {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 50px;
+  text-indent: -9999px;
+  background: #fff url("../images/guide/ico_rest.svg") center/18px no-repeat;
+  border-color: #000;
+  overflow: hidden;
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.checkbox_btm .dialog_footer.ctg_cks.search .btn_primary {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  width: calc(100% - 55px);
+  margin-left: 55px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #000;
+  border-color: #000;
 }
 
 .ck_label_wrap {
