@@ -233,14 +233,16 @@
     .tit {
         .tit_top {
             margin-bottom:8px;color:#595959;font-size:14px;font-weight:400;line-height:22px;
+            &.t_point {
+                color:#474C98;
+            }
         }
         .tit_bottom {
             color:#000;font-size:22px;font-weight:500;line-height:34px;letter-spacing:-1px
             
         }
         .tit_bottom_dec {
-            margin-top:4px;
-            color:#474C98;font-size:14px;font-weight:400;line-height:22px;letter-spacing:-0.5px
+            margin-top:4px;color:#474C98;font-size:14px;font-weight:400;line-height:22px;letter-spacing:-0.5px
         }
     }
     .rating_score_wrap {
@@ -321,10 +323,13 @@
             width:100%;font-weight:500;
         }
         .t_info {
-            display:block;color:#767676;font-size:12px;font-weight:400;line-height:18px;;
+            display:block;margin-top:2px;color:#767676;font-size:12px;font-weight:400;line-height:18px;;
         }
         .t_info02 {
-            display:block;color:#474c98;
+            display:block;color:#474c98;font-weight:400;
+            strong {
+                font-weight:700;
+            }
         }
         .btn_arrow {
             margin-top:8px;;
@@ -344,7 +349,7 @@
     }
     /* 사은품 */
     .free_gift {
-        padding:20px 20px 20px 20px;box-sizing:border-box;background:#f4f4f4;border-radius:6px;
+        margin-top:25px;padding:20px 20px 20px 20px;box-sizing:border-box;background:#f4f4f4;border-radius:6px;
         dt {
             width:85px;color:#474c98;font-weight:700;
         }
@@ -753,9 +758,9 @@
 .info_intro_area {
     position:relative;padding:40px 40px 60px 40px;text-align:center;
     p {
-        position: relative;padding-top:55px;
+        position:relative;padding-top:55px;
         &:before {
-            position: absolute;left:50%;top:0;width:38px;height:38px;margin-left:-19px;background:url('../images/main/tit_mus_mc_chart.svg') center/ auto 38px no-repeat;content:"";
+            position:absolute;left:50%;top:0;width:38px;height:38px;margin-left:-19px;background:url('../images/main/tit_mus_mc_chart.svg') center/ auto 38px no-repeat;content:"";
         }
     }
     strong {
@@ -1085,7 +1090,7 @@
         }
     }
     .txt_value {
-        display:block;width:35px;margin-left:12px;font-size:13px;font-weight:400;text-align:right;white-space: nowrap;
+        display:block;width:35px;margin-left:12px;font-size:13px;font-weight:400;text-align:right;white-space:nowrap;
     }
 }
 .rating_row {
@@ -1710,7 +1715,7 @@
     .select_li_tit {
         margin-bottom:10px;font-weight:700;
         span{
-            color: #767676;font-size: 12px;font-weight: 400;
+            color:#767676;font-size:12px;font-weight:400;
         }
     }
     .form_sel {
