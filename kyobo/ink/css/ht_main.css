@@ -98,7 +98,7 @@
 
 .wel_hero_banner .swiper_control .swiper-button-next {
   right: calc(50% - 670px);
-  left: initial;
+  left: inherit;
 }
 
 .wel_hero_banner .swiper_control .swiper-button-prev {
@@ -674,8 +674,8 @@
   left: 0;
   height: 114px;
   width: 100%;
-  background: url(../images/main/img_wel_live_txt.svg) center repeat-x;
-  opacity: 0.3;
+  background: url(../images/main/img_wel_live_txt.png) center repeat-x;
+  opacity: 1;
 }
 
 .wel_live_txt li:nth-child(odd) {
@@ -751,14 +751,14 @@
 }
 
 .wel_live_cont .swiper-container-horizontal .swiper_control {
-  position: initial;
+  position: static;
   margin-top: 30px;
 }
 
 .wel_live_cont .swiper-container-horizontal .swiper_control .swiper-button-next {
   position: absolute;
   right: 69px;
-  left: initial;
+  left: inherit;
   top: 38%;
   border: 0;
 }
@@ -2531,30 +2531,26 @@
 
 .curation_btn:before {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 2px;
+  top: 2px;
   width: 16px;
   height: 16px;
   background: #000;
   border-radius: 50%;
   content: "";
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   -webkit-animation: curation_cir2 both infinite 1.5s;
           animation: curation_cir2 both infinite 1.5s;
 }
 
 .curation_btn:after {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 5px;
+  top: 5px;
   width: 10px;
   height: 10px;
   background: #ebfe00;
   border-radius: 50%;
   content: "";
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   -webkit-animation: curation_cir both infinite 1.3s;
           animation: curation_cir both infinite 1.3s;
 }
@@ -2631,18 +2627,18 @@
 }
 
 .curation_tooltip.ct_rt {
-  top: initial;
+  top: auto;
   bottom: 8px;
 }
 
 .curation_tooltip.ct_lb {
-  left: initial;
+  left: auto;
   right: 8px;
 }
 
 .curation_tooltip.ct_lt {
-  left: initial;
-  top: initial;
+  left: auto;
+  top: auto;
   right: 8px;
   bottom: 8px;
 }
@@ -2657,61 +2653,61 @@
 
 @-webkit-keyframes curation_cir {
   0% {
-    -webkit-transform: translate(-50%, -50%) scale(0.8);
-            transform: translate(-50%, -50%) scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   55% {
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    -webkit-transform: translate(-50%, -50%) scale(0.8);
-            transform: translate(-50%, -50%) scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
 @keyframes curation_cir {
   0% {
-    -webkit-transform: translate(-50%, -50%) scale(0.8);
-            transform: translate(-50%, -50%) scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   55% {
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    -webkit-transform: translate(-50%, -50%) scale(0.8);
-            transform: translate(-50%, -50%) scale(0.8);
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
 @-webkit-keyframes curation_cir2 {
   0% {
-    -webkit-transform: translate(-50%, -50%) scale(1.2);
-            transform: translate(-50%, -50%) scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   70% {
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    -webkit-transform: translate(-50%, -50%) scale(1.2);
-            transform: translate(-50%, -50%) scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
 @keyframes curation_cir2 {
   0% {
-    -webkit-transform: translate(-50%, -50%) scale(1.2);
-            transform: translate(-50%, -50%) scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
   70% {
-    -webkit-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    -webkit-transform: translate(-50%, -50%) scale(1.2);
-            transform: translate(-50%, -50%) scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -4331,7 +4327,7 @@
 .mus_mc_fan .swiper-container {
   width: calc(68.5% + 36px);
   margin: 0 auto;
-  position: initial;
+  position: static;
   padding-top: 80px;
 }
 
@@ -4379,12 +4375,12 @@
 }
 
 .mus_mc_fan .swiper-container-horizontal .swiper_control {
-  position: initial;
+  position: static;
 }
 
 .mus_mc_fan .swiper-container-horizontal .swiper_control .swiper-button-next {
   right: 69px;
-  left: initial;
+  left: inherit;
   top: 45%;
   position: absolute;
   background: #000;
