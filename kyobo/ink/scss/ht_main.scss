@@ -64,7 +64,7 @@
         position:absolute;top:50%;margin-top:-22px;z-index:10;
     }
     .swiper_control .swiper-button-next {
-        right:calc(50% - 670px);left:initial;
+        right:calc(50% - 670px);left:inherit;
     }
     .swiper_control .swiper-button-prev {
         left:calc(50% - 670px);
@@ -320,7 +320,7 @@
 
 /* wel_live_txt */
 .wel_live_txt li {
-    position:absolute;left:0;height:114px;width:100%;background:url(../images/main/img_wel_live_txt.svg) center repeat-x;opacity:0.3;
+    position:absolute;left:0;height:114px;width:100%;background:url(../images/main/img_wel_live_txt.png) center repeat-x;opacity:1;
     &:nth-child(odd){
         animation:wel_live_txt_01 both infinite linear 50s;
     }
@@ -379,9 +379,9 @@
         overflow:inherit;
     }
     .swiper-container-horizontal .swiper_control {
-        position:initial;margin-top:30px;
+        position:static;margin-top:30px;
         .swiper-button-next {
-            position:absolute;right:69px;left:initial;top:38%;border:0;
+            position:absolute;right:69px;left:inherit;top:38%;border:0;
         } 
         .swiper-button-prev {
             position:absolute;left:69px;top:38%;border:0;
@@ -1150,10 +1150,10 @@
 .curation_btn {
     display:block;position:relative;width:20px;height:20px;background:none;box-sizing:border-box;border-radius:50%;transition:all 0.4s;z-index:2;cursor:pointer;
     &:before {
-        position:absolute;left:50%;top:50%;width:16px;height:16px;background:#000;border-radius:50%;content:"";transform:translate(-50%,-50%);animation:curation_cir2 both infinite 1.5s;
+        position:absolute;left: 2px;top: 2px;width:16px;height:16px;background:#000;border-radius:50%;content:"";animation:curation_cir2 both infinite 1.5s;
     }
     &:after {
-        position:absolute;left:50%;top:50%;width:10px;height:10px;background:#ebfe00;border-radius:50%;content:"";transform:translate(-50%,-50%);animation:curation_cir both infinite 1.3s;
+        position:absolute;left: 5px;top: 5px;width:10px;height:10px;background:#ebfe00;border-radius:50%;content:"";animation:curation_cir both infinite 1.3s;
     }
 }
 
@@ -1179,27 +1179,27 @@
         position:absolute;right:17px;top:50%;width:11px;height:11px;margin-top:-5px;border:solid #767676;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
     } 
     &.ct_rt {
-        top:initial;bottom:8px;
+        top:auto;bottom:8px;
     }
     &.ct_lb {
-        left:initial;right:8px;
+        left:auto;right:8px;
     }
     &.ct_lt {
-        left:initial;top:initial;right:8px;bottom:8px;
+        left:auto;top:auto;right:8px;bottom:8px;
     }
     a {
         position:absolute;left:0;top:0;width:100%;height:100%;
     }
 }
 @keyframes curation_cir{
-0% {transform:translate(-50%,-50%) scale(0.8);}
-55% {transform:translate(-50%,-50%) scale(1);}
-100% {transform:translate(-50%,-50%) scale(0.8);}
+0% {transform:scale(0.8);}
+55% {transform:scale(1);}
+100% {transform:scale(0.8);}
 }
 @keyframes curation_cir2{
-0% {transform:translate(-50%,-50%) scale(1.2);}
-70% {transform:translate(-50%,-50%) scale(1);}
-100% {transform:translate(-50%,-50%) scale(1.2);}
+0% {transform:scale(1.2);}
+70% {transform:scale(1);}
+100% {transform:scale(1.2);}
 }
 
 
@@ -1931,7 +1931,7 @@
         }
     }
     .swiper-container {
-        width:calc(68.5% + 36px);margin:0 auto;position:initial;padding-top:80px;
+        width:calc(68.5% + 36px);margin:0 auto;position:static;padding-top:80px;
         .swiper-slide {
             width:850px !important;margin:0 18px 0 18px;
             padding:11px 19px 11px 11px;border:3px solid rgba(255 ,255 ,255, 0.6);border-radius:12px;box-sizing:border-box;
@@ -1953,9 +1953,9 @@
         }
     }
     .swiper-container-horizontal .swiper_control {
-        position:initial;
+        position:static;
         .swiper-button-next {
-            right:69px;left:initial;top:45%;position:absolute;background:#000;border:0;
+            right:69px;left:inherit;top:45%;position:absolute;background:#000;border:0;
         } 
         .swiper-button-prev {
             left:69px;top:47%;position:absolute;background:#000;border:0;
