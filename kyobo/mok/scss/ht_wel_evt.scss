@@ -121,6 +121,7 @@
             }
             .pop_info {
                 &.no_bullet {
+                    border-top: 0;margin-top:0;
                     li{
                         padding-left:0;
                         &:before {
@@ -132,7 +133,12 @@
             .pop_phone_info_msg {
                 &.icon_system_check {
                     p:before {
-                        background:url(../images/main/ico_wel_pop01.svg) center/100% no-repeat;
+                        background:url(../images/main/ico_wel_pop01.svg) center/100% no-repeat;top: 15px;
+                    }
+                }
+                &.icon_system_check_ing{
+                    p:before {
+                        background:url(../images/main/ico_wel_pop05.svg) center/100% no-repeat;width: 60px;height: 60px;
                     }
                 }
             }
@@ -177,10 +183,10 @@
     }
     
     .icon_no_page + .pop_info.no_bullet li {
-        text-align:center;
+        text-align:center;line-height: 22px;
     }
     .pop_info.no_bullet li {
-        font-size:14px;
+        font-size:14px;line-height: 22px;
     }
     .dialog_footer {
         max-width:750px;margin:0 auto;padding:24px 20px 40px;text-align:center;
@@ -214,14 +220,14 @@
         }
         &.icon_system_check {
             p:before {
-                background:url(../images/main/ico_wel_pop05.svg) center/100% no-repeat;height:53px;
+                background:url(../images/main/ico_wel_pop05.svg) center/100% no-repeat;height: 60px;width: 60px;
             }
         }
         &.icon_no_page {
             p {
-                padding-top:70px;font-size:20px;
+                padding-top:112px;font-size:20px;
                 &:before {
-                    background:url(../images/main/ico_wel_pop06.svg) center/100% no-repeat;height:62px;
+                    background:url(../images/main/ico_wel_pop06.svg) center/100% no-repeat;    height: 92px;width: 92px;background-size: contain;left: 46.5%;
                 }
             }
         }
@@ -240,10 +246,10 @@
                 }
             }
             .tit {
-                float:left;width:24%;
+                float:left;width:21%;
             }
             dd {
-                float:left;width:76%;
+                float:left;width:79%;
             }
         }
     }
