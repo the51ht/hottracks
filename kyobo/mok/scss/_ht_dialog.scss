@@ -971,12 +971,14 @@ body.dialog_open {
 	padding-bottom:32px; 
 	margin:0;
 	&.search{
-		padding-top:20px;
-		.btn_outline_primary{
-			flex:1;
+        display:block;position:relative;padding-top:20px;
+		.btn_outline_primary {
+            position:absolute;left:20px;top:20px;width:50px;text-indent:-9999px;
+            background:#fff url("../images/guide/ico_rest.svg") center/18px no-repeat;border-color:#000;overflow:hidden;
 		}
-		.btn_primary{
-			flex:2;
+		.btn_primary {
+            width:calc(100% - 55px);margin-left:55px;box-sizing:border-box;
+            background-color:#000;border-color:#000;
 		}
 	}
 }
