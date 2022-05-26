@@ -13,6 +13,12 @@ function setHtGnbOp() {
     $ht_gnb.find('#htGnbCate01 .ht_gnb_cont').addClass('chk2');
 }
 
+function htSetPrependZero(number, digits) {
+	number = number + '';
+	digits = digits || 2;
+	return number.length >= digits ? number : new Array(digits - number.length + 1).join('0') + number;
+}
+
 $(function(){
 	$('.btn_anb').click(function(e){
         setHtGnbOp();
@@ -95,10 +101,10 @@ function htHeroBanner(){
                 el: ('.hero_idx_' + index + ' .swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -176,10 +182,10 @@ function htBeltBanner(){
                 el: ('.belt_idx_' + index + ' .swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -228,10 +234,10 @@ function htUnderBanner(){
                 el: ('.ht_under_idx_' + index + ' .swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -324,10 +330,10 @@ function thumb4banner(){
                 el: ('.thumb4_idx_' + index + ' .swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -367,10 +373,10 @@ function icon3_banner(){
                 el: $(element).find('.swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -461,6 +467,7 @@ $(function(){
 
 /* Tab Swiper */
 function tabSwiper(){
+	console.log('tabSwiper')
     var $target = $('.tab_swiper');
     $target.each(function (index, element) {
         var $parent = $(this);
@@ -667,10 +674,10 @@ function welLive(){
             el: $('.wel_live_cont').find('.swiper-pagination')[0],
             type: 'fraction',
             formatFractionCurrent: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             },
             formatFractionTotal: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             }
         },
         navigation: {
@@ -825,10 +832,10 @@ function wel_exehibition_banner(){
                 el:  $(ele).find('.swiper-pagination')[0],
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             },
             navigation: {
@@ -988,10 +995,10 @@ function musReserved(){
                 el: ('.type5_banner01 .swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             },
             on: {
@@ -1011,7 +1018,7 @@ function musReserved(){
                 slideChange: function() {
                     $('.type5_banner01 .swiper-slide-active').removeClass('zoom_in');
                 }
-            },
+            }, 
             navigation: {
                 nextEl: ('.type5_banner01 .swiper-button-next'),
                 prevEl: ('.type5_banner01 .swiper-button-prev'),
@@ -1079,10 +1086,10 @@ function musNewAlbum(){
 			el: $('.mus_mc_new_album_cont').find('.swiper-pagination')[0],
 			type: 'fraction',
             formatFractionCurrent: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             },
             formatFractionTotal: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             }
 		},
         navigation: {
@@ -1129,10 +1136,10 @@ function musFan(){
 			el: $('.mus_mc_fan_cont').find('.swiper-pagination')[0],
 			type: 'fraction',
             formatFractionCurrent: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             },
             formatFractionTotal: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             }
 		},
         navigation: {
@@ -1171,10 +1178,10 @@ function musPop(){
                 el: ('.type5_banner02 .swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             },
             on: {
@@ -1243,8 +1250,8 @@ function musLpshop(){
 $(function(){
     if(!$('.mus_mc_lpshop_cont').length) return;
     musLpshop();
-
 });
+
 
 
 
@@ -1269,10 +1276,10 @@ function musSpecial(){
 			el: $('.mus_mc_special_cont').find('.swiper-pagination')[0],
 			type: 'fraction',
             formatFractionCurrent: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             },
             formatFractionTotal: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             }
 		},
         /*autoplay: {
@@ -1315,10 +1322,10 @@ function bradEx() {
 			el: $('.brad_main_exhibition_cont').find('.swiper-pagination')[0],
 			type: 'fraction',
 			formatFractionCurrent: function (number) {
-				return KyoboBookPub.ink.setPrependZero(number, 2);
+				return htSetPrependZero(number, 2);
 			},
 			formatFractionTotal: function (number) {
-				return KyoboBookPub.ink.setPrependZero(number, 2);
+				return htSetPrependZero(number, 2);
 			}
 		},
 		navigation: {
@@ -1353,10 +1360,10 @@ function bradCoupon(){
 			el: $('.brad_main_coupon_cont').find('.swiper-pagination')[0],
 			type: 'fraction',
 			formatFractionCurrent: function (number) {
-				return KyoboBookPub.ink.setPrependZero(number, 2);
+				return htSetPrependZero(number, 2);
 			},
 			formatFractionTotal: function (number) {
-				return KyoboBookPub.ink.setPrependZero(number, 2);
+				return htSetPrependZero(number, 2);
 			}
 		},
 		navigation: {
@@ -1403,10 +1410,10 @@ function giftNeed(){
             el: $('.gft_need_main_cont').find('.swiper-pagination')[0],
             type: 'fraction',
             formatFractionCurrent: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             },
             formatFractionTotal: function (number) {
-                return KyoboBookPub.ink.setPrependZero(number, 2);
+                return htSetPrependZero(number, 2);
             }
         },
         navigation: {
@@ -1467,10 +1474,10 @@ function corLiveBanner(){
                 el: ('.live_idx_' + index + ' .swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -1591,10 +1598,10 @@ function prod4_banner(){
                 el: $(element).find('.swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -1839,10 +1846,10 @@ function cur_prod4_banner(){
                 el: $(element).find('.swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -1962,10 +1969,10 @@ function cusFaqBanner(){
                 el: $($parent).find('.swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -2279,10 +2286,10 @@ function mdl4Banner(){
                 el: $(ele).find('.swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
@@ -2325,10 +2332,10 @@ function mdl_prod_banner(){
                 el: $(element).find('.swiper-pagination'),
                 type: 'fraction',
                 formatFractionCurrent: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 },
                 formatFractionTotal: function (number) {
-                    return KyoboBookPub.ink.setPrependZero(number, 2);
+                    return htSetPrependZero(number, 2);
                 }
             }
         };
