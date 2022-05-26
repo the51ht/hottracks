@@ -2500,9 +2500,6 @@
         display:block;position:relative;width:100%;height:65px;border-radius:22px;box-sizing:border-box;color:#fff;font-size:12px;font-weight:700;text-align:center;cursor:pointer;
         em {
             display:block;position:relative;padding-top:10px;color:#767676;font-size:11px;font-weight:700;line-height:11px;
-            &:before {
-                position:absolute;left:50%;top:0;width:4px;height:4px;margin-left:-2px;background:#797979;border-radius:50%;content:"";
-            }
         }   
         span {
             display:block;margin-top:4px;font-size:20px;font-weight:700;line-height:20px;letter-spacing:-1px;
@@ -2518,6 +2515,11 @@
                 display:none;
             }
         }
+        &.live {
+            em:before {
+                position:absolute;left:50%;top:0;width:4px;height:4px;margin-left:-2px;background:#797979;border-radius:50%;content:"";
+            }
+        }
     }
     .on {
         .li {
@@ -2528,7 +2530,7 @@
         }
     } 
     .today {
-        .li {
+        .li.live {
             em {
                 &:before {
                     background-color:#da2128;

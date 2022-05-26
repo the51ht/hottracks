@@ -5618,18 +5618,6 @@
   line-height: 11px;
 }
 
-.calendar_tab .li em:before {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 4px;
-  height: 4px;
-  margin-left: -2px;
-  background: #797979;
-  border-radius: 50%;
-  content: "";
-}
-
 .calendar_tab .li span {
   display: block;
   margin-top: 4px;
@@ -5651,6 +5639,18 @@
   display: none;
 }
 
+.calendar_tab .li.live em:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  background: #797979;
+  border-radius: 50%;
+  content: "";
+}
+
 .calendar_tab .on .li {
   background: #fff;
   color: #000;
@@ -5660,7 +5660,7 @@
   color: #000;
 }
 
-.calendar_tab .today .li em:before {
+.calendar_tab .today .li.live em:before {
   background-color: #da2128;
 }
 
