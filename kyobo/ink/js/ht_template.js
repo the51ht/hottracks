@@ -1209,31 +1209,41 @@ $(function(){
 /* LP SHOP */
 function musLpshop(){
     var $target = $('.mus_mc_lpshop_cont .swiper-container');
+    var $hit = $('.mus_mc_lpshop');
     var slideOption = {
         observer: true,
         observeParents: true,
         slidesPerView: 'auto',
         centeredSlides: true,
         loop: true,
-        loopsSlide: 1,
         spaceBetween: 36,
         autoplay: {
             delay:0,
-            disableOnInteraction: true,
+            disableOnInteraction:true,
+            pauseOnMouseEnter:true,
+            stopOnLastSlide:1
         },
         pagination: {
-            el: ('.mus_mc_lpshop_cont .swiper-pagination'),
-            type: "progressbar",
+           el: ('.mus_mc_lpshop_cont .swiper-pagination'),
+             type: "progressbar",
         },
-        speed: 3500,
-        allowTouchMove: false
+        speed:3500,
+        allowTouchMove: false,
+        loopFillGroupWithBlank:true,
     };
     musLpshopSwiper = new Swiper($target.get(), slideOption);
+
+    $hit.hover(function() {
+        musLpshopSwiper.autoplay.stop();
+    }, function() {
+        musLpshopSwiper.autoplay.start();
+    });
 }
 
 $(function(){
     if(!$('.mus_mc_lpshop_cont').length) return;
     musLpshop();
+
 });
 
 
