@@ -154,7 +154,37 @@
                     <a href="#"><span>고객센터</span></a>
                 </p>
                 <div class="cus_order_detail_box right">
+                    <!-- 22.05.27 배송추적 추가사항 수정 .order_prod_info_item-->
+                    <dl class="order_prod_info_item">
+                        <dt>상품명</dt>
+                        <dd>
+                            <p>나무 마스킹테이프</p>
+                            <span>나무 (GREEN)</span>
+                        </dd>
+                    </dl>
                     <dl>
+                        <dt>수량</dt>
+                        <dd>1개</dd>
+                    </dl>
+                    <dl>
+                        <dt>판매가</dt>
+                        <dd><strong class="t_point">4,420</strong>원</dd>
+                    </dl>
+                    <dl>
+                        <dt>판매자</dt>
+                        <dd>핫트랙스</dd>
+                    </dl>
+                    <dl>
+                        <dt>주문상태</dt>
+                        <dd>
+                            <!-- 22.05.27 배송추적 추가사항 수정 -->
+                            <button class="btn_txt_more btn_line_gray" data-role="btn-dialog" data-target="#popAlert01"><span>배송추적</span></button>
+                            배송완료
+                        </dd>
+                    </dl>
+
+                    <!-- 22.05.27 배송추적 추가사항 수정 .order_prod_info_item-->
+                    <dl class="order_prod_info_item">
                         <dt>상품명</dt>
                         <dd>
                             <p>나무 마스킹테이프</p>
@@ -334,5 +364,21 @@
     <!-- //docker_wrapper -->
 </div>   
 <!-- //wrapper -->
+
+
+<!-- 팝업 : 배송추적 : popAlert01 -->
+<div id="popAlert01" class="dialog_wrap has_btn">
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
+    <!-- dialog_contents -->
+    <div class="dialog_contents evt_pop_content_wrap">
+        <div class="evt_pop_content">
+            <iframe src="http://nexs.cjgls.com/web/service02_01.jsp?slipno=648398928042" scrolling="yes"></iframe>
+        </div>
+    </div>
+    <!-- //dialog_contents -->
+</div>
+<!-- //팝업 : 배송추적 : popHpPop01 -->
+
 </body>
 </html>

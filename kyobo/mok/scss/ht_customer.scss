@@ -1058,7 +1058,7 @@
 .cus_order_detail_box {
     position:relative;padding:20px 20px 18px 20px;border:1px solid #eaeaea;border-radius:4px;box-sizing:border-box;
     dl {
-        position:relative;margin-top:12px;overflow:hidden;
+        position:relative;margin-top: 8px;padding-top: 4px;overflow:hidden;
         &:first-child {
             margin-top:0;
         }
@@ -1094,7 +1094,30 @@
     .t_point {
         color:#da2128;
     }
+    .order_prod_info_item{
+        margin-top: 20px;padding-top:18px;border-top:1px solid #eaeaea;
+        &:nth-child(1){
+            margin-top: 0;padding-top:0;border-top: 0;
+        }
+    }
+    .btn_txt_more.btn_line_gray{
+        display: inline-block;height: 25px;font-size: 12px;line-height: 25px;padding: 0 11px 0 6px;margin: -28px 0 8px 0;box-sizing: border-box;border: 1px solid #ccc;border-radius: 4px;margin: 0;    margin: -4px 8px 0 0;
+        span{
+            padding-right: 1px;display: inline-block;position: relative;color:#000;font-weight: 500;
+            &:after{
+                border: solid #000;border-width: 1px 1px 0 0;width: 5px;height: 5px;border-color: #767676;transform: rotate(45deg);content: "";display: inline-block;position: absolute;top: 6px;right: -5px;
+            }
+        }
+    }
 }
+
+.dialog_wrapper .ui-dialog .dialog_wrap.has_btn .dialog_contents.evt_pop_content_wrap{
+    margin-bottom: 34px;
+    .evt_pop_content iframe{
+        height: 70vh;width: 85vw;display: block;border: none;padding: 20px 0 7px;margin-right: -24px;margin-bottom: -23px;margin-left: -4px;
+    }
+}
+
 .cus_order_num {
     dt {
         position:relative;top:4px;font-weight:500;line-height:22px;
