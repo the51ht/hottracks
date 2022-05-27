@@ -909,6 +909,7 @@ $(function(){
 
 
 
+
 /* 카테고리 */
 /* wel_category_tab */
 $(function(){
@@ -1220,21 +1221,22 @@ function musLpshop(){
     var slideOption = {
         observer: true,
         observeParents: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
+        slidesPerView:'auto',
+        centeredSlides:true,
         loop: true,
+        loopsSlide:1,
         spaceBetween: 36,
         autoplay: {
             delay:0,
             disableOnInteraction:true,
-            pauseOnMouseEnter:true,
-            stopOnLastSlide:1
+            stopOnLastSlide:1,
+            reverseDirection:false,
         },
         pagination: {
-           el: ('.mus_mc_lpshop_cont .swiper-pagination'),
-             type: "progressbar",
+            el: ('.mus_mc_lpshop_cont .swiper-pagination'),
+            type: "progressbar",
         },
-        speed:3500,
+        speed: 3500,
         allowTouchMove: false,
         loopFillGroupWithBlank:true,
     };
@@ -1242,8 +1244,10 @@ function musLpshop(){
 
     $hit.hover(function() {
         musLpshopSwiper.autoplay.stop();
+
     }, function() {
         musLpshopSwiper.autoplay.start();
+        
     });
 }
 
