@@ -56,7 +56,6 @@
                         top:125px;
                     }
                 }
-                
             }
             &.dialog_wrap_full {
                 margin:0 -20px;
@@ -155,16 +154,13 @@
         }
     }
 }
-
 .ui-dialog.dialog_top {
     margin:0;transform:translateY(0);align-self:flex-start;animation:topPopAnimation 0.35s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
 }
 @keyframes topPopAnimation {
-0% {transform:translateY(-100%);}
-100% {transform:translateY(0);}
+    0% {transform:translateY(-100%);}
+    100% {transform:translateY(0);}
 } 
-
-   
 
 /* 웰컴메인 팝업 - 페이지 */
 .dialog_pop_page_wrapper.dialog_wrap_wel {
@@ -181,7 +177,6 @@
             width:100%;
         }
     }
-    
     .icon_no_page + .pop_info.no_bullet li {
         text-align:center;line-height: 22px;
     }
@@ -232,7 +227,6 @@
             }
         }
     }
-    
     .pop_box_info {
         &.system_check_info {
             dl {
@@ -253,8 +247,6 @@
             }
         }
     }
-    
-    
 }
 
 /* 웰컴메인 팝업 - 토스트 메시지*/
@@ -296,7 +288,6 @@
     .dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
         border-radius:4px;
     }
-
 }
 .alm_list_header {
     &.mc_cont {
@@ -399,10 +390,10 @@
     }
     .alm_list{
         > li{
+            position:relative;margin-top:12px;
             &:first-child{
                 margin-top:0;
             }
-            position:relative;margin-top:12px;
             &:last-child{
                 &:after{
                     display:none;
@@ -499,11 +490,11 @@
 
 
 
-
 /***** 설정 페이지 ******/
 .wel_setting_wrapper{
-    .setting_list_wrap + .setting_list_wrap{margin-top:200px;} //로그인, 미로그인 Case 별 간격을 위한 margin CSS
-
+    .setting_list_wrap + .setting_list_wrap{
+        margin-top:200px;
+    } //로그인, 미로그인 Case 별 간격을 위한 margin CSS
     .header_wrapper .btn_header_setting:after{
         background-image:url(../images/main/ico_wel_setting.svg);
     }
@@ -552,12 +543,11 @@
             width:100%;position:relative;text-align:left;
             &.login_disabled_text{
                 .toggle_text{
+                    color:#CCCCCC;
                     .tit{
                         color:#CCCCCC;
                     }
-                    color:#CCCCCC;
                 }
-                
             }
         }
         .toggle_text{
@@ -570,8 +560,7 @@
         }
         .add_toggle_sub{
             .form_toggle{
-                float:right;
-                position:absolute;right:0;top:50%;transform:translateY(-50%);-o-transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);
+                float:right;position:absolute;right:0;top:50%;transform:translateY(-50%);-o-transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);
             }
         }
         &.form_toggle_box{
@@ -629,7 +618,6 @@
         }
     }
 }
-
 .pop_phone_info_msg.wel_setting_alarm_pop{
     p{
         padding-top:65px;
@@ -652,17 +640,10 @@
 
 /***** 쿠폰/ 혜택 *****/
 .wel_marketing_top_area {
-    padding:60px 20px;
-    background-color:#000;
-    color:#fff;
+    padding:60px 20px;background-color:#000;color:#fff;
     .title_wrap {
         .tit {
-            position:relative; 
-            font-family:'Gmarket Sans';
-            font-size:36px;
-            line-height:42px;
-            font-weight:500;
-            letter-spacing:-0.01em;
+            position:relative;font-family:'Gmarket Sans';font-size:36px;line-height:42px;font-weight:500;letter-spacing:-0.01em;
         }
         .wel_smile_icon > img {
             width:35px;
@@ -671,140 +652,65 @@
             white-space:nowrap;
         }
         .point_line:before {
-            height:20px;
-            top:17px;
-            background:#01CD5C;
+            height:20px;top:17px;background:#01CD5C;
         }
     }
     .sub_tit {
-        line-height:19px;
-        font-size:13px;
-        letter-spacing:-0.025em;
-        color:rgba(255, 255, 255, 0.8);
-        margin-top:8px;
+        line-height:19px;font-size:13px;letter-spacing:-0.025em;color:rgba(255, 255, 255, 0.8);margin-top:8px;
     }
     .cpon_subscription_wrap {
         .cpon {
-            position:relative;
-            padding:20px;
-            border-radius:8px;
-            background-color:#fff;
-            color:#000;
-            margin-bottom:12px;
+            position:relative;padding:20px;border-radius:8px;background-color:#fff;color:#000;margin-bottom:12px;
             &:last-of-type {
                 margin-bottom:24px;
             }
             &:before {
-                content:"";
-                position:absolute;
-                width:12px;
-                height:12px;
-                border-radius:50%;
-                background-color:#000;
-                top:-6px;
+                content:"";position:absolute;width:12px;height:12px;border-radius:50%;background-color:#000;top:-6px;
 
             }
             &:after {
-                content:"";
-                position:absolute;
-                width:12px;
-                height:12px;
-                border-radius:50%;
-                background-color:#000;
-                bottom:-6px;
-
+                content:"";position:absolute;width:12px;height:12px;border-radius:50%;background-color:#000;bottom:-6px;
             }
             .cpon_name {
-                text-align:center;
-                line-height:17px;
-                font-size:12px;
-                font-weight:700;
-                letter-spacing:-0.01em;
-                margin-bottom:5px;
+                text-align:center;line-height:17px;font-size:12px;font-weight:700;letter-spacing:-0.01em;margin-bottom:5px;
             }
             .cpon_kind {
-                text-align:center;
-                line-height:23px;
-                font-size:20px;
-                font-weight:700;
-                font-family:'Gmarket Sans';
+                text-align:center;line-height:23px;font-size:20px;font-weight:700;font-family:'Gmarket Sans';
             }
             .cpon_desc {
-                text-align:center;
-                font-size:12px;
-                letter-spacing:-0.01em;
-                color:#767676;
-                word-break:keep-all;
+                text-align:center;font-size:12px;letter-spacing:-0.01em;color:#767676;word-break:keep-all;
             }
             .dash {
-                width:1px;
-                height:100%;
-                border-left:1px dashed #000;
-                position:absolute;
-                top:0;
-                left:26px;
+                width:1px;height:100%;border-left:1px dashed #000;position:absolute;top:0;left:26px;
             }
             .barcode {
-                width:12px;
-                height:30px;
-                position:absolute;
-                right:0;
-                top:50%;
-                margin-top:-15px;
-                background:url(../images/guide/cpon_barcode.svg) no-repeat  center center/ cover;
+                width:12px;height:30px;position:absolute;right:0;top:50%;margin-top:-15px;background:url(../images/guide/cpon_barcode.svg) no-repeat  center center/ cover;
             }
         }
     }
     .join_btn_area {
         text-align:center;
         .join_btn {
-            padding:14px 40px;
-            line-height:21px;
-            font-size:15px;
-            font-weight:700;
-            border:1px solid #fff;
-            border-radius:40px;
-            letter-spacing:-0.01em;
-            word-break:keep-all;
+            padding:14px 40px;line-height:21px;font-size:15px;font-weight:700;border:1px solid #fff;border-radius:40px;letter-spacing:-0.01em;word-break:keep-all;
         }
     }
     .member_bnf_list {
-        display:flex;
-        flex-flow:row nowrap;
-        justify-content:space-between;
-        margin-top:24px;
+        display:flex;flex-flow:row nowrap;justify-content:space-between;margin-top:24px;
         .membet_bnf_item {
-            width:30%;
-            min-height:100% !important;
+            width:30%;min-height:100% !important;
             .icon {
-                width:64px;
-                height:64px;
-                margin:0 auto;
-                margin-bottom:8px;
-                padding:14px;
-                background-color:#fff;
-                border-radius:50%;
-                overflow:hidden;
-                text-align:center;
+                width:64px;height:64px;margin:0 auto;margin-bottom:8px;padding:14px;background-color:#fff;border-radius:50%;overflow:hidden;text-align:center;
                 & > img {
                     height:100%;
                 }
             }
             .bnf_name {
-                text-align:center;
-                line-height:19px;
-                font-weight:700;
-                font-size:13px;
-                letter-spacing:-0.01em;
+                text-align:center;line-height:19px;font-weight:700;font-size:13px;letter-spacing:-0.01em;
             }
             .bnf_amount {
-                text-align:center;
-                letter-spacing:-0.01em;
-                font-size:12px;
-                color:#D4FF1A
+                text-align:center;letter-spacing:-0.01em;font-size:12px;color:#D4FF1A
             }
         }
-
     }
 }
 //다양한 혜택
@@ -812,65 +718,34 @@
     padding:60px 20px;
     &.ty02 {
         background-color:#F7F7F7;
-
     } 
     .tit {
-        width:100%;
-        text-align:center;
-        font-size:30px;
-        line-height:38px;
-        font-family:'Gmarket Sans';
-        font-weight:500;
-
-
+        width:100%;text-align:center;font-size:30px;line-height:38px;font-family:'Gmarket Sans';font-weight:500;
         .point_line:before{
-            height:20px;
-            top:17px;
-            background:#01CD5C;
+            height:20px;top:17px;background:#01CD5C;
         }
     }
     .benefits {
         margin-top:20px;
         .benefit_item {
-            padding:20px 12px;
-            border-bottom:1px dotted #ccc;
-            display:flex;
-            flex-flow:row nowrap;
-            justify-content:flex-start;
-            align-content:center;
-            align-items:center;
+            padding:20px 12px;border-bottom:1px dotted #ccc;display:flex;flex-flow:row nowrap;justify-content:flex-start;align-content:center;align-items:center;
             &:last-of-type {
                 padding-bottom:0;border-bottom:none;
             }
             .icon {
-               width:34px;
-               height:34px;
-               flex-shrink:0;
-               position:relative;
+               width:34px;height:34px;flex-shrink:0;position:relative;
                & > img {
-                   width:34px;
-                   height:34px;
-                   position:absolute;
-                   top:0;
-                   left:0;
+                   width:34px;height:34px;position:absolute;top:0;left:0;
                }
             }
             .info {
                 margin-left:14px;
             }
             .bnf_tit {
-                font-size:18px;
-                line-height:26px;
-                letter-spacing:-0.01em;
-                font-weight:700;
-                margin-bottom:5px;
-                word-break:keep-all;
+                font-size:18px;line-height:26px;letter-spacing:-0.01em;font-weight:700;margin-bottom:5px;word-break:keep-all;
             }
             .bnf_sub {
-                line-height:20px;
-                letter-spacing:-0.01em;
-                color:#767676;
-                word-break:keep-all;
+                line-height:20px;letter-spacing:-0.01em;color:#767676;word-break:keep-all;
             }
         }
     }
@@ -878,16 +753,10 @@
 
 //또다른 혜택 상단
 .bnf_card_area_top {
-    padding-top:12px;
-    margin-bottom:32px;
+    padding-top:12px;margin-bottom:32px;
 }
 .bnf_card {
-    border:2px solid #000;
-    background-color:#FF224E;
-    border-radius:8px;
-    margin-top:20px;
-    padding:22px 20px 18px 20px;
-    overflow:hidden;
+    border:2px solid #000;background-color:#FF224E;border-radius:8px;margin-top:20px;padding:22px 20px 18px 20px;overflow:hidden;
     &.ty01 {
         color:#fff;
         .to_external {
@@ -907,58 +776,27 @@
         }
     }
     .card_tit {
-        line-height:25px;
-        font-weight:700;
-        font-size:16px;
-        margin-bottom:8px;
-        word-break:keep-all;
-        letter-spacing:-0.01em;
+        line-height:25px;font-weight:700;font-size:16px;margin-bottom:8px;word-break:keep-all;letter-spacing:-0.01em;
     }
     .to_external {
-        position:relative;
-        line-height:19px;
-        opacity:0.8;
-        font-size:13px;
+        position:relative;line-height:19px;opacity:0.8;font-size:13px;
         &:before {
-            content:"";
-            position:absolute;
-            width:10px;
-            height:18px;
-            top:-1px;
-            left:100%;
-            margin-left:3px;
-            background:url(../images/ico/arrow_white_dim.svg) no-repeat center;
+            content:"";position:absolute;width:10px;height:18px;top:-1px;left:100%;margin-left:3px;background:url(../images/ico/arrow_white_dim.svg) no-repeat center;
         }
     }
     .bnf_card_foot {
-        margin-top:30px;
-        text-align:right;
+        margin-top:30px;text-align:right;
         .company {
-            font-family:'Gmarket Sans';
-            margin-bottom:4px;
-            line-height:12px;
-            font-size:10px;
+            font-family:'Gmarket Sans';margin-bottom:4px;line-height:12px;font-size:10px;
         }
         .alliance { 
-            display:inline-block;
-            position:relative;
-            top:2px;
-            padding-right:12px;
-            height:12px;
-            margin-right:1px;
-            background:url(../images/ico/ico_bnf_alliance.svg) no-repeat  center center/ 10px;
+            display:inline-block;position:relative;top:2px;padding-right:12px;height:12px;margin-right:1px;background:url(../images/ico/ico_bnf_alliance.svg) no-repeat  center center/ 10px;
         }
         .kind {
-            line-height:12px;
-            font-family:'Gmarket Sans';
-            font-weight:700;
-            font-size:10px;
-            letter-spacing:-0.01em;
+            line-height:12px;font-family:'Gmarket Sans';font-weight:700;font-size:10px;letter-spacing:-0.01em;
         }
         .bnf_card_ft_icon {
-            width:42px;
-            height:42px;
-            display:inline-block;
+            width:42px;height:42px;display:inline-block;
             & > img {
                 width:100%;
             }
@@ -968,27 +806,17 @@
 
 //또다른 혜택 하단
 .bnf_card_area_btm {
-    padding-top:32px;
-    border-top:1px dotted #ccc;
+    padding-top:32px;border-top:1px dotted #ccc;
 }
 .bnf_card_default {
-    overflow:hidden;
-    margin-bottom:20px;
-    background-color:#fff;
+    overflow:hidden;margin-bottom:20px;background-color:#fff;
     &:last-child {
         margin-bottom:0;;
     }
     .card_body {
-        position:relative;
-        padding:18px 20px 0px 20px;
-        border-radius:8px;
-        border:2px solid #000;
+        position:relative;padding:18px 20px 0px 20px;border-radius:8px;border:2px solid #000;
         .card_icon {
-            position:absolute;
-            width:54px;
-            height:54px;
-            right:20px;
-            top:18px;
+            position:absolute;width:54px;height:54px;right:20px;top:18px;
             & > img {
                 width:100%;
             }
@@ -997,102 +825,45 @@
             }
         }
         .tit {
-            margin-top:12px;
-            text-align:left;
-            line-height:22px;
-            font-size:18px;
-            font-weight:500;
-            font-family:'Gmarket Sans';
-            letter-spacing:-0.01em;
-            padding-right:60px;
+            margin-top:12px;text-align:left;line-height:22px;font-size:18px;font-weight:500;font-family:'Gmarket Sans';letter-spacing:-0.01em;padding-right:60px;
         }
         .cpon_desc {
-            margin-top:8px;
-            font-size:12px;
-            line-height:18px;
-            letter-spacing:-0.01em;
-            word-break:keep-all;
+            margin-top:8px;font-size:12px;line-height:18px;letter-spacing:-0.01em;word-break:keep-all;
         }
         .external {
             padding:17px 0 28px;
             .to_external {
-                position:relative;
-                line-height:19px;
-                opacity:0.8;
-                font-size:13px;
+                position:relative;line-height:19px;opacity:0.8;font-size:13px;
                 &:before {
                     content:"";
-                    position:absolute;
-                    width:10px;
-                    height:18px;
-                    top:-1px;
-                    left:100%;
-                    margin-left:3px;
-                    background:url(../images/ico/ico_bnf_alliance_bk.svg) no-repeat  center;
+                    position:absolute;width:10px;height:18px;top:-1px;left:100%;margin-left:3px;background:url(../images/ico/ico_bnf_alliance_bk.svg) no-repeat  center;
                 }
             }
         }
         .new_bnf {
-            border-top:1px solid #eaeaea;
-            margin-top:21px;
-            padding:19px 0 23px;
+            border-top:1px solid #eaeaea;margin-top:21px;padding:19px 0 23px;
             .only_app_icon {
-                display:inline-block;
-                position:relative;
-                top:-1px;
-                margin-right:2px;
-                line-height:15px;
-                background-color:#000;
-                color:#fff;
-                padding:3px 8px;
-                border-radius:20px;
-                font-size:10px;
+                display:inline-block;position:relative;top:-1px;margin-right:2px;line-height:15px;background-color:#000;color:#fff;padding:3px 8px;border-radius:20px;font-size:10px;
             }
             .cpon_price {
-                display:inline-block;
-                letter-spacing:-0.01em;
-                line-height:20px;
-                color:#DA2128;
-                font-weight:700;
+                display:inline-block;letter-spacing:-0.01em;line-height:20px;color:#DA2128;font-weight:700;
             }
             .desc {
-                display:block;
-                margin-top:4px;
-                line-height:16px;
-                font-size:11px;
-                letter-spacing:-0.01em;
+                display:block;margin-top:4px;line-height:16px;font-size:11px;letter-spacing:-0.01em;
             }
         }
     }
     &.ty_btm {
         .card_body {
-            border-bottom:none;
-            border-bottom-left-radius:0;
-            border-bottom-right-radius:0;
+            border-bottom:none;border-bottom-left-radius:0;border-bottom-right-radius:0;
         }
     }
     .card_btm {
-        padding:14px 0;
-        color:#fff;
-        background-color:#292929;
-        text-align:center;
-        border-bottom-left-radius:8px;
-        border-bottom-right-radius:8px;
-        border:2px solid #000;
-        border-top:none;
+        padding:14px 0;color:#fff;background-color:#292929;text-align:center;border-bottom-left-radius:8px;border-bottom-right-radius:8px;border:2px solid #000;border-top:none;
         .down_cpon {
-            position:relative;
-            line-height:20px;
-            font-weight:500;
-            color:#fff;
+            position:relative;line-height:20px;font-weight:500;color:#fff;
             &:before {
-                content:"";
-                position:absolute;
-                width:12px;
-                height:20px;
-                left:-20px;
-                top:-2px;
-                background:url(../images/ico/ico_download_white.svg) no-repeat center / 12px;
+                content:"";position:absolute;width:12px;height:20px;left:-20px;top:-2px;background:url(../images/ico/ico_download_white.svg) no-repeat center / 12px;
             }
         }
     }
@@ -1110,105 +881,50 @@
             background-color:#BEBEBE;
         }
     } 
-
 }
 
 //상품평 작성 혜택
 .wel_review_area {
-    padding:20px;
-    margin-bottom:20px;
+    padding:20px; margin-bottom:20px;
     .tit {
-        margin-top:30px;
-        line-height:34px;
-        font-size:26px;
-        font-weight:500;
-        font-family:'Gmarket Sans';
-        letter-spacing:-0.01em;
+        margin-top:30px;line-height:34px;font-size:26px;font-weight:500;font-family:'Gmarket Sans';letter-spacing:-0.01em;
     }
     .write_icon {
-        display:inline-block;
-        position:relative;
-        top:15px;
-        left:-7px;
-        width:34px;
-        height:34px;
-        background:url(../images/guide/ico_review_pencil.svg) no-repeat center / 34px;
-
+        display:inline-block;position:relative;top:15px;left:-7px;width:34px;height:34px;background:url(../images/guide/ico_review_pencil.svg) no-repeat center / 34px;
     }
     .review_bnf_list {
-        display:flex;
-        flex-flow:row nowrap;
-        justify-content:space-between;
-        margin:24px 0 32px;
-        padding :0 14px;
+        display:flex;flex-flow:row nowrap;justify-content:space-between;margin:24px 0 32px;padding :0 14px;
         .bnf_item {
-            width:30%;
-            min-height:100% !important;
+            width:30%;min-height:100% !important;
             .icon {
-                width:48px;
-                height:48px;
-                margin:0 auto;
-                margin-bottom:14px;
+                width:48px;height:48px;margin:0 auto;margin-bottom:14px;
                 &>img {
                     width:100%;
                 }
             }
             .point {
-                text-align:center;
-                line-height:19px;
-                font-size:15px;
-                font-weight:700;
-                margin-bottom:2px;
-                letter-spacing:-0.01em;
+                text-align:center;line-height:19px;font-size:15px;font-weight:700;margin-bottom:2px;letter-spacing:-0.01em;
             }
             .info {
-                text-align:center;
-                line-height:17px;
-                font-size:12px;
-                margin-bottom:1px;
-                letter-spacing:-0.01em;
-                color:#767676;
-                word-break:keep-all;
+                text-align:center;line-height:17px;font-size:12px;margin-bottom:1px;letter-spacing:-0.01em;color:#767676;word-break:keep-all;
             }
             .info_sub {
-                text-align:center;
-                line-height:15px;
-                font-size:10px;
-                letter-spacing:-0.01em;
-                color:#767676;
-                word-break:keep-all;
+                text-align:center;line-height:15px;font-size:10px;letter-spacing:-0.01em;color:#767676;word-break:keep-all;
             }
         }
-
     }
-
     .review_bnf_desc_list {
-        border-top:1px solid #CCC;
-        padding-top:24px;
+        border-top:1px solid #CCC;padding-top:24px;
     }
 }
 .review_bnf_desc_list {
     .bnf_desc {
-        position:relative;
-        line-height:19px;
-        font-size:13px;
-        color:#595959;
-        letter-spacing:-0.01em;
-        word-break:keep-all;
-        margin-bottom:8px;
-        padding-left:10px;
+        position:relative;line-height:19px;font-size:13px;color:#595959;letter-spacing:-0.01em;word-break:keep-all;margin-bottom:8px;padding-left:10px;
         &:before {
-            content:"";
-            position:absolute;
-            width:2px;
-            height:2px;
-            left:2px;
-            top:8px;
-            background-color:#999;
+            content:"";position:absolute;width:2px;height:2px;left:2px;top:8px;background-color:#999;
         }
     }
 }
-
 .evt_slider_wrap.type_wel_evt {
     padding-bottom:0;
     .tit_gmarket {
@@ -1230,97 +946,39 @@
 
 
 
-
 /***** 바로드림 ******/
 .pickup_wrap {
-    margin-bottom:-60px;;
-    background-color:#F4F4F4;
-    margin-top:16px;
-    padding-bottom:60px;
+    margin-bottom:-60px;;background-color:#F4F4F4;margin-top:16px;padding-bottom:60px;
     .pickup_top_area {
-        height:285px;
-        position:relative;
-        overflow:hidden;
-        margin-bottom:32px;
+        height:285px;position:relative;overflow:hidden;margin-bottom:32px;
         .shopping_img {
-            position:absolute;
-            left:50%;
-            top:-100px;
-            margin-left:-80px;
-            width:160px;
-            z-index:1;
+            position:absolute;left:50%;top:-100px;margin-left:-80px;width:160px;z-index:1;
             img {
                 height:100%;
             }
         }
         .pick_up_bubble {
-            width:92px;
-            height:54px;
-            position:absolute;
-            background:url(../images/guide/wel_pickup_bubble.svg) no-repeat center center/ 99%;
-            left:50%;
-            top:33%;
-            transform:translateX(-100%);
-            z-index:2;
-            animation:wel_pick_up_bubble forwards 1 .5s .5s;
+            width:92px;height:54px;position:absolute;background:url(../images/guide/wel_pickup_bubble.svg) no-repeat center center/ 99%;left:50%;top:33%;transform:translateX(-100%);z-index:2;animation:wel_pick_up_bubble forwards 1 .5s .5s;
         }
     }
     .tit {
-        margin-top:33px;
-        text-align:center;
-        line-height:29px;
-        font-size:24px;
-        font-weight:700;
-        font-family:'Gmarket Sans';
+        margin-top:33px;text-align:center;line-height:29px;font-size:24px;font-weight:700;font-family:'Gmarket Sans';
     }
-
     .pickup_step_area {
-        position:relative;
-        margin-top:52px;
+        position:relative;margin-top:52px;
         &:before {
-            content:"";
-            position:absolute;
-            width:1px;
-            height:calc(100% / 3 * 2 + 34px);
-            border-right:1px dashed #000;
-            top:calc(100% / 6 - 17px);
-            left:calc(50% - 121px );
-
+            content:"";position:absolute;width:1px;height:calc(100% / 3 * 2 + 34px);border-right:1px dashed #000;top:calc(100% / 6 - 17px);left:calc(50% - 121px );
         }
         .pickup_step {
-            display:flex;
-            flex-flow:row nowrap;
-            justify-content:center;
-            align-items:center;
-            align-content:center;
-            margin-bottom:45px;
-            position:relative;
+            display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;align-content:center;margin-bottom:45px;position:relative;
             .num_icon {
-                width:34px;
-                height:34px;
-                left:2px;
-                flex-shrink:0;
-                position:relative;
-                z-index:2;
-                line-height:34px;
-                text-align:center;
-                font-weight:700;
-                
-                background:url(../images/guide/wel_pickup_num.svg) no-repeat center /99%;
+                width:34px;height:34px;left:2px;flex-shrink:0;position:relative;z-index:2;line-height:34px;text-align:center;font-weight:700;background:url(../images/guide/wel_pickup_num.svg) no-repeat center /99%;
             }
             .step_icon {
-                position:relative;
-                width:98px;
-                height:80px;
-                flex-shrink:0;
-                margin-right:15px;
+                position:relative;width:98px;height:80px;flex-shrink:0;margin-right:15px;
             }
             .desc {
-                min-width:130px;
-                line-height:29px;
-                font-size:20px;
-                font-weight:700;
-                word-break:keep-all;
+                min-width:130px;line-height:29px;font-size:20px;font-weight:700;word-break:keep-all;
                 .point_line:before {
                     top:12px;
                 }
@@ -1328,7 +986,6 @@
             @for $pkn from 1 through 3 {
                 &:nth-of-type(#{$pkn})  .step_icon {
                     background:url(../images/guide/wel_pickup_step#{$pkn}.svg) no-repeat center;
-                    
                 }
             }
             &:nth-child(3) {
@@ -1342,58 +999,27 @@
         padding:0 20px;
     }
     .pickup_notice_bubble {
-        position:relative;
-        margin-top:45px;
-        padding:34px 28px;
-        background-color:#fff;
-        border-radius:8px;
-        border:1px solid #000;
+        position:relative;margin-top:45px;padding:34px 28px;background-color:#fff;border-radius:8px;border:1px solid #000;
         &:before{
-            content:"";
-            position:absolute;
-            width:16px;
-            height:20px;
-            background:url(../images/guide/wel_pickup_bubble_before.svg) no-repeat center center;
-            left:35px;
-            top:-15px;
-            z-index:1;
+            content:"";position:absolute;width:16px;height:20px;background:url(../images/guide/wel_pickup_bubble_before.svg) no-repeat center center;left:35px;top:-15px;z-index:1;
         }
         .tit {
-            margin-top:0;
-            font-size:20px;
-            font-weight:700;
-            line-height:29px;
-            margin-bottom:8px;
-            text-align:left;
-            font-family:inherit;
+            margin-top:0;font-size:20px;font-weight:700;line-height:29px;margin-bottom:8px;text-align:left;font-family:inherit;
             .icon > img{
                 transform:translateY(-3px);
             }
         }
         .notice_desc {
-          line-height:21px;
-          margin-bottom:12px; 
+          line-height:21px;margin-bottom:12px; 
         }
         .to_external {
-            position:relative;
-            line-height:19px;
-            font-size:13px;
-            color:#595959;
+            position:relative;line-height:19px;font-size:13px;color:#595959;
             &:before {
-                content:"";
-                position:absolute;
-                width:10px;
-                height:18px;
-                top:-2px;
-                left:100%;
-                margin-left:3px;
-                opacity:0.6;
-                background:url(../images/ico/ico_bnf_alliance_bk.svg) no-repeat  center;
+                content:"";position:absolute;width:10px;height:18px;top:-2px;left:100%;margin-left:3px;opacity:0.6;background:url(../images/ico/ico_bnf_alliance_bk.svg) no-repeat  center;
             }
         }
     }
 }
-
 
 
 
@@ -1487,7 +1113,6 @@
     .req_stock_form .pop_cont { padding-top:15px;}
     .req_stock_form table tr { height:35px;}
     .req_stock_form div.tb_box { padding-left:8px;}
-
 }
 #content + .wel_belt02 {
     margin-top:0;
@@ -1505,142 +1130,64 @@
 
 /***** 라이브 알림 팝업 *****/
 .live_pop_wrap {
-    display:flex;
-    flex-flow:row nowrap;
-    align-items:center;
-    align-content:center;
-    position:relative;
-    padding:22px 20px;
-    background-color:#292929;
-    color:#fff;
+    display:flex;flex-flow:row nowrap;align-items:center;align-content:center;position:relative;padding:22px 20px;background-color:#292929;color:#fff;
     &.prod_app_cpon {
         padding:12px 56px 12px 20px;
         .close_btn {
-            width:24px;
-            height:24px;
-            top:50%;
-            transform:translateY(-50%);
+            width:24px;height:24px;top:50%;transform:translateY(-50%);
         }
         .app_cpon {
-          width:40px;
-          height:40px;
-          margin-right:12px;
+          width:40px;height:40px;margin-right:12px;
           img {
               width:120%;
           }  
         }
         .tit {
-            font-size:13px;
-            letter-spacing:-0.01em;
-            word-break:keep-all;
-            line-height:19px;
+            font-size:13px;letter-spacing:-0.01em;word-break:keep-all;line-height:19px;
             strong {
-                font-weight:700;
-                color:#FD5785;
+                font-weight:700;color:#FD5785;
             }
         }
     }
     .close_btn {
-        position:absolute;
-        width :18px;
-        height:18px;
-        top:12px;
-        right:12px;
-        background:url(../images/ico/ico_close_white.svg) no-repeat center/ 16px;
-        z-index:1;
+        position:absolute;width :18px;height:18px;top:12px;right:12px;background:url(../images/ico/ico_close_white.svg) no-repeat center/ 16px;z-index:1;
     }
     .live_pop_left_area {
-        width:72px;
-        height:70px;
-        margin-right:16px;
-        flex-shrink:0;
+        width:72px;height:70px;margin-right:16px;flex-shrink:0;
         .liv_timer_bomb {
             position:relative;
             & > img {
                 width:100%;
             }
             .timer {
-                position:absolute;
-                width:100%;
-                height:14px;
-                line-height:14px;
-                text-align:center;
-                left:0;
-                top:50%;
-                margin-top:2px;
-                margin-left:-3px;
-                z-index:1;
-                font-size:12px;
-                font-weight:700;
-                color:#D4FF1A;
-
+                position:absolute;width:100%;height:14px;line-height:14px;text-align:center;left:0;top:50%;margin-top:2px;margin-left:-3px;z-index:1;font-size:12px;font-weight:700;color:#D4FF1A;
             }
         }
         .liv_thumbnail {
-            width:64px;
-            height:64px;
-            overflow:hidden;
-            border-radius:8px;
-            position:relative;
-            top:50%;
-            margin-top:-32px;
+            width:64px;height:64px;overflow:hidden;border-radius:8px;position:relative;top:50%;margin-top:-32px;
             &>img {
                 width:100%;
-
             }
         }
     }
     .live_pop_right_area {
         .sub_tit {
-            padding-right:9px;
-            line-height:16px;
-            word-break:keep-all;
-            letter-spacing:-0.01em;
-            margin-top:2px;
-            margin-bottom:3px;
-            font-size:11px;
-            font-weight:500;
-            color:#ccc;
+            padding-right:9px;line-height:16px;word-break:keep-all;letter-spacing:-0.01em;margin-top:2px;margin-bottom:3px;font-size:11px;font-weight:500;color:#ccc;
         }
         .tit {
-            line-height:19px;
-            word-break:keep-all;
-            letter-spacing:-0.01em;
-            margin-bottom:8px;
-            font-weight:700;
-            font-size:13px;
+            line-height:19px;word-break:keep-all;letter-spacing:-0.01em;margin-bottom:8px;font-weight:700;font-size:13px;
         }
         .on_air {
-            width:87px;
-            height:17px;
-            margin-bottom:6px;
-            background:url(../images/guide/wel_liv_onair.svg) no-repeat center/ 99%;
-
+            width:87px;height:17px;margin-bottom:6px;background:url(../images/guide/wel_liv_onair.svg) no-repeat center/ 99%;
         }
         .toLivePage {
-            position:relative;
-            line-height:17px;
-            word-break:keep-all;
-            font-size:12px;
-            color:#D4FF1A;
+            position:relative;line-height:17px;word-break:keep-all;font-size:12px;color:#D4FF1A;
             &:before {
-                content:"";
-                width:10px;
-                height:17px;
-                position:absolute;
-                left:100%;
-                top:0;
-                background:url(../images/ico/toLivePage_arrow.svg) no-repeat right 2px/ 5px;
+                content:"";width:10px;height:17px;position:absolute;left:100%;top:0;background:url(../images/ico/toLivePage_arrow.svg) no-repeat right 2px/ 5px;
             }
         }
     }
-
 }
-
-
-
-
-
 
 /* form - toggle */
 .form_toggle {position: relative; display: inline-block; width: 40px; height: 22px; vertical-align: top; box-sizing: border-box;}
@@ -1655,5 +1202,3 @@
 .form_toggle_box .toggle_text {display: inline-block; margin-top: 3px; font-size: 13px; line-height: 19px; letter-spacing: -.01em; color: #767676; vertical-align: top;}
 .form_toggle_box .toggle_text .val {font-weight: 700;}
 .form_toggle_box .toggle_text+.form_toggle {margin-left: 6px;}
-
-
