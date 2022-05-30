@@ -3,8 +3,8 @@
     Main
 */
 /*
-$imgUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/";
-$fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
+$imgUrl : "../images/";
+$fontUrl : "../font/";
 */
 /***** * 웰컴메인 * *****/
 /*** 히어로 배너 : .wel_hero ***/
@@ -29,7 +29,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: 0;
   width: 25px;
   height: 25px;
-  background: url("../images/guide/ico_plus_w.svg") no-repeat 50%/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_plus_w.svg") no-repeat 50%/9px;
   z-index: 10;
 }
 
@@ -59,11 +59,11 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
 }
 
 .wel_hero_banner .play_pause_box .btn_play {
-  background: rgba(0, 0, 0, 0.3) url("../images/guide/ico_play.svg") no-repeat 50%/7px;
+  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_play.svg") no-repeat 50%/7px;
 }
 
 .wel_hero_banner .play_pause_box .btn_pause {
-  background: rgba(0, 0, 0, 0.3) url("../images/guide/ico_pause.svg") no-repeat 50%/5px;
+  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_pause.svg") no-repeat 50%/5px;
 }
 
 .wel_hero_banner .play_pause_box.play .btn_play {
@@ -577,7 +577,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   bottom: 125px;
   width: 61%;
   height: 28%;
-  background: url("../images/main/wel_tod_banner_bubble.svg") no-repeat center/95%;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/wel_tod_banner_bubble.svg") no-repeat center/95%;
   content: '';
   z-index: 3;
   opacity: 0;
@@ -1001,6 +1001,16 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
           transform: translate(-50%, -50%);
 }
 
+.wel_live_cont .img_wel_live > .img:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  content: "";
+}
+
 .wel_live_cont .img_wel_live img {
   width: 100%;
   height: 100%;
@@ -1045,7 +1055,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
 .wel_live_cont .img_wel_live .wel_live_time .btn_liv_play {
   width: 100px;
   height: 100px;
-  background: url("../images/main/btn_play.svg") center/52px no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/btn_play.svg") center/52px no-repeat;
 }
 
 .wel_live_cont .liv_timeline_marker strong {
@@ -1142,7 +1152,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   width: 8px;
   height: 9px;
   margin-top: -4px;
-  background: url("../images/main/ico_wel_live_btn.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_wel_live_btn.svg") center/100% no-repeat;
   content: "";
 }
 
@@ -1217,7 +1227,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   position: relative;
   width: 40px;
   height: 40px;
-  background: #000 url("../images/main/ico_wel_live_alarm.svg") center/100% no-repeat;
+  background: #000 url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_wel_live_alarm.svg") center/100% no-repeat;
   overflow: hidden;
   cursor: pointer;
   -webkit-transition: background 0.4s;
@@ -1226,7 +1236,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
 }
 
 .alarm_chk input[type="checkbox"]:checked + label {
-  background-image: url("../images/main/ico_wel_live_alarm_on.svg");
+  background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_wel_live_alarm_on.svg");
 }
 
 /* wel_live_box */
@@ -1377,7 +1387,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   bottom: 30px;
   width: 18px;
   height: 18px;
-  background: url("../images/main/ico_heart.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_heart.svg") center/100% no-repeat;
   opacity: 0;
 }
 
@@ -1628,7 +1638,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   width: calc(100% + 40px);
   height: 185px;
   margin: -40px 20px 0 -20px;
-  background: url("../images/main/tit_wel_encore_bg.png") center top/auto 170px no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/tit_wel_encore_bg.png") center top/auto 170px no-repeat;
   text-align: center;
 }
 
@@ -1638,7 +1648,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: 0;
   width: 190px;
   height: 114px;
-  background: url("../images/main/tit_wel_encore_bg2.png") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/tit_wel_encore_bg2.png") center/100% no-repeat;
   content: "";
 }
 
@@ -1667,7 +1677,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: 0;
   width: 70px;
   height: 80px;
-  background: url("../images/main/img_wel_encore_msg.png") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/img_wel_encore_msg.png") center/100% no-repeat;
   content: "";
 }
 
@@ -1878,7 +1888,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
 /*** MD Pick : .wel_md_pick ***/
 .wel_md_pick {
   padding: 30px 0 60px 0;
-  background: #fff url("../images/main/bg_wel_md_pick.jpg") center top/950px auto repeat;
+  background: #fff url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/bg_wel_md_pick.jpg") center top/950px auto repeat;
 }
 
 .wel_md_pick .mc_tit {
@@ -2263,7 +2273,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: 26px;
   width: 108px;
   height: 108px;
-  background: url("../images/main/ico_wel_search.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_wel_search.svg") center/100% no-repeat;
   content: "";
 }
 
@@ -2435,7 +2445,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   width: 40px;
   height: 40px;
   margin-left: -20px;
-  background: url("../images/main/btn_wel_search_cl.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/btn_wel_search_cl.svg") center/100% no-repeat;
 }
 
 /* wel_search_cont : 활성화 */
@@ -2469,7 +2479,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
 /*** 지금, 이 상품을 : .wel_now ***/
 .wel_now {
   padding: 87px 20px 80px 20px;
-  background: #1977f2 url("../images/main/bg_wel_now.jpg") center top/33px repeat;
+  background: #1977f2 url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/bg_wel_now.jpg") center top/33px repeat;
   text-align: center;
 }
 
@@ -2676,7 +2686,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: -18px;
   width: 72px;
   height: 72px;
-  background: url("../images/main/ico_perc.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_perc.svg") center/100% no-repeat;
   color: #fff;
   font-size: 17px;
   font-weight: 700;
@@ -2722,7 +2732,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
 /*** 큐레이션 : .wel_curation ***/
 .wel_curation {
   padding: 55px 20px;
-  background: #f5ede2 url("../images/main/bg_wel_curation.jpg") center top/32px repeat;
+  background: #f5ede2 url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/bg_wel_curation.jpg") center top/32px repeat;
   overflow: hidden;
 }
 
@@ -4260,7 +4270,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
 .mus_mc_chart_cont .active {
   margin-bottom: 20px;
   padding: 24px 20px;
-  background: url("../images/main/img_mus_mc_chart_cont.png") center/cover no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/img_mus_mc_chart_cont.png") center/cover no-repeat;
 }
 
 .mus_mc_chart_cont .active:last-child {
@@ -4272,7 +4282,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   left: 20px;
   top: 26px;
   padding-top: 7px;
-  background: url("../images/guide/lank_hot.svg") center/50px no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") center/50px no-repeat;
   color: #fff;
 }
 
@@ -4480,7 +4490,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: -11px;
   width: 13px;
   height: 24px;
-  background: url("../images/main/ico_mus_mc_order.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_mus_mc_order.svg") center/100% no-repeat;
   content: "";
 }
 
@@ -4582,7 +4592,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   width: 16px;
   height: 17px;
   margin-left: 4px;
-  background: url("../images/main/ico_mus_mc_memb_msg.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_mus_mc_memb_msg.svg") center/100% no-repeat;
   vertical-align: top;
 }
 
@@ -4704,7 +4714,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   bottom: 98px;
   width: 118px;
   height: 80px;
-  background: url("../images/main/ico_mus_mc_fan_cont.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_mus_mc_fan_cont.svg") center/100% no-repeat;
   content: "";
   opacity: 0;
   -webkit-transform: translateY(15px);
@@ -4842,7 +4852,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: 65px;
   width: 49px;
   height: 39px;
-  background: url("../images/main/ico_mus_mc_fansign.svg") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_mus_mc_fansign.svg") center/100% no-repeat;
   content: "";
   z-index: 2;
 }
@@ -5066,7 +5076,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   position: relative;
   margin: 44px -20px -40px -20px;
   padding: 44px 24px 34px 24px;
-  background: url("../images/main/img_mus_mc_classic_msg.png") center top/27px repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/img_mus_mc_classic_msg.png") center top/27px repeat;
   overflow: hidden;
 }
 
@@ -5076,7 +5086,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   bottom: 0;
   width: 130px;
   height: 155px;
-  background: url("../images/main/img_mus_mc_classic_msg01.svg") center top/130px 175px no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/img_mus_mc_classic_msg01.svg") center top/130px 175px no-repeat;
   content: "";
 }
 
@@ -5104,7 +5114,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: -10px;
   width: 240px;
   height: 108px;
-  background: url("../images/main/img_mus_mc_classic_msg02.svg") center top/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/img_mus_mc_classic_msg02.svg") center top/100% no-repeat;
   content: "";
 }
 
@@ -5157,7 +5167,7 @@ $fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";
   top: 0;
   width: 22%;
   height: 100%;
-  background: url("../images/main/img_mus_mc_lpshop_bg.png") center/100% no-repeat;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/img_mus_mc_lpshop_bg.png") center/100% no-repeat;
   content: "";
 }
 
