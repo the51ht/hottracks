@@ -2,10 +2,13 @@
 /*
     공통
 */
+@import "_mixins.scss";
+
+
 
 /***** 쿠폰/ 혜택 *****/
 .wel_coupon {
-    padding:100px 0;background:#000 url(../images/guide/cpon_area_bg.svg) center /1200px 571px no-repeat;color:#fff;
+    padding:100px 0;background:#000 url('#{$imgUrl}guide/cpon_area_bg.svg') center /1200px 571px no-repeat;color:#fff;
     .ht_tit_big {
         margin-bottom:10px;color:#fff;font-size:60px;line-height:76px;letter-spacing:-1px;
         & > img {
@@ -52,7 +55,7 @@
             position:absolute;left:42px;top:0;width:1px;height:100%;border-left:1px dashed #000;
         }
         .barcode {
-            position:absolute;right:0;top:50%;width:16px;height:40px;margin-top:-20px;background:url(../images/guide/cpon_barcode.svg) no-repeat  center center/ cover;
+            position:absolute;right:0;top:50%;width:16px;height:40px;margin-top:-20px;background:url('#{$imgUrl}guide/cpon_barcode.svg') no-repeat  center center/ cover;
         }
     }
 }
@@ -161,7 +164,7 @@
             font-family:'Gmarket Sans';font-size:14px;line-height:34px;
         }
         .alliance { 
-            display:inline-block;position:relative;top:7px;height:22px;margin-left:-4px;margin-right:-4px;padding-right:22px;background:url(../images/guide/ico_bnf_alliance.svg) no-repeat  center center/ 10px;
+            display:inline-block;position:relative;top:7px;height:22px;margin-left:-4px;margin-right:-4px;padding-right:22px;background:url('#{$imgUrl}guide/ico_bnf_alliance.svg') no-repeat  center center/ 10px;
         }
         .kind {
             font-family:'Gmarket Sans';font-size:14px;font-weight:700;line-height:16px;
@@ -230,7 +233,7 @@
             span {
                 position:relative;
                 &:before {
-                    position:absolute;left:-19px;top:-2px;width:14px;height:24px;background:url(../images/guide/ico_download_white.svg) no-repeat center / 12px;content:"";
+                    position:absolute;left:-19px;top:-2px;width:14px;height:24px;background:url('#{$imgUrl}guide/ico_download_white.svg') no-repeat center / 12px;content:"";
                 }
             }
         }
@@ -345,7 +348,7 @@
 
 /***** 바로드림 ******/
 .pickup_wrap {
-    padding-bottom:60px !important;background:#f4f4f4 url('../images/guide/pickup_bg.svg') center 120px/1200px 671px no-repeat;
+    padding-bottom:60px !important;background:#f4f4f4 url('#{$imgUrl}guide/pickup_bg.svg') center 120px/1200px 671px no-repeat;
     .tit {
         font-family:'Gmarket Sans';font-size:44px;font-weight:700;line-height:60px;letter-spacing:-1px;text-align:center;
         & > img {
@@ -364,7 +367,7 @@
         }
     }
     .pick_up_bubble {
-        position:absolute;left:453px;top:38%;width:133px;height:78px;background:url(../images/guide/wel_pickup_bubble.svg) no-repeat;z-index:2;
+        position:absolute;left:453px;top:38%;width:133px;height:78px;background:url('#{$imgUrl}guide/wel_pickup_bubble.svg') no-repeat;z-index:2;
     }
 }
 
@@ -378,7 +381,7 @@
 .pickup_step {
     position:relative;text-align:center;
     .num_icon {
-        width:42px;height:42px;margin:0 auto 15px auto;background:url(../images/guide/wel_pickup_num.svg) no-repeat center /99%;font-size:18px;font-weight:700;line-height:42px;text-align:center;z-index:2;
+        width:42px;height:42px;margin:0 auto 15px auto;background:url('#{$imgUrl}guide/wel_pickup_num.svg') no-repeat center /99%;font-size:18px;font-weight:700;line-height:42px;text-align:center;z-index:2;
     }
     .step_icon {
         height:80px;margin:0 auto 14px auto;
@@ -391,7 +394,7 @@
     }
     @for $pkn from 1 through 3 {
         &:nth-of-type(#{$pkn})  .step_icon {
-            background:url(../images/guide/wel_pickup_step#{$pkn}.svg) no-repeat center /contain;
+            background:url('#{$imgUrl}guide/wel_pickup_step#{$pkn}.svg') no-repeat center /contain;
             
         }
     }
@@ -409,7 +412,7 @@
 .pickup_notice_bubble {
     position:relative;width:708px;margin:40px auto 0 auto;padding:30px;background-color:#fff;border-radius:12px;box-sizing:border-box;border:2px solid #000;text-align:center;
     &:before {
-        position:absolute;left:50%;top:-20px;width:20px;height:26px;margin-left:-10px;background:url(../images/guide/wel_pickup_bubble_before.svg) no-repeat center center;content:"";z-index:1;
+        position:absolute;left:50%;top:-20px;width:20px;height:26px;margin-left:-10px;background:url('#{$imgUrl}guide/wel_pickup_bubble_before.svg') no-repeat center center;content:"";z-index:1;
     }
     .tit {
         margin-top:0;margin-bottom:10px;font-family:Roboto,"Noto Sans KR";font-size:28px;font-weight:700;line-height:40px;
@@ -454,7 +457,7 @@
 .system_err {
     position:relative;padding-top:180px;text-align:center;
     &:before {
-        position:absolute;left:50%;top:0;width:140px;height:140px;margin-left:-70px;background:url('../images/guide/ico_system_error.svg') center no-repeat;content:"";
+        position:absolute;left:50%;top:0;width:140px;height:140px;margin-left:-70px;background:url('#{$imgUrl}guide/ico_system_error.svg') center no-repeat;content:"";
     }
     .ht_tit04 {
         text-align:center;
@@ -476,13 +479,13 @@
     .sys_check{
         padding-top:76px;
         &:before {
-            height:56px;background:url(../images/guide/ico_pop_system_check.svg) center/100% no-repeat;content:"";
+            height:56px;background:url('#{$imgUrl}guide/ico_pop_system_check.svg') center/100% no-repeat;content:"";
         }
     }
     .sys_check_ing {
         padding-top:76px;
         &:before {
-            height:56px;background:url(../images/guide/ico_pop_system_check_ing.svg) center/100% no-repeat;content:"";
+            height:56px;background:url('#{$imgUrl}guide/ico_pop_system_check_ing.svg') center/100% no-repeat;content:"";
         }
     }
 }
@@ -575,7 +578,7 @@
                 .form_chk input+label {
                     font-size:13px;line-height:19px;color:#fff;
                     &:after {
-                        background-image:url(../images/main/ico_checkbox_transparent.svg);
+                        background-image:url('#{$imgUrl}main/ico_checkbox_transparent.svg');
                     }
                     &:before {
                         background-color:transparent;border-color:#fff;
@@ -583,7 +586,7 @@
                 }
                 .form_chk input:checked + label {
                     &:after {
-                        background-image:url(../images/main/ico_checkbox_transparent.svg);background-size:10px 7px;
+                        background-image:url('#{$imgUrl}main/ico_checkbox_transparent.svg');background-size:10px 7px;
                     }
                     &:before {
                         background-color:#da2128;border-color:#da2128;
@@ -593,7 +596,7 @@
             .btn_dialog_close {
                 right:0;top:0;
                 .ico_dialog_close {
-                    background-image:url(../images/main/btn_dialog_close_white.svg);
+                    background-image:url('#{$imgUrl}main/btn_dialog_close_white.svg');
                 }
             }
             .dialog_contents {

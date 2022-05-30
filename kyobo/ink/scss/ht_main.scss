@@ -2,6 +2,9 @@
 /*
     Main
 */
+@import "_mixins.scss";
+
+
 
 /***** * 웰컴메인 * *****/
 .ht_contents_wrap.wel_main_warp {
@@ -17,7 +20,7 @@
     .option_box {
         display:none;position:absolute;right:calc(50% - 600px);bottom:20px;z-index:1;
         .btn_all {
-            display:block;position:absolute;right:5px;top:0;width:36px;height:36px;background:url('../images/guide/ico_plus_w.svg') no-repeat 50%/ 11px;z-index:10;
+            display:block;position:absolute;right:5px;top:0;width:36px;height:36px;background:url('#{$imgUrl}guide/ico_plus_w.svg') no-repeat 50%/ 11px;z-index:10;
         }
     }
     .swiper-pagination.swiper-pagination-fraction {
@@ -33,10 +36,10 @@
             display:block;width:36px;height:36px;border-radius:50%;
         }
         .btn_play {
-            background:rgba(0,0,0,.3) url('../images/guide/ico_play.svg') no-repeat 50% / 8px;
+            background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_play.svg') no-repeat 50% / 8px;
         }
         .btn_pause {
-            background:rgba(0,0,0,.3) url('../images/guide/ico_pause.svg') no-repeat 50% / 6px;
+            background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_pause.svg') no-repeat 50% / 6px;
         }
         &.play {
             .btn_play {
@@ -261,10 +264,10 @@
         position:absolute;content:"";z-index:1;
     }
     &:before {
-        left:50%;bottom:60px;width:63px;height:63px;margin-left:-700px;background:url('../images/main/wel_hotdeal_bg1.svg') center/ 100% no-repeat ;
+        left:50%;bottom:60px;width:63px;height:63px;margin-left:-700px;background:url('#{$imgUrl}main/wel_hotdeal_bg1.svg') center/ 100% no-repeat ;
     }
     &:after {
-        left:50%;top:207px;width:103px;height:120px;margin-left:650px;background:url('../images/main/wel_hotdeal_bg2.svg') no-repeat center/ 100%;z-index:1;
+        left:50%;top:207px;width:103px;height:120px;margin-left:650px;background:url('#{$imgUrl}main/wel_hotdeal_bg2.svg') no-repeat center/ 100%;z-index:1;
     }
     .thumb4_banner {
         overflow:inherit;
@@ -290,7 +293,7 @@
         position:absolute;left:50%;top:170px;width:242px;margin-left:-131px;font-family:'Gmarket Sans';color:#fff;font-size:26px;font-weight:700;line-height:76px;text-align:center;
     }
     .wel_today_balloon {
-        position:absolute;width:205px;height:140px;top:237px;left:50%;z-index:3;margin-left:-90px;background:url(../images/main/wel_today_balloon.svg) no-repeat center / 99%;
+        position:absolute;width:205px;height:140px;top:237px;left:50%;z-index:3;margin-left:-90px;background:url('#{$imgUrl}main/wel_today_balloon.svg') no-repeat center / 99%;
         transform-origin:center top;animation:welTodImgMsg both infinite 5s;
     }
 }
@@ -320,7 +323,7 @@
 
 /* wel_live_txt */
 .wel_live_txt li {
-    position:absolute;left:0;height:114px;width:100%;background:url(../images/main/img_wel_live_txt.png) center repeat-x;opacity:1;
+    position:absolute;left:0;height:114px;width:100%;background:url('#{$imgUrl}main/img_wel_live_txt.png') center repeat-x;opacity:1;
     &:nth-child(odd){
         animation:wel_live_txt_01 both infinite linear 50s;
     }
@@ -358,7 +361,7 @@
                 opacity:0.2;transition:opacity 0.4s;
             }
             &:after{
-                right:-6px;bottom:345px;width:200px;height:130px;background:url('../images/main/ico_mus_mc_fan_cont_ink.svg') center/100% no-repeat;
+                right:-6px;bottom:345px;width:200px;height:130px;background:url('#{$imgUrl}main/ico_mus_mc_fan_cont_ink.svg') center/100% no-repeat;
             }
             &.swiper-slide-active {
                 .img_wel_live img,
@@ -397,7 +400,7 @@
                 }
             }
             &:after {
-                background:url('../images/guide/btn_banner_pagn_w.svg') center no-repeat;border-color:rgba(255,255,255,0.4);transition:all 0.4s;
+                background:url('#{$imgUrl}guide/btn_banner_pagn_w.svg') center no-repeat;border-color:rgba(255,255,255,0.4);transition:all 0.4s;
             }
         }
     }
@@ -503,7 +506,7 @@
         span {
             display:inline-block;position:relative;padding-left:18px;z-index:2;
             &:before {
-                position:absolute;left:0;top:50%;width:11px;height:12px;margin-top:-4px;background:url("../images/main/ico_wel_live_btn.svg") center/100% no-repeat;content:"";
+                position:absolute;left:0;top:50%;width:11px;height:12px;margin-top:-4px;background:url('#{$imgUrl}main/ico_wel_live_btn.svg') center/100% no-repeat;content:"";
             }
         }
         + .alarm_chk{
@@ -518,10 +521,10 @@
     input[type="checkbox"] {
         position:absolute;left:0;top:0;width:100%;height:100%;border:0;overflow:hidden;z-index:2;opacity:0;cursor:pointer;
         + label {
-            display:block;position:relative;width:48px;height:48px;background:#000 url('../images/main/ico_wel_live_alarm.svg') center/100% no-repeat;overflow:hidden;cursor:pointer;transition:background 0.4s;z-index:1;
+            display:block;position:relative;width:48px;height:48px;background:#000 url('#{$imgUrl}main/ico_wel_live_alarm.svg') center/100% no-repeat;overflow:hidden;cursor:pointer;transition:background 0.4s;z-index:1;
         }
         &:checked + label {
-            background-image:url('../images/main/ico_wel_live_alarm_on.svg');
+            background-image:url('#{$imgUrl}main/ico_wel_live_alarm_on.svg');
         }
     }
 }
@@ -530,7 +533,7 @@
 .wel_live_good_ani {
     display:none;position:absolute;right:0;top:240px;
     i {
-        display:block;position:absolute;right:12px;bottom:30px;width:18px;height:18px;background:url('../images/main/ico_heart.svg') center/100% no-repeat;opacity:0;
+        display:block;position:absolute;right:12px;bottom:30px;width:18px;height:18px;background:url('#{$imgUrl}main/ico_heart.svg') center/100% no-repeat;opacity:0;
         &:nth-child(1) {
             animation:wel_live_good1 2s 0.2s linear infinite;
         }
@@ -620,10 +623,10 @@
         }
     }
     &:before {
-        position:absolute;left:50%;top:100px;width:220px;height:255px;margin-left:-800px;background:url('../images/main/img_wel_encore_left_bg.svg') right/ 100% no-repeat;z-index:5;content:"";
+        position:absolute;left:50%;top:100px;width:220px;height:255px;margin-left:-800px;background:url('#{$imgUrl}main/img_wel_encore_left_bg.svg') right/ 100% no-repeat;z-index:5;content:"";
     }
     &:after {
-        position:absolute;right:50%;bottom:0;width:300px;height:528px;margin-right:-965px;background:url('../images/main/img_wel_encore_right_bg.svg') no-repeat right/ 100%;content:"";
+        position:absolute;right:50%;bottom:0;width:300px;height:528px;margin-right:-965px;background:url('#{$imgUrl}main/img_wel_encore_right_bg.svg') no-repeat right/ 100%;content:"";
     }
     .evt_products {
         margin-top:0;
@@ -634,7 +637,7 @@
 
 /*** MD Pick : .wel_md_pick ***/
 .wel_md_pick {
-    padding:40px 0 25px 0;background:url('../images/main/bg_wel_md_pick.jpg') center/100% repeat;
+    padding:40px 0 25px 0;background:url('#{$imgUrl}main/bg_wel_md_pick.jpg') center/100% repeat;
     .ht_tit_big {
         margin-bottom:10px;
         text-align:center;
@@ -741,7 +744,7 @@
 .wel_only {
     position:relative;padding-top:60px;overflow:hidden;
     &:before {
-        position:absolute;left:50%;bottom:125px;width:130px;height:144px;margin-left:665px;background:url('../images/main/wel_only_bg.svg') center /100% no-repeat;content:"";
+        position:absolute;left:50%;bottom:125px;width:130px;height:144px;margin-left:665px;background:url('#{$imgUrl}main/wel_only_bg.svg') center /100% no-repeat;content:"";
 
     }
     .ht_tit_big {
@@ -772,7 +775,7 @@
     .ht_tit_big {
         position:relative;margin-bottom:0;font-size:30px;line-height:32px;font-family:'Gmarket Sans';font-weight:500;z-index:0;text-align:center;padding-left:53px;
         &:before {
-            position:absolute;left:387px;top:-33px;width:108px;height:108px;background:url(../images/main/ico_wel_search.svg) center/100% no-repeat;content:"";z-index:-1;
+            position:absolute;left:387px;top:-33px;width:108px;height:108px;background:url('#{$imgUrl}main/ico_wel_search.svg') center/100% no-repeat;content:"";z-index:-1;
         }
     }
 }
@@ -841,7 +844,7 @@
     }
 }
 .btn_wel_search_cl {
-    display:none !important;position:absolute;left:50%;bottom:-59px;width:40px;height:40px;margin-left:-20px;background:url("../images/main/btn_wel_search_cl.svg") center/100% no-repeat;
+    display:none !important;position:absolute;left:50%;bottom:-59px;width:40px;height:40px;margin-left:-20px;background:url('#{$imgUrl}main/btn_wel_search_cl.svg') center/100% no-repeat;
 }
 
 /* wel_search_cont : 활성화 */
@@ -867,7 +870,7 @@
 
 /*** 지금, 이 상품을 : .wel_now ***/
 .wel_now {
-    padding:0 0 80px 0;background:#1977f2 url('../images/main/bg_wel_now.jpg') center top/33px repeat;text-align:center;overflow:hidden;
+    padding:0 0 80px 0;background:#1977f2 url('#{$imgUrl}main/bg_wel_now.jpg') center top/33px repeat;text-align:center;overflow:hidden;
     .wel_now_tit {
         display:inline-block;position:relative;width:590px;padding:100px 0 65px 0;
         .s1 {
@@ -1006,7 +1009,7 @@
 
 /*** 큐레이션 : .wel_curation ***/
 .wel_curation {
-    background:#f5ede2 url('../images/main/bg_wel_curation.jpg') center top/45px repeat;overflow:hidden;
+    background:#f5ede2 url('#{$imgUrl}main/bg_wel_curation.jpg') center top/45px repeat;overflow:hidden;
     .ht_tit_big {
         margin-bottom:25px;text-align:center;
         img {
@@ -1370,7 +1373,7 @@
         &:last-of-type {
             position:relative;
             &:before {
-                position:absolute;left:50%;top:100px;width:35px;height:35px;background:url('../images/guide/ico_plus_big.svg') center/ 100% no-repeat;transform:translateX(-50%);content:"";z-index:1;
+                position:absolute;left:50%;top:100px;width:35px;height:35px;background:url('#{$imgUrl}guide/ico_plus_big.svg') center/ 100% no-repeat;transform:translateX(-50%);content:"";z-index:1;
             }
         }
         .product_pic {
@@ -1594,7 +1597,7 @@
         .swiper-button-next {
             position:absolute;top:50%;margin-top:-22px;
             &:after {
-                background:#000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;border-color:rgba(255,255,255,0.4);transition:all 0.4s;
+                background:#000 url('#{$imgUrl}guide/btn_banner_pagn_w.svg') center no-repeat;border-color:rgba(255,255,255,0.4);transition:all 0.4s;
             }
             &:hover:after {
                 background-color:rgba(255,255,255,0.3);border-color:rgba(255,255,255,0.8);
@@ -1651,7 +1654,7 @@
                 span {
                     position:absolute;left:0;top:0;height:10px;background:#000;border-radius:5px;
                     &:after {
-                        position:absolute;right:-6px;top:-11px;width:15px;height:31px;background:url('../images/main/ico_mus_mc_order.svg') center/100% no-repeat;content:"";
+                        position:absolute;right:-6px;top:-11px;width:15px;height:31px;background:url('#{$imgUrl}main/ico_mus_mc_order.svg') center/100% no-repeat;content:"";
                     }
                 }
             }
@@ -1758,7 +1761,7 @@
         }
     }
     .active {
-        min-height:240px;background:#eee;margin-bottom:25px;padding-bottom:0;background:url('../images/main/mus_main_rank_active.jpg') center/cover no-repeat;
+        min-height:240px;background:#eee;margin-bottom:25px;padding-bottom:0;background:url('#{$imgUrl}main/mus_main_rank_active.jpg') center/cover no-repeat;
         &:last-child {
             margin-bottom:0;
         }
@@ -1781,7 +1784,7 @@
             }
         }
         .rank_txt {
-            top:50%;background:url('../images/guide/rank_hot.svg') center/50px no-repeat;color:#fff;transform:translateY(-50%);
+            top:50%;background:url('#{$imgUrl}guide/rank_hot.svg') center/50px no-repeat;color:#fff;transform:translateY(-50%);
         }
         .fluctuation {
             top:-5px;color:#fff;
@@ -1852,7 +1855,7 @@
             position:absolute;left:50%;top:-5px;width:0;height:0;border-bottom:8px solid #d4ff1a;border-left:8px solid transparent;border-right:8px solid transparent;content:"";z-index:2;
         }
         em {
-            display:inline-block;width:16px;height:17px;margin-left:4px;background:url('../../mok/images/main/ico_mus_mc_memb_msg.svg') center/ 100% no-repeat;vertical-align:top;
+            display:inline-block;width:16px;height:17px;margin-left:4px;background:url('#{$imgUrl}main/ico_mus_mc_memb_msg.svg') center/ 100% no-repeat;vertical-align:top;
         }
     }
 }
@@ -1976,7 +1979,7 @@
                 }
             }
             &:after {
-                background:#000 url(../images/guide/btn_banner_pagn_w.svg) center no-repeat;border-color:rgba(255,255,255,0.4);transition:all 0.4s;
+                background:#000 url('#{$imgUrl}guide/btn_banner_pagn_w.svg') center no-repeat;border-color:rgba(255,255,255,0.4);transition:all 0.4s;
             }
         }
     }
@@ -1996,7 +1999,7 @@
             }
         }
         .swiper-slide:after {
-            background:url(../images/main/ico_mus_mc_fan_cont_ink.svg) center/100% no-repeat;right:-6px;bottom:345px;width:200px;height:130px;
+            background:url('#{$imgUrl}main/ico_mus_mc_fan_cont_ink.svg') center/100% no-repeat;right:-6px;bottom:345px;width:200px;height:130px;
         }
     }
     .mus_mc_fan_bg_images {
@@ -2018,7 +2021,7 @@
     .swiper-slide {
         width:72%;margin:0 0 30px 20px;
         &:after {
-            position:absolute;right:-58px;bottom:98px;width:118px;height:80px;background:url('../images/main/ico_mus_mc_fan_cont.svg') center/100% no-repeat;opacity:0;transform:translateY(15px);transition:all 0.4s 0s;content:"";
+            position:absolute;right:-58px;bottom:98px;width:118px;height:80px;background:url('#{$imgUrl}main/ico_mus_mc_fan_cont.svg') center/100% no-repeat;opacity:0;transform:translateY(15px);transition:all 0.4s 0s;content:"";
         }
         &:last-child {
             margin-right:calc(28% - 20px);
@@ -2107,7 +2110,7 @@
             .title {
                 position:relative;font-size:24px;font-weight:700;line-height:38px;
                 &:after {
-                    display:inline-block;position:absolute;top:0px;right:34px;width:38px;height:38px;background:url('../images/main/tit_cur_brand_recommend.svg') center/ contain no-repeat;content:"";
+                    display:inline-block;position:absolute;top:0px;right:34px;width:38px;height:38px;background:url('#{$imgUrl}main/tit_cur_brand_recommend.svg') center/ contain no-repeat;content:"";
                 }
             }
         }
@@ -2166,7 +2169,7 @@
 
 /*** 요즘 핫 한 해외 POP 음반 : .mus_mc_pop ***/
 .mus_mc_pop {
-    background:url('../images/main/ico_mus_mc_pop_bg.png') center bottom repeat-x;
+    background:url('#{$imgUrl}main/ico_mus_mc_pop_bg.png') center bottom repeat-x;
     .contents_inner {
         width:100%;overflow:hidden;max-width:1800px;
     }
@@ -2208,7 +2211,7 @@
 
 /* mus_mc_classic_msg */
 .mus_mc_classic_msg {
-    position:relative;margin:60px 0 -60px 0;padding:50px 0 35px 0;background:url('../images/main/img_mus_mc_classic_msg.png') center top/27px repeat;text-align:center;
+    position:relative;margin:60px 0 -60px 0;padding:50px 0 35px 0;background:url('#{$imgUrl}main/img_mus_mc_classic_msg.png') center top/27px repeat;text-align:center;
     ul{
         display:inline-block;
     }
@@ -2217,16 +2220,16 @@
         p {
             display:inline-block;position:relative;position:relative;text-align:left;
             &:before {
-                position:absolute;left:-44px;top:-50px;width:44px;height:80px;background:url('../images/main/img_mus_mc_classic_msg02.svg') center top no-repeat;content:"";z-index:1;
+                position:absolute;left:-44px;top:-50px;width:44px;height:80px;background:url('#{$imgUrl}main/img_mus_mc_classic_msg02.svg') center top no-repeat;content:"";z-index:1;
             }
             &:after {
-                position:absolute;left:-15px;top:25px;width:206px;height:43px;background:url('../images/main/img_mus_mc_classic_msg03.svg') center top no-repeat;content:"";z-index:1;
+                position:absolute;left:-15px;top:25px;width:206px;height:43px;background:url('#{$imgUrl}main/img_mus_mc_classic_msg03.svg') center top no-repeat;content:"";z-index:1;
             }
         }
         em {
             display:inline-block;position:relative;vertical-align:top;
             &:after {
-                display:inline-block;width:32px;height:32px;margin:-5px 0 0 35px;background:url('../images/main/tit_mus_mc_classic_msg.svg') center top no-repeat;content:"";vertical-align:top;
+                display:inline-block;width:32px;height:32px;margin:-5px 0 0 35px;background:url('#{$imgUrl}main/tit_mus_mc_classic_msg.svg') center top no-repeat;content:"";vertical-align:top;
             }
         }
         img {
@@ -2239,7 +2242,7 @@
     .s3{
         position:relative;margin-top:18px;
         &:after {
-            position:absolute;bottom:-35px;right:-195px;width:192px;height:184px;background:url('../images/main/img_mus_mc_classic_msg01.svg') center no-repeat;content:"";
+            position:absolute;bottom:-35px;right:-195px;width:192px;height:184px;background:url('#{$imgUrl}main/img_mus_mc_classic_msg01.svg') center no-repeat;content:"";
         }
     }
     .btn_arrow {
@@ -2282,7 +2285,7 @@
         a {
             display:block;position:relative;padding:30px 60px 30px 0;box-sizing:border-box;
             &:before {
-                 position:absolute;right:0;top:30px;width:62px;height:210px;background:url('../images/main/img_mus_mc_lpshop_bg.png') center no-repeat;content:"";
+                 position:absolute;right:0;top:30px;width:62px;height:210px;background:url('#{$imgUrl}main/img_mus_mc_lpshop_bg.png') center no-repeat;content:"";
             }
             &:hover {
                 .product_info {

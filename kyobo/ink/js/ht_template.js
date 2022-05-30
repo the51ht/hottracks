@@ -467,7 +467,7 @@ $(function(){
 
 /* Tab Swiper */
 function tabSwiper(){
-	console.log('tabSwiper')
+	//console.log('tabSwiper')
     var $target = $('.tab_swiper');
     $target.each(function (index, element) {
         var $parent = $(this);

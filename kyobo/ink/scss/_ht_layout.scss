@@ -100,7 +100,7 @@ body {
     &> li  {
         position:relative;padding-right:10px;border-bottom:1px solid #eaeaea;
         &:not(.view_all):before {
-            position:absolute;right:0;top:15px;width:10px;height:19px;background:url('../images/guide/ico_arrow.svg') center/7px no-repeat;content:"";
+            position:absolute;right:0;top:15px;width:10px;height:19px;background:url('#{$imgUrl}guide/ico_arrow.svg') center/7px no-repeat;content:"";
         }
         &.on {
             .lnb_1dep {
@@ -122,12 +122,12 @@ body {
         & > li {
             position:relative;padding-right:10px;
             &:before {
-                position:absolute;right:-10px;top:0;width:10px;height:23px;background:url('../images/guide/ico_plus.svg') center/ 7px no-repeat ;content:"";
+                position:absolute;right:-10px;top:0;width:10px;height:23px;background:url('#{$imgUrl}guide/ico_plus.svg') center/ 7px no-repeat ;content:"";
             }
         }
         & > .on {
             &:before {
-                background-image:url('../images/guide/ico_minus.svg')
+                background-image:url('#{$imgUrl}guide/ico_minus.svg')
             }
             .lnb_2dep {
                 color:#da2128;
@@ -166,10 +166,10 @@ body {
             display:block;width:20px;height:19px;margin-right:4px;background: left center/18px no-repeat;
         }
         .search_icon {
-            background-image:url('../images/layout/ico_search.svg');
+            background-image:url('#{$imgUrl}layout/ico_search.svg');
         }
         .pen_icon {
-            background-image:url('../images/layout/ico_pen.svg');
+            background-image:url('#{$imgUrl}layout/ico_pen.svg');
         }
         .brand_count {
             background-color:#fff;margin-left:6px;margin-bottom:-1px;padding:4px 6px 3px 6px;border-radius:19px;color:#000;font-size:12px;font-weight:700;line-height:12px;
@@ -236,20 +236,20 @@ body {
 @font-face {
 	font-family:'Gmarket Sans';font-style:normal;font-weight:700;
 	src:local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
-	url('../font/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-	url('../font/GmarketSansBold.woff') format('woff');/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('#{$fontUrl}GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('#{$fontUrl}GmarketSansBold.woff') format('woff');/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
 	font-family:'Gmarket Sans';font-style:normal;font-weight:500;
 	src:local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
-	url('../font/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-	url('../font/GmarketSansMedium.woff') format('woff');/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('#{$fontUrl}GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('#{$fontUrl}GmarketSansMedium.woff') format('woff');/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 @font-face {
 	font-family:'Gmarket Sans';font-style:normal;font-weight:300;
 	src:local('Gmarket Sans Light'), local('GmarketSans-Light'),
-	url('../font/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-	url('../font/GmarketSansLight.woff') format('woff');/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	url('#{$fontUrl}GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('#{$fontUrl}GmarketSansLight.woff') format('woff');/* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 
@@ -308,27 +308,27 @@ body {
     }
 
     .ico_mus_nav01:before {
-        background-image:url('../images/main/ico_mus_main_t01.svg');
+        background-image:url('#{$imgUrl}main/ico_mus_main_t01.svg');
     }
     .ico_mus_nav02:before {
-        background-image:url('../images/main/ico_mus_main_t02.svg');
+        background-image:url('#{$imgUrl}main/ico_mus_main_t02.svg');
     }
     .ico_mus_nav03:before {
-        background-image:url('../images/main/ico_mus_main_t03.svg');
+        background-image:url('#{$imgUrl}main/ico_mus_main_t03.svg');
     }
 
     .ico_tod_nav01:before {
-        background-image:url('../images/main/ico_tod_main_t01.svg');
+        background-image:url('#{$imgUrl}main/ico_tod_main_t01.svg');
     }
     .ico_tod_nav02:before {
-        background-image:url('../images/main/ico_tod_main_t02.svg');
+        background-image:url('#{$imgUrl}main/ico_tod_main_t02.svg');
     }
 
     .ico_cur_nav01:before {
-        background-image:url('../images/main/ico_cur_hero_tab01.svg');
+        background-image:url('#{$imgUrl}main/ico_cur_hero_tab01.svg');
     }
     .ico_cur_nav02:before {
-        background-image:url('../images/main/ico_cur_hero_tab02.svg');
+        background-image:url('#{$imgUrl}main/ico_cur_hero_tab02.svg');
     }
 }
 
@@ -379,9 +379,9 @@ body {
 			}
 		} 
 		.list_view_type_btn {
-			width:38px;height:38px;border:1px solid #ccc;border-radius:6px;cursor:pointer;background:url('../images/layout/ico_hamburger.svg') center/14px no-repeat;transition:background 0.2s;
+			width:38px;height:38px;border:1px solid #ccc;border-radius:6px;cursor:pointer;background:url('#{$imgUrl}layout/ico_hamburger.svg') center/14px no-repeat;transition:background 0.2s;
 			&.row_view {
-				background-image:url('../images/layout/ico_window.svg');
+				background-image:url('#{$imgUrl}layout/ico_window.svg');
 			}
             &:hover {
                 background-color:#f4f4f4;

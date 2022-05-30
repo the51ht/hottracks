@@ -2,6 +2,10 @@
 /*
     고객센터
 */
+@import "_mixins.scss";
+
+
+
 .ht_cus_cont {
     overflow:hidden;
 }
@@ -30,7 +34,7 @@
     .cus_1dep {
         position:relative;padding:0;box-sizing:border-box;color:#000;
         &:before {
-            position:absolute;right:-8px;top:4px;width:4px;height:7px;background:url('../images/guide/ico_arrow_p.png') right center no-repeat;content:"";
+            position:absolute;right:-8px;top:4px;width:4px;height:7px;background:url('#{$imgUrl}guide/ico_arrow_p.png') right center no-repeat;content:"";
         }
     }
     .dep2_lst {
@@ -45,7 +49,7 @@
     .cus_2dep {
         padding-left:8px;color:#767676;line-height:19px;letter-spacing:-1px;
         &:before {
-            position:absolute;right:-8px;top:4px;width:4px;height:7px;background:url('../images/guide/ico_arrow_p.png') right center no-repeat;content:"";opacity:0.65;
+            position:absolute;right:-8px;top:4px;width:4px;height:7px;background:url('#{$imgUrl}guide/ico_arrow_p.png') right center no-repeat;content:"";opacity:0.65;
         }
         &:after {
             position:absolute;left:0;top:9px;width:4px;height:1px;background:#767676;content:"";opacity:0.8;
@@ -59,7 +63,7 @@
     .title {
         position:relative;padding-left:22px;font-size:14px;font-weight:500;line-height:20px;
         &:before {
-            position:absolute;left:0;top:-1px;width:20px;height:20px;background:url(../images/guide/ico_cus_info_clock_bk.svg) no-repeat left center/18px;content:"";z-index:1;
+            position:absolute;left:0;top:-1px;width:20px;height:20px;background:url('#{$imgUrl}guide/ico_cus_info_clock_bk.svg') no-repeat left center/18px;content:"";z-index:1;
         }
     }
     .tel {
@@ -78,7 +82,7 @@
     .ref_tit {
         position:relative;padding-right:49px;font-size:13px;font-weight:700;line-height:19px;
         &:before {
-            position:absolute;right:0;top:0;width:36px;height:38px;background:url(../images/guide/ico_cus_ref.svg) no-repeat center/36px;content:"";z-index:1;
+            position:absolute;right:0;top:0;width:36px;height:38px;background:url('#{$imgUrl}guide/ico_cus_ref.svg') no-repeat center/36px;content:"";z-index:1;
         }
     }
     .info {
@@ -123,7 +127,7 @@
 .cus_faq_cont {
     position:relative;
     &:before {
-        position:absolute;left:100px;top:-45px;width:38px;height:70px;background:url("../images/guide/ico_cus_mc_best.svg") center top/100% no-repeat;transform:rotate(25deg);content:"";
+        position:absolute;left:100px;top:-45px;width:38px;height:70px;background:url('#{$imgUrl}guide/ico_cus_mc_best.svg') center top/100% no-repeat;transform:rotate(25deg);content:"";
     }
     .swiper_control .swiper-pagination.swiper-pagination-fraction {
         height:34px;color:#fff;line-height:34px;
@@ -204,7 +208,7 @@
         &.c1 {
             position:relative;margin-right:50px;padding-left:20px;font-size:15px;
             &:before {
-                position:absolute;left:-3px;top:1px;width:20px;height:20px;background:url(../images/guide/ico_cus_info_clock.svg) no-repeat left center / 18px;content:"";z-index:1;
+                position:absolute;left:-3px;top:1px;width:20px;height:20px;background:url('#{$imgUrl}guide/ico_cus_info_clock.svg') no-repeat left center / 18px;content:"";z-index:1;
             }
         }
         &.c2 {
@@ -245,7 +249,7 @@
             p {
                 position:relative;padding-top:40px;
                 &:before {
-                    position:absolute;left:50%;top:0;width:30px;height:30px;margin-left:-15px;background:url('../images/guide/ico_not_list.svg') center/100% no-repeat;content:"";
+                    position:absolute;left:50%;top:0;width:30px;height:30px;margin-left:-15px;background:url('#{$imgUrl}guide/ico_not_list.svg') center/100% no-repeat;content:"";
                 }
             }
         }
@@ -756,7 +760,7 @@
 }
 .required {
     &:before {
-        background-image:url(../../ink/images/guide/ico_required.svg) !important;
+        background-image:url('#{$imgUrl}guide/ico_required.svg') !important;
     }
 }
 .tbl_row_wrap .fold_question {
@@ -831,7 +835,7 @@
     strong {
         height:38px;padding:0 12px;font-size:13px;font-weight:400;line-height:38px;
         em:after{
-            right:3px;width:14px;height:14px;margin-top:-12px;background:url("../images/guide/ico_comment.svg") center/100% no-repeat;
+            right:3px;width:14px;height:14px;margin-top:-12px;background:url('#{$imgUrl}guide/ico_comment.svg') center/100% no-repeat;
         }
     }
 }
@@ -850,11 +854,11 @@
 .cus_hero_area {
     position:relative;padding:130px 0 60px 0;border-top:1px solid #eaeaea;text-align:center;
     &:before {
-        position:absolute;left:50%;top:40px;width:80px;height:80px;margin-left:-30px;background:url(../images/guide/ico_cus_hero01.svg) center/100% no-repeat;content:"";
+        position:absolute;left:50%;top:40px;width:80px;height:80px;margin-left:-30px;background:url('#{$imgUrl}guide/ico_cus_hero01.svg') center/100% no-repeat;content:"";
     }
     &.ty02 {
         &:before {
-            background-image:url(../images/guide/ico_cus_hero02.svg);
+            background-image:url('#{$imgUrl}guide/ico_cus_hero02.svg');
         }
     }
     .cus_hero_tit {
@@ -926,7 +930,7 @@
         }
     }
     &.ty01 {
-        background:url('../images/guide/cus_font_box.png') center /cover no-repeat;
+        background:url('#{$imgUrl}guide/cus_font_box.png') center /cover no-repeat;
         .ht_tit05 {
             color:#fff;
             img {
@@ -947,13 +951,13 @@
         }
     }
     &.ty02 {
-        background:url('../images/guide/cus_package_box.svg') center /cover no-repeat;
+        background:url('#{$imgUrl}guide/cus_package_box.svg') center /cover no-repeat;
         .point_line:before {
             background-color:#ffe65c;
         }
     }
     &.ty03 {
-        background:url('../images/guide/cus_card_box.svg') center /cover no-repeat;
+        background:url('#{$imgUrl}guide/cus_card_box.svg') center /cover no-repeat;
         .point_line:before {
             background-color:#9af8c2;
         }
@@ -1209,22 +1213,22 @@
                 background:initial;
             }
             &:after {
-                display:inline-block;position:absolute;right:35px;top:33px;width:6px;height:12px;background:url('../images/guide/ico_order_processing_box_br.png') center no-repeat;content:"";
+                display:inline-block;position:absolute;right:35px;top:33px;width:6px;height:12px;background:url('#{$imgUrl}guide/ico_order_processing_box_br.png') center no-repeat;content:"";
             }
         }
     }
 }
 .order_processing_01:before {
-    background-image:url(../images/guide/cus_order01.png);
+    background-image:url('#{$imgUrl}guide/cus_order01.png');
 }
 .order_processing_02:before {
-    background-image:url(../images/guide/cus_order02.png);
+    background-image:url('#{$imgUrl}guide/cus_order02.png');
 }
 .order_processing_03:before {
-    background-image:url(../images/guide/cus_order03.png);
+    background-image:url('#{$imgUrl}guide/cus_order03.png');
 }
 .order_processing_04:before {
-    background-image:url(../images/guide/cus_order04.png);
+    background-image:url('#{$imgUrl}guide/cus_order04.png');
 }
 
 /* .order_re_ex : 반품처리 안내/교환처리 안내 */
@@ -1256,30 +1260,30 @@
                 background:initial;
             }
             &:after {
-                display:inline-block;position:absolute;right:23px;top:35px;width:6px;height:12px;background:url('../images/guide/ico_order_processing_box_br.png') center no-repeat;content:"";
+                display:inline-block;position:absolute;right:23px;top:35px;width:6px;height:12px;background:url('#{$imgUrl}guide/ico_order_processing_box_br.png') center no-repeat;content:"";
             }
         }
     }
     .order_re_01:before {
-        background-image:url(../images/guide/cus_return01.png);
+        background-image:url('#{$imgUrl}guide/cus_return01.png');
     }
     .order_re_02:before {
-        background-image:url(../images/guide/cus_return02.png);
+        background-image:url('#{$imgUrl}guide/cus_return02.png');
     }
     .order_re_03:before {
-        background-image:url(../images/guide/cus_return03.png);
+        background-image:url('#{$imgUrl}guide/cus_return03.png');
     }
     .order_re_04:before {
-        background-image:url(../images/guide/cus_return04.png);
+        background-image:url('#{$imgUrl}guide/cus_return04.png');
     }
     .order_ex_01:before {
-        background-image:url(../images/guide/cus_exchange01.png);
+        background-image:url('#{$imgUrl}guide/cus_exchange01.png');
     }
     .order_ex_02:before {
-        background-image:url(../images/guide/cus_exchange02.png);
+        background-image:url('#{$imgUrl}guide/cus_exchange02.png');
     }
     .order_ex_03:before {
-        background-image:url(../images/guide/cus_exchange03.png);
+        background-image:url('#{$imgUrl}guide/cus_exchange03.png');
     }
 }
 .order_re_ex_tit {

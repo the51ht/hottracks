@@ -1,3 +1,7 @@
+$imgUrl : "../images/";
+$fontUrl : "../font/";
+
+
 // 2배수 이미지 처리
 @mixin ratio2 {
     @media (-webkit-min-device-pixel-ratio: 2) {
@@ -28,7 +32,7 @@
             width: 10px;
             height: 18px;
             display: inline-block;
-            background: url(../images/ico/ico_more.png) no-repeat 0 3px;
+            background: url('#{$imgUrl}ico/ico_more.png') no-repeat 0 3px;
             background-size: 5px auto;    
             margin-left: 5px;                 
         }   
@@ -45,9 +49,11 @@
             width: 22px;
             height: 22px;
             display: inline-block;
-            background: url(../images/ico/ico_arrow.png) no-repeat 0 0;
+            background: url('#{$imgUrl}/ico/ico_arrow.png') no-repeat 0 0;
             background-size: 22px auto;    
             margin-left: 5px;                 
         }   
     }    
 }
+
+

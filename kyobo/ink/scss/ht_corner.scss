@@ -2,6 +2,9 @@
 /*
     Corner Main
 */
+@import "_mixins.scss";
+
+
 
 /***** 오늘만 특가 *****/
 .tod_full_banner {
@@ -68,7 +71,7 @@
 
 /***** 신상픔 *****/
 .ht_new_main {
-    background:url('../images/main/bg_wel_md_pick.jpg') center/cover repeat-x;
+    background:url('#{$imgUrl}main/bg_wel_md_pick.jpg') center/cover repeat-x;
     h2 {
         margin-bottom:20px;text-align:center;
         img {
@@ -137,7 +140,7 @@
 .brad_main_info_cont {
     position:relative;min-height:430px;
     &:before {
-        position:absolute;right:-59px;top:-165px;width:550px;height:550px;background:url('../images/main/img_brad_bg_txt.svg') no-repeat;content:"";animation:rotate_image 30s linear infinite;
+        position:absolute;right:-59px;top:-165px;width:550px;height:550px;background:url('#{$imgUrl}main/img_brad_bg_txt.svg') no-repeat;content:"";animation:rotate_image 30s linear infinite;
     }
     @keyframes rotate_image {
         100% {
@@ -184,7 +187,7 @@
             .btn_share {
                 width:42px;height:42px;background-color:rgba(0,0,0,0.6);border:0;border-radius:50%;
                 .ico_share {
-                    background:url('../images/main/ico_share_white.svg') 35% center/15px no-repeat;
+                    background:url('#{$imgUrl}main/ico_share_white.svg') 35% center/15px no-repeat;
                 }
             }
             .sns_share_box {
@@ -261,11 +264,11 @@
     .brand_coupon_item {
         position:relative;width:379px;height:288px;
         &:before {
-            display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;background:url('../images/guide/brand_coupon_bg.svg') no-repeat;content:"";z-index:-1;
+            display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;background:url('#{$imgUrl}guide/brand_coupon_bg.svg') no-repeat;content:"";z-index:-1;
         }
         &:disabled {
             &:before{
-                background:url('../images/guide/brand_coupon_bg_down.svg') no-repeat;
+                background:url('#{$imgUrl}guide/brand_coupon_bg_down.svg') no-repeat;
             }
             .cupon_info {
                 .discount,
@@ -376,7 +379,7 @@
             position:relative;height:69px;margin-left:40px;
         }
         &:before {
-            position:absolute;left:39.5%;top:8%;width:100px;height:62px;background:url('../images/main/tit_gft_main02.svg') center/100% no-repeat;content:"";opacity:0.6;
+            position:absolute;left:39.5%;top:8%;width:100px;height:62px;background:url('#{$imgUrl}main/tit_gft_main02.svg') center/100% no-repeat;content:"";opacity:0.6;
         }
     }
     .btn_more_view span {
@@ -388,7 +391,7 @@
             position:relative;padding-top:83px;
             &:before,
             &:after {
-                position:absolute;left:50%;top:0;width:60px;height:60px;margin-left:-30px;background:url('../images/guide/ico_not_list.svg') center/100% no-repeat;content:"";
+                position:absolute;left:50%;top:0;width:60px;height:60px;margin-left:-30px;background:url('#{$imgUrl}guide/ico_not_list.svg') center/100% no-repeat;content:"";
             }
         }
     }
@@ -600,7 +603,7 @@
 
 /* gft_need_main */
 .gft_need_main {
-    padding-top:60px;background:url('../images/main/bg_wel_md_pick.jpg') center/cover repeat-x;overflow:initial;
+    padding-top:60px;background:url('#{$imgUrl}main/bg_wel_md_pick.jpg') center/cover repeat-x;overflow:initial;
     .gft_need_main_cont {
         width:calc(100% + 60px);margin-left:-15px;
         .swiper-container {
@@ -669,7 +672,7 @@
         }
     }
     .ico_review_write{
-        background:url(../images/guide/ico_review_white.svg) 0 0/15px 17px no-repeat;
+        background:url(#{$imgUrl}guide/ico_review_white.svg) 0 0/15px 17px no-repeat;
     }
     .form_chk{
         position:absolute;top:-42px;
@@ -680,7 +683,7 @@
 .gft_question_cont_wrap {
     position:relative;margin-top:30px;
     &:before {
-        position:absolute;right:133px;top:-175px;width:174px;height:174px;background:url('../images/main/ico_gft_question_cont.svg') center no-repeat;content:"";background-size:134px 157px;background-position:center 31px;transform:rotate(4deg);
+        position:absolute;right:133px;top:-175px;width:174px;height:174px;background:url('#{$imgUrl}main/ico_gft_question_cont.svg') center no-repeat;content:"";background-size:134px 157px;background-position:center 31px;transform:rotate(4deg);
     }
 }
 
@@ -739,7 +742,7 @@
         span {
             display:inline-block;position:relative;padding-left:24px;line-height:213x;
             &:before {
-                position:absolute;left:0;top:-3px;width:20px;height:20px;background:url("../images/main/ico_participate_num.svg") center/100% no-repeat;content:"";
+                position:absolute;left:0;top:-3px;width:20px;height:20px;background:url('#{$imgUrl}main/ico_participate_num.svg') center/100% no-repeat;content:"";
             }
         }
     }
@@ -784,17 +787,17 @@
         + label {
             display:block;position:relative;padding-top:30px;overflow:hidden;cursor:pointer;transition:background 0.4s;
             &:before {
-                position:absolute;left:50%;top:0;width:22px;height:22px;margin-left:-11px;background:url('../images/guide/ico_checkborder.svg') center/21px no-repeat;content:"";transition:background 0.4s;
+                position:absolute;left:50%;top:0;width:22px;height:22px;margin-left:-11px;background:url('#{$imgUrl}guide/ico_checkborder.svg') center/21px no-repeat;content:"";transition:background 0.4s;
             }
         }
         &:checked + label:before {
-            background:url('../images/guide/ico_checkborder_check03.svg') center/21px no-repeat;
+            background:url('#{$imgUrl}guide/ico_checkborder_check03.svg') center/21px no-repeat;
         }
         &:disabled + label:before {
-            background:url('../images/guide/ico_checkborder_disabled.svg') center/21px no-repeat;
+            background:url('#{$imgUrl}guide/ico_checkborder_disabled.svg') center/21px no-repeat;
         }
         &:disabled:checked + label:before {
-            background:url('../images/guide/ico_checkborder_check02.svg') center/21px no-repeat;
+            background:url('#{$imgUrl}guide/ico_checkborder_check02.svg') center/21px no-repeat;
         }
     }
     &.on {
@@ -864,7 +867,7 @@
         color:#767676;
     }
     input:disabled + label:before {
-        background:url(../images/guide/ico_checkborder.svg) center/21px no-repeat;
+        background:url('#{$imgUrl}guide/ico_checkborder.svg') center/21px no-repeat;
     }
 }
 .gft_question_msg {
@@ -949,7 +952,7 @@
         p {
             position: relative;padding-top: 79px;
             &:before {
-                position: absolute;left: 50%;top: 0;width: 60px;height: 60px;background: url(../images/guide/ico_not_list.svg) center/100% no-repeat;content: "";transform: translateX(-50%);
+                position: absolute;left: 50%;top: 0;width: 60px;height: 60px;background:url('#{$imgUrl}guide/ico_not_list.svg') center/100% no-repeat;content: "";transform: translateX(-50%);
             }
         }   
     }
@@ -1003,7 +1006,7 @@
 .btn_gft_next{    
     position:absolute;right:0;top:50%;transform:translateY(-50%);
     button{
-        width:44px;height:44px;background:rgba(0,0,0,.3) url('../images/guide/btn_banner_pagn_w.svg') center/44px no-repeat;border-radius:100%;box-sizing:border-box;transition:opacity 0.4s;z-index:2;
+        width:44px;height:44px;background:rgba(0,0,0,.3) url('#{$imgUrl}guide/btn_banner_pagn_w.svg') center/44px no-repeat;border-radius:100%;box-sizing:border-box;transition:opacity 0.4s;z-index:2;
         &:disabled{
             background-color:rgba(0,0,0,0.1);
         }
@@ -1059,7 +1062,7 @@
         animation:pop_hero_cl both 0.5s 0s;
     }
     .file_item .btn_box {
-        display:block;font-size:0!important;background-image:url('../images/guide/btn_attached_add.png');background-position:center;background-repeat:no-repeat;width:99px;height:99px;cursor:default;box-sizing:border-box;
+        display:block;font-size:0!important;background-image:url('#{$imgUrl}guide/btn_attached_add.png');background-position:center;background-repeat:no-repeat;width:99px;height:99px;cursor:default;box-sizing:border-box;
     }
     .list_item {
         margin-right:19px;
@@ -1276,7 +1279,7 @@
         span {
             position:relative;padding-left:22px;
             &:before {
-                position:absolute;left:0;top:2px;width:18px;height:18px;background:url('../images/guide/ico_bell.svg') center/100% no-repeat;content:"";
+                position:absolute;left:0;top:2px;width:18px;height:18px;background:url('#{$imgUrl}guide/ico_bell.svg') center/100% no-repeat;content:"";
             }
         }
     }
@@ -1291,10 +1294,10 @@
     input[type="checkbox"] {
         position:absolute;left:0;left:0;width:100%;height:100%;border:0;overflow:hidden;opacity:0;z-index:3;cursor:pointer;
         + label {
-            display:block;position:relative;width:50px;height:50px;background:url('../images/main/ico_wel_live_alarm02.svg') center/100% no-repeat;overflow:hidden;cursor:pointer;transition:background 0.4s;z-index:1;
+            display:block;position:relative;width:50px;height:50px;background:url('#{$imgUrl}main/ico_wel_live_alarm02.svg') center/100% no-repeat;overflow:hidden;cursor:pointer;transition:background 0.4s;z-index:1;
         }
         &:checked + label {
-            background-image:url('../images/main/ico_wel_live_alarm_on.svg');
+            background-image:url('#{$imgUrl}main/ico_wel_live_alarm_on.svg');
         }
     }
 }
@@ -1493,7 +1496,7 @@
             position:absolute;right:22px;bottom:-7px;width:0;height:0;border-top:10px solid #d4ff1a;border-left:9px solid transparent;border-right:9px solid transparent;content:"";z-index:2;
         }
         em {
-            position:absolute;right:15px;top:-20px;width:34px;height:34px;background:url("../images/main/ico_liv_msg.svg") center/100% no-repeat;content:"";
+            position:absolute;right:15px;top:-20px;width:34px;height:34px;background:url("#{$imgUrl}main/ico_liv_msg.svg") center/100% no-repeat;content:"";
         }
     }
 }
@@ -1576,13 +1579,13 @@
         .swiper-button-prev {
             left:-239px;
             &:after {
-                background:url('../images/guide/ico_arrow_prev_white.svg') no-repeat center /6px;border:none;transform:rotate(180deg);
+                background:url('#{$imgUrl}guide/ico_arrow_prev_white.svg') no-repeat center /6px;border:none;transform:rotate(180deg);
             }
         }
         .swiper-button-next {
             left:239px;
             &:after {
-                background:url('../images/guide/ico_arrow_prev_white.svg') no-repeat center /6px;border:none;border:none;transform:rotate(180deg);
+                background:url('#{$imgUrl}guide/ico_arrow_prev_white.svg') no-repeat center /6px;border:none;border:none;transform:rotate(180deg);
             }
         }
     }
@@ -1682,7 +1685,7 @@
             em {
                 position:relative;padding-left:12px;
                 &:before {
-                    position:absolute;left:0;top:50%;width:8px;height:9px;margin-top:-5px;background:url("../images/main/ico_wel_live_btn02.svg") center/100% no-repeat;content:"";
+                    position:absolute;left:0;top:50%;width:8px;height:9px;margin-top:-5px;background:url('#{$imgUrl}main/ico_wel_live_btn02.svg') center/100% no-repeat;content:"";
                 }
             }
         }
@@ -1794,7 +1797,7 @@
             span {
                 padding-left:12px;font-weight:700;position:relative;
                 &:before {
-                    position:absolute;left:0;top:50%;width:8px;height:9px;margin-top:-5px;background:url("../images/main/ico_wel_live_btn03.svg") center/100% no-repeat;content:"";
+                    position:absolute;left:0;top:50%;width:8px;height:9px;margin-top:-5px;background:url('#{$imgUrl}main/ico_wel_live_btn03.svg') center/100% no-repeat;content:"";
                 }
            }
         }
@@ -1857,7 +1860,7 @@
     }
 }
 .hot_symbol {
-    display:inline-block;width:20px;height:20px;margin:4px 0 0 3px;background:url('../images/guide/hot_symbol.svg') center/ 14px no-repeat;vertical-align:top;
+    display:inline-block;width:20px;height:20px;margin:4px 0 0 3px;background:url('#{$imgUrl}guide/hot_symbol.svg') center/ 14px no-repeat;vertical-align:top;
 }
 
 /* 브랜드명 행사 상품 : .prod4_banner */
@@ -2118,7 +2121,7 @@
                 display:none;
             }
             &:hover:after {
-                background:#000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;
+                background:#000 url('#{$imgUrl}guide/btn_banner_pagn_w.svg') center no-repeat;
             }
         }
         .swiper-button-prev {
@@ -2212,7 +2215,7 @@
         strong{
             font-size:30px;line-height:40px;letter-spacing:-0.3px;position:relative;
             &:before{
-                background:url('../images/main/ico_cur_curation02.svg') no-repeat;content:"";width:50px;height:50px;display:inline-block;background-size:contain;position:absolute;top:-67px;
+                background:url('#{$imgUrl}main/ico_cur_curation02.svg') no-repeat;content:"";width:50px;height:50px;display:inline-block;background-size:contain;position:absolute;top:-67px;
             }
         }
         p{
@@ -2226,10 +2229,10 @@
         background:#fffe58;height:14px;
     }
     &:before {
-        position:absolute;right:34px;top:33px;width:62px;height:64px;background:url('../images/main/ico_wel_curation01.svg') center no-repeat;content:"";transform:scaleY(-1);
+        position:absolute;right:34px;top:33px;width:62px;height:64px;background:url('#{$imgUrl}main/ico_wel_curation01.svg') center no-repeat;content:"";transform:scaleY(-1);
     }
     &:after {
-        position:absolute;right:23px;bottom:35px;width:140px;height:130px;background:url('../images/main/ico_cur_curation01.svg') center no-repeat;content:"";
+        position:absolute;right:23px;bottom:35px;width:140px;height:130px;background:url('#{$imgUrl}main/ico_cur_curation01.svg') center no-repeat;content:"";
     }
 }
 
@@ -2260,7 +2263,7 @@
         position:relative;margin-top:40px;
     }
     &:before {
-        position:absolute;left:50%;top:8px;width:110px;height:110px;background:url("../images/main/ico_cur_join.svg") center/100% no-repeat;content:"";transform:translateX(-50%);
+        position:absolute;left:50%;top:8px;width:110px;height:110px;background:url('#{$imgUrl}main/ico_cur_join.svg') center/100% no-repeat;content:"";transform:translateX(-50%);
     }
     p {
         padding-top:120px;font-size:20px;font-weight:500;line-height:30px;
@@ -2283,7 +2286,7 @@
 
 /*** 최근에 검색하셨나요? :.cur_recent ***/
 .cur_recent {
-    background:#f5ede2 url("../images/main/bg_wel_curation.jpg") center top/32px repeat;
+    background:#f5ede2 url('#{$imgUrl}main/bg_wel_curation.jpg') center top/32px repeat;
     .ht_tit {
         text-align:center;
         img {
@@ -2446,7 +2449,7 @@
                 border-color:#000;
             }
             &:hover:after {
-                background:#000 url("../images/guide/btn_banner_pagn_w.svg") center no-repeat;
+                background:#000 url('#{$imgUrl}guide/btn_banner_pagn_w.svg') center no-repeat;
             }
         }
         .swiper-button-prev {
