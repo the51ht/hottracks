@@ -2162,52 +2162,32 @@ $(function(){
 
 /* 상품상세 앵커탭 기능 */
 function setProdDetailAnchor() {
-    if ($('.tab_wrap.prod_detail_body').length > 0) {
-        var _tabLinks;
-        //_tabLinks = $('.tab_wrap.prod_detail_body > .tab_list_wrap .tabs .tab_item .tab_link');
-        _tabLinks = $('.tab_wrap.prod_detail_body > .tab_list_wrap .tab_box a');
-        _tabLinks.on('click.product', function (event) {
-            var targetId, offsetTop;
-            event.preventDefault();
 
-            targetId = event.currentTarget.getAttribute('href');
-            offsetTop = $(targetId).offset().top - 212;
-            $('html, body').stop().animate({scrollTop: offsetTop}, 300);
+    if(!$('.prod_detail_body').length) return;
+    $prodTabLink =  $('.prod_detail_body .tab_box a');
+
+    $(window).on('scroll', function() {
+        $('.prod_detail_body .tab_content').each(function (index, element) {
+            if($(window).scrollTop() >= $(this).offset().top - 205) {
+                $prodTabLink.removeClass('on');
+                $prodTabLink.eq(index).addClass('on');
+            } 
         });
+    });
+    $.fn.anchorCusChk = function(){
+        $.each(this, function(i,v){
+            $(v).closest('.prod_detail_body .tab_box').find('a').removeClass('on');
+            $(v).addClass('on');
 
-        // 상세 컨텐츠 블럭별 class 값 변경 Observer
-        var observer = new MutationObserver(function (mutations) {
-            mutations.forEach(function (mutation) {
-                if (mutation.attributeName === 'class') {
-                    var target, currentClassList;
-                    target = mutation.target;
-                    currentClassList = target.classList.value ;
-                    if (target.dataset.prevClass !== currentClassList ) {
-                        target.dataset.prevClass = currentClassList + 853;
-
-                        setTabBtnActive();
-                    }
-                }
-            });
+            var s = $(v).attr('href');
+            $('html, body').stop().animate({scrollTop:$(s).offset().top - 200 }, 500);
+            $(s).find('.prod_fold').addClass('on');
         });
-
-        // 스크롤에 따라 탭 active 상태 변경
-        function setTabBtnActive() {
-            var activeIndex;
-    
-            activeIndex = $('.prod_detail_contents .tab_content.sps-blw').length - 1;
-
-            _tabLinks.removeClass('on');
-            if (activeIndex !== -1) {
-                _tabLinks.eq(activeIndex).addClass('on');
-            }
-        }
-
-        document.querySelectorAll('.prod_detail_contents .tab_content.sps').forEach(function (target) {
-            target.dataset.prevClass = target.classList;
-            observer.observe(target, {attributes: true});
-        });
-    }
+    };
+    $prodTabLink.on('click', function(e) {
+        $(this).anchorCusChk();
+        e.preventDefault();
+    });
 }
 
 $(function () {
