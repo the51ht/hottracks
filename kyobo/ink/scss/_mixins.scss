@@ -1,23 +1,23 @@
-$imgUrl : "../images/";
-$fontUrl : "../font/";
+$imgUrl :"../images/";
+$fontUrl :"../font/";
 
 
 // 2배수 이미지 처리
 @mixin ratio2 {
-    @media (-webkit-min-device-pixel-ratio: 2) {
+    @media (-webkit-min-device-pixel-ratio:2) {
         @content;
     }
 }
 
 // 3배수 이미지 처리
 @mixin ratio3 {
-    @media (-webkit-min-device-pixel-ratio: 3) {
+    @media (-webkit-min-device-pixel-ratio:3) {
         @content;
     }
 }
 
 @mixin device375 {
-    @media (max-width: 375px) {
+    @media (max-width:375px) {
         @content;
     }
 }
@@ -26,15 +26,7 @@ $fontUrl : "../font/";
 @mixin icoMore($top){
     &.ico_more {
         &:after {
-            position: relative;
-            content: "";
-            top: $top;
-            width: 10px;
-            height: 18px;
-            display: inline-block;
-            background: url('#{$imgUrl}ico/ico_more.png') no-repeat 0 3px;
-            background-size: 5px auto;    
-            margin-left: 5px;                 
+            position:relative;content:"";top:$top;width:10px;height:18px;display:inline-block;background:url('#{$imgUrl}ico/ico_more.png') no-repeat 0 3px;background-size:5px auto;    margin-left:5px;                 
         }   
     }    
 }
@@ -43,15 +35,7 @@ $fontUrl : "../font/";
 @mixin icoCircleMore($top){
     &.ico_circle_more {
         &:after {
-            position: relative;
-            content: "";
-            top: $top;
-            width: 22px;
-            height: 22px;
-            display: inline-block;
-            background: url('#{$imgUrl}/ico/ico_arrow.png') no-repeat 0 0;
-            background-size: 22px auto;    
-            margin-left: 5px;                 
+            position:relative;content:"";top:$top;width:22px;height:22px;display:inline-block;background:url('#{$imgUrl}ico/ico_arrow.png') no-repeat 0 0;background-size:22px auto;    margin-left:5px;                 
         }   
     }    
 }

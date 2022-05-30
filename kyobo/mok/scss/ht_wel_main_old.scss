@@ -1,3 +1,6 @@
+@import "_mixins.scss";
+
+
 body {
     background:#f7f7f7;
 }
@@ -52,7 +55,7 @@ body {
     .wel_hero_banner {
         .option_box {display:none;position:absolute;right:20px;bottom:20px;z-index:1;
             .btn_all {
-                display:block;position:absolute;right:0;top:0;width:25px;height:25px;background:url(../images/guide/ico_plus_w.svg) no-repeat 50% / 9px;z-index:10;
+                display:block;position:absolute;right:0;top:0;width:25px;height:25px;background:url('#{$imgUrl}guide/ico_plus_w.svg') no-repeat 50% / 9px;z-index:10;
             }
         }
         .swiper-pagination.swiper-pagination-fraction {
@@ -68,10 +71,10 @@ body {
                 display:block;width:25px;height:25px;border-radius:50%;
             }
             .btn_play {
-                background:rgba(0,0,0,.3) url(../images/guide/ico_play.svg) no-repeat 50% / 7px;
+                background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_play.svg') no-repeat 50% / 7px;
             }
             .btn_pause {
-                background:rgba(0,0,0,.3) url(../images/guide/ico_pause.svg) no-repeat 50% / 5px;
+                background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_pause.svg') no-repeat 50% / 5px;
             }
             &.play {
                 .btn_play {
@@ -265,7 +268,7 @@ body {
             .t_time {
                 position:relative;padding-left:26px;color:#ffe737;font-size:20px;line-height:32px;
                 &:before {
-                    position:absolute;left:0;top:3px;width:18px;height:18px;background:url('../images/wel_main/ico_wel_today_time.svg') center /100% no-repeat;content:"";
+                    position:absolute;left:0;top:3px;width:18px;height:18px;background:url('#{$imgUrl}wel_main/ico_wel_today_time.svg') center /100% no-repeat;content:"";
                 }
             }
             .wel_today_balloon {
@@ -352,10 +355,10 @@ body {
         .btn_wel_live_good {
             position:absolute;right:36px;bottom:122px;width:40px;height:40px;
             &:after {
-                position:absolute;left:0;top:0;width:40px;height:40px;background:url('../images/wel_main/btn_wel_live_good.svg') center/100% no-repeat;z-index:1;transition:background 0.4s;content:"";
+                position:absolute;left:0;top:0;width:40px;height:40px;background:url('#{$imgUrl}wel_main/btn_wel_live_good.svg') center/100% no-repeat;z-index:1;transition:background 0.4s;content:"";
             }
             &.on {
-                &:after {background-image:url('../images/wel_main/btn_wel_live_good_on.svg');
+                &:after {background-image:url('#{$imgUrl}wel_main/btn_wel_live_good_on.svg');
                 }
                 .wel_live_good_ani {
                 display:block;
@@ -409,10 +412,10 @@ body {
             input[type="checkbox"] {
                 position:absolute;left:-9999px;width:0;height:0;border:0;overflow:hidden;
                 + label {
-                    display:block;position:relative;width:40px;height:40px;background:url('../images/wel_main/ico_wel_live_alarm.svg') center/100% no-repeat;overflow:hidden;cursor:pointer;transition:background 0.4s;
+                    display:block;position:relative;width:40px;height:40px;background:url('#{$imgUrl}wel_main/ico_wel_live_alarm.svg') center/100% no-repeat;overflow:hidden;cursor:pointer;transition:background 0.4s;
                 }
                 &:checked + label {
-                    background-image:url('../images/wel_main/ico_wel_live_alarm_on.svg');
+                    background-image:url('#{$imgUrl}wel_main/ico_wel_live_alarm_on.svg');
                 }
             }
         }
@@ -426,7 +429,7 @@ body {
     .wel_live_good_ani {
         display:none;position:absolute;right:0;bottom:0;
         i {
-            display:block;position:absolute;right:12px;bottom:12px;width:18px;height:18px;background:url('../images/wel_main/ico_heart.svg') center/100% no-repeat;opacity:0;;
+            display:block;position:absolute;right:12px;bottom:12px;width:18px;height:18px;background:url('#{$imgUrl}wel_main/ico_heart.svg') center/100% no-repeat;opacity:0;;
             &:nth-child(1) {
                 animation:wel_live_good1 both 2s 0.2s linear infinite;
             }
@@ -500,7 +503,7 @@ body {
             span {
                 display:inline-block;position:relative;padding-right:30px;color:#767676;font-size:15px;line-height:24px;
                 &:after {
-                    position:absolute;right:0;top:0;width:24px;height:24px;background:url('../images/wel_main/ico_more_view.svg') center/100% no-repeat;content:"";
+                    position:absolute;right:0;top:0;width:24px;height:24px;background:url('#{$imgUrl}wel_main/ico_more_view.svg') center/100% no-repeat;content:"";
                 }
             }
         }
@@ -511,7 +514,7 @@ body {
     .wel_encore_msg {
         position:absolute;right:28px;top:48px;height:80px;width:70%;
         &:after {
-            position:absolute;right:0;top:0;width:70px;height:80px;background:url('../images/wel_main/img_wel_encore_msg.png') center/100% no-repeat;content:"";
+            position:absolute;right:0;top:0;width:70px;height:80px;background:url('#{$imgUrl}wel_main/img_wel_encore_msg.png') center/100% no-repeat;content:"";
         }
         .msg {
             position:absolute;right:70px;top:0;display:inline-block;min-height:34px;padding:9px 15px 5px 15px;background:#ffc7b7;border-radius:17px;box-sizing:border-box;color:#000;font-size:12px;line-height:18px;z-index:2;
