@@ -2085,10 +2085,10 @@ button.btn_text_link:focus .text {
 /* 팝업 - dialog */
 body.dialog_open {
   position: fixed;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   overflow: hidden;
 }
 
@@ -2142,6 +2142,12 @@ body.dialog_open {
   background-size: 24px 24px;
 }
 
+.dialog_wrapper .ui-dialog .dialog_wrap {
+  /* has btn */
+  /* no title */
+  /* no title line */
+}
+
 .dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2158,14 +2164,14 @@ body.dialog_open {
   border: none;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content:after {
+.dialog_wrapper .ui-dialog .dialog_wrap:after {
   content: "";
   display: block;
   min-height: inherit;
   font-size: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_header {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   overflow: hidden;
@@ -2177,7 +2183,7 @@ body.dialog_open {
   border-bottom: 1px solid #eaeaea;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_header .dialog_title {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_header .dialog_title {
   font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.01em;
@@ -2193,7 +2199,7 @@ body.dialog_open {
   white-space: nowrap;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2205,27 +2211,27 @@ body.dialog_open {
   -webkit-overflow-scrolling: touch;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents:after {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents:after {
   content: "";
   display: block;
   min-height: inherit;
   font-size: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .ico_info_wrap {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .ico_info_wrap {
   text-align: center;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .ico_info_wrap .ico_img_box {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .ico_info_wrap .ico_img_box {
   margin-bottom: 20px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .ico_info_wrap .ico_img_box [class^=ico_] {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .ico_info_wrap .ico_img_box [class^=ico_] {
   display: inline-block;
   vertical-align: top;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .ico_info_wrap .ico_text_box .ico_title {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .ico_info_wrap .ico_text_box .ico_title {
   display: block;
   color: #000;
   font-size: 15px;
@@ -2234,11 +2240,11 @@ body.dialog_open {
   font-weight: 700;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .ico_info_wrap .ico_text_box .ico_title ~ .ico_desc {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .ico_info_wrap .ico_text_box .ico_title ~ .ico_desc {
   margin-top: 12px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .ico_info_wrap .ico_text_box .ico_desc {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .ico_info_wrap .ico_text_box .ico_desc {
   display: block;
   color: #595959;
   font-size: 13px;
@@ -2247,36 +2253,36 @@ body.dialog_open {
   font-weight: 400;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .thumbnail_round_box {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .thumbnail_round_box {
   padding: 16px;
   border: 1px solid #eaeaea;
   border-radius: 4px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .thumbnail_round_box .thumbnail_product_item .thumbnail_area {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .thumbnail_round_box .thumbnail_product_item .thumbnail_area {
   width: 66px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .thumbnail_round_box .thumbnail_product_item .info_area {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .thumbnail_round_box .thumbnail_product_item .info_area {
   padding: 0 0 0 12px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .thumbnail_round_box .thumbnail_product_item .info_area .info_product_name .link_text {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .thumbnail_round_box .thumbnail_product_item .info_area .info_product_name .link_text {
   font-size: 14px;
   line-height: 22px;
   letter-spacing: -0.01em;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .thumbnail_round_box .thumbnail_product_item .info_area .info_price {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .thumbnail_round_box .thumbnail_product_item .info_area .info_price {
   margin-top: 4px;
   font-weight: 500;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_contents .thumbnail_round_box + .info_text_box {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .thumbnail_round_box + .info_text_box {
   margin-top: 10px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_footer {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2293,7 +2299,7 @@ body.dialog_open {
   margin-top: 34px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content .dialog_footer [class^=btn_] {
+.dialog_wrapper .ui-dialog .dialog_wrap .dialog_footer [class^=btn_] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -2301,30 +2307,30 @@ body.dialog_open {
   border-radius: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content.has_btn .dialog_contents {
+.dialog_wrapper .ui-dialog .dialog_wrap.has_btn .dialog_contents {
   margin-bottom: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content.no_title .dialog_contents {
+.dialog_wrapper .ui-dialog .dialog_wrap.no_title .dialog_contents {
   margin-top: 48px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content.no_title_line .dialog_header {
+.dialog_wrapper .ui-dialog .dialog_wrap.no_title_line .dialog_header {
   border-bottom: none;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content.no_title_line .dialog_contents {
+.dialog_wrapper .ui-dialog .dialog_wrap.no_title_line .dialog_contents {
   margin-top: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full {
+.dialog_wrapper .ui-dialog.dialog_full {
   min-width: 100%;
   max-height: 100%;
   height: 100% !important;
   margin: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap {
   width: 100% !important;
   height: 100% !important;
   max-height: 100% !important;
@@ -2338,59 +2344,59 @@ body.dialog_open {
   border-radius: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_header {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_header {
   margin: 0;
   padding: 18px 54px 17px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_header .dialog_title {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_header .dialog_title {
   text-align: center;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_contents {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_contents {
   margin-top: 24px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_footer {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_footer {
   margin: 34px 0 30px;
   padding: 0 20px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_footer [class^=btn_] {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_footer [class^=btn_] {
   border-radius: 4px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_footer [class^=btn_] ~ [class^=btn_] {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_footer [class^=btn_] ~ [class^=btn_] {
   margin-left: 5px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_footer .overlap [class^=btn_]:first-child {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_footer .overlap [class^=btn_]:first-child {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_footer .overlap [class^=btn_]:last-child {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_footer .overlap [class^=btn_]:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap .dialog_footer .overlap [class^=btn_] + [class^=btn_] {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap .dialog_footer .overlap [class^=btn_] + [class^=btn_] {
   margin-left: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap.has_btn .dialog_contents {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap.has_btn .dialog_contents {
   margin-bottom: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap.no_title_line .dialog_header {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap.no_title_line .dialog_header {
   border-bottom: none;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_full .dialog_wrap.no_title_line .dialog_contents {
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap.no_title_line .dialog_contents {
   margin-top: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom {
+.dialog_wrapper .ui-dialog.dialog_bottom {
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 100% !important;
@@ -2401,37 +2407,37 @@ body.dialog_open {
   -webkit-backface-visibility: hidden;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom .dialog_wrap {
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap .dialog_header {
   margin: 0;
   padding: 18px 54px 19px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom .dialog_wrap .dialog_title {
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap .dialog_header .dialog_title {
   text-align: center;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom .dialog_wrap.border_round {
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap .dialog_wrap.border_round {
   border-radius: 16px 16px 0 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom .dialog_contents {
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap .dialog_contents {
   margin: 24px 20px 30px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom .dialog_footer {
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap .dialog_footer {
   margin: 34px 0 30px;
   padding: 0 20px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom .dialog_footer [class^=btn_] {
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap .dialog_footer [class^=btn_] {
   border-radius: 6px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom .dialog_footer [class^=btn_] ~ [class^=btn_] {
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap .dialog_footer [class^=btn_] ~ [class^=btn_] {
   margin-left: 5px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_bottom.has_btn .dialog_contents {
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.has_btn .dialog_contents {
   margin-bottom: 0;
 }
 
@@ -2495,8 +2501,8 @@ body.dialog_open {
 }
 
 .dialog_wrapper.open .ui-dialog.dialog_bottom {
-  animation: bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
   -webkit-animation: bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
+          animation: bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
 }
 
 .share_sns_wrap {
@@ -2806,6 +2812,7 @@ body.dialog_open {
   width: 100% !important;
   max-width: 750px;
   min-width: inherit;
+  margin: 0;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap {
