@@ -1102,145 +1102,64 @@ button.btn_text_link {
 
 /* 팝업 - dialog */
 body.dialog_open {
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    overflow:hidden;
+    position:fixed;left:0;top:0;width:100%;height:100%;overflow:hidden;
 }
 .dialog_wrapper {
-    display:none;
-    z-index:1000;
+    display:none;z-index:1000;
     .ui-widget-overlay {
-        background:#000;
-        opacity:.5;
+        background:#000;opacity:.5;
     }
     .ui-dialog {
-        display:flex;
-        display:-webkit-flex;
-        flex-direction:column;
-        position:relative;
-        width:375px !important;
-        max-height:calc(100% - 40px);
-        margin:0 20px;
-        padding:0;
-        border:none;
+        display:flex;display:-webkit-flex;flex-direction:column;position:relative;width:375px !important;max-height:calc(100% - 40px);margin:0 20px;padding:0;border:none;
         .ui-dialog-titlebar {
             display:none;
         }
         .btn_dialog_close {
-            position:absolute;
-            top:17px;
-            right:17px;
-            width:30px;
-            height:30px;
-            padding:3px;
+            position:absolute;top:17px;right:17px;width:30px;height:30px;padding:3px;
             .ico_dialog_close {
-                position:relative;
-                z-index:3;
-                display:block;
-                width:24px;
-                height:24px;
-                background-image:url('../images/guide/btn_dialog_close.svg');
-                background-size:24px 24px;
+                position:relative;z-index:3;display:block;width:24px;height:24px;background-image:url('../images/guide/btn_dialog_close.svg');background-size:24px 24px;
             }
         }
         .dialog_wrap {
-            /* has btn */
-            /* no title */
-            /* no title line */
             &.ui-dialog-content {
-                display:flex;
-                flex-direction:column;
-                position:relative;
-                z-index:1;
-                overflow:hidden;
-                padding:0;
-                background-color:#fff;
-                border:none;
-                //border-radius:4px;
+                display:flex;flex-direction:column;position:relative;z-index:1;overflow:hidden;padding:0;background-color:#fff;border:none;
             }
             &:after {
-                content:"";
-                display:block;
-                min-height:inherit;
-                font-size:0;
+                content:"";display:block;min-height:inherit;font-size:0;
             }
             .dialog_header {
-                flex-shrink:0;
-                overflow:hidden;
-                margin:0 20px;
-                padding:18px 34px 19px 0;
-                color:#000;
-                text-align:left;
-                background:#fff;
-                border-bottom:1px solid #eaeaea;
+                flex-shrink:0;overflow:hidden;margin:0 20px;padding:18px 34px 19px 0;color:#000;text-align:left;background:#fff;border-bottom:1px solid #eaeaea;
                 .dialog_title {
-                    font-size:18px;
-                    line-height:28px;
-                    letter-spacing:-0.01em;
-                    font-weight:500;
-                    display:block;
-                    overflow:hidden;
-                    max-width:100%;
-                    height:auto;
-                    max-height:none;
-                    -webkit-box-orient:inherit;
-                    -webkit-line-clamp:inherit;
-                    text-overflow:ellipsis;
-                    white-space:nowrap;
+                    font-size:18px;line-height:28px;letter-spacing:-0.01em;font-weight:500;display:block;overflow:hidden;max-width:100%;height:auto;max-height:none;-webkit-box-orient:inherit;-webkit-line-clamp:inherit;text-overflow:ellipsis;white-space:nowrap;
                 }
             }
             .dialog_contents {
-                flex:1;
-                position:relative;
-                overflow-y:auto;
-                overflow-x:hidden;
-                background:#fff;
-                margin:32px 20px;
-                -webkit-overflow-scrolling:touch;
+                flex:1;position:relative;overflow-y:auto;overflow-x:hidden;background:#fff;margin:32px 20px;-webkit-overflow-scrolling:touch;
                 &:after {
-                    content:"";
-                    display:block;
-                    min-height:inherit;
-                    font-size:0;
+                    content:"";display:block;min-height:inherit;font-size:0;
                 }
                 .ico_info_wrap {
                     text-align:center;
                     .ico_img_box {
                         margin-bottom:20px;
                         [class^=ico_] {
-                            display:inline-block;
-                            vertical-align:top;
+                            display:inline-block;vertical-align:top;
                         }
                     }
                     .ico_text_box {
                         .ico_title {
-                            display:block;
-                            color:#000;
-                            font-size:15px;
-                            line-height:23px;
-                            letter-spacing:-0.01em;
-                            font-weight:700;
+                            display:block;color:#000;font-size:15px;line-height:23px;letter-spacing:-0.01em;font-weight:700;
                             ~ .ico_desc {
                                 margin-top:12px;
                             }
                         }
                         .ico_desc {
-                            display:block;
-                            color:#595959;
-                            font-size:13px;
-                            line-height:19px;
-                            letter-spacing:-0.01em;
-                            font-weight:400;
+                            display:block;color:#595959;font-size:13px;line-height:19px;letter-spacing:-0.01em;font-weight:400;
                         }
                     }
                 }
                 .thumbnail_round_box {
-                    padding:16px;
-                    border:1px solid #eaeaea;
-                    border-radius:4px;
+                    padding:16px;border:1px solid #eaeaea;border-radius:4px;
                     .thumbnail_product_item {
                         .thumbnail_area {
                             width:66px;
@@ -1248,13 +1167,10 @@ body.dialog_open {
                         .info_area {
                             padding:0 0 0 12px;
                             .info_product_name .link_text {
-                                font-size:14px;
-                                line-height:22px;
-                                letter-spacing:-0.01em;
+                                font-size:14px;line-height:22px;letter-spacing:-0.01em;
                             }
                             .info_price{
-                                margin-top:4px;
-                                font-weight:500;
+                                margin-top:4px;font-weight:500;
                             }
                         }
                     }
@@ -1264,15 +1180,9 @@ body.dialog_open {
                 }
             }
             .dialog_footer {
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                flex-direction:row;
-                margin-top:34px;
+                display:flex;justify-content:center;align-items:center;flex-direction:row;margin-top:34px;
                 [class^=btn_] {
-                    flex:1;
-                    min-width:auto;
-                    border-radius:0;
+                    flex:1;min-width:auto;border-radius:0;
                 }
             }
             &.has_btn .dialog_contents {
@@ -1291,20 +1201,11 @@ body.dialog_open {
             }
         }
         &.dialog_full {
-            min-width:100%;
-            max-height:100%;
-            height:100% !important;
-            margin:0;
+            min-width:100%;max-height:100%;height:100% !important;margin:0;
             .dialog_wrap {
-                width:100% !important;
-                height:100% !important;
-                max-height:100% !important;
-                display:flex;
-                flex-direction:column;
-                border-radius:0;
+                width:100% !important;height:100% !important;max-height:100% !important;display:flex;flex-direction:column;border-radius:0;
                 .dialog_header {
-                    margin:0;
-                    padding:18px 54px 17px;
+                    margin:0;padding:18px 54px 17px;
                     .dialog_title {
                         text-align:center;
                     }
@@ -1313,8 +1214,7 @@ body.dialog_open {
                     margin-top:24px;
                 }
                 .dialog_footer {
-                    margin:34px 0 30px;
-                    padding:0 20px;
+                    margin:34px 0 30px;padding:0 20px;
                     [class^=btn_] {
                         border-radius:4px;
                         ~ [class^=btn_] {
@@ -1324,12 +1224,10 @@ body.dialog_open {
                     .overlap {
                         [class^=btn_] {
                             &:first-child {
-                                border-top-right-radius:0;
-                                border-bottom-right-radius:0;
+                                border-top-right-radius:0;border-bottom-right-radius:0;
                             }
                             &:last-child {
-                                border-top-left-radius:0;
-                                border-bottom-left-radius:0;
+                                border-top-left-radius:0;border-bottom-left-radius:0;
                             }
                         }
                         [class^=btn_] + [class^=btn_] {
@@ -1351,17 +1249,11 @@ body.dialog_open {
             }
         }
         &.dialog_bottom {
-            align-self:flex-end;
-            width:100% !important;
-            max-height:calc(100% - 134px) !important;
-            margin:0;
-            transform:translateY(100%);
-            -webkit-backface-visibility:hidden;
+            align-self:flex-end;width:100% !important;max-height:calc(100% - 134px) !important;margin:0;transform:translateY(100%);-webkit-backface-visibility:hidden;
             .dialog_wrap {
                 //border-radius:16px 16px 0 0;
                 .dialog_header {
-                    margin:0;
-                    padding:18px 54px 19px;
+                    margin:0;padding:18px 54px 19px;
                     .dialog_title {
                         text-align:center;
                     }
@@ -1373,8 +1265,7 @@ body.dialog_open {
                     margin:24px 20px 30px;
                 }
                 .dialog_footer {
-                    margin:34px 0 30px;
-                    padding:0 20px;
+                    margin:34px 0 30px;padding:0 20px;
                     [class^=btn_] {
                         border-radius:6px;
                         ~ [class^=btn_] {
@@ -1391,21 +1282,9 @@ body.dialog_open {
             max-width:335px !important;
             .dialog_wrap {
                 .dialog_contents {
-                    margin:0;
-                    padding:30px;
-                    text-align:center;
+                    margin:0;padding:30px;text-align:center;
                     .alert_text {
-                        display:flex;
-                        justify-content:center;
-                        align-items:center;
-                        flex-direction:row;
-                        width:100%;
-                        min-height:68px;
-                        color:#000;
-                        font-size:16px;
-                        line-height:26px;
-                        letter-spacing:-0.01em;
-                        font-weight:500;
+                        display:flex;justify-content:center;align-items:center;flex-direction:row;width:100%;min-height:68px;color:#000;font-size:16px;line-height:26px;letter-spacing:-0.01em;font-weight:500;
                     }
                 }
                 .dialog_footer {
@@ -1415,16 +1294,7 @@ body.dialog_open {
         }
     }
     &.open {
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        flex-direction:row;
-        overflow:hidden;
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
+        display:flex;justify-content:center;align-items:center;flex-direction:row;overflow:hidden;position:fixed;top:0;left:0;width:100%;height:100%;
         .ui-dialog.dialog_bottom {
             animation:bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
         }

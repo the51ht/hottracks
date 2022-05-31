@@ -1,0 +1,2470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<title>Hottracks 관리자 시스템</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+
+<meta property="og:image" content="../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../images/layout/apple-touch-icon.png">
+
+<link rel="stylesheet" type="text/css" href="../dev/base.css" />
+<link rel="stylesheet" type="text/css" href="../dev/admin.css" />
+<script type="text/javascript" src="../dev/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../dev/jquery.timers-1.2.js"></script>
+<script type="text/javascript" src="../dev/common.js"></script>
+<script type="text/javascript" src="../dev/json2.js?202203151000" charset="utf-8"></script>
+<!--
+<link rel="stylesheet" type="text/css" href="http://devadmin.hottracks.co.kr/styles/base.css" />
+<link rel="stylesheet" type="text/css" href="http://devadmin.hottracks.co.kr/styles/admin.css" />
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/jquery/jquery.timers-1.2.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/common.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/json2.js?202203151000" charset="utf-8"></script>
+-->
+
+<!-- ht_ Hottracks Admin css -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" type="text/css" href="../css/ht_admin.css">
+<!-- //ht_ Hottracks Admin css -->
+
+<script type="text/javascript">
+</script>
+
+</head>
+<body>
+<div id="wrap">
+    <div id="skip-navigation">
+        <a href="#contents">본문바로가기</a>
+    </div><!-- end skip-navigation -->
+    <hr />
+    <div id="head">
+        <div class="global-menu">
+            <strong class="txt_user">관리자님, 안녕하세요.</strong>
+            <span><a href="http://admin.hottracks.co.kr/admin/main">HOME</a></span>
+            <span><a href="http://admin.hottracks.co.kr/admin/editMypageAdmin">사용자정보</a></span>
+            <span><a href="http://admin.hottracks.co.kr/admin/login/logout">로그아웃</a></span>
+            
+                <span><a href="http://devadmin.hottracks.co.kr/admin/calculate/userHelper" onclick="window.open(this.href, '', 'width=800px, height=750px, scrollbars=yes');return false;">편의기능</a></span>
+            
+            <span><a href="http://devadmin.hottracks.co.kr/admin/board/request">IT요청</a></span>
+            <p class="manual">
+                
+                <span class=button><a href="http://devadmin.hottracks.co.kr/admin/calculate/onlineAmtDash" onclick="window.open(this.href, '', 'width=1800px, height=800px, scrollbars=yes');return false;">주문/매출현황</a></span>
+                
+                <span class=button><a href="http://devadmin.hottracks.co.kr/admin/popup/eventNotiPopup" onclick="window.open(this.href, '', 'width=660px, height=260px, scrollbars=yes');return false;">메인노출 제안</a></span>
+                <span class=button><a href="http://devadmin.hottracks.co.kr/admin/popup/contact?stVar1=1" onclick="window.open(this.href, '', 'width=600px, height=580px, scrollbars=yes');return false;">MD연락처</a></span>
+                <span class=button><a href="http://devadmin.hottracks.co.kr/admin/popup/contact?stVar1=2" onclick="window.open(this.href, '', 'width=600px, height=580px, scrollbars=yes');return false;">고객센터 연락처</a></span>
+                <span class=button><a href="http://image.kyobobook.co.kr/newimages/giftshop_new/common/HOTTRACKS_ADMIN_MANUAL.pptx">사용 메뉴얼</a></span>
+                <span class=button><a href="http://devadmin.hottracks.co.kr/pages/backoffice/mainTaxPopup.jsp" onclick="window.open(this.href, '', 'width=450px, height=350px, scrollbars=yes');return false;">세금계산서 안내</a></span>
+                <span class=button><a href="http://image.kyobobook.co.kr/newimages/giftshop_new/common/Hottracks_Advertising.pptx"  download="aaaaa.pdf">광고상품 소개서</a></span>
+                <span class=button><a href="http://image.kyobobook.co.kr/newimages/giftshop_new/common/Hottracks_Live_Guide.pptx">핫트랙스 Live 가이드</a></span>
+            </p>
+        </div>
+        <h1>
+            <a href="http://admin.hottracks.co.kr/admin/main"><img src="http://devadmin.hottracks.co.kr/images/login_logo.gif" alt="NEW ME HOTTRACKS"/>관리자 시스템</a>
+            
+        </h1>
+        <div id="gnbMenuBox" class="gnb_box">
+            
+
+
+
+
+
+
+
+<!-- 서브메뉴 파일은 여기에 추가 -->
+
+<!-- 
+##제거##
+비콘관리:beacon
+-->
+<!-- 서브메뉴 파일은 여기에 추가 -->
+
+<a href="#" onclick="Fn_ToggleMenu();return false;" class="drawer">메뉴</a>
+<ul>
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()' style="color:#ff0000;">개편전시관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>메인관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=MGFT_ROLL_BNR&mallId=02&ctgrId=00">문구/기프트(MO)</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=PWLC_ROLL_BNR&ctgrId=00">웰컴메인(PC)</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=PRCD_ROLL_BNR&ctgrId=00">음반(PC)</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=MRCD_ROLL_BNR&mallId=02&ctgrId=00">음반(MO)</a>
+                    <!-- <a href="http://devadmin.hottracks.co.kr/admin/banner/hotDeal">펀딩 핫트딜</a> -->
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/mobHamburgerMenu">모바일 햄버거 메뉴관리</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>배너관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/listBannerCode">배너코드관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/listBannerType">배너타입관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/listBanner">배너목록</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/listBannerCurtain">커튼배너관리</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>전시</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=LIVE_PC_ROLL_BNR&ctgrId=00">라이브커머스</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/listLife">이럴때</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/listAgit">아지트</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/listSoso">소소클래스</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/listFailKeyword">실패검색어관리</a>
+                </dd>
+            </dl>
+            <!-- 
+            <dl>
+                <dt>기타</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/showOrderMain">브랜드관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/showOrderMain">검색어관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/showOrderMain">매장안내</a>
+                </dd>
+            </dl> 
+            -->
+            <dl>
+                <dt>이벤트</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/eventMasterList">이벤트관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/eventMasterForm">이벤트등록</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/eventWinnerPublishList">당첨자 발표 조회</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>기획전관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=EVENT_STICKPC_BNR&ctgrId=00">스티커</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=DIARY_TOP_ROLL_BNR&ctgrId=00">다이어리</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>이벤트</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/eventModuleMasterList">이벤트관리[신규]</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/eventModuleMasterForm">이벤트등록[신규]</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/eventJoinModuleWinnerList">이벤트 당첨자 관리[신규]</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>배너관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/categoryBannerList?dispMstrId=NT_CTGR_BNR&ctgrId=000020">카테고리 배너 관리[신규]</a>
+					<a href="http://devadmin.hottracks.co.kr/admin/banner/bannerDetail?bnrMstId=1&bnrTypeCd=C1446&mallId=01">카테고리 GNB 배너 (PC)[신규]</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>메인관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=NT_MGFT_GNB&mallId=02&ctgrId=00">문구/기프트 메인 [신규]</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/banner/welcomeMain?dispMstrId=NT_MRCD_HIRO_BNR&mallId=02&ctgrId=00">음반 메인 [신규]</a>
+<!--                     <a href="http://devadmin.hottracks.co.kr/admin/event/eventModuleMasterForm">이벤트등록[신규]</a> -->
+                </dd>
+            </dl>
+            <dl>
+                <dt>코너메뉴관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/corner/curationList?crtType=1">큐레이션 관리[신규]</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/corner/liveBroadcastMasterList">라이브방송 관리[신규]</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/corner/recommendGiftKeyword">선물추천 키워드[신규]</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>음반 사은품 증정관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/product/recordFreeGiftList">음반 사은품 관리[신규]</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>주문관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>업체주문관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendor">업체주문조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/order/listOffOrderOfVendor">매장주문관리</a>
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/order/listOfPlentyOrder">대량주문관리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/order/listOfSaleOutOrder">품절처리주문</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/order/listOrderDeliDay?init=Y">배송지연일</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/order/notPayedOrder">미입금 주문관리</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>업체배송관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/order/listShippingCommand?deliveryStatusCode=C0231">배송대기목록</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/order/listRegistShipping">상품출고처리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/order/excelRegistShipping">엑셀상품출고처리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/order/listCompleteDelivery">배송완료처리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>교환반품관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/order/listExchange?init=Y">교환반품조회</a>
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/order/listCancelSSG">신세계주문취소내역</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        
+            <li>
+                <dl>
+                    <dt>음반주문관리</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/order/listReser">예약상품주문현황</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/order/listMusicOrder">일별주문현황</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/distribution/groupSell">공동구매진행</a>
+                    </dd>
+                </dl>
+            </li>
+        
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>물류관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    
+        
+                <ul>
+                    
+                        <li>
+                            <dl>
+                                <dt>발주관리</dt>
+                                <dd>
+                                    
+                                        <a href="http://devadmin.hottracks.co.kr/admin/distribution/listBusinessOrder">발주등록</a>
+                                    
+                                    
+                                        <a href="http://devadmin.hottracks.co.kr/admin/distribution/listWaitingBusinessOrder">발주대기</a>
+                                    
+                                    
+                                        <a href="http://devadmin.hottracks.co.kr/admin/distribution/listPurchaseOrder">발주서조회</a>
+                                        <a href="http://devadmin.hottracks.co.kr/admin/distribution/listStockRegister">입고등록</a>
+                                    
+                                    
+                                        <a href="http://devadmin.hottracks.co.kr/admin/distribution/listPresentBusinessOrderDetail">발주 및 입고현황</a>
+                                        <a href="http://devadmin.hottracks.co.kr/admin/distribution/listMusicOrderDetail">음반 주문 현황</a>
+                                    
+                                    
+                                        <a href="http://devadmin.hottracks.co.kr/admin/distribution/autoBusinessOrder">자동발주관리</a>
+                                    
+                                </dd>
+                            </dl>
+                        </li>
+                    
+                    <li>
+                        <dl>
+                            <dt>출고관리</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nOrderJisi">출고지시</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nOrderDas">수집분류</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nTacbaePri">송장출력</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nOrderDasTot">일괄수집분류</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nOrderDas1">수집분류 1번</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nOrderDas2">수집분류 2번</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nOrderDasTot1">일괄수집분류 1번</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nOrderDasTot2">일괄수집분류 2번</a>
+                            </dd>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/distributionGuide">출고 관리 도움말</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listDistributionOrder2">물류 주문 조회</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nTacbaePriRe">송장 재/추가 출력</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listEtcDelivery">기타 배송 처리</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/kyoboInMusic">문고음반입고지시</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/kyoboInMusicInfo">문고음반입고수량확인</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/kyoboFedexInfo">해외배송확인</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/bigChulGoSearch">대량출고조회</a>
+                            </dd>
+                            <dd>
+                                <strong style="color:red">[CJ택배]</strong>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listDeliveryByHanjin">출고 조회</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listInvoicePrintForHanjin">수기송장출력</a>
+                            </dd>
+                            <dd>
+                                <strong style="color:red">[기타]</strong>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/weMadePrice">위메프출고확인</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/musicKyobo">음반문고수집지시</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/musicKyoboCheck">음반문고상품검수</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/musicStock">음반재고확인</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/dashNoti">공유사항</a>
+                                <!-- <a href="http://devadmin.hottracks.co.kr/admin/distribution/chulNow">작업진행 현황</a> -->
+                            </dd>
+                            <!-- 
+                            <dd>
+                                <strong style="color:red">[역직구]</strong>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/foreProduct">상품관리</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/foreOrderSave">주문관리</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/foreDelivery">배송등록</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/foreInvoice">송장관리</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/foreCalcul">정산처리</a>
+                            </dd>
+                             -->
+                            <dd>
+                            	<strong style="color:red">[오프매장]</strong>
+                            	<a href="http://devadmin.hottracks.co.kr/admin/distribution/offStock">재고관리</a>
+                            	<a href="http://devadmin.hottracks.co.kr/admin/distribution/offOrder">주문관리</a>
+                            	<a href="http://devadmin.hottracks.co.kr/admin/distribution/offOrderJisi">출고지시</a>
+                            </dd>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nStockMan">재고관리</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/musicInOutAdmin">음반반입반출</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/banInOutAdmin">반출입관리(직매)</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/panInOutAdmin">반출입관리(온라인역직구-판매분)</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nLocTypeMan">로케이션관리</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nStockSerCnt">사전재고조사</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/nStockLocCheck">로케이션확인</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>출고실적</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/onlineChulResult">온라인 발송 현황</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/onlineSaleResult">온라인 매출 현황</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/onlineMulStat">물류 현황판</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/onlineMulOrderStat">고객주문/배송 현황</a>
+                            </dd>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/tacbaeChulCnt">택배사별 송장건수</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listShippingResult">날짜별 출고실적</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listRequiredShippingDate">출고소요일 조회</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listDistributionOfBestCustomer">물류 출고분 우수고객</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listReSuzip">재수집산출자료</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listDeliveryDetail">물류출고실적(상세)</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listTimeToReceive">C+2일 조회<img src="http://devadmin.hottracks.co.kr/images/i_new.gif"/></a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listMonthDistriSearch">물류 월별 현황 조회</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/kyoboMusicDeliveryList">교보음반정산데이터</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/kyoboMusicDeliveryCnt">교보음반일자별배송건수</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>스텝부서</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/hanJinInvoiceForStep">CJ택배발송</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>과거(폐기예정)</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/listGiftMessage">선물 메시지 출력</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/MotherShippingCommand">출고지시(연동몰,마더몰)</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/NewMotherShippingCommand">NEW출고지시</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/NewShippingDivCommand">주문분류</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/distribution/registShippingForm2">출고 등록</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            
+    
+    
+</div><!-- end side-menu --></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>상품관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>상품관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/product/list?skip=Y">상품리스트</a>
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/edit">상품등록</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/editProductAll">상품일괄등록</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/prdtNotiInfoForm">상품정보고시일괄등록</a>
+                        
+                            <a href="http://devadmin.hottracks.co.kr/admin/product/listPermit">승인관리</a>
+                        
+                        
+                            <a href="http://devadmin.hottracks.co.kr/admin/product/listSoldOutRequest">품절관리</a>
+                        
+                        
+                            <a href="http://devadmin.hottracks.co.kr/admin/product/listFreeGift">사은품리스트</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/product/registFreeGiftForm">사은품등록</a>
+                        
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/barcodePrint">상품바코드출력</a>
+                        
+                            <a href="http://devadmin.hottracks.co.kr/admin/product/manageProductsCategoryForm">상품카테고리일괄변경</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/product/updateProductListForm">상품일괄변경</a>
+                        
+                    
+                </dd>
+                
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/product/sublistInit">물류상품리스트</a>
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/listSoldOutRequestNew">입고배송 판매상태 관리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/listSoldOutRequestConfirm">입고배송 판매상태 요청처리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/editMobile">모바일 상품상세 정보</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/listExpProduct">특정 상품 코드 관리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/productBenFee">상품이익예측</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/productHistory">상품가격연동이력</a>
+                    
+                </dd>
+                
+            </dl>
+        </li>
+         
+        
+        <li>
+            <dl>
+                <dt>상품관리 2.0[BETA]<img src="http://devadmin.hottracks.co.kr/images/i_new.gif" alt="NEW"/></dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/product/2.0/listProduct">상품리스트</a>
+                    <!--
+                    <a href="http://devadmin.hottracks.co.kr/admin/product/2.0/detailProduct">상품등록</a>
+                    
+                        
+                            <a href="http://devadmin.hottracks.co.kr/admin/product/manageProductsCategoryForm">상품카테고리일괄변경</a>
+                        
+                    
+                    -->
+                </dd>
+            </dl>
+        </li>
+        
+        
+        
+            <li>
+                <dl>
+                    <dt>뮤직샵 상품관리</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/recordMasterList">음반리스트</a>
+                        
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/preOrderSellprdtForm">예약상품코드관리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/limitSaleAllRegForm">한정판매일괄등록</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/dscntChngAllRegForm">할인율변경일괄처리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/trackMapForm">음원앨범정보매핑</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/albumMapForm">음반정보매핑</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/recordExcelPriceForm">음반상품가격일괄변경</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/rcbarStatusAllRegForm">음반상품상태일괄변경</a>
+                        
+                    </dd>
+                    
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/forceSaleRegForm">강제판매일괄등록</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/fullMusicLis">음반전곡듣기</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/noBaro">바로드림제외</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/delMusic">음반 곡 삭제</a>
+                    </dd>
+                    
+                </dl>
+            </li>     
+               
+            <li>
+                <dl>
+                    <dt>카테고리전시관리</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/listCategory">카테고리 등록/수정</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/product/listCategoryMapping">영업분석 매칭</a>
+                    </dd>
+                </dl>
+            </li>
+            
+        
+    </ul>
+</div><!-- end side-menu --> </div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    
+                            <a href="http://admin.hottracks.co.kr/admin/display/asis/dispBnrList?dispMstrId=MAIN_BIG_LEFT_GIFT&mallId=01" onfocus='blur()'>전시관리</a>
+                        
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>배너관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/display/bnrMasterList">배너목록</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/display/bnrPrdtDetail">상품상세배너</a>
+                </dd>
+            </dl>
+        </li>
+        
+            <li>
+                <dl>
+                    <dt>전시관리 [교보몰]</dt>
+                    <dd>
+                        <strong>메인전시</strong>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=GWM_BNR_TOP&mallId=01&ctgrId=00">기프트</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/asis/dispBnrList?dispMstrId=MAIN_BANNER_RECORD&mallId=01&ctgrId=0003">음반</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/asis/dispBnrList?dispMstrId=MAIN_BANNER_DVD&ctgrId=0004&mallId=01">DVD</a>
+                        
+                        <strong>카테고리전시</strong>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=DISP_GFT_1ST&mallId=01&ctgrId=000020">기프트</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/asis/dispBnrList?dispMstrId=CATE_MAIN_T_BNR&ctgrId=000300&mallId=01&dispType=02">가요</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/asis/dispBnrList?dispMstrId=CATE_MAIN_T_BNR&ctgrId=000308&mallId=01&dispType=02">클래식</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/asis/dispBnrList?dispMstrId=CATE_PROMT_RECORD&ctgrId=000301&mallId=02&dispType=02">CD</a>
+                        
+                        <strong>기타전시</strong>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=GLOBAL_GFT_DTL&mallId=01&ctgrId=00">기프트상품상세배너</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=GFT_NEW_BRAND&ctgrId=0000&mallId=01">NEWBRAND</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=GFT_BEST_BRAND&ctgrId=0000&mallId=01">BESTBRAND</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=DIARY_GNB&ctgrId=0000&mallId=01">다이어리배너</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>랭킹관리 [교보몰]</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/productRankingList?dispMstrId=RANK_BEST&ctgrId=0000&mallId=01">잘나가는 베스트셀러</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/productRankingList?dispMstrId=RANK_LOWPRICE&ctgrId=0000&mallId=01">알뜰쇼핑 최저가상품</a>
+                        <!-- <a href="http://devadmin.hottracks.co.kr/admin/display/prCoductRankingList?dispMstrId=RANK_RECENT&ctgrId=0000&mallId=01">따끈따끈 최신상품</a> -->
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/productRankingList?dispMstrId=RANK_CUSTOM&ctgrId=0000&mallId=01">고객만족 200%상품</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/productRankingList?dispMstrId=RANK_POPUL&ctgrId=0000&mallId=01">요즘뜨는 인기상품</a>
+                    </dd>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBrandList?dispMstrId=RANK_HOTBRAND&mallId=01&ctgrId=0000">HOT BRAND</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBrandList?dispMstrId=RANK_NEWBRAND&mallId=01&ctgrId=0000">NEW BRAND</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>전시관리 [단목몰]</dt>
+                    <dd>
+                        <strong>메인전시</strong>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=WLCM_GNB&mallId=02&ctgrId=00">웰컴메인</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=MUC_1ST&mallId=02&ctgrId=0003">CD</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=DVD_1ST&mallId=02&ctgrId=000400">DVD</a>
+                        
+                        <strong>카테고리전시</strong>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=DISP_GFT_1ST&mallId=02&ctgrId=000020">기프트</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=CATE_MUC_1ST&mallId=02&ctgrId=000301">CD</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=CATE_MUC_1ST&mallId=02&ctgrId=000308">클래식</a>
+                        
+                        <strong>기타전시</strong>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=CULT_1ST&mallId=02&ctgrId=00">컬처존</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/mdPickManage">MD'S PICK 관리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=DIARY_GNB&mallId=02&ctgrId=0000">다이어리배너 </a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/listPopup">팝업 배너</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>검색관리 [단독몰]</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/popKeyword?dispMstrId=GLOBAL_WELCOME&mallId=02">검색어키워드배너</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispEventList?dispMstrId=SRCH_EVT_PC&mallId=02&ctgrId=00">검색인기이벤트</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/listKeywordType">음반키워드관리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/listSearchProductFixed">검색상품고정관리</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>랭킹관리 [단독몰]</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBrandList?dispMstrId=RANK_HOTBRAND&mallId=02&ctgrId=0000">HOT BRAND</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBrandList?dispMstrId=RANK_NEWBRAND&mallId=02&ctgrId=0000">NEW BRAND</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>전시관리 [모바일]</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=MWL_BNR01&mallId=02&ctgrId=00">웰컴메인</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispPrdtList?dispMstrId=MGC_PRDT01&mallId=02&ctgrId=000025">리빙/데코</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispPrdtList?dispMstrId=MRM_PRDT01&mallId=02&ctgrId=0003">음반메인</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/keywordList">추천검색어</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/enrollIntro">인트로 관리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=MOB_DIARY_GNB&mallId=02&ctgrId=0000">다이어리메인</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispBnrList?dispMstrId=MAIN_MUSIC_GNB&mallId=02&ctgrId=00">뮤직메인</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/dispEventList?dispMstrId=MOB_EVT_MAIN&mallId=02&ctgrId=00">이벤트메인</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>테마샵 관리</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/theme/themeShopMaster">테마샵 마스터관리</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/display/theme/themeShopDisplay">테마샵 전시관리</a>
+                    </dd>
+                </dl>
+            </li>
+        
+        <li>
+            <dl>
+                <dt>뮤직샵 레이블 관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/display/labelInStorageInfoList">레이블 입고안내</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/display/labelEventList">레이블 행사안내</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/display/labelInfoList">레이블 조회</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>콘텐츠 관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/display/listIdolchart">아이돌차트 관리</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div><!-- end side-menu --> </div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>고객센터관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    
+        <ul>
+            
+            <li>
+                <dl>
+                    <dt>고객공지사항</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/board/userNoticeList">공지사항 조회</a>
+                        
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/userNoticeCreate">공지사항 등록</a>
+                        
+                    </dd>
+                </dl>
+            </li>
+            
+            
+                <li>
+                    <dl>
+                        <dt>고객상담관리</dt>
+                        <dd>
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/listCounsel">고객상담조회</a>
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/listCounsel?returnRequestGubun=W">SOS상담조회</a>
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/editCounselForm">전화상담접수</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/listStandardAnswer">표준답변관리</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/listQnA">상담 Q&amp;A</a>
+                            
+                                <a href="http://devadmin.hottracks.co.kr/admin/board/listBulkCounselRequest">기업대량구매상담</a>
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/txinRequestList">세금계산서 신청내역</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/listMailingUser">메일링회원관리</a>
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/searchListCounsel">고객상담관리</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/userSmsSend">문자발송</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/orderSearch?cmd=init">주문조회</a>
+                            
+                            
+                        </dd>
+                    </dl>
+                </li>
+            
+            
+            <li>
+                <dl>
+                    <dt>컨텐츠관리</dt>
+                    <dd>
+                         <a href="http://devadmin.hottracks.co.kr/admin/board/qnACommentListPage">상품평(100자평)관리</a>
+                         <a href="http://devadmin.hottracks.co.kr/admin/board/listKyoboReview">교보상품리뷰</a>
+                         <a href="http://devadmin.hottracks.co.kr/admin/board/faqListPage?orderBy=default&mallId=01">FAQ</a>
+                    </dd>
+                </dl>
+            </li>
+            
+            
+                <li>
+                    <dl>
+                        <dt>커뮤니티</dt>
+                        <dd>
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/community/list?commGubun=1">커뮤니티</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/board/community/list?commGubun=2">CS커뮤니티</a>
+                        </dd>
+                    </dl>
+                </li>
+            
+        </ul>
+    
+    
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>업체관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>업체커뮤니티</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuListPage">공지사항 조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuCreateRootPage">공지사항 등록</a>
+                    
+                    <a href="http://devadmin.hottracks.co.kr/admin/vendor/mdNotice">MD-업체 공유사항</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>업체공지사항</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiListPage">공지사항 조회</a>
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiCreateOrUpdatePage?jspGbn=create">공지사항 등록</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        
+        
+            <li>
+                <dl>
+                    <dt>공급 업체 관리</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/vendorList">업체 정보 조회</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/offVendorList">업체 정보 등록</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/contractList">브랜드 계약 조회</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/createContractForm">브랜드 계약 등록</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>브랜드 관리</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/brandList">브랜드 조회</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/createBrandForm">브랜드 등록</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>택배사 관리</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/tacbaeList">택배사 조회</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/createTacbaeForm">택배사 등록</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>입점업체문의</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/vendor/listVendorInquiry">입점업체문의</a>
+                    </dd>
+                </dl>
+            </li>
+        
+    </ul>
+</div></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a href="http://admin.hottracks.co.kr/admin/banner/eventMasterList" onfocus='blur()'>이벤트관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        
+        <li>
+            <dl>
+                <dt>이벤트관리</dt>
+                <dd>
+                    
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/eventWinnerPublishList">당첨자 발표 조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/showcaseEventWinnerPublishList">쇼케이스 당첨자 조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/eventHotdealList">원데이특가</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/eventRandomList">룰렛기획전</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/eventStepList">단계기획전</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/eventStampList">스탬프기획전</a>
+                </dd>
+            </dl>
+        </li>
+        
+        <li>
+            <dl>
+                <dt>뮤직샵</dt>
+                <dd>
+                    
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/posterCaseList?useYn=Y">포스터케이스 관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/recordFreeGiftMasterList">사은품/부록 마스터관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/recordFreeGiftList">사은품 증정관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/recordSupplementList">부록관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/insertOrderRecordPostCase">포스터 소급분</a>
+                    
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/orderOutdoorList">현장판매배송관리</a>
+                </dd>
+            </dl>
+        </li>
+        
+        <li>
+            <dl>
+                <dt>쿠폰관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/listCoupon">쿠폰조회</a>
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/event/createCouponForm">쿠폰등록</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/event/simpleCouponForm">간편쿠폰 생성</a>
+                    
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/userPolicy">쿠폰정책관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/imageUpload">메일용이미지업로드</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/listLimitCoupon">한정쿠폰등록</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/showCouponDate">이벤트 쿠폰 날짜 변경[38190]</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>알림예약전시관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/recordNotiReqList">알림예약전시 관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/recordNoticeList">알림예약 메일관리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>서비스 종료</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/event/oldEventManagement">이벤트관리[~2011.02]</a>
+                </dd>
+            </dl>
+        </li>
+        
+    </ul>
+</div><!-- end side-menu --></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>정산관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    
+        <ul>
+            
+                
+                    <li>
+                        <dl>
+                            <dt>교보정산관리</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listKyoboCalculateProcessing">교보정산처리</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/dutyFreeAmt">면세업체매출내역서</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/zalCalculateAmt">자우쿠폰매출</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/handAmt">수기매출처리</a>
+                            </dd>
+                        </dl>
+                    </li>
+                
+                <li>
+                    <dl>
+                        <dt>업체정산관리</dt>
+                        <dd>
+                            <a href="http://devadmin.hottracks.co.kr/admin/calculate/listVendorCalculate">업체정산조회</a>
+                            <a href="http://devadmin.hottracks.co.kr/admin/calculate/vendorShippingSearch">업체배송비조회</a>
+                            <a href="https://www.wehago.com" target="_blank">세금계산서 발급</a>
+                            <a href="http://partner.hottracks.co.kr/" target="_blank">고객부담배송비 청구서발급</a>
+                        </dd>
+                    </dl>
+                </li>
+                
+                    <li>
+                        <dl>
+                            <dt>마더몰정산관리</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listMotherCalculate">결제대금조회</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listFurInpAmt">예상입금액조회</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listPaymentInfo">금권별 현황 확인</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/comparePgpaymentAndPayment">금권별 결제내역 비교</a>
+                            </dd>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/gsPointListSearch">GSPOINT</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/okPointListSearch">OKPOINT</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listDepositAmt">예치금잔액</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/naverPayDetail">네이버N페이결제내역</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/naverPayMain">네이버N페이</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/lPointListSearch">LPOINT</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>선수금(마더몰)</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listSunAmt">선수금관리</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listSunAmtFix">선수금마감</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listSunAmtOrdRem">선수금잔액확인</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/listSunAmtOrdRemOff">매장예약선수금잔액확인</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>배송비</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/dlvyAmtForWho">배송비 부담 주체별 현황</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>주문별정산자료확인</dt>
+                            <dd>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/orderCalculate">주문자료확인</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/stopVendorSaleAmt">거래중단업체매출</a>
+                                <a href="http://devadmin.hottracks.co.kr/admin/calculate/allyorderCalculate">제휴몰주문확인</a>
+                            </dd>
+                        </dl>
+                    </li>
+                
+            
+            
+                <li>
+                    <dl>
+                        <dt>기타</dt>
+                        <dd>
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/calculate/naverOrderSearch">지식쇼핑주문/매출</a>
+                            
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/calculate/linkPriceSearch">링크프라이스</a>
+                            
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/calculate/wmpOrderSearch">위메프주문/매출</a>
+                            
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/calculate/cafeOrderSearch">카페24주문/매출</a>
+                            
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/calculate/okCashOrderSearch">OK캐쉬백주문/매출</a>
+                            
+                            
+                            <a href="http://devadmin.hottracks.co.kr/admin/calculate/happyPointOrderSearch">해피포인트주문/매출</a>
+                            
+                        </dd>
+                    </dl>
+                </li> 
+            
+        </ul>
+    
+</div><!-- end side-menu --></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>통계관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>주문/매출통계</dt>
+                <dd>
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listWholeOrderSalesStatistics">전체 주문/매출통계</a>
+                    
+                    <a href="http://devadmin.hottracks.co.kr/admin/statistics/listOrderSalesForMall">채널별 주문/매출조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/statistics/listOrderSalesStatisticsForCategory">카테고리 주문/매출 통계</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/statistics/listOrderSalesCategoryAlli" style="border:none; padding-left:0px; margin-left:0px;">(제휴몰전체)</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/statistics/vndrStatsListPage">업체별 주문/매출 통계</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/statistics/brandStatsListPage">브랜드별 주문/매출 통계</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/statistics/listOrderSalesStatisticsForProduct">상품별 주문/매출 통계</a>
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listEventStatistics">이벤트별 매출현황(이벤트)</a>
+                    
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listEventStatisticsProduct">이벤트별 매출현황(상품)</a>
+                    
+                    
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listEventStatisticsTime">이벤트별 매출현황(시간대)</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listProductAndUserStatistics">상품별 주문자 리스트</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listProductStatistics">상품별 주문 통계</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listWholeMallOrderStatistics">몰별 주문 통계</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        
+            <li>
+                <dl>
+                    <dt>매출통계</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listCategoryProductByDate">일자별 진열 상품 현황</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listOrderSalesStatisticsForVendor">업체별 주문/매출 통계</a>
+                    </dd>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/hotlineSaleAmt">카테고리별 매출통계(영업분석기준)</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/stepOrderAmt">직원매출</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/venSaleAmt">업체별 매출 조회</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/maginAmt">상품별 마진율</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/saleReport01">영업본부보고용</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/saleReport02">온라인보고용</a>
+                    </dd>
+                </dl>
+            </li>
+        
+        
+            <li>
+                <dl>
+                    <dt>쿠폰통계</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/moCouponAmt?init=Y">마더몰 쿠폰사용현황</a>
+                    </dd>
+                </dl>
+            </li>
+        
+        
+            <li>
+                <dl>
+                    <dt>기타통계</dt>
+                    <dd>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/siteClick">사이트클릭현황</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listUserDevice">APP다운로드현황</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listSearchStatistics">검색통계 현황</a>
+                        <a href="http://devadmin.hottracks.co.kr/admin/statistics/listIdolStatistics">아이돌차트 통계</a>
+                    </dd>
+                </dl>
+            </li> 
+        
+    </ul>
+</div><!-- end side-menu -->
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>시스템관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>시스템관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/listCode">코드 목록</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/memory">메모리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/listMail">메일 목록</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/batchMasterList">배치 목록</a>
+                    <a onclick="window.open(this.href, '', 'width=1000px, height=900px, scrollbars=yes');return false;" href="http://devadmin.hottracks.co.kr/admin/system/checkList">체크리스트</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>사용자관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/listAdmin">사용자 목록</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>관리자기능</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/cosmetics">관리자기능</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/totPoint">통합포인트</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/naverAdmin">네이버 지식쇼핑</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/okPoint">Ok캐쉬백</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/system/lottePoint">LPoint</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>사용자관리(마더몰)</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>회원조회</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/listUserInfo">회원조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/joinUserCount">가입회원수확인</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/orderUserCount">구매회원수확인</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>회원계좌</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/listSaved">마일리지관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/listDeposit">예치금관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/listDepositReturnNoUser?repaymentStatusCode=C0642">비회원환불신청</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/listDepositReturnNew">예치금환불관리[리뉴얼]</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/userDepositAppConfirm">예치금승인관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/userSavedAppConfirm">마일리지승인관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/deliveryAmtConf">배송비무통장입금확인</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/listAutoPay">자동결제관리(음원)</a>
+                </dd>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/listTotSaved">통합포인트관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/userTotSavedAppConfirm">통합포인트승인관리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>모바일</dt>
+                <dd>
+                    <!-- <a href="http://devadmin.hottracks.co.kr/admin/user/listUserDevice">등록기기정보</a> -->
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/enrollInfo">알림 등록 화면</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/listUserAlarm">사용자 알림 확인</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/user/appPushMain">푸시 알림 등록 (테스트)</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>회원조회</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>회원조회</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/member/memberSearch">회원조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/member/memberAmt">매출조회</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>제휴몰관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>제휴몰 관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/ally/listAllianceProduct">제휴몰상품조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/ally/listAlliProduct">제휴몰상품조회[2.0]</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/ally/listAllianceCategory?init=Y">제휴몰 카테고리 조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/ally/allyProHistory">연동이력조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/ally/allyProAdmin">제휴연동중지</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/ally/allySendNo">제휴몰운송장조회</a>
+                    <!--  <a href="http://devadmin.hottracks.co.kr/admin/ally/allyProduct">제휴몰상품가불가</a> -->
+                </dd>
+            </dl>
+            <dl>
+                <dt>제휴몰 업체 관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/ally/listVndr">제휴몰 업체관리</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>홈페이지관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>영업점</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C1321">행사안내</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C1322">영업점 이야기</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C1323">추천상품</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C1324">영업점배너</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>게시판</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C1325">알려드립니다.</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C1326">PR</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/replyList">댓글 관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C1327">배너</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>팝업관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C132A">팝업관리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>M+</dt>
+                <dd>
+                     <a href="http://devadmin.hottracks.co.kr/admin/info/eventList">[M+]행사안내</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>시스템 관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardList?boardCode=C132D">영업점관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/boardImageList">영업점 이미지 관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/zalStoreList">자우영업점 관리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>전시관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/dispBnrList?dispMstrId=HWL_BNR01&mallId=02&ctgrId=00">홈페이지메인</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/bnrMasterList">배너관리</a>
+                </dd>
+            </dl>
+        </li>
+        <!-- 
+        <li>
+            <dl>
+                <dt>관리자 권한관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/info/userList">관리자 권한관리</a>
+                </dd>
+            </dl>
+        </li>
+        -->
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>B2B관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>B2B 관리</dt>
+                <dd>
+                    <!-- <a href="http://devadmin.hottracks.co.kr/admin/btob/btobMain">메인</a>  -->
+                    <a href="http://devadmin.hottracks.co.kr/admin/distribution/nOrderJisiFP">FP몰 출고지시</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/distribution/listInvoicePrintForHanjinBtob">수기송장출력</a> 
+                    <a href="http://devadmin.hottracks.co.kr/admin/distribution/hanJinInvoiceForStepBtob">CJ택배발송</a>       
+                </dd>
+            </dl>
+            <dl>
+                <dt>출고 현황</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/btob/b2bChulDay">일자별출고현황</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/btob/b2bonlineChulResult">B2B 발송 현황</a> 
+                    <a href="http://devadmin.hottracks.co.kr/admin/btob/b2bOnlineMulStat">B2B 현황판 </a>
+                </dd>
+            </dl>
+            <dl style="height: 100px;"><dd> </dd></dl>
+        </li>
+    </ul>
+</div>
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>OFF영업점</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>OFF영업점</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/listOffOrder">주문조회</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/listShippingCommandOff?deliveryStatusCode=C0231">대기목록</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/listRegistShippingOff">상품출고처리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/offOrderReturn">반품처리</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>쇼루밍</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/showOrderMain">매장결제 주문접수</a>
+                </dd>
+            </dl>
+<!-- 
+            <dl>
+                <dt>매장위치관리</dt>
+                <dd>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/saleZoneAdmin">매대 ZONE 관리</a>
+                    <a href="http://devadmin.hottracks.co.kr/admin/offStore/goodsZoneReg">검색어 등록</a>
+                    <a href="">검색어 관리</a>
+                    <a href="">실패검색어</a>
+                    <a href="">신고접수관리</a>
+                </dd>
+            </dl>
+ -->
+        </li>
+    </ul>
+</div>
+</div>
+                </li>
+            
+        
+    
+</ul>
+
+        </div>
+    </div><!-- end head -->
+    <hr />
+    <div id="body">
+        
+<div id="contents">
+
+
+
+    <!-- 상품Q&amp;A -->
+    <div id="contents-area">
+        <h4 style="position:relative;line-height:23px;">
+            <span>상품Q&amp;A</span> 
+            <span style="position:absolute;right:0;">
+                <span>미처리 게시물: <a href="http://devadmin.hottracks.co.kr/admin/board/listQnA?searchType=detail&answerYn=N">21건</a></span>
+                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/board/listQnA">더보기</a></span>
+            </span>
+        </h4>
+        <div class="list-type">
+            <table class="table" summary="상품Q&amp;A">
+                <caption>상품Q&amp;A</caption>
+                <colgroup>
+                    <col width="40px" />
+                    <col width="*" />
+                    <col width="*" />
+                    <col width="*" />
+                    <col width="65px" />
+                    <col width="100px" />
+                    <col width="70px" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">순번</th>
+                        <th scope="col">상품이름</th>
+                        <th scope="col">업체이름(대표번호)</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">처리상태</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">작성일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td class="left">Joseph 쿠션</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=3368&popupYn=Y">에이모노/인터넷(02-2293-0805)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330717">상품에 대해서 문의 드립니다.</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>webiztest</td>
+                            <td>2022.04.21</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td class="left">Joseph 쿠션</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=3368&popupYn=Y">에이모노/인터넷(02-2293-0805)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330716">쿠션은 쿠션 쿠션</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>webiztest</td>
+                            <td>2022.04.21</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td class="left">Joseph 쿠션</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=3368&popupYn=Y">에이모노/인터넷(02-2293-0805)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330714">궁금합니다.333311</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>webiztest</td>
+                            <td>2022.04.21</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td class="left">Joseph 쿠션</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=3368&popupYn=Y">에이모노/인터넷(02-2293-0805)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330713">쿠션은 언제나 푹신 푹신</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>webiztest</td>
+                            <td>2022.04.21</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td class="left">Joseph 쿠션</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=3368&popupYn=Y">에이모노/인터넷(02-2293-0805)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330712">궁금합니다.2222</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>webiztest</td>
+                            <td>2022.04.21</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td class="left">Joseph 쿠션</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=3368&popupYn=Y">에이모노/인터넷(02-2293-0805)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330711">쿠션은 푹신한가요?</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>webiztest</td>
+                            <td>2022.04.21</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td class="left">Joseph 쿠션</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=3368&popupYn=Y">에이모노/인터넷(02-2293-0805)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330710">안녕하세요 문의 글입니다.</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>webiztest</td>
+                            <td>2022.04.20</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td class="left">프라임 신제품 2단 독서대 3방향 필기 책받침대  p260</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=15348&popupYn=Y">이룸/인터넷(031-542-1207)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330696">가격이 잘못 된거같아요</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>aaaa3159</td>
+                            <td>2022.01.14</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td class="left">2022 에브리 홀리데이 다이어리 - 날짜형</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=3408&popupYn=Y">칠삼이일디자인/인터넷(031-955-7324)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330692">환불문의</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>tls6369</td>
+                            <td>2022.01.13</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td class="left">NEW 제트스트림 3색 볼펜</td>
+                            <td class="left"><a onclick="window.open(this.href, 'viewVendor', 'width=1138, height=800,scrollbars=yes '); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendor?vendorId=00618&popupYn=Y">동아교재(02-2105-8600)</a></td>
+                            <td class="left"><a href="http://devadmin.hottracks.co.kr/admin/board/qnAUpdateArticlePage?seq=330691">입고예정</a></td>
+                            <td>
+                                접수
+                                
+                                
+                                
+                            </td>
+                            <td>hyunji257</td>
+                            <td>2022.01.13</td>
+                        </tr>
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+        <!-- //상품Q&amp;A -->
+        <!-- 업체배송지연건 -->
+        <div>
+            <table style="width:100%;">
+                <tr>
+                    <td style="vertical-align:top;width: 49%;">
+                        <h4>업체배송지연건 <em style="color:#ff0000;font-weight:normal;font-style:normal;">(8,000건)</em></h4>
+                        <div class="list-type">
+                            <table class="table" summary="업체배송지연건">
+                                <caption>업체배송지연건</caption>
+                                <colgroup>
+                                    <col width="*"/>
+                                    <col width="*"/>
+                                    <col width="*"/>
+                                    <col width="*"/>
+                                    <col width="*"/>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>업체배송</th>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=1&page=1">엑셀다운(1~5000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=1&page=2">엑셀다운(5001~10000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=1&page=3">엑셀다운(10001~15000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=1&page=4">엑셀다운(15001~20000)</a></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>물류기프트</th>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=2&page=1">엑셀다운(1~5000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=2&page=2">엑셀다운(5001~10000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=2&page=3">엑셀다운(10001~15000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=2&page=4">엑셀다운(15001~20000)</a></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>음반</th>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=3&page=1">엑셀다운(1~5000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=3&page=2">엑셀다운(5001~10000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=3&page=3">엑셀다운(10001~15000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=3&page=4">엑셀다운(15001~20000)</a></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>합본</th>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=4&page=1">엑셀다운(1~5000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=4&page=2">엑셀다운(5001~10000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=4&page=3">엑셀다운(10001~15000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=4&page=4">엑셀다운(15001~20000)</a></span></td>
+                                    </tr>
+                                    <tr>
+                                        <th>업체물류기프트</th>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=5&page=1">엑셀다운(1~5000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=5&page=1">엑셀다운(5001~10000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=5&page=1">엑셀다운(10001~15000)</a></span></td>
+                                        <td><span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelMain?deliveryStatusCode=5&page=1">엑셀다운(15001~20000)</a></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- end list-type -->
+                       <!--  <h4 style="position:relative;line-height:23px;">
+                            <span style="position:absolute;right:0;">
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=1">엑셀다운(1~5000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=2">엑셀다운(5001~10000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=3">엑셀다운(10001~15000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=4">엑셀다운(15001~20000)</a></span>                               
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=5">엑셀다운(20001~25000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=6">엑셀다운(25001~30000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=7">엑셀다운(30001~35000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=8">엑셀다운(35000~40000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=9">엑셀다운(40001~45000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=10">엑셀다운(45001~50000)</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/order/listOrderOfVendorExcelDownload?orderStatusCode=C0171&deliveryStatusCode=1&delayDeliveryDays=8&orderBy=dateAsc&deliveryGubunCode=C0131&page=11">엑셀다운(50001~55000)</a></span>
+                            </span>
+                        </h4> -->
+                        
+                    </td>
+                    <td style="width:2%;" rowspan="2"></td>
+                    <td style="vertical-align: top; width: 49%;">
+                        <h4>상품 Q&amp;A지연건</h4>
+                        <div class="list-type">
+                            <table class="table" summary="상품 Q&amp;A지연건">
+                                <caption>상품 Q&amp;A지연건</caption>
+                                <colgroup>
+                                    <col width="*"/>
+                                    <col width="*"/>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>전일 Q&amp;A</th>
+                                        <th>2일전 Q&amp;A</th>
+                                        <th>7일전 Q&amp;A</th>
+                                        <th>당월 Q&amp;A</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="http://devadmin.hottracks.co.kr/admin/board/listQnA?searchDateType=yesterday&answerYn=N">0건</a></td>
+                                        <td><a href="http://devadmin.hottracks.co.kr/admin/board/listQnA?searchDateType=twoDaysAgo&answerYn=N">0건</a></td>
+                                        <td><a href="http://devadmin.hottracks.co.kr/admin/board/listQnA?searchDateType=sevenDaysAgo&answerYn=N">0건</a></td>
+                                        <td><a href="http://devadmin.hottracks.co.kr/admin/board/listQnA?searchDateType=thisMonth&answerYn=N">0건</a></td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div><!-- end list-type -->
+                    </td>
+                </tr>
+            </table>
+            <table style="width:100%;">
+                <tr>
+                    <td style="vertical-align:top;width:49%;">
+                        <h4 style="position:relative;line-height:23px;">
+                            <span>공지사항</span>
+                            <span style="position:absolute;right:0;">
+                                
+                                    <span class="button"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiCreateOrUpdatePage?decoration=popup&jspGbn=create">등록</a></span>
+                                
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiListPage">더보기</a></span>
+                            </span>
+                        </h4>
+                        <div class="list-type">
+                            <table class="table" summary="공지사항">
+                                <caption>업체 공지사항</caption>
+                                <colgroup>
+                                    <col width="5%" />
+                                    <col width="10%" />
+                                    <col width="65%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">순번</th>
+                                        <th scope="col">공지대상</th>
+                                        <th scope="col">제목</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">작성일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=5367&decoration=popup&">[필독]   ***** 제휴몰 정산 및 매출기준 *****</a></td>
+                                            <td>양준용</td>
+                                            <td>2015.05.12</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=12346&decoration=popup&">필독▶상품관리2.0◀ 품절처리 방법</a></td>
+                                            <td>최초롬</td>
+                                            <td>2018.09.12</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>3</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=13927&decoration=popup&">★★휴가/명절 배송공지 등록방법★★</a></td>
+                                            <td>이미나</td>
+                                            <td>2019.01.25</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>4</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=20189&decoration=popup&">★중요★ 송장오입력(가키인) 에 따른 미정산 안내 </a></td>
+                                            <td>양준용</td>
+                                            <td>2020.07.17</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>5</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=17157&decoration=popup&">*** [필독] 상표권 위반 / 위조상품등록 절대금지 안내 ***</a></td>
+                                            <td>양준용</td>
+                                            <td>2019.11.18</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>6</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=5369&decoration=popup&">★ 상품정보고시 명확히 기입바랍니다. ★</a></td>
+                                            <td>한지현</td>
+                                            <td>2015.05.18</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>7</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=5571&decoration=popup&">[필독] 사업자주소,대표자 변경시 진행방식 </a></td>
+                                            <td>장문경</td>
+                                            <td>2015.08.24</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>8</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=2026&decoration=popup&">[필독]상품명/상품이미지 등록 시 유명브랜드상표명 사용금지 안내  </a></td>
+                                            <td>이지양</td>
+                                            <td>2012.09.27</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>9</td>
+                                            <td>
+                                                전체
+                                                
+                                                
+                                            </td>
+                                            <td style="text-align: left;"><a onclick="window.open(this.href ,'createNotice','width=1138, height=800,scrollbars=yes ' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrNotiViewPage?notiSeq=4&decoration=popup&">엑셀파일 출고처리 가능합니다!!!! (엑셀업로드 출고 방법 안내)</a></td>
+                                            <td>관리자</td>
+                                            <td>2011.02.22</td>
+                                        </tr>
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                    <td style="width:2%;" rowspan="2"></td>
+                    <td style="vertical-align: top; width: 49%;" rowspan="2">
+                        <h4 style="position:relative;line-height:23px;">
+                            <span><h1>CS접수게시판</h1></span> 
+                            <span style="position:absolute;right:0;">
+                                <span>미처리게시물: 16027건</span>
+                                <span class="button"><a onclick="window.open(this.href ,'createNotice','width=1138, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuCreateRootPage?decoration=popup">등록</a></span>
+                                <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuListPage">더보기</a></span>
+                            </span>
+                        </h4>
+                        <div class="list-type">
+                            <table class="table" summary="CS접수게시판">
+                                <caption>CS접수게시판</caption>
+                                <colgroup>
+                                    <col width="5%" />
+                                    <col width="10%" />
+                                    <col width="22%" />
+                                    <col width="35%" />
+                                    <col width="8%" />
+                                    <col width="10%" />
+                                    <col width="10%" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">순번</th>
+                                        <th scope="col">공지대상</th>
+                                        <th scope="col">업체이름(대표번호)</th>
+                                        <th scope="col">제목</th>
+                                        <th scope="col">상태</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">작성일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                        <tr>
+                                            <td>1</td>
+                                            <td>공급업체</td>
+                                            <td class="left">본투로드/인터넷(02-1644-9288)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=130876&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    안녕하세요 교보핫트랙스입니다. 출고일정 확인부탁드립니다. 
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                
+                                                완료
+                                            </td>
+                                            <td>박은지</td>
+                                            <td>2020.07.03</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>2</td>
+                                            <td>공급업체</td>
+                                            <td class="left">핫트랙스(02-3700-6562)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=125170&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    ★[공지사항] 휴가/명절/이전 등등의 사유로 인한 배송공지 등록방법 ★ 
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                
+                                                완료
+                                            </td>
+                                            <td>김채현</td>
+                                            <td>2020.02.06</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>3</td>
+                                            <td>공급업체</td>
+                                            <td class="left">핫트랙스(02-3700-6562)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=93886&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    ★[공지사항] 품절/취소/반품 게시시 유의사항(본 글에 답글 금지)★
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                
+                                                완료
+                                            </td>
+                                            <td>정윤희</td>
+                                            <td>2017.06.08</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>4</td>
+                                            <td>공급업체</td>
+                                            <td class="left">핫트랙스(02-3700-6562)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=71530&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    ★[공지사항] 문의, 요청 등록 후 본문이 안 보이는 오류 발생시★
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                
+                                                완료
+                                            </td>
+                                            <td>안세희</td>
+                                            <td>2015.05.22</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>5</td>
+                                            <td>공급업체</td>
+                                            <td class="left">핫트랙스(02-3700-6562)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=107&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    ★[공지사항] 주문 출고처리 매뉴얼!!!★
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                
+                                                완료
+                                            </td>
+                                            <td>관리자</td>
+                                            <td>2011.02.25</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>6</td>
+                                            <td>공급업체</td>
+                                            <td class="left">핫트랙스(02-3700-6562)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=98&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    ★[공지사항] 물류 입고 상품 발주서 납품 처리 매뉴얼★
+                                                </a>
+                                            </td>
+                                            <td>
+                                                
+                                                
+                                                완료
+                                            </td>
+                                            <td>조정민</td>
+                                            <td>2011.02.25</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>7</td>
+                                            <td>CS</td>
+                                            <td class="left">몬스터몰/인터넷(070-7808-4888)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=160140&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    품절취소건입니다 
+                                                </a>
+                                            </td>
+                                            <td>
+                                                접수
+                                                
+                                                
+                                            </td>
+                                            <td>이진성</td>
+                                            <td>2022.01.13</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>8</td>
+                                            <td>CS</td>
+                                            <td class="left">파베르코리아/인터넷(010-4592-2815)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=160139&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    A20113000012 임상욱 품절의건
+                                                </a>
+                                            </td>
+                                            <td>
+                                                접수
+                                                
+                                                
+                                            </td>
+                                            <td>석미숙</td>
+                                            <td>2022.01.13</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>9</td>
+                                            <td>CS</td>
+                                            <td class="left">퍼즐갤러리/인터넷(02-1644-8985)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=160135&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    820113000062 최화영 제품 재입고 지연
+                                                </a>
+                                            </td>
+                                            <td>
+                                                접수
+                                                
+                                                
+                                            </td>
+                                            <td>임근식</td>
+                                            <td>2022.01.13</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <td>10</td>
+                                            <td>CS</td>
+                                            <td class="left">알머스(주)/인터넷(02-6711-3500)</td>
+                                            <td style="text-align: left;">
+                                                <a onclick="window.open(this.href ,'createNotice','width=1350, height=900,scrollbars=yes' ); return false;" href="http://devadmin.hottracks.co.kr/admin/vendor/vndrComuViewPage?seq=160134&decoration=popup">
+                                                    &nbsp;
+                                                    
+                                                    롯데 반품 요청건 제품 사진 입니다.
+                                                </a>
+                                            </td>
+                                            <td>
+                                                접수
+                                                
+                                                
+                                            </td>
+                                            <td>이수정</td>
+                                            <td>2022.01.13</td>
+                                        </tr>
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                
+                    <tr style="vertical-align: top;">
+                        <td style="vertical-align:top;width:49%;padding-right:2%;">
+                            <h4 style="position:relative;line-height:23px;">
+                                <span>입점문의 게시판</span>
+                                <span style="position:absolute;right:0px;">
+                                    <span class="button"><a href="http://devadmin.hottracks.co.kr/admin/vendor/listVendorInquiry">더보기</a></span>
+                                </span>
+                            </h4>
+                            <div class="list-type">
+                                <table class="table" summary="공지사항">
+                                    <caption>입점문의 게시판</caption>
+                                    <colgroup>
+                                        <col width="5%" />
+                                        <col width="10%" />
+                                        <col width="10%" />
+                                        <col width="55%" />
+                                        <col width="10%" />
+                                        <col width="10%" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">순번</th>
+                                            <th scope="col">처리상태</th>
+                                            <th scope="col">카테고리</th>
+                                            <th scope="col">회사명</th>
+                                            <th scope="col">담당자</th>
+                                            <th scope="col">작성일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    미접수
+                                                    
+                                                    
+                                                    
+                                                </td>
+                                                <td></td>
+                                                <td><a href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendorInquiry?iqrySeq=46110" onclick="window.open(this.href ,'quick' ,'width=1000, height=900,scrollbars=yes'); return false;">입점해도될까여</a></td>
+                                                <td>입점해도될까여</td>
+                                                <td>2022.05.18</td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    미접수
+                                                    
+                                                    
+                                                    
+                                                </td>
+                                                <td></td>
+                                                <td><a href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendorInquiry?iqrySeq=46109" onclick="window.open(this.href ,'quick' ,'width=1000, height=900,scrollbars=yes'); return false;">회사명2</a></td>
+                                                <td>담당자명2</td>
+                                                <td>2022.05.17</td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    미접수
+                                                    
+                                                    
+                                                    
+                                                </td>
+                                                <td></td>
+                                                <td><a href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendorInquiry?iqrySeq=46108" onclick="window.open(this.href ,'quick' ,'width=1000, height=900,scrollbars=yes'); return false;">회사명</a></td>
+                                                <td>담당자명</td>
+                                                <td>2022.05.17</td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>4</td>
+                                                <td>
+                                                    미접수
+                                                    
+                                                    
+                                                    
+                                                </td>
+                                                <td>디지털/자동차</td>
+                                                <td><a href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendorInquiry?iqrySeq=46088" onclick="window.open(this.href ,'quick' ,'width=1000, height=900,scrollbars=yes'); return false;">디원</a></td>
+                                                <td>전원교</td>
+                                                <td>2022.01.11</td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>5</td>
+                                                <td>
+                                                    미접수
+                                                    
+                                                    
+                                                    
+                                                </td>
+                                                <td>여행/취미</td>
+                                                <td><a href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendorInquiry?iqrySeq=46068" onclick="window.open(this.href ,'quick' ,'width=1000, height=900,scrollbars=yes'); return false;">주식회사 바이프로스트</a></td>
+                                                <td>이하늘</td>
+                                                <td>2022.01.10</td>
+                                            </tr>
+                                        
+                                            <tr>
+                                                <td>6</td>
+                                                <td>
+                                                    미접수
+                                                    
+                                                    
+                                                    
+                                                </td>
+                                                <td>뷰티/헬스</td>
+                                                <td><a href="http://devadmin.hottracks.co.kr/admin/vendor/viewVendorInquiry?iqrySeq=46049" onclick="window.open(this.href ,'quick' ,'width=1000, height=900,scrollbars=yes'); return false;">치유</a></td>
+                                                <td>양희순</td>
+                                                <td>2022.01.10</td>
+                                            </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                
+            </table>
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            <h4> 세금계산서 문의 / 물류센터 주소안내 </h4>
+            <p>세금계산서 문의 : 이재윤 02)3700-6523, 서재현 02)3700-6524, 배송비 세금계산서 : 봉수연 02)3700-6525, (배송관련 문의) 각 해당 MD</p>
+            <p>경기 파주시 파주읍 오봉골길 211-1 교보핫트랙스 물류센터 / 임경환 031-941-5362</p>
+        </div>
+    </div>
+
+</div><!-- //contents -->
+
+    </div><!-- end body -->
+    
+    <hr />
+    <div id="foot">
+        <address>
+            상호명 : 교보핫트랙스(주) 대표이사 :  오교철   주소 : 10881 경기 파주시 회동길 78(출판단지 내) 사업자등록번호 : 102-81-29258 고객 관리 책임자 : 김재식 (PRIVACY@HOTTRACKS.CO.KR)
+        </address>
+        <p class="copyright">Copyright 2007 by Kyobo Hottracks Co.LTD., Allright reserved</p>
+        <p class="logo">핫트랙스</p>
+    </div><!-- end foot -->
+</div><!-- end wrap -->
+<div class="page_nav">
+    <div class="nav_inner"> 
+        <div class="nav_left">
+            <a href="http://devadmin.hottracks.co.kr/"><img alt="메인페이지로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_home.png"></a>
+            <a href="javascript:history.back();"><img alt="이전페이지로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_prev.png"></a>
+            <a href="javascript:history.forward();"><img alt="다음페이지로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_next.png"></a>
+        </div>
+        <div class="nav_info">
+            <p>
+                
+                <a href="http://devadmin.hottracks.co.kr/admin/editMypageAdmin"><u>관리자</u></a>님, 안녕하세요.
+            </p>
+        </div>
+        <div class="nav_right">
+            <a onclick="$('html,body').animate({'scrollTop':0},200);return false;" href="#"><img alt="위로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_up.png"></a>
+            <a onclick="$('html,body').animate({'scrollTop':$(document).height()},200);return false;" href="#"><img alt="아래로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_down.png"></a>
+        </div>
+        <div class="nav_site">
+            <select onchange="if(this.value != ''){ window.open(this.value, '_blank', '');this.value = ''; }">
+                <option value="">===== 관련사이트 =====</option>
+                <optgroup label="온라인 쇼핑몰">
+                    <option value="http://www.hottracks.co.kr/">핫트랙스몰</option>
+                    <option value="http://gift.kyobobook.co.kr/">교보문고|기프트몰</option>
+                    <option value="http://music.kyobobook.co.kr/">교보문고|음반몰</option>
+                </optgroup>
+                <optgroup label="관리자 사이트">
+                    <option value="http://partner.hottracks.co.kr/">파트너포탈</option>
+                    <option value="https://www.bill36524.com/main.jsp">BILL36524</option>
+                    
+                        <option value="http://khflow.hottracks.co.kr/">통합유통</option>
+                        <option value="http://hotline.hottracks.co.kr/">핫라인</option>
+                    
+                </optgroup>
+            </select>
+        </div>
+    </div>
+</div>
+</body>
+</html>
