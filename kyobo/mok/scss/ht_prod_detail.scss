@@ -1348,7 +1348,7 @@ button.btn_md_second {
             }
         }
         .auto_overflow_footer {
-            margin-bottom:12px;
+            margin-bottom:12px;margin-top: 12px;
         }
     }
 }
@@ -2576,6 +2576,12 @@ button.btn_md_second {
     }
     .review_reply {
         border-top:1px solid #eaeaea;padding:12px 4px 0 4px;margin-top:20px;
+        &.reply_confirmation{
+            padding-bottom: 12px;
+            .reply_list .reply_list_item{
+                display: inline-block !important;width: 100%;
+            }
+        }
         .byte_check_wrap {
             display:none;
             &.active {
