@@ -13,78 +13,16 @@
 <link rel="stylesheet" type="text/css" href="http://devadmin.hottracks.co.kr/styles/admin.css?202203151000" />
 <script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/jquery/jquery-1.4.2.min.js?202203151000"></script>
 <script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/jquery/jquery.timers-1.2.js?202203151000"></script>
+<!--
 <script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/common.js?202203151000"></script>
 <script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/json2.js?202203151000" charset="utf-8"></script>
-
+-->
 <!-- ht_ Hottracks Admin css -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
 <link rel="stylesheet" type="text/css" href="../css/ht_admin.css">
 <!-- //ht_ Hottracks Admin css -->
 
 <script type="text/javascript">
-jQuery(function($) {
-    Fn_CheckScreen();
-    $(window).resize(function(){
-        Fn_CheckScreen();
-    });
-    
-    $(document).ready(function(){
-        _history();
-    });
-});
-
-function Fn_CheckScreen(){
-    if($(window).width() < 768){
-        if(!$("body").hasClass("mini"))    $("body").addClass("mini");
-    }else{
-        if($("body").hasClass("mini"))     $("body").removeClass("mini");
-    }
-}
-</script>
-
-<script type="text/javascript">
-if (document.location.protocol == 'https:') {
-    document.location.href = document.location.href.replace('https:', 'http:');
-}
-
-function getCookie(cName) {
-    cName = cName + '=';
-    var cookieData = document.cookie;
-    var start = cookieData.indexOf(cName);
-    var cValue = '';
-    if(start != -1){
-        start += cName.length;
-        var end = cookieData.indexOf(';', start);
-        if(end == -1)end = cookieData.length;
-        cValue = cookieData.substring(start, end);
-    }
-    return unescape(cValue);
-}
-
-
-$(document).ready(function(){
-     /*
-     if (getCookie('_hotAdminNotiPopup') != 'NO') {
-     
-     }
-     
-     if (getCookie('_hotTaxNotiPopup') != 'NO') {
-     var nowDt = new Date();
-     if (nowDt.getDate() < 11) {
-    	 window.open('/pages/backoffice/mainTaxPopup.jsp', '', 'width=450px, height=350px, scrollbars=yes');
-     }
-     }
-     
-     if (getCookie('_mainMulMove') != 'NO') {
-         window.open('/pages/backoffice/mainMulMove.jsp', '', 'width=550px, height=470px, scrollbars=yes');
-     }
-     
-     if ([nowDt.getFullYear(), nowDt.getMonth()+1, nowDt.getDate()].join('') == '202246'){	// 22년 4월 6일
-    	 window.open('/pages/backoffice/mainLivePopup.jsp', '', 'width=425px, height=345px, scrollbars=yes');
-     }
-     */
-     
- });
 </script>
 
 </head>
