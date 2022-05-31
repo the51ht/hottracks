@@ -433,10 +433,10 @@
 .live_box {
     display:inline-block;position:relative;width:654px;
     .img_wel_live{
-        float:left;width:250px;position:relative;background:#000;border-radius:12px;overflow:hidden;height:375px;
-        .img{
-            img{
-                width: 100%; height: 100%; object-fit: cover;
+        float:left;position:relative;width:250px;height:375px;background:#000;border-radius:12px;overflow:hidden;
+        .img {
+            img {
+                width:250px;height:375px;object-fit:cover;
             }
         }
         .wel_live_time {
@@ -919,7 +919,7 @@
         display:flex;width:2448px !important;
     }
     .img {
-        width:272px;height:272px;box-sizing:border-box;flex-shrink:0;overflow:hidden;
+        width:272px;height:272px;background-color:#000;box-sizing:border-box;flex-shrink:0;overflow:hidden;
         &:nth-of-type(3n+1) {
             width:544px;height:544px;
             .info_bg_box {
@@ -946,10 +946,10 @@
             transform:translate(-300%,100%);
         }
         img {
-            width:100%;
+            width:100%;height:100%;object-fit:cover;
         }
         & > a {
-            display:block;position:relative;
+            display:block;position:relative;width:100%;height:100%;
             &:before {
                 position:absolute;left:0;top:0;width:100%;height:100%;border:1px solid #000;box-sizing:border-box;content:"";
             }
@@ -1293,7 +1293,7 @@
         .img {
             position:relative;height:0;padding-top:100%;background:#fff;overflow:hidden;border-radius:0;
             img {
-                position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);
+                position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;
             }
         }
     }
@@ -1372,9 +1372,6 @@
         float:left;width:273px !important;
         &:last-of-type {
             position:relative;
-            &:before {
-                position:absolute;left:50%;top:100px;width:35px;height:35px;background:url('#{$imgUrl}guide/ico_plus_big.svg') center/ 100% no-repeat;transform:translateX(-50%);content:"";z-index:1;
-            }
         }
         .product_pic {
             display:block;position:relative;
@@ -1386,7 +1383,7 @@
     .btn_box_more {
         position:relative;width:271px;height:0;padding-top:100%;background:#fff;border:1px dashed #D5D5D5;border-radius:12px;overflow:hidden;font-size:14px;font-weight:500;transition:background 0.4s;
         p {
-            display:flex;flex-direction:row;justify-content:center;align-items:center;position:absolute;left:0;top:0;width:100%;height:100%;margin-top:18px;
+            display:flex;flex-direction:row;justify-content:center;align-items:center;position:absolute;left:0;top:0;width:100%;height:100%;
             span{
                 display:inline-block;position:relative;padding-right:10px;line-height:20px;letter-spacing:-1px;
                 &:after {
@@ -1618,7 +1615,7 @@
     .img {
         position:absolute;left:40px;top:25px;width:150px;height:150px;border-radius:50%;background:#f7f7f7;overflow:hidden;
         img {
-            position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);
+            position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;
         }
         &:before {
             position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);content:"";z-index:2;
