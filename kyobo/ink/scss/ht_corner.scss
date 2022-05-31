@@ -234,7 +234,10 @@
 /** 관련 기획전 **/
 .brad_main_exhibition_cont {
     .img-wrap {
-        border-radius:12px;overflow:hidden;
+        height:338px;background-color:#f7f7f7;border-radius:12px;overflow:hidden;
+        img {
+            width:100%;height:100%;object-fit:cover;
+        }
     }
     .exhibition_info {
         margin-top:22px;color:#000;
@@ -760,7 +763,7 @@
     li {
         display:inline-block;position:relative;width:calc(33.3% - 22px);margin:0 9px;
         .img {
-            position:relative;height:0;padding-top:100%;border-radius:12px;overflow:hidden;
+            position:relative;height:0;padding-top:100%;background-color:#f7f7f7;border-radius:12px;overflow:hidden;
             img {
                 position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);object-fit:cover;
             }
@@ -1217,7 +1220,7 @@
 
     //liv_prod_img
     .liv_prod_img {
-        position:absolute;right:100px;top:50%;width:300px;height:450px;border-radius:12px;transform:translateY(-50%);overflow:hidden;
+        position:absolute;right:100px;top:50%;width:300px;height:450px;border-radius:12px;transform:translateY(-50%);overflow:hidden;background-color:#000;
         .prod_img {
             position:relative;
             img {
@@ -1934,18 +1937,21 @@
             p{
                 font-size:15px;line-height:22px;margin-top:11px;letter-spacing:-0.15px;
             }
-            .round_ty{
+            .round_ty {
                 padding:0 !important;margin-top:18px;
-                span{
+                span {
                     font-size:12px;color:#000;height:34px;line-height:32px;margin-left:6px;margin-top:6px;
-                    &:first-child{
+                    &:first-child {
                         margin-left:0;
                     }
                 }
             }
         }
-        .cur_prod_detail{
-            float:right;border-radius:12px;overflow:hidden;width:443px;height:289px;
+        .cur_prod_detail {
+            float:right;border-radius:12px;overflow:hidden;width:443px;height:289px;background-color:#f7f7f7;
+            img {
+                width:100%;height:100%;object-fit:cover;
+            }
         }
         &:after{
             clear:both;display:block;content:"";
@@ -1966,9 +1972,9 @@
         }
         position:relative;width:calc(20% - 16px);margin-left:20px;float:left;margin-top:20px;
         .cur_product_pic{
-            border-radius:12px;overflow:hidden;
-            img{
-                width:100%;
+            position:relative;height:0;padding-top:100%;border-radius:12px;background-color:#f7f7f7;overflow:hidden;
+            img {
+                position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;
             }
         }
         .cur_product_info{
@@ -2032,12 +2038,18 @@
             img{
                 width:100%;
             }
-            .cur_new_md{
-                background:#292929;padding:21px 31px;display:table;width:100%;box-sizing:border-box;display:table;
+            .cur_new_img-warp {
+                height:387px;background-color:#f7f7f7;
+                img {
+                    width:100%;height:100%;object-fit:cover;
+                }
+            }
+            .cur_new_md {
+                background:#292929;padding:21px 31px;display:table;width:100%;box-sizing:border-box;display:table;height:112px;overflow:hidden;
                 .md_thumb{
                     border-radius:50%;overflow:hidden;width:68px;height:68px;float:left;border:1px solid #000;
                     img{
-                        width:100%;
+                        width:100%;height:100%;object-fit:cover;
                     }
                 }
                 &:after {
@@ -2045,6 +2057,11 @@
                 }
                 .md_desc{
                     color:#fff;font-size:16px;font-weight:500;display:table-cell;vertical-align:middle;padding-left:21px;padding-top:2px;width:100%;
+                    .md_desc_table {
+                        p {
+                            width:535px;
+                        }
+                    }
                     .md_name{
                         font-weight:700;
                     }
@@ -2358,11 +2375,16 @@
         &:last-of-type {
             margin-right:0;
         }
+        &:hover {
+            img {
+                transform:scale(1.15);
+            }
+        }
     }
     .img {
-        width:273px;border-radius:12px;overflow:hidden;
+        width:273px;height:273px;background-color:#f7f7f7;border-radius:12px;overflow:hidden;
         img {
-            width:100%;
+            width:100%;height:100%;object-fit:cover;transition:transform 0.4s;
         }
     }
     .swiper_control {

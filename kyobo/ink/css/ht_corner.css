@@ -346,8 +346,17 @@ $fontUrl :"../font/";
 
 /** 관련 기획전 **/
 .brad_main_exhibition_cont .img-wrap {
+  height: 338px;
+  background-color: #f7f7f7;
   border-radius: 12px;
   overflow: hidden;
+}
+
+.brad_main_exhibition_cont .img-wrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .brad_main_exhibition_cont .exhibition_info {
@@ -1362,6 +1371,7 @@ $fontUrl :"../font/";
   position: relative;
   height: 0;
   padding-top: 100%;
+  background-color: #f7f7f7;
   border-radius: 12px;
   overflow: hidden;
 }
@@ -2236,6 +2246,7 @@ $fontUrl :"../font/";
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   overflow: hidden;
+  background-color: #000;
 }
 
 .cor_live_banner .liv_prod_img .prod_img {
@@ -3760,6 +3771,14 @@ $fontUrl :"../font/";
   overflow: hidden;
   width: 443px;
   height: 289px;
+  background-color: #f7f7f7;
+}
+
+.cur_prod .cur_prod_top .cur_prod_detail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cur_prod .cur_prod_top:after {
@@ -3788,12 +3807,22 @@ $fontUrl :"../font/";
 }
 
 .cur_prod_bottom .cur_prod_item .cur_product_pic {
+  position: relative;
+  height: 0;
+  padding-top: 100%;
   border-radius: 12px;
+  background-color: #f7f7f7;
   overflow: hidden;
 }
 
 .cur_prod_bottom .cur_prod_item .cur_product_pic img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cur_prod_bottom .cur_prod_item .cur_product_info {
@@ -3940,6 +3969,18 @@ $fontUrl :"../font/";
   width: 100%;
 }
 
+.cur_new .cur_new_top .cur_new_vis .cur_new_img-warp {
+  height: 387px;
+  background-color: #f7f7f7;
+}
+
+.cur_new .cur_new_top .cur_new_vis .cur_new_img-warp img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .cur_new .cur_new_top .cur_new_vis .cur_new_md {
   background: #292929;
   padding: 21px 31px;
@@ -3948,6 +3989,8 @@ $fontUrl :"../font/";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: table;
+  height: 112px;
+  overflow: hidden;
 }
 
 .cur_new .cur_new_top .cur_new_vis .cur_new_md .md_thumb {
@@ -3961,6 +4004,9 @@ $fontUrl :"../font/";
 
 .cur_new .cur_new_top .cur_new_vis .cur_new_md .md_thumb img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cur_new .cur_new_top .cur_new_vis .cur_new_md:after {
@@ -3978,6 +4024,10 @@ $fontUrl :"../font/";
   padding-left: 21px;
   padding-top: 2px;
   width: 100%;
+}
+
+.cur_new .cur_new_top .cur_new_vis .cur_new_md .md_desc .md_desc_table p {
+  width: 535px;
 }
 
 .cur_new .cur_new_top .cur_new_vis .cur_new_md .md_desc .md_name {
@@ -4553,14 +4603,28 @@ $fontUrl :"../font/";
   margin-right: 0;
 }
 
+.cur_prod_img .swiper-slide:hover img {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
 .cur_prod_img .img {
   width: 273px;
+  height: 273px;
+  background-color: #f7f7f7;
   border-radius: 12px;
   overflow: hidden;
 }
 
 .cur_prod_img .img img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .cur_prod_img .swiper_control {
