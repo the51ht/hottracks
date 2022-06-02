@@ -24,6 +24,8 @@
 <!-- // font css -->
 
 <!-- ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+
+
 <link rel="stylesheet" href="../../css/ht_css_mok.css">
 <link rel="stylesheet" href="../../css/ht_template_mok.css">
 <!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
@@ -384,5 +386,302 @@
     <!-- //docker_wrapper -->
 </div>
 <!-- //wrapper -->
+
+
+<script>
+    $(function(){
+        $('#popHistoryContents').dialog({
+            autoOpen: true
+        });
+    });
+    </script>
+
+<!-- LayerPopup area -->
+<!-- 팝업 - 최근 본 컨텐츠 -->
+<div id="popHistoryContents" class="dialog_wrap has_btn dialog_history" data-class="dialog_full">
+	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+	<!-- dialog_header -->
+	<div class="dialog_header">
+		<h1 class="dialog_title">최근 본</h1><!-- 수정 220516 SEO H태그 적용 -->
+	</div>
+	<!-- //dialog_header -->
+	<!-- dialog_contents -->
+	<div class="dialog_contents">
+		<div class="tag_wrap size_md" data-tag-toggle>
+			<!-- DESC : 선택 시, tag active class toggle -->
+			<button type="button" class="tag active"><span class="text">전체</span></button>
+			<button type="button" class="tag"><span class="text">상품</span></button>
+			<button type="button" class="tag"><span class="text">기획전</span></button>
+			<button type="button" class="tag"><span class="text">이벤트</span></button>
+			<button type="button" class="tag"><span class="text">브랜드</span></button>
+		</div>
+		<div class="history_list_wrap">
+			<ul class="history_list">
+				<!-- 수정 220107 전시템플릿 가이드 작업으로 상품영역 현행화 -->
+				<!-- CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box type_cover size_sm">
+							<a href="#" class="prod_link">
+								<span class="img_box" style="background-image: url(https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_event_mok.png);">
+									<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product1_mok.png" alt="상품 임시 이미지" />
+								</span>
+							</a>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+							</a>
+							
+							<span class="prod_author">강민우(돈깡)</span>
+							
+							<span class="prod_price">
+								<span class="percent">20%</span>
+								<span class="price">
+									<span class="val">268,800</span>
+									<span class="unit">원</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+						<button type="button" class="btn_wish_icon size_sm"><span class="ico_wish type_gray"></span><span class="hidden">찜하기</span></button>
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- // CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+				<!-- CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box type_cover size_sm">
+							<a href="#" class="prod_link">
+								<span class="img_box" style="background-image: url(https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product2_mok.png);">
+									<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product2_mok.png" alt="상품 임시 이미지" />
+								</span>
+							</a>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+							</a>
+							<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+						<button type="button" class="btn_wish_icon size_sm active"><span class="ico_wish type_gray"></span><span class="hidden">찜하기</span></button>
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- // CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+				<!-- CASE 03. 이벤트 -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box type_cover size_sm">
+							<a href="#" class="prod_link">
+								<span class="img_box" style="background-image: url(https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product2_mok.png);">
+									<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product2_mok.png" alt="상품 임시 이미지" />
+								</span>
+							</a>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+							</a>
+							<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+							<span class="prod_price">
+								<span class="percent">20%</span>
+								<span class="price">
+									<span class="val">268,800</span>
+									<span class="unit">원</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- // CASE 03. 이벤트 -->
+				<!-- CASE 04. 핫트랙스 상품 -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box type_cover size_sm">
+							<span class="img_box" style="background-image: url(https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product1_mok.png);">
+								<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product1_mok.png" alt="상품 임시 이미지" />
+							</span>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+							</a>
+							<span class="prod_price">
+								<span class="percent">20%</span>
+								<span class="price">
+									<span class="val">268,800</span>
+									<span class="unit">원</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+						<button type="button" class="btn_wish_icon size_sm"><span class="ico_wish type_gray"></span><span class="hidden">찜하기</span></button>
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- // CASE 04. 핫트랙스 상품 -->
+				<!-- CASE 05. 브랜드 -->
+				<!-- 수정 220422 최근 본 컨텐츠 브랜드 타입 추가 -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box size_sm type_brand">
+							<a href="#" class="prod_link">
+								<span class="img_box">
+									<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_brand_mok.png" alt="상품 임시이미지" />
+								</span>
+							</a>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name">브랜드이름이름이름</span>
+							</a>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+						<button type="button" class="btn_wish_icon size_sm"><span class="ico_wish type_gray"></span><span class="hidden">찜하기</span></button>
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- //수정 220422 최근 본 컨텐츠 브랜드 타입 추가 -->
+				<!-- // CASE 05. 브랜드 -->
+				<!-- CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box type_cover size_sm">
+							<a href="#" class="prod_link">
+								<span class="img_box" style="background-image: url(https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product1_mok.png);">
+									<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product1_mok.png" alt="상품 임시 이미지" />
+								</span>
+							</a>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+							</a>
+							<span class="prod_author">강민우(돈깡)</span>
+							
+							<span class="prod_price">
+								<span class="percent">20%</span>
+								<span class="price">
+									<span class="val">268,800</span>
+									<span class="unit">원</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+						<button type="button" class="btn_history_wish"><span class="ico_history_wish"></span><span class="hidden">찜하기</span></button>
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- // CASE 01. 도서, 비도서, 동영상, 결합상품, 컬쳐 콘텐츠, eBook 도서  -->
+				<!-- CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box type_cover size_sm">
+							<a href="#" class="prod_link">
+								<span class="img_box" style="background-image: url(https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product2_mok.png);">
+									<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product2_mok.png" alt="상품 임시 이미지" />
+								</span>
+							</a>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+							</a>
+							<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+						<button type="button" class="btn_wish_icon size_sm"><span class="ico_wish type_gray"></span><span class="hidden">찜하기</span></button>
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- // CASE 02. 컬쳐 상품, 북캐스트 콘텐츠 -->
+				<!-- CASE 03. 이벤트 -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box type_cover size_sm">
+							<a href="#" class="prod_link">
+								<span class="img_box" style="background-image: url(https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product2_mok.png);">
+									<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product2_mok.png" alt="상품 임시 이미지" />
+								</span>
+							</a>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+							</a>
+							<span class="prod_period">2021.11.01 ~ 2021.11.30 </span>
+							<span class="prod_price">
+								<span class="percent">20%</span>
+								<span class="price">
+									<span class="val">268,800</span>
+									<span class="unit">원</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- // CASE 03. 이벤트 -->
+				<!-- CASE 04. 핫트랙스 상품 -->
+				<li class="history_item">
+					<div class="prod_area horizontal">
+						<div class="prod_thumb_box type_cover size_sm">
+							<span class="img_box" style="background-image: url(https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product1_mok.png);">
+								<img src="https://pub-onk.ndev.kyobobook.co.kr/assets/common/temporary/temp_thumbnail_product1_mok.png" alt="상품 임시 이미지" />
+							</span>
+						</div>
+						<div class="prod_info_box">
+							<a href="#" class="prod_info">
+								<span class="prod_name ellipsis_single">개장 전, 아직 켜지지 않은 모니터 앞 개장 전, 아직 켜지지 않은 모니터 앞</span>
+							</a>
+							<span class="prod_price">
+								<span class="percent">20%</span>
+								<span class="price">
+									<span class="val">268,800</span>
+									<span class="unit">원</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="history_control_box">
+						<!-- DESC : 찜하기 버튼 활성화 시 button.btn_wish 영역 [active] class 추가 -->
+						<button type="button" class="btn_wish_icon size_sm"><span class="ico_wish type_gray"></span><span class="hidden">찜하기</span></button>
+						<button type="button" class="btn_history_delete"><span class="ico_history_del"></span><span class="hidden">삭제</span></button>
+					</div>
+				</li>
+				<!-- // CASE 04. 핫트랙스 상품 -->
+				<!-- // 수정 220107 전시템플릿 가이드 작업으로 상품영역 현행화 -->
+			</ul>
+		</div>
+	</div>
+	<!-- //dialog_contents -->
+	<!-- dialog_footer -->
+	<div class="dialog_footer">
+		<button type="button" class="btn_lg btn_line_gray fw_regular"><span class="ico_trash"></span><span class="text">전체 삭제</span></button>
+	</div>
+	<!-- //dialog_footer -->
+</div>
+<!-- //팝업 - 최근 본 컨텐츠 -->
+<!-- // LayerPopup area -->
 </body>
 </html>
