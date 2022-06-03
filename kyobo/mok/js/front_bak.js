@@ -82,7 +82,6 @@ KyoboHottracks.mok = KyoboHottracks.mok || (function () {
 			}
 
 
-
 			saveScrollTop = currentScrollTop;
 
 		}

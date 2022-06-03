@@ -438,7 +438,7 @@ $imgUrl : "../images/";*/
 
 .alm_lst_wrap .form_toggle input[type=checkbox]:checked + label:before {
   border: 1px solid #000;
-  left: 42px;
+  left: 36px;
 }
 
 .alm_lst_wrap .alm_list_area_mn {
@@ -480,6 +480,7 @@ $imgUrl : "../images/";*/
   -o-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+  z-index: 1;
 }
 
 .alm_lst_wrap .form_chk input {
@@ -591,7 +592,7 @@ $imgUrl : "../images/";*/
   top: 54%;
   height: 114%;
   border-left: 1px dashed #ccc;
-  z-index: -1;
+  z-index: 0;
 }
 
 .alm_lst_wrap .form_chk input + label, .alm_lst_wrap .form_rdo input + label {
@@ -643,6 +644,12 @@ $imgUrl : "../images/";*/
 
 .alm_lst_wrap .alm_list_area.active .alm_list > li:after {
   display: none;
+}
+
+.alm_lst_wrap .btn_delete {
+  border: 0;
+  width: inherit;
+  height: inherit;
 }
 
 .alm_lst_wrap .btn_delete.active .ico_delete {
@@ -742,6 +749,10 @@ $imgUrl : "../images/";*/
 
 .wel_setting_wrapper .divide_hr + .mc_cont .setting_list {
   margin-top: 0;
+}
+
+.wel_setting_wrapper .setting_list_tit {
+  margin-top: 14px;
 }
 
 .wel_setting_wrapper .setting_list_tit .txt {
@@ -2429,4 +2440,42 @@ $imgUrl : "../images/";*/
 
 .form_toggle_box .toggle_text + .form_toggle {
   margin-left: 6px;
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap {
+  border-radius: 4px;
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
+  border-radius: 4px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap {
+  border-radius: 0;
+}
+
+.dialog_wrapper .ui-dialog.dialog_full {
+  width: 100% !important;
+  max-width: 750px;
+  min-width: inherit;
+  margin: 0;
+}
+
+.dialog_wrapper .ui-dialog.dialog_bottom {
+  width: 100% !important;
+  max-width: 750px;
+  min-width: inherit;
+  margin: 0;
+}
+
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap {
+  border-radius: 0;
+}
+
+.byte_check_wrap .form_textarea {
+  padding: 0;
+}
+
+.byte_check_wrap .byte_chack_footer {
+  padding-right: 0;
 }

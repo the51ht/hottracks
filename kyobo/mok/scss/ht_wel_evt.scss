@@ -320,7 +320,7 @@
         &:checked+label{
             background:#000;
             &:before {
-                border:1px solid #000;left:42px;
+                border:1px solid #000;left:36px;
             }
         }
     }
@@ -346,7 +346,7 @@
         display:block;clear:both;content:"";
     }
     .form_chk{
-        position:absolute;top:50%;transform:translateY(-50%);-o-transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);
+        position:absolute;top:50%;transform:translateY(-50%);-o-transform:translateY(-50%);-ms-transform:translateY(-50%);-webkit-transform:translateY(-50%);z-index:1;
         input{
             display:none;
         }
@@ -409,7 +409,7 @@
                 display:inline-block;width:87%;margin-left:45px;
             }
             &:after{
-                content:"";position:absolute;left:16px;top:54%;height:114%;border-left:1px dashed #ccc;z-index:-1;
+                content:"";position:absolute;left:16px;top:54%;height:114%;border-left:1px dashed #ccc;z-index:0;
             }
         }
     }
@@ -449,6 +449,7 @@
         }
     }
     .btn_delete {
+        border:0;width:inherit;height:inherit;
         // 삭제 버튼 클릭 시 삭제버튼 활성화 css
         &.active{
             .ico_delete{
@@ -533,6 +534,7 @@
         }
     }
     .setting_list_tit{
+        margin-top:14px;
         .txt{
             float:left;margin-top:6px;
         }
@@ -1186,3 +1188,73 @@
 .form_toggle_box .toggle_text {display:inline-block;margin-top:3px;font-size:13px;line-height:19px;letter-spacing:-.01em;color:#767676;vertical-align:top;}
 .form_toggle_box .toggle_text .val {font-weight:700;}
 .form_toggle_box .toggle_text+.form_toggle {margin-left:6px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dialog_wrapper {
+    .ui-dialog {
+        .dialog_wrap {
+            border-radius:4px;
+            &.ui-dialog-content {
+                border-radius:4px;
+            }
+        }
+        &.dialog_full {
+            .dialog_wrap {
+                border-radius:0;
+            }
+        }
+    }
+    .ui-dialog.dialog_full {
+        width:100% !important;max-width:750px;min-width:inherit;margin:0;
+    }
+    .ui-dialog.dialog_bottom {
+        width:100% !important;max-width:750px;min-width:inherit;margin:0;
+        .dialog_wrap {
+            border-radius:0;;
+        }
+    }
+}
+
+
+
+.byte_check_wrap {
+    .form_textarea {
+        padding:0;
+    }
+    .byte_chack_footer {
+        padding-right:0;
+    }
+}
+

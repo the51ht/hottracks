@@ -2106,7 +2106,7 @@ body:not(.dialog_open) .wrapper .header_wrapper.type_white ~ .container_wrapper 
   background-size: 13px 18px;
   /*@media (-webkit-min-device-pixel-ratio: 2) {
 		& {*/
-  background-image: url("../images/kyobo/arw_go_top_mok@2x.png");
+  /*background-image: url("../images/kyobo/arw_go_top_mok@2x.png");*/
   /*}
 	}
 	@media (-webkit-min-device-pixel-ratio: 3) {
@@ -5673,7 +5673,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   right: 0;
   top: 0;
   font-size: 0;
-  z-index: 100;
+  z-index: 200;
 }
 
 .skip_nav_wrap a {
@@ -7283,7 +7283,7 @@ button.btn_text_link:focus .text {
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .info_text_box + .form_wrap.type_md {
-  margin-top: 24px;
+  margin-top: 8px;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap .dialog_contents .tbl_col_wrap + .title_wrap,
@@ -8323,17 +8323,6 @@ body.dialog_open {
   letter-spacing: -0.01em;
   font-weight: 500;
   text-align: center;
-}
-
-.dialog_wrapper .ui-dialog.dialog_full {
-  width: 100% !important;
-  max-width: 750px;
-  min-width: inherit;
-  margin: 0;
-}
-
-.dialog_wrapper .ui-dialog .dialog_wrap {
-  border-radius: 4px;
 }
 
 .evt_pop_content {
@@ -9953,7 +9942,6 @@ input[type=number] {
 
 /* form - title(label) */
 .form_wrap .form_box .form_cont {
-  margin-top: 5px;
   color: #595959;
 }
 
@@ -10237,6 +10225,7 @@ input[type=number] {
 
 .form_title {
   position: relative;
+  display: block !important;
 }
 
 .form_cont {
@@ -10324,6 +10313,7 @@ input[type=number] {
 
 .title_wrap.title_size_sm {
   margin-bottom: 10px;
+  padding-bottom: 0;
 }
 
 .title_wrap.title_size_sm .title_heading {
@@ -11371,52 +11361,8 @@ input[type=number] {
 }
 
 /** 최근본 상품 **/
-.history_item .history_control_box {
-  -ms-flex-preferred-size: 18px !important;
-      flex-basis: 18px !important;
-}
-
-.history_item .prod_area .prod_info_box .prod_name.ellipsis_single {
-  display: inline-block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  max-height: none;
-  -webkit-box-orient: inherit;
-  -webkit-line-clamp: inherit;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
 .history_item .prod_area .prod_info_box .prod_price .percent {
   color: #da2128;
-}
-
-.history_item .prod_area .prod_thumb_box.type_cover {
-  padding-top: 0 !important;
-}
-
-.history_item .img_box {
-  display: block;
-  height: 84px;
-  background: center /cover;
-}
-
-.history_item .type_brand .img_box {
-  border: 1px solid #eaeaea;
-  border-radius: 50%;
-}
-
-.history_item .btn_wish_icon .ico_wish {
-  display: block;
-  width: 18px;
-  height: 18px;
-  background: url("../images/layout/ico_heart_h18_gray_mok@2x.png") center/100% no-repeat;
-}
-
-.history_item .btn_wish_icon.active .ico_wish {
-  background-image: url("../images/layout/ico_heart_h18_active_mok@2x.png");
 }
 
 .tag_wrap.size_md {
@@ -11625,7 +11571,7 @@ body:before {
 }
 
 .wrapper.ht_ .header_wrapper .header_center {
-  padding: 4px 10px 0;
+  padding: 4px 10px 4px 0;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -12109,6 +12055,48 @@ body:before {
 }
 
 /* Header */
+/*
+.wrapper.ht_.scroll_chk header {
+    transform:translateY(-100%);
+}
+
+.evt_quick_menu_slide,
+.ctg_topMenu,
+.ctg_floating_line,
+.sticky_selec,
+.tab_wrap .tab_list_wrap {
+    transition:top 0.23s;
+}
+.wrapper.ht_.scroll_chk {
+    header + .cont_wrap .ctg_topMenu,
+    header + .cont_wrap .ctg_floating_line,
+    header + .wel_main_wrap .ctg_topMenu,
+    header + .container_wrapper .ctg_topMenu,
+    header + .container_wrapper .ctg_floating_line {
+        top:-1px;
+    }
+
+    header + .evt_list_header + .evt_quick_menu_slide  {
+        top:-1px;padding-top:15px;
+    }
+    header + .cont_wrap .sticky_selec,
+    header + .content_wrap .sticky_selec,
+    header + .container_wrapper .sticky_selec,
+    header + .container_wrapper .tab_wrap .tab_list_wrap {
+        top:-1px;
+    }
+}
+
+.wrapper .docker_wrapper.scroll_down {
+	transform: translateY(0%);
+}
+
+.wrapper.scroll_chk {
+    .docker_wrapper {
+        transform: translateY(100%);
+    }
+}
+*/
 .wrapper.ht_ header.scroll_down {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);

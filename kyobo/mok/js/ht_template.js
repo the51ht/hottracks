@@ -1690,3 +1690,20 @@ $(function(){
 	}
 });
 
+
+/*
+$(function(){
+    var lastScroll = 0;
+    $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > lastScroll){
+           $('.wrapper').addClass('scroll_chk');
+        }
+        else {
+           $('.wrapper').removeClass('scroll_chk');
+        }
+        lastScroll = st;
+    });
+});
+*/
+

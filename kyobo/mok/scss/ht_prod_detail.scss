@@ -1752,7 +1752,7 @@ button.btn_md_second {
                 position:absolute;left:0;top:1px;width:100%;height:100%;text-align:center;z-index:1;overflow:hidden;
             }
             .app_view_btn {   
-                display:inline-flex;opacity:1;line-height:19px;letter-spacing:-0.01em;color:#DA2128;border:1px solid #DA2128;padding:8px 19px 8px;border-radius:20px;margin:0 auto;transition:opacity 0.5s;
+                display:inline-flex;opacity:1;line-height:19px;color:#DA2128;font-size:14px;border:1px solid #DA2128;padding:8px 19px 8px;border-radius:20px;margin:0 auto;transition:opacity 0.5s;
             }
         }
         &.active_product {
@@ -2344,7 +2344,7 @@ button.btn_md_second {
         display:inline-block;font-size:0;width:1px;height:9px;background-color:#d5d5d5;margin:0 6px;
     }
     .badge_line_gray {
-        margin:0 6px 0 4px;border-radius:10px;
+        margin:0 8px 0 0;border-radius:10px;background-color:#fff;
         .text{
             transform:translateY(1px);
         }
@@ -2643,7 +2643,7 @@ button.btn_md_second {
 
 /* 텍스트 gray 박스 */
 .info_text_box {
-    display:block;padding:18px;border-radius:4px;background-color:#f7f7f7;box-sizing:border-box;
+    display:block;margin:0;padding:18px;border-radius:4px;background-color:#f7f7f7;box-sizing:border-box;
     .info_text_inner + .info_text_inner {
         margin-top:18px;padding-top:18px;border-top:1px solid #eaeaea;
     }
@@ -2672,7 +2672,7 @@ button.btn_md_second {
             margin-top:0;
         }
         .title_selec{
-            overflow:hidden;border:1px solid #D5D5D5;border-radius:6px;margin-bottom:16px;color:#767676;
+            overflow:hidden;border:1px solid #D5D5D5;border-radius:6px;margin-bottom:8px;color:#767676;
             &.active{
                 border:1px solid #000;color:#000;
             }
@@ -2704,6 +2704,9 @@ button.btn_md_second {
             + .selec_lb{
                 margin-top:20px;
             }
+        }
+        .title_selec + .buy_info {
+            margin-top:16px;;
         }
         .cmt_box {
             .notice_txt { display:none;}
@@ -2795,7 +2798,7 @@ button.btn_md_second {
             position:fixed;left:0;top:0;width:100%;max-width:750px;z-index:101;
         }
         .live_pop_wrap + .header_wrapper {
-            margin-top:64px;;top:64px;
+            top:64px;
         }
         .live_pop_wrap + .header_wrapper + .container_wrapper .tab_wrap .tab_list_wrap {
             top:124px;
@@ -2813,4 +2816,63 @@ button.btn_md_second {
             }
         }
     }
+}
+
+
+
+.pop_head_box {
+    position:relative;margin-bottom:40px;padding:73px 0 40px;border-bottom:1px solid #eaeaea;text-align:center;
+    &:before {
+        position:absolute;left:50%;top:0;width:60px;height:60px;margin-left:-30px;background:url('../images/guide/ico_pop_head_box.svg') center/100% no-repeat;content:"";
+    }
+    .s1 {
+        margin-bottom:7px;color:#000;font-size:15px;font-weight:700;line-height:23px;
+    }
+    .s2 {
+        margin-bottom:13px;color:#000;font-size:13px;font-weight:400;line-height:19px;
+    }
+    .s3 {
+        color:#767676;font-size:12px;font-weight:400;line-height:18px;
+    }
+    .point_line:before {
+        top:5px;background-color:#fff688;
+    }
+}
+
+
+
+
+.wrapper.ht_ .tab_wrap .tab_list_wrap {
+    padding:0;
+}
+.sps.sps_scroll_fixed {
+    position:relative;max-width:750px;;width:100%;box-sizing:border-box; background:none;
+    /*&:after {
+        position: absolute;left:0;bottom:0;width:100%;height:1px;background-color:#d5d5d5;content:"";
+    }*/
+    &.sps-blw {
+        padding:0px;top:-1px;
+    }
+}
+@media only screen and (min-width:750px) {
+    .sps.sps_scroll_fixed.sps-blw {
+        left:50% !important;margin-left:-375px;
+    }
+}
+.wrapper.ht_ .tab_wrap.justify > .tab_list_wrap .tabs {
+    padding:0 20px;
+   
+}
+
+.wrapper.ht_ .tab_wrap.justify > .tab_list_wrap .tabs .tab_item {
+    margin:0 22px 0 0;padding:0;text-align:left;
+    &:last-child {
+        margin-right:0;
+    }
+}
+
+
+.wrapper .header_wrapper.scroll_up ~ .container_wrapper .sps.sps-blw:not(.sps_add),
+.wrapper .header_wrapper.scroll_down ~ .container_wrapper .sps.sps-blw:not(.sps_add) {
+    top:inherit;transition:none;
 }
