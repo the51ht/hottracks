@@ -368,7 +368,7 @@
                     <span class="hidden">마이룸</span>
                 </a>
             </li>
-            <li class="docker_item"><a href="#" class="btn_docker_history"><span class="hidden">최근본상품</span></a></li>
+            <li class="docker_item"><a href="#popHistoryContents" onclick="popHistory();return false;" onkeypress="this.onclick;" class="btn_docker_history"><span class="hidden">최근본상품</span></a></li>
             <li class="docker_item"><a href="../guide/HTR-M-COM-CAT-001.html" class="btn_docker_menu"><span class="hidden">전체메뉴</span></a></li>
         </ul>
         <!-- //docker_list -->
@@ -379,12 +379,13 @@
 
 
 <script>
-    $(function(){
-        $('#popHistoryContents').dialog({
-            autoOpen: true
-        });
-    });
-    </script>
+function popHistory(){
+	$('#popHistoryContents').dialog('open');
+}
+$(function(){
+	popHistory();
+});
+</script>
 
 <!-- LayerPopup area -->
 <!-- 팝업 - 최근 본 컨텐츠 -->
