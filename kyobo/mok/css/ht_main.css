@@ -3285,20 +3285,12 @@ $imgUrl : "../images/";*/
 }
 
 .wel_category_rank .li {
+  position: relative;
   width: 140px;
   margin-right: 15px;
 }
 
-.wel_category_rank .li:last-child {
-  margin-right: 20px;
-}
-
-.wel_category_rank .li a {
-  display: block;
-  position: relative;
-}
-
-.wel_category_rank .li a:after {
+.wel_category_rank .li:after {
   position: absolute;
   left: 6px;
   top: 6px;
@@ -3315,10 +3307,19 @@ $imgUrl : "../images/";*/
   counter-increment: item;
 }
 
+.wel_category_rank .li:last-child {
+  margin-right: 20px;
+}
+
+.wel_category_rank .li a {
+  display: block;
+  position: relative;
+}
+
 .wel_category_rank .li .img {
   position: relative;
   width: 140px;
-  height: 0;
+  height: 140px;
   margin-bottom: 15px;
   padding-top: 100%;
   background: #f7f7f7;
@@ -3326,16 +3327,24 @@ $imgUrl : "../images/";*/
   overflow: hidden;
 }
 
-.wel_category_rank .li .img img {
+.wel_category_rank .li .img a {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+}
+
+.wel_category_rank .li .img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wel_category_rank .li .txt .s1 {
@@ -3408,6 +3417,7 @@ $imgUrl : "../images/";*/
 }
 
 .wel_category_rank .li .replace_prod_btn {
+  position: relative;
   height: 24px;
   margin: 11px auto 0 auto;
   padding: 0 6px;
@@ -3417,6 +3427,7 @@ $imgUrl : "../images/";*/
   font-size: 12px;
   line-height: 24px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .wel_category_rank .btn_box_more {

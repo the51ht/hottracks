@@ -12758,7 +12758,7 @@ body:before {
 }
 
 .wrapper.ht_ .footer_wrapper .notice_type_detail .notice_content.notice.on, .wrapper.ht_ .footer_wrapper .notice_type_detail .notice_content.winner.on {
-  display: inline-block;
+  display: block;
 }
 
 .wrapper.ht_ .footer_wrapper .notice_type_detail .ico_new {
@@ -13367,10 +13367,11 @@ body:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 20px 8px 20px;
+  padding: 16px 20px 24px 20px;
 }
 
 .category_menu .main_list a {
@@ -13379,7 +13380,6 @@ body:before {
 }
 
 .category_menu .main_list img {
-  border-radius: 4px;
   width: 50px;
 }
 
@@ -13392,23 +13392,34 @@ body:before {
   word-break: break-all;
 }
 
-.category_menu .main_list + .solo_banner {
-  padding: 0 20px;
-}
-
 .category_menu .menu_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 24px 20px 4px 20px;
+  position: relative;
+  margin-bottom: -1px;
+  padding: 0;
+  border-top: 1px solid #f2f2f2;
 }
 
 .category_menu .menu_list ul {
   width: 50%;
+  border-left: 1px solid #f2f2f2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.category_menu .menu_list ul:first-child {
+  border-left: 0;
 }
 
 .category_menu .menu_list ul li {
-  margin-bottom: 10px;
+  padding: 8px 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.category_menu .menu_list ul li:first-child {
+  border-top: 0;
 }
 
 .category_menu .menu_list ul li a {
@@ -13426,7 +13437,7 @@ body:before {
 }
 
 .category_menu .menu_list ul li p {
-  margin-left: 6px;
+  margin-left: 4px;
   color: #595959;
   font-size: 12px;
   line-height: 18px;
@@ -13434,7 +13445,9 @@ body:before {
 }
 
 .category_menu .cagetory_list {
-  padding: 12px 18px 0 18px;
+  position: relative;
+  margin-top: -24px;
+  padding: 24px 20px;
 }
 
 .category_menu .cagetory_list ul {
@@ -13469,9 +13482,8 @@ body:before {
 
 .category_menu .cagetory_list ul li p {
   margin-top: 4px;
-  font-size: 12px;
   color: #595959;
-  letter-spacing: -0.012em;
+  font-size: 12px;
   line-height: 18px;
   text-align: center;
 }
@@ -13644,10 +13656,11 @@ body:before {
 
 .category_menu .devider {
   display: block;
+  position: relative;
   height: 8px;
   margin: 0;
   background-color: #f7f7f7;
-  border: 0 solid #000;
+  border: 0;
 }
 
 @media only screen and (min-width: 750px) {
@@ -13672,7 +13685,7 @@ body:before {
           align-items: center;
   position: relative;
   min-height: 64px;
-  margin: 20px 20px 0 20px;
+  margin: 32px 20px 0 20px;
   padding: 8px 65px;
   background: linear-gradient(-45deg, #936dfc, #FA9BF5 40%, #FA9BF5 50%, #936dfc);
   border-radius: 8px;
