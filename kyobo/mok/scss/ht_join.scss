@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*
+    Join
+*/
+@import "_mixins.scss";
+
+
+/***** 비회원 주문조회 *****/
+body, 
+.wrapper{
+    min-width: initial;
+}
+.wrapper.ht_ .cont_wrap {
+    padding-bottom: 51px;
+}
+.cont_wrap {
+    text-align: center;margin-top:0;
+    .ht_join_wrap{
+        max-width: 380px;margin: 0 auto;padding: 20px 20px 0;box-sizing: border-box;
+        .ht_join_logo{
+            img{
+                width: 78px;
+            }
+        }
+        .join_text{
+            margin-top: 43px;
+            strong{
+                font-size: 20px;
+            }
+            p{
+                font-size: 13px;font-weight: 400;line-height: 19px;margin-top: 8px;color: #595959;
+            }
+        }
+        .ht_join_form{
+            margin-top: 33px;
+            span:first-child{
+                margin-top: 0;
+            }
+            >span{
+                font-size: 14px;font-weight: 500;display: block;margin-top: 22px;text-align: left;
+            }
+            .form_sel{
+                width: 100%;margin-top: 7px;
+                .form_ip{
+                    height: 50px;
+                }
+            }
+        }
+        .btn_area{
+            margin-top: 16px;padding:0;
+            button{
+                width: 100%;font-weight: 700;
+            }
+        }
+        .ht_join_info{
+            font-size: 13px;color: #595959;background: #F7F7F7;padding: 22px 0 19px 0;margin-top: 119px;border-radius: 4px;
+            p{
+                margin-top: 9px;
+            }
+        }
+    }
+    .copyright{
+        position: absolute;bottom: 18px;left: 50%;transform: translateX(-50%);font-size: 11px;
+    }
+}

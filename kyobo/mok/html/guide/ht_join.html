@@ -1,55 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<meta name="msapplication-TileColor" content="#da2128">
+<meta name="msapplication-TileColor" content="#da212">
 <meta property="og:title" content="핫트랙스">
 <meta property="og:description" content="">
 <meta property="og:type" content="website">
-<meta property="og:image" content="../../images/layout/sns.jpg">
-<link rel="shortcut icon" href="../../images/layout/favicon.ico" type="image/x-icon">
-<link rel="apple-touch-icon" href="../../images/layout/apple-touch-icon.png">
+<meta property="og:image" content="../../images/guide/sns.jpg">
+<link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
 <title>핫트랙스</title>
 
+<!-- Plug-In css -->
+<link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/swiper-7.2.0/css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="../../vendors/lib/star-rating/css/star-rating.min.css" />
+<!-- // Plug-In css -->
 
-<!-- ht_ Hottracks css : 공통작업 -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../../css/style_ink.css">
+<!-- font css -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
+<!-- // font css -->
 
-<link rel="stylesheet" href="../../css/ht_css_ink.css">
-<link rel="stylesheet" href="../../css/ht_template_ink.css">
-<!-- //ht_ Hottracks css : 공통작업 -->
+<!-- ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
+<link rel="stylesheet" href="../../css/ht_css_mok.css">
+<link rel="stylesheet" href="../../css/ht_template_mok.css">
 
-
-
-<!-- ht_ Hottracks css : 비회원 주문조회 -->
 <link rel="stylesheet" href="../../css/ht_join.css">
-<!-- //ht_ Hottracks css : 비회원 주문조회 -->
+<!--// ht_ Hottracks css : 공통작업 --><!-- 22.02 -->
 
-
-
-<!-- ht_ Hottracks UI JavaScript : 공통작업 -->
-<script src="../../js/ui_ink.js"></script>
-<script src="../../js/ht_lib.js"></script>
-<script src="../../js/ht_template.js"></script>
-<!-- //ht_ Hottracks UI JavaScript : 공통작업 -->
 </head>
 
 <body>
-
 <!-- wrapper -->
-<div class="wrapper">
-	<!-- Contents -->
-	<main id="containerWrapper" class="container_wrapper">
-		<!-- ht_contents_wrap -->
-		<section class="ht_contents_wrap">
+<div class="ht_ wrapper">
+        <!-- header -->
+        <header id="headerWrapper" class="ht_ header_wrapper">
+            <div class="header_left">
+                <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
+            </div>
+        </header>
+        <!-- //header -->
 
+		<!-- cont_wrap -->
+		<section class="cont_wrap">
             <!-- ht_join_wrap -->
             <div class="ht_join_wrap">
                 <div class="ht_join_logo">
-                    <img src="../../images/layout/logo.svg" alt="">
+                    <img src="../../images/main/logo.svg" alt="">
                 </div>
                 <div class="ht_join_contents">
                     <div class="join_text">
@@ -67,11 +66,11 @@
 
                         <span>비밀번호</span>
                         <div class="form_sel">
-                            <input type="password" class="form_ip" placeholder="비밀번호룰 입력해주세요">
+                            <input type="password" class="form_ip" placeholder="비밀번호를 입력해주세요">
                         </div>
 
                         <div class="btn_area">
-                            <button class="btn_lg btn_primary">비회원 주문 배송 조회</button>
+                            <button class="btn_md btn_primary">비회원 주문 배송 조회</button>
                         </div>
                     </div>
                     <div class="ht_join_info">
@@ -89,9 +88,7 @@
             <div class="copyright">© KYOBO BOOK CENTRE</div>
             
 		</section>
-		<!-- /ht_contents_wrap -->
-	</main>
-	<!-- //Contents -->
+		<!-- /cont_wrap -->
 </div>
 <!-- //wrapper -->
 </body>
