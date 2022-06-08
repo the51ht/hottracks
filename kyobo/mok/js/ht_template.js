@@ -364,7 +364,7 @@ function welCategory(){
             loop: false,
             loopsSlide: 1,
             spaceBetween: 20,
-            autoHeight: true,
+            autoHeight:false,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
