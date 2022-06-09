@@ -1,0 +1,2230 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+
+<title>Hottracks 관리자 시스템</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10">
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
+
+
+
+
+
+<meta property="og:image" content="../images/layout/sns.jpg">
+<link rel="shortcut icon" href="../images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../images/layout/apple-touch-icon.png">
+
+<link rel="stylesheet" type="text/css" href="../dev/base.css" />
+<link rel="stylesheet" type="text/css" href="../dev/admin.css" />
+<script type="text/javascript" src="../dev/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="../dev/jquery.timers-1.2.js"></script>
+<script type="text/javascript" src="../dev/common.js"></script>
+<script type="text/javascript" src="../dev/json2.js?202203151000" charset="utf-8"></script>
+
+<!-- ht_ Hottracks Admin css -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" type="text/css" href="../css/ht_admin.css">
+<!-- //ht_ Hottracks Admin css -->
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<div id="wrap">
+    <div id="skip-navigation">
+        <a href="#contents">본문바로가기</a>
+    </div><!-- end skip-navigation -->
+    <hr />
+    <div id="head">
+        <div class="global-menu">
+            <strong class="txt_user">관리자님, 안녕하세요.</strong>
+            <span><a href="http://admin.hottracks.co.kr/admin/main">HOME</a></span>
+            <span><a href="http://admin.hottracks.co.kr/admin/editMypageAdmin">사용자정보</a></span>
+            <span><a href="http://admin.hottracks.co.kr/admin/login/logout">로그아웃</a></span>
+            
+                <span><a href="/admin/calculate/userHelper" onclick="window.open(this.href, '', 'width=800px, height=750px, scrollbars=yes');return false;">편의기능</a></span>
+            
+            <span><a href="/admin/board/request">IT요청</a></span>
+            <p class="manual">
+                
+                <span class=button><a href="/admin/calculate/onlineAmtDash" onclick="window.open(this.href, '', 'width=1800px, height=800px, scrollbars=yes');return false;">주문/매출현황</a></span>
+                
+                <span class=button><a href="/admin/popup/eventNotiPopup" onclick="window.open(this.href, '', 'width=660px, height=260px, scrollbars=yes');return false;">메인노출 제안</a></span>
+                <span class=button><a href="/admin/popup/contact?stVar1=1" onclick="window.open(this.href, '', 'width=600px, height=580px, scrollbars=yes');return false;">MD연락처</a></span>
+                <span class=button><a href="/admin/popup/contact?stVar1=2" onclick="window.open(this.href, '', 'width=600px, height=580px, scrollbars=yes');return false;">고객센터 연락처</a></span>
+                <span class=button><a href="http://image.kyobobook.co.kr/newimages/giftshop_new/common/HOTTRACKS_ADMIN_MANUAL.pptx">사용 메뉴얼</a></span>
+                <span class=button><a href="/pages/backoffice/mainTaxPopup.jsp" onclick="window.open(this.href, '', 'width=450px, height=350px, scrollbars=yes');return false;">세금계산서 안내</a></span>
+                <span class=button><a href="http://image.kyobobook.co.kr/newimages/giftshop_new/common/Hottracks_Advertising.pptx">광고상품 소개서</a></span>
+                <span class=button><a href="http://image.kyobobook.co.kr/newimages/giftshop_new/common/Hottracks_Live_Guide.pptx">핫트랙스 Live 가이드</a></span>
+            </p>
+        </div>
+        <h1>
+            <a href="http://admin.hottracks.co.kr/admin/main"><img src="/images/login_logo.gif" alt="NEW ME HOTTRACKS"/>관리자 시스템</a>
+            
+        </h1>
+        <div id="gnbMenuBox" class="gnb_box">
+            
+
+
+
+
+
+
+
+<!-- 서브메뉴 파일은 여기에 추가 -->
+
+<!-- 
+##제거##
+비콘관리:beacon
+-->
+<!-- 서브메뉴 파일은 여기에 추가 -->
+
+<a href="#" onclick="Fn_ToggleMenu();return false;" class="drawer">메뉴</a>
+<ul>
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li class="selected">
+                    <a onfocus='blur()' style="color:#ff0000;">개편전시관리</a>
+                    <div class="snb-item active">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>메인관리</dt>
+                <dd>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=MGFT_ROLL_BNR&mallId=02&ctgrId=00">문구/기프트(MO)</a>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=PWLC_ROLL_BNR&ctgrId=00">웰컴메인(PC)</a>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=PRCD_ROLL_BNR&ctgrId=00">음반(PC)</a>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=MRCD_ROLL_BNR&mallId=02&ctgrId=00">음반(MO)</a>
+                    <!-- <a href="/admin/banner/hotDeal">펀딩 핫트딜</a> -->
+                    <a href="/admin/banner/mobHamburgerMenu">모바일 햄버거 메뉴관리</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>배너관리</dt>
+                <dd>
+                    <a href="/admin/banner/listBannerCode">배너코드관리</a>
+                    <a href="/admin/banner/listBannerType">배너타입관리</a>
+                    <a href="/admin/banner/listBanner">배너목록</a>
+                    <a href="/admin/banner/listBannerCurtain">커튼배너관리</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>전시</dt>
+                <dd>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=LIVE_PC_ROLL_BNR&ctgrId=00">라이브커머스</a>
+                    <a href="/admin/banner/listLife">이럴때</a>
+                    <a href="/admin/banner/listAgit">아지트</a>
+                    <a href="/admin/banner/listSoso">소소클래스</a>
+                    <a href="/admin/banner/listFailKeyword">실패검색어관리</a>
+                </dd>
+            </dl>
+            <!-- 
+            <dl>
+                <dt>기타</dt>
+                <dd>
+                    <a href="/admin/offStore/showOrderMain">브랜드관리</a>
+                    <a href="/admin/offStore/showOrderMain">검색어관리</a>
+                    <a href="/admin/offStore/showOrderMain">매장안내</a>
+                </dd>
+            </dl> 
+            -->
+            <dl>
+                <dt>이벤트</dt>
+                <dd>
+                    <a href="/admin/banner/eventMasterList">이벤트관리</a>
+                    <a href="/admin/banner/eventMasterForm">이벤트등록</a>
+                    <a href="/admin/banner/eventWinnerPublishList">당첨자 발표 조회</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>기획전관리</dt>
+                <dd>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=EVENT_STICKPC_BNR&ctgrId=00">스티커</a>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=DIARY_TOP_ROLL_BNR&ctgrId=00">다이어리</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>이벤트</dt>
+                <dd>
+                    <a href="/admin/event/eventModuleMasterList">이벤트관리[신규]</a>
+                    <a href="/admin/event/eventModuleMasterForm">이벤트등록[신규]</a>
+                    <a href="/admin/event/eventJoinModuleWinnerList">이벤트 당첨자 관리[신규]</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>배너관리</dt>
+                <dd>
+                    <a href="/admin/banner/categoryBannerList?dispMstrId=NT_CTGR_BNR&ctgrId=000020">카테고리 배너 관리[신규]</a>
+					<a href="/admin/banner/bannerDetail?bnrMstId=1&bnrTypeCd=C1446&mallId=01">카테고리 GNB 배너 (PC)[신규]</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>메인관리</dt>
+                <dd>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=NT_MGFT_GNB&mallId=02&ctgrId=00">문구/기프트 메인 [신규]</a>
+                    <a href="/admin/banner/welcomeMain?dispMstrId=NT_MRCD_HIRO_BNR&mallId=02&ctgrId=00">음반 메인 [신규]</a>
+<!--                     <a href="/admin/event/eventModuleMasterForm">이벤트등록[신규]</a> -->
+                </dd>
+            </dl>
+            <dl>
+                <dt>코너메뉴관리</dt>
+                <dd>
+                	<a href="/admin/corner/mdRecoNew?ctgrId=000020">MD 추천 신상품[신규]</a>
+                    <a href="/admin/corner/curationList?crtType=1">큐레이션 관리[신규]</a>
+                    <a href="/admin/corner/liveBroadcastMasterList">라이브방송 관리[신규]</a>
+                    <a href="/admin/corner/recommendGiftKeyword">선물추천 키워드[신규]</a>
+                    <a href="/admin/banner/categoryBestList?ctgrId=000020">선물추천 인기추천 목록 [신규]</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>음반 사은품 증정관리</dt>
+                <dd>
+                    <a href="/admin/product/recordFreeGiftList">음반 사은품 관리[신규]</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>주문관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>업체주문관리</dt>
+                <dd>
+                    <a href="/admin/order/listOrderOfVendor">업체주문조회</a>
+                    <a href="/admin/order/listOffOrderOfVendor">매장주문관리</a>
+                    
+                        <a href="/admin/order/listOfPlentyOrder">대량주문관리</a>
+                        <a href="/admin/order/listOfSaleOutOrder">품절처리주문</a>
+                        <a href="/admin/order/listOrderDeliDay?init=Y">배송지연일</a>
+                        <a href="/admin/order/notPayedOrder">미입금 주문관리</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>업체배송관리</dt>
+                <dd>
+                    <a href="/admin/order/listShippingCommand?deliveryStatusCode=C0231">배송대기목록</a>
+                    <a href="/admin/order/listRegistShipping">상품출고처리</a>
+                    <a href="/admin/order/excelRegistShipping">엑셀상품출고처리</a>
+                    <a href="/admin/order/listCompleteDelivery">배송완료처리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>교환반품관리</dt>
+                <dd>
+                    <a href="/admin/order/listExchange?init=Y">교환반품조회</a>
+                    
+                        <a href="/admin/order/listCancelSSG">신세계주문취소내역</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        
+            <li>
+                <dl>
+                    <dt>음반주문관리</dt>
+                    <dd>
+                        <a href="/admin/order/listReser">예약상품주문현황</a>
+                        <a href="/admin/order/listMusicOrder">일별주문현황</a>
+                        <a href="/admin/distribution/groupSell">공동구매진행</a>
+                    </dd>
+                </dl>
+            </li>
+        
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>물류관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    
+        
+                <ul>
+                    
+                        <li>
+                            <dl>
+                                <dt>발주관리</dt>
+                                <dd>
+                                    
+                                        <a href="/admin/distribution/listBusinessOrder">발주등록</a>
+                                    
+                                    
+                                        <a href="/admin/distribution/listWaitingBusinessOrder">발주대기</a>
+                                    
+                                    
+                                        <a href="/admin/distribution/listPurchaseOrder">발주서조회</a>
+                                        <a href="/admin/distribution/listStockRegister">입고등록</a>
+                                    
+                                    
+                                        <a href="/admin/distribution/listPresentBusinessOrderDetail">발주 및 입고현황</a>
+                                        <a href="/admin/distribution/listMusicOrderDetail">음반 주문 현황</a>
+                                    
+                                    
+                                        <a href="/admin/distribution/autoBusinessOrder">자동발주관리</a>
+                                    
+                                </dd>
+                            </dl>
+                        </li>
+                    
+                    <li>
+                        <dl>
+                            <dt>출고관리</dt>
+                            <dd>
+                                <a href="/admin/distribution/nOrderJisi">출고지시</a>
+                                <a href="/admin/distribution/nOrderDas">수집분류</a>
+                                <a href="/admin/distribution/nTacbaePri">송장출력</a>
+                                <a href="/admin/distribution/nOrderDasTot">일괄수집분류</a>
+                                <a href="/admin/distribution/nOrderDas1">수집분류 1번</a>
+                                <a href="/admin/distribution/nOrderDas2">수집분류 2번</a>
+                                <a href="/admin/distribution/nOrderDasTot1">일괄수집분류 1번</a>
+                                <a href="/admin/distribution/nOrderDasTot2">일괄수집분류 2번</a>
+                            </dd>
+                            <dd>
+                                <a href="/admin/distribution/distributionGuide">출고 관리 도움말</a>
+                                <a href="/admin/distribution/listDistributionOrder2">물류 주문 조회</a>
+                                <a href="/admin/distribution/nTacbaePriRe">송장 재/추가 출력</a>
+                                <a href="/admin/distribution/listEtcDelivery">기타 배송 처리</a>
+                                <a href="/admin/distribution/kyoboInMusic">문고음반입고지시</a>
+                                <a href="/admin/distribution/kyoboInMusicInfo">문고음반입고수량확인</a>
+                                <a href="/admin/distribution/kyoboFedexInfo">해외배송확인</a>
+                                <a href="/admin/distribution/bigChulGoSearch">대량출고조회</a>
+                            </dd>
+                            <dd>
+                                <strong style="color:red">[CJ택배]</strong>
+                                <a href="/admin/distribution/listDeliveryByHanjin">출고 조회</a>
+                                <a href="/admin/distribution/listInvoicePrintForHanjin">수기송장출력</a>
+                            </dd>
+                            <dd>
+                                <strong style="color:red">[기타]</strong>
+                                <a href="/admin/distribution/weMadePrice">위메프출고확인</a>
+                                <a href="/admin/distribution/musicKyobo">음반문고수집지시</a>
+                                <a href="/admin/distribution/musicKyoboCheck">음반문고상품검수</a>
+                                <a href="/admin/distribution/musicStock">음반재고확인</a>
+                                <a href="/admin/distribution/dashNoti">공유사항</a>
+                                <!-- <a href="/admin/distribution/chulNow">작업진행 현황</a> -->
+                            </dd>
+                            <!-- 
+                            <dd>
+                                <strong style="color:red">[역직구]</strong>
+                                <a href="/admin/distribution/foreProduct">상품관리</a>
+                                <a href="/admin/distribution/foreOrderSave">주문관리</a>
+                                <a href="/admin/distribution/foreDelivery">배송등록</a>
+                                <a href="/admin/distribution/foreInvoice">송장관리</a>
+                                <a href="/admin/distribution/foreCalcul">정산처리</a>
+                            </dd>
+                             -->
+                            <dd>
+                            	<strong style="color:red">[오프매장]</strong>
+                            	<a href="/admin/distribution/offStock">재고관리</a>
+                            	<a href="/admin/distribution/offOrder">주문관리</a>
+                            	<a href="/admin/distribution/offOrderJisi">출고지시</a>
+                            </dd>
+                            <dd>
+                                <a href="/admin/distribution/nStockMan">재고관리</a>
+                                <a href="/admin/distribution/musicInOutAdmin">음반반입반출</a>
+                                <a href="/admin/distribution/banInOutAdmin">반출입관리(직매)</a>
+                                <a href="/admin/distribution/panInOutAdmin">반출입관리(온라인역직구-판매분)</a>
+                                <a href="/admin/distribution/nLocTypeMan">로케이션관리</a>
+                                <a href="/admin/distribution/nStockSerCnt">사전재고조사</a>
+                                <a href="/admin/distribution/nStockLocCheck">로케이션확인</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>출고실적</dt>
+                            <dd>
+                                <a href="/admin/distribution/onlineChulResult">온라인 발송 현황</a>
+                                <a href="/admin/distribution/onlineSaleResult">온라인 매출 현황</a>
+                                <a href="/admin/distribution/onlineMulStat">물류 현황판</a>
+                                <a href="/admin/distribution/onlineMulOrderStat">고객주문/배송 현황</a>
+                            </dd>
+                            <dd>
+                                <a href="/admin/distribution/tacbaeChulCnt">택배사별 송장건수</a>
+                                <a href="/admin/distribution/listShippingResult">날짜별 출고실적</a>
+                                <a href="/admin/distribution/listRequiredShippingDate">출고소요일 조회</a>
+                                <a href="/admin/distribution/listDistributionOfBestCustomer">물류 출고분 우수고객</a>
+                                <a href="/admin/distribution/listReSuzip">재수집산출자료</a>
+                                <a href="/admin/distribution/listDeliveryDetail">물류출고실적(상세)</a>
+                                <a href="/admin/distribution/listTimeToReceive">C+2일 조회<img src="/images/i_new.gif"/></a>
+                                <a href="/admin/distribution/listMonthDistriSearch">물류 월별 현황 조회</a>
+                                <a href="/admin/distribution/kyoboMusicDeliveryList">교보음반정산데이터</a>
+                                <a href="/admin/distribution/kyoboMusicDeliveryCnt">교보음반일자별배송건수</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>스텝부서</dt>
+                            <dd>
+                                <a href="/admin/distribution/hanJinInvoiceForStep">CJ택배발송</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>과거(폐기예정)</dt>
+                            <dd>
+                                <a href="/admin/distribution/listGiftMessage">선물 메시지 출력</a>
+                                <a href="/admin/distribution/MotherShippingCommand">출고지시(연동몰,마더몰)</a>
+                                <a href="/admin/distribution/NewMotherShippingCommand">NEW출고지시</a>
+                                <a href="/admin/distribution/NewShippingDivCommand">주문분류</a>
+                                <a href="/admin/distribution/registShippingForm2">출고 등록</a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            
+    
+    
+</div><!-- end side-menu --></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>상품관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>상품관리</dt>
+                <dd>
+                    <a href="/admin/product/list?skip=Y">상품리스트</a>
+                    
+                        <a href="/admin/product/edit">상품등록</a>
+                        <a href="/admin/product/editProductAll">상품일괄등록</a>
+                        <a href="/admin/product/prdtNotiInfoForm">상품정보고시일괄등록</a>
+                        
+                            <a href="/admin/product/listPermit">승인관리</a>
+                        
+                        
+                            <a href="/admin/product/listSoldOutRequest">품절관리</a>
+                        
+                        
+                            <a href="/admin/product/listFreeGift">사은품리스트</a>
+                            <a href="/admin/product/registFreeGiftForm">사은품등록</a>
+                        
+                        <a href="/admin/product/barcodePrint">상품바코드출력</a>
+                        
+                            <a href="/admin/product/manageProductsCategoryForm">상품카테고리일괄변경</a>
+                            <a href="/admin/product/updateProductListForm">상품일괄변경</a>
+                        
+                    
+                </dd>
+                
+                <dd>
+                    <a href="/admin/product/sublistInit">물류상품리스트</a>
+                    
+                        <a href="/admin/product/listSoldOutRequestNew">입고배송 판매상태 관리</a>
+                        <a href="/admin/product/listSoldOutRequestConfirm">입고배송 판매상태 요청처리</a>
+                        <a href="/admin/product/editMobile">모바일 상품상세 정보</a>
+                        <a href="/admin/product/listExpProduct">특정 상품 코드 관리</a>
+                        <a href="/admin/product/productBenFee">상품이익예측</a>
+                        <a href="/admin/product/productHistory">상품가격연동이력</a>
+                    
+                </dd>
+                
+            </dl>
+        </li>
+         
+        
+        <li>
+            <dl>
+                <dt>상품관리 2.0[BETA]<img src="/images/i_new.gif" alt="NEW"/></dt>
+                <dd>
+                    <a href="/admin/product/2.0/listProduct">상품리스트</a>
+                    <!--
+                    <a href="/admin/product/2.0/detailProduct">상품등록</a>
+                    
+                        
+                            <a href="/admin/product/manageProductsCategoryForm">상품카테고리일괄변경</a>
+                        
+                    
+                    -->
+                </dd>
+            </dl>
+        </li>
+        
+        
+        
+            <li>
+                <dl>
+                    <dt>뮤직샵 상품관리</dt>
+                    <dd>
+                        <a href="/admin/product/recordMasterList">음반리스트</a>
+                        
+                        <a href="/admin/product/preOrderSellprdtForm">예약상품코드관리</a>
+                        <a href="/admin/product/limitSaleAllRegForm">한정판매일괄등록</a>
+                        <a href="/admin/product/dscntChngAllRegForm">할인율변경일괄처리</a>
+                        <a href="/admin/product/trackMapForm">음원앨범정보매핑</a>
+                        <a href="/admin/product/albumMapForm">음반정보매핑</a>
+                        <a href="/admin/product/recordExcelPriceForm">음반상품가격일괄변경</a>
+                        <a href="/admin/product/rcbarStatusAllRegForm">음반상품상태일괄변경</a>
+                        
+                    </dd>
+                    
+                    <dd>
+                        <a href="/admin/product/forceSaleRegForm">강제판매일괄등록</a>
+                        <a href="/admin/product/fullMusicLis">음반전곡듣기</a>
+                        <a href="/admin/product/noBaro">바로드림제외</a>
+                        <a href="/admin/product/delMusic">음반 곡 삭제</a>
+                    </dd>
+                    
+                </dl>
+            </li>     
+               
+            <li>
+                <dl>
+                    <dt>카테고리전시관리</dt>
+                    <dd>
+                        <a href="/admin/product/listCategory">카테고리 등록/수정</a>
+                        <a href="/admin/product/listCategoryMapping">영업분석 매칭</a>
+                    </dd>
+                </dl>
+            </li>
+            
+        
+    </ul>
+</div><!-- end side-menu --> </div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    
+                            <a href="http://admin.hottracks.co.kr/admin/display/asis/dispBnrList?dispMstrId=MAIN_BIG_LEFT_GIFT&mallId=01" onfocus='blur()'>전시관리</a>
+                        
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>배너관리</dt>
+                <dd>
+                    <a href="/admin/display/bnrMasterList">배너목록</a>
+                    <a href="/admin/display/bnrPrdtDetail">상품상세배너</a>
+                </dd>
+            </dl>
+        </li>
+        
+            <li>
+                <dl>
+                    <dt>전시관리 [교보몰]</dt>
+                    <dd>
+                        <strong>메인전시</strong>
+                        <a href="/admin/display/dispBnrList?dispMstrId=GWM_BNR_TOP&mallId=01&ctgrId=00">기프트</a>
+                        <a href="/admin/display/asis/dispBnrList?dispMstrId=MAIN_BANNER_RECORD&mallId=01&ctgrId=0003">음반</a>
+                        <a href="/admin/display/asis/dispBnrList?dispMstrId=MAIN_BANNER_DVD&ctgrId=0004&mallId=01">DVD</a>
+                        
+                        <strong>카테고리전시</strong>
+                        <a href="/admin/display/dispBnrList?dispMstrId=DISP_GFT_1ST&mallId=01&ctgrId=000020">기프트</a>
+                        <a href="/admin/display/asis/dispBnrList?dispMstrId=CATE_MAIN_T_BNR&ctgrId=000300&mallId=01&dispType=02">가요</a>
+                        <a href="/admin/display/asis/dispBnrList?dispMstrId=CATE_MAIN_T_BNR&ctgrId=000308&mallId=01&dispType=02">클래식</a>
+                        <a href="/admin/display/asis/dispBnrList?dispMstrId=CATE_PROMT_RECORD&ctgrId=000301&mallId=02&dispType=02">CD</a>
+                        
+                        <strong>기타전시</strong>
+                        <a href="/admin/display/dispBnrList?dispMstrId=GLOBAL_GFT_DTL&mallId=01&ctgrId=00">기프트상품상세배너</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=GFT_NEW_BRAND&ctgrId=0000&mallId=01">NEWBRAND</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=GFT_BEST_BRAND&ctgrId=0000&mallId=01">BESTBRAND</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=DIARY_GNB&ctgrId=0000&mallId=01">다이어리배너</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>랭킹관리 [교보몰]</dt>
+                    <dd>
+                        <a href="/admin/display/productRankingList?dispMstrId=RANK_BEST&ctgrId=0000&mallId=01">잘나가는 베스트셀러</a>
+                        <a href="/admin/display/productRankingList?dispMstrId=RANK_LOWPRICE&ctgrId=0000&mallId=01">알뜰쇼핑 최저가상품</a>
+                        <!-- <a href="/admin/display/prCoductRankingList?dispMstrId=RANK_RECENT&ctgrId=0000&mallId=01">따끈따끈 최신상품</a> -->
+                        <a href="/admin/display/productRankingList?dispMstrId=RANK_CUSTOM&ctgrId=0000&mallId=01">고객만족 200%상품</a>
+                        <a href="/admin/display/productRankingList?dispMstrId=RANK_POPUL&ctgrId=0000&mallId=01">요즘뜨는 인기상품</a>
+                    </dd>
+                    <dd>
+                        <a href="/admin/display/dispBrandList?dispMstrId=RANK_HOTBRAND&mallId=01&ctgrId=0000">HOT BRAND</a>
+                        <a href="/admin/display/dispBrandList?dispMstrId=RANK_NEWBRAND&mallId=01&ctgrId=0000">NEW BRAND</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>전시관리 [단목몰]</dt>
+                    <dd>
+                        <strong>메인전시</strong>
+                        <a href="/admin/display/dispBnrList?dispMstrId=WLCM_GNB&mallId=02&ctgrId=00">웰컴메인</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=MUC_1ST&mallId=02&ctgrId=0003">CD</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=DVD_1ST&mallId=02&ctgrId=000400">DVD</a>
+                        
+                        <strong>카테고리전시</strong>
+                        <a href="/admin/display/dispBnrList?dispMstrId=DISP_GFT_1ST&mallId=02&ctgrId=000020">기프트</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=CATE_MUC_1ST&mallId=02&ctgrId=000301">CD</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=CATE_MUC_1ST&mallId=02&ctgrId=000308">클래식</a>
+                        
+                        <strong>기타전시</strong>
+                        <a href="/admin/display/dispBnrList?dispMstrId=CULT_1ST&mallId=02&ctgrId=00">컬처존</a>
+                        <a href="/admin/display/mdPickManage">MD'S PICK 관리</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=DIARY_GNB&mallId=02&ctgrId=0000">다이어리배너 </a>
+                        <a href="/admin/display/listPopup">팝업 배너</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>검색관리 [단독몰]</dt>
+                    <dd>
+                        <a href="/admin/display/popKeyword?dispMstrId=GLOBAL_WELCOME&mallId=02">검색어키워드배너</a>
+                        <a href="/admin/display/dispEventList?dispMstrId=SRCH_EVT_PC&mallId=02&ctgrId=00">검색인기이벤트</a>
+                        <a href="/admin/display/listKeywordType">음반키워드관리</a>
+                        <a href="/admin/display/listSearchProductFixed">검색상품고정관리</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>랭킹관리 [단독몰]</dt>
+                    <dd>
+                        <a href="/admin/display/dispBrandList?dispMstrId=RANK_HOTBRAND&mallId=02&ctgrId=0000">HOT BRAND</a>
+                        <a href="/admin/display/dispBrandList?dispMstrId=RANK_NEWBRAND&mallId=02&ctgrId=0000">NEW BRAND</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>전시관리 [모바일]</dt>
+                    <dd>
+                        <a href="/admin/display/dispBnrList?dispMstrId=MWL_BNR01&mallId=02&ctgrId=00">웰컴메인</a>
+                        <a href="/admin/display/dispPrdtList?dispMstrId=MGC_PRDT01&mallId=02&ctgrId=000025">리빙/데코</a>
+                        <a href="/admin/display/dispPrdtList?dispMstrId=MRM_PRDT01&mallId=02&ctgrId=0003">음반메인</a>
+                        <a href="/admin/display/keywordList">추천검색어</a>
+                        <a href="/admin/display/enrollIntro">인트로 관리</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=MOB_DIARY_GNB&mallId=02&ctgrId=0000">다이어리메인</a>
+                        <a href="/admin/display/dispBnrList?dispMstrId=MAIN_MUSIC_GNB&mallId=02&ctgrId=00">뮤직메인</a>
+                        <a href="/admin/display/dispEventList?dispMstrId=MOB_EVT_MAIN&mallId=02&ctgrId=00">이벤트메인</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>테마샵 관리</dt>
+                    <dd>
+                        <a href="/admin/display/theme/themeShopMaster">테마샵 마스터관리</a>
+                        <a href="/admin/display/theme/themeShopDisplay">테마샵 전시관리</a>
+                    </dd>
+                </dl>
+            </li>
+        
+        <li>
+            <dl>
+                <dt>뮤직샵 레이블 관리</dt>
+                <dd>
+                    <a href="/admin/display/labelInStorageInfoList">레이블 입고안내</a>
+                    <a href="/admin/display/labelEventList">레이블 행사안내</a>
+                    <a href="/admin/display/labelInfoList">레이블 조회</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>콘텐츠 관리</dt>
+                <dd>
+                    <a href="/admin/display/listIdolchart">아이돌차트 관리</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div><!-- end side-menu --> </div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>고객센터관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    
+        <ul>
+            
+            <li>
+                <dl>
+                    <dt>고객공지사항</dt>
+                    <dd>
+                        <a href="/admin/board/userNoticeList">공지사항 조회</a>
+                        
+                            <a href="/admin/board/userNoticeCreate">공지사항 등록</a>
+                        
+                    </dd>
+                </dl>
+            </li>
+            
+            
+                <li>
+                    <dl>
+                        <dt>고객상담관리</dt>
+                        <dd>
+                            
+                            <a href="/admin/board/listCounsel">고객상담조회</a>
+                            
+                            <a href="/admin/board/listCounsel?returnRequestGubun=W">SOS상담조회</a>
+                            
+                            <a href="/admin/board/editCounselForm">전화상담접수</a>
+                            <a href="/admin/board/listStandardAnswer">표준답변관리</a>
+                            <a href="/admin/board/listQnA">상담 Q&amp;A</a>
+                            
+                                <a href="/admin/board/listBulkCounselRequest">기업대량구매상담</a>
+                            
+                            <a href="/admin/board/txinRequestList">세금계산서 신청내역</a>
+                            <a href="/admin/board/listMailingUser">메일링회원관리</a>
+                            
+                            <a href="/admin/board/searchListCounsel">고객상담관리</a>
+                            <a href="/admin/board/userSmsSend">문자발송</a>
+                            <a href="/admin/board/orderSearch?cmd=init">주문조회</a>
+                            
+                            
+                        </dd>
+                    </dl>
+                </li>
+            
+            
+            <li>
+                <dl>
+                    <dt>컨텐츠관리</dt>
+                    <dd>
+                         <a href="/admin/board/qnACommentListPage">상품평(100자평)관리</a>
+                         <a href="/admin/board/listKyoboReview">교보상품리뷰</a>
+                         <a href="/admin/board/faqListPage?orderBy=default&mallId=01">FAQ</a>
+                    </dd>
+                </dl>
+            </li>
+            
+            
+                <li>
+                    <dl>
+                        <dt>커뮤니티</dt>
+                        <dd>
+                            <a href="/admin/board/community/list?commGubun=1">커뮤니티</a>
+                            <a href="/admin/board/community/list?commGubun=2">CS커뮤니티</a>
+                        </dd>
+                    </dl>
+                </li>
+            
+        </ul>
+    
+    
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>업체관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>업체커뮤니티</dt>
+                <dd>
+                    <a href="/admin/vendor/vndrComuListPage">공지사항 조회</a>
+                    <a href="/admin/vendor/vndrComuCreateRootPage">공지사항 등록</a>
+                    
+                    <a href="/admin/vendor/mdNotice">MD-업체 공유사항</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>업체공지사항</dt>
+                <dd>
+                    <a href="/admin/vendor/vndrNotiListPage">공지사항 조회</a>
+                    
+                        <a href="/admin/vendor/vndrNotiCreateOrUpdatePage?jspGbn=create">공지사항 등록</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        
+        
+            <li>
+                <dl>
+                    <dt>공급 업체 관리</dt>
+                    <dd>
+                        <a href="/admin/vendor/vendorList">업체 정보 조회</a>
+                        <a href="/admin/vendor/offVendorList">업체 정보 등록</a>
+                        <a href="/admin/vendor/contractList">브랜드 계약 조회</a>
+                        <a href="/admin/vendor/createContractForm">브랜드 계약 등록</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>브랜드 관리</dt>
+                    <dd>
+                        <a href="/admin/vendor/brandList">브랜드 조회</a>
+                        <a href="/admin/vendor/createBrandForm">브랜드 등록</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>택배사 관리</dt>
+                    <dd>
+                        <a href="/admin/vendor/tacbaeList">택배사 조회</a>
+                        <a href="/admin/vendor/createTacbaeForm">택배사 등록</a>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>입점업체문의</dt>
+                    <dd>
+                        <a href="/admin/vendor/listVendorInquiry">입점업체문의</a>
+                    </dd>
+                </dl>
+            </li>
+        
+    </ul>
+</div></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a href="http://admin.hottracks.co.kr/admin/banner/eventMasterList" onfocus='blur()'>이벤트관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        
+        <li>
+            <dl>
+                <dt>이벤트관리</dt>
+                <dd>
+                    
+                    <a href="/admin/event/eventWinnerPublishList">당첨자 발표 조회</a>
+                    <a href="/admin/event/showcaseEventWinnerPublishList">쇼케이스 당첨자 조회</a>
+                    <a href="/admin/event/eventHotdealList">오늘만특가</a>
+                    <a href="/admin/event/eventRandomList">룰렛기획전</a>
+                    <a href="/admin/event/eventStepList">단계기획전</a>
+                    <a href="/admin/event/eventStampList">스탬프기획전</a>
+                </dd>
+            </dl>
+        </li>
+        
+        <li>
+            <dl>
+                <dt>뮤직샵</dt>
+                <dd>
+                    
+                    <a href="/admin/event/posterCaseList?useYn=Y">포스터케이스 관리</a>
+                    <a href="/admin/event/recordFreeGiftMasterList">사은품/부록 마스터관리</a>
+                    <a href="/admin/event/recordFreeGiftList">사은품 증정관리</a>
+                    <a href="/admin/event/recordSupplementList">부록관리</a>
+                    <a href="/admin/event/insertOrderRecordPostCase">포스터 소급분</a>
+                    
+                    <a href="/admin/event/orderOutdoorList">현장판매배송관리</a>
+                </dd>
+            </dl>
+        </li>
+        
+        <li>
+            <dl>
+                <dt>쿠폰관리</dt>
+                <dd>
+                    <a href="/admin/event/listCoupon">쿠폰조회</a>
+                    
+                        <a href="/admin/event/createCouponForm">쿠폰등록</a>
+                        <a href="/admin/event/simpleCouponForm">간편쿠폰 생성</a>
+                    
+                    <a href="/admin/event/userPolicy">쿠폰정책관리</a>
+                    <a href="/admin/event/imageUpload">메일용이미지업로드</a>
+                    <a href="/admin/event/listLimitCoupon">한정쿠폰등록</a>
+                    <a href="/admin/event/showCouponDate">이벤트 쿠폰 날짜 변경[38190]</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>알림예약전시관리</dt>
+                <dd>
+                    <a href="/admin/event/recordNotiReqList">알림예약전시 관리</a>
+                    <a href="/admin/event/recordNoticeList">알림예약 메일관리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>서비스 종료</dt>
+                <dd>
+                    <a href="/admin/event/oldEventManagement">이벤트관리[~2011.02]</a>
+                </dd>
+            </dl>
+        </li>
+        
+    </ul>
+</div><!-- end side-menu --></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>정산관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    
+        <ul>
+            
+                
+                    <li>
+                        <dl>
+                            <dt>교보정산관리</dt>
+                            <dd>
+                                <a href="/admin/calculate/listKyoboCalculateProcessing">교보정산처리</a>
+                                <a href="/admin/calculate/dutyFreeAmt">면세업체매출내역서</a>
+                                <a href="/admin/calculate/zalCalculateAmt">자우쿠폰매출</a>
+                                <a href="/admin/calculate/handAmt">수기매출처리</a>
+                            </dd>
+                        </dl>
+                    </li>
+                
+                <li>
+                    <dl>
+                        <dt>업체정산관리</dt>
+                        <dd>
+                            <a href="/admin/calculate/listVendorCalculate">업체정산조회</a>
+                            <a href="/admin/calculate/vendorShippingSearch">업체배송비조회</a>
+                            <a href="https://www.wehago.com" target="_blank">세금계산서 발급</a>
+                            <a href="http://partner.hottracks.co.kr/" target="_blank">고객부담배송비 청구서발급</a>
+                        </dd>
+                    </dl>
+                </li>
+                
+                    <li>
+                        <dl>
+                            <dt>마더몰정산관리</dt>
+                            <dd>
+                                <a href="/admin/calculate/listMotherCalculate">결제대금조회</a>
+                                <a href="/admin/calculate/listFurInpAmt">예상입금액조회</a>
+                                <a href="/admin/calculate/listPaymentInfo">금권별 현황 확인</a>
+                                <a href="/admin/calculate/comparePgpaymentAndPayment">금권별 결제내역 비교</a>
+                            </dd>
+                            <dd>
+                                <a href="/admin/calculate/gsPointListSearch">GSPOINT</a>
+                                <a href="/admin/calculate/okPointListSearch">OKPOINT</a>
+                                <a href="/admin/calculate/listDepositAmt">예치금잔액</a>
+                                <a href="/admin/calculate/naverPayDetail">네이버N페이결제내역</a>
+                                <a href="/admin/calculate/naverPayMain">네이버N페이</a>
+                                <a href="/admin/calculate/lPointListSearch">LPOINT</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>선수금(마더몰)</dt>
+                            <dd>
+                                <a href="/admin/calculate/listSunAmt">선수금관리</a>
+                                <a href="/admin/calculate/listSunAmtFix">선수금마감</a>
+                                <a href="/admin/calculate/listSunAmtOrdRem">선수금잔액확인</a>
+                                <a href="/admin/calculate/listSunAmtOrdRemOff">매장예약선수금잔액확인</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>배송비</dt>
+                            <dd>
+                                <a href="/admin/calculate/dlvyAmtForWho">배송비 부담 주체별 현황</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>주문별정산자료확인</dt>
+                            <dd>
+                                <a href="/admin/calculate/orderCalculate">주문자료확인</a>
+                                <a href="/admin/calculate/stopVendorSaleAmt">거래중단업체매출</a>
+                                <a href="/admin/calculate/allyorderCalculate">제휴몰주문확인</a>
+                            </dd>
+                        </dl>
+                    </li>
+                
+            
+            
+                <li>
+                    <dl>
+                        <dt>기타</dt>
+                        <dd>
+                            
+                            <a href="/admin/calculate/naverOrderSearch">지식쇼핑주문/매출</a>
+                            
+                            
+                            <a href="/admin/calculate/linkPriceSearch">링크프라이스</a>
+                            
+                            
+                            <a href="/admin/calculate/wmpOrderSearch">위메프주문/매출</a>
+                            
+                            
+                            <a href="/admin/calculate/cafeOrderSearch">카페24주문/매출</a>
+                            
+                            
+                            <a href="/admin/calculate/okCashOrderSearch">OK캐쉬백주문/매출</a>
+                            
+                            
+                            <a href="/admin/calculate/happyPointOrderSearch">해피포인트주문/매출</a>
+                            
+                        </dd>
+                    </dl>
+                </li> 
+            
+        </ul>
+    
+</div><!-- end side-menu --></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>통계관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>주문/매출통계</dt>
+                <dd>
+                    
+                        <a href="/admin/statistics/listWholeOrderSalesStatistics">전체 주문/매출통계</a>
+                    
+                    <a href="/admin/statistics/listOrderSalesForMall">채널별 주문/매출조회</a>
+                    <a href="/admin/statistics/listOrderSalesStatisticsForCategory">카테고리 주문/매출 통계</a>
+                    <a href="/admin/statistics/listOrderSalesCategoryAlli" style="border:none; padding-left:0px; margin-left:0px;">(제휴몰전체)</a>
+                    <a href="/admin/statistics/vndrStatsListPage">업체별 주문/매출 통계</a>
+                    <a href="/admin/statistics/brandStatsListPage">브랜드별 주문/매출 통계</a>
+                    <a href="/admin/statistics/listOrderSalesStatisticsForProduct">상품별 주문/매출 통계</a>
+                    
+                        <a href="/admin/statistics/listEventStatistics">이벤트별 매출현황(이벤트)</a>
+                    
+                    
+                        <a href="/admin/statistics/listEventStatisticsProduct">이벤트별 매출현황(상품)</a>
+                    
+                    
+                        <a href="/admin/statistics/listEventStatisticsTime">이벤트별 매출현황(시간대)</a>
+                        <a href="/admin/statistics/listProductAndUserStatistics">상품별 주문자 리스트</a>
+                        <a href="/admin/statistics/listProductStatistics">상품별 주문 통계</a>
+                        <a href="/admin/statistics/listWholeMallOrderStatistics">몰별 주문 통계</a>
+                    
+                </dd>
+            </dl>
+        </li>
+        
+            <li>
+                <dl>
+                    <dt>매출통계</dt>
+                    <dd>
+                        <a href="/admin/statistics/listCategoryProductByDate">일자별 진열 상품 현황</a>
+                        <a href="/admin/statistics/listOrderSalesStatisticsForVendor">업체별 주문/매출 통계</a>
+                    </dd>
+                    <dd>
+                        <a href="/admin/statistics/hotlineSaleAmt">카테고리별 매출통계(영업분석기준)</a>
+                        <a href="/admin/statistics/stepOrderAmt">직원매출</a>
+                        <a href="/admin/statistics/venSaleAmt">업체별 매출 조회</a>
+                        <a href="/admin/statistics/maginAmt">상품별 마진율</a>
+                        <a href="/admin/statistics/saleReport01">영업본부보고용</a>
+                        <a href="/admin/statistics/saleReport02">온라인보고용</a>
+                    </dd>
+                </dl>
+            </li>
+        
+        
+            <li>
+                <dl>
+                    <dt>쿠폰통계</dt>
+                    <dd>
+                        <a href="/admin/statistics/moCouponAmt?init=Y">마더몰 쿠폰사용현황</a>
+                    </dd>
+                </dl>
+            </li>
+        
+        
+            <li>
+                <dl>
+                    <dt>기타통계</dt>
+                    <dd>
+                        <a href="/admin/statistics/siteClick">사이트클릭현황</a>
+                        <a href="/admin/statistics/listUserDevice">APP다운로드현황</a>
+                        <a href="/admin/statistics/listSearchStatistics">검색통계 현황</a>
+                        <a href="/admin/statistics/listIdolStatistics">아이돌차트 통계</a>
+                    </dd>
+                </dl>
+            </li> 
+        
+    </ul>
+</div><!-- end side-menu -->
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>시스템관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>시스템관리</dt>
+                <dd>
+                    <a href="/admin/system/listCode">코드 목록</a>
+                    <a href="/admin/system/memory">메모리</a>
+                    <a href="/admin/system/listMail">메일 목록</a>
+                    <a href="/admin/system/batchMasterList">배치 목록</a>
+                    <a onclick="window.open(this.href, '', 'width=1000px, height=900px, scrollbars=yes');return false;" href="/admin/system/checkList">체크리스트</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>사용자관리</dt>
+                <dd>
+                    <a href="/admin/system/listAdmin">사용자 목록</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>관리자기능</dt>
+                <dd>
+                    <a href="/admin/system/cosmetics">관리자기능</a>
+                    <a href="/admin/system/totPoint">통합포인트</a>
+                    <a href="/admin/system/naverAdmin">네이버 지식쇼핑</a>
+                    <a href="/admin/system/okPoint">Ok캐쉬백</a>
+                    <a href="/admin/system/lottePoint">LPoint</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div></div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>사용자관리(마더몰)</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>회원조회</dt>
+                <dd>
+                    <a href="/admin/user/listUserInfo">회원조회</a>
+                    <a href="/admin/user/joinUserCount">가입회원수확인</a>
+                    <a href="/admin/user/orderUserCount">구매회원수확인</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>회원계좌</dt>
+                <dd>
+                    <a href="/admin/user/listSaved">마일리지관리</a>
+                    <a href="/admin/user/listDeposit">예치금관리</a>
+                    <a href="/admin/user/listDepositReturnNoUser?repaymentStatusCode=C0642">비회원환불신청</a>
+                    <a href="/admin/user/listDepositReturnNew">예치금환불관리[리뉴얼]</a>
+                    <a href="/admin/user/userDepositAppConfirm">예치금승인관리</a>
+                    <a href="/admin/user/userSavedAppConfirm">마일리지승인관리</a>
+                    <a href="/admin/user/deliveryAmtConf">배송비무통장입금확인</a>
+                    <a href="/admin/user/listAutoPay">자동결제관리(음원)</a>
+                </dd>
+                <dd>
+                    <a href="/admin/user/listTotSaved">통합포인트관리</a>
+                    <a href="/admin/user/userTotSavedAppConfirm">통합포인트승인관리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>모바일</dt>
+                <dd>
+                    <!-- <a href="/admin/user/listUserDevice">등록기기정보</a> -->
+                    <a href="/admin/user/enrollInfo">알림 등록 화면</a>
+                    <a href="/admin/user/listUserAlarm">사용자 알림 확인</a>
+                    <a href="/admin/user/appPushMain">푸시 알림 등록 (테스트)</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>회원조회</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>회원조회</dt>
+                <dd>
+                    <a href="/admin/member/memberSearch">회원조회</a>
+                    <a href="/admin/member/memberAmt">매출조회</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>제휴몰관리</a>
+                    <div class="snb-item">
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>제휴몰 관리</dt>
+                <dd>
+                    <a href="/admin/ally/listAllianceProduct">제휴몰상품조회</a>
+                    <a href="/admin/ally/listAlliProduct">제휴몰상품조회[2.0]</a>
+                    <a href="/admin/ally/listAllianceCategory?init=Y">제휴몰 카테고리 조회</a>
+                    <a href="/admin/ally/allyProHistory">연동이력조회</a>
+                    <a href="/admin/ally/allyProAdmin">제휴연동중지</a>
+                    <a href="/admin/ally/allySendNo">제휴몰운송장조회</a>
+                    <!--  <a href="/admin/ally/allyProduct">제휴몰상품가불가</a> -->
+                </dd>
+            </dl>
+            <dl>
+                <dt>제휴몰 업체 관리</dt>
+                <dd>
+                    <a href="/admin/ally/listVndr">제휴몰 업체관리</a>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>홈페이지관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>영업점</dt>
+                <dd>
+                    <a href="/admin/info/boardList?boardCode=C1321">행사안내</a>
+                    <a href="/admin/info/boardList?boardCode=C1322">영업점 이야기</a>
+                    <a href="/admin/info/boardList?boardCode=C1323">추천상품</a>
+                    <a href="/admin/info/boardList?boardCode=C1324">영업점배너</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>게시판</dt>
+                <dd>
+                    <a href="/admin/info/boardList?boardCode=C1325">알려드립니다.</a>
+                    <a href="/admin/info/boardList?boardCode=C1326">PR</a>
+                    <a href="/admin/info/replyList">댓글 관리</a>
+                    <a href="/admin/info/boardList?boardCode=C1327">배너</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>팝업관리</dt>
+                <dd>
+                    <a href="/admin/info/boardList?boardCode=C132A">팝업관리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>M+</dt>
+                <dd>
+                     <a href="/admin/info/eventList">[M+]행사안내</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>시스템 관리</dt>
+                <dd>
+                    <a href="/admin/info/boardList?boardCode=C132D">영업점관리</a>
+                    <a href="/admin/info/boardImageList">영업점 이미지 관리</a>
+                    <a href="/admin/info/zalStoreList">자우영업점 관리</a>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>전시관리</dt>
+                <dd>
+                    <a href="/admin/info/dispBnrList?dispMstrId=HWL_BNR01&mallId=02&ctgrId=00">홈페이지메인</a>
+                    <a href="/admin/info/bnrMasterList">배너관리</a>
+                </dd>
+            </dl>
+        </li>
+        <!-- 
+        <li>
+            <dl>
+                <dt>관리자 권한관리</dt>
+                <dd>
+                    <a href="/admin/info/userList">관리자 권한관리</a>
+                </dd>
+            </dl>
+        </li>
+        -->
+    </ul>
+</div><!-- end side-menu --> 
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>B2B관리</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>B2B 관리</dt>
+                <dd>
+                    <!-- <a href="/admin/btob/btobMain">메인</a>  -->
+                    <a href="/admin/distribution/nOrderJisiFP">FP몰 출고지시</a>
+                    <a href="/admin/distribution/listInvoicePrintForHanjinBtob">수기송장출력</a> 
+                    <a href="/admin/distribution/hanJinInvoiceForStepBtob">CJ택배발송</a>       
+                </dd>
+            </dl>
+            <dl>
+                <dt>출고 현황</dt>
+                <dd>
+                    <a href="/admin/btob/b2bChulDay">일자별출고현황</a>
+                    <a href="/admin/btob/b2bonlineChulResult">B2B 발송 현황</a> 
+                    <a href="/admin/btob/b2bOnlineMulStat">B2B 현황판 </a>
+                </dd>
+            </dl>
+            <dl style="height: 100px;"><dd> </dd></dl>
+        </li>
+    </ul>
+</div>
+</div>
+                </li>
+            
+        
+    
+        
+                       
+            
+            
+                    
+                
+            
+            
+                <li>
+                    <a onfocus='blur()'>OFF영업점</a>
+                    <div class="snb-item">
+
+
+
+
+
+<div class="side-menu">
+    <ul>
+        <li>
+            <dl>
+                <dt>OFF영업점</dt>
+                <dd>
+                    <a href="/admin/offStore/listOffOrder">주문조회</a>
+                    <a href="/admin/offStore/listShippingCommandOff?deliveryStatusCode=C0231">대기목록</a>
+                    <a href="/admin/offStore/listRegistShippingOff">상품출고처리</a>
+                    <a href="/admin/offStore/offOrderReturn">반품처리</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt>쇼루밍</dt>
+                <dd>
+                    <a href="/admin/offStore/showOrderMain">매장결제 주문접수</a>
+                </dd>
+            </dl>
+<!-- 
+            <dl>
+                <dt>매장위치관리</dt>
+                <dd>
+                    <a href="/admin/offStore/saleZoneAdmin">매대 ZONE 관리</a>
+                    <a href="/admin/offStore/goodsZoneReg">검색어 등록</a>
+                    <a href="">검색어 관리</a>
+                    <a href="">실패검색어</a>
+                    <a href="">신고접수관리</a>
+                </dd>
+            </dl>
+ -->
+        </li>
+    </ul>
+</div>
+</div>
+                </li>
+            
+        
+    
+</ul>
+
+        </div>
+    </div><!-- end head -->
+    <hr />
+    <div id="body">
+        
+<div id="contents">
+<div id="contents-area">
+    <input type="hidden" value="" id="history_prmt"/>
+    <input type="hidden" value="" id="history_stat"/>
+    <input type="hidden" value= "" id="history_start"/>
+    <input type="hidden" value="" id="history_end"/>
+    <input type="hidden" value="" id="history_copy"/> 
+    
+    <h3>이벤트 등록</h3>
+    <form name="updateEventForm" method="post">
+        <input type="hidden" name="eventCriCode" value="C0221"/><!-- 사용안하고있음 -->
+        <h4>기본 정보</h4>
+        <div id="errorMessagesArea"></div>
+        
+        <input type="hidden" name="eventId" value=""/>
+        <div class="list-option">
+            <span class="button"><a href="javascript://" onclick="copyEvent('')">이벤트복사</a></span>
+        </div>
+        <div class="form-type">
+            <table class="table" summary="마스터 정보">
+                <colgroup>
+                    <col width="15%" />
+                    <col width="35%" />
+                    <col width="15%" />
+                    <col width="35%" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">몰구분</th>
+                        <td colspan="3">
+                            <select name="mallId" onchange="chkMallId()">
+                                <option value="00">전체</option>
+                                <option value="02">마더몰</option>
+                                <option value="01">교보몰</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">이벤트 제목</th>
+                        <td colspan="3"><input class="textbox" type="text" name="eventTitle" value="" style="width:98%;"/></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이벤트 부제목</th>
+                        <td colspan="3"><input class="textbox" type="text" name="eventDtlCont" value="" style="width:98%;"/></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이벤트 검색키워드</th>
+                        <td colspan="3"><input class="textbox" type="text" name="eventSrchWord" value="" style="width:98%;"/></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">진행 상태</th>
+                        <td><select name="eventStatCode">
+    <option value="C0181">정상</option>
+    <option value="C0182">일시중지</option>
+</select>
+</td>
+                        <th scope="row">승인 상태</th>
+                        <td><select name="prmtCode">
+    <option value="C0371">디자인요청</option>
+    <option value="C0372">작업중</option>
+    <option value="C0373">승인요청</option>
+    <option value="C0374">승인완료</option>
+</select>
+</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이벤트 시작일</th>
+                        <td><input class="textbox" type="text" name="eventStartDt" value="" readonly="readonly" id="eventStartDate" size="8"/></td>
+                        <th scope="row">이벤트 종료일</th>
+                        <td><input class="textbox" type="text" name="eventEndDt" value="" readonly="readonly" id="eventEndDate" size="8"/></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이벤트 기간<span class="info_box"><em class="box_cont">입력값이 있으면 시작일과 종료일 대신 이벤트 기간을 보여줌<br/>ex)~ 사은품 소진시까지</em></span></th>
+                        <td colspan="3"><input class="textbox" type="text" name="eventRangeInfo" value="" style="width:98%;"/></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이벤트 분류(내용)</th>
+                        <td>
+                            <select name="eventTypeCode" onchange="chkEventType(this.options[this.selectedIndex].value)" style="float:left;margin-right:10px;">
+                                <option value="">---- 선택 ----</option>
+                                <option value="C0195" >기본형</option>
+                                <option value="C0191" >상품A형[기본형]</option>
+                                <option value="C019C" >상품B형[배너형]</option>
+                                <option value="C0192" >코멘트A형[기본형]</option>
+                                <option value="C0197" >코멘트C형[선택형]</option>
+                                <option value="C019A" >코멘트D형[좋아요]</option>
+                                <option value="C019B" >큐레이션</option>
+                                <option value="C019D" >출석체크</option>
+                                <option value="C019E" >단계 이벤트(누적)</option>
+                                <option value="C019F" >단계 이벤트(초기)</option>
+                                <option value="C019G" >핫트타임</option>
+                                <option value="C019H" >핫트뿅뿅</option>
+                                <option value="C019I" >보이는이야기</option>
+                            </select>
+                            <p id="tabCount01">
+                                <span>|</span>
+                                <strong>라인별 타이틀 노출 수</strong> 
+                                <select name="offLineYn">
+                                    <option value="0" >탭형</option>
+                                    <option value="2" selected="selected">2개</option>
+                                    <option value="3" >3개</option>
+                                    <option value="4" >4개</option>
+                                </select>
+                            </p>
+                        </td>
+                        <th scope="row">이벤트 분류(메뉴)</th>
+                        <td>
+                            <select name="newEventDispTypeCode" onchange="chkEventDispType(this.options[this.selectedIndex].value)">
+                                <option value="">---- 선택 ----</option>
+                               	<option value="C1531" >상품기획전</option>
+                                <optgroup label="혜택 이벤트">
+                                    <option value="C1532" >쿠폰/혜택</option>
+                                    <option value="C1533" >컬처</option>
+                                    <option value="C1534" >우수고객존</option>
+                                </optgroup>
+                               	<option value="C1535" >라이브기획전</option>
+                            </select>
+                            <span>
+                            	<input type="radio" name="diaryEventYn" value="N" checked="checked"/>해당없음
+                                <input type="radio" name="diaryEventYn" value="Y" />다이어리 이벤트
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">카테고리</th>
+                        <td><input type="hidden" name="ctgrId" value="" /><div id="categorySelectArea" style="display:none"></div></td>
+                        <th scope="row">노출용 할인율</th>
+                        <td><input type="number" name="dispDscntRate" value=""/>%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <p>이벤트 업체 이름</p>
+                            <p>
+                                <input type="radio" name="vndrAllYn" value="true" onclick="chkAllVndrYn(this.value)" checked=""/>전체
+                                <input type="radio" name="vndrAllYn" value="false" onclick="chkAllVndrYn(this.value)" checked="checked"/>개별
+                            </p>
+                        </th>
+                        <td colspan="3">
+                            <div id="spanAllVndr" style="display:none">전체</div>
+                            <div id="spanIndVndr" style="display:block">
+                                <input class="textbox" type="hidden" name="inVndrId"/>
+                                <input class="textbox" type="text" name="inVndrName" readonly="readonly"/>
+                                <span class="button"><button type="button" onclick="searchVendor()">업체 찾기</button></span>
+                                <span class="button"><button type="button" onclick="addVendor()">추가</button></span>
+                                <div id="divVendorList">
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">담당 MD</th>
+                        <td colspan="3"><select name="mngrAdminId">
+    <option value="">---- 선택 ----</option>
+    <option value="10376">이주광</option>
+    <option value="10609">김한수</option>
+    <option value="10674">김현진</option>
+    <option value="10694">장연수</option>
+    <option value="10978">한지현</option>
+    <option value="11082">조정민</option>
+    <option value="11141">안지은</option>
+    <option value="11148">INFO</option>
+    <option value="11173">백선혜</option>
+    <option value="11214">유주헌</option>
+    <option value="11255">이미나</option>
+    <option value="11259">양준용</option>
+    <option value="11275">박상순</option>
+    <option value="11276">정지웅</option>
+    <option value="11279">노경선</option>
+    <option value="11314">장희정</option>
+    <option value="11321">최초롬</option>
+    <option value="11324">김성자</option>
+    <option value="11327">신경림</option>
+    <option value="11332">박지현</option>
+    <option value="11334">하태경</option>
+    <option value="11335">신수진</option>
+    <option value="11339">강수원</option>
+    <option value="11342">이아름</option>
+    <option value="11343">한유민</option>
+    <option value="11354">윤재필</option>
+    <option value="11355">이평화</option>
+    <option value="11359">이영준</option>
+    <option value="11362">전지언</option>
+    <option value="11363">김주희</option>
+    <option value="11364">채혜민</option>
+    <option value="11365">김한주</option>
+    <option value="11368">이상구</option>
+    <option value="11369">송주은</option>
+    <option value="11371">김소윤</option>
+    <option value="11372">정다은</option>
+    <option value="11373">유지은</option>
+    <option value="70124">이채원</option>
+    <option value="80064">이유진</option>
+    <option value="80410">이다은</option>
+    <option value="80465">유한영</option>
+    <option value="80466">윤선호</option>
+    <option value="80509">김연정</option>
+    <option value="80539">정다운</option>
+    <option value="80695">김영은</option>
+    <option value="80712">박재이</option>
+    <option value="90223">신수진</option>
+    <option value="90272">김형수</option>
+    <option value="90317">이주미</option>
+    <option value="hotmusic">사인회관리자</option>
+    <option value="md">MD관리자</option>
+    <option value="webtest">웹접근성</option>
+</select>
+</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">담당디자이너</th>
+                        <td><select name="dsnAdminId">
+    <option value="">---- 선택 ----</option>
+    <option value="11320">서유미</option>
+    <option value="11322">조소연</option>
+    <option value="11353">전찬규</option>
+    <option value="70123">김지우</option>
+    <option value="89064">이한결</option>
+    <option value="90204">유승연</option>
+    <option value="90222">임은영</option>
+    <option value="90257">김유준</option>
+    <option value="90271">장보람</option>
+    <option value="90274">김태령</option>
+    <option value="90275">강미소</option>
+    <option value="90280">안소라</option>
+    <option value="90298">이효인</option>
+    <option value="90302">이소라</option>
+    <option value="90311">이유경</option>
+    <option value="90316">강지훈</option>
+    <option value="90323">이소연</option>
+    <option value="90324">이유정</option>
+    <option value="90904">프리랜서</option>
+    <option value="K13091">방은선</option>
+</select>
+</td>
+                        <th scope="row">브랜드</th>
+                        <td>
+                            <input type="hidden" name="brandId" value=""/>
+                            <input type="text" name="brandName" value="" readonly="readonly"/>
+                            <span class="button" id="searchBrandPopup"><a>브랜드검색</a></span>
+                            <span class="button" id="deleteBrand"><a>삭제</a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">당첨자 발표 여부</th>
+                        <td>
+                            <input type="radio" name="pwnrRlsYn" onclick="chkPwnrRlsYn(this.value)" value="true" />발표
+                            <input type="radio" name="pwnrRlsYn" onclick="chkPwnrRlsYn(this.value)" value="false" checked="checked"/>미발표
+                            (발표 예정일 : <input class="textbox" type="text" id="pwnrRlsScdlDt" name="pwnrRlsScdlDt" value="" size="8" disabled/>)
+                        </td>
+                        <th scope="row">전시 화면 종류</th>
+                        <td>
+                            <select name="eventDispScrnCode">
+                                <option value="C0201" >755</option>
+                                <option value="C0202" selected="selected">950</option>
+                            </select>
+                            <span class="txt_info">※ 뮤직샵 이벤트는 950으로만 가능합니다.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">코멘트 비공개<span class="info_box"><em class="box_cont">본인을 제외한 타인이 작성한 코멘트를 별표(*)처리한다.</em></span></th>
+                        <td colspan="3">
+                            <span><input type="checkbox" name="dispStarYn" value="Y" />표시</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">카테고리배너 등록</th>
+                        <td colspan="3">
+                        	<input type="hidden" id="bnrDetlId" name="bnrDetlId" value=""/>
+                        	<div id="bnrArea" style="display:none">
+	                            <span><input type="checkbox" name="ctgrBnrYn" onchange="javascript:bnrChk(this);" />등록</span>
+	                            <div id="bnrImgBox" style="display:none;">
+	                            <table class="inner-table02 t_c" style="width:100%;">
+									<tbody>
+										<tr>
+											<td>
+												<p><strong>배너 이미지 [PC]</strong></p>
+												<p>(950 * 500)</p>
+												<input type="text" id="imageUrlPc" name="imageUrlPc" value=""/>
+												<p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="imageUrlPcImg" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+												<p>
+													<span class="button"><button type="button" onclick="findEventImage('imageUrlPc')">찾기</button></span>
+													<span class="button"><button type="button" onclick="removeEventImage('imageUrlPc')">삭제</button></span>
+												</p>
+											</td>
+											<td>
+												<p><strong>배너 이미지 [모바일]</strong></p>
+												<p>(750 * 660)</p>
+												 <input type="text" id="imageUrlMo" name="imageUrlMo" value=""/>
+												<p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="imageUrlMoImg" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+												<p>
+													<span class="button"><button type="button" onclick="findEventImage('imageUrlMo')">찾기</button></span>
+													<span class="button"><button type="button" onclick="removeEventImage('imageUrlMo')">삭제</button></span>
+												</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								</div>
+							</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">디자인 작업 전달 사항</th>
+                        <td colspan="3"><textarea name="dsnReqCont" rows="7" style="width:98%"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이벤트 이미지</th>
+                        <td colspan="3">
+                            
+                            <table class="inner-table02 t_c" style="width:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p><strong>썸네일[모바일]</strong></p>
+                                            <p>(750 * 380)</p>
+                                            <p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage0Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+                                            <p>
+                                                <input type="hidden" name="imageUrl" value="" id="eventImage0"/>
+                                                <input type="hidden" name="eventImageCode" value="C0381" />
+                                                <span class="button"><button type="button" onclick="findEventImage('eventImage0')">찾기</button></span>
+                                                <span class="button"><button type="button" onclick="removeEventImage('eventImage0')">삭제</button></span>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p><strong>썸네일[PC]</strong></p>
+                                            <p>(650 * 500)</p>
+                                            <p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage1Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+                                            <p>
+                                                <input type="hidden" name="imageUrl" value="" id="eventImage1"/>
+                                                <input type="hidden" name="eventImageCode" value="C0382"/>
+                                                <span class="button"><button type="button" onclick="findEventImage('eventImage1')">찾기</button></span>
+                                                <span class="button"><button type="button" onclick="removeEventImage('eventImage1')">삭제</button></span>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p><strong>라이브커머스 썸네일</strong></p>
+                                            <p>(230*350)</p>
+                                            <p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage5Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+                                            <p>
+                                                <input type="hidden" name="imageUrl" value="" id="eventImage5"/>
+                                                <input type="hidden" name="eventImageCode" value="C0387" />
+                                                <span class="button"><button type="button" onclick="findEventImage('eventImage5')">찾기</button></span>
+                                                <span class="button"><button type="button" onclick="removeEventImage('eventImage5')">삭제</button></span>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p><strong>버킷리스트 썸네일</strong></p>
+                                            <p>(200 * 200)</p>
+                                            <p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage6Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+                                            <p>
+                                                <input type="hidden" name="imageUrl" value="" id="eventImage6"/>
+                                                <input type="hidden" name="eventImageCode" value="C0388" />
+                                                <span class="button"><button type="button" onclick="findEventImage('eventImage6')">찾기</button></span>
+                                                <span class="button"><button type="button" onclick="removeEventImage('eventImage6')">삭제</button></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p><strong>상세내용[PC]</strong></p>
+                                            <p>(755 * ? / 950 * ?)</p>
+                                            <p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage3Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+                                            <p>
+                                                <input type="hidden" name="imageUrl" value="" id="eventImage3"/>
+                                                <input type="hidden" name="eventImageCode" value="C0384" />
+                                                <span class="button"><button type="button" onclick="findEventImage('eventImage3')">찾기</button></span>
+                                                <span class="button"><button type="button" onclick="removeEventImage('eventImage3')">삭제</button></span>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p><strong>상세내용 배경 [PC]</strong></p>
+                                            <p>(1920*?)</p>
+                                            <p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage8Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+                                            <p>
+                                                <input type="hidden" name="imageUrl" value="" id="eventImage8"/>
+                                                <input type="hidden" name="eventImageCode" value="C038A" />
+                                                <span class="button"><button type="button" onclick="findEventImage('eventImage8')">찾기</button></span>
+                                                <span class="button"><button type="button" onclick="removeEventImage('eventImage8')">삭제</button></span>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p><strong>상세내용 [모바일]</strong></p>
+                                            <p>(755 * ? / 950 * ?)</p>
+                                            <p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage7Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+                                            <p>
+                                                <input type="hidden" name="imageUrl" value="" id="eventImage7"/>
+                                                <input type="hidden" name="eventImageCode" value="C0389" />
+                                                <span class="button"><button type="button" onclick="findEventImage('eventImage7')">찾기</button></span>
+                                                <span class="button"><button type="button" onclick="removeEventImage('eventImage7')">삭제</button></span>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p><strong>음반상세 썸네일/핫딜 상세</strong></p>
+                                            <p>(240 * 240/750 * 90)</p>
+                                            <p><img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage4Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/></p>
+                                            <p>
+                                                <input type="hidden" name="imageUrl" value="" id="eventImage4"/>
+                                                <input type="hidden" name="eventImageCode" value="C0386" />
+                                                <span class="button"><button type="button" onclick="findEventImage('eventImage4')">찾기</button></span>
+                                                <span class="button"><button type="button" onclick="removeEventImage('eventImage4')">삭제</button></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사용자 템플릿</th>
+                        <td colspan="3">
+                            <p>
+                                <label><input type="radio" name="userTmplUseYn" onclick="chkUserTmplYn(this.value)" value="true" />사용함</label>
+                                <label><input type="radio" name="userTmplUseYn" onclick="chkUserTmplYn(this.value)" value="false" checked="checked"/>사용안함</label>
+                                (이미지맵 사용시 예 - &lt;map name="eventImageMap"&gt;....&lt;/map&gt;)<br/>
+                                (응모하기 사용시 예- &lt;area .... href="javascript:entryEvent();"&gt; )
+                            </p>
+                            <p><textarea name="userTmpl" rows="7" style="width:98%;font-size: 20px;display:none;"></textarea></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">모바일 템플릿<span class="info_box"><em class="box_cont">상세내용[모바일] 이미지가 없으면 적용 되지 않습니다.</em></span></th>
+                        <td colspan="3">
+                            
+                            
+                            
+                                <p>
+                                    <label><input type="radio" name="mobTmplUseYn" onclick="chkMobTmplYn(this.value)" value="true" />사용함</label>
+                                    <label><input type="radio" name="mobTmplUseYn" onclick="chkMobTmplYn(this.value)" value="false" checked ="checked" /> 사용안함</label>
+                                    (이미지맵 사용시 예 - &lt;map name="eventImageMap"&gt;....&lt;/map&gt;)
+                               </p>
+                               <p><textarea name="mobTmpl" rows="7" style="width:98%;font-size: 20px;display:none;"></textarea></p>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">추가 템플릿</th>
+                        <td colspan="3">
+                            <p style="margin-bottom:5px;">
+                                <label><input type="radio" name="userTmplHtmlYn" value="" checked="checked"/>사용안함</label>
+                                <label><input type="radio" name="userTmplHtmlYn" value="A" />동영상 템플릿</label>
+                                <label><input type="radio" name="userTmplHtmlYn" value="B" />롤링 템플릿</label>
+                                <label><input type="radio" name="userTmplHtmlYn" value="C" />기본형컨셉A</label>
+                                <label><input type="radio" name="userTmplHtmlYn" value="D" />기본형컨셉B</label>
+                                <label><input type="radio" name="userTmplHtmlYn" value="E" />기본형컨셉C</label>
+                                <label><input type="radio" name="userTmplHtmlYn" value="F" />기본형컨셉D</label>
+                            </p>
+                            <div id="template"></div>
+                            <textarea name="userTmplHtml" rows="7" cols="200" style="width :98%;font-size: 20px;"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">전시여부[PC]</th>
+                        <td>
+                            <label><input type="radio" name="dispYn" value="true" checked="checked"/> 전시함</label>
+                            <label><input type="radio" name="dispYn" value="false" checked="checked"/> 전시안함</label>
+                        </td>
+                        <th scope="row">전시여부[모바일]<span class="info_box"><em class="box_cont">모바일 이벤트목록에 노출 여부이며 상품 할인과는 관련이 없습니다.</em></span></th>
+                        <td>
+                            <label><input type="radio" name="onLineYn" value="true" checked="checked"/> 전시함</label>
+                            <label><input type="radio" name="onLineYn" value="false" checked="checked"/> 전시안함</label>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <br/>
+            <div id="divCommentEventA" style="display:none;">
+                <h4>코멘트 A형 이벤트 정보</h4>
+                <span>
+                    
+                </span>
+            </div>
+            <div id="divCommentEventD" style="display:none;">
+                <h4>코멘트 D형 이벤트 정보</h4>
+                <span>
+                    
+                </span>
+            </div>
+            <div class="divC019E" style="display:none;"> 
+                <h4>단계 이벤트 정보(누적)</h4>
+                    <div>
+                        <span class="layer_step" >
+                        <span>헤더 이미지<br/></span>
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage9Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                            <input type="hidden" name="imageUrl" value="" id="eventImage9"/>
+                            <input type="hidden" name="eventImageCode" value="C038C" />
+                        </span>
+                        <span class="button"><button type="button" onclick="findEventImage('eventImage9')">찾기</button></span>
+                        <span class="button"><button type="button" onclick="removeEventImage('eventImage9')">삭제</button></span>
+                    </div>
+                    <div>
+                        <span class="layer_step">
+                        <span>풋터 이미지<br/></span>
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage10Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                            <input type="hidden" name="imageUrl" value="" id="eventImage10"/>
+                            <input type="hidden" name="eventImageCode" value="C038D" />
+                        </span>
+                        <span class="button"><button type="button" onclick="findEventImage('eventImage10')">찾기</button></span>
+                        <span class="button"><button type="button" onclick="removeEventImage('eventImage10')">삭제</button></span>
+                    </div>
+                    <div>
+                        <span class="layer_step" >
+                        <span>TOP 기본 이미지<br/></span>
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage11Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                            <input type="hidden" name="imageUrl" value="" id="eventImage11"/>
+                            <input type="hidden" name="eventImageCode" value="C038E" />
+                        </span>
+                        <span class="button"><button type="button" onclick="findEventImage('eventImage11')">찾기</button></span>
+                        <span class="button"><button type="button" onclick="removeEventImage('eventImage11')">삭제</button></span>
+                    </div>
+            </div>
+            <div class="divC019F" style="display:none;"> 
+                <h4>단계 이벤트 정보(초기화)</h4>
+                    <div>
+                        <span class="layer_step" >
+                        <span>헤더 이미지<br/></span>
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage9Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                            <input type="hidden" name="imageUrl" value="" id="eventImage9"/>
+                            <input type="hidden" name="eventImageCode" value="C038C" />
+                        </span>
+                        <span class="button"><button type="button" onclick="findEventImage('eventImage9')">찾기</button></span>
+                            <span class="button"><button type="button" onclick="removeEventImage('eventImage9')">삭제</button></span>
+                     </div>
+                     <div>
+                        <span class="layer_step">
+                        <span>풋터 이미지<br/></span>
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage10Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                            <input type="hidden" name="imageUrl" value="" id="eventImage10"/>
+                            <input type="hidden" name="eventImageCode" value="C038D" />
+                        </span>
+                        <span class="button"><button type="button" onclick="findEventImage('eventImage10')">찾기</button></span>
+                        <span class="button"><button type="button" onclick="removeEventImage('eventImage10')">삭제</button></span>
+                     </div>
+                     <div>
+                        <span class="layer_step" >
+                        <span>TOP 기본 이미지<br/></span>
+                        <img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage11Img" width="150" height="100" style="border:1px solid #999" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+                            <input type="hidden" name="imageUrl" value="" id="eventImage11"/>
+                            <input type="hidden" name="eventImageCode" value="C038E" />
+                        </span>
+                        <span class="button"><button type="button" onclick="findEventImage('eventImage11')">찾기</button></span>
+                        <span class="button"><button type="button" onclick="removeEventImage('eventImage11')">삭제</button></span>
+                    </div>
+            </div>
+            <div class="form-button">
+                <span class="button"><input type="button" onclick="checkEventForm()" value="저장"/></span>
+                
+                <span class="button"><a href="/admin/banner/eventMasterList?mallId=00&searchType=Q&&leftDateByEnd=0&maxLength=0&page=1">목록</a></span>
+                
+            </div><!-- end write-button -->
+        </div><!-- end form-type -->
+    </form>
+    
+</div><!-- end contents-area -->
+</div><!-- end contents -->
+
+    </div><!-- end body -->
+    
+    <hr />
+    <div id="foot">
+        <address>
+            상호명 : 교보핫트랙스(주) 대표이사 :  오교철   주소 : 10881 경기 파주시 회동길 78(출판단지 내) 사업자등록번호 : 102-81-29258 고객 관리 책임자 : 김재식 (PRIVACY@HOTTRACKS.CO.KR)
+        </address>
+        <p class="copyright">Copyright 2007 by Kyobo Hottracks Co.LTD., Allright reserved</p>
+        <p class="logo">핫트랙스</p>
+    </div><!-- end foot -->
+</div><!-- end wrap -->
+<div class="page_nav">
+    <div class="nav_inner">
+        <div class="nav_left">
+            <a href="/"><img alt="메인페이지로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_home.png"></a>
+            <a href="javascript:history.back();"><img alt="이전페이지로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_prev.png"></a>
+            <a href="javascript:history.forward();"><img alt="다음페이지로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_next.png"></a>
+        </div>
+        <div class="nav_info">
+            <p>
+                
+                <a href="/admin/editMypageAdmin"><u>관리자</u></a>님, 안녕하세요.
+            </p>
+        </div>
+        <div class="nav_right">
+            <a onclick="$('html,body').animate({'scrollTop':0},200);return false;" href="#"><img alt="위로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_up.png"></a>
+            <a onclick="$('html,body').animate({'scrollTop':$(document).height()},200);return false;" href="#"><img alt="아래로" src="http://image.kyobobook.co.kr/kiosk/images/btn_nav_down.png"></a>
+        </div>
+        <div class="nav_site">
+            <select onchange="if(this.value != ''){ window.open(this.value, '_blank', '');this.value = ''; }">
+                <option value="">===== 관련사이트 =====</option>
+                <optgroup label="온라인 쇼핑몰">
+                    <option value="http://www.hottracks.co.kr/">핫트랙스몰</option>
+                    <option value="http://gift.kyobobook.co.kr/">교보문고|기프트몰</option>
+                    <option value="http://music.kyobobook.co.kr/">교보문고|음반몰</option>
+                    
+                        <option value="http://music.hottracks.co.kr/">핫트랙스|음반검색기</option>
+                    
+                </optgroup>
+                <optgroup label="관리자 사이트">
+                    <option value="http://partner.hottracks.co.kr/">파트너포탈</option>
+                    <option value="https://www.bill36524.com/main.jsp">BILL36524</option>
+                    
+                        <option value="http://khflow.hottracks.co.kr/">통합유통시스템</option>
+                        <option value="http://hotline.hottracks.co.kr/">핫라인</option>
+                    
+                </optgroup>
+            </select>
+        </div>
+    </div>
+</div>
+</body>
+</html>
