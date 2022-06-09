@@ -6,118 +6,122 @@
 $imgUrl : "../images/";*/
 /*$fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";*/
 /***** 비회원 주문조회 *****/
-body,
-.wrapper {
-  min-width: initial;
-}
-
 .wrapper.ht_ .cont_wrap {
-  padding-bottom: 51px;
+  min-height: calc(100vh - 60px);
+  padding-bottom: 0;
 }
 
 .cont_wrap {
-  text-align: center;
   margin-top: 0;
 }
 
-.cont_wrap .ht_join_wrap {
-  padding: 20px 20px 0;
+.ht_join_wrap {
+  padding: 20px 20px 200px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-align: center;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_logo img {
+.ht_join_wrap .ht_join_logo img {
   width: 78px;
 }
 
-.cont_wrap .ht_join_wrap .join_text {
+.ht_join_wrap .join_text {
   margin-top: 43px;
 }
 
-.cont_wrap .ht_join_wrap .join_text strong {
+.ht_join_wrap .join_text strong {
   font-size: 20px;
 }
 
-.cont_wrap .ht_join_wrap .join_text p {
+.ht_join_wrap .join_text p {
+  margin-top: 8px;
+  color: #595959;
   font-size: 13px;
   font-weight: 400;
   line-height: 19px;
-  margin-top: 8px;
-  color: #595959;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form {
-  margin-top: 33px;
+.ht_join_wrap .ht_join_form {
+  margin-top: 32px;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form span:first-child {
+.ht_join_wrap .ht_join_form span:first-child {
   margin-top: 0;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form > span {
-  font-size: 14px;
-  font-weight: 500;
+.ht_join_wrap .ht_join_form > span {
   display: block;
   margin-top: 22px;
+  font-size: 14px;
+  font-weight: 500;
   text-align: left;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form .form_sel {
+.ht_join_wrap .ht_join_form .form_sel {
   width: 100%;
   margin-top: 7px;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form .form_sel .form_ip {
+.ht_join_wrap .ht_join_form .form_sel .form_ip {
   height: 50px;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form.btn_cont_type {
+.ht_join_wrap .ht_join_form.btn_cont_type {
   margin-top: 31px;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form.btn_cont_type .btn_area {
+.ht_join_wrap .ht_join_form.btn_cont_type .btn_area {
   margin-top: 19px;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form.btn_cont_type .btn_area + span {
+.ht_join_wrap .ht_join_form.btn_cont_type .btn_area + span {
+  margin-top: 10px;
+  color: #595959;
   font-size: 13px;
   font-weight: 400;
-  color: #595959;
-  margin-top: 10px;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_form.btn_cont_type + .ht_join_info {
+.ht_join_wrap .ht_join_form.btn_cont_type + .ht_join_info {
   padding: 13px 0 19px 0;
 }
 
-.cont_wrap .ht_join_wrap .btn_area {
+.ht_join_wrap .btn_area {
   margin-top: 16px;
   padding: 0;
 }
 
-.cont_wrap .ht_join_wrap .btn_area button {
+.ht_join_wrap .btn_area button {
   width: 100%;
   font-weight: 700;
 }
 
-.cont_wrap .ht_join_wrap .ht_join_info {
-  font-size: 13px;
-  color: #595959;
-  background: #F7F7F7;
+.ht_join_wrap .ht_join_info {
+  position: absolute;
+  left: 50%;
+  bottom: 52px;
+  width: calc(100% - 40px);
+  background: #f7f7f7;
   padding: 22px 0 19px 0;
-  margin-top: 119px;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #595959;
+  font-size: 13px;
+  line-height: 19px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
-.cont_wrap .ht_join_wrap .ht_join_info p {
+.ht_join_wrap .ht_join_info p {
   margin-top: 9px;
 }
 
-.cont_wrap .copyright {
+.ht_join_copyright {
   position: absolute;
-  bottom: 18px;
   left: 50%;
+  bottom: 18px;
+  font-size: 11px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  font-size: 11px;
 }
