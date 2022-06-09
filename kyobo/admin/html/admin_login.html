@@ -1,0 +1,83 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Hottracks 관리자 시스템</title>
+<link rel="stylesheet" type="text/css" href="/styles/base.css" />
+<link rel="stylesheet" type="text/css" href="/styles/admin.css" />
+<script type="text/javascript" src="/scripts/jquery/jquery-1.4.2.min.js"></script>  
+<script type="text/javascript">
+if (document.location.protocol == 'http:') {
+    document.location.href = document.location.href.replace('http:', 'https:');
+}
+
+jQuery(function($){
+    $(document).ready(function(){
+        $("#admin-id").focus();
+    });
+});
+
+function capLock(e){
+    kc = e.keyCode?e.keyCode:e.which;
+    sk = e.shiftKey?e.shiftKey:((kc == 16)?true:false);
+    if(((kc >= 65 && kc <= 90) && !sk)||((kc >= 97 && kc <= 122) && sk)){
+        // showMessage("CAPSLOCK이 눌려있습니다.", 'success');
+        $("#lyNotiCapsLock").fadeIn();
+    }else{
+        $("#lyNotiCapsLock").hide();
+        // setTimeout(function(){ $("#lyNotiCapsLock").fadeOut(); }, 2000);
+    }
+}
+</script>
+
+
+
+
+
+
+<!-- ht_ Hottracks Admin css -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link rel="stylesheet" type="text/css" href="../css/ht_admin.css">
+<!-- //ht_ Hottracks Admin css -->
+</head>
+<body class="admin_login">
+<section class="admin_login_section">
+    <div class="admin_login_wrap">
+        <h1><img src="../images/layout/logo.svg" alt="핫트랙스" /></h1>
+        <div class="admin_login_contents">
+            <h2>Login</h2>
+            <p>
+                교보핫트랙스 관리자 화면입니다.<br>
+                이용하시려면 로그인을 해야 합니다.
+            </p>
+            <div class="form_wrap">
+                <div class="form_sel">
+                    <input type="text" class="form_ip" placeholder="아이디">
+                </div>
+                <div class="form_sel">
+                    <input type="password" class="form_ip" placeholder="비밀번호">
+                </div>
+
+                <span class="form_chk">
+                    <input id="exChk01" type="checkbox" >
+                    <label for="exChk01">아이디 저장</label>
+                </span>
+
+                <div class="btn_area">
+                    <button>로그인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+        
