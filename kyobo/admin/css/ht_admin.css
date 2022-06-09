@@ -321,7 +321,8 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   border: 1px solid #ccc !important;
   color: #000;
   padding: 0 16px !important;
-  line-height: 36px !important;
+  line-height: 30px !important;
+  height: 30px !important;
 }
 
 #body div.list-type table.table tbody tr td input + .button a {
@@ -332,6 +333,11 @@ h4 span.button a, h4 span.button button, h4 span.button input {
 
 #body div.list-type table.table tbody tr td:last-child {
   border-right: 0;
+}
+
+#body div.list-type table.table tbody tr td div .button a {
+  line-height: 36px !important;
+  height: 36px !important;
 }
 
 #body div.list-type table.table tbody tr th {
@@ -553,5 +559,46 @@ input[type=radio]:checked {
 }
 
 input[type=radio]:checked:before {
+  display: none;
+}
+
+input[type=checkbox] {
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  padding: 2px;
+  border: 1px solid #ccc !important;
+  position: relative;
+  margin-right: 3px;
+  margin-top: -2px;
+  background-repeat: no-repeat;
+  background-size: 7px 5px;
+  background-image: url(../images/layout/ico_checkbox@2x.png);
+  background-position: 2px 3px;
+}
+
+input[type=checkbox] + input {
+  margin-left: 8px;
+}
+
+input[type=checkbox]:checked {
+  background-color: #DA2128;
+  border: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-size: 7px 5px;
+  background-image: url("../images/layout/ico_checkbox_active@2x.png");
+  background-position: 3px 4px;
+}
+
+input[type=checkbox]:checked:before {
   display: none;
 }
