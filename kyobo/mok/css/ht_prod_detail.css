@@ -6545,10 +6545,20 @@ button.btn_md_second {
 }
 
 .multi_review_area .byte_check_wrap + .reply_list {
+  margin-top: 20px;
+}
+
+.multi_review_area .byte_check_wrap + .reply_list:first-child {
+  margin-top: 0;
+  padding-top: 12px;
+  border-top: 1px solid #eaeaea;
+}
+
+.multi_review_area .byte_check_wrap:not([style*="display:none"]):not([style*="display: none"]) + .reply_list {
   margin-top: 12px;
 }
 
-.multi_review_area .byte_check_wrap + .reply_list .reply_list_item:first-child {
+.multi_review_area .byte_check_wrap:not([style*="display:none"]):not([style*="display: none"]) + .reply_list .reply_list_item:first-child {
   padding-top: 0;
   border: 0;
 }
