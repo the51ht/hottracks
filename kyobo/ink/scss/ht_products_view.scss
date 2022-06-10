@@ -1125,6 +1125,12 @@
                 display:block;position:absolute;left:0;top:4px;width:13px;height:9px;background:url('#{$imgUrl}guide/ico_quotation.svg') center/100% no-repeat;content:"";
             }
         }
+        .ico_quotation_emp {
+            display:inline-block;position:relative;padding-left:18px;vertical-align:top;
+            &:before {
+                display:block;position:absolute;left:0;top:4px;width:13px;height:9px;background:url('#{$imgUrl}guide/ico_quotation_emp.svg') center/100% no-repeat;content:"";
+            }
+        }
     }
     .list_msg {
         position:relative;margin-top:30px;font-size:0;
@@ -1425,10 +1431,19 @@
         top:46px;
     }
 }
+.fold_tit + .review_btn_common {
+    position:static;margin-top:15px;text-align:right;
+}   
+
 .review_btn_common {
     position:absolute;right:2px;bottom:0;color:#767676;font-size:13px;line-height:19px;
     button {
         margin-left:15px;
+        &:disabled {
+            span {
+                opacity:0.4;
+            }
+        }
     }
     .btn_good {
         span {
@@ -1601,15 +1616,33 @@
 
 /*** review_reply ***/
 .review_reply {
-    position:relative;margin-top:20px;padding-top:20px;border-top:1px solid #eaeaea;
+    position:relative;
+    >.byte_check_wrap {
+        position:relative;margin-top:42px;overflow:initial;
+        &:before {
+            position:absolute;left:0;top:-21px;width:100%;height:1px;background-color:#eaeaea;content:"";
+        }
+    }
 }
-.reply_confirmation{
+
+.byte_check_wrap + .reply_list {
+    margin-top:20px;
+    &:first-child {
+        margin-top:0;padding-top:20px;border-top:1px solid #eaeaea;
+        
+    }
+}
+
+.byte_check_wrap:not([style*="display:none"]):not([style*="display: none"]) + .reply_list {
     margin-top:10px;
+    .reply_list_item {
+        &:first-child {
+            padding-top:0;border:0;
+
+        } 
+    }
 }
-.byte_check_wrap + .reply_list,
-.reply_list + .byte_check_wrap{
-    margin-top:10px;
-}
+
 .byte_check_wrap {
     transition:border 0.4s;
     &.on {
@@ -1621,7 +1654,7 @@
 .reply_list_item {
     margin-top:10px;
     &:first-child {
-        margin-top:0;
+        margin-top:0;padding-top:20px;border-top:1px solid #eaeaea;
     }
     .info_text {
         color:#000;
