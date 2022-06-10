@@ -53,6 +53,169 @@ h4 {
 
 /********** 22.06.08 Admin 수정 **********/
 
+/*** GNB ***/
+#head {
+    h1{
+        background: #000;padding: 37px 41px 34px;position: relative;
+        a{
+            color: #fff;font-size: 20px;
+            img{
+                opacity: 0;margin-right: 11px;margin-top: -8px;width: 82px;height:24px;display: inline-block;
+            }
+            &:after{
+                content: "";display: inline-block;width: 85px; height: 24px;background: url(../images/layout/logo.svg) no-repeat;position: absolute;top: 42px;left: 41px;background-size: cover;
+            }
+        }
+    }
+    div.global-menu{
+        z-index: 1;text-align: left;top: 32px;left: 334px;
+        .manual {
+            margin-left: -8px;margin-top: 4px;
+            a{
+                font-weight: 500;color: #FFFFFF;opacity: 0.7;font-size: 13px !important;padding: 0 7px !important;
+            }
+
+            span.button{
+                position: relative;
+                &:after{
+                    content: "";display: inline-block;width: 1px;height: 10px;background: #D5D5D5;position: absolute;top: 9px;right: -4px;opacity: 0.3;
+                }
+            }
+            > span:last-child{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+        strong{
+            color: #D4FF1A;position: relative;font-size: 13px;
+            &:after {
+                content: "";display: inline-block;width: 18px;height: 18px;background: url(../images/layout/ico_grinning_face.png) no-repeat;position: absolute;top: -1px;right: -18px;
+            }
+        }
+        span + span{
+            border-left: 0;
+        }
+        .txt_user ~ span{
+            position: absolute;
+            a{
+                color:#fff; font-size: 13px;position: relative;
+                &:after{
+                    content: "";display: inline-block;width: 1px;height: 10px;background: #D5D5D5;opacity: 0.3;position: absolute;top: 2px;right: -10px;
+                }
+            }
+            &:nth-child(2){
+                right: 291px;
+                top:0px;
+            }
+            &:nth-child(3){
+                right: 210px;
+                top:0px;
+            }
+            &:nth-child(4){
+                right: 142px;
+                top:0px;
+            }
+            &:nth-child(5){
+                right: 74px;
+                top:0px;
+            }
+            &:nth-child(6){
+                right:19px;
+                top:0;
+                a{
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+/*** Page Nav ***/
+.page_nav {
+    bottom: 26px;
+    .nav_site{
+        padding: 9px 5px;
+        select{
+            margin: 2.5px 24px 2.5px 1px !important;
+        }
+    }
+    .nav_info p{
+        color: #000;position:relative;padding-top: 1px;
+        &:after{
+            content: "";display: inline-block;width:18px;height:18px;background: url(../images/layout/ico_grinning_face.png) no-repeat;position: absolute;top: 21px;right: -20px;
+        }
+        a{
+            color: #474C98; font-weight: 700; 
+        }
+    }
+    .nav_inner{
+        background-color: #fff;border: 2px solid #000;border-radius: 6px;box-shadow: 2px 2px #000;box-sizing: border-box;max-width: 1204px;height: 64px;
+    }
+    .nav_left {
+        > a:hover{
+            background-color: #aaa;
+        }
+        > a:first-child {
+            position: relative;
+            &:before{
+                content: ""; display: inline-block; width: 60px; height: 60px;background: url(../images/layout/home.png) no-repeat;position: absolute;top: 0;
+            }
+            img{
+                opacity: 0; width: 60px; height: 60px;
+            }
+             
+        }
+        > a:nth-child(2) {
+            position: relative;
+            &:before{
+                content: ""; display: inline-block; width: 60px; height: 60px;background: url(../images/layout/prev.png) no-repeat;position: absolute;top: 0;
+            }
+            img{
+                opacity: 0; width: 60px; height: 60px;
+            }
+        }
+        > a:nth-child(3) {
+            position: relative;
+            &:before{
+                content: ""; display: inline-block; width: 60px; height: 60px;background: url(../images/layout/next.png) no-repeat;position: absolute;top: 0;
+            }
+            img{
+                opacity: 0; width: 60px; height: 60px;
+            }
+        }
+    }
+    .nav_right {
+        > a:hover{
+            background-color: #aaa;
+        }
+        > a:first-child {
+            position: relative;
+            &:before{
+                content: ""; display: inline-block; width: 60px; height: 60px;background: url(../images/layout/down.png) no-repeat;position: absolute;top: 0;
+            }
+            img{
+                opacity: 0; width: 60px; height: 60px;
+            }
+        }
+        > a:nth-child(2) {
+            position: relative;
+            &:before{
+                content: ""; display: inline-block; width: 60px; height: 60px;background: url(../images/layout/top.png) no-repeat;position: absolute;top: 0;
+            }
+            img{
+                opacity: 0; width: 60px; height: 60px;
+            }
+        }
+    }
+}
+
+
 /*** Admin Login ***/
 .admin_login{
     margin:0;
@@ -115,9 +278,6 @@ h4 {
         }
     }
 }
-
-
-
 
 /*** Admin Main ***/
 #body h4{
@@ -220,14 +380,10 @@ td {
             height: 36px !important;border: 1px solid #ccc !important;color: #000;font-weight: 700;line-height: 36px !important;margin-top: 0 !important;margin: 0 1px !important;
         }
     }
-    
 }
-
 input[name=stDisp]{
     width: 30px !important;
 }
-
-
 ul li input[type=text]{
     width: 30px !important;
     margin:3px 0!important;
@@ -235,7 +391,6 @@ ul li input[type=text]{
         margin-left: 7px !important;width: 150px !important;
     }
 }
-
 input[type=text], 
 input[type=number],
 input[name=searchVal]{
@@ -276,7 +431,6 @@ input[type=number]{
             p + p{
                 margin-top: 5px;
             }
-            
         }
         td td{
             border-bottom: 0;
@@ -287,7 +441,6 @@ input[type=number]{
             }
         }
     }
-    
 }
 textarea{
     border-radius: 6px !important;
@@ -295,8 +448,6 @@ textarea{
 td span.button button{
     padding: 0 15px !important;
 }
-
-
 label {
     margin: 5px 0; display: inline-block;
     & + label{
@@ -332,16 +483,15 @@ input[type=checkbox]:checked{
 }
 span.button.small{
     margin-right: -3px !important;
+    a{
+        border: 0 !important; 
+    }
 }
-#body div.pager a{
-    margin-right: 10px !important;
-}
-span.button.small a{
-    border: 0 !important; 
-}
-#body div.pager strong{
-    background: #000;border-radius: 100%;border: 0;font-size: 12px;width: 26px;height: 21px;padding: 5px 0 0;margin-right: 6px; 
-}
-#body div.pager a{
-    border:0;
+#body div.pager {
+    a{
+        margin-right: 10px !important;border:0;
+    }
+    strong{
+        background: #000;border-radius: 100%;border: 0;font-size: 12px;width: 26px;height: 21px;padding: 5px 0 0;margin-right: 6px; 
+    }
 }

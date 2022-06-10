@@ -56,6 +56,306 @@ h4 span.button a, h4 span.button button, h4 span.button input {
 }
 
 /********** 22.06.08 Admin 수정 **********/
+/*** GNB ***/
+#head h1 {
+  background: #000;
+  padding: 37px 41px 34px;
+  position: relative;
+}
+
+#head h1 a {
+  color: #fff;
+  font-size: 20px;
+}
+
+#head h1 a img {
+  opacity: 0;
+  margin-right: 11px;
+  margin-top: -8px;
+  width: 82px;
+  height: 24px;
+  display: inline-block;
+}
+
+#head h1 a:after {
+  content: "";
+  display: inline-block;
+  width: 85px;
+  height: 24px;
+  background: url(../images/layout/logo.svg) no-repeat;
+  position: absolute;
+  top: 42px;
+  left: 41px;
+  background-size: cover;
+}
+
+#head div.global-menu {
+  z-index: 1;
+  text-align: left;
+  top: 32px;
+  left: 334px;
+}
+
+#head div.global-menu .manual {
+  margin-left: -8px;
+  margin-top: 4px;
+}
+
+#head div.global-menu .manual a {
+  font-weight: 500;
+  color: #FFFFFF;
+  opacity: 0.7;
+  font-size: 13px !important;
+  padding: 0 7px !important;
+}
+
+#head div.global-menu .manual span.button {
+  position: relative;
+}
+
+#head div.global-menu .manual span.button:after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #D5D5D5;
+  position: absolute;
+  top: 9px;
+  right: -4px;
+  opacity: 0.3;
+}
+
+#head div.global-menu .manual > span:last-child:after {
+  display: none;
+}
+
+#head div.global-menu strong {
+  color: #D4FF1A;
+  position: relative;
+  font-size: 13px;
+}
+
+#head div.global-menu strong:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/layout/ico_grinning_face.png) no-repeat;
+  position: absolute;
+  top: -1px;
+  right: -18px;
+}
+
+#head div.global-menu span + span {
+  border-left: 0;
+}
+
+#head div.global-menu .txt_user ~ span {
+  position: absolute;
+}
+
+#head div.global-menu .txt_user ~ span a {
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+}
+
+#head div.global-menu .txt_user ~ span a:after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: #D5D5D5;
+  opacity: 0.3;
+  position: absolute;
+  top: 2px;
+  right: -10px;
+}
+
+#head div.global-menu .txt_user ~ span:nth-child(2) {
+  right: 291px;
+  top: 0px;
+}
+
+#head div.global-menu .txt_user ~ span:nth-child(3) {
+  right: 210px;
+  top: 0px;
+}
+
+#head div.global-menu .txt_user ~ span:nth-child(4) {
+  right: 142px;
+  top: 0px;
+}
+
+#head div.global-menu .txt_user ~ span:nth-child(5) {
+  right: 74px;
+  top: 0px;
+}
+
+#head div.global-menu .txt_user ~ span:nth-child(6) {
+  right: 19px;
+  top: 0;
+}
+
+#head div.global-menu .txt_user ~ span:nth-child(6) a:after {
+  display: none;
+}
+
+/*** Page Nav ***/
+.page_nav {
+  bottom: 26px;
+}
+
+.page_nav .nav_site {
+  padding: 9px 5px;
+}
+
+.page_nav .nav_site select {
+  margin: 2.5px 24px 2.5px 1px !important;
+}
+
+.page_nav .nav_info p {
+  color: #000;
+  position: relative;
+  padding-top: 1px;
+}
+
+.page_nav .nav_info p:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../images/layout/ico_grinning_face.png) no-repeat;
+  position: absolute;
+  top: 21px;
+  right: -20px;
+}
+
+.page_nav .nav_info p a {
+  color: #474C98;
+  font-weight: 700;
+}
+
+.page_nav .nav_inner {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 6px;
+  -webkit-box-shadow: 2px 2px #000;
+          box-shadow: 2px 2px #000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 1204px;
+  height: 64px;
+}
+
+.page_nav .nav_left > a:hover {
+  background-color: #aaa;
+}
+
+.page_nav .nav_left > a:first-child {
+  position: relative;
+}
+
+.page_nav .nav_left > a:first-child:before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../images/layout/home.png) no-repeat;
+  position: absolute;
+  top: 0;
+}
+
+.page_nav .nav_left > a:first-child img {
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.page_nav .nav_left > a:nth-child(2) {
+  position: relative;
+}
+
+.page_nav .nav_left > a:nth-child(2):before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../images/layout/prev.png) no-repeat;
+  position: absolute;
+  top: 0;
+}
+
+.page_nav .nav_left > a:nth-child(2) img {
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.page_nav .nav_left > a:nth-child(3) {
+  position: relative;
+}
+
+.page_nav .nav_left > a:nth-child(3):before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../images/layout/next.png) no-repeat;
+  position: absolute;
+  top: 0;
+}
+
+.page_nav .nav_left > a:nth-child(3) img {
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.page_nav .nav_right > a:hover {
+  background-color: #aaa;
+}
+
+.page_nav .nav_right > a:first-child {
+  position: relative;
+}
+
+.page_nav .nav_right > a:first-child:before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../images/layout/down.png) no-repeat;
+  position: absolute;
+  top: 0;
+}
+
+.page_nav .nav_right > a:first-child img {
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.page_nav .nav_right > a:nth-child(2) {
+  position: relative;
+}
+
+.page_nav .nav_right > a:nth-child(2):before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../images/layout/top.png) no-repeat;
+  position: absolute;
+  top: 0;
+}
+
+.page_nav .nav_right > a:nth-child(2) img {
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+}
+
 /*** Admin Login ***/
 .admin_login {
   margin: 0;
@@ -658,12 +958,13 @@ span.button.small {
   margin-right: -3px !important;
 }
 
-#body div.pager a {
-  margin-right: 10px !important;
-}
-
 span.button.small a {
   border: 0 !important;
+}
+
+#body div.pager a {
+  margin-right: 10px !important;
+  border: 0;
 }
 
 #body div.pager strong {
@@ -675,8 +976,4 @@ span.button.small a {
   height: 21px;
   padding: 5px 0 0;
   margin-right: 6px;
-}
-
-#body div.pager a {
-  border: 0;
 }
