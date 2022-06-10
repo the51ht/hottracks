@@ -1910,6 +1910,24 @@
   content: "";
 }
 
+.msg_box p .ico_quotation_emp {
+  display: inline-block;
+  position: relative;
+  padding-left: 18px;
+  vertical-align: top;
+}
+
+.msg_box p .ico_quotation_emp:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 13px;
+  height: 9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/guide/ico_quotation_emp.svg") center/100% no-repeat;
+  content: "";
+}
+
 .msg_box .list_msg {
   position: relative;
   margin-top: 30px;
@@ -2221,19 +2239,19 @@
   margin-left: 0;
 }
 
-.fold_tit .tit {
-  color: #000;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-}
-
-.fold_tit .tit .tit_info {
+.fold_tit .tit_info {
   display: block;
   margin-bottom: 10px;
   color: #767676;
   font-size: 13px;
   font-weight: 400;
+}
+
+.fold_tit .tit {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .fold_tit .tit_s {
@@ -2427,7 +2445,8 @@
   margin: 0;
 }
 
-.fold_btn {
+.fold_btn,
+.fold_btn_a {
   display: block;
   width: 100%;
   margin-top: 10px;
@@ -2435,13 +2454,15 @@
           box-sizing: border-box;
 }
 
-.fold_btn button {
+.fold_btn button,
+.fold_btn_a button {
   display: inline-block;
   text-align: left;
   cursor: pointer;
 }
 
-.fold_btn span {
+.fold_btn span,
+.fold_btn_a span {
   display: inline-block;
   position: relative;
   padding-right: 24px;
@@ -2450,7 +2471,8 @@
   line-height: 21px;
 }
 
-.fold_btn span:after {
+.fold_btn span:after,
+.fold_btn_a span:after {
   position: absolute;
   right: 0;
   top: 1px;
@@ -2464,7 +2486,8 @@
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.fold_btn .btn_expand.on span:after {
+.fold_btn .btn_expand.on span:after,
+.fold_btn_a .btn_expand.on span:after {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
@@ -2546,6 +2569,12 @@
   top: 46px;
 }
 
+.fold_tit + .review_btn_common {
+  position: static;
+  margin-top: 15px;
+  text-align: right;
+}
+
 .review_btn_common {
   position: absolute;
   right: 2px;
@@ -2557,6 +2586,10 @@
 
 .review_btn_common button {
   margin-left: 15px;
+}
+
+.review_btn_common button:disabled span {
+  opacity: 0.4;
 }
 
 .review_btn_common .btn_good span {
@@ -2875,18 +2908,41 @@
 /*** review_reply ***/
 .review_reply {
   position: relative;
+}
+
+.review_reply > .byte_check_wrap {
+  position: relative;
+  margin-top: 42px;
+  overflow: initial;
+}
+
+.review_reply > .byte_check_wrap:before {
+  position: absolute;
+  left: 0;
+  top: -21px;
+  width: 100%;
+  height: 1px;
+  background-color: #eaeaea;
+  content: "";
+}
+
+.byte_check_wrap + .reply_list {
   margin-top: 20px;
+}
+
+.byte_check_wrap + .reply_list:first-child {
+  margin-top: 0;
   padding-top: 20px;
   border-top: 1px solid #eaeaea;
 }
 
-.reply_confirmation {
+.byte_check_wrap:not([style*="display:none"]):not([style*="display: none"]) + .reply_list {
   margin-top: 10px;
 }
 
-.byte_check_wrap + .reply_list,
-.reply_list + .byte_check_wrap {
-  margin-top: 10px;
+.byte_check_wrap:not([style*="display:none"]):not([style*="display: none"]) + .reply_list .reply_list_item:first-child {
+  padding-top: 0;
+  border: 0;
 }
 
 .byte_check_wrap {
@@ -2900,21 +2956,26 @@
 
 /* reply_list_item */
 .reply_list_item {
-  position: relative;
-  padding: 20px 40px;
   margin-top: 10px;
-  background-color: #f7f7f7;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 12px;
 }
 
 .reply_list_item:first-child {
   margin-top: 0;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
 }
 
 .reply_list_item .info_text {
   color: #000;
+}
+
+.reply_list_item_inner {
+  position: relative;
+  padding: 20px 40px;
+  background-color: #f7f7f7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 12px;
 }
 
 .review_user_info {
