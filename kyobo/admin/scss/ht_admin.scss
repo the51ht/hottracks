@@ -138,6 +138,16 @@ h4 {
             margin-left: 64px;
             > li{
                 height: 64px;
+                &:first-child{
+                    > a{
+                        color: #474C98 !important;
+                    }
+                    &:hover{
+                        > a{
+                            color: #474C98 !important;
+                        }
+                    }
+                }
                 a{
                     height: 62px;line-height: 67px;font-size: 16px;padding: 0 12px;color: #666666;
                 }
@@ -189,7 +199,7 @@ h4 {
             color: #000 !important;border-bottom: 2px solid #da2128;padding: 0 12px;
         }
         .drawer{
-            width: 18px;height: 14px;left: 39px;top: 26px;background-size: cover;
+            width: 18px;height: 14px;left: 40px;top: 27px;background-size: cover;background: url(../images/layout/hamburger.png) no-repeat
         }
     }
 }
@@ -201,6 +211,9 @@ h4 {
                 height: auto; width: 100%;margin-top:5px;
                 &:first-child{
                     margin-top: 0;
+                    &:hover > a{
+                        color: #474C98 !important;
+                    }
                 }
                 .snb-item{
                     border-top: 0 !important;
@@ -224,6 +237,7 @@ h4 {
                     font-size: 16px;
                     text-align: left;background: initial;padding-bottom: 24px;padding-left: 12px !important;
                 }
+                
             }
             &:after{
                 display: block; clear: both; content: "";
