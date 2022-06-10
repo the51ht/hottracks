@@ -228,6 +228,22 @@ $(function(){
 
                             <!-- review_reply -->
                             <div class="review_reply">
+                                <!-- byte_check_wrap -->
+                                <div class="byte_check_wrap" style="display:none;">
+                                    <textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요"></textarea>
+                                    <div class="byte_chack_footer">
+                                        <div class="byte_check">
+                                            <span class="count">0</span>
+                                            <span class="total">1000자</span>
+                                        </div>
+                                        <div class="btn_wrap">
+                                            <button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+                                            <button type="button" class="btn_xs btn_primary"><span class="text">등록</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //byte_check_wrap -->
+
                                 <!-- reply_list -->
                                 <ul class="reply_list">
                                     <!-- reply_list_item : 반복 -->
@@ -237,7 +253,40 @@ $(function(){
                                             <ul class="review_user_info">
                                                 <li>ab******</li>
                                                 <li>2021.07.11</li>
-                                                <!--<li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>-->
+                                                <li><button>수정</button></li>
+                                                <li><button>삭제</button></li>
+                                            </ul>
+                                            <div class="info_text">
+                                                작년까지만 해도 주식은 커녕 재테크에 관해 아무것도 모르다가 구매했어요! 저도 공부하고 싶어서 구매했어요~ 다같이 완독 도전해봐요! :)
+                                            </div>
+                                        </div>
+                                        <!-- //reply_list_item_inner -->
+
+                                        <!-- byte_check_wrap -->
+                                        <div class="byte_check_wrap" style="display:none;">
+                                            <textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요">댓글 수정시 노출 됩니다.
+                                            </textarea>
+                                            <div class="byte_chack_footer">
+                                                <div class="byte_check">
+                                                    <span class="count">0</span>
+                                                    <span class="total">1000자</span>
+                                                </div>
+                                                <div class="btn_wrap">
+                                                    <button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+                                                    <button type="button" class="btn_xs btn_primary"><span class="text">등록</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //byte_check_wrap -->	
+                                    </li>
+                                    <!-- //reply_list_item : 반복 -->
+
+                                    <li class="reply_list_item">
+                                        <!-- reply_list_item_inner -->
+                                        <div class="reply_list_item_inner" style="display:none;">
+                                            <ul class="review_user_info">
+                                                <li>ab******</li>
+                                                <li>2021.07.11</li>
                                                 <li><button>수정</button></li>
                                                 <li><button>삭제</button></li>
                                             </ul>
@@ -264,7 +313,6 @@ $(function(){
                                         </div>
                                         <!-- //byte_check_wrap -->	
                                     </li>
-                                    <!-- //reply_list_item : 반복 -->
 
                                     <li class="reply_list_item">
                                         <!-- reply_list_item_inner -->
@@ -272,7 +320,6 @@ $(function(){
                                             <ul class="review_user_info">
                                                 <li>ab******</li>
                                                 <li>2021.07.11</li>
-                                                <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
                                                 <!--<li><button>수정</button></li>
                                                 <li><button>삭제</button></li>-->
                                             </ul>
@@ -288,7 +335,6 @@ $(function(){
                                             <ul class="review_user_info">
                                                 <li>ab******</li>
                                                 <li>2021.07.11</li>
-                                                <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
                                                 <!--<li><button>수정</button></li>
                                                 <li><button>삭제</button></li>-->
                                             </ul>
@@ -304,58 +350,6 @@ $(function(){
                                             <ul class="review_user_info">
                                                 <li>ab******</li>
                                                 <li>2021.07.11</li>
-                                                <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
-                                                <!--<li><button>수정</button></li>
-                                                <li><button>삭제</button></li>-->
-                                            </ul>
-                                            <div class="info_text">
-                                                기대가 됩니다~
-                                            </div>
-                                        </div>
-                                        <!-- //reply_list_item_inner -->
-                                    </li>
-                                    <li class="reply_list_item">
-                                        <!-- reply_list_item_inner -->
-                                        <div class="reply_list_item_inner">
-                                            <ul class="review_user_info">
-                                                <li>ab******</li>
-                                                <li>2021.07.11</li>
-                                                <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
-                                                <!--<li><button>수정</button></li>
-                                                <li><button>삭제</button></li>-->
-                                            </ul>
-                                            <div class="info_text">
-                                                기대가 됩니다~
-                                            </div>
-                                        </div>
-                                        <!-- //reply_list_item_inner -->
-                                    </li>
-
-
-
-                                    <li class="reply_list_item">
-                                        <!-- reply_list_item_inner -->
-                                        <div class="reply_list_item_inner">
-                                            <ul class="review_user_info">
-                                                <li>ab******</li>
-                                                <li>2021.07.11</li>
-                                                <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
-                                                <!--<li><button>수정</button></li>
-                                                <li><button>삭제</button></li>-->
-                                            </ul>
-                                            <div class="info_text">
-                                                기대가 됩니다~
-                                            </div>
-                                        </div>
-                                        <!-- //reply_list_item_inner -->
-                                    </li>
-                                    <li class="reply_list_item">
-                                        <!-- reply_list_item_inner -->
-                                        <div class="reply_list_item_inner">
-                                            <ul class="review_user_info">
-                                                <li>ab******</li>
-                                                <li>2021.07.11</li>
-                                                <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
                                                 <!--<li><button>수정</button></li>
                                                 <li><button>삭제</button></li>-->
                                             </ul>
@@ -369,46 +363,8 @@ $(function(){
                                 <!-- //reply_list -->
 
                                 <p class="fold_btn_a">
-                                    <button class="btn_expand" onclick="btn_expand(this);"><span>답글 더보기</span></button>
+                                    <button class="btn_expand"><span>답글 더보기</span></button>
                                 </p>
-<script>
-    $(function(){
-        /* btn_expand 확인용 */
-        $.fn.btn_expand = function(){
-            var tar = $(this)
-            var foldingChk = tar.hasClass('on');
-            if (foldingChk){
-                tar.removeClass('on');
-                tar.find('span').text('답글 더보기');
-                prodDetailCmtShow(true);
-            } else {
-                prodDetailCmtShow(false);
-    
-                tar.addClass('on');
-                tar.find('span').text('답글닫기');
-            }
-        };
-    });
-    
-    //대댓글 5개까지만 노출 후 전체 노출
-    prodDetailCmtShow(true);
-    function prodDetailCmtShow(bool){
-        var reCmtEA = $('.reply_list').children('.reply_list_item').length;
-    
-        if(bool){
-            for(var i=0; i<reCmtEA; i++){
-                if(i> 4) $('.reply_list').children('.reply_list_item').eq(i).css('display', 'none');
-            }
-        }else{
-            $('.reply_list').children('.reply_list_item').css('display', 'block');
-        }
-    
-    }
-    
-    function btn_expand(val){
-        $(val).btn_expand();
-    }				
-    </script>
                             </div>
                             <!-- //review_reply -->
                         </li>
