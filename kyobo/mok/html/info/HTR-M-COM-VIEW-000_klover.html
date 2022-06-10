@@ -164,6 +164,7 @@ $(function(){
                                 </div>
                                 <!-- //tit_con_area -->
 
+
                                 <!-- rating_area -->
                                 <div class="rating_area">
                                     <!-- total_box -->
@@ -195,35 +196,8 @@ $(function(){
                                     <!-- score_box -->
                                     <div class="score_box">
                                         <!-- rating_row : 반복 -->
-                                        <div class="rating_row">
+                                        <div class="rating_row chk"><!-- 가장 많은 수치 class="chk" -->
                                             <div class="rating_container">
-                                                <div class="rating_stars">
-                                                    <div class="empty_stars">
-                                                        <span class="star small"></span>
-                                                        <span class="star small"></span>
-                                                        <span class="star small"></span>
-                                                        <span class="star small"></span>
-                                                    </div>
-                                                    <div class="filled_stars" style="width:75%">
-                                                        <span class="star small"></span>
-                                                        <span class="star small"></span>
-                                                        <span class="star small"></span>
-                                                        <span class="star small"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="progress_container overlap">
-                                                <div class="progressbar">
-                                                    <span class="empty_progress"></span>
-                                                    <span class="filled_progress bg_black" style="width:43%"></span>
-                                                </div>
-                                                <span class="txt_value font_num txt_primary">43%</span>
-                                            </div>
-                                        </div>
-                                        <!-- //rating_row : 반복 -->
-
-                                        <div class="rating_row">
-                                            <div class="rating_container rating">
                                                 <div class="rating_stars">
                                                     <div class="empty_stars">
                                                         <span class="star small"></span>
@@ -242,9 +216,36 @@ $(function(){
                                             <div class="progress_container overlap">
                                                 <div class="progressbar">
                                                     <span class="empty_progress"></span>
-                                                    <span class="filled_progress" style="width:75%"></span>
+                                                    <span class="filled_progress" style="width:100%"></span>
                                                 </div>
-                                                <span class="txt_value font_num">75%</span>
+                                                <span class="txt_value font_num">100%</span>
+                                            </div>
+                                        </div>
+                                        <!-- //rating_row : 반복 -->
+
+                                        <div class="rating_row">
+                                            <div class="rating_container rating">
+                                                <div class="rating_stars">
+                                                    <div class="empty_stars">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                    <div class="filled_stars" style="width:43%">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress_container overlap">
+                                                <div class="progressbar">
+                                                    <span class="empty_progress"></span>
+                                                    <span class="filled_progress" style="width:43%"></span>
+                                                </div>
+                                                <span class="txt_value font_num">43%</span>
                                             </div>
                                         </div>
                                         <div class="rating_row">
@@ -299,21 +300,236 @@ $(function(){
                                         </div>
                                     </div>
                                     <!-- //score_box -->
-                            
-                                    <!-- msg_box -->
+
+
+                                    <!-- msg_box --><!-- 22.06. 구조변경 : PC동일  -->
                                     <div class="msg_box">
                                         <p>75% 의 구매자가<br><span class="ico_quotation"><span class="txt_reaction">좋았어요</span></span> 라고 응답했어요</p>
                                         <ul class="list_msg">
-                                            <li><span class="txt_msg">추천해요</span><span class="txt_per font_num">48%</span></li>
-                                            <li><span class="txt_msg">좋았어요</span><span class="txt_per font_num">36%</span></li>
-                                            <li><span class="txt_msg">보통이예요</span><span class="txt_per font_num">20%</span></li>
-                                            <li><span class="txt_msg">별로예요</span><span class="txt_per font_num">8%</span></li>
-                                            <li><span class="txt_msg">아쉬워요</span><span class="txt_per font_num">15%</span></li>
+                                            <li class="chk"><!-- 가장 많은 수치 : class="chk" -->
+                                                <p class="txt_per">
+                                                    <em style="height:48%"></em>
+                                                </p>
+                                                <p class="font_num"><span>48%</span></p>
+                                                <p class="txt_msg">추천해요</p>
+                                            </li>
+                                            <li>
+                                                <p class="txt_per">
+                                                    <em style="height:36%;"></em>
+                                                </p>
+                                                <p class="font_num"><span>36%</span></p>
+                                                <p class="txt_msg">좋았어요</p>
+                                            </li>
+                                            <li>
+                                                <p class="txt_per">
+                                                    <em style="height:20%;"></em>
+                                                </p>
+                                                <p class="font_num"><span>20%</span></p>
+                                                <p class="txt_msg">보통이예요</p>
+                                            </li>
+                                            <li>
+                                                <p class="txt_per">
+                                                    <em style="height:8%;"></em>
+                                                </p>
+                                                <p class="font_num"><span>8%</span></p>
+                                                <p class="txt_msg">별로예요</p>
+                                            </li>
+                                            <li>
+                                                <p class="txt_per">
+                                                    <em style="height:15%;"></em>
+                                                </p>
+                                                <p class="font_num"><span>15%</span></p>
+                                                <p class="txt_msg">아쉬워요</p>
+                                            </li>
                                         </ul>
                                     </div>
                                     <!-- //msg_box -->
                                 </div>
                                 <!-- //rating_area -->
+
+
+                                <!-- rating_area : 평가가 없을때 -->
+                                <div class="rating_area">
+                                    <!-- total_box -->
+                                    <div class="total_box">
+                                        <div class="rating_container">
+                                            <div class="rating_stars">
+                                                <div class="empty_stars">
+                                                    <span class="star large"></span>
+                                                    <span class="star large"></span>
+                                                    <span class="star large"></span>
+                                                    <span class="star large"></span>
+                                                </div>
+                                                <div class="filled_stars" style="width:0%"><!-- Klover 수치 -->
+                                                    <span class="star large"></span>
+                                                    <span class="star large"></span>
+                                                    <span class="star large"></span>
+                                                    <span class="star large"></span>
+                                                </div>
+                                            </div>
+                                            <div class="score">
+                                                <span class="font_num txt_score">0</span>
+                                                <span class="gap"> /</span>
+                                                <span class="font_num txt_totalscore">10</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //total_box -->
+                            
+                                    <!-- score_box -->
+                                    <div class="score_box">
+                                        <!-- rating_row : 반복 -->
+                                        <div class="rating_row"><!-- 가장 많은 수치 class="chk" -->
+                                            <div class="rating_container">
+                                                <div class="rating_stars">
+                                                    <div class="empty_stars">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                    <div class="filled_stars" style="width:0%">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress_container overlap">
+                                                <div class="progressbar">
+                                                    <span class="empty_progress"></span>
+                                                    <span class="filled_progress" style="width:0%"></span>
+                                                </div>
+                                                <span class="txt_value font_num">0%</span>
+                                            </div>
+                                        </div>
+                                        <!-- //rating_row : 반복 -->
+
+                                        <div class="rating_row">
+                                            <div class="rating_container rating">
+                                                <div class="rating_stars">
+                                                    <div class="empty_stars">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                    <div class="filled_stars" style="width:0%">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress_container overlap">
+                                                <div class="progressbar">
+                                                    <span class="empty_progress"></span>
+                                                    <span class="filled_progress" style="width:0%"></span>
+                                                </div>
+                                                <span class="txt_value font_num">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="rating_row">
+                                            <div class="rating_container">
+                                                <div class="rating_stars">
+                                                    <div class="empty_stars">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                    <div class="filled_stars" style="width:0%">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress_container overlap">
+                                                <div class="progressbar">
+                                                    <span class="empty_progress"></span>
+                                                    <span class="filled_progress" style="width:0%"></span>
+                                                </div>
+                                                <span class="txt_value font_num">0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="rating_row">
+                                            <div class="rating_container">
+                                                <div class="rating_stars">
+                                                    <div class="empty_stars">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                    <div class="filled_stars" style="width:0%">
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                        <span class="star small"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="progress_container overlap">
+                                                <div class="progressbar">
+                                                    <span class="empty_progress"></span>
+                                                    <span class="filled_progress" style="width:0%"></span>
+                                                </div>
+                                                <span class="txt_value font_num">0%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //score_box -->
+
+
+                                    <!-- msg_box --><!-- 22.06. 구조변경 : PC동일  -->
+                                    <div class="msg_box">
+                                        <p><span class="ico_quotation_emp">평가된 키워드가 없습니다</span></p>
+                                        <ul class="list_msg">
+                                            <li class=""><!-- 가장 많은 수치 : class="chk" -->
+                                                <p class="txt_per">
+                                                    <em style="height:0;"></em>
+                                                </p>
+                                                <p class="font_num"><span>0%</span></p>
+                                                <p class="txt_msg">추천해요</p>
+                                            </li>
+                                            <li>
+                                                <p class="txt_per">
+                                                    <em style="height:0;"></em>
+                                                </p>
+                                                <p class="font_num"><span>0%</span></p>
+                                                <p class="txt_msg">좋았어요</p>
+                                            </li>
+                                            <li>
+                                                <p class="txt_per">
+                                                    <em style="height:0;"></em>
+                                                </p>
+                                                <p class="font_num"><span>0%</span></p>
+                                                <p class="txt_msg">보통이예요</p>
+                                            </li>
+                                            <li>
+                                                <p class="txt_per">
+                                                    <em style="height:0;"></em>
+                                                </p>
+                                                <p class="font_num"><span>0%</span></p>
+                                                <p class="txt_msg">별로예요</p>
+                                            </li>
+                                            <li>
+                                                <p class="txt_per">
+                                                    <em style="height:0;"></em>
+                                                </p>
+                                                <p class="font_num"><span>0%</span></p>
+                                                <p class="txt_msg">아쉬워요</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //msg_box -->
+                                </div>
+                                <!-- //rating_area : 평가가 없을때 -->
+
 
                                 <!-- btn_wrap -->
                                 <div class="btn_wrap">
@@ -327,6 +543,8 @@ $(function(){
 
 
 
+
+
                             <!-- 베스트 리뷰 -->
                             <div class="hotpick_area">
                                 <!-- tit_sub_area -->
@@ -337,62 +555,22 @@ $(function(){
                                 <!-- //tit_sub_area -->
 
 
-                                <!-- hotpickslide_wrap -->
+                                <!-- hotpickslide_wrap : 베스트리뷰 -->
                                 <div class="hotpickslide_wrap">
                                     <!-- hotpick_slide -->
-                                    <div class="swiper-container hotpick_slide">
+                                    <div class="swiper-container hotpick_slide"><!-- function - prodPickBanner() -->
+                                        <!-- swiper-wrapper -->
                                         <ul class="swiper-wrapper">
-
-                                        </ul>
-                                    </div>
-                                    <!-- //hotpick_slide -->
-                                </div>
-                                <!-- //hotpickslide_wrap -->
-                            </div>
-                            <!-- //베스트 리뷰 -->
-
-
-
-
-
-
-
-
-
-                            <hr class="devide_hr">
-
-
-
-
-
-
-
-
-
-                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-                            <div class="hotpick_area">
-                                <div class="tit_sub_area">
-                                    <h2 class="tit">베스트 리뷰</h2><!-- 22.03.11 수정 -->
-                                    <p class="sub">핫트랙스에서 선정한 베스트 리뷰</p>
-                                </div>
-
-
-
-                                <div class="hotpickslide_wrap">
-                                    <div class="swiper-container hotpick_slide">
-                                        <ul class="swiper-wrapper">
+                                            <!-- li.swiper-slide 반복 -->
                                             <li class="swiper-slide">
                                                 <div class="slide_review_wrap">
                                                     <div class="review_inner">
-                                                        <div class="review_info_area">
-                                                            <span class="badge badge_sm badge_default rounded">구매자</span>
-                                                            <span class="txt_user">ab*****</span>
-                                                            <span class="gap"> | </span>
-                                                            <span class="txt_date">2021.07.11</span>
-                                                            <span class="gap"> | </span>
-                                                            <button  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                        </div>
+                                                        <ul class="review_info_area">
+                                                            <li><span class="badge badge_sm badge_default rounded">구매자</span></li>
+                                                            <li>ab*****</li>
+                                                            <li>2021.07.11</li>
+                                                            <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                        </ul>
                                                         <div class="rating_reaction_wrap">
                                                             <div class="rating_container">
                                                                 <div class="rating_stars">
@@ -416,29 +594,30 @@ $(function(){
                                                             </div>
                                                         </div>
                                                         <div class="review_comment_area">
-                                                            <p class="txt_review"  data-role="btn-dialog" data-target="#hotPickReview_img">
+                                                            <p class="txt_review">
                                                                 종이가 180도로 잘 펴집니다! 다른 후기들에 커버 사이에 기포가 들어있는 느낌은 없구요 너무너무 좋은 것 같아요!
                                                             </p>
                                                             <div class="thumnail_review">
-                                                                <img src="../../images/temp/@img_prod_resp01_2.jpg" width="100%" height="100%">
+                                                                <img src="../../images/temp/@img_prod_resp01.jpg" alt="">
                                                                 <span class="txt_num font_num">2</span>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <button class="btn_best_rev"><span class="hidden">베스트 리뷰 보기</span></button><!-- 버튼위치 변경 -->
                                                 </div>
                                             </li>
+                                            <!-- //li.swiper-slide 반복 -->
+
+
                                             <li class="swiper-slide">
                                                 <div class="slide_review_wrap">
-                            
                                                     <div class="review_inner">
-                                                        <div class="review_info_area">
-                                                            <span class="badge badge_sm badge_default rounded">구매자</span>
-                                                            <span class="txt_user">ab*****</span>
-                                                            <span class="gap"> | </span>
-                                                            <span class="txt_date">2021.07.11</span>
-                                                            <span class="gap"> | </span>
-                                                            <button  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                        </div>
+                                                        <ul class="review_info_area">
+                                                            <li><span class="badge badge_sm badge_default rounded">구매자</span></li>
+                                                            <li>ab*****</li>
+                                                            <li>2021.07.11</li>
+                                                            <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                        </ul>
                                                         <div class="rating_reaction_wrap">
                                                             <div class="rating_container">
                                                                 <div class="rating_stars">
@@ -448,7 +627,7 @@ $(function(){
                                                                         <span class="star small"></span>
                                                                         <span class="star small"></span>
                                                                     </div>
-                                                                    <div class="filled_stars" style="width:50%">
+                                                                    <div class="filled_stars" style="width:75%">
                                                                         <span class="star small"></span>
                                                                         <span class="star small"></span>
                                                                         <span class="star small"></span>
@@ -466,692 +645,1026 @@ $(function(){
                                                                 종이가 180도로 잘 펴집니다! 다른 후기들에 커버 사이에 기포가 들어있는 느낌은 없구요 너무너무 좋은 것 같아요!
                                                             </p>
                                                             <div class="thumnail_review">
-                                                                <img src="../../images/temp/@img_prod_resp01_2.jpg" width="100%" height="100%">
+                                                                <img src="../../images/temp/@img_prod_resp01.jpg" alt="">
                                                                 <span class="txt_num font_num">2</span>
                                                             </div>
                                                         </div>
                                                     </div>
-                            
+                                                    <button class="btn_best_rev"><span class="hidden">베스트 리뷰 보기</span></button><!-- 버튼위치 변경 -->
                                                 </div>
                                             </li>
                                         </ul>
+                                        <!-- //swiper-wrapper -->
                                     </div>
+                                    <!-- //hotpick_slide -->
                                 </div>
-                            </div>
+                                <!-- //hotpickslide_wrap : 베스트리뷰 -->
 
-                            <div class="multi_review_area">
-                                <div class="ht_tab_wrap type_normal">
-                                    <!-- tab_list_wrap -->
-                                    <div class="ht_tab_list_wrap">
-                                        <ul class="tabs">
-                                            <!-- DESC : 탭 비활성화 시, .tab_link 영역 tab_disabled class 추가 -->
-                                            <li class="tab_item active">
-                                                <a href="#none" class="tab_link">
-                                                    <span class="tab_txt">전체</span>
-                                                </a>
-                                            </li>
-                                            <li class="tab_item">
-                                                <a href="#none" class="tab_link">
-                                                    <span class="tab_txt">포토</span>
-                                                </a>
-                                            </li>
-                                            <li class="tab_item">
-                                                <a href="#none" class="tab_link">
-                                                    <span class="tab_txt">구매자</span>
-                                                </a>
-                                            </li>
-                                            <li class="tab_item">
-                                                <a href="#" class="tab_link">
-                                                    <span class="tab_txt">한달 후</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <!-- 임시영역 -->
-                                        <div class="right_area">
-                                            <div class="form_sel">
-                                                <select title="타이틀">
-                                                    <!-- 22.04.11 수정 -->
-                                                    <option selected>좋아요 순</option>
-                                                    <option>최신순</option>
-                                                    <!-- //22.04.11 수정 -->
-                                                </select>
+
+                                <!-- multi_review_area : 리뷰 -->
+                                <div class="multi_review_area">
+                                    <!-- ht_tab_wrap -->
+                                    <div class="ht_tab_wrap type_normal">
+                                        <!-- tab_list_wrap -->
+                                        <div class="ht_tab_list_wrap">
+                                            <!-- tab -->
+                                            <ul class="tabs">
+                                                <li class="tab_item active">
+                                                    <a href="#none" class="tab_link"><span class="tab_txt">전체</span></a>
+                                                </li>
+                                                <li class="tab_item">
+                                                    <a href="#none" class="tab_link"><span class="tab_txt">포토</span></a>
+                                                </li>
+                                                <li class="tab_item">
+                                                    <a href="#none" class="tab_link"><span class="tab_txt">구매자</span></a>
+                                                </li>
+                                                <li class="tab_item">
+                                                    <a href="#none" class="tab_link"><span class="tab_txt">한달 후</span></a>
+                                                </li>
+                                            </ul>
+                                            <!-- //tab -->
+
+                                            <!-- right_area -->
+                                            <div class="right_area">
+                                                <div class="form_sel">
+                                                    <select title="타이틀">
+                                                        <option selected>좋아요 순</option>
+                                                        <option>최신순</option>
+                                                    </select>
+                                                </div>
                                             </div>
+                                            <!-- //right_area -->
                                         </div>
-                                    </div>
-                                    <!-- //tab_list_wrap -->
-                                    
-                                    <!-- tab_content -->
-                                    <div class="tab_content">
-                                        <div class="all_review_area">
-                                            <div class="all_review_wrap">
-                                                <!-- 작성된 리뷰가 없을경우 -->
-                                                <div class="no_review">
-                                                    <p class="txt_msg">이 상품의 첫 리뷰어가 되어주세요.</p>
-                                                </div>
-                                                <!-- //작성된 리뷰가 없을경우 -->       
+                                        <!-- //tab_list_wrap -->
 
-                                                <div class="review_inner">
-                                                    <div class="review_info_area">
-                                                        <span class="badge badge_sm badge_default rounded">구매자</span>
-                                                        <span class="txt_user">ab*****</span>
-                                                        <span class="gap"> | </span>
-                                                        <span class="txt_date">2021.07.11</span>
-                                                        <span class="gap"> | </span>
-                                                        <button  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                    </div>
-                                                    <div class="rating_reaction_wrap">
-                                                        <div class="rating_container">
-                                                            <div class="rating_stars">
-                                                                <div class="empty_stars">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
+
+                                        <!-- tab_content -->
+                                        <div class="tab_content">
+                                            <!-- fold_ty -->
+                                            <ul class="fold_ty">
+
+
+                                                <!-- .li 반복 -->
+                                                <li class="li"><!-- class="on" : 펼쳐짐 -->
+                                                    <!-- fold_inner -->
+                                                    <div class="fold_inner">
+                                                        <!-- fold_tit -->
+                                                        <div class="fold_tit">
+                                                            <!-- txt -->
+                                                            <div class="txt">
+                                                                <!-- fold_info -->
+                                                                <div class="fold_info">
+                                                                    <p class="info ty02">구매자</p>
+                                                                    <ul>
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>
+                                                                    </ul>
+
+                                                                    <ul class="right ty02">
+                                                                        <li>
+                                                                            <!-- rating_container -->
+                                                                            <div class="rating_container">
+                                                                                <div class="rating_stars">
+                                                                                    <div class="empty_stars">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                    <div class="filled_stars" style="width:50%">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- //rating_container -->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="txt_value">
+                                                                                <span>좋았어요</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
-                                                                <div class="filled_stars" style="width:50%">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
+                                                                <!-- //fold_info -->
+
+                                                                <!-- prod_thumb -->
+                                                                <div class="prod_thumb">
+                                                                    <p class="img_t"><img src="../../images/temp/@img_prod01.jpg" alt=""></p>
+                                                                    <span class="txt_num">2</span>
+                                                                </div>
+                                                                <!-- //prod_thumb -->
+
+                                                                <p class="tit">
+                                                                    <strong class="tit_info">1. Lavender </strong>
+                                                                    <span class="txt_len3">
+                                                                        <em style="color:#da2128">* 기본 Full Set</em><br><!-- 확인 구분용 -->
+                                                                        
+                                                                        하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다. 
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                            <!-- //txt -->
+                                                        </div>
+                                                        <!-- //fold_tit -->
+
+                                                        <!-- fold_view -->
+                                                        <div class="fold_view resp">
+                                                            <div class="photoreview_wrap"><!-- function - prodReviewBanner() -->
+                                                                <div class="swiper-container">
+                                                                    <ul class="swiper-wrapper">
+                                                                        <li class="swiper-slide txt_center">
+                                                                            <img src="../../images/temp/@img_prod01.jpg" alt="">
+                                                                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+                                                                        </li>
+                                                                        <li class="swiper-slide txt_center">
+                                                                            <img src="../../images/temp/@img_prod_boxB4.jpg" alt="">
+                                                                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+                                                                        </li>
+                                                                        <li class="swiper-slide txt_center">
+                                                                            <img src="../../images/temp/@img_prod02.jpg" alt="">
+                                                                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+                                                                        </li>
+                                                                        <li class="swiper-slide txt_center">
+                                                                            <img src="../../images/temp/@img_prod03.jpg" alt="">
+                                                                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="swiper-pagination"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="txt_value">
-                                                            <span class="gap"> / </span>
-                                                            <span class="ico_quotation"><span class="txt_reaction">좋았어요</span></span>
-                                                        </div>
-                                                    </div>
-                                                    <!--[2022-02-16] ico_good active 클래스 추가 case,
-                                                        상품 종류 표기 태그  div.prod_kind 추가  없는 경우 해당 태그 전체 삭제-->
-                                                    <div class="auto_overflow_wrap overflow">
-                                                        <div class="auto_overflow_contents" style="max-height: 78px;">
-                                                            <div class="auto_overflow_inner">
-                                                                <div class="review_comment_area">
-                                                                    <div class="prod_kind">01 Lavender</div>
-                                                                    <p class="txt_review">
-                                                                        6개월용이라 부담없이 넉넉히 쓸 수 있어서 좋아요!! 메모할 수 있는 공간도 많구요! 앞으로 몇년간 이것만 계속 쓸 것 같아요
-                                                                    </p>
-                                                                    <div class="thumnail_review">
-                                                                        <img src="../../images/temp/@img_rank01.jpg" width="100%" height="100%">
-                                                                        <span class="txt_num">2</span>
-                                                                    </div>                                                                        
-                                                                </div>
-                                                                <div class="photoreview_wrap photoreviewSlide-01">
-                                                                    <div class="swiper-container">
-                                                                        <ul class="swiper-wrapper">
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                        </ul>
-                                                                        <div class="swiper-pagination"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="auto_overflow_footer">
-                                                            <button type="button" class="btn_expand" data-btn-toggle>
-                                                                <span class="txt">펼치기</span>
-                                                                <span class="ico_circle_more"></span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                            
-                                                    <div class="review_more_area">
-                                                        <a href="#none" class="link_more ico_more"  data-role="btn-dialog" data-target="#cmtReview_img">한달 후 리뷰 보기</a>
+                                                        <!-- //fold_view -->
+
+                                                        <!-- fold_btn -->
+                                                        <p class="fold_btn">
+                                                            <button onclick="fold_btn(this);"><span>펼치기</span></button>
+                                                        </p>
+                                                        <!-- //fold_btn -->
+
+                                                        <!-- review_btn_common -->
                                                         <div class="review_btn_common">
-                                                            <button class="btn_good active">
-                                                                <span class="ico_good"></span>
-                                                                <span class="txt_count">234</span>
-                                                            </button>
-                                                            <button class="btn_reply">
-                                                                <span class="ico_reply"></span>
-                                                                <span class="txt_reply">답글</span>
-                                                            </button>
+                                                            <button class="btn_good"><span class="hidden">좋아요</span><span>234</span></button>
+                                                            <button class="btn_reply"><span>답글</span></button>
                                                         </div>
+                                                        <!-- //review_btn_common -->
+
+                                                        <p class="under_btn"><button class="btn_arrow" data-role="btn-dialog" data-target="#popReview">한달 후 리뷰 보기</button></p>
                                                     </div>
-                                                </div>
-                                                <div class="review_inner">
-                                                    <div class="review_info_area">
-                                                        <span class="badge badge_sm badge_default rounded">구매자</span>
-                                                        <span class="txt_user">ab*****</span>
-                                                        <span class="gap"> | </span>
-                                                        <span class="txt_date">2021.07.11</span>
-                                                        <span class="gap"> | </span>
-                                                        <button  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                    </div>
-                                                    <div class="rating_reaction_wrap">
-                                                        <div class="rating_container">
-                                                            <div class="rating_stars">
-                                                                <div class="empty_stars">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
+                                                    <!-- //fold_inner -->
+                                                </li>
+                                                <!-- //.li 반복 -->
+
+                                                <!-- 기본 : 업체명 / 한달 후 리뷰 / 이미지가 없을 경우 -->
+                                                <li class="li">
+                                                    <!-- fold_inner -->
+                                                    <div class="fold_inner">
+                                                        <!-- fold_tit -->
+                                                        <div class="fold_tit">
+                                                            <!-- txt -->
+                                                            <div class="txt">
+                                                                <!-- fold_info -->
+                                                                <div class="fold_info">
+                                                                    <p class="info ty02">구매자</p>
+                                                                    <ul>
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
+
+                                                                    <ul class="right ty02">
+                                                                        <li>
+                                                                            <!-- rating_container -->
+                                                                            <div class="rating_container">
+                                                                                <div class="rating_stars">
+                                                                                    <div class="empty_stars">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                    <div class="filled_stars" style="width:50%">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- //rating_container -->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="txt_value">
+                                                                                <span>좋았어요</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
-                                                                <div class="filled_stars" style="width:50%">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                </div>
+                                                                <!-- //fold_info -->
+
+                                                                <p class="tit">
+                                                                    <span class="txt_len3">
+                                                                        <em style="color:#da2128">* 기본 : 업체명 / 한달 후 리뷰 / 이미지가 없을 경우</em><br><!-- 확인 구분용 -->
+
+                                                                        하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다. 저녁나절 책을 집어든게 잘못이다.  저녁나절 책을 집어든책한권으로 등의 근육들이 오그라진 느낌에 아직도 하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다.
+                                                                    </span>
+                                                                </p>
                                                             </div>
+                                                            <!-- //txt -->
                                                         </div>
-                                                        <div class="txt_value">
-                                                            <span class="gap"> / </span>
-                                                            <span class="ico_quotation"><span class="txt_reaction">좋았어요</span></span>
-                                                        </div>
-                                                    </div>
-                            
-                                                    <div class="auto_overflow_wrap overflow">
-                                                        <div class="auto_overflow_contents" style="max-height: 78px;">
-                                                            <div class="auto_overflow_inner">
-                                                                <div class="review_comment_area">
-                                                                    <p class="txt_review">
-                                                                        6개월용이라 부담없이 넉넉히 쓸 수 있어서 좋아요!! 메모할 수 있는 공간도 많구요! 앞으로 몇년간 이것만 계속 쓸 것 같아요
-                                                                    </p>
-                                                                    <div class="thumnail_review">
-                                                                        <img src="../../images/temp/@img_rank01.jpg" width="100%" height="100%">
-                                                                        <span class="txt_num">2</span>
-                                                                    </div>                                                                        
-                                                                </div>
-                                                                <div class="photoreview_wrap photoreviewSlide-02">
-                                                                    <div class="swiper-container">
-                                                                        <ul class="swiper-wrapper">
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                        </ul>
-                                                                        <div class="swiper-pagination"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="auto_overflow_footer">
-                                                            <button type="button" class="btn_expand" data-btn-toggle>
-                                                                <span class="txt">펼치기</span>
-                                                                <span class="ico_circle_more"></span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                            
-                                                    <div class="review_more_area">
-                                                        <a href="" class="link_more ico_more">한달 후 리뷰 보기</a>
+                                                        <!-- //fold_tit -->
+
+
+                                                        <!-- fold_btn -->
+                                                        <p class="fold_btn">
+                                                            <button onclick="fold_btn(this);"><span>펼치기</span></button>
+                                                        </p>
+                                                        <!-- //fold_btn -->
+
+                                                        <!-- review_btn_common -->
                                                         <div class="review_btn_common">
-                                                            <button class="btn_good">
-                                                                <span class="ico_good"></span>
-                                                                <span class="txt_count">234</span>
-                                                            </button>
-                                                            <button class="btn_reply">
-                                                                <span class="ico_reply"></span>
-                                                                <span class="txt_reply">답글</span>
-                                                            </button>
+                                                            <button class="btn_good active"><span class="hidden">좋아요</span><span>234</span></button>
+                                                            <button class="btn_reply"><span>답글</span></button>
                                                         </div>
+                                                        <!-- //review_btn_common -->
                                                     </div>
-                                                </div>
-                                                <div class="review_inner">
-                                                    <div class="review_info_area">
-                                                        <span class="badge badge_sm badge_default rounded">구매자</span>
-                                                        <span class="txt_user">ab*****</span>
-                                                        <span class="gap"> | </span>
-                                                        <span class="txt_date">2021.07.11</span>
-                                                        <span class="gap"> | </span>
-                                                        <button  data-role="btn-dialog" data-target="#cmtReport">신고</button>
+                                                    <!-- //fold_inner -->
+                                                </li>
+                                                <!-- //기본 : 업체명 / 한달 후 리뷰 / 이미지가 없을 경우 -->
+
+
+                                                <!-- 한달 후 리뷰 : 구매자의 첫 리뷰 -->
+                                                <li class="li">
+                                                    <!-- fold_inner -->
+                                                    <div class="fold_inner">
+                                                        <!-- fold_tit -->
+                                                        <div class="fold_tit">
+                                                            <!-- txt -->
+                                                            <div class="txt">
+                                                                <!-- fold_info -->
+                                                                <div class="fold_info">
+                                                                    <p class="info ty02">한달 후 리뷰</p>
+                                                                    <ul>
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
+
+                                                                    <ul class="right ty02">
+                                                                        <li>
+                                                                            <!-- rating_container -->
+                                                                            <div class="rating_container">
+                                                                                <div class="rating_stars">
+                                                                                    <div class="empty_stars">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                    <div class="filled_stars" style="width:50%">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- //rating_container -->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="txt_value">
+                                                                                <span>좋았어요</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <!-- //fold_info -->
+
+                                                                <!-- prod_thumb -->
+                                                                <div class="prod_thumb">
+                                                                    <p class="img_t"><img src="../../images/temp/@img_prod01.jpg" alt=""></p>
+                                                                    <span class="txt_num">2</span>
+                                                                </div>
+                                                                <!-- //prod_thumb -->
+
+                                                                <p class="tit">
+                                                                    <span class="txt_len3">
+                                                                        <em style="color:#da2128">* 한달 후 리뷰 : 구매자의 첫 리뷰</em><br><!-- 확인 구분용 -->
+
+                                                                        하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다. 
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                            <!-- //txt -->
+                                                        </div>
+                                                        <!-- //fold_tit -->
+
+                                                        <!-- fold_view -->
+                                                        <div class="fold_view resp">
+                                                            <div class="photoreview_wrap">
+                                                                <div class="swiper-container">
+                                                                    <ul class="swiper-wrapper">
+                                                                        <li class="swiper-slide txt_center">
+                                                                            <img src="../../images/temp/@img_prod01.jpg" alt="">
+                                                                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="swiper-pagination"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- //fold_view -->
+
+                                                        <!-- fold_btn -->
+                                                        <p class="fold_btn">
+                                                            <button onclick="fold_btn(this);"><span>펼치기</span></button>
+                                                        </p>
+                                                        <!-- //fold_btn -->
+
+                                                        <!-- review_btn_common -->
+                                                        <div class="review_btn_common">
+                                                            <button class="btn_good"><span class="hidden">좋아요</span><span>234</span></button>
+                                                            <button class="btn_reply"><span>답글</span></button>
+                                                        </div>
+                                                        <!-- //review_btn_common -->
+
+                                                        <p class="under_btn"><button class="btn_arrow" data-role="btn-dialog" data-target="#popReview">이 구매자의 첫 리뷰 보기</button></p>
                                                     </div>
-                                                    <div class="rating_reaction_wrap">
-                                                        <div class="rating_container">
-                                                            <div class="rating_stars">
-                                                                <div class="empty_stars">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
+                                                    <!-- //fold_inner -->
+                                                </li>
+                                                <!-- //한달 후 리뷰 : 구매자의 첫 리뷰 -->
+
+
+                                                <!-- 기본 : 텍스트가 짧음 (2줄) 경우 펼치기 없음 -->
+                                                <li class="li">
+                                                    <!-- fold_inner -->
+                                                    <div class="fold_inner">
+                                                        <!-- fold_tit -->
+                                                        <div class="fold_tit">
+                                                            <!-- txt -->
+                                                            <div class="txt">
+                                                                <!-- fold_info -->
+                                                                <div class="fold_info">
+                                                                    <p class="info ty02">구매자</p>
+                                                                    <ul>
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
+
+                                                                    <ul class="right ty02">
+                                                                        <li>
+                                                                            <!-- rating_container -->
+                                                                            <div class="rating_container">
+                                                                                <div class="rating_stars">
+                                                                                    <div class="empty_stars">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                    <div class="filled_stars" style="width:50%">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- //rating_container -->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="txt_value">
+                                                                                <span>좋았어요</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
-                                                                <div class="filled_stars" style="width:50%">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                </div>
+                                                                <!-- //fold_info -->
+
+                                                                <p class="tit">
+                                                                    <span class="txt_len3">
+                                                                        <em style="color:#da2128">* 기본 : 텍스트가 짧음 (2줄) 경우 펼치기 없음</em><br><!-- 확인 구분용 -->
+
+                                                                        .fold_btn display:none 말고 remove 처리부탁드립니다.
+                                                                    </span>
+                                                                </p>
                                                             </div>
+                                                            <!-- //txt -->
                                                         </div>
-                                                        <div class="txt_value">
-                                                            <span class="gap"> / </span>
-                                                            <span class="ico_quotation"><span class="txt_reaction">좋았어요</span></span>
+                                                        <!-- //fold_tit -->
+
+
+                                                        <!-- review_btn_common -->
+                                                        <div class="review_btn_common">
+                                                            <button class="btn_good"><span class="hidden">좋아요</span><span>234</span></button>
+                                                            <button class="btn_reply"><span>답글</span></button>
                                                         </div>
+                                                        <!-- //review_btn_common -->
                                                     </div>
-                            
-                                                    <div class="auto_overflow_wrap overflow">
-                                                        <div class="auto_overflow_contents" style="max-height: 78px;">
-                                                            <div class="auto_overflow_inner">
-                                                                <div class="review_comment_area">
-                                                                    <p class="txt_review">
-                                                                        6개월용이라 부담없이 넉넉히 쓸 수 있어서 좋아요!! 메모할 수 있는 공간도 많구요! 앞으로 몇년간 이것만 계속 쓸 것 같아요
-                                                                    </p>
-                                                                    <div class="thumnail_review">
-                                                                        <img src="../../images/temp/@img_rank01.jpg" width="100%" height="100%">
-                                                                        <span class="txt_num">2</span>
-                                                                    </div>                                                                        
+                                                    <!-- //fold_inner -->
+                                                </li>
+                                                <!-- //기본 : 텍스트가 짧음 (2줄) 경우 펼치기 없음 -->
+
+
+                                                <!-- 기본 : 내가 쓴 글 -->
+                                                <li class="li">
+                                                    <!-- fold_inner -->
+                                                    <div class="fold_inner">
+                                                        <!-- fold_tit -->
+                                                        <div class="fold_tit">
+                                                            <!-- txt -->
+                                                            <div class="txt">
+                                                                <!-- fold_info -->
+                                                                <div class="fold_info">
+                                                                    <p class="info ty02">구매자</p>
+                                                                    <ul>
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <!--<li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>-->
+                                                                        <li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>
+                                                                    </ul>
+
+                                                                    <ul class="right ty02">
+                                                                        <li>
+                                                                            <!-- rating_container -->
+                                                                            <div class="rating_container">
+                                                                                <div class="rating_stars">
+                                                                                    <div class="empty_stars">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                    <div class="filled_stars" style="width:50%">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- //rating_container -->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="txt_value">
+                                                                                <span>좋았어요</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
-                                                                <div class="photoreview_wrap photoreviewSlide-02">
-                                                                    <div class="swiper-container">
-                                                                        <ul class="swiper-wrapper">
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img 
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                        </ul>
-                                                                        <div class="swiper-pagination"></div>
-                                                                    </div>
+                                                                <!-- //fold_info -->
+
+                                                                <p class="tit">
+                                                                    <span class="txt_len3">
+                                                                        <em style="color:#da2128">* 기본 : 내가 쓴 글</em><br><!-- 확인 구분용 -->
+
+                                                                        좋아요/ 답글 비활성화
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                            <!-- //txt -->
+                                                        </div>
+                                                        <!-- //fold_tit -->
+
+
+                                                        <!-- review_btn_common -->
+                                                        <div class="review_btn_common">
+                                                            <button class="btn_good" disabled><span class="hidden">좋아요</span><span>234</span></button>
+                                                            <button class="btn_reply" disabled><span>답글</span></button>
+                                                        </div>
+                                                        <!-- //review_btn_common -->
+                                                    </div>
+                                                    <!-- //fold_inner -->
+                                                </li>
+                                                <!-- //기본 : 내가 쓴 글 -->
+
+
+                                                <!-- 신고 -->
+                                                <li class="li">
+                                                    <!-- fold_inner -->
+                                                    <div class="fold_inner">
+                                                        <!-- fold_tit -->
+                                                        <div class="fold_tit">
+                                                            <!-- txt -->
+                                                            <div class="txt">
+                                                                <!-- fold_info -->
+                                                                <div class="fold_info">
+                                                                    <p class="info ty02">구매자</p>
+                                                                    <ul>
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <!--<li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>-->
+                                                                        <li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>
+                                                                    </ul>
+
+                                                                    <ul class="right ty02">
+                                                                        <li>
+                                                                            <!-- rating_container -->
+                                                                            <div class="rating_container">
+                                                                                <div class="rating_stars">
+                                                                                    <div class="empty_stars">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                    <div class="filled_stars" style="width:50%">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- //rating_container -->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="txt_value">
+                                                                                <span>좋았어요</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <!-- //fold_info -->
+
+                                                                <div class="box_msg">
+                                                                    <span class="txt_msg">신고를 받아 블라인드 처리되었습니다.</span>
+                                                                </div>
+
+                                                                <div class="box_msg">
+                                                                    <span class="txt_msg">다른 고객님들의 신고로 인하여 블라인드 처리 되었습니다.</span>
+                                                                </div>
+                                                            </div>
+                                                            <!-- //txt -->                                
+                                                        </div>
+                                                        <!-- //fold_tit -->
+
+                                                        <!-- review_btn_common -->
+                                                        <div class="review_btn_common">
+                                                            <button class="btn_good"><span class="hidden">좋아요</span><span>234</span></button>
+                                                            <button class="btn_reply"><span>답글</span></button>
+                                                        </div>
+                                                        <!-- //review_btn_common -->
+                                                    </div>
+                                                    <!-- //fold_inner -->
+                                                </li>
+                                                <!-- //신고 -->
+
+
+
+                                                <!-- 댓글 -->
+                                                <li class="li">
+                                                    <!-- fold_inner -->
+                                                    <div class="fold_inner">
+                                                        <!-- fold_tit -->
+                                                        <div class="fold_tit">
+                                                            <!-- txt -->
+                                                            <div class="txt">
+                                                                <!-- fold_info -->
+                                                                <div class="fold_info">
+                                                                    <p class="info ty02">구매자</p>
+                                                                    <ul>
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>
+                                                                    </ul>
+
+                                                                    <ul class="right ty02">
+                                                                        <li>
+                                                                            <!-- rating_container -->
+                                                                            <div class="rating_container">
+                                                                                <div class="rating_stars">
+                                                                                    <div class="empty_stars">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                    <div class="filled_stars" style="width:50%">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- //rating_container -->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="txt_value">
+                                                                                <span>좋았어요</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <!-- //fold_info -->
+
+                                                                <!-- prod_thumb -->
+                                                                <div class="prod_thumb">
+                                                                    <p class="img_t"><img src="../../images/temp/@img_prod01.jpg" alt=""></p>
+                                                                    <span class="txt_num">2</span>
+                                                                </div>
+                                                                <!-- //prod_thumb -->
+
+                                                                <p class="tit">
+                                                                    <strong class="tit_info">1. Lavender </strong>
+                                                                    <span class="txt_len3">
+                                                                        <em style="color:#da2128">* 댓글 버튼 클릭/ 댓글입력에 취소시 hidden</em><br><!-- 확인 구분용 -->
+                                                                        
+                                                                        하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다. 
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                            <!-- //txt -->
+                                                        </div>
+                                                        <!-- //fold_tit -->
+
+                                                        <!-- fold_view -->
+                                                        <div class="fold_view resp">
+                                                            <div class="photoreview_wrap">
+                                                                <div class="swiper-container">
+                                                                    <ul class="swiper-wrapper">
+                                                                        <li class="swiper-slide txt_center">
+                                                                            <img src="../../images/temp/@img_prod01.jpg" alt="">
+                                                                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="swiper-pagination"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="review_more_area">
-                                                            <!-- <a href="" class="link_more ico_more">한달 후 리뷰 보기</a> -->
-                                                            <div class="review_btn_common">
-                                                                <button class="btn_good">
-                                                                    <span class="ico_good"></span>
-                                                                    <span class="txt_count">234</span>
-                                                                </button>
-                                                                <button class="btn_reply">
-                                                                    <span class="ico_reply"></span>
-                                                                    <span class="txt_reply">답글</span>
-                                                                </button>
-                                                            </div>
+                                                        <!-- //fold_view -->
+
+                                                        <!-- fold_btn -->
+                                                        <p class="fold_btn">
+                                                            <button onclick="fold_btn(this);"><span>펼치기</span></button>
+                                                        </p>
+                                                        <!-- //fold_btn -->
+
+                                                        <!-- review_btn_common -->
+                                                        <div class="review_btn_common">
+                                                            <button class="btn_good"><span class="hidden">좋아요</span><span>234</span></button>
+                                                            <button class="btn_reply"><span>답글</span></button>
                                                         </div>
-                                                        <div class="review_reply">
-                                                            <!-- byte_check_wrap -->
-                                                            <!--div.byte_check_wrap - show 클래스로 display 제어 -->
-                                                            <div class="byte_check_wrap active">
-                                                                <textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해 주세요"></textarea><!-- 22.05.18 수정 -->
-                                                                <div class="byte_chack_footer">
-                                                                    <div class="byte_check">
-                                                                        <span class="count">0</span>
-                                                                        <span class="total">1000</span><!-- 22.04.11 300 → 1000자 수정 -->
-                                                                    </div>
-                                                                    <div class="btn_wrap">
-                                                                        <button type="button" class="btn btn_xs btn_black"><span class="text">취소</span></button>
-                                                                        <button type="button" class="btn btn_xs btn_primary"><span class="text">등록</span></button>
-                                                                    </div>
+                                                        <!-- //review_btn_common -->
+
+                                                        <p class="under_btn"><button class="btn_arrow" data-role="btn-dialog" data-target="#popReview">한달 후 리뷰 보기</button></p>
+                                                    </div>
+                                                    <!-- //fold_inner -->
+
+
+                                                    <!-- review_reply -->
+                                                    <div class="review_reply">
+                                                        <!-- byte_check_wrap -->
+                                                        <div class="byte_check_wrap">
+                                                            <textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요"></textarea>
+                                                            <div class="byte_chack_footer">
+                                                                <div class="byte_check">
+                                                                    <span class="count">0</span>
+                                                                    <span class="total">1000자</span>
+                                                                </div>
+                                                                <div class="btn_wrap">
+                                                                    <button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+                                                                    <button type="button" class="btn_xs btn_primary"><span class="text">등록</span></button>
                                                                 </div>
                                                             </div>
-                                                            <!-- //byte_check_wrap -->
-                                                            <ul class="reply_list">
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="report">
-                                                                            <button type="button"  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                                        </span>
-                                                                    </div>
+                                                        </div>
+                                                        <!-- //byte_check_wrap -->
+                                                    </div>
+                                                    <!-- //review_reply -->
+                                                </li>
+                                                <!-- //댓글 -->
+
+
+                                                <!-- 댓글 -->
+                                                <li class="li">
+                                                    <!-- fold_inner -->
+                                                    <div class="fold_inner">
+                                                        <!-- fold_tit -->
+                                                        <div class="fold_tit">
+                                                            <!-- txt -->
+                                                            <div class="txt">
+                                                                <!-- fold_info -->
+                                                                <div class="fold_info">
+                                                                    <p class="info ty02">구매자</p>
+                                                                    <ul>
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>
+                                                                    </ul>
+
+                                                                    <ul class="right ty02">
+                                                                        <li>
+                                                                            <!-- rating_container -->
+                                                                            <div class="rating_container">
+                                                                                <div class="rating_stars">
+                                                                                    <div class="empty_stars">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                    <div class="filled_stars" style="width:50%">
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                        <span class="star small"></span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!-- //rating_container -->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="txt_value">
+                                                                                <span>좋았어요</span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <!-- //fold_info -->
+
+                                                                <!-- prod_thumb -->
+                                                                <div class="prod_thumb">
+                                                                    <p class="img_t"><img src="../../images/temp/@img_prod01.jpg" alt=""></p>
+                                                                    <span class="txt_num">2</span>
+                                                                </div>
+                                                                <!-- //prod_thumb -->
+
+                                                                <p class="tit">
+                                                                    <strong class="tit_info">1. Lavender </strong>
+                                                                    <span class="txt_len3">
+                                                                        <em style="color:#da2128">* 댓글 리스트  5개 이상일때 답글 더보기</em><br><!-- 확인 구분용 -->
+                                                                        
+                                                                        하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다. 
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                            <!-- //txt -->
+                                                        </div>
+                                                        <!-- //fold_tit -->
+
+                                                        <!-- fold_view -->
+                                                        <div class="fold_view resp">
+                                                            <div class="photoreview_wrap">
+                                                                <div class="swiper-container">
+                                                                    <ul class="swiper-wrapper">
+                                                                        <li class="swiper-slide txt_center">
+                                                                            <img src="../../images/temp/@img_prod01.jpg" alt="">
+                                                                            <a href="javascript:alert('제품상세');"><em class="hidden">제품상세</em></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <div class="swiper-pagination"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- //fold_view -->
+
+                                                        <!-- fold_btn -->
+                                                        <p class="fold_btn">
+                                                            <button onclick="fold_btn(this);"><span>펼치기</span></button>
+                                                        </p>
+                                                        <!-- //fold_btn -->
+
+                                                        <!-- review_btn_common -->
+                                                        <div class="review_btn_common">
+                                                            <button class="btn_good"><span class="hidden">좋아요</span><span>234</span></button>
+                                                            <button class="btn_reply"><span>답글</span></button>
+                                                        </div>
+                                                        <!-- //review_btn_common -->
+
+                                                        <p class="under_btn"><button class="btn_arrow" data-role="btn-dialog" data-target="#popReview">한달 후 리뷰 보기</button></p>
+                                                    </div>
+                                                    <!-- //fold_inner -->
+
+
+                                                    <!-- review_reply -->
+                                                    <div class="review_reply">
+                                                        <!-- reply_list -->
+                                                        <ul class="reply_list">
+                                                            <!-- reply_list_item : 반복 -->
+                                                            <li class="reply_list_item">
+                                                                <!-- reply_list_item_inner -->
+                                                                <div class="reply_list_item_inner">
+                                                                    <ul class="review_user_info">
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <!--<li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>-->
+                                                                        <li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>
+                                                                    </ul>
                                                                     <div class="info_text">
                                                                         작년까지만 해도 주식은 커녕 재테크에 관해 아무것도 모르다가 구매했어요! 저도 공부하고 싶어서 구매했어요~ 다같이 완독 도전해봐요! :)
                                                                     </div>
-                                                                </li>
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="report">
-                                                                            <button type="button"  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                                        </span>
+                                                                </div>
+                                                                <!-- //reply_list_item_inner -->
+
+                                                                <!-- byte_check_wrap -->
+                                                                <div class="byte_check_wrap">
+                                                                    <textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요">댓글 수정시 노출 됩니다.
+                                                                    </textarea>
+                                                                    <div class="byte_chack_footer">
+                                                                        <div class="byte_check">
+                                                                            <span class="count">0</span>
+                                                                            <span class="total">1000자</span>
+                                                                        </div>
+                                                                        <div class="btn_wrap">
+                                                                            <button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+                                                                            <button type="button" class="btn_xs btn_primary"><span class="text">등록</span></button>
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="info_text">
-                                                                        저도 공부하고싶어서 구매했어요~ 같이 끝까지 완독해봐요!
-                                                                    </div>
-                                                                </li>
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="report">
-                                                                            <button type="button"  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="info_text">
-                                                                        기대가 됩니다~
-                                                                    </div>
-                                                                </li>
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="report">
-                                                                            <button type="button"  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                                        </span>
-                                                                    </div>
+                                                                </div>
+                                                                <!-- //byte_check_wrap -->	
+                                                            </li>
+                                                            <!-- //reply_list_item : 반복 -->
+
+                                                            <li class="reply_list_item">
+                                                                <!-- reply_list_item_inner -->
+                                                                <div class="reply_list_item_inner">
+                                                                    <ul class="review_user_info">
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
                                                                     <div class="info_text">
                                                                         기대가 됩니다~
                                                                     </div>
-                                                                </li>
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="report">
-                                                                            <button type="button"  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                                        </span>
-                                                                    </div>
+                                                                </div>
+                                                                <!-- //reply_list_item_inner -->
+                                                            </li>
+                                                            <li class="reply_list_item">
+                                                                <!-- reply_list_item_inner -->
+                                                                <div class="reply_list_item_inner">
+                                                                    <ul class="review_user_info">
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
                                                                     <div class="info_text">
                                                                         기대가 됩니다~
                                                                     </div>
-                                                                </li>
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="report">
-                                                                            <button type="button"  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                                        </span>
-                                                                    </div>
+                                                                </div>
+                                                                <!-- //reply_list_item_inner -->
+                                                            </li>
+                                                            <li class="reply_list_item">
+                                                                <!-- reply_list_item_inner -->
+                                                                <div class="reply_list_item_inner">
+                                                                    <ul class="review_user_info">
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
                                                                     <div class="info_text">
                                                                         기대가 됩니다~
                                                                     </div>
-                                                                </li>
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="report">
-                                                                            <button type="button"  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                                        </span>
-                                                                    </div>
+                                                                </div>
+                                                                <!-- //reply_list_item_inner -->
+                                                            </li>
+                                                            <li class="reply_list_item">
+                                                                <!-- reply_list_item_inner -->
+                                                                <div class="reply_list_item_inner">
+                                                                    <ul class="review_user_info">
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
                                                                     <div class="info_text">
                                                                         기대가 됩니다~
                                                                     </div>
-                                                                </li>     
-                                                            </ul>
-                                                        </div>
-                                                        <div class="auto_overflow_footer rereply_btn_footer">
-                                                            <button type="button" class="btn_expand reply_cmt" data-btn-toggle>
-                                                                <span class="txt">답글더보기</span>
-                                                                <span class="ico_circle_more"></span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                        
-                                                </div>
-                                                <div class="review_inner">
-                                                    <div class="review_info_area">
-                                                        <span class="badge badge_sm badge_default rounded">구매자</span>
-                                                        <span class="txt_user">ab*****</span>
-                                                        <span class="gap"> | </span>
-                                                        <span class="txt_date">2021.07.11</span>
-                                                        <span class="gap"> | </span>
-                                                        <button  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                    </div>
-                                                    <div class="rating_reaction_wrap">
-                                                        <div class="rating_container">
-                                                            <div class="rating_stars">
-                                                                <div class="empty_stars">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
                                                                 </div>
-                                                                <div class="filled_stars" style="width:50%">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="txt_value">
-                                                            <span class="gap"> / </span>
-                                                            <span class="ico_quotation"><span class="txt_reaction">좋았어요</span></span>
-                                                        </div>
-                                                    </div>
-                            
-                                                    <div class="auto_overflow_wrap overflow">
-                                                        <div class="auto_overflow_contents" style="max-height: 78px;">
-                                                            <div class="auto_overflow_inner">
-                                                                <div class="review_comment_area">
-                                                                    <p class="txt_review">
-                                                                        6개월용이라 부담없이 넉넉히 쓸 수 있어서 좋아요!! 메모할 수 있는 공간도 많구요! 앞으로 몇년간 이것만 계속 쓸 것 같아요
-                                                                    </p>
-                                                                    <!-- <div class="thumnail_review">
-                                                                        <img src="../../images/temp/@img_rank01.jpg" width="100%" height="100%">
-                                                                        <span class="txt_num">2</span>
-                                                                    </div>                                                                         -->
-                                                                </div>
-                                                                <!-- <div class="photoreview_wrap photoreviewSlide-02">
-                                                                    <div class="swiper-container">
-                                                                        <ul class="swiper-wrapper">
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                            <li class="swiper-slide txt_center"><img
-                                                                                    src="../../images/temp/slide_photo_01.png"></li>
-                                                                        </ul>
-                                                                        <div class="swiper-pagination"></div>
-                                                                    </div>
-                                                                </div> -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="auto_overflow_footer">
-                                                            <button type="button" class="btn_expand" data-btn-toggle>
-                                                                <span class="txt">펼치기</span>
-                                                                <span class="ico_circle_more"></span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                            
-                                                    <div class="review_more_area">
-                                                        <a href="#none" class="link_more ico_more"  data-role="btn-dialog" data-target="#cmtReview_txt">이 구매자의 첫 리뷰 보기</a>
-                                                        <div class="review_btn_common">
-                                                            <button class="btn_good">
-                                                                <span class="ico_good"></span>
-                                                                <span class="txt_count">234</span>
-                                                            </button>
-                                                            <button class="btn_reply">
-                                                                <span class="ico_reply"></span>
-                                                                <span class="txt_reply">답글</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="review_inner">
-                                                    <div class="review_info_area">
-                                                        <span class="badge badge_sm badge_default rounded">구매자</span>
-                                                        <span class="txt_user">ab*****</span>
-                                                        <span class="gap"> | </span>
-                                                        <span class="txt_date">2021.07.11</span>
-                                                        <span class="gap"> | </span>
-                                                        <button  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                    </div>
-                                                    <div class="rating_reaction_wrap">
-                                                        <div class="rating_container">
-                                                            <div class="rating_stars">
-                                                                <div class="empty_stars">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                </div>
-                                                                <div class="filled_stars" style="width:50%">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="txt_value">
-                                                            <span class="gap"> / </span>
-                                                            <span class="ico_quotation"><span class="txt_reaction">좋았어요</span></span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div class="review_more_area">
-                                                        <a href="" class="link_more ico_more">한달 후 리뷰 보기</a>
-                                                        <div class="review_btn_common">
-                                                            <button class="btn_good active">
-                                                                <span class="ico_good"></span>
-                                                                <span class="txt_count">234</span>
-                                                            </button>
-                                                            <button class="btn_reply">
-                                                                <span class="ico_reply"></span>
-                                                                <span class="txt_reply">답글</span>
-                                                            </button>
-                                                        </div>
-                                                    </div> -->
-                                                    <div class="box_msg">
-                                                        <span class="txt_msg">신고를 받아 블라인드 처리되었습니다.</span><!-- 22.05.18 수정 -->
-                                                    </div>
-                            
-                            
-                                                </div>
-                                                <div class="review_inner">
-                                                    <div class="review_info_area">
-                                                        <span class="badge badge_sm badge_default rounded">구매자</span>
-                                                        <span class="txt_user">ab*****</span>
-                                                        <span class="gap"> | </span>
-                                                        <span class="txt_date">2021.07.11</span>
-                                                        <span class="gap"> | </span>
-                                                        <button  data-role="btn-dialog" data-target="#cmtReport">신고</button>
-                                                    </div>
-                                                    <div class="rating_reaction_wrap">
-                                                        <div class="rating_container">
-                                                            <div class="rating_stars">
-                                                                <div class="empty_stars">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                </div>
-                                                                <div class="filled_stars" style="width:50%">
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                    <span class="star small"></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="txt_value">
-                                                            <span class="gap"> / </span>
-                                                            <span class="ico_quotation"><span class="txt_reaction">별로예요</span></span>
-                                                        </div>
-                                                    </div>                         
-                                                <!--                                 
-                                                    <div class="review_more_area">
-                                                        <a href="" class="link_more ico_more">한달 후 리뷰 보기</a>
-                                                        <div class="review_btn_common">
-                                                            <button class="btn_good active">
-                                                                <span class="ico_good"></span>
-                                                                <span class="txt_count">234</span>
-                                                            </button>
-                                                            <button class="btn_reply">
-                                                                <span class="ico_reply"></span>
-                                                                <span class="txt_reply">답글</span>
-                                                            </button>
-                                                        </div>
-                                                    </div> -->
-                                                    <div class="box_msg">
-                                                        <span class="txt_msg">다른 고객님들의 신고로 인하여 블라인드 처리 되었습니다.</span>
-                                                    </div>       
-                                                    
-                                                    <!-- 22.05.31 클로버 리뷰 확인용 .reply_confirmation -->
-                                                    <div class="review_reply reply_confirmation">
-                                                            <!-- byte_check_wrap -->
-                                                            <!--div.byte_check_wrap - show 클래스로 display 제어 -->
-                                                            <div class="byte_check_wrap active">
-                                                                <textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해 주세요"></textarea><!-- 22.05.18 수정 -->
-                                                                <div class="byte_chack_footer">
-                                                                    <div class="byte_check">
-                                                                        <span class="count">0</span>
-                                                                        <span class="total">1000</span><!-- 22.04.11 300 → 1000자 수정 -->
-                                                                    </div>
-                                                                    <div class="btn_wrap">
-                                                                        <button type="button" class="btn btn_xs btn_black"><span class="text">취소</span></button>
-                                                                        <button type="button" class="btn btn_xs btn_primary"><span class="text">등록</span></button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- //byte_check_wrap -->
-                                                            <ul class="reply_list">
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                    </div>
+                                                                <!-- //reply_list_item_inner -->
+                                                            </li>
+
+
+
+                                                            <li class="reply_list_item">
+                                                                <!-- reply_list_item_inner -->
+                                                                <div class="reply_list_item_inner">
+                                                                    <ul class="review_user_info">
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
                                                                     <div class="info_text">
-                                                                        작년까지만 해도 주식은 커녕 재테크에 관해 아무것도 모르다가 구매했어요! 저도 공부하고 싶어서 구매했어요~ 다같이 완독 도전해봐요! :)
+                                                                        기대가 됩니다~
                                                                     </div>
-                                                                </li>
-                                                                <li class="reply_list_item">
-                                                                    <div class="review_user_info">
-                                                                        <span class="user_name">ab******</span>
-                                                                        <span class="gap"> | </span>
-                                                                        <span class="date">2021.07.11</span>
-                                                                    </div>
+                                                                </div>
+                                                                <!-- //reply_list_item_inner -->
+                                                            </li>
+                                                            <li class="reply_list_item">
+                                                                <!-- reply_list_item_inner -->
+                                                                <div class="reply_list_item_inner">
+                                                                    <ul class="review_user_info">
+                                                                        <li>ab******</li>
+                                                                        <li>2021.07.11</li>
+                                                                        <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                                        <!--<li><button>수정</button></li>
+                                                                        <li><button>삭제</button></li>-->
+                                                                    </ul>
                                                                     <div class="info_text">
-                                                                        저도 공부하고싶어서 구매했어요~ 같이 끝까지 완독해봐요!
+                                                                        기대가 됩니다~
                                                                     </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <!--// 22.05.31 클로버 리뷰 확인용 .reply_confirmation -->
-                                                </div>
-                                            </div>
-                                            <!-- ajax 연동? -->
+                                                                </div>
+                                                                <!-- //reply_list_item_inner -->
+                                                            </li>
+                                                        </ul>
+                                                        <!-- //reply_list -->
+
+                                                        <p class="fold_btn_a">
+                                                            <button class="btn_expand" onclick="btn_expand(this);"><span>답글 더보기</span></button>
+                                                        </p>
+<script>
+$(function(){
+    /* btn_expand 확인용 */
+    $.fn.btn_expand = function(){
+        var tar = $(this)
+        var foldingChk = tar.hasClass('on');
+        if (foldingChk){
+            tar.removeClass('on');
+            tar.find('span').text('답글 더보기');
+            prodDetailCmtShow(true);
+        } else {
+            prodDetailCmtShow(false);
+
+            tar.addClass('on');
+            tar.find('span').text('답글닫기');
+        }
+    };
+});
+
+//대댓글 5개까지만 노출 후 전체 노출
+prodDetailCmtShow(true);
+function prodDetailCmtShow(bool){
+    var reCmtEA = $('.reply_list').children('.reply_list_item').length;
+
+    if(bool){
+        for(var i=0; i<reCmtEA; i++){
+            if(i> 4) $('.reply_list').children('.reply_list_item').eq(i).css('display', 'none');
+        }
+    }else{
+        $('.reply_list').children('.reply_list_item').css('display', 'block');
+    }
+
+}
+
+function btn_expand(val){
+    $(val).btn_expand();
+}				
+</script>
+                                                    </div>
+                                                    <!-- //review_reply -->
+                                                </li>
+                                                <!-- //댓글 -->
+
+
+                                            </ul>
+                                            <!-- //fold_ty -->
+
+
+                                            <!-- btn_more_area -->
                                             <div class="btn_more_area">
-                                                <!-- 클릭시 addclass "active"-->
                                                 <button class="btn_expand">
-                                                    <span class="txt">더보기
-                                                        <span>(5/19)</span>
-                                                    </span>
+                                                    <span class="txt">더보기<span>(5/19)</span></span>
                                                     <span class="ico_circle_more"></span>
                                                 </button>
                                             </div>
+                                            <!-- //btn_more_area -->
                                         </div>
+                                        <!-- //tab_content -->
                                     </div>
-                                    <!-- //tab_content -->
-                                    <!-- tab_content -->
-                                    <div class="tab_content">
-                                        <div></div>
-                                    </div>
-                                    <!-- //tab_content -->
-                                    <!-- tab_content -->
-                                    <div class="tab_content">
-                                        <div></div>
-                                    </div>
-                                    <!-- //tab_content -->
+                                    <!-- //ht_tab_wrap -->
                                 </div>
+                                <!-- //multi_review_area : 리뷰 -->
+
                             </div>
-                                    
-                            <!--// 리뷰 -->
+                            <!-- //베스트 리뷰 -->
                             <hr class="devide_hr">
                         </section>
                         <!-- // 리뷰 -->
@@ -1306,64 +1819,97 @@ $(function(){
 <!-- //wrapper -->
 
 
-
-
-<!-- 한달 후 리뷰 팝업 -->
-<div id="kloverReview" class="dialog_wrap">
+<!-- 신고(댓글) -->
+<div id="cmtReport" class="dialog_wrap has_btn" data-class="dialog_full">
     <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+
     <!-- dialog_header -->
     <div class="dialog_header">
-        <div class="dialog_title">상품 후기 적립금 안내</div>
+        <div class="dialog_title">신고</div>
     </div>
     <!-- //dialog_header -->
 
     <!-- dialog_contents -->
-    <div class="dialog_contents">
-        <div class="tbl_row_wrap type_th_gray">
-            <table class="tbl_row md">
-                <caption>상품 후기 적립금 안내 표입니다.</caption>
-                <colgroup>
-                    <col style="width: 75%;">
-                    <col style="width: 25%;">
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row" class="txt_left">일반 후기</th>
-                        <td class="txt_center">+100P</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="txt_left">포토 후기</th>
-                        <td class="txt_center">+200P</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="txt_left">
-                            핫트랙스 첫 구매후기 작성 시
-                            <ul class="bul_list">
-                                <li class="bul_item_dot font_size_xs">한 ID당 한 번만 지급</li>
-                                <li class="bul_item_dot font_size_xs">일반 / 포토 후기와 중복 지급</li>
-                            </ul>
-                        </th>
-                        <td class="txt_center">+500P</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="txt_left">
-                            우수 상품평 선정 시
-                            <ul class="bul_list">
-                                <li class="bul_item_dot font_size_xs">매일 100명 추첨</li>
-                            </ul>
-                        </th>
-                        <td class="txt_center">25%쿠폰</td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="dialog_contents"> 
+        <p class="info_text font_size_def"><span class="fw_medium">신고 사유를 선택해주세요. <br>신고 내용은 이용약관 및 정책에 의해 처리됩니다.</span></p>
+        <div class="round_gray_box type_sub">
+            <div class="box_info_inner">
+                <!-- chk_col_list -->
+                <ul class="chk_col_list toggle_textarea_list">
+                    <li class="chk_col_item">
+                        <!-- form_rdo -->
+                        <span class="form_rdo">
+                            <input id="rdoReport01" type="radio" name="rdoReport" checked="">
+                            <label for="rdoReport01">비방, 명예훼손, 욕설, 혐오발언</label>
+                        </span>
+                        <!-- //form_rdo -->
+                    </li>
+                    <li class="chk_col_item">
+                        <!-- form_rdo -->
+                        <span class="form_rdo">
+                            <input id="rdoReport02" type="radio" name="rdoReport">
+                            <label for="rdoReport02">홍보, 영리목적</label>
+                        </span>
+                        <!-- //form_rdo -->
+                    </li>
+                    <li class="chk_col_item">
+                        <!-- form_rdo -->
+                        <span class="form_rdo">
+                            <input id="rdoReport03" type="radio" name="rdoReport">
+                            <label for="rdoReport03">음란, 유해, 불법정보</label>
+                        </span>
+                        <!-- //form_rdo -->
+                    </li>
+                    <li class="chk_col_item">
+                        <!-- form_rdo -->
+                        <span class="form_rdo">
+                            <input id="rdoReport04" type="radio" name="rdoReport">
+                            <label for="rdoReport04">상품과 무관한 내용</label>
+                        </span>
+                        <!-- //form_rdo -->
+                    </li>
+                    <li class="chk_col_item">
+                        <!-- form_rdo -->
+                        <span class="form_rdo">
+                            <input id="rdoReport05" type="radio" name="rdoReport">
+                            <label for="rdoReport05">도배 및 내용이 없는 리뷰</label>
+                        </span>
+                        <!-- //form_rdo -->
+                    </li>
+                    <li class="chk_col_item">
+                        <!-- form_rdo -->
+                        <span class="form_rdo">
+                            <input id="rdoReport06" type="radio" name="rdoReport">
+                            <label for="rdoReport06">기타</label>
+                        </span>
+                        <!-- //form_rdo -->
+                        <!-- byte_check_wrap -->
+                        <!-- DESC : 신고하기 항목 - '기타'의 textarea는 기본 disabled 상태 (다른 항목 선택 시 활성화처리는 스크립트 적용되어 있음) -->
+                        <div class="byte_check_wrap">
+                            <textarea class="form_textarea" title="신고 내용을 입력해주세요" placeholder="신고 내용을 입력해주세요." disabled=""></textarea>
+                            <div class="byte_chack_footer">
+                                <div class="byte_check">
+                                    <span class="count">12</span>
+                                    <span class="total">300자</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //byte_check_wrap -->
+                    </li>
+                </ul>
+                <!-- //chk_col_list -->
+            </div>
         </div>
-        
-        <ul class="bul_list" style="margin-top: 12px;">
-            <li class="bul_item_asterisk font_size_xs">1,000원 미만 상품, CD/DVD 상품 적립금 지급 제외</li>
-        </ul>
+        <p class="bul_item_asterisk font_size_xs">허위 신고일 경우, 신고자의 서비스 활동이 제한될 수 있으니 유의하시어 신중하게 신고해주세요.</p>
     </div>
     <!-- //dialog_contents -->
+
+    <!-- dialog_footer -->
+    <div class="dialog_footer">
+        <button type="button" class="btn_md btn_primary"><span class="text">신고</span></button>
+    </div>
+    <!-- //dialog_footer -->
 </div>
-<!-- //한달 후 리뷰 팝업 -->
+<!-- //신고(댓글)-->
 </body>
 </html>

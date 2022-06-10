@@ -52,10 +52,11 @@
 
 <script src="../../js/ui_product_mok.js"></script>
 <script>
+function popFullEx1(){
+	$('#popFullEx1').dialog('open');
+}
 $(function(){
-    $('#popFullEx1').dialog({
-        autoOpen: true
-    });
+	popFullEx1();
 });
 </script>
 </head>
@@ -90,7 +91,7 @@ $(function(){
     <!-- 컨텐츠 -->
     <main id="containerWrapper" class="container_wrapper">
         <!-- data-target 과 id 매치 -->
-        <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popFullEx1"><span class="text">팝업오픈</span></button>
+        <button type="button" class="btn_lg btn_primary" onclick="popFullEx1();"><span class="text">팝업오픈</span></button>
     </main>
     <!-- // 컨텐츠 -->
 </div>
@@ -108,94 +109,132 @@ $(function(){
     <!-- //dialog_header -->
 
     <!-- dialog_contents -->
-    <div class="dialog_contents">
-        <div class="all_review_wrap">
-            <div class="all_review_list">
-                <div class="all_review_item">
-                    <div class="review_top_common">
-                        <div class="review_user_info">
-                            <!-- DESC badge_kyobo컬러 없음 임시로 badge_line_primary추가 -->
-                            <span class="badge_sm badge_pill badge_line_gray"><span class="text">구매자</span></span>
-                            <span class="user_name">ab******</span>
-                            <span class="gap"> | </span>
-                            <span class="date">2021.07.11</span>
-                            <span class="gap"> | </span>
-                            <span class="report">
-                                <button class="btn_report">신고</button>
-                            </span>
-                        </div>
-                        <div class="review_summary_wrap">
-                            <input type="number" class="form_rating" value="7.5" title="평가점수 선택" data-size="xs" readonly >
-                            <span class="gap">/</span>
-                            <span class="review_quotes_text">보통이에요</span>
-                        </div>
-                    </div>
-                    <div class="review_middle">
-                        <div class="review_middle_box">
-                            <p class="info_text">
-                                다이어리 이것저것 다 써봤지만 이 제품이 제일 잘 맞더라구요 고심끝에 정착했습니다. 일단 레이아웃 심플해서 꾸며쓰기 좋고 종이 두께 때문에 필기구로 인한 뒷장 비침이 거의 없어요
-                            </p>
-                            <div class="review_button_common">
-                                <div class="bottom_right">
-                                    <button type="button" class="btn_like active"><span class="ico_like"></span><span
-                                            class="like_cont">234</span></button>
-                                    <button type="button" class="btn_reply"><span class="ico_reply"></span><span
-                                            class="text_reply">답글</span></button>
+    <div class="dialog_contents pop_xsc">
+
+
+        <!-- multi_review_area : 리뷰 -->
+        <div class="multi_review_area">
+            <!-- ht_tab_wrap -->
+            <div class="ht_tab_wrap type_normal">
+
+
+                <!-- tab_content -->
+                <div class="tab_content">
+                    <!-- fold_ty -->
+                    <ul class="fold_ty">
+
+
+                        <!-- .li 반복 -->
+                        <li class="li on">
+                            <!-- fold_inner -->
+                            <div class="fold_inner">
+                                <!-- fold_tit -->
+                                <div class="fold_tit">
+                                    <!-- txt -->
+                                    <div class="txt">
+                                        <!-- fold_info -->
+                                        <div class="fold_info">
+                                            <p class="info ty02">구매자</p>
+                                            <ul>
+                                                <li>ab******</li>
+                                                <li>2021.07.11</li>
+                                                <li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
+                                                <li><button>수정</button></li>
+                                                <li><button>삭제</button></li>
+                                            </ul>
+
+                                            <ul class="right ty02">
+                                                <li>
+                                                    <!-- rating_container -->
+                                                    <div class="rating_container">
+                                                        <div class="rating_stars">
+                                                            <div class="empty_stars">
+                                                                <span class="star small"></span>
+                                                                <span class="star small"></span>
+                                                                <span class="star small"></span>
+                                                                <span class="star small"></span>
+                                                            </div>
+                                                            <div class="filled_stars" style="width:50%">
+                                                                <span class="star small"></span>
+                                                                <span class="star small"></span>
+                                                                <span class="star small"></span>
+                                                                <span class="star small"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //rating_container -->
+                                                </li>
+                                                <li>
+                                                    <div class="txt_value">
+                                                        <span>좋았어요</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- //fold_info -->
+                                        <p class="tit">
+                                            <span class="txt_len3">
+                                                <strong class="tit_info">1. Lavender </strong>
+                                                
+                                                <em style="color:#da2128">* 댓글 버튼 클릭/ 댓글입력에 취소시 hidden</em><br><!-- 확인 구분용 -->
+
+                                                하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다. 
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <!-- //txt -->
                                 </div>
+                                <!-- //fold_tit -->
+
+                                <!-- review_btn_common -->
+                                <div class="review_btn_common">
+                                    <button class="btn_good active"><span class="hidden">좋아요</span><span>234</span></button>
+                                    <button class="btn_reply"><span>답글</span></button>
+                                </div>
+                                <!-- //review_btn_common -->
+
+
                             </div>
-                        </div>
-                    </div>
-                    <div class="review_reply">
-                        <!-- byte_check_wrap -->
-                        <!-- DESC : active 클래스로 display 제어 -->
-                        <div class="byte_check_wrap active">
-                            <textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해 주세요" style="height: 78px;"></textarea><!-- 22.05.18 수정 -->
-                            <div class="byte_chack_footer">
-                                <div class="byte_check">
-                                    <span class="count">0</span>
-                                    <span class="total">300자</span>
+                            <!-- //fold_inner -->
+
+
+                            <!-- review_reply -->
+                            <div class="review_reply">
+                                <!-- byte_check_wrap -->
+                                <div class="byte_check_wrap">
+                                    <textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요"></textarea>
+                                    <div class="byte_chack_footer">
+                                        <div class="byte_check">
+                                            <span class="count">0</span>
+                                            <span class="total">1000자</span>
+                                        </div>
+                                        <div class="btn_wrap">
+                                            <button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+                                            <button type="button" class="btn_xs btn_primary"><span class="text">등록</span></button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="btn_wrap">
-                                    <button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
-                                    <button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
-                                </div>
+                                <!-- //byte_check_wrap -->
                             </div>
-                        </div>
-                        <!-- //byte_check_wrap -->
-                        <ul class="reply_list">
-                            <li class="reply_list_item">
-                                <div class="review_user_info">
-                                    <span class="user_name">ab******</span>
-                                    <span class="gap"> | </span>
-                                    <span class="date">2021.07.11</span>
-                                    <span class="gap"> | </span>
-                                    <span class="report">
-                                        <button type="button" class="btn_report">신고</button>
-                                    </span>
-                                </div>
-                                <div class="info_text">
-                                    저도 공부하고싶어서 구매했어요~ 같이 끝까지 완독해봐요!
-                                </div>
-                            </li>
-                            <li class="reply_list_item">
-                                <div class="review_user_info">
-                                    <span class="user_name">ab******</span>
-                                    <span class="gap"> | </span>
-                                    <span class="date">2021.07.11</span>
-                                    <span class="gap"> | </span>
-                                    <span class="report">
-                                        <button type="button" class="btn_report">신고</button>
-                                    </span>
-                                </div>
-                                <div class="info_text">
-                                    저도 공부하고싶어서 구매했어요~ 같이 끝까지 완독해봐요!
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                            <!-- //review_reply -->
+                        </li>
+                        <!-- //.li 반복 -->
+
+
+
+
+                    </ul>
+                    <!-- //fold_ty -->
+
+
                 </div>
+                <!-- //tab_content -->
             </div>
+            <!-- //ht_tab_wrap -->
         </div>
+        <!-- //multi_review_area : 리뷰 -->
+
+
     </div>
     <!-- //dialog_contents -->
 </div>

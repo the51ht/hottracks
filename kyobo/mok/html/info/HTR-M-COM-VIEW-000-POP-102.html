@@ -52,10 +52,11 @@
 
 <script src="../../js/ui_product_mok.js"></script>
 <script>
+function popFullHasBtnEx1(){
+    $('#popFullHasBtnEx1').dialog('open');
+}
 $(function(){
-    $('#popFullHasBtnEx1').dialog({
-        autoOpen: true
-    });
+    popFullHasBtnEx1();
 });
 </script>
 </head>
@@ -90,7 +91,7 @@ $(function(){
     <!-- 컨텐츠 -->
     <main id="containerWrapper" class="container_wrapper">
         <!-- data-target 과 id 매치 -->
-        <button type="button" class="btn_lg btn_primary" data-role="btn-dialog" data-target="#popFullHasBtnEx1"><span class="text">팝업오픈</span></button>
+        <button type="button" class="btn_lg btn_primary" onclick="popFullHasBtnEx1();"><span class="text">팝업오픈</span></button>
     </main>
     <!-- // 컨텐츠 -->
 </div>

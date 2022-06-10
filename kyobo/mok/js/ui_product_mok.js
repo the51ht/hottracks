@@ -103,6 +103,8 @@ $(function(){
 			},
 		}
 	});
+
+	/*
 	var hotpickSwiper = new CustomSwiper('.hotpickslide_wrap .swiper-container', {
 		slidesPerView: 'auto',
 		speed: 500,
@@ -112,8 +114,6 @@ $(function(){
 		},
 	});
 	
-
-		
 	var photoreviewSwiper = new CustomSwiper('.photoreviewSlide-01 .swiper-container', {
 		slidesPerView: 'auto',
 		speed: 500,
@@ -145,7 +145,80 @@ $(function(){
 				return KyoboHottracks.mok.setPrependZero(number, 2);
 			},
 		}
+	});*/
+
+
+/* 베스트 리뷰 */
+function prodPickBanner(){
+    var $target = $('.hotpickslide_wrap .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.hotpickslide_wrap');
+        $parent.addClass('pordPick_idx_' + index);
+
+        var slideOption = {
+			slidesPerView: 'auto',
+			speed: 500,
+			spaceBetween: 10,
+			pagination: {
+				el: ('pordPick_idx_' + index + ' .swiper-pagination'),
+				type: 'fraction',
+				formatFractionCurrent: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+				formatFractionTotal: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+			},
+        };
+       
+        if($parent.find('.swiper-slide').length > 1) {
+            prodPickBannerSwiper = new Swiper(this, slideOption);
+        }
 	});
+}
+
+$(function(){
+    if(!$('.hotpickslide_wrap').length) return;
+    prodPickBanner();
+});
+
+
+
+/* 제품상세 : 리뷰 */
+function prodReviewBanner(){
+    var $target = $('.photoreview_wrap .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.photoreview_wrap');
+        $parent.addClass('pordReview_idx_' + index);
+
+        var slideOption = {
+			slidesPerView: 'auto',
+			speed: 500,
+			spaceBetween: 10,
+			centeredSlides: true,
+			pagination: {
+				el: ('.pordReview_idx_' + index + ' .swiper-pagination'),
+				type: 'fraction',
+				formatFractionCurrent: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+				formatFractionTotal: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+			},
+        };
+       
+        if($parent.find('.swiper-slide').length > 1) {
+            prodReviewBannerSwiper = new Swiper(this, slideOption);
+        }
+	});
+}
+
+$(function(){
+    //if(!$('.photoreview_wrap').length) return;
+    prodReviewBanner();
+});
+
 
 
 	/*이미지 ZOOM 기능*/ 
