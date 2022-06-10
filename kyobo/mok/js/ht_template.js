@@ -1530,10 +1530,6 @@ function musSpecial(){
 				return KyoboHottracks.mok.setPrependZero(number, 2);
 			}
 		},
-        navigation: {
-            nextEl: '.mus_mc_special_cont .swiper-button-next',
-            prevEl: '.mus_mc_special_cont .swiper-button-prev',
-        },
         breakpoints: {
             370:{
                 spaceBetween:20,
