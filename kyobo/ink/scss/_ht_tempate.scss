@@ -246,11 +246,13 @@
 /*** 상단배너 ***/
 .ht_top_banner {
     padding-bottom:40px;
+    .ht_belt_banner {
+        .swiper-slide {
+            padding-top:400px !important;
+        }
+    }
     .img {
-        position:relative;height:400px;overflow:hidden;
-		img {
-			position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);
-		}
+        position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden;
     }
 }
 
@@ -265,9 +267,9 @@
         }
     }
     .swiper-slide {
-        position:relative;
+        position:relative;height:0;padding-top:120px;
         img {
-            width:100%;height:240px;object-fit:cover;
+            position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;
         }
         .img {
             border-radius:12px;overflow:hidden;
@@ -318,6 +320,13 @@
 .ht_radius {
     border-radius:12px;overflow:hidden;
 }
+.wel_main_warp {
+    .ht_belt_banner {
+        .swiper-slide {
+            padding-top:240px;
+        }
+    }
+}
 
 
 
@@ -328,12 +337,12 @@
 .ht_under_banner {
     position:relative;border-radius:12px;overflow:hidden;
     .swiper-slide {
-        position:relative;
+        position:relative;height:0;padding-top:120px;
         img {
-            width:100%;height:120px;object-fit:cover;
+            position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;
         }
         a {
-            display:block;position:relative;
+            display:block;position:absolute;left:0;top:0;width:100%;height:100%;
         }
     }
 }

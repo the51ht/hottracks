@@ -2763,20 +2763,17 @@ body {
   padding-bottom: 40px;
 }
 
-.ht_top_banner .img {
-  position: relative;
-  height: 400px;
-  overflow: hidden;
+.ht_top_banner .ht_belt_banner .swiper-slide {
+  padding-top: 400px !important;
 }
 
-.ht_top_banner .img img {
+.ht_top_banner .img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: auto;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  height: 100%;
+  overflow: hidden;
 }
 
 /*** 광고배너 ***/
@@ -2791,11 +2788,16 @@ body {
 
 .ht_belt_banner .swiper-slide {
   position: relative;
+  height: 0;
+  padding-top: 120px;
 }
 
 .ht_belt_banner .swiper-slide img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: 240px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2880,6 +2882,10 @@ body {
   overflow: hidden;
 }
 
+.wel_main_warp .ht_belt_banner .swiper-slide {
+  padding-top: 240px;
+}
+
 /*** 하단 공통 배너 ***/
 .ht_under_banner_area {
   padding-bottom: 0;
@@ -2893,18 +2899,27 @@ body {
 
 .ht_under_banner .swiper-slide {
   position: relative;
+  height: 0;
+  padding-top: 120px;
 }
 
 .ht_under_banner .swiper-slide img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: 120px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .ht_under_banner .swiper-slide a {
   display: block;
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* ht_option_box  */
