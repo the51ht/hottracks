@@ -134,7 +134,7 @@ h4 {
     }
     div.gnb_box {
         height: 64px;box-shadow: initial;
-        ul {
+        > ul {
             margin-left: 64px;
             > li{
                 height: 64px;
@@ -142,7 +142,7 @@ h4 {
                     height: 62px;line-height: 67px;font-size: 16px;padding: 0 12px;color: #666666;
                 }
                 .snb-item{
-                    top: 64px;
+                    top: 65px;border-top:0 !important;
                     .side-menu {
                         padding: 21px 10px 34px 10px;
                         border-bottom: 1px solid #ccc;
@@ -150,7 +150,7 @@ h4 {
                             height: auto;border-top:0 !important;
                             dl {
                                 dd{
-                                    border-left: 0;margin-left: 230px;
+                                    border-left: 0;margin-left: 308px;
                                     a, strong{
                                         font-size: 13px;padding: 0 16px;height: 29px;line-height: 29px;
                                         & + a{
@@ -168,25 +168,11 @@ h4 {
                                     }
                                 }
                                 dt{
-                                    background: initial;font-size: 13px;color: #767676;padding-left: 0;top: 11px;
-                                    // > img{
-                                    //     position: relative;font-size:0;position: absolute;
-                                    //     left: 9999px;
-                                    //     &:after{
-                                    //         content: "";display: inline-block;width: 25px;height: 12px;background: url(../images/layout/tb_tag.png) no-repeat;position: absolute;top: 3px;left: -9886px;
-                                    //     }
-                                    // }
+                                    background: initial;font-size: 13px;color: #767676;padding-left: 61px;top: 11px;
+                                    > img{
+                                        margin-left: 4px;
+                                    }
                                 }
-                                // dd a{
-                                //     background: initial;font-size: 13px;color: #767676;padding-left: 0;top: 11px;
-                                //     > img{
-                                //         position: relative;font-size:0;position: absolute;
-                                //         left: 9999px;
-                                //         &:after{
-                                //             content: "";display: inline-block;width: 25px;height: 12px;background: url(../images/layout/tb_tag.png) no-repeat;position: absolute;top: 7px;left: -9900px;
-                                //         }
-                                //     }
-                                // }
                             }
                             li + li{
                                 border-top: 0;
@@ -204,6 +190,44 @@ h4 {
         }
         .drawer{
             width: 18px;height: 14px;left: 39px;top: 26px;background-size: cover;
+        }
+    }
+}
+.show#head {
+    div.gnb_box {
+        border-bottom: 1px solid #ccc;
+        > ul {
+            > li {
+                height: auto; width: 100%;margin-top:5px;
+                &:first-child{
+                    margin-top: 0;
+                }
+                .snb-item{
+                    border-top: 0 !important;
+                    .side-menu{
+                        padding: 5px 0 34px 0;margin: 0 12px; border-top:1px solid #ccc;
+                        ul li dl{
+                            margin-top: 5px;
+                            dt{
+                                margin-left: -5px;padding-left: 0;
+                            }
+                            dd{
+                                margin-left: 241px;
+                            }
+                        }
+                    }
+                    &:hover > a{
+                        padding-left: 0 !important;
+                    }
+                }
+                > a {
+                    font-size: 16px;
+                    text-align: left;background: initial;padding-bottom: 24px;padding-left: 12px !important;
+                }
+            }
+            &:after{
+                display: block; clear: both; content: "";
+            }
         }
     }
 }

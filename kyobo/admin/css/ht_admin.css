@@ -207,15 +207,15 @@ h4 span.button a, h4 span.button button, h4 span.button input {
           box-shadow: initial;
 }
 
-#head div.gnb_box ul {
+#head div.gnb_box > ul {
   margin-left: 64px;
 }
 
-#head div.gnb_box ul > li {
+#head div.gnb_box > ul > li {
   height: 64px;
 }
 
-#head div.gnb_box ul > li a {
+#head div.gnb_box > ul > li a {
   height: 62px;
   line-height: 67px;
   font-size: 16px;
@@ -223,39 +223,40 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   color: #666666;
 }
 
-#head div.gnb_box ul > li .snb-item {
-  top: 64px;
+#head div.gnb_box > ul > li .snb-item {
+  top: 65px;
+  border-top: 0 !important;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu {
+#head div.gnb_box > ul > li .snb-item .side-menu {
   padding: 21px 10px 34px 10px;
   border-bottom: 1px solid #ccc;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li {
   height: auto;
   border-top: 0 !important;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li dl dd {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd {
   border-left: 0;
-  margin-left: 230px;
+  margin-left: 308px;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li dl dd a, #head div.gnb_box ul > li .snb-item .side-menu ul li dl dd strong {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd a, #head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd strong {
   font-size: 13px;
   padding: 0 16px;
   height: 29px;
   line-height: 29px;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li dl dd a + a, #head div.gnb_box ul > li .snb-item .side-menu ul li dl dd strong + a {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd a + a, #head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd strong + a {
   position: relative;
   border-left: 0;
   padding-left: 0;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li dl dd a + a:after, #head div.gnb_box ul > li .snb-item .side-menu ul li dl dd strong + a:after {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd a + a:after, #head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd strong + a:after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -266,13 +267,13 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   left: -10px;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li dl dd a + strong, #head div.gnb_box ul > li .snb-item .side-menu ul li dl dd strong + strong {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd a + strong, #head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd strong + strong {
   position: relative;
   border-left: 0;
   padding-left: 4px;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li dl dd a + strong:after, #head div.gnb_box ul > li .snb-item .side-menu ul li dl dd strong + strong:after {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd a + strong:after, #head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd strong + strong:after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -283,15 +284,19 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   left: -10px;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li dl dt {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dt {
   background: initial;
   font-size: 13px;
   color: #767676;
-  padding-left: 0;
+  padding-left: 61px;
   top: 11px;
 }
 
-#head div.gnb_box ul > li .snb-item .side-menu ul li li + li {
+#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dt > img {
+  margin-left: 4px;
+}
+
+#head div.gnb_box > ul > li .snb-item .side-menu ul li li + li {
   border-top: 0;
 }
 
@@ -311,6 +316,61 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   left: 39px;
   top: 26px;
   background-size: cover;
+}
+
+.show#head div.gnb_box {
+  border-bottom: 1px solid #ccc;
+}
+
+.show#head div.gnb_box > ul > li {
+  height: auto;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.show#head div.gnb_box > ul > li:first-child {
+  margin-top: 0;
+}
+
+.show#head div.gnb_box > ul > li .snb-item {
+  border-top: 0 !important;
+}
+
+.show#head div.gnb_box > ul > li .snb-item .side-menu {
+  padding: 5px 0 34px 0;
+  margin: 0 12px;
+  border-top: 1px solid #ccc;
+}
+
+.show#head div.gnb_box > ul > li .snb-item .side-menu ul li dl {
+  margin-top: 5px;
+}
+
+.show#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dt {
+  margin-left: -5px;
+  padding-left: 0;
+}
+
+.show#head div.gnb_box > ul > li .snb-item .side-menu ul li dl dd {
+  margin-left: 241px;
+}
+
+.show#head div.gnb_box > ul > li .snb-item:hover > a {
+  padding-left: 0 !important;
+}
+
+.show#head div.gnb_box > ul > li > a {
+  font-size: 16px;
+  text-align: left;
+  background: initial;
+  padding-bottom: 24px;
+  padding-left: 12px !important;
+}
+
+.show#head div.gnb_box > ul:after {
+  display: block;
+  clear: both;
+  content: "";
 }
 
 /*** Page Nav ***/
