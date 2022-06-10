@@ -1516,9 +1516,20 @@ function musSpecial(){
         loop: true,
         loopFillGroupWithBlank:false,
         loopsSlide:1,
+        /*
         pagination: {
             el: ('.mus_mc_special_cont .swiper-pagination'),
-        },
+        },*/
+		pagination: {
+			el: $('.mus_mc_special_cont').find('.swiper-pagination')[0],
+			type: 'fraction',
+			formatFractionCurrent: function (number) {
+				return KyoboHottracks.mok.setPrependZero(number, 2);
+			},
+			formatFractionTotal: function (number) {
+				return KyoboHottracks.mok.setPrependZero(number, 2);
+			}
+		},
         navigation: {
             nextEl: '.mus_mc_special_cont .swiper-button-next',
             prevEl: '.mus_mc_special_cont .swiper-button-prev',
