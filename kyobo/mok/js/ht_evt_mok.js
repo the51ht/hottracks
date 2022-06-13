@@ -132,6 +132,9 @@ $(function(){
         var thisTxt = $(this).text();
         select.text(thisTxt).attr('data-val', thisVal);
 
+        $(this).closest('.option_ul').find('li').removeClass('act');
+        $(this).addClass('act')
+
         //화살표 에니메이션 
         $(arrowIcon).addClass('open'); 
 

@@ -331,6 +331,9 @@ $(function(){
 		var thisVal = $(this).attr('data-val');
 		var thisTxt = $(this).text();
 
+		$(this).closest('.option_ul').find('li').removeClass('act');
+        $(this).addClass('act')
+
 		select.text(thisTxt).attr('data-val', thisVal);
 		//화살표 에니메이션 
 		$(arrowIcon).addClass('open'); 
