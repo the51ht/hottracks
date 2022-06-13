@@ -1259,7 +1259,7 @@ input[name=searchVal] {
   height: 36px !important;
   padding: 0 14px 2px;
   color: #000;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 42px;
   letter-spacing: -0.14px;
   font-family: "Noto Sans KR", sans-serif;
@@ -1272,6 +1272,7 @@ input[name=searchVal] {
   transition: border-color 0.2s ease-out;
   outline: none;
   min-width: 30px !important;
+  width: auto !important;
 }
 
 input[type=text]:disabled,
@@ -1379,8 +1380,8 @@ input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
   padding: 2px;
   border: 1px solid #ccc !important;
@@ -1392,12 +1393,12 @@ input[type=radio] {
 input[type=radio]:before {
   content: "";
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   background-color: #ccc;
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 4px;
+  left: 4px;
   border-radius: 100%;
 }
 
@@ -1407,12 +1408,12 @@ input[type=radio] + input {
 
 input[type=radio]:checked {
   background-color: #fff;
-  border: 4px solid #DA2128 !important;
+  border: 5px solid #DA2128 !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
 }
 
@@ -1425,17 +1426,14 @@ input[type=checkbox] {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
   padding: 2px;
   border: 1px solid #ccc !important;
   position: relative;
   margin: -2px 3px 0 4px;
-  background-repeat: no-repeat;
-  background-size: 7px 5px;
-  background-image: url(../images/layout/ico_checkbox@2x.png);
-  background-position: 2px 3px;
+  background: url(../images/layout/ico_checkbox@2x.png) 4px 5px/9px 7px no-repeat;
 }
 
 input[type=checkbox] + input {
@@ -1443,17 +1441,14 @@ input[type=checkbox] + input {
 }
 
 input[type=checkbox]:checked {
-  background-color: #DA2128;
   border: 0 !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
-  background-size: 7px 5px;
-  background-image: url("../images/layout/ico_checkbox_active@2x.png");
-  background-position: 3px 4px;
+  background: #DA2128 url("../images/layout/ico_checkbox_active@2x.png") 5px 6px/9px 7px no-repeat;
 }
 
 input[type=checkbox]:checked:before {
@@ -1492,4 +1487,131 @@ span.button.small a {
 
 table#eventMasterlist tbody tr.tgt {
   background-color: #fff4f1;
+}
+
+.ui-widget-content {
+  padding: 10px !important;
+  border: 1px solid #d5d5d5 !important;
+  border-radius: 4px !important;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1) !important;
+          box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.ui-widget-content.ui-datepicker-buttonpane {
+  margin: 14px 5px 0 5px !important;
+  padding: 0 !important;
+  border-width: 1px 0 0 0 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.ui-widget-content.ui-datepicker-buttonpane button {
+  height: 28px !important;
+  margin: 10px 0 5px 0 !important;
+  padding: 0 8px !important;
+  background: #fff !important;
+  border-radius: 4px !important;
+  color: #000 !important;
+  font-size: 12px !important;
+}
+
+.ui-datepicker .ui-widget-header {
+  background: none;
+  border: 0;
+  color: #000;
+}
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: auto !important;
+}
+
+.ui-datepicker td {
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+  background: none !important;
+  border: 0 !important;
+  color: #000 !important;
+  line-height: 22px !important;
+  text-align: center !important;
+}
+
+.ui-datepicker thead th,
+.ui-datepicker tbody td {
+  width: 20px;
+}
+
+.ui-datepicker thead th:first-child span,
+.ui-datepicker thead th:first-child a,
+.ui-datepicker tbody td:first-child span,
+.ui-datepicker tbody td:first-child a {
+  color: #da2128 !important;
+}
+
+.ui-datepicker thead th a,
+.ui-datepicker tbody td a {
+  font-weight: 400 !important;
+}
+
+.ui-datepicker tbody td:first-child.ui-datepicker-current-day a {
+  color: #fff !important;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  top: 11px !important;
+  width: 30px;
+  height: 30px;
+  background: none !important;
+  border: 0 !important;
+}
+
+.ui-datepicker .ui-datepicker-prev span {
+  background: url("../images/layout/prev.png") center/40px no-repeat;
+  border: 0 !important;
+}
+
+.ui-datepicker .ui-datepicker-next span {
+  background: url("../images/layout/next.png") center/40px no-repeat;
+  border: 0 !important;
+}
+
+.ui-datepicker .ui-datepicker-today {
+  position: relative;
+  /*
+        &:after {
+            position:absolute;right:2px;top:2px;width:5px;height:5px;background-color:#da2128;border-radius:50%;content:"";
+        }*/
+}
+
+.ui-datepicker .ui-datepicker-today a {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  background-color: #eee !important;
+  border-radius: 50%;
+  color: #000 !important;
+}
+
+.ui-datepicker .ui-datepicker-current-day a {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  background-color: #000 !important;
+  border-radius: 50%;
+  color: #fff !important;
+}
+
+input[type=text].hasDatepicker,
+input[type=number].hasDatepicker,
+input[name=searchVal].hasDatepicker {
+  width: 80px !important;
+}
+
+.content {
+  padding-bottom: 100px;
 }

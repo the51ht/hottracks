@@ -14265,6 +14265,7 @@ body:before {
   position: relative;
   height: 0;
   margin-bottom: 10px;
+  background-color: #f7f7f7;
   overflow: hidden;
 }
 
@@ -14277,6 +14278,7 @@ body:before {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  mix-blend-mode: multiply;
 }
 
 .prod-wrapper .product_pic img.ob_contain,
@@ -16441,14 +16443,13 @@ body:before {
 
 .prod_list .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
 }
 
 .prod_list .txt .s0 {

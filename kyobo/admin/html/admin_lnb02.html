@@ -2039,6 +2039,21 @@ jQuery.fn.serializeObject = function() {
 				<input type="hidden" name="eventId" value="77684">
 				<input type="hidden" name="mallId" value="01">
 			
+<script>
+jQuery(function($) {
+	$(document).ready(function() {
+        $("[name=dispStartDt], [name=dispEndDt]").datepicker({ dateFormat:'yymmdd' });
+        $("#stVar6,#stVar7").datepicker({});
+    });
+	
+	$('input[name="checkHandler"]').click(function() {
+        $('input[name="bnrChk"]').attr('checked', $(this).is(':checked'));
+
+    });
+});
+</script>
+
+
 			<div class="form-type" style="padding-top:10px;margin-top:10px;">
 				<table class="table">
 					<colgroup>
@@ -2053,6 +2068,31 @@ jQuery.fn.serializeObject = function() {
 								<select name="mallId">
 									<option value="01" selected="selected">교보몰</option>
 								</select>
+
+
+                                <p>구분 :
+                                    <select name="stVar2">
+                                        <option value="O" >주문</option>
+                                        <option value="M" >매출</option>
+                                    </select>
+                                    판매채널 : 
+                                    <select name="stVar3">
+                                        <option value="" >전체</option>
+                                        <option value="I" >인터넷</option>
+                                        <option value="M" >모바일</option>
+                                    </select>
+                                    유입경로 : 
+                                    <select name="stVar4">
+                                        <option value="" >전체</option>
+                                        <option value="S" >직접</option>
+                                        <option value="N" >네이버</option>
+                                        <option value="W" >위메프</option>
+                                    </select>
+                                    날짜 : 
+                                    <input type="text" id="stVar6" name="stVar6" style="width:60px;"/> ~ 
+                                    <input type="text" id="stVar7" name="stVar7" style="width:60px;"/>
+                                    <span class="button"><input type="button" value="검색" onclick="javascript:searchOdma('MGFT_ROLL_BNR')"/></span>
+                                </p>
                 			</td>
 						</tr>
 						<tr>
