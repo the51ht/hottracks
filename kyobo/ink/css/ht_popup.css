@@ -190,6 +190,67 @@
   text-decoration: underline;
 }
 
+/* 태그 */
+.tag_wrap {
+  margin: -3px;
+  font-size: 0;
+}
+
+.tag_wrap .tag_item {
+  margin: 3px;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.01em;
+  color: #595959;
+  padding: 5px 14px 6px;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: background-color 0.23s, border-color 0.23s, color 0.23s;
+  transition: background-color 0.23s, border-color 0.23s, color 0.23s;
+  text-align: center;
+  vertical-align: top;
+}
+
+.tag_wrap .tag_item .text {
+  position: relative;
+  white-space: nowrap;
+}
+
+.tag_wrap button.tag_item:hover {
+  cursor: pointer;
+}
+
+.tag_wrap button.tag_item.active {
+  background-color: #fff;
+  border-color: #da2128;
+  color: #da2128;
+}
+
+.tag_wrap button.tag_item.size_lg.active {
+  color: #da2128;
+}
+
+.tag_wrap.size_md .tag_item {
+  padding: 8px 14px 7px;
+}
+
+.tag_wrap.size_lg .tag_item {
+  padding: 9px 16px 7px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
+  border-color: #eaeaea;
+  color: #000;
+}
+
+.tag_wrap.col3 .tag_item {
+  width: calc((100% - 18px) / 3);
+}
+
 /***** 팝업 - 제품 *****/
 .pop_head_box {
   position: relative;
