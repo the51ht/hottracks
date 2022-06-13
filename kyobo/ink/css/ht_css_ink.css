@@ -4440,6 +4440,10 @@ input {
   background-color: #fff;
 }
 
+.prod_item {
+  border-radius: 1px;
+}
+
 /** product_pic **/
 .product_pic {
   position: relative;
@@ -4452,8 +4456,8 @@ input {
 }
 
 .product_pic:hover img {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .product_pic:hover img.ob_19 {
@@ -4473,6 +4477,7 @@ input {
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
+  mix-blend-mode: multiply;
 }
 
 .product_pic img.ob_contain {
@@ -4492,6 +4497,7 @@ input {
   border-radius: 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  mix-blend-mode: normal;
 }
 
 .product_pic a {
