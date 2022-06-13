@@ -91,14 +91,16 @@ h4 span.button a, h4 span.button button, h4 span.button input {
 
 #head div.global-menu {
   z-index: 1;
-  text-align: left;
+  text-align: right;
   top: 32px;
   left: 334px;
+  padding-right: 19px;
 }
 
 #head div.global-menu .manual {
   margin-left: -8px;
   margin-top: 4px;
+  text-align: left;
 }
 
 #head div.global-menu .manual a {
@@ -139,6 +141,7 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   color: #D4FF1A;
   position: relative;
   font-size: 13px;
+  float: left;
 }
 
 #head div.global-menu strong:after {
@@ -157,7 +160,7 @@ h4 span.button a, h4 span.button button, h4 span.button input {
 }
 
 #head div.global-menu .txt_user ~ span {
-  position: absolute;
+  padding-left: 12px;
 }
 
 #head div.global-menu .txt_user ~ span a {
@@ -182,29 +185,8 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   right: -10px;
 }
 
-#head div.global-menu .txt_user ~ span:nth-child(2) {
-  right: 291px;
-  top: 0px;
-}
-
-#head div.global-menu .txt_user ~ span:nth-child(3) {
-  right: 210px;
-  top: 0px;
-}
-
-#head div.global-menu .txt_user ~ span:nth-child(4) {
-  right: 142px;
-  top: 0px;
-}
-
-#head div.global-menu .txt_user ~ span:nth-child(5) {
-  right: 74px;
-  top: 0px;
-}
-
-#head div.global-menu .txt_user ~ span:nth-child(6) {
-  right: 19px;
-  top: 0;
+#head div.global-menu .txt_user ~ span:nth-child(1) {
+  margin-left: 0;
 }
 
 #head div.global-menu .txt_user ~ span:nth-child(6) a:after {
@@ -1381,6 +1363,10 @@ label {
 }
 
 label + label {
+  margin-left: 5px;
+}
+
+#switchMode label:first-child {
   margin-left: 8px;
 }
 
