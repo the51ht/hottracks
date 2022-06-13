@@ -35,7 +35,7 @@ $(function(){
 			headerWrap.addClass('active_product');
 		} else {
 			headerWrap.removeClass('active_product');
-		}
+		}0.
 	});
 
 	// 리뷰 내 리뷰 썸네일 swiper
@@ -103,7 +103,7 @@ $(function(){
 			},
 		}
 	});
-
+	
 	/*
 	var hotpickSwiper = new CustomSwiper('.hotpickslide_wrap .swiper-container', {
 		slidesPerView: 'auto',
@@ -114,6 +114,8 @@ $(function(){
 		},
 	});
 	
+
+		
 	var photoreviewSwiper = new CustomSwiper('.photoreviewSlide-01 .swiper-container', {
 		slidesPerView: 'auto',
 		speed: 500,
@@ -146,37 +148,8 @@ $(function(){
 			},
 		}
 	});*/
-
-
-/* 베스트 리뷰 */
-function prodPickBanner(){
-    var $target = $('.hotpickslide_wrap .swiper-container');
-    $target.each(function (index, element) {
-        var $parent = $(this).parent('.hotpickslide_wrap');
-        $parent.addClass('pordPick_idx_' + index);
-
-        var slideOption = {
-			slidesPerView: 'auto',
-			speed: 500,
-			spaceBetween: 10,
-			pagination: {
-				el: ('pordPick_idx_' + index + ' .swiper-pagination'),
-				type: 'fraction',
-				formatFractionCurrent: function (number) {
-					return KyoboHottracks.mok.setPrependZero(number, 2);
-				},
-				formatFractionTotal: function (number) {
-					return KyoboHottracks.mok.setPrependZero(number, 2);
-				},
-			},
-        };
-       
-        if($parent.find('.swiper-slide').length > 1) {
-            prodPickBannerSwiper = new Swiper(this, slideOption);
-        }
-	});
-}
-
+	
+	
 $(function(){
     if(!$('.hotpickslide_wrap').length) return;
     prodPickBanner();
@@ -184,40 +157,12 @@ $(function(){
 
 
 
-/* 제품상세 : 리뷰 */
-function prodReviewBanner(){
-    var $target = $('.photoreview_wrap .swiper-container');
-    $target.each(function (index, element) {
-        var $parent = $(this).parent('.photoreview_wrap');
-        $parent.addClass('pordReview_idx_' + index);
-
-        var slideOption = {
-			slidesPerView: 'auto',
-			speed: 500,
-			spaceBetween: 10,
-			centeredSlides: true,
-			pagination: {
-				el: ('.pordReview_idx_' + index + ' .swiper-pagination'),
-				type: 'fraction',
-				formatFractionCurrent: function (number) {
-					return KyoboHottracks.mok.setPrependZero(number, 2);
-				},
-				formatFractionTotal: function (number) {
-					return KyoboHottracks.mok.setPrependZero(number, 2);
-				},
-			},
-        };
-       
-        if($parent.find('.swiper-slide').length > 1) {
-            prodReviewBannerSwiper = new Swiper(this, slideOption);
-        }
-	});
-}
 
 $(function(){
     //if(!$('.photoreview_wrap').length) return;
     prodReviewBanner();
 });
+
 
 
 
@@ -570,6 +515,7 @@ function toggleRadioTextArea() {
  * @param type {string} 팝업 이벤트 타입(0 - pop open / 1 - pop close)
  */
  function reviewAnimation(evttype){
+	setStarRating();
 	var reviewPopContainer = $('.dialog_wrap.product_review');
 	var ratingTg = $('.form_rating', reviewPopContainer);
 	var reviewProdItem = $('.thumbnail_round_box', reviewPopContainer);
@@ -577,6 +523,7 @@ function toggleRadioTextArea() {
 
 	if(evttype === 0){
 		ratingTg.on('rating:change', function(event, value, caption){
+			
 			reviewPopContainer.addClass('review_next has_btn');
 			reviewProdItem.find('.thumbnail_product_item').addClass('horizontal_type');
 			reviewPopContainer.find('.rating-container').addClass('rating-sm').removeClass('rating-lg');
@@ -601,5 +548,97 @@ function toggleRadioTextArea() {
 		reviewBtnTag.removeClass('active');
 		$('.form_wrap .form_box', reviewPopContainer).removeClass('animated');
 	}
+}
+
+/**
+ * 별점 컴포넌트 생성
+ */
+function setStarRating() {
+	if ($('.form_rating').length <= 0) return false;
+
+	$('.form_rating').each(function(){
+		var that = $(this);
+
+		that.rating({
+			language: 'ko',
+			theme: 'krajee-gly',
+			clearCaption: 0,
+			stars: 4,
+			min: 0,
+			max: 10,
+			step: 2.5,
+
+			starCaptions: function (rating) {
+				if(that.data('caption') !== undefined) {
+					return '<span class="val">' + rating + '</span>' + '<span class="total">' + 10 + '</span>';
+				}else{
+					return ' ';
+				}
+			}
+		});
+
+		if(that.data('caption') !== undefined) {
+			that.closest('.rating-container').addClass('has_caption');
+		}
+	});
+}
+
+/* 제품상세 : 리뷰 */
+function prodReviewBanner(){
+    var $target = $('.photoreview_wrap .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.photoreview_wrap');
+        $parent.addClass('pordReview_idx_' + index);
+
+        var slideOption = {
+			slidesPerView: 'auto',
+			speed: 500,
+			spaceBetween: 10,
+			centeredSlides: true,
+			pagination: {
+				el: ('.pordReview_idx_' + index + ' .swiper-pagination'),
+				type: 'fraction',
+				formatFractionCurrent: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+				formatFractionTotal: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+			},
+        };
+       
+        if($parent.find('.swiper-slide').length > 1) {
+            prodReviewBannerSwiper = new Swiper(this, slideOption);
+        }
+	});
+}
+
+/* 베스트 리뷰 */
+function prodPickBanner(){
+    var $target = $('.hotpickslide_wrap .swiper-container');
+    $target.each(function (index, element) {
+        var $parent = $(this).parent('.hotpickslide_wrap');
+        $parent.addClass('pordPick_idx_' + index);
+
+        var slideOption = {
+			slidesPerView: 'auto',
+			speed: 500,
+			spaceBetween: 10,
+			pagination: {
+				el: ('pordPick_idx_' + index + ' .swiper-pagination'),
+				type: 'fraction',
+				formatFractionCurrent: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+				formatFractionTotal: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+			},
+        };
+       
+        if($parent.find('.swiper-slide').length > 1) {
+            prodPickBannerSwiper = new Swiper(this, slideOption);
+        }
+	});
 }
 $(window).off('resize.uiProdTitle orientationChange.uiProdTitle', setProdTitleMoreBtn).on('resize.uiProdTitle orientationChange.uiProdTitle', setProdTitleMoreBtn);

@@ -1,9 +1,3 @@
-
-
-
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
@@ -13,12 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="format-detection" content="telephone=no, address=no, email=no" />
-
-
-
-
-
-
 
 
 
@@ -42,17 +30,361 @@
 <script src="../js/ht_admin.js"></script>
 
 
+<script type="text/javascript">
+jQuery(function($) {
+    Fn_CheckScreen();
+    $(window).resize(function(){
+        Fn_CheckScreen();
+    });
+    
+    $("form").each(function(){
+        $(this).submit(function(){
+            $("#loadingBar").show();
+        });
+    });
+    
+    $(document).ready(function(){
+        _history();
+    });
+});
 
+function Fn_CheckScreen(){
+    if($(window).width() < 768){
+        if(!$("body").hasClass("mini"))    $("body").addClass("mini");
+    }else{
+        if($("body").hasClass("mini"))     $("body").removeClass("mini");
+    }
+}
+</script>
 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" type="text/css" href="http://devadmin.hottracks.co.kr/scripts/jquery/css/jquery-ui-1.8.6.custom.css" />
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/categorySelectAll.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/jquery/jquery-ui-1.8.6.custom.min.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/calendar.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/json2.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/fn_eventModuleForm.js"></script>
+<script type="text/javascript" src="http://devadmin.hottracks.co.kr/scripts/kh.common.2.0.0.js?201809281054"></script>
+<script type="text/javascript">
+var eventId ='77684';
+var mallId ='01';
+var moduleId = 'P0159';
+var moduleSeq = '';
+var ctgrId = '0004';
+var isChange = false;
+var hasAnch = false;
+var hasJoin = false;
+var hasComment = false;
+var win;
+jQuery(function($) {
+	'0004'==''?categorySelectLoad('00'):categorySelectLoad('0004');
+    $(document).ready(function() {
+    	'77684'==''?"categorySelect":$("#categorySelect select[name=selectCategory]:first-child").attr("disabled","'disabled'");
+        $("#eventStartDate, #eventEndDate").datepicker({
+            onSelect: function(dateText, inst) {
+                var startDate = $("#eventStartDate").datepicker("getDate");
+                var endDate = $("#eventEndDate").datepicker("getDate");
+                if (startDate != null && endDate != null && endDate < startDate) {
+                    alert("종료일은 시작일보다 크거나 같아야합니다.");
+                    $(this).val("");
+                }
+            }
+        });
+        $("input[name='pwnrRlsScdlDt']").datepicker();
+        $("input[name='pwnrRlsYn']").change(function(){
+       		if ($(this).val() == "Y") {
+       			$(this).parents("td").find('input[type=text]').removeAttr('disabled');
+       		}else{
+       			$(this).parents("td").find('input[type=text]').val('');
+       			$(this).parents("td").find('input[type=text]').attr("disabled",'disabled');
+       		}
+        });
+        // 사은품
+        $('input[name="chkFreeAll"]').change(function(){
+            $('input[name="chkFree"]').attr('checked', $(this).is(':checked'));
+        });
+        $("input, select").change(function(){
+			if ($(this).attr("name")!='moduleId'&&$(this).attr("value")!='미리보기') {
+	        	isChange  = true;
+			}
+       	});
+    });
 
-
-
-
-
-
+	$(function(){
+		$( ".module-side-menu" ).sortable({
+			placeholder: "card-placeholder",
+			items:$('.dragable'),
+			start: function(event, ui) {
+				ui.item.data('start_pos', ui.item.index());
+	        },
+			stop: function(event, ui) {
+				var spos = ui.item.data('start_pos');
+	            var epos = ui.item.index();
+	            if(spos==epos){
+	            	return;
+	            }
+				$("#loadingBar").fadeIn();
+	            $(".module-side-menu .dragable").length;
+	            if(spos>epos){
+	            	var childNum = epos+1;
+	            	var sandid = $(".module-side-menu .dragable:nth-child("+childNum+") a").attr("moduleId");
+	            	var sandseq = $(".module-side-menu .dragable:nth-child("+childNum+") a").attr("moduleSeq");
+// 	            	console.log("sandid : "+sandid +" sandseq : "+sandseq+" sandDispord : "+epos);
+	            	ajaxDispOrd(sandid,sandseq,epos);
+	            	for (var i = epos; i < spos; i++) {
+	            		var sandDispord = i+1;
+	            		var childNum = i+2
+						var sandid = $(".module-side-menu .dragable:nth-child("+childNum+") a").attr("moduleId");
+						var sandseq = $(".module-side-menu .dragable:nth-child("+childNum+") a").attr("moduleSeq");
+						console.log("sandid : "+sandid +" sandseq : "+sandseq+" sandDispord : "+sandDispord);
+						ajaxDispOrd(sandid,sandseq,sandDispord);
+					}
+	            	
+	            }else{
+	            	var childNum = epos+1;
+	            	var sandid = $(".module-side-menu .dragable:nth-child("+childNum+") a").attr("moduleId");
+	            	var sandseq = $(".module-side-menu .dragable:nth-child("+childNum+") a").attr("moduleSeq");
+// 	            	console.log("sandid : "+sandid +" sandseq : "+sandseq+" sandDispord : "+epos);
+	            	ajaxDispOrd(sandid,sandseq,epos);
+	            	for (var i = epos; i > spos; i--) {
+	            		var sandDispord = i-1;
+						var sandid = $(".module-side-menu .dragable:nth-child("+i+") a").attr("moduleId");
+						var sandseq = $(".module-side-menu .dragable:nth-child("+i+") a").attr("moduleSeq");
+// 						console.log("sandid : "+sandid +" sandseq : "+sandseq+" sandDispord : "+ sandDispord);
+						ajaxDispOrd(sandid,sandseq,sandDispord);
+					}
+	            }
+	            
+	            $("#loadingBar").fadeOut();
+	        }
+		});
+		
+	});
+});
+function ajaxDispOrd(id,seq,displayOrd){
+	$.ajax({
+        type: "POST"
+        , url: "/admin/event/ajaxDispOrd"
+        , data: {moduleId:id,moduleSeq:seq,eventId:eventId,mallId:mallId,dispOrd:displayOrd}
+		, dataType: "json"
+        , success: function(data) {
+        	console.log("성공");
+        }
+        , error: function() {
+        	console.log("에러");
+        }
+    });
+}
+function move(id,moduleSeq){
+		if (isChange) {
+			if (!confirm("변경사항이 있습니다. 페이지를 이동하시겠습니까?")) {
+				return;
+			}	
+		}
+		if (id=='P0159') {
+			if (id!=moduleId) {
+			document.location.href="/admin/event/eventModuleMasterForm?eventId=" + eventId + "&mallId=" + mallId;
+			}
+		} else {
+			$("select[name=moduleId] option[value="+id+"]").attr("selected","selected");
+			ajaxHtml(id,moduleSeq);
+		}
+}
+function submit(gbn){
+	if($("input[name='title']").val() == ""){
+        alert('이벤트 제목을 생략할 수 없습니다.');
+        $("input[name='title']").focus();
+        return false;
+    }else if($("input[name='subTitle']").val() == ""){
+        alert('이벤트 부제목을 생략할 수 없습니다.');
+        $("input[name='subTitle']").focus();
+        return false;
+    }else if($("input[name='eventStartDt']").val() == ""){
+        alert('이벤트 시작일을 생략할 수 없습니다.');
+        $("input[name='eventStartDt']").focus();
+        return false;
+    }else if($("input[name='eventEndDt']").val() == ""){
+        alert('이벤트 종료일을 생략할 수 없습니다.');
+        $("input[name='eventEndDt']").focus();
+        return false;
+    }else if($("select[name=selectCategory]:first-child").val().length < 2){
+        alert('카테고리를 1DEPTH 이상 선택해주세요.');
+        $("select[name=selectCategory]:first-child").focus();
+        return false; 
+    }else if($("select[name=mngrAdminId]").val() == ""){
+        alert('담당MD를 선택해주세요.');
+        $("select[name=mngrAdminId]").focus();
+        return false; 
+    }
+	var url="";
+	if (gbn=='save') {
+		url="/admin/event/eventModuleMasterSubmit";
+	}else if (gbn=='update') {
+		url="/admin/event/eventModuleMasterUpdate";
+	}
+	var data1 = $("form[name=eventModuleForm]").serializeObject();
+	var data2 = $("form[name=eventModuleFreeGiftForm]").serializeObject();
+	var data = [data1,data2];
+	console.log(data);
+	$.ajax({
+        type: "POST"
+        , async : false
+        , url: url
+        , data: {data:JSON.stringify(data)}
+        , dataType: "json"
+        , success: function(data) {
+        	console.log("성공 : " + data.eventId);
+        	document.location.href="/admin/event/eventModuleMasterForm?eventId=" + data.eventId + "&mallId=" + $("select[name=mallId]").val();
+        }
+        , error: function() {
+        	console.log("에러 : "+ data.e);
+        }
+    });
+}
+function moduleFormChange(value){
+	if (isChange) {
+		if (!confirm("변경사항이 있습니다. 페이지를 이동하시겠습니까?")) {
+			$("select[name=moduleId] option[value="+moduleId+"]").attr("selected","selected");
+			return;
+		}	
+	}
+	if(value=="C1591"&&hasAnch){
+		alert("현재 이벤트에 앵커모듈이 존재합니다.");
+		$("select[name=moduleId] option[value="+moduleId+"]").attr("selected","selected");
+		return;
+	}
+	if((value=="C1597"||value=="C1598"||value=="C1599"||value=="C159A"||value=="C159B"||value=="C159C")&&hasJoin){
+		alert("현재 이벤트에 참여형모듈이 존재합니다.");
+		$("select[name=moduleId] option[value="+moduleId+"]").attr("selected","selected");
+		return;
+	}
+	if((value=="C159D"||value=="C159E")&&hasComment){
+		alert("현재 이벤트에 댓글모듈이 존재합니다.");
+		$("select[name=moduleId] option[value="+moduleId+"]").attr("selected","selected");
+		return;
+	}
+	if(value=="P0159"){
+		document.location.href="/admin/event/eventModuleMasterForm?eventId=" + eventId + "&mallId=" + mallId;
+	}else{
+		console.log(moduleId + " : " + value);
+		$(".cate-content").html("");
+	   	ajaxHtml(value,"");
+	}
+}
+function ajaxHtml(id,seq){
+	isChange = false;
+	$.ajax({
+        type: "POST"
+        , url: "/admin/event/eventModuleForm"
+        , data: {moduleId:id,moduleSeq:seq,eventId:eventId,mallId:mallId,ctgrId:ctgrId}
+		, dataType: "html"
+        , success: function(htmlStr) {
+//         	console.log("성공 : " + data.eventId);
+			$(".cate-content").empty();
+			$(".cate-content").append(htmlStr);
+        }
+        , error: function() {
+//         	console.log("에러 : "+ data.e);
+        }
+    });
+}
+function deleteModule(mdlId,mdlSeq){
+	console.log(mdlId+" : "+mdlSeq);
+	if(confirm("정말 삭제 하시겠습니까?")){
+		console.log("true");
+		$.ajax({
+	        type: "POST"
+	        , url: "/admin/event/deleteModule"
+	        , data: {moduleId:mdlId,moduleSeq:mdlSeq,eventId:eventId,mallId:mallId}
+			, dataType: "json"
+	        , success: function(data) {
+	        	console.log("성공"); 
+	        	document.location.href="/admin/event/eventModuleMasterForm?eventId=" + eventId + "&mallId=" + mallId;
+	        }
+	        , error: function() {
+	        	console.log("에러");
+	        }
+	    });
+	}
+}
+function brandPopup(){
+	win = window.open("/admin/vendor/popupSearchBrand?maxLength=1", "", "width=800, height=600, scrollbars=yes");
+	win.focus();
+}
+function removeBrand(){
+	$("[name=brandId]").val('');
+	$(".brandName").val('');
+}
+function setBrand(data){
+	console.log(data);
+	brandId = "";
+	$("[name=brandId]").val(data.brandId);
+	$(".brandName").val(data.brandName);
+	win.close();
+}
+var imageServerUri = "http://image.kyobobook.co.kr/newimages/giftshop_new/work/";
+jQuery.fn.serializeObject = function() {
+    var obj = null;
+    try {
+        if (this[0].tagName && this[0].tagName.toUpperCase() == "FORM") {
+            var arr = this.serializeArray();
+            if (arr) {
+                obj = {};
+                jQuery.each(arr, function() {
+                    obj[this.name] = this.value;
+                });
+            }//if ( arr ) {
+        }
+    } catch (e) {
+        alert(e.message);
+    } finally {
+    }
+ 
+    return obj;
+};
+</script>
 <style type="text/css">
-form[name="fixMenuform"] .list-type table tbody tr td input[type="text"]{ width:90%;}
+	div.cate-content {width: 79%;}
+	.buttonX {
+		-webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+		-moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+		-ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+		-o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+		transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+		display: block;
+		margin: 20px auto;
+		max-width: 180px;
+		text-decoration: none;
+		border-radius: 4px;
+		padding: 20px 30px;
+	}
+	/* 이동 타켓 */
+	.card-placeholder {width:279px !important;border: 6px dotted yellow !important;margin: 1em 0 1em 0 !important;height: 30px !important;margin-left:auto;margin-right:auto;background-color: #ffff0014 !important;}
+	.module-side-menu div {height:auto;display:inline-block;padding:10px 1px;user-select:none;	}
+	.module-side-menu div { display:block;width:296px;height:30px;border: 2px solid #4070BF;background: #E7EAF0;filter:alpha(opacity:90);text-align:center;font-size:12px;font-weight:bold; }
+	.module-side-menu div span { font-size: 18px;font-style:normal;margin-top:5px;vertical-align:middle;display:block;height:100%}
+	.module-side-menu div button {float:right;font-size:7px;padding:2px;margin:2px;background-color:#b9b6b6;color:#fff;box-shadow: rgba(30, 22, 54, 0.2) 0 0px 0px 2px inset;padding: 0px 5px 1px 5px;margin: -30px 8px 0px 0px;border-radius: 17px;font-weight: bolder;}
+	.module-side-menu div button:hover {color:#ff0000;box-shadow: rgba(30, 22, 54, 0.5) 0 0px 0px 40px inset;}
+	.module-side-menu div[select=selected] {border-color:#ff0000;}
+	.module-side-menu { margin:0;width: 100%;display:block;min-height:600px;filter:alpha(opacity:70);}
+	.module-side-menu div:hover { background-color:#4070BF;color:#fff; }
+	.module-side-menu div a:hover { background-color:#4070BF;color:#fff; }
+	.module-side-menu div + div { margin-top:5px; }
+	.module-side-menu div.dm_disable { border-color:#9a9a9a;background-color:#dadada;color:#9a9a9a; }
+	.module-side-menu div.dm_prdt { border-color:#ff0000; }
+	.module-side-menu div.dm_prdt:hover { background-color:#ff0000; }
+	.module-side-menu div.dm_evt { border-color:#ff6600; }
+	.module-side-menu div.dm_evt:hover { background-color:#ff6600; }
+	.module-side-menu div.dm_brand { border-color:#00ff00; }
+	.module-side-menu div.dm_brand:hover { background-color:#00ff00; }
+	.module-side-menu div.dm_twice { height:60px; }
+	.module-side-menu div.dm_twice span { font-style:normal;margin-top:7px; }
+	.module-side-menu.fixed { position:relative; }
+	.module-side-menu.fixed a { position: absolute;width:245px; }
+	.module-side-menu.fixed a + a { margin:0; }
 </style>
+
 
 </head>
 <body>
@@ -116,9 +448,9 @@ form[name="fixMenuform"] .list-type table tbody tr td input[type="text"]{ width:
                 
             
             
-                <li class="selected">
+                <li>
                     <a onfocus='blur()' style="color:#ff0000;">개편전시관리</a>
-                    <div class="snb-item active">
+                    <div class="snb-item">
 
 
 
@@ -135,7 +467,6 @@ form[name="fixMenuform"] .list-type table tbody tr td input[type="text"]{ width:
                     <a href="/admin/banner/welcomeMain?dispMstrId=PRCD_ROLL_BNR&ctgrId=00">음반(PC)</a>
                     <a href="/admin/banner/welcomeMain?dispMstrId=MRCD_ROLL_BNR&mallId=02&ctgrId=00">음반(MO)</a>
                     <!-- <a href="/admin/banner/hotDeal">펀딩 핫트딜</a> -->
-                    <a href="/admin/banner/mobHamburgerMenu">모바일 햄버거 메뉴관리</a>
                 </dd>
             </dl>
             <dl>
@@ -202,6 +533,7 @@ form[name="fixMenuform"] .list-type table tbody tr td input[type="text"]{ width:
                 <dd>
                     <a href="/admin/banner/welcomeMain?dispMstrId=NT_MGFT_GNB&mallId=02&ctgrId=00">문구/기프트 메인 [신규]</a>
                     <a href="/admin/banner/welcomeMain?dispMstrId=NT_MRCD_HIRO_BNR&mallId=02&ctgrId=00">음반 메인 [신규]</a>
+                    <a href="/admin/banner/mobHamburgerMenu">모바일 햄버거 메뉴관리 [신규]</a>
 <!--                     <a href="/admin/event/eventModuleMasterForm">이벤트등록[신규]</a> -->
                 </dd>
             </dl>
@@ -526,8 +858,7 @@ form[name="fixMenuform"] .list-type table tbody tr td input[type="text"]{ width:
         
         <li>
             <dl>
-                <!-- 22.06.10 NEW 뱃지 이미지 경로 수정 -->
-                <dt>상품관리 2.0[BETA]<img src="../images/layout/tb_tag.png" alt="NEW"/></dt>
+                <dt>상품관리 2.0[BETA]<img src="/images/i_new.gif" alt="NEW"/></dt>
                 <dd>
                     <a href="/admin/product/2.0/listProduct">상품리스트</a>
                     <!--
@@ -927,9 +1258,9 @@ form[name="fixMenuform"] .list-type table tbody tr td input[type="text"]{ width:
                 
             
             
-                <li>
+                <li class="selected">
                     <a href="http://admin.hottracks.co.kr/admin/banner/eventMasterList" onfocus='blur()'>이벤트관리</a>
-                    <div class="snb-item">
+                    <div class="snb-item active">
 
 
 
@@ -1624,221 +1955,442 @@ form[name="fixMenuform"] .list-type table tbody tr td input[type="text"]{ width:
     <hr />
     <div id="body">
         
-<div class="content" style="margin-left: 20px;">
-	<h3>모바일 햄버거 메뉴 관리</h3>
-		<h4>가변메뉴 관리</h4>
-		<select name="fixMenuMallId">
-			<option value="01" >교보몰</option>
-			<option value="02" selected="selected">핫트랙스</option>
-		</select>
-        <form name="fixMenuform">
-            <div class="list-type" style="width:90%;">
-                <table class="table">
-                    <colgroup>
-                        <col width="10%"/>
-                        <col width="10%"/>
-                        <col width="30%"/>
-                        <col width="50%"/>
-                    </colgroup>
-                    <tbody>
-						<tr id="tr">
-							<th scope="col">위치</th>
-							<th scope="col">아이콘</th>
-							<th scope="col">타이틀 (최대 2줄)</th>
-							<th scope="col">링크 URL</th>
+<div id="contents">
+	<div id="contents-area">
+		<h3>이벤트/기획전 수정</h3>
+		<div class="cate-list" style="margin-top: 5px;max-height: 700px;min-height: 500px;">
+			<!-- class="dm_prdt" -->
+			<div class="module-side-menu">
+				<div id="ModuleA" class="dm_prdt" ><a onclick="move('P0159','')"><span>상단 기본영역</span></a></div> 
+				
+				<div id="Module" class="dragable"><a  moduleId="C159F" moduleSeq="92" onclick="move('C159F','92')"><span> 상품 2단형 모듈 [91] </span></a>
+					<button class="buttonX" onclick="deleteModule('C159F','92')">X</button>
+                </div>
+				<div id="Module" class="dragable"><a  moduleId="C159F" moduleSeq="92" onclick="move('C159F','92')"><span> 상품 2단형 모듈 [92] </span></a>
+					<button class="buttonX" onclick="deleteModule('C159F','92')">X</button>
+                </div>
+				<div id="Module" class="dragable"><a  moduleId="C159F" moduleSeq="92" onclick="move('C159F','92')"><span> 상품 2단형 모듈 [91] </span></a>
+					<button class="buttonX" onclick="deleteModule('C159F','92')">X</button>
+                </div>
+				<div id="Module" class="dragable"><a  moduleId="C159F" moduleSeq="92" onclick="move('C159F','92')"><span> 상품 2단형 모듈 [92] </span></a>
+					<button class="buttonX" onclick="deleteModule('C159F','92')">X</button>
+                </div>
+				
+				<div id="ModuleA"><span>기획전</span></div>
+				
+			</div>
+		</div>
+		
+		
+			<select name="moduleId" onchange="moduleFormChange(this.value)">
+				    
+				        <option value="C1591"  >앵커 TAB</option>
+				    
+				        <option value="P0159"  selected="selected" >이벤트 모듈</option>
+				    
+				        <option value="C1592"  >동영상</option>
+				    
+				        <option value="C1593"  >이미지</option>
+				    
+				        <option value="C1594"  >전시형 상품 (단일)</option>
+				    
+				        <option value="C1595"  >전시형 상품 (캐로셀)</option>
+				    
+				        <option value="C1596"  >텍스트</option>
+				    
+				        <option value="C1597"  >투표</option>
+				    
+				        <option value="C1598"  >응모</option>
+				    
+				        <option value="C1599"  >룰렛</option>
+				    
+				        <option value="C159A"  >스템프 (출석체크)</option>
+				    
+				        <option value="C159B"  >미션 - 단계</option>
+				    
+				        <option value="C159C"  >뽑기</option>
+				    
+				        <option value="C159D"  >일반 댓글</option>
+				    
+				        <option value="C159E"  >이미지 댓글</option>
+				    
+				        <option value="C159F"  >상품 2단형</option>
+				    
+				        <option value="C159G"  >상품 1단 가로형</option>
+				    
+			</select>
+		
+		<span class="button" style="float:right;">
+			<a  href="http://www.hottracks.co.kr/e/77684" target="_blank">미리보기</a>
+		</span>
+		<!-- end cate-list -->
+		<div class="cate-content" style="margin-top: 10px;">
+			<form class="form-type" name="eventModuleForm" method="post">
+			
+				<input type="hidden" name="eventId" value="77684">
+				<input type="hidden" name="mallId" value="01">
+			
+			<div class="form-type" style="padding-top:10px;margin-top:10px;">
+				<table class="table">
+					<colgroup>
+						<col width="50%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row" colspan="2">몰구분</th>
 						</tr>
-						
-						<tr id="fixForm1">
-							<input type="hidden" name="list[1].menuId" value="1"/>
-							<input type="hidden" name="list[1].dispOrd" value="1"/>
-							<input type="hidden" name="list[1].mallId" value="02"/>
-							<td>
-								1단
+						<tr>
+							<td scope="row" colspan="2">
+								<select name="mallId">
+									<option value="01" selected="selected">교보몰</option>
+								</select>
+                			</td>
+						</tr>
+						<tr>
+						<tr>
+							<th scope="row" colspan="1">이벤트/ 기획전 TYPE</th>
+							<th scope="row" colspan="1">핫딜특가 여부</th>
+						</tr>
+						<tr>
+							<td scope="row" rowspan="1"colspan="1">
+								<label><input type="radio" name="eventType" value="1" /> 이벤트 </label>
+	                			<label><input type="radio" name="eventType" value="2" checked="checked"/> 기획전 </label>
+	                			<label><input type="radio" name="eventType" value="3" /> 컬쳐이벤트 </label>
+                			</td>
+                			<td scope="row" rowspan="1"colspan="1">
+	                			<select name="hotdealYn">
+									<option value="Y" > 핫딜 </option>
+									<option value="N" selected="selected"> 일반 </option>
+								</select>
 							</td>
-							<td>
+						</tr>
+						<tr>
+							<th scope="row"colspan="2">타이틀</th>
+						</tr>
+						<tr>
+							<td scope="row" colspan="2">
+								<input type="text" name="title" value="DVD 기획전 test 3" style="width:80%;">
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">서브 타이틀</th>
+						</tr>
+						<tr>
+							<td scope="row" colspan="2">
+								<input type="text" name="subTitle" value="DVD 기획전 test 3" style="width:80%;">
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">카테고리</th>
+						</tr>
+						<tr>
+							<td scope="row" colspan="2">
+								<div class="left" id="categorySelect"></div>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row">이벤트 기간</th>
+							<th scope="row" style="font-weight: normal;"><b>이벤트 기간 텍스트</b> 입력값이 있으면 시작일과 종료일 대신 텍스트를 보여줌</th>
+						</tr>
+						<tr>
+							<td scope="row">
+								<input class="text" type="text" name="eventStartDt" value="20220610" readonly="readonly" id="eventStartDate" size="8"/>
+								<input class="text" type="text" name="eventEndDt" value="20220615" readonly="readonly" id="eventEndDate" size="8"/>
+                			</td>
+                			<td scope="row">
+								<input type="text" name="eventTextDate" value="" style="width:80%;">
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="1">노출용 할인율</th>
+							<th scope="row" colspan="1">브랜드</th>
+						</tr>
+						<tr>
+							<td scope="row" colspan="1">
+								<input type="number" name="dispDscntRate" value="" maxlength="2"> ( 예 : 10, 20 )
+                			</td>
+							<td scope="row" colspan="1">
+								<input type="hidden" name="brandId" value="">
+								<input type="text" class="brandName" value="" readonly="readonly">
+								<span class="button"><input type="button" value="찾기" onclick="brandPopup();" /></span>
+								<span class="button"><input type="button" value="삭제" onclick="removeBrand();" /></span>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row">담당 MD</th>
+							<th scope="row">담당 디자이너</th>
+						</tr>
+						<tr>
+							<td scope="row">
+								<select name="mngrAdminId">
+    <option value="">---- 선택 ----</option>
+    <option value="10376">이주광</option>
+    <option value="10609">김한수</option>
+    <option value="10674">김현진</option>
+    <option value="10694">장연수</option>
+    <option value="10978">한지현</option>
+    <option value="11082">조정민</option>
+    <option value="11141">안지은</option>
+    <option value="11148">INFO</option>
+    <option value="11173">백선혜</option>
+    <option value="11214">유주헌</option>
+    <option value="11255">이미나</option>
+    <option value="11259">양준용</option>
+    <option value="11275">박상순</option>
+    <option value="11276">정지웅</option>
+    <option value="11279">노경선</option>
+    <option value="11314">장희정</option>
+    <option value="11321">최초롬</option>
+    <option value="11324">김성자</option>
+    <option value="11327">신경림</option>
+    <option value="11332">박지현</option>
+    <option value="11334">하태경</option>
+    <option value="11335">신수진</option>
+    <option value="11339">강수원</option>
+    <option value="11342">이아름</option>
+    <option value="11343">한유민</option>
+    <option value="11354">윤재필</option>
+    <option value="11355">이평화</option>
+    <option value="11359">이영준</option>
+    <option value="11362">전지언</option>
+    <option value="11363">김주희</option>
+    <option value="11364">채혜민</option>
+    <option value="11365">김한주</option>
+    <option value="11368">이상구</option>
+    <option value="11369">송주은</option>
+    <option value="11371">김소윤</option>
+    <option value="11372">정다은</option>
+    <option value="11373">유지은</option>
+    <option value="70124">이채원</option>
+    <option value="80064">이유진</option>
+    <option value="80410">이다은</option>
+    <option value="80465">유한영</option>
+    <option value="80466">윤선호</option>
+    <option value="80509">김연정</option>
+    <option value="80539">정다운</option>
+    <option value="80695">김영은</option>
+    <option value="80712">박재이</option>
+    <option value="90223">신수진</option>
+    <option value="90272">김형수</option>
+    <option value="90317">이주미</option>
+    <option value="hotmusic">사인회관리자</option>
+    <option value="md" selected>MD관리자</option>
+    <option value="webtest">웹접근성</option>
+</select>
+
+                			</td>
+                			<td scope="row">
+								<select name="dsnAdminId">
+    <option value="">---- 선택 ----</option>
+    <option value="11320">서유미</option>
+    <option value="11322">조소연</option>
+    <option value="11353">전찬규</option>
+    <option value="70123">김지우</option>
+    <option value="89064">이한결</option>
+    <option value="90204">유승연</option>
+    <option value="90222">임은영</option>
+    <option value="90257">김유준</option>
+    <option value="90271">장보람</option>
+    <option value="90274">김태령</option>
+    <option value="90275">강미소</option>
+    <option value="90280">안소라</option>
+    <option value="90298">이효인</option>
+    <option value="90302">이소라</option>
+    <option value="90311">이유경</option>
+    <option value="90316">강지훈</option>
+    <option value="90323">이소연</option>
+    <option value="90324">이유정</option>
+    <option value="90904">프리랜서</option>
+    <option value="K13091">방은선</option>
+</select>
+
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">디자인 직접 전달사항</th>
+						</tr>
+						<tr>
+							<td scope="row" colspan="2">
+								<textarea name="dsnReqcont" rows="7" cols="200" style="width :98%;font-size: 20px;"></textarea>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2">당첨자 발표 여부</th>
+						</tr>
+						<tr>
+							<td scope="row" colspan="2">
+							<input type="radio" name="pwnrRlsYn" value="Y" />
+							발표 (발표 예정일 : <input type="text" name="pwnrRlsScdlDt" disabled value="">)
+							<input type="radio" name="pwnrRlsYn" value="N" checked="checked"/>
+							미발표
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">진행 상태</th>
+							<th scope="row">이벤트 종료 후 노츨 여부</th>
+						</tr>
+						<tr>
+							<td scope="row">
+								<select name="stateCd">
+									<option value="C0181" > 정상 </option>
+									<option value="C0182" > 일시 중지 </option>
+								</select>
+                			</td>
+                			<td scope="row">
+								<label><input type="radio" name="afEndDispYn" value="Y" /> 노출함 </label>
+	                			<label><input type="radio" name="afEndDispYn" value="N" checked="checked"/> 노출안함 </label>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row">전시 여부 (PC)</th>
+							<th scope="row">전시 여부 (모바일)</th>
+						</tr>
+						<tr>
+							<td scope="row">
+								<label><input type="radio" name="dispYn" value="Y" checked="checked"/> 전시함 </label>
+	                			<label><input type="radio" name="dispYn" value="N" /> 전시안함 </label>
+                			</td>
+                			<td scope="row">
+								<label><input type="radio" name="dispYnMo" value="Y" checked="checked"/> 전시함 </label>
+	                			<label><input type="radio" name="dispYnMo" value="N" /> 전시안함 </label>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row">기획전 사용 여부</th>
+							<th scope="row">오늘만 특가 사용 여부</th>
+						</tr>
+						<tr>
+							<td scope="row">
+								<label><input type="radio" name="exhbtUseYn" value="Y" checked="checked"/> 사용함 </label>
+	                			<label><input type="radio" name="exhbtUseYn" value="N" /> 사용안함 </label>
+                			</td>
+                			<td scope="row">
+								<label><input type="radio" name="tdyOnlSpcUseYn" value="Y" /> 사용함 </label>
+	                			<label><input type="radio" name="tdyOnlSpcUseYn" value="N" checked="checked"/> 사용안함 </label>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row">썸네일(PC)</th>
+							<th scope="row">썸네일(모바일)</th>
+						</tr>
+						<tr>
+							<td scope="row">
 								<div>
-                            	<input type="hidden" id="iconImgUrl1" name="list[1].iconImgUrl" value="1742/1653975004559_1650867355895_menu_list_mn2.png"/>
-                            	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/1742/1653975004559_1650867355895_menu_list_mn2.png" id="iconImgUrl1Img" style="max-width:100px;" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                            	<input type="hidden" id="eventImage0" name="thmbImgUrl" value="1877/1654835093180_2.jpg"/>
+	                            	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/1877/1654835093180_2.jpg" id="eventImage0Img" style="max-width:100px;" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
 								</div>
                             	<div>
-                                <span class="button"><a href="#" onclick="findEventImage('iconImgUrl1');return false;">찾기</a></span>
-                                <span class="button"><a href="#" onclick="removeEventImage('iconImgUrl1');return false;">삭제</a></span>
+	                                <span class="button"><a href="#" onclick="findEventImage('eventImage0');return false;">찾기</a></span>
+	                                <span class="button"><a href="#" onclick="removeEventImage('eventImage0');return false;">삭제</a></span>
                             	</div>
-							</td>
-							<td>
-								<input type="text" name="list[1].title" value="test 1"/>
-							</td>
-							<td>
-								<input type="text" name="list[1].linkUrl" value="/p/2310013954268"/>
-							</td>
-						</tr>
-						
-						<tr id="fixForm2">
-							<input type="hidden" name="list[2].menuId" value="2"/>
-							<input type="hidden" name="list[2].dispOrd" value="2"/>
-							<input type="hidden" name="list[2].mallId" value="02"/>
-							<td>
-								2단
-							</td>
-							<td>
+                			</td>
+                			<td scope="row">
 								<div>
-                            	<input type="hidden" id="iconImgUrl2" name="list[2].iconImgUrl" value="1818/1653975011671_1650871597852_menu_list_mn4.png"/>
-                            	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/1818/1653975011671_1650871597852_menu_list_mn4.png" id="iconImgUrl2Img" style="max-width:100px;" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                            	<input type="hidden" id="eventImage1" name="thmbImgUrlMo" value="1877/1654835099262_2.jpg"/>
+	                            	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/1877/1654835099262_2.jpg" id="eventImage1Img" style="max-width:100px;" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
 								</div>
                             	<div>
-                                <span class="button"><a href="#" onclick="findEventImage('iconImgUrl2');return false;">찾기</a></span>
-                                <span class="button"><a href="#" onclick="removeEventImage('iconImgUrl2');return false;">삭제</a></span>
+	                                <span class="button"><a href="#" onclick="findEventImage('eventImage1');return false;">찾기</a></span>
+	                                <span class="button"><a href="#" onclick="removeEventImage('eventImage1');return false;">삭제</a></span>
                             	</div>
-							</td>
-							<td>
-								<input type="text" name="list[2].title" value="test 2"/>
-							</td>
-							<td>
-								<input type="text" name="list[2].linkUrl" value="/p/2310013954268"/>
-							</td>
+                			</td>
 						</tr>
-						
-						<tr id="fixForm3">
-							<input type="hidden" name="list[3].menuId" value="3"/>
-							<input type="hidden" name="list[3].dispOrd" value="3"/>
-							<input type="hidden" name="list[3].mallId" value="02"/>
-							<td>
-								3단
-							</td>
-							<td>
+						<tr>
+							<th scope="row" colspan="2" style="font-weight: normal;"><b>템플릿 ( PC )</b> (이미지맵 사용시 예 - &lt;map name="eventImageMap"&gt;....&lt;/map&gt;)</th>
+						</tr>
+						<tr>
+							<td scope="row" colspan="2">
+								<textarea name="userTmpl" rows="7" cols="200" style="width :98%;font-size: 20px;"></textarea>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" style="font-weight: normal;"><b>템플릿 ( 모바일 )</b> (이미지맵 사용시 예 - &lt;map name="eventImageMap"&gt;....&lt;/map&gt;)</th>
+						</tr>
+						<tr>
+							<td scope="row" colspan="2">
+								<textarea name="userTmplMo" rows="7" cols="200" style="width :98%;font-size: 20px;"></textarea>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row">카테고리 베너 노츨 여부 (PC)</th>
+							<th scope="row">카테고리 베너 노츨 여부 (모바일)</th>
+						</tr>
+						<tr>
+							<td scope="row">
+								<label><input type="radio" name="bnrDispYn" value="Y" checked="checked"/> 노출함 </label>
+	                			<label><input type="radio" name="bnrDispYn" value="N" /> 노출안함 </label>
+                			</td>
+                			<td scope="row">
+								<label><input type="radio" name="bnrDispYnMo" value="Y" checked="checked"/> 노출함 </label>
+	                			<label><input type="radio" name="bnrDispYnMo" value="N" /> 노출안함 </label>
+                			</td>
+						</tr>
+						<tr>
+							<th scope="row">카테고리 베너 이미지 (PC)</th>
+							<th scope="row">카테고리 베너 이미지 (모바일)</th>
+						</tr>
+						<tr>
+							<td scope="row">
 								<div>
-                            	<input type="hidden" id="iconImgUrl3" name="list[3].iconImgUrl" value=""/>
-                            	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="iconImgUrl3Img" style="max-width:100px;" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                            	<input type="hidden" id="eventImage2" name="bnrImgUrl" value=""/>
+	                            	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage2Img" style="max-width:100px;" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
 								</div>
                             	<div>
-                                <span class="button"><a href="#" onclick="findEventImage('iconImgUrl3');return false;">찾기</a></span>
-                                <span class="button"><a href="#" onclick="removeEventImage('iconImgUrl3');return false;">삭제</a></span>
+	                                <span class="button"><a href="#" onclick="findEventImage('eventImage2');return false;">찾기</a></span>
+	                                <span class="button"><a href="#" onclick="removeEventImage('eventImage2');return false;">삭제</a></span>
                             	</div>
-							</td>
-							<td>
-								<input type="text" name="list[3].title" value=""/>
-							</td>
-							<td>
-								<input type="text" name="list[3].linkUrl" value=""/>
-							</td>
-						</tr>
-						
-						<tr id="fixForm4">
-							<input type="hidden" name="list[4].menuId" value="4"/>
-							<input type="hidden" name="list[4].dispOrd" value="4"/>
-							<input type="hidden" name="list[4].mallId" value="02"/>
-							<td>
-								4단
-							</td>
-							<td>
+                			</td>
+                			<td scope="row">
 								<div>
-                            	<input type="hidden" id="iconImgUrl4" name="list[4].iconImgUrl" value=""/>
-                            	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="iconImgUrl4Img" style="max-width:100px;" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
+	                            	<input type="hidden" id="eventImage3" name="bnrImgUrlMo" value=""/>
+	                            	<img src="http://image.kyobobook.co.kr/newimages/giftshop_new/work/" id="eventImage3Img" style="max-width:100px;" onerror="this.src='http://image.kyobobook.co.kr/newimages/giftshop_new/common/images/no_image2.gif';"/>
 								</div>
                             	<div>
-                                <span class="button"><a href="#" onclick="findEventImage('iconImgUrl4');return false;">찾기</a></span>
-                                <span class="button"><a href="#" onclick="removeEventImage('iconImgUrl4');return false;">삭제</a></span>
+	                                <span class="button"><a href="#" onclick="findEventImage('eventImage3');return false;">찾기</a></span>
+	                                <span class="button"><a href="#" onclick="removeEventImage('eventImage3');return false;">삭제</a></span>
                             	</div>
-							</td>
-							<td>
-								<input type="text" name="list[4].title" value=""/>
-							</td>
-							<td>
-								<input type="text" name="list[4].linkUrl" value=""/>
-							</td>
+                			</td>
 						</tr>
-						
-                    </tbody>
-                </table>
-            </div>
-            <div class="list-option">
-				<span class="button">
-					<input type="button" value="저장하기" onclick="save('fixForm')"/>
-				</span>
-            </div>
-        </form>
-        <h4>인기 브랜드 관리</h4>
-        <select name="brandManuMallId">
-			<option value="01" >교보몰</option>
-			<option value="02" selected="selected">핫트랙스</option>
-		</select>
-        <form name="brandManuform">
-            <div class="list-type" style="width:70%;">
-                <table class="table">
-                    <colgroup>
-                        <col width="10%"/>
-                        <col width="30%"/>
-                    </colgroup>
-                    <tbody>
-						<tr id="tr">
-							<th scope="col">노출순서</th>
-							<th scope="col">브랜드</th>
-						</tr>
-						
-						<tr id="brandMenuForm1">
-							<input type="hidden" name="list[1].brandMgmtId" value="1"/>
-							<input type="hidden" name="list[1].dispOrd" value="1"/>
-							<input type="hidden" name="list[1].mallId" value="02"/>
-							<td>
-								1
-							</td>
-							<td>
-								<input type="text" id="brandId1" name="list[1].brandId" value="38770" />
-								<span class="button" id="searchBrandPopup"><a>브랜드검색</a></span>
-								<input type="text" readonly="readonly" id="brandName1" name="brandName" value="에너자이저" />
-							</td>
-						</tr>
-						
-						<tr id="brandMenuForm2">
-							<input type="hidden" name="list[2].brandMgmtId" value="2"/>
-							<input type="hidden" name="list[2].dispOrd" value="2"/>
-							<input type="hidden" name="list[2].mallId" value="02"/>
-							<td>
-								2
-							</td>
-							<td>
-								<input type="text" id="brandId2" name="list[2].brandId" value="" />
-								<span class="button" id="searchBrandPopup"><a>브랜드검색</a></span>
-								<input type="text" readonly="readonly" id="brandName2" name="brandName" value="" />
-							</td>
-						</tr>
-						
-						<tr id="brandMenuForm3">
-							<input type="hidden" name="list[3].brandMgmtId" value="3"/>
-							<input type="hidden" name="list[3].dispOrd" value="3"/>
-							<input type="hidden" name="list[3].mallId" value="02"/>
-							<td>
-								3
-							</td>
-							<td>
-								<input type="text" id="brandId3" name="list[3].brandId" value="" />
-								<span class="button" id="searchBrandPopup"><a>브랜드검색</a></span>
-								<input type="text" readonly="readonly" id="brandName3" name="brandName" value="" />
-							</td>
-						</tr>
-						
-						<tr id="brandMenuForm4">
-							<input type="hidden" name="list[4].brandMgmtId" value="4"/>
-							<input type="hidden" name="list[4].dispOrd" value="4"/>
-							<input type="hidden" name="list[4].mallId" value="02"/>
-							<td>
-								4
-							</td>
-							<td>
-								<input type="text" id="brandId4" name="list[4].brandId" value="" />
-								<span class="button" id="searchBrandPopup"><a>브랜드검색</a></span>
-								<input type="text" readonly="readonly" id="brandName4" name="brandName" value="" />
-							</td>
-						</tr>
-						
-                    </tbody>
-                </table>
-            </div>
-            <div class="list-option">
-                <span class="button"><input type="button" value="저장하기" onclick="javascript:save('brandMenuForm');"/></span>
-            </div>
-        </form>
-    </div><!-- end cate-content -->
+					</tbody>
+				</table>
+			</div>
+			</form>
+			<form class="form-type" name="eventModuleFreeGiftForm">
+				<div class="list-type" id="freeGiftList">
+				<br>
+					<h5 style="padding: 5px 0 5px 10px;border-top: 1px solid #d6d6d6;border-bottom: 1px solid #d6d6d6;text-align: left;background: #f7f7f7;">사은품 정보</h5>
+					<br>
+					<div>
+					<span class="button left"><input type="button" onclick="addFreeGift()" value="추가" title="해당 이벤트의 사은품을 추가합니다."/></span>
+					<span class="button left"><input type="button" onclick="removeFreeGift()" value="삭제" title="선택된 사은품과 관련 모든 상품에서 적용 취소합니다."/></span>
+					</div>
+					<br>
+	                <table class="table">
+	                    <colgroup>
+	                        
+	                        <col width="2%"/><col width="10%"/><col width="37%"/><col width="8%"/><col width="10%"/><col width="43%"/>
+	                    </colgroup>
+	                    <thead>
+	                        <tr>
+	                            <th scope="row"><input type="checkbox" name="chkFreeAll"/></th>
+	                            
+	                            <th scope="row">사은품 코드</th><th scope="row">사은품 명</th><th scope="row">사은품 수량</th><th scope="row">사은품 소진 수량</th><th scope="row">-</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody id="freeGiftTbody">
+	                        
+	                    </tbody>
+	                </table>
+	            </div><!-- end #freeGiftList -->
+	            </form>
+			
+			
+				<span class="button" style="float: right;"><a href="/admin/event/eventModuleMasterList">목록</a></span>
+				<span class="button" style="float: right;"><a href="javascript:submit('update');">저장</a></span>
+			
+		</div>
+	</div>
+</div>
 
     </div><!-- end body -->
     
