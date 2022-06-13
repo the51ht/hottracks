@@ -636,7 +636,7 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.16px;
   font-weight: 700;
   color: #fff;
   background: #292929;
@@ -655,7 +655,7 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   color: #000;
   font-size: 14px;
   line-height: 42px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.14px;
   font-family: "Noto Sans KR", sans-serif;
   background-color: #fff;
   border: 1px solid #d5d5d5;
@@ -691,7 +691,7 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   position: relative;
   padding: 2px 0 0 27px;
   font-size: 14px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.14px;
   line-height: 20px;
   color: #000;
   cursor: pointer;
@@ -750,19 +750,22 @@ h4 span.button a, h4 span.button button, h4 span.button input {
 
 /*** Admin Main ***/
 #body h4 {
-  font-size: 1.67em;
-  color: #000;
   border-bottom: 0;
   background: none;
-  padding: 10px 0 10px 0;
+  margin: 40px 0 20px 0;
+  padding: 0;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
 }
 
 #body h4 span h1 {
-  font-size: 1em;
+  font-size: 20px;
 }
 
 #body h4 span > span {
-  font-size: 0.6em;
+  font-size: 12px;
 }
 
 #body h4 .button a {
@@ -810,12 +813,24 @@ h4 span.button a, h4 span.button button, h4 span.button input {
   padding: 0 16px !important;
   line-height: 30px !important;
   height: 30px !important;
+  margin-top: 3px !important;
+}
+
+#body div.list-type table.table tbody tr td .button.small {
+  height: 35px !important;
+}
+
+#body div.list-type table.table tbody tr td .button.small a {
+  line-height: 36px !important;
+  height: 36px !important;
+  margin-top: 0 !important;
 }
 
 #body div.list-type table.table tbody tr td input + .button a {
   padding: 0 15px !important;
   line-height: 36px !important;
   height: 36px !important;
+  margin-top: 0 !important;
 }
 
 #body div.list-type table.table tbody tr td:last-child {
@@ -954,7 +969,7 @@ input[name=searchVal] {
   color: #000;
   font-size: 14px;
   line-height: 42px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.14px;
   font-family: "Noto Sans KR", sans-serif;
   background-color: #fff;
   border: 1px solid #d5d5d5;
@@ -965,6 +980,12 @@ input[name=searchVal] {
   transition: border-color 0.2s ease-out;
   outline: none;
   min-width: 30px !important;
+}
+
+input[type=text]:disabled,
+input[type=number]:disabled,
+input[name=searchVal]:disabled {
+  background: #F7F7F7;
 }
 
 input[name=searchVal] ~ span.button button[type=submit] {
