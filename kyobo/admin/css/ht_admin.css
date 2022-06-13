@@ -1380,8 +1380,8 @@ input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
   padding: 2px;
   border: 1px solid #ccc !important;
@@ -1393,12 +1393,12 @@ input[type=radio] {
 input[type=radio]:before {
   content: "";
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   background-color: #ccc;
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 4px;
+  left: 4px;
   border-radius: 100%;
 }
 
@@ -1408,12 +1408,12 @@ input[type=radio] + input {
 
 input[type=radio]:checked {
   background-color: #fff;
-  border: 4px solid #DA2128 !important;
+  border: 5px solid #DA2128 !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
 }
 
@@ -1426,17 +1426,14 @@ input[type=checkbox] {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
   padding: 2px;
   border: 1px solid #ccc !important;
   position: relative;
   margin: -2px 3px 0 4px;
-  background-repeat: no-repeat;
-  background-size: 7px 5px;
-  background-image: url(../images/layout/ico_checkbox@2x.png);
-  background-position: 2px 3px;
+  background: url(../images/layout/ico_checkbox@2x.png) 4px 5px/9px 7px no-repeat;
 }
 
 input[type=checkbox] + input {
@@ -1444,17 +1441,14 @@ input[type=checkbox] + input {
 }
 
 input[type=checkbox]:checked {
-  background-color: #DA2128;
   border: 0 !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border-radius: 100%;
-  background-size: 7px 5px;
-  background-image: url("../images/layout/ico_checkbox_active@2x.png");
-  background-position: 3px 4px;
+  background: #DA2128 url("../images/layout/ico_checkbox_active@2x.png") 5px 6px/9px 7px no-repeat;
 }
 
 input[type=checkbox]:checked:before {
@@ -1546,6 +1540,11 @@ table#eventMasterlist tbody tr.tgt {
   text-align: center !important;
 }
 
+.ui-datepicker thead th,
+.ui-datepicker tbody td {
+  width: 20px;
+}
+
 .ui-datepicker thead th:first-child span,
 .ui-datepicker thead th:first-child a,
 .ui-datepicker tbody td:first-child span,
@@ -1556,6 +1555,10 @@ table#eventMasterlist tbody tr.tgt {
 .ui-datepicker thead th a,
 .ui-datepicker tbody td a {
   font-weight: 400 !important;
+}
+
+.ui-datepicker tbody td:first-child.ui-datepicker-current-day a {
+  color: #fff !important;
 }
 
 .ui-datepicker .ui-datepicker-prev,
@@ -1579,17 +1582,19 @@ table#eventMasterlist tbody tr.tgt {
 
 .ui-datepicker .ui-datepicker-today {
   position: relative;
+  /*
+        &:after {
+            position:absolute;right:2px;top:2px;width:5px;height:5px;background-color:#da2128;border-radius:50%;content:"";
+        }*/
 }
 
-.ui-datepicker .ui-datepicker-today:after {
-  position: absolute;
-  right: 2px;
-  top: 2px;
-  width: 5px;
-  height: 5px;
-  background-color: #da2128;
+.ui-datepicker .ui-datepicker-today a {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  background-color: #eee !important;
   border-radius: 50%;
-  content: "";
+  color: #000 !important;
 }
 
 .ui-datepicker .ui-datepicker-current-day a {
@@ -1605,4 +1610,8 @@ input[type=text].hasDatepicker,
 input[type=number].hasDatepicker,
 input[name=searchVal].hasDatepicker {
   width: 80px !important;
+}
+
+.content {
+  padding-bottom: 100px;
 }
