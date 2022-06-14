@@ -213,6 +213,10 @@ body {
 }
 
 /*** GNB ***/
+#head {
+  min-width: 1250px;
+}
+
 #head h1 {
   background: #000;
   padding: 37px 41px 34px;
@@ -356,6 +360,8 @@ body {
 }
 
 #head div.gnb_box > ul {
+  height: 64px;
+  overflow: hidden;
   margin-left: 64px;
 }
 
@@ -375,7 +381,7 @@ body {
   position: relative;
   height: 64px;
   line-height: 67px;
-  font-size: 16px;
+  font-size: 15px;
   padding: 0 12px;
   border: 0 !important;
   color: #666666;
@@ -508,6 +514,11 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+.show#head div.gnb_box > ul {
+  height: inherit;
+  overflow: inherit;
+}
+
 .show#head div.gnb_box > ul > li {
   height: auto;
   width: 100%;
@@ -555,6 +566,10 @@ body {
   background: initial;
   padding-bottom: 24px;
   padding-left: 12px !important;
+}
+
+.show#head div.gnb_box > ul > li > a:after {
+  display: none;
 }
 
 .show#head div.gnb_box > ul:after {
