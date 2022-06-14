@@ -1703,7 +1703,7 @@ $(function(){
 });
 
 
-/*
+
 $(function(){
     var lastScroll = 0;
     $(window).scroll(function(event){
@@ -1717,5 +1717,5 @@ $(function(){
         lastScroll = st;
     });
 });
-*/
+
 
