@@ -164,6 +164,16 @@ $(function(){
 });
 
 
+	$(document).on('click', '.product_area .btn_expand', function(){ 
+	 	if(!$(this).hasClass('active')) {
+			if($('.live_pop_wrap').length){
+				$('html, body').stop().animate({scrollTop:$('.product_area .auto_overflow_wrap').offset().top - $('.live_pop_wrap').innerHeight()  - 180 }, 0 );
+			}else{
+				$('html, body').stop().animate({scrollTop:$('.product_area .auto_overflow_wrap').offset().top - 180 }, 0 );
+			}
+	 	}
+	});
+	
 
 
 	/*이미지 ZOOM 기능*/ 

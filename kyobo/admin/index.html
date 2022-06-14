@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<title>Admin 퍼블리싱 현황판</title>
+<meta name="viewport" content="width=1600">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="Robots" content="noindex, nofollow" />
+<meta name="msapplication-TileColor" content="#da2128">
+<meta property="og:title" content="핫트랙스">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:image" content="../ink/images/layout/sns.jpg">
+<link rel="shortcut icon" href="../ink/images/layout/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="../ink/images/layout/apple-touch-icon.png">
+<!-- front ui
+================================================== -->
+<link rel="stylesheet" type="text/css" href="../ink/wsg/ia_resources/fonts/nanumsquare.css">
+<link rel="stylesheet" type="text/css" href="../ink/wsg/ia_resources/glim.css">
+<script src="../ink/wsg/ia_resources/jquery-3.6.0.min.js"></script>
+<script src="../ink/wsg/ia_resources/glim.js"></script>
+<style>
+.ia_tbl_wrap table tbody + tbody tr:first-child td {
+	border-top:15px solid #eaeaea;
+}
+
+.point td {background-color:#fff4f1 !important}
+.point .col_date {color:#cb0000;font-weight:700;}
+.point .chk td {background-color:#fecabc !important}
+
+.point02 td {background-color:#fff9ec !important}
+.point02 .col_date {color:#cb0000;font-weight:700;}
+.point02 .chk td {background-color:#ffe5ad !important}
+
+
+.point04 td {background-color:#f0f3ff !important}
+.point04 .col_date {color:#cb0000;font-weight:700;}
+.point04 .chk td {background-color:#c8d3ff !important}
+
+.point03 td {background-color:#f9feda !important}
+.point03 .col_date {color:#cb0000;font-weight:700;}
+.point03 .chk td {background-color:#f4feb4 !important}
+
+.point05 td {background-color:#eee6ff !important}
+.point05 .col_date {color:#cb0000;font-weight:700;}
+
+.hid td {background-color:#eee !important; opacity:0.3;}
+
+
+.ia_tbl_wrap table tr.row_done td {background-color:#fff;}
+.ia_tbl_wrap table tr.row_done:hover td {background: #cfebff;}
+
+.ico {display:inline-block;height:16px;margin-right:5px;padding:0 5px;border-radius:4px;color:#fff;font-size:11px;font-weight:500;line-height:18px;}
+.ico.m1 {background-color:#cd2f2f;}
+.ico.m2 {background-color:#eb873e;}
+.ico.m3 {background-color:#30a701;}
+.ico.m4 {background-color:#2f5fcd;}
+.ico.m5 {background-color:#632fcd;}
+</style>
+</head> 
+<body data-theme-color="#DA2128">
+	<div class="ia_wrapper">
+		<div class="ia_header_wrapper">
+			<div class="ia_section">
+				<h1 class="ia_h1">핫트랙스 - Amin 퍼블리싱 현황판</h1>
+				<!--s : PC Case-->
+				<div class="ia_guide_link">
+					<a href="index_mok.html">MO</a>
+					<a href="../ink/index_ink.html" class="is_active">PC</a>
+				</div>
+				<!--e : PC Case-->
+				<!--s : Mobile Case-->
+				<nav class="ia_header_guide_mobile" onclick="javascript:funcIAMenuDropdown();">
+					<button type="button" class="g_node_title">MOBILE-OOO</button>
+					<ul>
+						<li class="is_current">
+							<a href="../ink/index_ink.html">WeB-OOO</a>
+						</li>
+					</ul>
+				</nav>
+				<!--e : Mobile Case-->
+			</div>
+		</div>
+		<div class="ia_container">
+			<div class="ia_content">
+				<div class="ia_content_body">
+
+					<!-- Guide -->
+					<section class="ia_section ia_section_list">
+						<div class="ia_section_header">
+							<h2 class="ia_h2"><a href="#this" class="ui_accordion_toggle">Guide</a></h2>
+							<div class="ia_legend">
+								<span class="item"><em>총 페이지 : </em><em class="legend_total">30</em> /</span>
+								<span class="item c_done"><em>완료 : </em><em class="legend_complete">1</em> /</span>
+								<span class="item"><em>진척률 : </em><em class="legend_process">3%</em></span>
+							</div>
+						</div>
+						<div class="ia_section_body">
+							<div class="ia_tbl_wrap">
+								<table>
+									<caption></caption>
+									<thead>
+										<tr>
+											<th scope="col">번호</th>
+											<th scope="col" class="col_1depth">1Depth</th>
+											<th scope="col" class="col_2depth"></th>
+											<th scope="col" class="col_3depth"></th>
+											<th scope="col">URL</th>
+											<th scope="col" class="col_date">날짜</th>
+											<th scope="col">상태</th>
+											<th scope="col">비고<a href="#" class="btn_memo_all">Comment Toggle</a>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth">로그인</td>
+											<td class="col_2depth" data-label="2Depth"></td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_login.html" target="_blank">/html/admin_login.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"><p class="ico m1">확인용</p>메인</td>
+											<td class="col_2depth" data-label="2Depth"></td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_main.html" target="_blank">/html/admin_main.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"><p class="ico m1">확인용</p>LNB</td>
+											<td class="col_2depth" data-label="2Depth"></td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_lnb01.html" target="_blank">/html/admin_lnb01.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"><p class="ico m1">확인용</p>LNB</td>
+											<td class="col_2depth" data-label="2Depth">Drag Type</td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_lnb02.html" target="_blank">/html/admin_lnb02.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+									</tbody>
+
+									<tbody>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"></td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m1">확인용</p>목록01</td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_list_01.html" target="_blank">/html/admin_list_01.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"></td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m1">확인용</p>목록02</td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_list_02.html" target="_blank">/html/admin_list_02.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"></td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m1">확인용</p>목록03</td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_list_03.html" target="_blank">/html/admin_list_03.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"></td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m1">확인용</p>목록04</td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_list_04.html" target="_blank">/html/admin_list_04.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+										<tr>
+											<td class="col_num" data-label="번호"></td>
+											<td class="col_1depth" data-label="1Depth"></td>
+											<td class="col_2depth" data-label="2Depth"><p class="ico m1">확인용</p>목록05</td>
+											<td class="col_3depth" data-label="3Depth"></td>
+											<td class="col_url" data-label="URL">
+												<a href="./html/admin_list_05.html" target="_blank">/html/admin_list_05.html</a>
+											</td>
+											<td class="col_date" data-label="날짜"></td>
+											<td class="col_complete" data-label="상태">완료</td>
+											<td class="col_memo" data-label="비고">
+
+											</td>
+										</tr>
+									</tbody>	
+								</table>
+							</div>
+						</div>
+					</section>
+					<!-- //Guide -->
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
