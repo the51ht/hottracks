@@ -1050,6 +1050,7 @@ div.cate-list + select {
 /* Table */
 #body div.list-type table.table {
   border-top: 1px solid #202020;
+  border-bottom: 0;
 }
 
 #body div.list-type table.table thead tr th {
@@ -1099,6 +1100,7 @@ div.cate-list + select {
 
 #body div.list-type table.table tbody tr td:last-child {
   border-right: 0;
+  border-top: 0;
 }
 
 #body div.list-type table.table tbody tr td div .button a {
@@ -1109,6 +1111,11 @@ div.cate-list + select {
 #body div.list-type table.table tbody tr th {
   color: #767676;
   font-weight: 500;
+}
+
+#body div.list-type table.table tbody tr + tr td {
+  border-top: 0px solid #d6d6d6 !important;
+  border-right: 0px solid #EAEAEA;
 }
 
 .form-type .inner-table02 {
@@ -1326,7 +1333,9 @@ ul li input[type=text] + input[type=text] {
 
 input[type=text],
 input[type=number],
-input[name=searchVal] {
+input[name=searchVal],
+input[name=prsntStartDt],
+input[name=prsntEndDt] {
   padding: 5px 10px !important;
   display: inline-block;
   height: 36px !important;
@@ -1350,13 +1359,17 @@ input[name=searchVal] {
 
 input[type=text]:disabled,
 input[type=number]:disabled,
-input[name=searchVal]:disabled {
+input[name=searchVal]:disabled,
+input[name=prsntStartDt]:disabled,
+input[name=prsntEndDt]:disabled {
   background: #F7F7F7;
 }
 
 input[type=text].hasDatepicker,
 input[type=number].hasDatepicker,
-input[name=searchVal].hasDatepicker {
+input[name=searchVal].hasDatepicker,
+input[name=prsntStartDt].hasDatepicker,
+input[name=prsntEndDt].hasDatepicker {
   width: 80px !important;
 }
 
