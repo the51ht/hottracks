@@ -3,7 +3,7 @@
  * desc : 공통 자바스크립트
  * writer : glim
  * create : 2021/11/12
- * update :
+ * update : 2022/05/12
  * -
  */
 
@@ -16,9 +16,29 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 	};
 }
 
+Element.prototype._getBoundingClientRect = Element.prototype.getBoundingClientRect
+Element.prototype.getBoundingClientRect = function () {
+	var rect = Element.prototype._getBoundingClientRect.call(this);
+	rect.x = rect.left;
+	rect.y = rect.top;
+	return rect;
+}
+
 var KyoboBookPub = KyoboBookPub || {};
 
 $(function(){
+	$.widget("ui.selectmenu", $.ui.selectmenu, {
+		calcMenuWidth: function() {
+			var instance;
+			instance = this;
+
+			btnWidth = instance.button.outerWidth();
+			menuWidth = instance.menuWrap.outerWidth();
+			// console.log('calcMenuWidth', this, btnWidth, menuWidth);
+			instance.menuWrap.css('width', btnWidth);
+		}
+	});
+
 	// 상품 옵션 커스터마이징
 	$.widget('custom.selectProdOption', $.ui.selectmenu, {
 		_renderItem: function (ul, item) {
@@ -79,7 +99,8 @@ KyoboBookPub.ink = (function () {
 		_flyMenuEl,
 		_floatingEl,
 		_container,
-		_btnGoTop;
+		_btnGoTop,
+		_loadingAni;
 
 	/**
 	 * GNB 메뉴 엑티브 상태 이벤트 설정
@@ -87,6 +108,7 @@ KyoboBookPub.ink = (function () {
 	function setGNB() {
 		if(_headerWrapper === undefined){return;}
 
+		// console.log(_headerWrapper)
 		var searchIp = $('.search_input_wrap');
 		var anbWrap = $('.anb_wrap');
 		var serviceMore = $('.gnb_sub_list .gnb_sub_item.more_service');
@@ -226,19 +248,22 @@ KyoboBookPub.ink = (function () {
 		if(_flyMenuEl.length <= 0 && _floatingEl.length <= 0){return ;}
 
 		var headerFixedOffset = 0;
-		if(!$('.wrapper').hasClass('member_login') && !$('.wrapper').hasClass('member_info')) {
+		if(!$('.wrapper').hasClass('member_login') && !$('.wrapper').hasClass('member_info') && !$('.wrapper').hasClass('member_kiosk') && !$('.wrapper').hasClass('member_kiosk_main')) {
 			headerFixedOffset = Math.round($('.gnb_wrap').offset().top);
 
+			if (_headerWrapper.hasClass('simple_header')) {
+				headerFixedOffset = 80;
+			}
 			// 윙배너 sps set
 			_flyMenuEl.attr('data-sps-offset', headerFixedOffset);
 		}
 
-		setFloatingScrollPosX();
-		$(window).off('scroll.uiFloating resize.uiFloating', setFloatingScrollPosX).on('scroll.uiFloating resize.uiFloating', setFloatingScrollPosX);
+		setFloatingScrollPos();
+		$(window).off('scroll.uiFloating resize.uiFloating', setFloatingScrollPos).on('scroll.uiFloating resize.uiFloating', setFloatingScrollPos);
 
 		setFlyBannerEvtSwiper();
 
-		function setFloatingScrollPosX() {
+		function setFloatingScrollPos() {
 			if (_scrollLeft < (_bodyMinWidth - _deviceWidth)) {
 				_floatingEl.css('transform', 'translateX(' + ((_bodyMinWidth - _deviceWidth) - _scrollLeft) + 'px)');
 
@@ -249,6 +274,20 @@ KyoboBookPub.ink = (function () {
 				}
 			} else {
 				_flyMenuEl.add(_floatingEl).css('transform', '');
+			}
+
+			if(_headerWrapper.hasClass('sps')){
+				if(_headerWrapper.hasClass('sps-blw')){
+					_btnGoTop.addClass('active');
+				}else{
+					_btnGoTop.removeClass('active');
+				}
+			}else{
+				if(_headerWrapper.height() < _scrollTop){
+					_btnGoTop.addClass('active');
+				}else{
+					_btnGoTop.removeClass('active');
+				}
 			}
 		}
 
@@ -301,7 +340,7 @@ KyoboBookPub.ink = (function () {
 	 * 브래드크럼 메뉴 on/off
 	 */
 	function setBreadCrumb() {
-		$('.breadcrumb_item', '.breadcrumb_wrap').each(function(){
+		$('.breadcrumb_item', '.breadcrumb_wrap').not('.no_sub').each(function(){
 			$(this).on({
 				'mouseenter focusin': function(event){
 					var tg = $(this);
@@ -343,36 +382,48 @@ KyoboBookPub.ink = (function () {
 				searchWrap = $(this);
 				searchIp = $(this).find(input);
 				clearBtn = $(this).find('.btn_ip_clear');
+				// console.log(searchIp);
 
-				if(searchIp.val().length > 0 ) searchWrap.addClass('value');
+				if (searchIp.length > 0) {
+					if (searchIp.val().length > 0) searchWrap.addClass('value');
 
-				clearBtn.off('click').on('click', function(){
-					searchWrap = $(this).closest(wrap);
-					searchWrap.find(input).val('').focus();
-					searchWrap.removeClass('value');
-
-				})
-
-				searchIp.on({
-					'propertychange change input paste': function () {
+					clearBtn.off('click').on('click', function () {
 						searchWrap = $(this).closest(wrap);
-						if($(this).val().length > 0 ) {
-							searchWrap.addClass('value');
-						} else{
-							searchWrap.removeClass('value');
+						searchWrap.find(input).val('').focus();
+						searchWrap.removeClass('value');
+
+					})
+
+					searchIp.data('placeholder', searchIp.attr('placeholder'));
+					searchIp.on({
+						'propertychange change input paste': function () {
+							searchWrap = $(this).closest(wrap);
+							if ($(this).val().length > 0) {
+								searchWrap.addClass('value');
+							} else {
+								searchWrap.removeClass('value');
+							}
+						},
+						'focusin': function () {
+							searchWrap = $(this).closest(wrap);
+
+							if (searchIp.hasClass('ip_gnb_search')) {
+								searchIp.attr('placeholder', '');
+							}
+
+							if (!searchWrap.hasClass('focus')) searchWrap.addClass('focus');
+						},
+						'focusout': function () {
+							searchWrap = $(this).closest(wrap);
+
+							if (searchIp.hasClass('ip_gnb_search')) {
+								searchIp.attr('placeholder', searchIp.data('placeholder'));
+							}
+
+							if (searchWrap.hasClass('focus')) searchWrap.removeClass('focus');
 						}
-					},
-					'focusin': function () {
-						searchWrap = $(this).closest(wrap);
-
-						if (!searchWrap.hasClass('focus')) searchWrap.addClass('focus');
-					},
-					'focusout': function () {
-						searchWrap = $(this).closest(wrap);
-
-						if (searchWrap.hasClass('focus')) searchWrap.removeClass('focus');
-					}
-				});
+					});
+				}
 			});
 
 		}
@@ -435,8 +486,15 @@ KyoboBookPub.ink = (function () {
 		scrollInner.append(child);
 
 		options = SimpleBar.getOptions(target);
+
+		if ($(target).data('force')) {
+			$(target).closest('.custom_scroll_wrap').addClass('active');
+			options.forceVisible = 'y';
+		}
+
 		simpleBar = new SimpleBar(target, options);
 		target.simpleBar = simpleBar;
+
 
 		var observer = new MutationObserver(function(mutations, observer) {
 			mutations.forEach(function(mutation) {
@@ -446,11 +504,14 @@ KyoboBookPub.ink = (function () {
 					var scrollCont = $(target).find('.custom_scroll_inner');
 					var currentHeight = scrollCont.height();
 
+					scrollCont.get(0).style.removeProperty('height');
 					if(scrollContWrap.height() < scrollCont.height()){
 						scrollContWrap.addClass('active');
 					} else{
+						scrollCont.height(scrollContWrap.height());
 						scrollContWrap.removeClass('active');
 					}
+					updateChildComponent();
 				}
 			});
 		});
@@ -461,6 +522,10 @@ KyoboBookPub.ink = (function () {
 		if ($(scrollInner[0]).closest('.simplebar-content-wrapper')[0].getAttribute('style').match('overflow: hidden scroll') !== null
 			|| $(scrollInner[0]).closest('.simplebar-content-wrapper')[0].getAttribute('style').match('-ms-overflow-y: scroll') !== null) {
 			$(target).addClass('active');
+			updateChildComponent();
+		}
+		else {
+
 		}
 		observer.observe($(scrollInner[0]).closest('.simplebar-content-wrapper')[0], config);
 
@@ -490,13 +555,55 @@ KyoboBookPub.ink = (function () {
 
 			});
 		}
+
+		// 자식 컴포넌트 중 사이즈, 위치 등 업데이트가 필요 한 경우
+		function updateChildComponent() {
+			var uiSelect, spsElement;
+			uiSelect = scrollInner.find('.form_sel select');
+			spsElement = scrollInner.find('.custom_sps');
+			// console.log(uiSelect);
+
+			uiSelect.each(function() {
+				var that;
+				that = this;
+				console.log('updateChildComponent uiSelect');
+				setTimeout(function() {
+					$(that).selectmenu('calcMenuWidth');
+				}, 100);
+			});
+
+			spsElement.each(function() {
+				var element = this;
+
+				var observer = new IntersectionObserver(function (entries, observer) {
+					entries.forEach(function (entry) {
+						var isIntersecting;
+						isIntersecting = entry.isIntersecting;
+						if (isIntersecting) {
+							$(element).removeClass('sps-below').addClass('sps-abv');
+						} else {
+							// console.log('not intersecting');
+							if($(element).offset().top - scrollInner.closest('.custom_scroll_wrap').offset().top < 0) {
+								$(element).removeClass('sps-abv').addClass('sps-below');
+							} else {
+								$(element).removeClass('sps-below').addClass('sps-abv');
+							}
+						}
+					});
+				}, {
+					root: scrollInner.closest('.custom_scroll_wrap').get(0),
+					threshold: 1.0,
+				});
+				observer.observe(element);
+			});
+		}
 	}
 
 	/**
 	 * 테이블 캡션 생성
 	 */
 	function setTableCaption() {
-		$('table[class*="tbl_col"], table[class*="tbl_row"]').each(function (index) {
+		$('table[class*="tbl_col"], table[class*="tbl_row"], table[class*="tbl_prod"], table[class*="tbl_spec_compare"]').each(function (index) {
 			var table, tableClass, captionText, captionComplex, theadHeader, tbodyHeader, bodyToHeadIdxs, hasThead,
 				captionSubFix;
 			table = $(this);
@@ -570,17 +677,20 @@ KyoboBookPub.ink = (function () {
 			that.rating({
 				language: 'ko',
 				theme: 'krajee-gly',
-				clearCaption: 0,
+				clearCaption: '10점 중 0점<span class="val" aria-hidden="true">0</span><span class="total" aria-hidden="true">10</span></span>',
 				stars: 4,
 				min: 0,
 				max: 10,
 				step: 2.5,
 				starCaptions: function (rating) {
+					var strCaption;
+					strCaption = '10점 중 ' + rating + '점';
 					if(that.data('caption') !== undefined) {
-						return '<span class="val">' + rating + '</span>' + '<span class="total">' + 10 + '</span>';
+						strCaption += '<span class="val" aria-hidden="true">' + rating + '</span>' + '<span class="total" aria-hidden="true">' + 10 + '</span>';
 					}else{
-						return ' ';
+						// return rating + ' / 10';
 					}
+					return strCaption;
 				}
 			});
 			// that.on('rating:change', function(event, value, caption) {
@@ -596,19 +706,21 @@ KyoboBookPub.ink = (function () {
 	/**
 	 * 스크롤 동작시 해당 요소에 도달 시 엘리먼트 상단 고정(sps init)
 	 */
-	function setSpsOffsetData() {
+	function setSpsOffsetData(target) {
 		var ignoreClassList = [];
 		var spsElem;
-		var headerH = $('.header_wrapper').hasClass('sps') ? 80 : 0;
+		var headerH = $('.header_wrapper').hasClass('sps') || $('.header_wrapper').hasClass('fix_header') ? 80 : 0;
+
+		target = target  || '.sps';
 
 		ignoreClassList = [
 			// 'header_wrapper',
 		];
 
-		spsElem = $('.sps', _container);
+		spsElem = $(target, _container);
 
 		// container_wrapper > sps 엘리먼트 타겟팅
-		$('.sps', _container).each(function (index) {
+		$(target, _container).each(function (index) {
 
 			var that, isIgnore;
 			that = this;
@@ -643,6 +755,14 @@ KyoboBookPub.ink = (function () {
 		var sensor = null;
 		sensor = new ResizeSensor( _container, function() {
 			$('.sps[data-height-observe]').each(function(index){
+				// console.log('fixData');
+				fixData($(this));
+			})
+		});
+
+		// tab active 시, sps fixData 재계산
+		$('.tab_wrap').on('tabsactivate', function( event, ui ) {
+			$(ui.newPanel).find('.sps').each(function(){
 				fixData($(this));
 			})
 		});
@@ -653,16 +773,20 @@ KyoboBookPub.ink = (function () {
 				tg.append('<div class="sps_observer" style="top:'+ tg.css('top') +';"></div>');
 			}
 
+			// console.log('fixData', tg);
+
 			observerCont = tg.find('.sps_observer');
 			addOfs = ( tg.data('add-offset') !== undefined && !isNaN(tg.data('add-offset')) ) ? tg.data('add-offset') : 0;
 			tgHeight = tg.outerHeight();
 
 			if( tg.hasClass('sps_ofs_bottom') ) {
-				tg.attr('data-sps-offset', Math.round(observerCont.offset().top - headerH + tg.outerHeight() - addOfs ));
+				tg.attr('data-sps-offset', Math.round(observerCont.offset().top - headerH + tgHeight - addOfs ));
 			}
 			else {
 				tg.attr('data-sps-offset', Math.round(observerCont.offset().top - headerH - tgHeight - addOfs ));
 			}
+			// console.log(tg.attr('data-sps-offset'));
+			// console.log(observerCont.offset().top, headerH, tgHeight, addOfs);
 		}
 	}
 
@@ -676,9 +800,19 @@ KyoboBookPub.ink = (function () {
 		// sps를 가지지 않은 엘리먼트 중 추가할 class
 		forceAddClassList = [
 			'prod_detail_footer',
+			'fix_header',
+			'cart_top_wrap.sps-blw',
+			'cart_info_wrap',
+			'floating_event_wrapper', // 통합검색 플로팅 배너(SCR-BIZ03-04-P001)
+			'wrapper .spec_compare_layer_wrap',
+			'wrapper.member_kiosk .count_box', // 무인가입기 서브페이지 타이머 공통
+			'event_sticky_banner', // 이벤트 플로팅 배너(SCR-BIZ04-01-P002)
+			'burst_banner_wrap', // 베스트 마케팅 팝업(SCR-BIZ15-03-P002)
+			'list_result_sps .sps_inner', // 전시 사은품(SCR-BIZ15-06-P001)
+			'store_direction_wrap .scroll_fixed_target.scroll_fixed', // 매장안내(SCR-BIZ16-01-P001)
 		];
 
-		// sps 가진 엘리먼트 중 제외할 class
+		// 제외할 class
 		ignoreClassList = [
 			'fly_menu_wrapper',
 			'floating_wrapper',
@@ -773,24 +907,24 @@ KyoboBookPub.ink = (function () {
 
 		if( $(selector).length > 0 ) {
 			var dialogClass, containerId, dialogId, containerClasses;
-			//2022-04-04 개발 요청으로 추가(다른 이벤트 후 팝업 열리게 컨트롤)
-			var prevEvent;
 
 			$(selector).each(function() {
 				if ( $(this).parents('.ui-dialog').length > 0 ) return false;
+				var dialogWrap = this;
 
 				containerId = 'body';
 				containerClasses = 'dialog_wrapper';
 				dialogClass = '';
 
 				// dialog multi class 추가
-				if ($(this).data('class') !== undefined) {
+				if ($(dialogWrap).data('class') !== undefined) {
 					if (isNaN(parseInt($(this).data('class')))) {
 						dialogClass = $(this).data('class');
 					} else {
 						dialogClass = 'auto';
 					}
 				}
+				$(dialogWrap).data('dialogClass', dialogClass);
 
 				// resize시, popup 가운데 정렬 css제어를 위해 container append
 				dialogId = containerId.replace('#', '') + 'Dialog' + _dialogCount;
@@ -799,7 +933,7 @@ KyoboBookPub.ink = (function () {
 				_dialogCount++;
 
 				// 팝업 기본 설정
-				$(this).dialog({
+				$(dialogWrap).dialog({
 					appendTo: containerId + ' #' + dialogId, // resize시, popup 가운데 정렬 css제어를 위해 container append
 					autoOpen: false,
 					width: 'none',
@@ -840,7 +974,12 @@ KyoboBookPub.ink = (function () {
 								zNum = Math.max(zNum, parseInt(dialog.css('z-index')));
 							});
 						}
-						container.addClass('open').css('z-index', zNum+2);
+						if(that.data('z-index') !== undefined) {
+							container.addClass('open').css('z-index', that.data('z-index'));
+						}
+						else {
+							container.addClass('open').css('z-index', zNum + 2);
+						}
 						// console.log(container);
 
 						// popup 최소 높이보다 작은경우 100vh 처리
@@ -908,20 +1047,39 @@ KyoboBookPub.ink = (function () {
 
 						if(!dialogNoDim) delete dialogHeight[container.attr('id')];
 					},
+					create: function (event, ui) {
+						$(this).get(0).style.display = '';
+						$(this).addClass('initialized');
+					}
 				});
 
 				// dim 없는경우 modal false 처리
-				if($(this).data('nodim') !== undefined){
-					$(this).dialog({modal: false});
+				if($(dialogWrap).data('nodim') !== undefined){
+					var noDimPopupPos;
+					noDimPopupPos = {};
+					$(dialogWrap).dialog({modal: false});
+
+					if ($(dialogWrap).data('top')) {
+						noDimPopupPos.top = parseInt($(this).data('top'));
+					}
+					if ($(dialogWrap).data('left')) {
+						noDimPopupPos.left = parseInt($(this).data('left'));
+					}
+					if ($(dialogWrap).data('content-margin') !== undefined) {
+						console.log($(this).data('content-margin'));
+						$(dialogWrap).closest('.dialog_wrapper').addClass('content_margin');
+					}
+					$(dialogWrap).closest('.ui-dialog').css(noDimPopupPos);
 				}
 
 				if ($(btnOpen).length > 0) {
+
 					$(btnOpen).each(function (index) {
-						prevEvent = $(this).data('prev'); 
-						if(prevEvent == undefined) {
-							$(this).off('click').on('click', function (event) {
+						if (($(this).data('target') === '#' + $(dialogWrap).attr('id')) && !$(this).data('initialized')) {
+							$(this).data('initialized', true);
+							$(this).on('click', function (event) {
 								var openTgId = $(this).data('target');
-	
+
 								event.preventDefault();
 								dialogOnOff().popOpen(openTgId);
 							});
@@ -929,11 +1087,14 @@ KyoboBookPub.ink = (function () {
 					});
 				}
 
-				if ($(btnClose).length > 0) {
-					$(btnClose).each(function (index) {
+				if ($(btnClose, selector).length > 0) {
+					$(btnClose, selector).each(function (index) {
 						$(this).off('click').on('click', function (event) {
 							var openTgId, closeTgId;
 							closeTgId = $(this).closest(selector).attr('id');
+							if (closeTgId === undefined) {
+								closeTgId = $(this).closest('.dialog_wrap').attr('id');
+							}
 
 							event.preventDefault();
 							dialogOnOff().popClose('#' + closeTgId);
@@ -954,21 +1115,21 @@ KyoboBookPub.ink = (function () {
 	 */
 	function dialogAutoHeight(){
 		if($('.dialog_wrapper.open').length > 0){
-			// $('.dialog_wrapper.open').each(function(){
-			// 	var containerId = $(this).attr('id');
-			// 	if($(window).height() < dialogHeight[containerId]){
-			// 		$(this).find('.ui-dialog').addClass('h_auto');
+			$('.dialog_wrapper.open').each(function(){
+				var containerId = $(this).attr('id');
+				if($(window).height() < dialogHeight[containerId]){
+					$(this).find('.ui-dialog').addClass('h_auto');
 
-			// 		if ($(this).parent().find('.custom_scroll_wrap').length > 0) {
-			// 			$(this).parent().find('.custom_scroll_wrap').each(function (index) {
-			// 				this.simpleBar.recalculate();
-			// 			});
-			// 		}
+					if ($(this).find('.custom_scroll_wrap').length > 0) {
+						$(this).find('.custom_scroll_wrap').each(function (index) {
+							this.simpleBar.recalculate();
+						});
+					}
 
-			// 	} else {
-			// 		$(this).find('.ui-dialog').removeClass('h_auto');
-			// 	}
-			// })
+				} else {
+					$(this).find('.ui-dialog').removeClass('h_auto');
+				}
+			})
 		}
 	}
 
@@ -988,8 +1149,8 @@ KyoboBookPub.ink = (function () {
 					callback.apply ( null, [tgId]);
 				}
 
-				// select reinit
-				setSelectReInit();
+				// console.log($('.form_sel select', $(tgId)).selectmenu);
+				$('.form_sel select', $(tgId)).selectmenu('calcMenuWidth');
 			},
 
 			/**
@@ -1020,7 +1181,7 @@ KyoboBookPub.ink = (function () {
 				if ($(dialog.swiper.$el[0]).find('.custom_scroll_wrap').length > 0) {
 					$(dialog.swiper.$el[0]).find('.custom_scroll_wrap').each(function (index) {
 						this.simpleBar.recalculate();
-					// console.log(this.simpleBar);
+						// console.log(this.simpleBar);
 					});
 				}
 			}
@@ -1041,7 +1202,7 @@ KyoboBookPub.ink = (function () {
 		wrap = wrap || '.form_ip_pw';
 		btnSelector = btnSelector || '.btn_toggle_pw';
 
-		var that, toggleInput;
+		var that, toggleInput, btnBeforeText, btnAfterText;
 		$(btnSelector).each(function (index) {
 			that = $(this);
 
@@ -1051,13 +1212,20 @@ KyoboBookPub.ink = (function () {
 
 			that.off('click').on('click', function(){
 				toggleInput = $(this).closest(wrap).find('input');
+				btnBeforeText = $(this).text();
 
 				if ($(this).hasClass('active') && toggleInput.attr('type') === 'text'){
 					$(this).removeClass('active');
 					toggleInput.attr('type', 'password');
+
+					btnAfterText = btnBeforeText.replace('보임', '숨김');
+					$(this).find('.hidden').text(btnAfterText);
 				} else {
 					$(this).addClass('active');
 					toggleInput.attr('type', 'text');
+
+					btnAfterText = btnBeforeText.replace('숨김', '보임');
+					$(this).find('.hidden').text(btnAfterText);
 				}
 			});
 		});
@@ -1071,14 +1239,16 @@ KyoboBookPub.ink = (function () {
 		selector = selector || '.form_sel';
 		if ($(selector).length > 0) {
 			$(selector).each(function () {
-				var selectMenuOption, selectClass, selectPosition, isArwType;
-				isArwType = $(this).data('class') === 'type_arw';
-
+				var selectMenuOption, selectClass, selectPosition, isArwType, isCalendarType;
+				isArwType = ($(this).data('class') !== undefined && $(this).data('class').search('type_arw') !== -1);
+				isCalendarType = ($(this).data('class') !== undefined && $(this).data('class').search('type_calendar') !== -1);
 				selectMenuOption = {};
 				selectClass = '';
 				selectPosition = {my: 'left top', at: 'left bottom'};
 
 				if (isArwType){
+					selectPosition = {my: 'right top+6', at: 'right bottom'};
+				} else if (isCalendarType){
 					selectPosition = {my: 'right top+6', at: 'right bottom'};
 				}
 				selectMenuOption.position = selectPosition;
@@ -1086,7 +1256,7 @@ KyoboBookPub.ink = (function () {
 				if ($(this).data('append-to') !== undefined) {
 					selectMenuOption.appendTo = $(this).data('append-to');
 				}
-             
+
 				// custom select 일 경우
 				if ($(this).data('renderer')) {
 					setCustomSelect($(this), selectMenuOption);
@@ -1112,16 +1282,29 @@ KyoboBookPub.ink = (function () {
 					menuWidth = instance.menuWrap.outerWidth();
 
 					if (btnWidth !== menuWidth) {
-						if (selectClass === 'type_arw') { // arw 타입은 버튼 크기 크기와 옵션 크기 다름
-							$(that).selectmenu('close');
-							return false;
+
+						if (selectClass !== undefined) {
+							if (selectClass.search('type_arw') !== -1) { // arw 타입은 버튼 크기 크기와 옵션 크기 다름
+								$(that).selectmenu('close');
+								return false;
+							} else if (selectClass.search('type_calendar') !== -1) {
+								$(that).selectmenu('close');
+								return false;
+							}
 						}
 
-						instance.menuWrap.css('width', btnWidth);
+						$(that).selectmenu('calcMenuWidth');
 					}
 
-
-
+					sensor = new ResizeSensor( instance.button, function() {
+						if (selectClass !== undefined) {
+							if (selectClass.search('type_arw') === -1) {
+								$(that).selectmenu('calcMenuWidth');
+							} else if (selectClass.search('type_calendar') !== -1) {
+								$(that).selectmenu('calcMenuWidth');
+							}
+						}
+					});
 					$(that).selectmenu('close');
 				};
 
@@ -1154,31 +1337,6 @@ KyoboBookPub.ink = (function () {
 	}
 
 	/**
-	 * select reinit
-	 * @param selector {string} 실행 element
-	 */
-	function setSelectReInit(selector){
-		selector = selector || '.form_sel';
-
-		if ($(selector).length > 0) {
-			$(selector).each(function () {
-				// if($(this).find('select').parent().data('renderer') === 'selProdOpt') {
-				// 	$(this).find('select').selProdOpt('destroy');
-				// }else if($(this).find('select').parent().data('renderer') === 'selInteriorOpt') {
-				// 	$(this).find('select').selInteriorOpt('destroy');
-				// }else if($(this).find('select').parent().data('renderer') === 'selProdColorOpt') {
-				// 	$(this).find('select').selProdColorOpt('destroy');
-				// }else{
-				// 	$(this).find('select').selectmenu('destroy');
-				// }
-
-				$(this).find('select').selectmenu('destroy');
-				setUISelect($(this));
-			});
-		}
-	}
-
-	/**
 	 * openSelectClose : 열려있는 select 닫기 처리
 	 */
 	function openSelectClose(){
@@ -1205,7 +1363,7 @@ KyoboBookPub.ink = (function () {
 				$(this).spinner({
 					decreseText: '상품 수량 한 개 줄이기',
 					increseText: '상품 수량 한 개 늘리기',
-					min: $(this).data('min') === undefined ? 0 : $(this).data('min'),
+					min: $(this).data('min') === undefined ? 1 : $(this).data('min'),
 					max: $(this).data('max'),
 					disabled: isDisabled,
 				});
@@ -1250,14 +1408,160 @@ KyoboBookPub.ink = (function () {
 					disabled: disabledTabs,
 					beforeActivate: function (event, ui) {
 						if ($(ui.newTab).find('a').attr('href').indexOf('#') !== 0) {
-							window.open($(ui.newTab).find('a').attr('href'), '_self');
+							var tg = $(ui.newTab).find('a').attr('target') === undefined ? '_self' : $(ui.newTab).find('a').attr('target');
+							event.preventDefault();
+
+							// a 태그에 onclick 선언되어 있는 경우 onclick만 실행
+							if ($(ui.newTab).find('a').attr('onclick') !== undefined) {
+								// console.log('onClick first');
+								return false;
+							}
+
+							window.open($(ui.newTab).find('a').attr('href'), tg);
+							event.preventDefault();
 						}
 					},
 					activate: function(event, ui){
+						if ($(event.target).closest('.custom_scroll_wrap').length > 0) {
+							$(event.target).closest('.custom_scroll_wrap').get(0).simpleBar.recalculate();
+						}
+						if (ui.newPanel.find('.swiper-container').length > 0) {
+							ui.newPanel.find('.swiper-container').each(function (index) {
+								if (this.swiper === undefined || this.swiper === null) return;
+								this.swiper.update();
+							});
+						}
+						if (ui.newPanel.find('.form_sel').length > 0) {
+							$('.form_sel:not(.type_arw) select', $(ui.newPanel)).selectmenu('calcMenuWidth');
+						}
+					},
+					// create: function( event, ui ) {
+					// 	$(this).addClass()
+					// }
+				});
 
+			});
+		}
+	}
+
+	/**
+	 * tag tab swiper type인 경우
+	 * update : 20220512 activeSwiper 함수 추가 (선택된 카테고리 있을때 active 기능 추가)
+	 */
+	function tabListFolding(selector) {
+		var tagWrap = selector || $('.tab_wrap.type_tag.type_fold .tab_list_wrap');
+		if (tagWrap.length === 0) return;
+		tagWrap.each(function(){
+
+			tagWrapTg = $(this);
+			var tagSwiperEl = $('.tab_swiper_wrap', tagWrapTg);
+
+			// 연관검색어 더보기 버튼 노출 체크
+			function contOverflowCheck(el) {
+				return el !== undefined && (el.offsetWidth < el.scrollWidth);
+			}
+
+			if (!contOverflowCheck(tagSwiperEl.get(0)) || tagSwiperEl.get(0).swiper !== undefined) return;
+
+			tagWrapTg.addClass('active');
+
+			var tagSwiper;
+
+			function tagSwiperInit() {
+				if (tagSwiperEl.length > 0 && tagSwiperEl.get(0).swiper === undefined) {
+					tagSwiper = new CustomSwiper(tagSwiperEl, {
+						slidesPerView: 'auto',
+						observer: true,
+						observeParents: true,
+						speed: 500,
+						threshold: 10, // 10px 이상 드래그해야 swiper 처리
+					});
+
+					activeSwiper();//20220512 activeSwiper 추가
+				}
+			}
+
+			tagSwiperInit();
+
+			/* 20220512 activeSwiper 추가, 선택된 탭 있을때 활성화 추가  */
+			function activeSwiper (){
+				var activeIndex = $(tagWrap).find('.ui-state-active').index();
+				tagSwiper.slideTo(activeIndex);
+			}
+
+			$('.btn_tag_more', tagWrap).off().on('click.uiTagMore', function () {
+				var papa = $(this).parent();
+				if (papa.hasClass('more')) {
+					$(this).find('.hidden').text('더보기');
+					papa.removeClass('more');
+
+					tagSwiperInit();
+				} else {
+					$(this).find('.hidden').text('접기');
+					papa.addClass('more');
+
+					tagSwiper.destroy();
+					console.log('tagSwiper', tagSwiper);
+					tagSwiper = undefined;
+				}
+			});
+		});
+	}
+
+	/**
+	 * jQuery UI Datepicker 생성
+	 * @날짜표기 마지막 . 삭제 by han 220426
+	 */
+	function setDatepicker() {
+		$.datepicker.setDefaults({
+			dateFormat: 'yy. mm. dd',
+			monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+			showMonthAfterYear: true,
+			showOn: 'button',
+			buttonImage: "/assets/common/images/datepicker_icon_button@2x.png",
+			buttonImageOnly: true,
+			buttonText: '날짜 선택',
+			currentText: '오늘',
+			// showOtherMonths: true,
+			// selectOtherMonths: false,
+			// yearSuffix: '년',
+			changeMonth: true,
+			changeYear: true,
+		});
+
+		if ($('.date_box').length > 0) {
+
+			$('.date_box input').each(function (index) {
+				var minDate, maxDate, isDisabled;
+				minDate = $(this).data('minDate') !== undefined ? $(this).data('minDate') : null;
+				maxDate = $(this).data('maxDate') !== undefined ? $(this).data('maxDate') : null;
+				isDisabled = $(this).attr('disabled');
+
+				$(this).off('input').on('input', function (event) {
+					this.value = this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, '');
+				});
+
+				$(this).datepicker({
+					minDate: minDate,
+					maxDate: maxDate,
+					disabled: isDisabled,
+					beforeShow: function (input, inst) {
+						setTimeout(function () {
+							inst.dpDiv.position({my: 'right top+6', at: 'right bottom', collision: 'none', of: input});
+						}, 1);
+					},
+					onClose: function(dateText, inst) {
+						// 20190908 형태의 날짜 입력에 대한 대응
+						if(dateText && dateText.length === 8) {
+							$(this).datepicker('setDate', new Date(dateText.substring(0, 4), dateText.substring(4, 6) - 1, dateText.substring(6, 8)));
+						}
+						// onClose 시 날짜형식을 유지하도록 하는 트릭
+						$(this).datepicker('option', 'dateFormat', $(this).datepicker('option', 'dateFormat'));
 					},
 				});
-			});
+			})
 		}
 	}
 
@@ -1269,6 +1573,7 @@ KyoboBookPub.ink = (function () {
 		selector = selector ? selector : '.fold_box_wrap';
 		if ($(selector).length > 0) {
 			$(selector).find('.fold_box .fold_box_header').each(function (index) {
+				$(this).closest('.fold_box').data('btn', $(this).find('.btn_fold')); // 220427 폴드 다중구조 이슈 해결을 위한 스크립트 수정 by do
 				$(this).find('.btn_fold').off('click.uiFold').on('click.uiFold', function (event) {
 					if ($(event.target).is('a') || $(event.currentTarget).closest('.fold_box').is('.no_fold') || $(event.target).is('input')) {
 						// console.log('setFoldBox', $(event.target).is('a'), $(event.target).is('button'))
@@ -1283,14 +1588,13 @@ KyoboBookPub.ink = (function () {
 					}
 
 					var foldBox = $(this).closest('.fold_box');
-					var curHeight, changeHeight = 0;
-					curHeight = foldBox.outerHeight();
+					foldBox.btn = $(this);
 
 					var isExpanded;
 					isExpanded = foldBox.hasClass('expanded');
 
 					if (!($(event.currentTarget).closest('.fold_box_wrap').data('type') === 'multi')) {
-						var allFoldBox, allCurHeight;
+						var allFoldBox;
 						if(isExpanded){
 							allFoldBox = $(this).closest('.fold_box_wrap').find('.fold_box').not('.expanded');
 						}else{
@@ -1298,9 +1602,12 @@ KyoboBookPub.ink = (function () {
 						}
 
 						allFoldBox.removeClass('expanded');
-						allFoldBox.find('.hidden').text('컨텐츠 열기');
+						allFoldBox.each(function(index){
+							$(this).data('btn').find('.hidden').text('컨텐츠 열기');
+						})
+						// allFoldBox.find('.hidden').text('컨텐츠 열기');
 
-						foldTransition(allFoldBox)
+						foldTransition(allFoldBox);
 					}
 
 					if(isExpanded){
@@ -1334,9 +1641,9 @@ KyoboBookPub.ink = (function () {
 			 */
 			foldOpen : function(selector, callback){
 				selector.addClass('expanded');
-				selector.find('.hidden').text('컨텐츠 닫기');
+				selector.data('btn').find('.hidden').text('컨텐츠 닫기');
 
-				if(!selector.hasClass('type_floating')) {
+				if(!selector.hasClass('type_floating') && !selector.hasClass('no_fold')) {
 					foldTransition(selector);
 				}
 
@@ -1351,9 +1658,9 @@ KyoboBookPub.ink = (function () {
 			 */
 			foldClose : function(selector) {
 				selector.removeClass('expanded');
-				selector.find('.hidden').text('컨텐츠 열기');
+				selector.data('btn').find('.hidden').text('컨텐츠 열기');
 
-				if(!selector.hasClass('type_floating')) {
+				if(!selector.hasClass('type_floating') && !selector.hasClass('no_fold')) {
 					foldTransition(selector);
 				}
 			},
@@ -1366,17 +1673,35 @@ KyoboBookPub.ink = (function () {
 	 * fold transition
 	 * @param selector - foldbox
 	 */
-	function foldTransition(selector){
+	function foldTransition(selector, isForce){
+		if($(selector).closest('.fold_box_wrap').hasClass('type_reservation')) return;
 		var curHeight, changeHeight = 0;
+		isForce = isForce || false;
 		curHeight = selector.outerHeight();
 
 		selector.css('height', 'auto');
 
-		changeHeight = selector.outerHeight(true);
-		selector.css('height', curHeight).stop().animate({height: changeHeight}, 150, function(){
-			if($(this).closest('.fold_box_wrap').hasClass('category')){
-				if($(this).closest('.fold_box_wrap').closest('.custom_scroll_wrap')[0].simpleBar !== undefined) $(this).closest('.fold_box_wrap').closest('.custom_scroll_wrap')[0].simpleBar.recalculate();
+		changeHeight = selector.outerHeight();
+		selector.css('height', curHeight).stop().animate({height: changeHeight}, (isForce ? 0 : 150), function(){
+			var that;
+			that = $(this);
+			if (that.closest('.fold_box_wrap').closest('.custom_scroll_wrap').length > 0
+				&& that.closest('.fold_box_wrap').closest('.custom_scroll_wrap')[0].simpleBar !== undefined) {
+				that.closest('.fold_box_wrap').closest('.custom_scroll_wrap')[0].simpleBar.recalculate();
 			}
+
+			setTimeout(function() {
+				if ((that.find('.fold_box_header').outerHeight() + that.find('.fold_box_contents').outerHeight() + 2) !== changeHeight) {
+					foldTransition(that, true);
+				}
+				else {
+					if (that.closest('.custom_scroll_inner').outerHeight() > that.closest('.custom_scroll_wrap').outerHeight()) {
+						that.closest('.custom_scroll_wrap').addClass('active');
+					}else {
+						that.closest('.custom_scroll_wrap').removeClass('active');
+					}
+				}
+			}, 200);
 		});
 	}
 
@@ -1399,10 +1724,12 @@ KyoboBookPub.ink = (function () {
 			$(wrap, container).each(function(){
 				var isToggle, isOpened, wrapMaxHeight, innerHeight, btnBeforeText, btnAfterText;
 				wrapMaxHeight = parseInt($(this).find(contents).css('max-height').replace('px', ''));
-				innerHeight = $(this).find(inner).outerHeight();
+				innerHeight = Math.max($(this).find(inner).outerHeight(), $(this).find(inner).get(0).scrollHeight);
 				btnBeforeText = $(this).find(btn).text();
 
-				if (innerHeight <= wrapMaxHeight) return;
+				if (innerHeight <= wrapMaxHeight) {
+					return;
+				}
 				$(this).addClass('overflow');
 
 				if ($(this).hasClass('active')){
@@ -1452,6 +1779,7 @@ KyoboBookPub.ink = (function () {
 	 * selectmenu refresh
 	 */
 	function callSelectRefresh(tgId){
+		// console.log($(tgId).selectmenu('instance'))
 		$(tgId).selectmenu('refresh');
 
 		// if($(tgId).parent().data('renderer') === 'selProdOpt') {
@@ -1482,7 +1810,7 @@ KyoboBookPub.ink = (function () {
 	 * @param timer toast 노출 시간 밀리세컨드로 계산(default: 2000)
 	 */
 	function setToastMessage(msg, timer){
-		if (!timer) { timer = 2002000; }
+		if (!timer) { timer = 2000; }
 		var toastCont = $("<div class='toast_wrap'><span class='toast_message'>" + msg + "</span></div>");
 
 		if($('body').find('.toast_wrap').length < 1) $('body').append(toastCont);
@@ -1507,10 +1835,6 @@ KyoboBookPub.ink = (function () {
 					'left': 600+'px',
 					'transform': 'translateX(' + - _scrollLeft + 'px)'
 				});
-				$('.toast_wrap').css({
-					'bottom': '30px',
-				});
-				return false;
 			} else {
 				$('.toast_wrap').css({
 					'left': '',
@@ -1532,7 +1856,7 @@ KyoboBookPub.ink = (function () {
 			$(container).each(function(){
 				var that, isToggle;
 				that = $(this);
-  
+
 				$(this).find('.btn_tooltip').on('click', function(){
 					if ($(this).data('btn-toggle') !== undefined){
 						isToggle = true;
@@ -1568,6 +1892,54 @@ KyoboBookPub.ink = (function () {
 		}
 	}
 
+
+	/**
+	 * optMenuOnOff type on off
+	 * @param container tooltip 컨테이너 영역 DOM 셀렉터 (default : .opt_menu_wrap)
+	 */
+	function optMenuOnOff(container){
+		container = container || '.opt_menu_wrap';
+
+		if ($(container).length > 0){
+			$(container).each(function(){
+				var that, isToggle;
+				that = $(this);
+
+				$(this).find('.btn_opt_menu').on('click', function(){
+					if ($(this).data('btn-toggle') !== undefined){
+						isToggle = true;
+					}
+
+					if(isToggle){
+						if (that.hasClass('active')) {
+							that.removeClass('active').addClass('hide');
+							$(this).find('.hidden').text('메뉴열기');
+						} else {
+							$(container + '.active').removeClass('active').addClass('hide');
+							that.removeClass('hide').addClass('active');
+							$(this).find('.hidden').text('메뉴닫기');
+						}
+						return;
+					}
+
+					if(that.hasClass('active')) return;
+					$('.opt_menu_wrap.active').removeClass('active').addClass('hide');
+					that.removeClass('hide').addClass('active');
+				});
+
+				if (!isToggle){
+					$(this).find('.opt_menu_link').on('click', function(){
+						that.removeClass('active').addClass('hide');
+					});
+				}
+
+				$(this).on('transitionend', function () {
+					$(this).removeClass('hide');
+				});
+			});
+		}
+	}
+
 	/**
 	 * img 가로형/세로형 체크
 	 * @param container imgTg : $(this)
@@ -1577,12 +1949,14 @@ KyoboBookPub.ink = (function () {
 		container === undefined ? container = imgTg : container = container;
 		var chkImg = imgTg.find('img').get(0);
 
-		if (chkImg.naturalWidth > chkImg.naturalHeight) { // 가로형
-			container.addClass('landscape');
-		} else if (chkImg.naturalWidth < chkImg.naturalHeight) { //세로형
-			container.addClass('portrait');
-		} else { // 정사각형
-			container.addClass('even');
+		if(chkImg !== undefined){
+			if (chkImg.naturalWidth > chkImg.naturalHeight) { // 가로형
+				container.addClass('landscape');
+			} else if (chkImg.naturalWidth < chkImg.naturalHeight) { //세로형
+				container.addClass('portrait');
+			} else { // 정사각형
+				container.addClass('even');
+			}
 		}
 	}
 
@@ -1627,10 +2001,23 @@ KyoboBookPub.ink = (function () {
 	function setTagToggle(){
 		$('.tag_wrap').each(function(){
 			if($(this).data('tag-toggle') !== undefined) {
-				$(this).find('.tag_item').on('click', function () {
-					$(this).siblings().removeClass('active');
+				$(this).find('.tag').on('click', function () {
+					$(this).closest('.tag_wrap').find('.tag').removeClass('active');
 					$(this).addClass('active');
 				})
+			}
+		});
+	}
+
+	/**
+	 * tag multi button on/off
+	 */
+	function setTagToggleMulti(){
+		$('.tag_wrap').each(function(){
+			if($(this).data('tag-multi') !== undefined) {
+				$(this).find('.tag').on('click', function () {
+					$(this).toggleClass('active');
+				});
 			}
 		});
 	}
@@ -1653,7 +2040,9 @@ KyoboBookPub.ink = (function () {
 				target.removeClass('view_type_img view_type_txt view_type_list').addClass(type);
 				// console.log(target, type);
 
-				callback(target, type);
+				if ( callback != null && typeof callback === "function" ) {
+					callback(target, type);
+				}
 			});
 		});
 	}
@@ -1709,6 +2098,20 @@ KyoboBookPub.ink = (function () {
 		}
 	}
 
+	// switch on off
+	function setSwitchOnOff(){
+		$('.btn_switch').on('click.uiSwitch', function(){
+			var tgCont = $(this).attr('data-switch-tg');
+			var allCont = $(this).closest('.switch_toggle_wrap').find('.switch_toggle_content');
+
+			$(this).addClass('active');
+			$(this).siblings('.btn_switch').removeClass('active');
+
+			allCont.removeClass('active');
+			$(tgCont).addClass('active');
+		});
+	}
+
 	_front.setSpsOffsetData = setSpsOffsetData;
 	_front.setCustomScroll = setCustomScroll;
 	_front.setTableCaption = setTableCaption;
@@ -1716,10 +2119,12 @@ KyoboBookPub.ink = (function () {
 	_front.setUIDialog = setUIDialog;
 	_front.dialogOnOff = dialogOnOff;
 	_front.setUISelect = setUISelect;
-	_front.setSelectReInit = setSelectReInit;
+	_front.setUISpinner = setUISpinner;
+	_front.setDatepicker = setDatepicker;
 	_front.callSelectRefresh = callSelectRefresh;
 	_front.togglePassword = togglePassword;
 	_front.setTabs = setTabs;
+	_front.tabListFolding = tabListFolding;
 	_front.setFoldBox = setFoldBox;
 	_front.setGNB = setGNB;
 	_front.setFloating = setFloating;
@@ -1732,6 +2137,8 @@ KyoboBookPub.ink = (function () {
 	_front.setSwitchListBtn = setSwitchListBtn;
 	_front.foldOnOff = foldOnOff;
 	_front.setDomainAutoComplete = setDomainAutoComplete;
+	_front.setSwitchOnOff = setSwitchOnOff;
+	_front.setSearchInput = setSearchInput;
 
 	$(window).on('scroll.uiCommon resize.uiCommon', function () {
 		_scrollLeft = Math.round(document.documentElement.scrollLeft || window.pageXOffset);
@@ -1748,6 +2155,135 @@ KyoboBookPub.ink = (function () {
 
 		dialogAutoHeight();
 	});
+
+	// 페이지 공통 스크립트
+	_front.page = {};
+
+	// event swiper
+	function setEventSwiper() {
+		if($('.event_swiper_wrap').length > 0){
+			$('.event_swiper_wrap').each(function () {
+				var eventSwiperEl = $(this);
+				if ($('.swiper-slide', eventSwiperEl).length > 1) {
+					var eventSwiper = new CustomSwiper(eventSwiperEl.find('.swiper-container').get(0), {
+						slidesPerView: 'auto',
+						speed: 500,
+						scrollbar: {
+							el: $('.swiper-scrollbar', eventSwiperEl)[0],
+						},
+					});
+				} else{
+					$('.swiper-scrollbar', eventSwiperEl).remove();
+				}
+			});
+		}
+	}
+
+	// 리뷰 내 리뷰 썸네일 swiper
+	function setReviewThumbnailSwiper(len) {
+		len = len ? len : 2;
+		$('.comment_swiper_wrap .swiper-container').each(function(){
+			if ($(this).find('.swiper-slide').length > len){
+				var reviewSwiper = new CustomSwiper(this, {
+					observer: true,
+					observeParents: true,
+					slidesPerView: 'auto',
+					navigation: {
+						nextEl: $(this).siblings('.swiper-button-next'),
+						prevEl: $(this).siblings('.swiper-button-prev'),
+					},
+				});
+			} else {
+				$(this).siblings('.swiper-button-next, .swiper-button-prev').css('display', 'none');
+			}
+		});
+	}
+
+	// 문장수집
+	function setKillingPartSwiper() {
+		if ($('.killing_part_swiper').length > 0) {
+
+			$('.killing_part_swiper').each(function () {
+				var killingPartSwiperEl = $(this);
+				var killingPartSwiper = new CustomSwiper($('.swiper-container', killingPartSwiperEl), {
+					slidesPerView: 'auto',
+					loop: killingPartSwiperEl.find('.swiper-slide').length > 1,
+					speed: 500,
+					observer: true,
+					observeParents: true,
+					navigation: {
+						nextEl: $('.swiper-button-next', killingPartSwiperEl).get(0),
+						prevEl: $('.swiper-button-prev', killingPartSwiperEl).get(0),
+					},
+				});
+			});
+		}
+	}
+
+	function setCommentList(){
+		var reviewContents, reviewText, contentsOverflow, textOverflow, btnToggle;
+		if ($('.comment_wrap').closest('.dialog_wrap.dialog_review').length > 0) return false; // 리뷰 팝업 내에선 실행 X
+
+		if($('.comment_wrap .comment_item').length > 0){
+			$('.comment_wrap .comment_item').each(function(){
+				var that = $(this);
+				btnToggle = $(this).find('.comment_footer .btn_more_body');
+				reviewContents = $(this).find('.comment_contents .comment_contents_inner');
+
+				// 리뷰 목록 toggle overflow
+				if (reviewContents.length > 0) {
+					reviewText = reviewContents.find('.comment_text');
+					textOverflow = reviewText[0].scrollHeight > reviewText.height();
+					contentsOverflow = reviewContents[0].scrollHeight > reviewContents.height();
+
+					// console.log($(this).index(), 'Contents : ', reviewContents[0].scrollHeight, reviewContents.height(), contentsOverflow, '///', 'Text : ', reviewText[0].scrollHeight, reviewText.height(), textOverflow);
+					if(contentsOverflow || textOverflow) {
+						that.addClass('overflow');
+
+						btnToggle.off('click').on('click', function(){
+							if(that.hasClass('active')){
+								that.removeClass('active');
+								$(this).removeClass('active').find('.text').text('펼치기');
+							} else {
+								that.addClass('active');
+								$(this).addClass('active').find('.text').text('접기');
+							}
+						});
+					} else {
+						that.removeClass('overflow');
+					}
+				}
+
+				// 리뷰 이미지 비율 체크
+				$(this).find('.comment_swiper_wrap .portrait_img_box').each(function(){
+					var imgTg = $(this);
+					KyoboBookPub.ink.checkImagePortrait(imgTg);
+				});
+			});
+		}
+	}
+
+	_front.page.setEventSwiper = setEventSwiper;
+	_front.page.setReviewThumbnailSwiper = setReviewThumbnailSwiper;
+	_front.page.setKillingPartSwiper = setKillingPartSwiper;
+	_front.page.setCommentList = setCommentList;
+	// e : 페이지 공통 스크립트
+
+	// s : Lottie Animation Data
+	_front.lottie = {};
+	_front.lottie.loading = '/assets/common/lottie/loading_onk.json';
+	_front.lottie.couponDownload = '/assets/common/lottie/coupon_download_onk.json';
+	_front.lottie.heartCasting = '/assets/common/lottie/heart_casting_h20_onk.json';
+	_front.lottie.heartDetail = '/assets/common/lottie/heart_detail_h20_onk.json';
+	_front.lottie.heartGray16 = '/assets/common/lottie/heart_gray_h16_onk.json';
+	_front.lottie.heartGray18 = '/assets/common/lottie/heart_gray_h18_onk.json';
+	_front.lottie.heartGray22 = '/assets/common/lottie/heart_gray_h22_onk.json';
+	_front.lottie.heart14 = '/assets/common/lottie/heart_h14_onk.json';
+	_front.lottie.heart18 = '/assets/common/lottie/heart_h18_onk.json';
+	_front.lottie.heartPurple18 = '/assets/common/lottie/heart_purple_h18_onk.json';
+	_front.lottie.liveBadge = '/assets/common/lottie/live_badge_ink.json';
+	_front.lottie.hotLine = '/assets/common/lottie/hot_line_ink.json';
+	// e : Lottie Animation Data
 
 
 	$(document).ready(function () {
@@ -1766,7 +2302,7 @@ KyoboBookPub.ink = (function () {
 			e.preventDefault();
 			$('html, body').animate({
 				scrollTop: 0
-			}, 200, function() {});
+			}, 200, function() { _btnGoTop.removeClass('active'); });
 		});
 
 		setGNB();
@@ -1781,6 +2317,7 @@ KyoboBookPub.ink = (function () {
 		setUISelect();
 		togglePassword();
 		setUISpinner();
+		setDatepicker();
 		setTabs();
 		setFoldBox();
 		addressDetailAreaOnOff();
@@ -1790,7 +2327,10 @@ KyoboBookPub.ink = (function () {
 		shsShareToggle();
 		autoOverflowContents();
 		setTagToggle();
+		setTagToggleMulti();
 		setDomainAutoComplete();
+		setSwitchOnOff();
+		optMenuOnOff();
 	});
 
 	return _front;
@@ -1798,5 +2338,18 @@ KyoboBookPub.ink = (function () {
 
 // Custom Swiper
 var CustomSwiper = function(selector, options) {
+	options = $.extend(options, {
+		keyboard: false,
+		on: {
+			destroy: function () {
+				$(selector).off('focusin.swiper').off('focusout.swiper');
+			}
+		}
+	});
+	$(selector).on('focusin.swiper', function (event) {
+		this.swiper.keyboard.enable();
+	}).on('focusout.swiper', function (event) {
+		this.swiper.keyboard.disable();
+	})
 	return new Swiper(selector, options);
-}
+};

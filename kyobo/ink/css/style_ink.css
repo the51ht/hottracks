@@ -318,7 +318,15 @@ button {
   left: 0;
   width: 230px;
   height: 42px;
-  background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/bg_service_mall_shape.png) 0/100% no-repeat;
+  background-size: 100% auto;
+  /*@media (-webkit-min-device-pixel-ratio: 1.5) {
+		& {
+			background-image: url($file + '@1.5x.' + $type);
+		}
+	}
+	@media (-webkit-min-device-pixel-ratio: 2) {
+		& {*/
+  background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/bg_service_mall_shape@2x.png");
   pointer-events: none;
 }
 
@@ -387,7 +395,7 @@ button {
 
 .wrapper .header_wrapper .service_mall_wrap .service_mall_inner .service_mall_box .service_mall_list .service_mall_item svg text {
   text-anchor: middle;
-  /*fill: #fff;*/
+  fill: #fff;
   font-size: 13px;
   pointer-events: none;
   font-family: "Roboto", "Noto Sans KR", "PingFang SC", "Apple SD Gothic Neo", "Microsoft YaHei UI", "Malgun Gothic", sans-serif;
@@ -787,6 +795,7 @@ button {
   background: none;
   -webkit-transition: none;
   transition: none;
+  z-index: 1;
 }
 
 .wrapper .header_wrapper .header_inner .gnb_search_wrap .gnb_search_box .form_sel .ui-selectmenu-button .ui-selectmenu-text {
@@ -986,7 +995,6 @@ button {
 .wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item .user_menu_link .cnt {
   position: absolute;
   top: 0;
-  right: 0;
   display: block;
   min-width: 21px;
   height: 21px;
@@ -999,40 +1007,6 @@ button {
   text-align: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.history {
-  width: 32px;
-  height: 32px;
-}
-
-.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.history .user_menu_link:before {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  /*@media (-webkit-min-device-pixel-ratio: 1.5) {
-		& {
-			background-image: url($file + '@1.5x.' + $type);
-		}
-	}
-	@media (-webkit-min-device-pixel-ratio: 2) {
-		& {*/
-  background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/btn_header_history@2x.png");
-  vertical-align: top;
-}
-
-.wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.history .user_menu_link .text {
-  position: absolute;
-  bottom: -2px;
-  left: -16px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: #474c98;
 }
 
 .wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.cart {
@@ -1061,8 +1035,13 @@ button {
 }
 
 .wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.cart .user_menu_link .cnt {
-  right: -9px;
+  left: 23px;
   top: -5px;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .wrapper .header_wrapper .header_inner .gnb_search_wrap .user_menu_list .user_menu_item.my {
@@ -1270,6 +1249,14 @@ button {
   padding: 0 30px 1px;
 }
 
+.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap > .tab_list_wrap > .tabs .tab_item.ui-state-active {
+  background: #fff;
+}
+
+.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap > .tab_list_wrap > .tabs .tab_item.ui-state-active .tab_link .tab_text {
+  font-weight: 500;
+}
+
 .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap > .tab_list_wrap > .tabs .tab_item .tab_link:after {
   content: none;
 }
@@ -1357,7 +1344,7 @@ button {
 
 .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content .tab_wrap.category .tab_list_wrap .tabs .tab_item.ui-state-active .tab_link .tab_text {
   font-weight: 700;
-  color: #4248B5;
+  color: #4248b5;
 }
 
 .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content .tab_wrap.category .tab_list_wrap .tabs .tab_item.ui-state-active .tab_link:after {
@@ -1510,11 +1497,17 @@ button {
   margin-left: 4px;
 }
 
-.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .category_view_area .fold_box_wrap.category .fold_box_list .fold_box .fold_box_header:after {
-  width: 7px;
-  height: 7px;
+.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .category_view_area .fold_box_wrap.category .fold_box_list .fold_box .fold_box_header .btn_fold {
+  width: 19px;
+  left: inherit;
   right: 0;
-  background-size: 7px 7px;
+}
+
+.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .category_view_area .fold_box_wrap.category .fold_box_list .fold_box .fold_box_header:after {
+  width: 11px;
+  height: 11px;
+  right: 1px;
+  background-size: 11px 11px;
   /*@media (-webkit-min-device-pixel-ratio: 1.5) {
 		& {
 			background-image: url($file + '@1.5x.' + $type);
@@ -1522,7 +1515,7 @@ button {
 	}
 	@media (-webkit-min-device-pixel-ratio: 2) {
 		& {*/
-  background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/ico_fold_plus@2x.png");
+  background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/ico_fold_menu_plus@2x.png");
 }
 
 .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .category_view_area .fold_box_wrap.category .fold_box_list .fold_box.expanded .fold_box_header {
@@ -1530,7 +1523,7 @@ button {
 }
 
 .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .category_view_area .fold_box_wrap.category .fold_box_list .fold_box.expanded .fold_box_header:after {
-  background-size: 7px 7px;
+  background-size: 11px 11px;
   /*@media (-webkit-min-device-pixel-ratio: 1.5) {
 		& {
 			background-image: url($file + '@1.5x.' + $type);
@@ -1538,7 +1531,7 @@ button {
 	}
 	@media (-webkit-min-device-pixel-ratio: 2) {
 		& {*/
-  background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/ico_fold_minus@2x.png");
+  background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/ico_fold_menu_minus@2x.png");
 }
 
 .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .category_view_area .fold_box_wrap.category .fold_box_list .fold_box.expanded .fold_box_contents {
@@ -1593,6 +1586,10 @@ button {
   line-height: 19px;
   letter-spacing: -0.01em;
   color: #595959;
+}
+
+.wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .special_corner_area .special_corner_list .special_corner_item .special_corner_link:hover, .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .special_corner_area .special_corner_list .special_corner_item .special_corner_link:active, .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .special_corner_area .special_corner_list .special_corner_item .special_corner_link:focus {
+  text-decoration: underline;
 }
 
 .wrapper .header_wrapper .header_inner .gnb_wrap .anb_wrap .anb_area > .tab_wrap .tab_content.anb_category .anb_category_inner .tab_wrap.category .tab_content .special_corner_area .special_corner_list .special_corner_item ~ .special_corner_item {
@@ -2217,6 +2214,7 @@ button {
 
 .wrapper .header_wrapper .header_inner .gnb_wrap .curtain_banner_wrap.active.animated .curtain_banner_box {
   opacity: 1;
+  z-index: 99;
 }
 
 .wrapper .header_wrapper.sps.sps-blw, .wrapper .header_wrapper.fix_header {
@@ -2316,6 +2314,10 @@ button {
 
 .wrapper .header_wrapper.sps.sps-blw ~ .container_wrapper {
   padding-top: 208px;
+}
+
+.wrapper .header_wrapper.simple_header .header_inner .gnb_search_wrap .gnb_search_box .form_sel .ui-selectmenu-button .ui-selectmenu-text {
+  padding-top: 9px;
 }
 
 .wrapper .header_wrapper.fix_header .header_inner .gnb_search_wrap .gnb_search_box .form_sel .ui-selectmenu-button .ui-selectmenu-text {
@@ -3083,7 +3085,7 @@ button {
 	}
 	@media (-webkit-min-device-pixel-ratio: 2) {
 		& {*/
-  /*background-image: url("../../ink/welcome/images/ico_notice_new@2x.png");*/
+  background-image: url("../../ink/welcome/images/ico_notice_new@2x.png");
   vertical-align: top;
 }
 
@@ -3967,6 +3969,10 @@ button {
   top: 268px;
   right: 10px;
   z-index: 11;
+}
+
+.header_wrapper.simple_header ~ .fly_menu_wrapper {
+  top: 160px;
 }
 
 .wrapper .fly_menu_wrapper.sps-blw {
@@ -5221,6 +5227,29 @@ button {
   text-align: right;
 }
 
+.auto_complete_wrap .search_content_wrap .keyword_contents_area .recent_keyword_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 auto;
+          flex: 0 auto;
+}
+
 .auto_complete_wrap .search_content_wrap .col_left_box {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -5508,26 +5537,7 @@ button {
 }
 
 .recent_keyword_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  display: -webkit-flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 auto;
-          flex: 0 auto;
+  display: block;
   width: 260px;
 }
 
@@ -7160,6 +7170,15 @@ button {
     margin-top: 2px;
   }
   body .wrapper .container_wrapper .btn_more_view .ico_arw {
+    margin-top: 6px;
+  }
+  body .wrapper .container_wrapper .btn_more_view.size_sm .ico_arw {
+    margin-top: 5px;
+  }
+  body .wrapper .container_wrapper .btn_more_view.size_lg .ico_arw {
+    margin-top: 8px;
+  }
+  body .wrapper .container_wrapper .btn_more_view.size_xl .ico_arw {
     margin-top: 7px;
   }
   body .wrapper .container_wrapper .btn_reset .ico_reset {
@@ -7182,6 +7201,9 @@ button {
   }
   body .wrapper .container_wrapper .form_sel.type_arw .ui-selectmenu-button .ui-selectmenu-icon {
     top: 1px;
+  }
+  body .wrapper .container_wrapper .badge_lg.badge_pill {
+    padding-top: 1px;
   }
   body .wrapper .container_wrapper .badge_md {
     padding: 1px 5px 2px;
@@ -7212,9 +7234,6 @@ button {
   }
   body .wrapper .container_wrapper .review_klover_text.font_size_xxs:before {
     top: 3px;
-  }
-  body .wrapper .container_wrapper .review_klover_box .review_desc {
-    margin-top: 1px;
   }
   body .wrapper .container_wrapper .review_summary_wrap .rating-container.rating-sm {
     margin-top: 4px;
@@ -7276,6 +7295,9 @@ button {
   body .wrapper .container_wrapper .prod_detail_contents .prod_detail_contents_inner .product_detail_area .btn_alarm {
     margin-top: 2px;
   }
+  body .wrapper .container_wrapper .prod_detail_contents .prod_detail_contents_inner .product_detail_area .round_gray_box .prod_swiper_text .prod_text_list .prod_item .form_chk input + label {
+    height: 22px;
+  }
   body .wrapper .container_wrapper .prod_detail_contents .prod_detail_contents_inner .product_package .title_prod_package .info_price .price_amount_before:before {
     top: 11px !important;
   }
@@ -7288,11 +7310,20 @@ button {
   body .wrapper .container_wrapper .prod_detail_contents .prod_detail_contents_inner .killing_part .tooltip_wrap {
     margin-top: 5px;
   }
+  body .wrapper .container_wrapper .my_profile_area .profile_name_box .badge_lg {
+    margin-top: 2px;
+  }
+  body .wrapper .container_wrapper.my_home .my_profile_area .profile_name_box .badge_lg {
+    margin-top: 4px;
+  }
   body .wrapper .cart_body .tag_wrap.type_line_white .tag {
     padding: 7px 5px 9px 6px !important;
   }
   body .wrapper .cart_body .tag_wrap.type_line_white .tag.has_data {
     padding: 7px 16px 9px !important;
+  }
+  body .wrapper .cart_body.payment .tbl_row_wrap:not(.form_xs) .tbl_row th .btn_info_popup {
+    margin-top: 5px;
   }
   body .wrapper .footer_wrapper .footer_body .footer_contents_wrap .footer_contents_left .footer_menu_box .footer_menu_list .footer_menu_item + .footer_menu_item:before {
     margin-top: 6px;
@@ -7304,10 +7335,10 @@ button {
     padding: 7px 5px 0;
   }
   body .wrapper.member_info .container_wrapper .my_grade_info_wrap .my_grade_info_area .grade_info_contents .right_area .grade_state_info_list .state_info_title .tooltip_wrap {
-    margin: 0 0 0 3px;
+    margin-top: 4px;
   }
   body .wrapper.member_info .container_wrapper .my_grade_info_wrap .my_grade_info_area .grade_info_contents .right_area .grade_state_info_list .state_info_title .btn_info_popup {
-    margin: 3px 0 0 3px;
+    margin-top: 4px;
   }
   body .wrapper.member_info .container_wrapper .benefit_grade_wrap .extra_rate_text .ico_point_plus {
     margin-top: 4px;
@@ -7326,6 +7357,9 @@ button {
   }
   body .bul_item_dot.font_size_min:before {
     top: 8px !important;
+  }
+  body .decimal_list {
+    padding-left: 19px;
   }
   body .btn_more_body .ico_arw {
     margin-top: 1px;
@@ -7357,6 +7391,9 @@ button {
   }
   body .tab_wrap.type_line_round > .tab_list_wrap > .tabs .tab_item .tab_link {
     overflow: visible;
+  }
+  body .fold_box_wrap .fold_box.type_select .fold_select_wrap .fold_select_list .fold_select_prd .info {
+    padding-top: 2px;
   }
   body .tag_wrap .tag {
     padding: 7px 16px 9px;
@@ -7395,6 +7432,9 @@ button {
   body .byte_check_wrap .form_textarea {
     font-size: 14px;
   }
+  body .dialog_wrapper .ui-dialog .dialog_wrap.dialog_address.ui-dialog-content .dialog_contents {
+    overflow: hidden;
+  }
   body .dialog_wrapper .ui-dialog .dialog_wrap.dialog_address.ui-dialog-content .dialog_contents .custom_scroll_wrap .simplebar-content-wrapper {
     min-height: 100%;
     height: 100% !important;
@@ -7422,6 +7462,12 @@ button {
   }
   body .dialog_wrapper .ui-dialog.dialog_main .dialog_wrap.ui-dialog-content .dialog_main_btn_wrap .btn_main_pop .text {
     padding-top: 1px;
+  }
+  body .showcase_person_wrap .showcase_person_row .person_info_area .person_profile_box:before {
+    content: "";
+    display: block;
+    min-height: inherit;
+    font-size: 0;
   }
   body .showcase_person_wrap .showcase_person_row .person_info_area .person_profile_box .profile_info .person_name .btn_wish_icon {
     top: 0;
@@ -7464,8 +7510,33 @@ button {
   body .prod_area .prod_info_box .prod_price.type_cut .price_info .gap + .point {
     padding-top: 4px;
   }
+  body .delivery_info_list .delivery_info_item .label .btn_info_popup {
+    margin-top: 5px;
+  }
+  body .fold_box_wrap.type_box .fold_box .fold_box_header .header_text + .btn_info_popup {
+    margin-top: 5px;
+  }
+  body .state_gauge_wrap .state_gauge_box .state_gauge_title .tooltip_wrap {
+    margin-top: 2px;
+  }
   body .ui-datepicker .ui-datepicker-calendar td .ui-state-default {
     padding-left: 1px;
+  }
+  body .my_profile_area .profile_inner .profile_thumb_box .badge_lg .text {
+    padding-bottom: 4px;
+  }
+  body .my_profile_area .profile_inner .profile_name_box .btn_setting {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+  body .tbl_prod_wrap.type_myroom .tbl_prod tbody tr td .btn_wrap.full .btn_sm {
+    overflow: visible;
+  }
+  body .payment_info_wrap .payment_info_area .payment_total_item .payment_info_box .type_link:after {
+    margin-top: 2px;
+  }
+  body .btn_favorite.has_text {
+    background-position-y: 3px;
   }
   body .pickup_info_text .gap {
     margin-top: 7px;
@@ -7491,6 +7562,9 @@ button {
   body .order_history_group .order_history_box.type_title .history_desc .btn_info_popup {
     margin-top: 1px;
   }
+  body .history_list.my_article .history_cont_box .activate_history_item .summary .left_area .badge_sm {
+    margin-top: 2px;
+  }
   body .payment_price_wrap .payment_price_total .right_box .price .unit {
     padding-top: 0;
     margin-top: -1px;
@@ -7498,6 +7572,9 @@ button {
   body .payment_price_wrap .payment_price_list .payment_price_item .right_box .price .unit {
     padding-top: 0;
     margin-top: -1px;
+  }
+  body .regular_mail_wrap .regular_mail_list .regular_mail_item .tooltip_wrap.type_sm {
+    margin-top: 0;
   }
   body .floating_input_item .floating_guide,
   body .floating_input_item .floating_label {
@@ -7523,22 +7600,6 @@ button {
   }
   body .use_gift_card_wrap .gift_card_swiper_wrap .gift_card_list .gift_card_item .btn_check_gift_card .text {
     padding-top: 5px;
-  }
-  body .my_profile_area .profile_inner .profile_thumb_box .badge_lg .text {
-    padding-bottom: 4px;
-  }
-  body .my_profile_area .profile_inner .profile_name_box .btn_setting {
-    -webkit-transform: translateY(3px);
-    transform: translateY(3px);
-  }
-  body .tbl_prod_wrap.type_myroom .tbl_prod tbody tr td .btn_wrap.full .btn_sm {
-    overflow: visible;
-  }
-  body .payment_info_wrap .payment_info_area .payment_total_item .payment_info_box .type_link:after {
-    margin-top: 2px;
-  }
-  body .btn_favorite.has_text {
-    background-position-y: 3px;
   }
   body .survey_status_box .survey_status .status {
     padding-top: 0;
@@ -7627,8 +7688,14 @@ button {
   body .reading_tree_inquiry_box .inquiry_info_item .gap {
     margin-top: 7px;
   }
+  body .work_wrap .top_cont_search_wrap .form_search_box .form_sel {
+    margin-bottom: -1px;
+  }
   body .work_wrap .hot_people .person_info_area .person_name .btn_wish_icon {
     top: 3px;
+  }
+  body .program_wrap .person_info_area .bul_item_dot:before {
+    top: 19px !important;
   }
   body .campaign_year_list .custom_scroll_wrap .simplebar-track {
     width: 2px;
@@ -7644,5 +7711,8 @@ button {
   }
   body .campaign_apply_info .item .text:after {
     margin-top: -6px;
+  }
+  .benefit_list .benefit_box br {
+    font-size: 0;
   }
 }
