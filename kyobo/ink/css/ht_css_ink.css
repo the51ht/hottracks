@@ -1525,9 +1525,8 @@ body {
 
 /** LNB **/
 .ht_lnb {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 140px;
+  /*position:sticky;top:140px;*/
+  position: relative;
   float: left;
   width: 170px;
   margin-bottom: 60px;
@@ -3026,8 +3025,11 @@ body {
 
 .solo_banner img {
   width: 100%;
+  height: 120px;
   border-radius: 12px;
   overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .prod_solo_banner {
