@@ -51,6 +51,8 @@ body {
   text-align: center;
   font-size: 38px;
   margin: 61px 0 0;
+  height: 46px;
+  line-height: 46px;
 }
 
 .admin_login_section .admin_login_contents p {
@@ -1181,6 +1183,10 @@ div.cate-list + select {
   font-weight: 700;
 }
 
+#body div.form-type .form-type {
+  border-top: 0 !important;
+}
+
 #body div table.table tbody tr th {
   color: #767676;
   font-weight: 500;
@@ -1267,7 +1273,9 @@ select::-ms-expand {
   display: none;
 }
 
-span.button input {
+span.button input,
+span.button button,
+span#calculrate a {
   color: #fff;
   background: #000 !important;
   border-radius: 6px;
@@ -1278,6 +1286,55 @@ span.button input {
   margin-left: 5px !important;
   margin-top: -7px !important;
   font-weight: 700;
+}
+
+button[type=button]#btnSearch,
+button[type=button]#btnNotiAdd {
+  color: #fff;
+  background: #000 !important;
+  border-radius: 6px;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  border: 1px solid #000 !important;
+  margin-left: 5px !important;
+  font-weight: 700;
+}
+
+font + span.button button,
+select[name=kindOfDoc] + span.button a,
+#excelDownloadBtn a,
+#excelDown button,
+#btnDelOrderId a,
+select[name=deliveryRequest] ~ span.button button,
+select[name=deliveryRequest] ~ span.button a {
+  margin-top: 0px !important;
+}
+
+button#btnExcel {
+  margin-top: -8px !important;
+}
+
+button#btnPrint {
+  margin-top: 5px !important;
+}
+
+button#btnJisiSerConf,
+button#btnSearch,
+button#btnNotiContAdd {
+  margin-top: -37px !important;
+}
+
+button#btnRegist {
+  margin-top: -18px !important;
+}
+
+button + button#btnExcel {
+  margin-top: -8px !important;
+}
+
+span.button > span.button a {
+  margin-top: -25px !important;
 }
 
 .form-button span.button, .list-option span.button {
@@ -1374,6 +1431,48 @@ ul li input[type=text] {
 ul li input[type=text] + input[type=text] {
   margin-left: 7px !important;
   width: 150px !important;
+}
+
+button[type=button]#cmdSearch,
+button[type=button]#detail,
+button[type=button]#noSujib {
+  color: #fff;
+  background: #000 !important;
+  border-radius: 6px;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  border: 1px solid #000 !important;
+  margin-left: 5px !important;
+  margin-top: -7px !important;
+  font-weight: 700;
+  margin: 2px 6px 2px 0 !important;
+  vertical-align: middle;
+}
+
+button[type=button]#prdtSujib,
+button[type=button]#vndrSujib,
+button[type=button]#allSujib,
+button[type=button]#jisi {
+  display: inline-block;
+  height: 36px !important;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: -0.14px;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #fff;
+  border: 1px solid #d5d5d5;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: border-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out;
+  outline: none;
+  min-width: 30px !important;
+  width: auto;
+  font-weight: 700;
+  margin: 2px 6px 2px 0 !important;
+  padding: 0 15px !important;
 }
 
 input[type=text],
@@ -1572,6 +1671,10 @@ table#eventMasterlist tbody tr.tgt {
 
 #body div.form-type div.form-button {
   margin-top: 3px;
+}
+
+#body div.list-type div.form-button {
+  margin-top: 12px;
 }
 
 /* page number */
