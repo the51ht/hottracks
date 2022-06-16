@@ -1083,6 +1083,10 @@ div.cate-list + select {
 }
 
 /* Table */
+#body table.table {
+  margin-bottom: 10px !important;
+}
+
 #body div.list-type table.table thead tr th + th,
 #body div.list-type table.table tbody tr th + th,
 #body div.list-type table.table tbody tr td + td {
@@ -1335,7 +1339,7 @@ select {
 }
 
 form[name=searchOrderForm] .form-button span.button + select[name=listSize].changeSelect {
-  margin-top: 14px !important;
+  margin-top: 3px !important;
 }
 
 select::-ms-expand {
@@ -1345,6 +1349,18 @@ select::-ms-expand {
 span.button input,
 span.button button,
 span#calculrate a {
+  color: #fff;
+  background: #000 !important;
+  border-radius: 6px;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  border: 1px solid #000 !important;
+  margin-left: 5px !important;
+  font-weight: 700;
+}
+
+span#uptRcStatBtn a {
   color: #fff;
   background: #000 !important;
   border-radius: 6px;
@@ -1378,10 +1394,6 @@ select[name=kindOfDoc] + span.button a,
 select[name=deliveryRequest] ~ span.button button,
 select[name=deliveryRequest] ~ span.button a {
   margin-top: 0px !important;
-}
-
-select[name=typeTot] + span.button button[type=button]#btnSearch {
-  margin-top: -7px !important;
 }
 
 form[name=bigChulGoSearch] + .form-button button#btnExcel {
@@ -1468,10 +1480,6 @@ select[name=moduleId] + span.button a {
 .button.left#recollection a,
 .button.left#addProductNew a {
   margin-top: 0px !important;
-}
-
-span.button#calculrate a {
-  margin-top: -8px !important;
 }
 
 .button.left + .button.left button[type=button]#btnCompleteExchange + button[type=button]#btnExcel {
