@@ -1038,6 +1038,12 @@ div.cate-list + select {
   padding-bottom: 60px;
 }
 
+#body div.list-type .list-option:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
 #body h4 {
   border-bottom: 0;
   background: none;
@@ -1095,6 +1101,21 @@ div.cate-list + select {
   border-top: 1px solid #202020;
 }
 
+#body div.list-type table.table thead tr th span.button {
+  height: 36px !important;
+}
+
+#body div.list-type table.table thead tr th span.button a {
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid #ccc !important;
+  color: #000;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  margin: 0 1px !important;
+}
+
 #body div.list-type table.table tbody tr {
   /*+ tr td{
             border-top: 0px solid #d6d6d6 !important;border-right:0px solid #EAEAEA;
@@ -1111,6 +1132,17 @@ div.cate-list + select {
           box-sizing: border-box;
 }
 
+#body div.list-type table.table tbody tr td select + span.button a {
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid #ccc !important;
+  color: #000;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  margin: 0 1px !important;
+}
+
 #body div.list-type table.table tbody tr td .button {
   font-weight: 700;
 }
@@ -1123,6 +1155,17 @@ div.cate-list + select {
   line-height: 30px !important;
   height: 30px !important;
   margin-top: 3px !important;
+}
+
+#body div.list-type table.table tbody tr td .button + span.button a {
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid #ccc !important;
+  color: #000;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  margin: 0 1px !important;
 }
 
 #body div.list-type table.table tbody tr td .button.small {
@@ -1193,7 +1236,6 @@ div.cate-list + select {
   height: 36px !important;
   border: 1px solid #000 !important;
   margin-left: 5px !important;
-  margin-top: -7px !important;
   font-weight: 700;
 }
 
@@ -1234,6 +1276,10 @@ div.cate-list + select {
 }
 
 /* button / select / input / text area / check box */
+span.button {
+  height: 36px !important;
+}
+
 span.button a, span.button button, span.button input {
   height: 30px !important;
   padding: 0 10px !important;
@@ -1255,7 +1301,7 @@ table span.button a, table span.button button, table span.button input {
   height: 30px !important;
   padding: 0 10px !important;
   background: #fff !important;
-  border: 2px solid #000 !important;
+  border: 1px solid #000 !important;
   border-radius: 5px;
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
@@ -1287,6 +1333,10 @@ select {
   background: #fff url(../images/ht_admin/arw_select@2x.png) right 11px center/9px 8px no-repeat;
 }
 
+form[name=searchOrderForm] .form-button span.button + select[name=listSize].changeSelect {
+  margin-top: 14px !important;
+}
+
 select::-ms-expand {
   display: none;
 }
@@ -1302,7 +1352,6 @@ span#calculrate a {
   height: 36px !important;
   border: 1px solid #000 !important;
   margin-left: 5px !important;
-  margin-top: -7px !important;
   font-weight: 700;
 }
 
@@ -1330,7 +1379,11 @@ select[name=deliveryRequest] ~ span.button a {
   margin-top: 0px !important;
 }
 
-button#btnExcel {
+select[name=typeTot] + span.button button[type=button]#btnSearch {
+  margin-top: -7px !important;
+}
+
+form[name=bigChulGoSearch] + .form-button button#btnExcel {
   margin-top: -8px !important;
 }
 
@@ -1356,10 +1409,6 @@ button + button#btnExcel {
   margin-top: -8px !important;
 }
 
-span.button > span.button a {
-  margin-top: -25px !important;
-}
-
 .form-button span.button, .list-option span.button {
   margin-right: 0px !important;
 }
@@ -1373,7 +1422,22 @@ span.button > span.button a {
   height: 36px !important;
   border: 1px solid #000 !important;
   margin-left: 5px !important;
-  margin-top: -7px !important;
+  font-weight: 700;
+}
+
+#quickSearch form > span.button button[type=submit] {
+  margin-top: 0px !important;
+}
+
+select[name=moduleId] + span.button a {
+  color: #fff;
+  background: #000 !important;
+  border-radius: 6px;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  border: 1px solid #000 !important;
+  margin-left: 5px !important;
   font-weight: 700;
 }
 
@@ -1387,9 +1451,30 @@ span.button > span.button a {
   height: 36px !important;
   border: 1px solid #000 !important;
   margin-left: 5px !important;
-  margin-top: -7px !important;
   font-weight: 700;
-  margin: -13px 0 0 0 !important;
+  margin: 0 !important;
+}
+
+.button.left#batchProcess a,
+.button.left #changeProductStatusCode,
+.button.left #changeProductStatusCodeByRequest {
+  margin-top: 0px !important;
+}
+
+.button.left#addProduct a,
+.button.left#deleteProduct a,
+.button.left#recollection + .button.left a,
+.button.left#recollection a,
+.button.left#addProductNew a {
+  margin-top: 0px !important;
+}
+
+span.button#calculrate a {
+  margin-top: -8px !important;
+}
+
+.button.left + .button.left button[type=button]#btnCompleteExchange + button[type=button]#btnExcel {
+  margin-top: 0 !important;
 }
 
 .button.left + .left input {
@@ -1409,7 +1494,6 @@ div.cate-content > .button a {
   height: 36px !important;
   border: 1px solid #000 !important;
   margin-left: 5px !important;
-  margin-top: -7px !important;
   font-weight: 700;
   margin: -13px 0 0 0 !important;
 }
@@ -1467,7 +1551,6 @@ button[type=button]#noSujib {
   height: 36px !important;
   border: 1px solid #000 !important;
   margin-left: 5px !important;
-  margin-top: -7px !important;
   font-weight: 700;
   margin: 2px 6px 2px 0 !important;
   vertical-align: middle;
@@ -1549,9 +1632,9 @@ input[name=searchVal] ~ span.button button[type=submit] {
   line-height: 36px !important;
   height: 36px !important;
   border: 1px solid #000 !important;
-  margin-left: 5px !important;
-  margin-top: -7px !important;
+  margin-left: 0px !important;
   font-weight: 700;
+  margin-top: -7px !important;
 }
 
 input[type=number] {
@@ -1560,6 +1643,11 @@ input[type=number] {
 
 textarea {
   border-radius: 6px !important;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px !important;
+  line-height: 200%;
 }
 
 td span.button button {
@@ -1698,6 +1786,19 @@ table#eventMasterlist tbody tr.tgt {
 
 #body div.list-type div.form-button {
   margin-top: 12px;
+}
+
+#listForm .list-type > span.button a {
+  color: #fff;
+  background: #000 !important;
+  border-radius: 6px;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  border: 1px solid #000 !important;
+  margin-left: 5px !important;
+  margin-top: -18px !important;
+  font-weight: 700;
 }
 
 /* page number */
