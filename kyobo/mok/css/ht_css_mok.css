@@ -14089,7 +14089,7 @@ body:before {
 }
 
 .evt_slider .evt_item span {
-  display: block;
+  display: -webkit-box;
 }
 
 .evt_slider .evt_item .discount_icon {
@@ -14175,6 +14175,7 @@ body:before {
 }
 
 .evt_slider .title {
+  display: -webkit-box;
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
@@ -14186,9 +14187,14 @@ body:before {
 }
 
 .evt_slider .sub {
+  display: -webkit-box;
   margin-top: 4px;
   font-size: 13px;
   line-height: 19px;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .evt_slider .date {
@@ -14737,6 +14743,7 @@ body:before {
 }
 
 .nonswipe .title {
+  display: -webkit-box;
   margin-bottom: 8px;
   font-size: 13px;
   line-height: 19px;

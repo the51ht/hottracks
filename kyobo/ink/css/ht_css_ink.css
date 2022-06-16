@@ -5141,8 +5141,13 @@ input {
 }
 
 .evt_list .item_info .sub {
+  display: -webkit-box;
   margin-top: 4px;
   color: #000;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .evt_list .item_info .date {
