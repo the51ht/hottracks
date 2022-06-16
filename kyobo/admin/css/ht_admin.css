@@ -485,11 +485,11 @@ body {
   border-top: 0;
 }
 
-#head div.gnb_box > ul li:first-child.selected > a {
+#head div.gnb_box > ul li:first-child > a {
   color: #474C98 !important;
 }
 
-#head div.gnb_box > ul li:first-child.selected > a:after {
+#head div.gnb_box > ul li.selected > a:after {
   left: 0;
   width: 100%;
 }
@@ -789,12 +789,13 @@ div.cate-list .disp-side-menu em {
 }
 
 div.cate-list .disp-side-menu a {
+  left: initial !important;
   top: initial !important;
   width: auto !important;
   height: initial !important;
-  padding: 20px 40px 18px 40px;
-  border: 0;
-  border-bottom: 1px solid #eaeaea;
+  padding: 20px 40px 18px 40px !important;
+  border: 0 !important;
+  border-bottom: 1px solid #eaeaea !important;
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
   cursor: pointer;
