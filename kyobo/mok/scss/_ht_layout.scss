@@ -293,15 +293,17 @@ body {
     }
 }
 
-.wrapper .docker_wrapper.scroll_down {
+
+
+.wrapper.ht_ .docker_wrapper {
 	transform: translateY(0%);
 }
-
-.wrapper.scroll_chk {
+.wrapper.ht_.scroll_chk {
     .docker_wrapper {
         transform: translateY(100%);
     }
 }
+
 
 /*
 .wrapper.ht_ header.scroll_down {
@@ -728,9 +730,10 @@ body {
         &:not(.docker_fixed):after {
             position:absolute;left:0;bottom:0;width:100%;padding-bottom:calc(constant(safe-area-inset-bottom));padding-bottom:calc(env(safe-area-inset-bottom));background-color:#fff;content:"";
         }
+        /*
         &.scroll_down {
             transform:translateY(100%);
-        }
+        }*/
         &.docker_fixed {
             padding-bottom:calc(constant(safe-area-inset-bottom));padding-bottom:calc(env(safe-area-inset-bottom));background-color:#fff;
         }

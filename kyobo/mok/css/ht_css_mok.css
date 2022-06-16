@@ -12150,12 +12150,12 @@ body:before {
   top: -1px;
 }
 
-.wrapper .docker_wrapper.scroll_down {
+.wrapper.ht_ .docker_wrapper {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 
-.wrapper.scroll_chk .docker_wrapper {
+.wrapper.ht_.scroll_chk .docker_wrapper {
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
 }
@@ -12843,6 +12843,10 @@ body:before {
   transition: -webkit-transform .23s;
   transition: transform .23s;
   transition: transform .23s, -webkit-transform .23s;
+  /*
+        &.scroll_down {
+            transform:translateY(100%);
+        }*/
 }
 
 .wrapper.ht_ .docker_wrapper .docker_list {
@@ -13014,11 +13018,6 @@ body:before {
   padding-bottom: calc(env(safe-area-inset-bottom));
   background-color: #fff;
   content: "";
-}
-
-.wrapper.ht_ .docker_wrapper.scroll_down {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
 }
 
 .wrapper.ht_ .docker_wrapper.docker_fixed {
