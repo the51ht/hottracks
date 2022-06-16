@@ -133,7 +133,7 @@
                 </li>	
                 <!-- //swiper-slide prod_item 반복-->
 
-                <li class="swiper-slide prod_item">
+                <!--<li class="swiper-slide prod_item">
                     <div class="product_pic">
                         <button class="evt_good_count">
                             <div class="icon"></div>
@@ -207,7 +207,7 @@
                             </div>
                         </a>
                     </div>
-                </li>	
+                </li>-->
             </ul>
             <div class="swiper-pagination out_bottom"></div>
         </div>
@@ -216,33 +216,35 @@
 <script>
 /* 확인용 */
 $(function(){
-     if($('.swiper-container.ctg_top_swiper').length == 0 ) return;
-	 $('.swiper-container.ctg_top_swiper').each(function(i, ele){
-	    var ctgSwiper = new Swiper(this,  {
-	 		observer: true,
-	 		observeParents: true,
-	 		slidesPerView: 'auto',
-	 		centeredSlides: true,
-	 		loop: true,
-	 		loopsSlide: 1,
-	 		spaceBetween: 20,
-	 		autoplay: {
-	 			delay: 5000,
-	 			disableOnInteraction: false,
-	 		},
-	 		speed: 700,
-	 		pagination: {
-	 		el: $(ele).find('.swiper-pagination')[0],
-	 		type: 'fraction',
-                formatFractionCurrent: function (number) {
-                    return KyoboHottracks.mok.setPrependZero(number, 2);
+
+    if($('.swiper-container.ctg_top_swiper .swiper-slide').length > 1) {
+        $('.swiper-container.ctg_top_swiper').each(function(i, ele){
+            var ctgSwiper = new Swiper(this,  {
+                observer: true,
+                observeParents: true,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                loop: true,
+                loopsSlide: 1,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
                 },
-                formatFractionTotal: function (number) {
-                    return KyoboHottracks.mok.setPrependZero(number, 2);
+                speed: 700,
+                pagination: {
+                el: $(ele).find('.swiper-pagination')[0],
+                type: 'fraction',
+                    formatFractionCurrent: function (number) {
+                        return KyoboHottracks.mok.setPrependZero(number, 2);
+                    },
+                    formatFractionTotal: function (number) {
+                        return KyoboHottracks.mok.setPrependZero(number, 2);
+                    }
                 }
-	 		}
-	    });
-	 });
+            });
+        });
+    }
 });
 </script>  
 
