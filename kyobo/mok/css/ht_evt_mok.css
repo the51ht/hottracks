@@ -292,6 +292,7 @@ $imgUrl : "../images/";*/
   position: absolute;
   left: 20px;
   bottom: 40px;
+  width: calc(100% - 40px);
 }
 
 .evt_banner_wrap .txt_box span {
@@ -317,8 +318,15 @@ $imgUrl : "../images/";*/
   display: none;
 }
 
-.evt_banner_wrap .swiper-button-next.evt,
+.evt_banner_wrap .swiper-button-next.evt {
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
 .evt_banner_wrap .swiper-button-prev.evt {
+  left: inherit;
   right: 10px;
   width: 24px;
   height: 24px;
@@ -327,12 +335,14 @@ $imgUrl : "../images/";*/
 
 .evt_banner_wrap .swiper-button-next.evt {
   background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/evt_mdl004_prev.svg") no-repeat center center/30px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .evt_banner_wrap .swiper-button-prev.evt {
   background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/evt_mdl004_prev.svg") no-repeat center center/30px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .evt_banner_wrap .swiper-button-next.swiper-button-disabled, .evt_banner_wrap .swiper-button-prev.swiper-button-disabled {
