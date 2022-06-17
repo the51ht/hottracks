@@ -443,9 +443,9 @@ body {
             }
         }
         .footer_body {
-            padding:30px 20px 30px;background-color:#fff;
+            padding:30px 20px 68px;background-color:#fff;
             .logo_box {
-                display:block;position:relative;
+                display:block;position:relative;margin-bottom: 22px;
                 .logo_link {
                     display:block;height:100%;
                     img {
@@ -478,34 +478,54 @@ body {
                 }
             }
             .footer_menu_box {
-                margin-top:25px;
+                margin-top:13px;
                 .footer_menu_list {
-                    display:flex;display:-webkit-flex;justify-content:flex-start;align-items:flex-start;flex-direction:row;flex-wrap:wrap;
+                    display: inline-block;width: 100%;
                     .footer_menu_item {
-                        width:calc(50% - 10px);
+                        display: inline-block;width: auto;margin-left: 20px;
+                        &:first-child{
+                            margin-left: 0;
+                        }
                         .footer_menu_link {
                             font-size:14px;font-weight:500;line-height:22px;letter-spacing:-.01em;
                         }
                         &.privacy .footer_menu_link {
                             font-weight:700;
                         }
-                        &:nth-child(n+3) {
-                            margin-top:12px;
+                    }
+                    &.menu_list_bottom{
+                        margin-top: 4px;
+                        .footer_menu_item{
+                            margin-left: 13px;position:relative;
+                            &:before{
+                                content: "";display: inline-block;width: 1px; height: 7px; background-color: #d5d5d5;position: absolute;top: 6px;left: -8px;
+                            }
+                            &:first-child{
+                                margin-left: 0;
+                                &:before{
+                                    display: none;
+                                }
+                            }
+                            &.privacy .footer_menu_link{
+                                font-weight: 700;
+                            }
+                            .footer_menu_link{
+                                font-size: 12px;color: #595959;font-weight: 400;
+                            }
                         }
-                        &:nth-child(2n) {
-                            margin-left:20px;
-                        }
-                        
                     }
                 }
             }
             .copyright_box {
-                display:flex;margin-top:23px;align-items:center;justify-content:space-between;
+                margin-top:20px; display: inline-block;width: 100%;
                 .copyright {
-                    color:#767676;font-size:11px;line-height:19px;letter-spacing:-.01em;
+                    color:#767676;font-size:13px;line-height:19px;letter-spacing:-.01em;float: right;margin-top: 8px;
+                    @media (max-width:375px) {
+                        font-size:11px;
+                    }
                 }
                 .sns_share_box {
-                    font-size:0;
+                    font-size:0;float:left;
                     .btn_sns_share {
                         display:inline-block;width:32px;height:32px;background-size:32px 32px;background-position:center;background-repeat:no-repeat;vertical-align:top;
                         &.youtube {
@@ -535,7 +555,7 @@ body {
 
             /* 패밀리사이트 선택박스 .family_site_box */
             .family_site_box {
-                position:relative;margin-top:28px;
+                position:relative;margin-top:21px;
                 .btn_family_site {
                     position:relative;width:100%;height:44px;padding:0 22px;background-color:#fff;border:1px solid #d5d5d5;border-radius:22px;text-align:left;box-sizing:border-box;-webkit-transition:background-color 0.23s, border-color 0.23s;transition:background-color 0.23s, border-color 0.23s;
                     .text {
