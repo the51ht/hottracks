@@ -4191,7 +4191,7 @@ function btnSelectChk(val){
 
 <!-- 베스트 리뷰 / 한달 후 리뷰 : id="popReview" -->
 <div id="popReview" class="dialog_wrap" data-class="dialog_lg">
-	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
 
 	<!-- dialog_header -->
 	<div class="dialog_header">
@@ -4235,6 +4235,8 @@ function btnSelectChk(val){
 							</ul>
 						</div>
 						<!-- //fold_info -->
+
+						<p class="tit_info">1. Lavender </p><!-- 모바일 다르게 UI 상 PC 위치이동 -->
 
 						<p class="tit"><span>하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다. 저녁나절 책을 집어든게 잘못이다.  저녁나절 책을 집어든책한권으로 등의 근육들이 오그라진 느낌에 아직도 하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 하루밤 사이 책한권을 읽은게 처음이듯 하다. 저녁나절 책을 집어든게 잘못이다. 마치 게임에 빠진 아이처럼 잠을 잘수없게 만든다. 결말이 어쩌면 당연해보이는 듯 하여도 헤어나올수 없는 긴박함이 있다.  조만간 영화화되어지지 않을까 예견해 본다. </span></p>
 					</div>
@@ -4305,83 +4307,151 @@ function btnSelectChk(val){
 			</div>
 			<!-- //fold_inner -->
 
-			<!-- review_reply -->
-			<div class="review_reply">
-				<!-- byte_check_wrap -->
-				<div class="byte_check_wrap">
-					<textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요"></textarea>
-					<div class="byte_chack_footer">
-						<div class="byte_check">
-							<span class="count">0</span>
-							<span class="total">1000자</span>
-						</div>
-						<div class="btn_wrap">
-							<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
-							<button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
-						</div>
-					</div>
-				</div>
-				<!-- //byte_check_wrap -->
-
-				<!-- reply_list -->
-				<ul class="reply_list">
-					<!-- reply_list_item : 반복 -->
-					<li class="reply_list_item">
-						<ul class="review_user_info">
-							<li>ab******</li>
-							<li>2021.07.11</li>
-							<li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
-						</ul>
-						<div class="info_text">
-							작년까지만 해도 주식은 커녕 재테크에 관해 아무것도 모르다가 구매했어요! 저도 공부하고 싶어서 구매했어요~ 다같이 완독 도전해봐요! :)
-						</div>
-					</li>
-					<!-- //reply_list_item : 반복 -->
-
-					<li class="reply_list_item">
-						<ul class="review_user_info">
-							<li>ab******</li>
-							<li>2021.07.11</li>
-							<li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
-						</ul>
-						<div class="info_text">
-							작년까지만 해도 주식은 커녕 재테크에 관해 아무것도 모르다가 구매했어요! 저도 공부하고 싶어서 구매했어요~ 다같이 완독 도전해봐요! :)
-						</div>
-					</li>
-					<li class="reply_list_item">
-						<ul class="review_user_info">
-							<li>ab******</li>
-							<li>2021.07.11</li>
-							<li><button data-role="btn-dialog" data-target="#cmtReport">신고</button></li>
-						</ul>
-						<div class="info_text">
-							작년까지만 해도 주식은 커녕 재테크에 관해 아무것도 모르다가 구매했어요! 저도 공부하고 싶어서 구매했어요~ 다같이 완독 도전해봐요! :)
-						</div>
-					</li>
-				</ul>
-				<!-- //reply_list -->
-
-				<!-- byte_check_wrap -->
-				<div class="byte_check_wrap">
-					<textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요"></textarea>
-					<div class="byte_chack_footer">
-						<div class="byte_check">
-							<span class="count">0</span>
-							<span class="total">1000자</span>
-						</div>
-						<div class="btn_wrap">
-							<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
-							<button type="button" class="btn_xs btn_primary"><span class="text">확인</span></button>
+				<!-- review_reply -->
+				<div class="review_reply">
+					<!-- byte_check_wrap -->
+					<div class="byte_check_wrap" style="display:none;">
+						<textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요"></textarea>
+						<div class="byte_chack_footer">
+							<div class="byte_check">
+								<span class="count">0</span>
+								<span class="total">1000자</span>
+							</div>
+							<div class="btn_wrap">
+								<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+								<button type="button" class="btn_xs btn_primary"><span class="text">등록</span></button>
+							</div>
 						</div>
 					</div>
+					<!-- //byte_check_wrap -->
+
+					<!-- reply_list -->
+					<ul class="reply_list">
+						<!-- reply_list_item : 반복 -->
+						<li class="reply_list_item">
+							<!-- reply_list_item_inner -->
+							<div class="reply_list_item_inner">
+								<ul class="review_user_info">
+									<li>ab******</li>
+									<li>2021.07.11</li>
+									<li><button>수정</button></li>
+									<li><button>삭제</button></li>
+								</ul>
+								<div class="info_text">
+									작년까지만 해도 주식은 커녕 재테크에 관해 아무것도 모르다가 구매했어요! 저도 공부하고 싶어서 구매했어요~ 다같이 완독 도전해봐요! :)
+								</div>
+							</div>
+							<!-- //reply_list_item_inner -->
+
+							<!-- byte_check_wrap -->
+							<div class="byte_check_wrap" style="display:none;">
+								<textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요">댓글 수정시 노출 됩니다.
+								</textarea>
+								<div class="byte_chack_footer">
+									<div class="byte_check">
+										<span class="count">0</span>
+										<span class="total">1000자</span>
+									</div>
+									<div class="btn_wrap">
+										<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+										<button type="button" class="btn_xs btn_primary"><span class="text">등록</span></button>
+									</div>
+								</div>
+							</div>
+							<!-- //byte_check_wrap -->	
+						</li>
+						<!-- //reply_list_item : 반복 -->
+
+						<li class="reply_list_item">
+							<!-- reply_list_item_inner -->
+							<div class="reply_list_item_inner" style="display:none;">
+								<ul class="review_user_info">
+									<li>ab******</li>
+									<li>2021.07.11</li>
+									<li><button>수정</button></li>
+									<li><button>삭제</button></li>
+								</ul>
+								<div class="info_text">
+									작년까지만 해도 주식은 커녕 재테크에 관해 아무것도 모르다가 구매했어요! 저도 공부하고 싶어서 구매했어요~ 다같이 완독 도전해봐요! :)
+								</div>
+							</div>
+							<!-- //reply_list_item_inner -->
+
+							<!-- byte_check_wrap -->
+							<div class="byte_check_wrap">
+								<textarea class="form_textarea" title="타이틀 입력" placeholder="답글을 작성해주세요">댓글 수정시 노출 됩니다.
+								</textarea>
+								<div class="byte_chack_footer">
+									<div class="byte_check">
+										<span class="count">0</span>
+										<span class="total">1000자</span>
+									</div>
+									<div class="btn_wrap">
+										<button type="button" class="btn_xs btn_black"><span class="text">취소</span></button>
+										<button type="button" class="btn_xs btn_primary"><span class="text">등록</span></button>
+									</div>
+								</div>
+							</div>
+							<!-- //byte_check_wrap -->	
+						</li>
+
+						<li class="reply_list_item">
+							<!-- reply_list_item_inner -->
+							<div class="reply_list_item_inner">
+								<ul class="review_user_info">
+									<li>ab******</li>
+									<li>2021.07.11</li>
+									<!--<li><button>수정</button></li>
+									<li><button>삭제</button></li>-->
+								</ul>
+								<div class="info_text">
+									기대가 됩니다~
+								</div>
+							</div>
+							<!-- //reply_list_item_inner -->
+						</li>
+						<li class="reply_list_item">
+							<!-- reply_list_item_inner -->
+							<div class="reply_list_item_inner">
+								<ul class="review_user_info">
+									<li>ab******</li>
+									<li>2021.07.11</li>
+									<!--<li><button>수정</button></li>
+									<li><button>삭제</button></li>-->
+								</ul>
+								<div class="info_text">
+									기대가 됩니다~
+								</div>
+							</div>
+							<!-- //reply_list_item_inner -->
+						</li>
+						<li class="reply_list_item">
+							<!-- reply_list_item_inner -->
+							<div class="reply_list_item_inner">
+								<ul class="review_user_info">
+									<li>ab******</li>
+									<li>2021.07.11</li>
+									<!--<li><button>수정</button></li>
+									<li><button>삭제</button></li>-->
+								</ul>
+								<div class="info_text">
+									기대가 됩니다~
+								</div>
+							</div>
+							<!-- //reply_list_item_inner -->
+						</li>
+					</ul>
+					<!-- //reply_list -->
+
+					<!--<p class="fold_btn_a">
+						<button class="btn_expand"><span>답글 더보기</span></button>
+					</p>-->
 				</div>
-				<!-- //byte_check_wrap -->	
-			</div>
-			<!-- //review_reply -->
+				<!-- //review_reply -->
 
 			<!-- btn_area -->
 			<div class="btn_area">
-				<button class="btn_more_view"><span>더보기</span></button>
+				<button class="btn_more_view"><span>답글 더보기</span></button>
 			</div>
 			<!-- //btn_area -->
 		</div>

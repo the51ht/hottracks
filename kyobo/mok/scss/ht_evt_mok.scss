@@ -132,7 +132,7 @@
 	.txt_box {
 		width:100%;height:100%;position:absolute;z-index:3;top:0;left:0;color:#fff;background:linear-gradient( to bottom, rgba(84, 84, 84, 0) 50%, rgba(0,0,0,0.6) 100% );
 		.text_box_in{
-			display:block;position:absolute;left:20px;bottom:40px;
+			display:block;position:absolute;left:20px;bottom:40px;width:calc(100% - 40px);
 		}
 		span{
 			display:block;
@@ -148,15 +148,17 @@
 	.swiper-button-prev.evt:after {
 		display:none;
 	}
-	.swiper-button-next.evt,
+	.swiper-button-next.evt {
+		left:inherit;right:10px;width:24px;height:24px;border-radius:50%;
+	}
 	.swiper-button-prev.evt {
-			right:10px;width:24px;height:24px;border-radius:50%;
+		left:10px;width:24px;height:24px;border-radius:50%;
 	}
 	.swiper-button-next.evt {
 		background:url('#{$imgUrl}guide/evt_mdl004_prev.svg') no-repeat center center/ 30px;transform:rotate(180deg);
 	}
 	.swiper-button-prev.evt {
-		background:url('#{$imgUrl}guide/evt_mdl004_prev.svg') no-repeat center center/ 30px;
+		background:url('#{$imgUrl}guide/evt_mdl004_prev.svg') no-repeat center center/ 30px;transform:rotate(0deg);
 	}
 	.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
 		opacity:1;
@@ -570,10 +572,10 @@
 			font-size:16px;font-weight:700;line-height:22px;margin-bottom:8px;color:#da2128;
 		}
 		.title {
-            font-size:16px;line-height:22px;letter-spacing:-0.16px;margin-bottom:4px;font-weight:500;
+            display:-webkit-box;font-size:16px;line-height:22px;letter-spacing:-0.16px;margin-bottom:4px;font-weight:500;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;white-space:normal;word-break:keep-all;overflow:hidden;
 		}
 		.desc {
-			font-size:13px;line-height:19px;letter-spacing:-0.13px;
+			display:-webkit-box;font-size:13px;line-height:19px;letter-spacing:-0.13px;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;white-space:normal;word-break:keep-all;overflow:hidden;
 		}
 	}
 	.btn_area {
