@@ -222,23 +222,26 @@ KyoboBookPub.ink = (function () {
 	/**
 	 * 플라이 배너, 탑버튼 컨트롤
 	 */
-	function setFloating() {
+	 function setFloating() {
 		if(_flyMenuEl.length <= 0 && _floatingEl.length <= 0){return ;}
 
 		var headerFixedOffset = 0;
-		if(!$('.wrapper').hasClass('member_login') && !$('.wrapper').hasClass('member_info')) {
+		if(!$('.wrapper').hasClass('member_login') && !$('.wrapper').hasClass('member_info') && !$('.wrapper').hasClass('member_kiosk') && !$('.wrapper').hasClass('member_kiosk_main')) {
 			headerFixedOffset = Math.round($('.gnb_wrap').offset().top);
 
+			if (_headerWrapper.hasClass('simple_header')) {
+				headerFixedOffset = 80;
+			}
 			// 윙배너 sps set
 			_flyMenuEl.attr('data-sps-offset', headerFixedOffset);
 		}
 
-		setFloatingScrollPosX();
-		$(window).off('scroll.uiFloating resize.uiFloating', setFloatingScrollPosX).on('scroll.uiFloating resize.uiFloating', setFloatingScrollPosX);
+		setFloatingScrollPos();
+		$(window).off('scroll.uiFloating resize.uiFloating', setFloatingScrollPos).on('scroll.uiFloating resize.uiFloating', setFloatingScrollPos);
 
 		setFlyBannerEvtSwiper();
 
-		function setFloatingScrollPosX() {
+		function setFloatingScrollPos() {
 			if (_scrollLeft < (_bodyMinWidth - _deviceWidth)) {
 				_floatingEl.css('transform', 'translateX(' + ((_bodyMinWidth - _deviceWidth) - _scrollLeft) + 'px)');
 
@@ -249,6 +252,20 @@ KyoboBookPub.ink = (function () {
 				}
 			} else {
 				_flyMenuEl.add(_floatingEl).css('transform', '');
+			}
+
+			if(_headerWrapper.hasClass('sps')){
+				if(_headerWrapper.hasClass('sps-blw')){
+					_btnGoTop.addClass('active');
+				}else{
+					_btnGoTop.removeClass('active');
+				}
+			}else{
+				if(_headerWrapper.height() < _scrollTop){
+					_btnGoTop.addClass('active');
+				}else{
+					_btnGoTop.removeClass('active');
+				}
 			}
 		}
 
