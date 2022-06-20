@@ -534,6 +534,9 @@
     }
     .tit {
         font-size:18px;line-height:28px;letter-spacing:-0.18px;text-align:left;margin-bottom:12px;
+		&:empty {
+			margin:0;
+		}
     }
 	.btn_more_div {
 		margin-bottom:10px;
@@ -543,6 +546,9 @@
 	padding:20px;position:sticky;top:60px;left:0;z-index:7;background-color:#fff;
 	&.anchor{
 		top:60px;
+	}
+	&:empty {
+		padding:0;
 	}
 }
 .common_select {

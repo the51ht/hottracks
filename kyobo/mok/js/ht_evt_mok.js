@@ -173,6 +173,12 @@ $(function(){
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+
+            $('.wrapper').addClass('scroll_not');
+
+            setTimeout(function(){
+                $('.wrapper').removeClass('scroll_chk').removeClass('scroll_not');
+            }, 500);
         });
     });
 

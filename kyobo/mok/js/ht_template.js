@@ -1213,17 +1213,41 @@ $(function(){
     });
     /*================================= HTR-M-EVT-VIEW-015, 016.html ==============================*/  
     //스티키 샐렉트 메뉴 선택 시 해당 위치로 이동
+    
     $(document).on('change', '.sticky_selec .common_select', function(){
         var thisTarget = $(this).children('option:selected').data('target') ;
         var fixedTopHeight = 150; 
         if(!thisTarget || $(thisTarget).length == 0) return;
         var Top = $(thisTarget).offset().top - fixedTopHeight;
-        $('html, body').animate({
-                  scrollTop: Top
-              }, 200);
-    }); 
 
-})
+
+        $('html, body').animate({scrollTop: Top}, 200);
+        $('.wrapper').addClass('scroll_not');
+
+        setTimeout(function(){
+            $('.wrapper').removeClass('scroll_chk').removeClass('scroll_not');
+        }, 250);
+        
+    });
+});
+
+function setStickyAnchor() {
+    if(!$('.sticky_selec .common_select').length) return;
+    $stickyTabLink =  $('.sticky_selec .common_select');
+
+    $(window).on('scroll', function() {
+        $('.module_wrap .mdl_selec_list_wrap').each(function (index, element) {
+            if($(window).scrollTop() >= $(this).offset().top - 151) {
+                $('.sticky_selec .common_select option').prop('selected', false);
+                $('.sticky_selec .common_select option').eq(index).prop('selected', true);
+            } 
+        });
+    });
+}
+
+$(function () {
+    setStickyAnchor();
+});
 
 
 
