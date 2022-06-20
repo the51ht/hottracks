@@ -2373,6 +2373,7 @@ body {
   text-align: center;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  outline: none;
 }
 
 .tab_ty a span {
@@ -2400,7 +2401,7 @@ body {
   margin-left: 0;
 }
 
-.tab_ty a:hover:before {
+.tab_ty a:hover:before, .tab_ty a:focus:before {
   background-color: #f4f4f4;
 }
 
@@ -2484,6 +2485,7 @@ body {
   width: 50px;
   height: 50px;
   margin-top: -25px;
+  outline: none;
 }
 
 .tab_swiper .swiper_control .swiper-button-prev:before,
@@ -2508,8 +2510,9 @@ body {
   display: none;
 }
 
-.tab_swiper .swiper_control .swiper-button-prev:hover:after,
-.tab_swiper .swiper_control .swiper-button-next:hover:after {
+.tab_swiper .swiper_control .swiper-button-prev:hover:after, .tab_swiper .swiper_control .swiper-button-prev:focus:after,
+.tab_swiper .swiper_control .swiper-button-next:hover:after,
+.tab_swiper .swiper_control .swiper-button-next:focus:after {
   background: #000 url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/guide/btn_banner_pagn_w.svg") center no-repeat;
 }
 
@@ -2558,13 +2561,14 @@ body {
   line-height: 18px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  outline: none;
 }
 
 .tab_txt a:hover {
   color: #333;
 }
 
-.tab_txt a.on {
+.tab_txt a.on, .tab_txt a:focus {
   color: #000;
   font-weight: 700;
 }
@@ -2584,7 +2588,7 @@ body {
   line-height: 36px;
 }
 
-.tab_txt.ty02 a.on {
+.tab_txt.ty02 a.on, .tab_txt.ty02 a:focus {
   color: #000;
 }
 
@@ -2714,6 +2718,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 23px;
+  outline: none;
 }
 
 .tab_box a:after {
@@ -2733,12 +2738,12 @@ body {
   width: 100%;
 }
 
-.tab_box a.on {
+.tab_box a.on, .tab_box a:focus {
   color: #000;
   font-weight: 700;
 }
 
-.tab_box a.on:after {
+.tab_box a.on:after, .tab_box a:focus:after {
   left: 0;
   width: 100%;
 }
