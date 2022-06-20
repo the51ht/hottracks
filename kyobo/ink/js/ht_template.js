@@ -29,6 +29,17 @@ $(function(){
 });
 
 
+/* 본문 바로가기 */
+$(function(){
+    if(!$('.ht_contents_wrap').length) return;
+    if($('.ht_sub_area').length){
+        $('.ht_sub_area').attr('id', 'contents');
+    }else{
+        $('.ht_contents_wrap').attr('id', 'contents');
+    }
+});
+
+
 
 
 /***** LNB *****/
