@@ -1,39 +1,13 @@
 
 
-/*
-
-1. <main class="cont_wrap"></main>
-
-
-2. <main id="containerWrapper" class="container_wrapper"></main>
-
-
-3. <main id="containerWrapper" class="container_wrapper">
-<section class="contents_wrap">
-
-4. evt_list_header
-    <main id="containerWrapper" class="container_wrapper">
-*/
-
-
-/* 본문 바로가기 
+/* 본문 바로가기 */
 $(function(){
-    //if(!$('.ht_contents_wrap').length) return;
-    if($('.cont_wrap').length){
-        $('.cont_wrap').attr('id', 'contents');
-    }else if($('.wel_main_wrap').length){
-        $('.wel_main_wrap').attr('id', 'contents');
-
-
-    }else if($('.contents_wrap').length){
-        $('.contents_wrap').attr('id', 'contents');
-    }else if($('.evt_list_header').length){
-        $('.evt_list_header').attr('id', 'contents');
-    }else {
-      
+    if($('.main_menu_wrap').length){
+        $('.main_menu_wrap').after('<div id="contents"></div>');
+    }else{
+        $('header').after('<div id="contents"></div>');
     }
 });
-*/
 
 
 
