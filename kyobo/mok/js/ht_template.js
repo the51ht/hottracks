@@ -9,9 +9,6 @@ $(function(){
     }else{
         $('header').after('<div id="contents"></div>');
     }
-
-
-    
 });
 
 
