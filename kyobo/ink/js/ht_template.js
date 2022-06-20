@@ -29,6 +29,14 @@ $(function(){
 });
 
 
+
+
+
+
+
+
+
+
 /* 본문 바로가기 */
 $(function(){
     if(!$('.ht_contents_wrap').length) return;
@@ -38,6 +46,21 @@ $(function(){
         $('.ht_contents_wrap').attr('id', 'contents');
     }
 });
+$(function(){
+    $('.skip_nav_wrap a').click(function(){    
+        if($('.wel_main_warp').length){
+            $('html, body').stop().animate({scrollTop:$('#contents').offset().top - 70}, 100 );
+        } else{
+            $('html, body').stop().animate({scrollTop:$('#contents').offset().top - 120}, 100 );
+        }
+    });
+});
+
+
+
+
+
+
 
 
 
@@ -472,7 +495,6 @@ $(function(){
         ht_CurDetailJs.getCrtProdList($('.tab_swiper .swiper-wrapper .swiper-slide .on'));
         return false;
     });
-    
 });
 
 
