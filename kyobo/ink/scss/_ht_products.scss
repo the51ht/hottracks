@@ -125,14 +125,14 @@
 
 /* 좋아요 :.evt_good_count */
 .evt_good_count {
-	position:absolute;right:12px;bottom:12px;height:27px;padding:0 12px;background-color:rgba(0,0,0,0.5);border-radius:14px;color:#fff;font-size:12px;font-weight:400;line-height:28px;overflow:hidden;z-index:4;cursor:pointer;
+	position:absolute;right:12px;bottom:12px;height:27px;padding:0 5px;background-color:rgba(0,0,0,0.5);border-radius:14px;color:#fff;font-size:12px;font-weight:400;line-height:28px;overflow:hidden;z-index:4;cursor:pointer;
 	.icon {
-		float:left;width:13px;height:14px;margin-top:6px;background:url('#{$imgUrl}guide/ico_prod_like_icon.svg') center /13px no-repeat
+		position:relative;left:2px;float:left;width:13px;height:14px;margin:6px 0 0 0;background:url('#{$imgUrl}guide/ico_prod_like_icon.svg') center /13px no-repeat
 	}
 	.txt {
-		float:left;min-height:28px;margin-left:4px;
+		float:left;min-height:28px;margin:0 6px 0 8px;
 		&:empty {
-			margin-left:0;
+			margin:0 4px 0 0;
 		}
 	}
 	&.active {
