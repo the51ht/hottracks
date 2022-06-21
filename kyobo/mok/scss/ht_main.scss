@@ -352,16 +352,16 @@
 .wel_ad_banner {
     padding:0;background:#fff;
     li {
-        border-top:1px solid #e2e2e2;
+        position:relative;border-top:1px solid #e2e2e2;
         &:first-child {
             border-top:0;
         }
     }
     a {
-        display:block;
+        display:block;position:relative;width:100%;height:0;padding-top:24%;
     }
     img {
-        width:100%;
+        position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;
     }
 }
 
@@ -1070,6 +1070,16 @@
     }
     .mc_tit {
         color:#fff;font-size:30px;line-height:39px;
+    }
+    .tab_ty {
+        li:first-child {
+            a {
+                position:relative;padding-left:42px;
+                &:after {
+                    position:absolute;left:6px;top:50%;width:30px;height:30px;background:url('#{$imgUrl}/main/ico_tab_ty11.png') center/100% no-repeat;content:"";transform:translateY(-50%);
+                }
+            }
+        }
     }
 }
 
