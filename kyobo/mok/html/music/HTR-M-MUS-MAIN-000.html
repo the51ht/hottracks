@@ -617,20 +617,7 @@ $(function(){
 				</div>
 				<!-- //mc_cont : 주문 내역 -->
 
-<script>
-var i = 0;
-setInterval(function(){
-if(i>4){
-	i = 0;
-	$(".mus_mc_chart_cont .li.active").removeClass("active");
-	$(".mus_mc_chart_cont .li").eq(i).addClass("active");
-}else{
-	$(".mus_mc_chart_cont .li.active").removeClass("active");
-	$(".mus_mc_chart_cont .li").eq(i).addClass("active");
-	i++;
-}
-}, 4000);
-</script>
+
 
 				<!-- mc_cont : 실시간 차트 - .mus_mc_chart -->
 				<div class="mc_cont mc_dep mus_mc_chart">
@@ -789,6 +776,21 @@ if(i>4){
 					<!-- //mus_mc_chart_cont -->
 				</div>
 				<!-- //mc_cont : 실시간 차트 -->
+
+<script>
+var i = 0;
+setInterval(function(){
+if(i>4){
+	i = 0;
+	$(".mus_mc_chart_cont .li.active").removeClass("active");
+	$(".mus_mc_chart_cont .li").eq(i).addClass("active");
+}else{
+	$(".mus_mc_chart_cont .li.active").removeClass("active");
+	$(".mus_mc_chart_cont .li").eq(i).addClass("active");
+	i++;
+}
+}, 4000);
+</script>
 
 
 
