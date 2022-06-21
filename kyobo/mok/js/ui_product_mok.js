@@ -178,41 +178,60 @@ $(function(){
 
 	/*이미지 ZOOM 기능*/ 
 
-	// $(document).on('click', '.product_area .btn_expand', function(){ 
-	// 	if($(this).hasClass('active')) { //상품 펼치기 버튼 클릭한 이후 줌 기능 연결 
-	// 		imgZoom();
-	// 	} else { //상품 닫기 버튼 클릭한 이후 줌 기능 해제 	
-	// 		removeZoom(); 
-	// 	}
-	// });
-	
-	// function imgZoom(){ 
-	// 	var zoomTargets = document.querySelectorAll('.zoomable');
-	// 	if(!zoomTargets) return;
+	$(document).on('click', '.product_area .btn_expand', function(){ 
+	 	if($(this).hasClass('active')) { //상품 펼치기 버튼 클릭한 이후 줌 기능 연결 
+	 		imgZoom();
+	 	} else { //상품 닫기 버튼 클릭한 이후 줌 기능 해제 	
+	 		removeZoom(); 
+	 	}
+	});
 
-	// 	for(var zt=0; zt < zoomTargets.length; zt++) {
-	// 		window.pz = panzoom(zoomTargets[zt], { 
-	// 			minZoom: 1,
-	// 			maxZoom:5,
-	// 			bounds: true,
-	// 			boundsPadding:1,
-	// 		});
-	// 	}
-	// };
+	 function imgZoom(){ 
+		
+		
+	 	var zoomTargets = document.querySelectorAll('.zoomable');
+	 	if(!zoomTargets) return;
+
+	 	for(var zt=0; zt < zoomTargets.length; zt++) {
+	 		window.pz = panzoom(zoomTargets[zt], { 
+	 			minZoom: 1,
+	 			maxZoom:5,
+	 			bounds: true,
+	 			boundsPadding:1,
+				 onTouch: function(e) {
+					// `e` - is current touch event.
+				
+					return false; // tells the library to not preventDefault.
+				  }
+	 		});
+	 	}
+	 };
    
-	// function removeZoom () {
-	// 	var zoomTargets = document.querySelectorAll('.zoomable');
-	// 	if(!zoomTargets) return;
+	 function removeZoom () {
+		window.pz.pause(); 
+		/*
+		var zoomTargets = document.querySelectorAll('.zoomable');
+		if(!zoomTargets) return;
 
-	// 	for(var zt=0; zt < zoomTargets.length; zt++) {
-	// 		window.pz = panzoom(zoomTargets[zt], { 
-	// 			minZoom: 0,
-	// 			maxZoom:0,
-	// 			bounds: true,
-	// 			boundsPadding:1,
-	// 		});
-	// 	}
-	// }
+		console.log('ddd')
+
+		for(var zt=0; zt < zoomTargets.length; zt++) {
+			window.pz = panzoom(zoomTargets[zt], { 
+				beforeWheel: function(e) {
+					return false; // tells the library to not preventDefault.
+				},
+				beforeMouseDown: function(e) {
+					return false; // tells the library to not preventDefault.
+				},
+				onTouch: function(e) {
+				   // `e` - is current touch event.
+			   
+				   return false; // tells the library to not preventDefault.
+				 }
+			});
+		}*/
+
+	 }
 	
 	//Q & A 펼치기 닫기
 	$(document).on('click', '.all_qa_wrap .btn_expand', function(){
