@@ -530,6 +530,12 @@
             position:absolute;left:0;top:0;width:100%;height:100%;border-radius:8px;
         }
     }
+    &:empty{
+        display: none;
+        & + .divide_hr{
+            display: none;
+        }
+    }
 }
 .coupon_swiper {
     padding:40px 0 0 20px;
