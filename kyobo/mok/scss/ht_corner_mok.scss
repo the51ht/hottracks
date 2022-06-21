@@ -245,7 +245,7 @@
 	padding:20px;background-color:#f7f7f7;display:none;
 }
 .ctg_subMenu {
-	display:flex;flex-flow:row wrap;justify-content:space-between;height:91px;overflow:hidden;
+	display:flex;flex-flow:row wrap;justify-content:space-between;height:auto;overflow:hidden;
     a {
 		display:block;width:30%;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:16px;font-size:12px;font-weight:normal;line-height:19px;letter-spacing:-0.13px;color:#595959;cursor:pointer;
 		@for $mn from 1 through 3{
@@ -461,18 +461,18 @@
         clear:both;display:block;content:"";
     }
     .tit_card_head {
-        position:relative;margin-bottom:20px;
+        position:relative;margin-bottom:16px;
         .brand_thumbnail {
             position:absolute;width:60px;height:60px;bottom:0;right:0;z-index:3;border:2px solid #000;border-radius:50%;box-sizing:border-box;overflow:hidden;
             img {
-                position:absolute;left:50%;top:50%;width:100%;height:auto;transform:translate(-50%,-50%);
+                position:absolute;left:50%;top:50%;width:100%;object-fit: cover;height: 100%;transform:translate(-50%,-50%);
             }
         }
         .brand {
-            font-size:12px;line-height:20px;
+            font-size:12px;line-height:20px;font-weight: 700;
         }
         .logo {
-            line-height:36px;font-family:'Gmarket Sans';font-weight:900;font-size:36px;color:#fff;text-shadow:-1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black, 5px 4px 1px #000;
+            line-height:36px;font-family:'Gmarket Sans';font-weight:900;font-size:36px;color:#fff;text-shadow:-1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black, 5px 4px 1px #000;margin-top: 9px;
         }
         .brand_thumbnail ~ .brand, 
         .brand_thumbnail ~ .logo {
@@ -480,12 +480,12 @@
         }
     }
     .tit_card_body {
-        margin-bottom:20px;
+        margin-bottom:25px;
         .tit_desc {
-            margin-bottom:8px;line-height:23px;font-weight:400;
+            margin-bottom:4px;line-height:23px;font-weight:400;font-size: 13px;
         }
         .desc {
-            word-break:keep-all;line-height:20px;font-size:13px;color:rgba(255, 255, 255, 0.6);
+            word-break:keep-all;line-height:20px;font-size:13px;color:#fff;
         }
     }
     .tit_card_foot {
@@ -499,7 +499,7 @@
 				float:left;width:12px;height:14px;margin-top:-1px;background:url('#{$imgUrl}guide/ico_prod_like_icon.svg') no-repeat center center /12px;
 			}
 			.txt{
-				float:left;margin-left:3px;line-height:14px;
+				float:left;margin-left:3px;line-height:14px;font-size: 13px;
                 &:empty {
                     margin-left:0;;
                 }
@@ -1849,7 +1849,7 @@
 
 /* liv_timeline */
 .liv_timeline {
-    position:relative;margin:57px 20px 32px 20px;
+    position:relative;margin:47px 0px 32px 0px;
     &:before {
         position:absolute;left:16px;top:10px;width:1px;height:calc(100% - 70px);border-left:1px dashed #000;content:"";
     }
