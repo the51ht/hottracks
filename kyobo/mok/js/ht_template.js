@@ -6,10 +6,22 @@ $(function(){
         $('.main_menu_wrap').after('<div id="contents"></div>');
     }else if($('.ctg_top_wrap').length){
         $('.ctg_top_wrap').attr('id', 'contents');
+    }else if($('.prod_detail_header').length){
+        $('.contents_wrap').attr('id', 'contents');
     }else{
         $('header').after('<div id="contents"></div>');
     }
 });
+$(function(){
+    $('.skip_nav_wrap a').click(function(){    
+        if($('.header_main').length){
+            $('html, body').stop().animate({scrollTop:$('#contents').offset().top - 55}, 100 );
+        } else{
+            $('html, body').stop().animate({scrollTop:$('#contents').offset().top }, 100 );
+        }
+    });
+});
+
 
 
 
