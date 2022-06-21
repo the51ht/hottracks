@@ -198,6 +198,7 @@ $(function(){
 	 			maxZoom:5,
 	 			bounds: true,
 	 			boundsPadding:1,
+				 smoothScroll: false,
 				 onTouch: function(e) {
 					// `e` - is current touch event.
 				
@@ -208,6 +209,7 @@ $(function(){
 	 };
    
 	 function removeZoom () {
+		$('.zoomable').css('transform','none')
 		window.pz.pause(); 
 		/*
 		var zoomTargets = document.querySelectorAll('.zoomable');
