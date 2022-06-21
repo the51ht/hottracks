@@ -28,8 +28,9 @@
                 &.img_pop{
                     position:relative;padding:0;
                     .evt_pop_img {
+                        position:relative;width:100%;height:0;padding-top:144%;
                         img {
-                            width:100%;
+                            position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;
                         }
                     }
                     .evt_pop_content {
@@ -59,12 +60,20 @@
             &.dialog_wrap_full {
                 .img_pop {
                     .evt_pop_content {
-                        top:125px;
+                        top:60px;
                     }
                 }
             }
-            &.dialog_wrap_full {
-                margin:0 -20px;
+            @media  (max-width: 374px) {
+                &.dialog_wrap_full {
+                    margin:0 -20px;
+                }
+            }
+           
+            .wel_ad_banner {
+                a {
+                    padding-top:21.3%;                    
+                }
             }
             .dialog_contents.push_pop {
                 .dialog_contents {

@@ -896,6 +896,19 @@
     .tab_ty a:before {
         border-color:#000;
     }
+
+    .tab_ty {
+        li:first-child {
+            a {
+                position:relative;padding-left:50px;
+                &:after {
+                    position:absolute;left:20px;top:50%;width:24px;height:24px;background:url('#{$imgUrl}/main/ico_tab_ty11.png') center/100% no-repeat;content:"";transform:translateY(-50%);
+                }
+            }
+        }
+    }
+
+    
     .tab_swiper {
         margin-bottom:20px;
     }

@@ -24,8 +24,21 @@ $imgUrl : "../images/";*/
   padding: 0;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .evt_pop_img img {
+.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .evt_pop_img {
+  position: relative;
   width: 100%;
+  height: 0;
+  padding-top: 144%;
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .evt_pop_img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .evt_pop_content {
@@ -71,11 +84,17 @@ $imgUrl : "../images/";*/
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel.dialog_wrap_full .img_pop .evt_pop_content {
-  top: 125px;
+  top: 60px;
 }
 
-.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel.dialog_wrap_full {
-  margin: 0 -20px;
+@media (max-width: 374px) {
+  .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel.dialog_wrap_full {
+    margin: 0 -20px;
+  }
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .wel_ad_banner a {
+  padding-top: 21.3%;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.push_pop .dialog_contents {
