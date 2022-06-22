@@ -59,39 +59,15 @@ $(function(){
         $('.live_pop_wrap').remove();
     });
 });
-
-
-
-
-
-const goodsInfoZoom = function() {
-  const $imgWrap = $('div.zoom_area .zoomable');
-
-  $imgWrap.panzoom({
-    minScale: 1,
-    maxScale: 2,
-    contain: "invert",
-    increment: .35,
-    transition: true,
-    panOnlyWhenZoomed: true,
-    disablePan: true,
-    animate: true,
-    duration: 200,
-    animate_easing: "linear"
-  });
-};
 </script>
 <style>
-    .contents_detail_view *{
-        touch-action:none;
+    .contents_detail_view .zoom_area {
+        touch-action:manipulation !important;
     }
-    .zoom_area {
-    touch-action:manipulation;
+    .contents_detail_view .zoomable {
+        touch-action:manipulation !important;
     }
-    .zoomable {
-        touch-action:manipulation;
-    }
-    </style>
+</style>
 </head>
 
 <body>
