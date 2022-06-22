@@ -35,17 +35,22 @@
 * {
     touch-action:manipulation;
 }
-
+.w {position:relative;max-width:750px;margin:0 auto; overflow:hidden;}
+.s2 {position: relative;overflow:hidden;  }
+.a1 img {width:100%}
 </style>
 </head>
 
 <body>
+<div class="w">
     <p>ㅇㅇㅇ</p>
     <p>ㅇㅇㅇ</p>
     <p>ㅇㅇㅇ</p>
     <p>ㅇㅇㅇ</p>
-    <div class="a1" id="scene">
-        <img src="https://img.29cm.co.kr/next-product/2022/06/21/61b438a7ad86484c846d8993e4999373_20220621104505.jpg" alt="" >
+    <div class="s2">
+        <div class="a1" id="scene">
+            <img src="https://img.29cm.co.kr/next-product/2022/06/21/61b438a7ad86484c846d8993e4999373_20220621104505.jpg" alt="" >
+        </div>
     </div>
     <p>ㅇㅇㅇ</p>
     <p>ㅇㅇㅇ</p>
@@ -55,12 +60,18 @@
     <p>ㅇㅇㅇ</p>
     <p>ㅇㅇㅇ</p>
     <p>ㅇㅇㅇ</p>
+</div>
 <script>
 // grab the DOM SVG element that you want to be draggable/zoomable:
 var element = document.getElementById('scene')
 
 // and forward it it to panzoom.
-panzoom(element)
+panzoom(element, {
+    maxZoom:5,
+    minZoom:1,
+    pinchSpeed: 2, // zoom two times faster than the distance between fingers,
+    smoothScroll:true,
+});
 </script>
 </body>
 </html>
