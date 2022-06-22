@@ -1674,16 +1674,20 @@ button.btn_md_second {
   padding-top: 8px;
 }
 
-.product_area .zoom_area {
+.product_area .zoom_area_wrap {
+  position: relative;
+  max-width: 750px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
-.product_area .zoom_area > img {
-  width: 100%;
+.product_area .zoom_area_wrap .zoom_area_content {
   position: relative;
-  left: 0;
-  top: 0;
-  right: 0;
+  overflow: hidden;
+}
+
+.product_area .zoom_area_wrap .zoom_area_content .zoom_area img {
+  width: 100%;
 }
 
 .product_area .info_wrap .list_info {

@@ -821,12 +821,15 @@ button.btn_md_second {
             }
         }
     }
-    .zoom_area {
-        overflow:hidden;
-       & > img {
-            width:100%;position:relative;left:0;top:0;right:0;
+    .zoom_area_wrap {
+        position:relative;max-width:750px;margin:0 auto; overflow:hidden;
+        .zoom_area_content {
+            position: relative;overflow:hidden;  
+            .zoom_area img {width:100%}
         }
     }
+    
+    
     .info_wrap {
         .list_info {
             display:flex;flex-wrap:wrap;
