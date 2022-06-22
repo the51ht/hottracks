@@ -186,8 +186,10 @@ $(function(){
 	 	}
 	});
 
+
+
 	 function imgZoom(){ 
-		
+		/*
 		
 	 	var zoomTargets = document.querySelectorAll('.zoomable');
 	 	if(!zoomTargets) return;
@@ -205,7 +207,10 @@ $(function(){
 					return false; // tells the library to not preventDefault.
 				  }
 	 		});
-	 	}
+	 	}*/
+
+		 $imgWrap = $('.zoomable');
+
 	 };
    
 	 function removeZoom () {
