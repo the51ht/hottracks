@@ -51,6 +51,19 @@
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
 
 <script src="../../js/ui_product_mok.js"></script>
+
+
+
+<script src="./panzoom.js"></script>
+<style>
+    body {touch-action: pan-y;}
+    .zoom_area_wrap {position:relative;max-width:750px;margin:0 auto; overflow:hidden;}
+    .zoom_area_content {position: relative;overflow:hidden;  }
+    .zoom_area img {width:100%}
+</style>
+
+
+
 <script>
 $(function(){
     //팝업 닫기 기능
@@ -404,10 +417,6 @@ $(function(){
                                         이미지를 <strong>확대</strong>하여 볼 수 있습니다.
                                     </p>
                                 </div>
-<style>
-   body {touch-action: pan-y;} 
-</style>                                
-
                                 <div class="auto_overflow_wrap overflow type_text">
                                     <div class="auto_overflow_contents" style="max-height: 500px;">
                                         <div class="auto_overflow_inner">
@@ -415,6 +424,15 @@ $(function(){
                                             <div class="zoom_area">
                                                 <img src="../../images/temp/@product_detail.png" class="zoomable">
                                             </div>
+
+                                            <div class="zoom_area_wrap">
+                                                <div class="zoom_area_content">
+                                                    <div class="zoom_area" id="zoomArea">
+                                                        <img src="https://img.29cm.co.kr/next-product/2022/06/21/61b438a7ad86484c846d8993e4999373_20220621104505.jpg" alt="" >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
                                             <div class="product_detailinfo_area">
                                                 <div class="info_wrap">
                                                     <dl class="list_info">
@@ -2561,5 +2579,25 @@ $(function(){
     </div>
 </div>
 <!-- //상품 문의하기-->
+
+<script>
+    // 22.06.22 핀치줌
+    // grab the DOM SVG element that you want to be draggable/zoomable:
+    var element = document.getElementById('zoomArea');
+    // and forward it it to panzoom.
+    panzoom(element, {
+        maxZoom:4,
+        minZoom:1,
+        pinchSpeed:4,
+        zoomSpeed:0,
+        smoothScroll:true,
+        bounds: true,
+        boundsPadding:1,
+        zoomDoubleClickSpeed: 1, 
+        onTouch: function(e) {
+            return false;
+        }
+    });
+</script>
 </body>
 </html>
