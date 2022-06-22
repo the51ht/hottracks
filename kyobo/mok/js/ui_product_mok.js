@@ -189,10 +189,8 @@ $(function(){
 
 
 	 function imgZoom(){ 
-		// grab the DOM SVG element that you want to be draggable/zoomable:
 		var element = document.getElementById('zoomArea');
-		// and forward it it to panzoom.
-		panzoom(element, {
+		instance = panzoom(element, { 
 			maxZoom:4,
 			minZoom:1,
 			pinchSpeed:4,
@@ -208,16 +206,8 @@ $(function(){
 	 };
    
 	 function removeZoom () {
-		var element = document.getElementById('zoomArea');
 		$('.zoom_area').css('transform','none')
-
-		panzoom(element, {
-			disablePan: false,
-			disableZoom: false,
-			onTouch: function(e) {
-				return false;
-			}
-		});
+		instance.pause();
 	 }
 	
 	//Q & A 펼치기 닫기
