@@ -80,27 +80,40 @@
 		<!-- 1depth 메뉴 -->
 		<div class="ctg_topMenu depth1">
 			<div class="inner_wrap">
-				<a href="#" class="active">디자인 문구</a>
+				<a href="#" >디자인 문구</a>
 				<a href="#">필기구</a>
 				<a href="#">오피스</a>
 				<a href="#">디지털/자동차</a>
 				<a href="#">가전</a>
 				<a href="#">유아동 용품</a>
-				<a href="#">오피스</a>
+				<a href="#"class="active">오피스</a>
 			</div>
 		</div> 
 		<!-- //1depth 메뉴 -->
 
+<script>
+function cateNave(){
+    var $target = $('.ctg_topMenu');
+    $target.each(function (index, element) {
+        var $parent = $(this).find('.inner_wrap');
+		$parent.stop().animate({scrollLeft:$parent.find('.active').offset().left }, 0);
+    });
+}
+$(function(){
+	//cateNave();
+});
+</script>
+
 		<!-- 2depth 메뉴 -->
 		<div class="ctg_topMenu depth2">
 			<div class="inner_wrap">
-				<a href="#" class="active depth3_none">전체</a>
+				<a href="#" class="depth3_none">전체</a>
 				<a href="#">다이어리/스케줄러</a>
 				<a href="#">캘린더/만년</a>
 				<a href="#">디지털/자동차</a>
 				<a href="#">노트/메모</a>
 				<a href="#">포토앨범</a>
-				<a href="#">달력/포스터</a>
+				<a href="#"class="active">달력/포스터</a>
 			</div>
 		</div> 
 		<!-- //2depth 메뉴-->
