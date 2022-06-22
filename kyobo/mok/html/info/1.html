@@ -71,7 +71,8 @@ var element = document.getElementById('scene')
 panzoom(element, {
     maxZoom:4,
     minZoom:1,
-    pinchSpeed:3,
+    pinchSpeed:4,
+    zoomSpeed:0,
     smoothScroll:true,
     bounds: true,
 	boundsPadding:1,
@@ -79,6 +80,7 @@ panzoom(element, {
     onTouch: function(e) {
         return false;
     }
+
 });
 </script>
 </body>
