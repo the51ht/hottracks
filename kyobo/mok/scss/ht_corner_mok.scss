@@ -245,14 +245,17 @@
 	padding:17px 20px 17px;background-color:#f7f7f7;display:none;
 }
 .ctg_subMenu {
-	display:flex;flex-flow:row wrap;justify-content:space-between;height:auto;overflow:hidden;max-height: 91px;
+	display:flex;flex-flow:row wrap;justify-content:flex-start;height:auto;overflow:hidden;max-height: 91px;
     a {
-		display:block;width:30%;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:16px;font-size:12px;font-weight:normal;line-height:19px;letter-spacing:-0.13px;color:#595959;cursor:pointer;
+		display:block;width:30%;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:16px;margin-left: 16px;font-size:12px;font-weight:normal;line-height:19px;letter-spacing:-0.13px;color:#595959;cursor:pointer;
 		@for $mn from 1 through 3{
 			&:nth-of-type(#{$mn}){
 			    margin-top:0;
 			}
 		}
+        &:nth-child(3n + 1){
+            margin-left: 0;
+        }
         &.active{
             font-weight:700;
         }
