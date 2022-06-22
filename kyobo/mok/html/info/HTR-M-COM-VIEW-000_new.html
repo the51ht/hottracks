@@ -51,7 +51,6 @@
 <!-- //ht_ Hottracks UI JavaScript : 공통작업 --><!-- 22.02 -->
 
 <script src="../../js/ui_product_mok.js"></script>
-<script src="./panzoom.js"></script>
 
 
 
@@ -2566,25 +2565,5 @@ $(function(){
     </div>
 </div>
 <!-- //상품 문의하기-->
-
-<script>
-    // 22.06.22 핀치줌
-    // grab the DOM SVG element that you want to be draggable/zoomable:
-    var element = document.getElementById('zoomArea');
-    // and forward it it to panzoom.
-    panzoom(element, {
-        maxZoom:4,
-        minZoom:1,
-        pinchSpeed:4,
-        zoomSpeed:0,
-        smoothScroll:true,
-        bounds: true,
-        boundsPadding:1,
-        zoomDoubleClickSpeed: 1, 
-        onTouch: function(e) {
-            return false;
-        }
-    });
-</script>
 </body>
 </html>
