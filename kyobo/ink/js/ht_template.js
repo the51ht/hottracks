@@ -718,12 +718,10 @@ function welLive(){
             prevEl: '.wel_live_cont .swiper-button-prev',
         },
     };
-
     if($target.find('.swiper-slide').length > 1) {
         welLiveSwiper = new Swiper($target.get(), slideOption);
         $target.addClass('swiper-on');
     }
-
 }
 
 $(function(){
