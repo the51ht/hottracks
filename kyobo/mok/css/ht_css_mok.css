@@ -11472,6 +11472,8 @@ body {
   word-break: keep-all;
   white-space: normal;
   background: #f7f7f7;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
 }
 
 body:before {
@@ -11821,6 +11823,10 @@ body:before {
   display: block;
   height: auto;
   padding: 0;
+  -webkit-transform: translateY(0) !important;
+          transform: translateY(0) !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 .wrapper.ht_ .header_wrapper.header_main .header_top_wrap {
@@ -12248,10 +12254,11 @@ body:before {
 }
 
 .wrapper.ht_ .main_menu_wrap.on .main_menu_list_wrap {
-  position: fixed;
+  position: fixed !important;
 }
 
 .wrapper.ht_ .main_menu_wrap .main_menu_list_wrap {
+  position: relative !important;
   left: 0;
   top: 0;
   width: 100%;
