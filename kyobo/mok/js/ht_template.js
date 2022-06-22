@@ -179,8 +179,11 @@ function welLive(){
             }
         }
     };
-    $('.wel_live_cont .swiper-slide').eq(0).addClass('act');
-    welLiveSwiper = new Swiper($target.get(), slideOption);
+
+    if($target.find('.swiper-slide').length > 1) {
+        $('.wel_live_cont .swiper-slide').eq(0).addClass('act');
+        welLiveSwiper = new Swiper($target.get(), slideOption);
+    }
 }
 
 $(function(){

@@ -333,8 +333,6 @@ body {
 }
 
 
-
-
 .wrapper.ht_ .docker_wrapper {
 	transform: translateY(0%);
 }
@@ -342,6 +340,39 @@ body {
     .docker_wrapper {
         transform: translateY(100%);
     }
+}
+
+
+
+
+
+
+.wrapper.ht_ {
+    .main_menu_wrap + #contents + .cont_wrap .ctg_topMenu,
+    .main_menu_wrap + #contents + .cont_wrap .ctg_floating_line,
+    .main_menu_wrap + #contents + .wel_main_wrap .ctg_topMenu,
+    .main_menu_wrap + #contents + .container_wrapper .ctg_topMenu,
+    .main_menu_wrap + #contents + .container_wrapper .ctg_floating_line {
+        top:51px;
+    }
+
+    .main_menu_wrap + #contents + .evt_list_header + .evt_quick_menu_slide  {
+        top:51px;
+    }
+    .main_menu_wrap + #contents + .cont_wrap .sticky_selec,
+    .main_menu_wrap + #contents + .content_wrap .sticky_selec,
+    .main_menu_wrap + #contents + .container_wrapper .sticky_selec,
+    .main_menu_wrap + #contents + .container_wrapper .tab_wrap .tab_list_wrap {
+        top:51px;
+    }
+
+
+    .main_menu_wrap + #contents + .cont_wrap > .tit,
+    .main_menu_wrap + #contents + .cont_wrap > .tit_area,
+    .main_menu_wrap + #contents + .wel_main_wrap h1.mc_tit02.pad {
+        padding-top:12px;
+    }
+    
 }
 
 
@@ -392,7 +423,7 @@ body {
 /*** Contents ***/
 .wrapper.ht_ {
     .main_menu_wrap {
-        position:sticky;left:0;top:0;background-color:#fff;z-index:10;
+        position:sticky;left:0;top:0;height:51px;background-color:#fff;z-index:80;
         &.on {
             .main_menu_list_wrap {
                 position:fixed !important;
@@ -816,7 +847,7 @@ body {
 /* 제품상세 */
 .wrapper.ht_ {
     .fixed_foot {
-        position:fixed;left:0;bottom:0;width:100%;max-width:750px;z-index:10;
+        position:fixed;left:0;bottom:0;width:100%;max-width:750px;z-index:200;
         &.btm_pop_upper_foot {
             z-index:200;
         }

@@ -460,6 +460,35 @@
                 }
             }
         }
+        &:only-child {
+            margin:0 auto;opacity:1;
+            .tit_wel_live, .wel_live_box {
+                opacity:1;transition-delay:0.4s;
+            }
+            .live_btn {
+                opacity:1;transition-delay:0.6s;
+            }
+            .wel_live_time {
+                opacity:1;transition-delay:0.6s;
+            }
+            .wel_live_box .img, .wel_live_box .txt {
+                opacity:1;transition-delay:0.6s;
+            }
+            .eye_wel_live {
+                opacity:1;transition-delay:0.4s;
+            }
+            .eye_wel_live + .tit_wel_live {
+                opacity:1;transition-delay:0.6s;
+            }
+            .txt_wel_live {
+                opacity:1;transition-delay:0.8s;
+            }
+            &.on {
+                .wel_live_good_ani {
+                    display:block;
+                }
+            }
+        }
     }
     .swiper-pagination.swiper-pagination-fraction {
         left:auto;bottom:-5px;min-width:100%;background:none;color:rgba(0,0,0,0.6);text-align:center;transform:translate(0);
