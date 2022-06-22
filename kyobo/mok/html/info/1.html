@@ -32,9 +32,11 @@
 <script src="./panzoom.js"></script>
 
 <style>
+    /*
 * {
     touch-action:manipulation;
-}
+}*/
+body {touch-action: pan-y;}
 .w {position:relative;max-width:750px;margin:0 auto; overflow:hidden;}
 .s2 {position: relative;overflow:hidden;  }
 .a1 img {width:100%}
@@ -67,10 +69,16 @@ var element = document.getElementById('scene')
 
 // and forward it it to panzoom.
 panzoom(element, {
-    maxZoom:5,
+    maxZoom:4,
     minZoom:1,
-    pinchSpeed: 2, // zoom two times faster than the distance between fingers,
+    pinchSpeed:3,
     smoothScroll:true,
+    bounds: true,
+	boundsPadding:1,
+    zoomDoubleClickSpeed: 1, 
+    onTouch: function(e) {
+        return false;
+    }
 });
 </script>
 </body>
