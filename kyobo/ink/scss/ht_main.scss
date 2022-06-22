@@ -366,7 +366,8 @@
             &:after{
                 right:-6px;bottom:345px;width:200px;height:130px;background:url('#{$imgUrl}main/ico_mus_mc_fan_cont_ink.svg') center/100% no-repeat;
             }
-            &.swiper-slide-active {
+            &.swiper-slide-active,
+            &:first-child {
                 .img_wel_live img,
                 .wel_live_time,
                 .content_wel_live,
@@ -383,9 +384,14 @@
     }
     .swiper-container {
         overflow:inherit;
+        &.swiper-on {
+            &.swiper-container-horizontal .swiper_control {
+                display:block;
+            }
+        }
     }
     .swiper-container-horizontal .swiper_control {
-        position:static;margin-top:30px;
+        display:none;position:static;margin-top:30px;
         .swiper-button-next {
             position:absolute;right:69px;left:inherit;top:38%;border:0;
         } 
