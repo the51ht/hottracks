@@ -189,55 +189,35 @@ $(function(){
 
 
 	 function imgZoom(){ 
-		/*
-		
-	 	var zoomTargets = document.querySelectorAll('.zoomable');
-	 	if(!zoomTargets) return;
-
-	 	for(var zt=0; zt < zoomTargets.length; zt++) {
-	 		window.pz = panzoom(zoomTargets[zt], { 
-	 			minZoom: 1,
-	 			maxZoom:5,
-	 			bounds: true,
-	 			boundsPadding:1,
-				 smoothScroll: false,
-				 onTouch: function(e) {
-					// `e` - is current touch event.
-				
-					return false; // tells the library to not preventDefault.
-				  }
-	 		});
-	 	}*/
-
-		 $imgWrap = $('.zoomable');
-
+		// grab the DOM SVG element that you want to be draggable/zoomable:
+		var element = document.getElementById('zoomArea');
+		// and forward it it to panzoom.
+		panzoom(element, {
+			maxZoom:4,
+			minZoom:1,
+			pinchSpeed:4,
+			// zoomSpeed:0,
+			smoothScroll:true,
+			bounds: true,
+			boundsPadding:1,
+			zoomDoubleClickSpeed: 1, 
+			onTouch: function(e) {
+				return false;
+			}
+		});
 	 };
    
 	 function removeZoom () {
-		$('.zoomable').css('transform','none')
-		window.pz.pause(); 
-		/*
-		var zoomTargets = document.querySelectorAll('.zoomable');
-		if(!zoomTargets) return;
+		var element = document.getElementById('zoomArea');
+		$('.zoom_area').css('transform','none')
 
-		console.log('ddd')
-
-		for(var zt=0; zt < zoomTargets.length; zt++) {
-			window.pz = panzoom(zoomTargets[zt], { 
-				beforeWheel: function(e) {
-					return false; // tells the library to not preventDefault.
-				},
-				beforeMouseDown: function(e) {
-					return false; // tells the library to not preventDefault.
-				},
-				onTouch: function(e) {
-				   // `e` - is current touch event.
-			   
-				   return false; // tells the library to not preventDefault.
-				 }
-			});
-		}*/
-
+		panzoom(element, {
+			disablePan: false,
+			disableZoom: false,
+			onTouch: function(e) {
+				return false;
+			}
+		});
 	 }
 	
 	//Q & A 펼치기 닫기
