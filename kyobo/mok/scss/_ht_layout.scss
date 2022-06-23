@@ -9,9 +9,6 @@ body {
         position:absolute;left:0;top:0;width:100%;max-width:750px;height:100%;background:#fff;content:"";z-index:-1;
     }
 }
-body, html {
-    position: fixed;overflow: hidden;
-}
 @media only screen and (min-width:750px) {
     body:before {
         left:50%;margin-left:-375px;
@@ -21,16 +18,6 @@ body, html {
 /***** wrapper *****/
 .wrapper.ht_ {
     max-width:750px;margin:0 auto;
-
-    
-    width: 100vw;
-
-  height: 100vh;
-
-  overflow-y: scroll;
-
-  -webkit-overflow-scrolling: touch;
-
     #containerWrapper,
     .container_wrapper,
     .content_wrap,
@@ -329,6 +316,9 @@ body, html {
 }
 
 
+
+
+
 .wrapper.ht_ {
     .main_menu_wrap + #contents + .cont_wrap .ctg_topMenu,
     .main_menu_wrap + #contents + .cont_wrap .ctg_floating_line,
@@ -337,7 +327,6 @@ body, html {
     .main_menu_wrap + #contents + .container_wrapper .ctg_floating_line {
         top:51px;
     }
-
     .main_menu_wrap + #contents + .evt_list_header + .evt_quick_menu_slide  {
         top:51px;
     }
@@ -347,14 +336,12 @@ body, html {
     .main_menu_wrap + #contents + .container_wrapper .tab_wrap .tab_list_wrap {
         top:51px;
     }
-
     .main_menu_wrap + #contents + .cont_wrap > .tit,
     .main_menu_wrap + #contents + .cont_wrap > .tit_area,
     .main_menu_wrap + #contents + .wel_main_wrap h1.mc_tit02.pad {
         padding-top:12px;
     }
 }
-
 
 
 

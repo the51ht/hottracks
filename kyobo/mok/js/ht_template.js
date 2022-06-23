@@ -1761,7 +1761,7 @@ $(function(){
 
 
 $(function(){
-    var lastScroll = 80;
+    var lastScroll = 100;
     $(window).scroll(function(event){
         var st = $(this).scrollTop();
         if (st > lastScroll){
