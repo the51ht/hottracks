@@ -1,5 +1,5 @@
 /********** PC 공통 **********/
-/***** GNB *****/
+/* HT GNB Reset */
 function setHtGnbOp() {
     var $ht_gnb = $('.gnb_hottracks_area');
     $ht_gnb.find('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); //곰돌이 아이콘 이미지 초기화
@@ -12,21 +12,18 @@ function setHtGnbOp() {
     $ht_gnb.find('#htGnbCate01').show();
     $ht_gnb.find('#htGnbCate01 .ht_gnb_cont').addClass('chk2');
 }
+$(function(){
+	$('.btn_anb').click(function(e){
+        setHtGnbOp();
+	});
+});
+
 
 function htSetPrependZero(number, digits) {
 	number = number + '';
 	digits = digits || 2;
 	return number.length >= digits ? number : new Array(digits - number.length + 1).join('0') + number;
 }
-
-$(function(){
-	$('.btn_anb').click(function(e){
-        setHtGnbOp();
-	});
-	$('.tab_link').attr('aria-controls', 'tabAnbCategoryHotTracks').click(function(e){
-        setHtGnbOp();
-	});
-});
 
 
 

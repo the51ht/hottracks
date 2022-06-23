@@ -68,3 +68,22 @@ $(function(){
 
 
 
+/* HT GNB Reset */
+function setHtGnbOp() {
+    var $ht_gnb = $('.gnb_hottracks_area');
+    $ht_gnb.find('.ht_gnb_cont').removeClass('chk2').removeClass('chk3'); //곰돌이 아이콘 이미지 초기화
+    $ht_gnb.find('.simplebar-content-wrapper').stop().animate({scrollTop:0}, 100);
+    $ht_gnb.find('.ht_gnb_tab a').removeClass('active');
+    $ht_gnb.find('.gnb_menu a').removeClass('active');
+    $ht_gnb.find('.ht_gnb_box').hide();
+    $ht_gnb.find('.gnb_menu_area').hide();
+    $ht_gnb.find('.ht_gnb_tab li').eq(0).find('a').addClass('active');
+    $ht_gnb.find('#htGnbCate01').show();
+    $ht_gnb.find('#htGnbCate01 .ht_gnb_cont').addClass('chk2');
+}
+$(function(){
+	$('.tab_link').attr('aria-controls', 'tabAnbCategoryHotTracks').click(function(e){
+        setHtGnbOp();
+	});
+});
+
