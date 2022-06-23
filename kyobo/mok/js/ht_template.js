@@ -1761,15 +1761,12 @@ $(function(){
 
 
 $(function(){
-    var lastScroll = 0;
+    var lastScroll = 80;
     $(window).scroll(function(event){
         var st = $(this).scrollTop();
         if (st > lastScroll){
            $('.wrapper').addClass('scroll_chk');
-        } else if (st < 100)  {
-            $('.wrapper').removeClass('scroll_chk');
-        }
-        else {
+        } else {
            $('.wrapper').removeClass('scroll_chk');
         }
         lastScroll = st;
