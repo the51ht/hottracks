@@ -93,7 +93,7 @@
 				<a href="#">가전</a>
 				<a href="#">유아동 용품</a>
 				<a href="#">오피스</a>
-				<a href="#" class="active">필기구</a>
+				<a href="#" >필기구</a>
 				<a href="#">오피스</a>
 				<a href="#">디지털/자동차</a>
 				<a href="#">가전</a>
@@ -111,7 +111,7 @@
 				<a href="#">오피스</a>
 				<a href="#">디지털/자동차</a>
 				<a href="#">가전</a>
-				<a href="#">유아동 용품</a>
+				<a href="#"class="active">유아동 용품</a>
 				<a href="#">오피스</a>
 			</div>
 		</div> 
@@ -119,14 +119,15 @@
 
 <script>
 function cateNav(){
-	$('.ctg_topMenu.depth1 .inner_wrap').stop().animate({scrollLeft:$('.ctg_topMenu.depth1').find('.active').offset().left - 13}, 10);
-	$('.ctg_topMenu.depth2 .inner_wrap').stop().animate({scrollLeft:$('.ctg_topMenu.depth2').find('.active').offset().left - 8}, 10);
+	var tag = ($(window).width() - $('.wrapper').innerWidth()) /2
+	$('.ctg_topMenu.depth1 .inner_wrap').stop().animate({scrollLeft:$('.ctg_topMenu.depth1').find('.active').offset().left - 13 - tag}, 10);
+	$('.ctg_topMenu.depth2 .inner_wrap').stop().animate({scrollLeft:$('.ctg_topMenu.depth2').find('.active').offset().left - 8 - tag}, 10);
 }
 $(function(){
+	if(!$('.ctg_topMenu.depth1').length) return;
 	setTimeout(function() {
 		cateNav();
 	}, 100);
-
 });
 </script>
 
