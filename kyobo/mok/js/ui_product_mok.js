@@ -174,42 +174,6 @@ $(function(){
 	 	}
 	});
 	
-
-
-	/*이미지 ZOOM 기능*/ 
-
-	$(document).on('click', '.product_area .btn_expand', function(){ 
-	 	if($(this).hasClass('active')) { //상품 펼치기 버튼 클릭한 이후 줌 기능 연결 
-	 		imgZoom();
-	 	} else { //상품 닫기 버튼 클릭한 이후 줌 기능 해제 	
-	 		removeZoom(); 
-	 	}
-	});
-
-
-
-	 function imgZoom(){ 
-		var element = document.getElementById('zoomArea');
-		instance = panzoom(element, { 
-			maxZoom:4,
-			minZoom:1,
-			pinchSpeed:4,
-			// zoomSpeed:0,
-			smoothScroll:true,
-			bounds: true,
-			boundsPadding:1,
-			zoomDoubleClickSpeed: 1, 
-			onTouch: function(e) {
-				return false;
-			}
-		});
-	 };
-   
-	 function removeZoom () {
-		$('.zoom_area').css('transform','none')
-		instance.pause();
-	 }
-	
 	//Q & A 펼치기 닫기
 	$(document).on('click', '.all_qa_wrap .btn_expand', function(){
 		if($(this).hasClass('btn_up')) {
@@ -651,3 +615,51 @@ function prodPickBanner(){
 	});
 }
 $(window).off('resize.uiProdTitle orientationChange.uiProdTitle', setProdTitleMoreBtn).on('resize.uiProdTitle orientationChange.uiProdTitle', setProdTitleMoreBtn);
+
+
+
+
+
+
+
+
+
+
+/*  제품상세 : 확대 기능 */ 
+$(document).on('click', '.product_area .btn_expand', function(){ 
+	if($(this).hasClass('active')) {
+		imgZoom();
+	} else {
+		removeZoom(); 
+	}
+});
+
+function imgZoom(){ 
+	var element = document.getElementById('zoomArea');
+	instance = panzoom(element, { 
+		maxZoom:4,
+		minZoom:1,
+		pinchSpeed:4,
+		//zoomSpeed:0,
+		smoothScroll:true,
+		bounds: true,
+		boundsPadding:1,
+		zoomDoubleClickSpeed: 1, 
+		onTouch: function(e) {
+			return false;
+		}
+	});
+};
+function removeZoom () {
+	$('.zoom_area').css('transform','none');
+	instance.pause();
+}
+
+
+
+
+
+
+
+
+
