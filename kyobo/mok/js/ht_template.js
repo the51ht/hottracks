@@ -1761,13 +1761,16 @@ $(function(){
 
 
 $(function(){
-    var lastScroll = 100;
+    var lastScroll = 0;
     $(window).scroll(function(event){
         var st = $(this).scrollTop();
         if (st > lastScroll){
-           $('.wrapper').addClass('scroll_chk');
+            $('.wrapper').addClass('scroll_chk');
+            if(st < 100){
+                $('.wrapper').removeClass('scroll_chk');
+            }
         } else {
-           $('.wrapper').removeClass('scroll_chk');
+            $('.wrapper').removeClass('scroll_chk');
         }
         lastScroll = st;
     });
