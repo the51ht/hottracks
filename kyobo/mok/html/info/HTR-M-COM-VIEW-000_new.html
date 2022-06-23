@@ -2565,5 +2565,14 @@ $(function(){
     </div>
 </div>
 <!-- //상품 문의하기-->
+
+<script>
+    document.body.addEventListener('touchmove',
+    function(event) {
+        if($(document).height() <= $(window).height()){
+            event.preventDefault();
+        }
+    }, false);
+</script>
 </body>
 </html>
