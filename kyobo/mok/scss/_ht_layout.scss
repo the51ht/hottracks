@@ -261,6 +261,16 @@ body {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
 /* Header */
 .wrapper.ht_.scroll_chk header {
     transform:translateY(-100%);
@@ -274,40 +284,21 @@ body {
     transition:top 0.23s;
 }
 .wrapper.ht_.scroll_chk {
-    header + .cont_wrap .ctg_topMenu,
-    header + .cont_wrap .ctg_floating_line,
-    header + .wel_main_wrap .ctg_topMenu,
-    header + .container_wrapper .ctg_topMenu,
-    header + .container_wrapper .ctg_floating_line {
+    .cont_wrap .ctg_topMenu,
+    .cont_wrap .ctg_floating_line,
+    .wel_main_wrap .ctg_topMenu,
+    .container_wrapper .ctg_topMenu,
+    .container_wrapper .ctg_floating_line {
         top:-1px;
     }
 
-    header + .evt_list_header + .evt_quick_menu_slide  {
+    .evt_list_header + .evt_quick_menu_slide  {
         top:-1px;padding-top:15px;
     }
-    header + .cont_wrap .sticky_selec,
-    header + .content_wrap .sticky_selec,
-    header + .container_wrapper .sticky_selec,
-    header + .container_wrapper .tab_wrap .tab_list_wrap {
-        top:-1px;
-    }
-}
-.wrapper.ht_.scroll_chk {
-    header + #contents + .cont_wrap .ctg_topMenu,
-    header + #contents + .cont_wrap .ctg_floating_line,
-    header + #contents + .wel_main_wrap .ctg_topMenu,
-    header + #contents + .container_wrapper .ctg_topMenu,
-    header + #contents + .container_wrapper .ctg_floating_line {
-        top:-1px;
-    }
-
-    header + #contents + .evt_list_header + .evt_quick_menu_slide  {
-        top:-1px;padding-top:15px;
-    }
-    header + #contents + .cont_wrap .sticky_selec,
-    header + #contents + .content_wrap .sticky_selec,
-    header + #contents + .container_wrapper .sticky_selec,
-    header + #contents + .container_wrapper .tab_wrap .tab_list_wrap {
+    .cont_wrap .sticky_selec,
+    .content_wrap .sticky_selec,
+    .container_wrapper .sticky_selec,
+    .container_wrapper .tab_wrap .tab_list_wrap {
         top:-1px;
     }
 }
@@ -316,32 +307,13 @@ body {
     transform:translateY(0%);transition:none;
 }
 .wrapper.ht_.scroll_not {
-    header + .cont_wrap .sticky_selec,
-    header + .content_wrap .sticky_selec,
-    header + .container_wrapper .sticky_selec,
-    header + .container_wrapper .tab_wrap .tab_list_wrap {
+    .cont_wrap .sticky_selec,
+    .content_wrap .sticky_selec,
+    .container_wrapper .sticky_selec,
+    .container_wrapper .tab_wrap .tab_list_wrap {
         top:60px;transition:none;
     }
 }
-.wrapper.ht_.scroll_not {
-    header + #contents + .cont_wrap .sticky_selec,
-    header + #contents + .content_wrap .sticky_selec,
-    header + #contents + .container_wrapper .sticky_selec,
-    header + #contents + .container_wrapper .tab_wrap .tab_list_wrap {
-        top:60px;transition:none;
-    }
-}
-
-
-.wrapper.ht_ .docker_wrapper {
-	transform: translateY(0%);
-}
-.wrapper.ht_.scroll_chk {
-    .docker_wrapper {
-        transform: translateY(100%);
-    }
-}
-
 
 
 
@@ -355,7 +327,6 @@ body {
     .main_menu_wrap + #contents + .container_wrapper .ctg_floating_line {
         top:51px;
     }
-
     .main_menu_wrap + #contents + .evt_list_header + .evt_quick_menu_slide  {
         top:51px;
     }
@@ -365,51 +336,24 @@ body {
     .main_menu_wrap + #contents + .container_wrapper .tab_wrap .tab_list_wrap {
         top:51px;
     }
-
-
     .main_menu_wrap + #contents + .cont_wrap > .tit,
     .main_menu_wrap + #contents + .cont_wrap > .tit_area,
     .main_menu_wrap + #contents + .wel_main_wrap h1.mc_tit02.pad {
         padding-top:12px;
     }
-    
 }
 
 
-/*
-.wrapper.ht_ header.scroll_down {
-    transform:translateY(-100%);
-}
 
-.evt_quick_menu_slide,
-.ctg_topMenu,
-.ctg_floating_line,
-.sticky_selec,
-.tab_wrap .tab_list_wrap {
-    transition:top 0.23s;
-}
-.wrapper.ht_ {
-    header.scroll_down + .cont_wrap .ctg_topMenu,
-    header.scroll_down + .cont_wrap .ctg_floating_line,
-    header.scroll_down + .wel_main_wrap .ctg_topMenu,
-    header.scroll_down + .container_wrapper .ctg_topMenu,
-    header.scroll_down + .container_wrapper .ctg_floating_line {
-        top:-1px;
-    }
 
-    header.scroll_down + .evt_list_header + .evt_quick_menu_slide  {
-        top:-1px;padding-top:15px;
-    }
-    header.scroll_down + .cont_wrap .sticky_selec,
-    header.scroll_down + .content_wrap .sticky_selec,
-    header.scroll_down + .container_wrapper .sticky_selec,
-    header.scroll_down + .container_wrapper .tab_wrap .tab_list_wrap {
-        top:-1px;
+.wrapper.ht_ .docker_wrapper {
+	transform:translateY(0%);
+}
+.wrapper.ht_.scroll_chk {
+    .docker_wrapper {
+        transform:translateY(100%);
     }
 }
-*/
-
-
 
 
 
