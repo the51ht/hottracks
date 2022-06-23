@@ -1759,7 +1759,7 @@ $(function(){
 });
 
 
-
+/* Scroll Event : Header */
 $(function(){
     var lastScroll = 0;
     $(window).scroll(function(event){
