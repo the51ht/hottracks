@@ -362,8 +362,17 @@ $(function(){
                     </div>
                     <div class="form_cont">
                         <!-- valid_check -->
-                        <div class="valid_check">
+                        <div class="valid_check success">
                             <input type="text" class="form_ip" placeholder="30자 이내로 작성해 주세요" title="제목">
+                            <span class="valid_desc">성공일때</span>
+                        </div>
+                        <!-- //valid_check -->     
+                    </div>
+                    <div class="form_cont">
+                        <!-- valid_check -->
+                        <div class="valid_check fail">
+                            <input type="text" class="form_ip" placeholder="30자 이내로 작성해 주세요" title="제목">
+                            <span class="valid_desc">성공일때</span>
                         </div>
                         <!-- //valid_check -->     
                     </div>
@@ -377,16 +386,36 @@ $(function(){
                     </div>
                     <div class="form_cont">
 						<!-- byte_check_wrap -->
-						<div class="byte_check_wrap">
-							<textarea class="form_textarea" placeholder="문의하실 내용을 직접 작성해 주세요"  title="내용 입력" style="height: 70px;"></textarea>
-							<div class="byte_chack_footer">
-								<div class="byte_check">
-									<span class="count">12</span>
-									<span class="total">300자</span>
-								</div>
-							</div>
-						</div>
-						<!-- //byte_check_wrap -->
+                        <div class="valid_check fail">
+                            <div class="byte_check_wrap">
+                                <textarea class="form_textarea" placeholder="문의하실 내용을 직접 작성해 주세요"  title="내용 입력" style="height: 70px;"></textarea>
+                                <div class="byte_chack_footer">
+                                    <div class="byte_check">
+                                        <span class="count">12</span>
+                                        <span class="total">300자</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- //byte_check_wrap -->
+                            <span class="valid_desc">경고 일때</span>
+                        </div>
+
+						<!-- byte_check_wrap -->
+                        <div class="valid_check">
+                            <div class="byte_check_wrap">
+                                <textarea class="form_textarea" placeholder="문의하실 내용을 직접 작성해 주세요"  title="내용 입력" style="height: 70px;"></textarea>
+                                <div class="byte_chack_footer">
+                                    <div class="byte_check">
+                                        <span class="count">12</span>
+                                        <span class="total">300자</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- //byte_check_wrap -->
+                            <span class="valid_desc">성고 일때</span>
+                        </div>
 					</div>
                 </div>
                 <!-- //form_box -->
