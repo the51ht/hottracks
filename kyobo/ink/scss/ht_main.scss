@@ -2535,5 +2535,197 @@
 
 
 
+/***** * 스티커샵 * ****/
+.ht_contents_wrap.sti_mian_wrap {
+    /* 타이틀 */
+    .ht_tit_info{
+        text-align: center;
+        p{
+            display: inline-block;font-size:20px;font-weight:700;text-align:center;color:#000;position:relative;margin:-17px auto 20px;padding: 0 33px;background:#fff;border:solid #000;border-width:2px 2px 3px 2px;border-radius:40px;box-sizing:border-box;height:52px;line-height:48px;
+            &:before {
+                position:absolute;left:50%;top:-12px;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:0;height:0;border-bottom:10px solid #000;border-left:6px solid transparent;border-right:6px solid transparent;content:"";
+            }
+            &:after {
+                position:absolute;left:50%;top:-9px;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:0;height:0;border-bottom:9px solid #fff;border-left:5px solid transparent;border-right:5px solid transparent;content:"";
+            }
+        }
+    }
+    /* ht_cont */
+    .sti_cont{
+        padding:62px 0;
+    }
+    .btn_more_view_box strong{
+        background-color: #fff;
+        em:after{
+            margin-top: -11px;
+        }
+    }
+}
 
 
+/** sticker archive **/
+.sti_archive{
+    background: #fee581  url(../images/main/bg_sticker_archive.jpg) center top/40px repeat;
+}
+.sti_archive_list_wrap{
+    max-width: 890px;margin: 0 auto;position: relative;
+    &:before {
+        content: "";background: url(../images/main/ico_sticker_archive01.svg) 100% 100%/cover no-repeat;width: 126px;height: 126px;display: inline-block;position: absolute;top: -108px;right: 92px;
+    }
+    ul {
+        &:after{
+            display: block; clear: both;content: "";
+        }
+        li{
+            width: calc(33.3% - 22px);margin-left: 33px;float:left;position:relative;
+            a{
+                border: 3px solid #000;width: 273px;height: 273px;display: inline-block; box-sizing: border-box;
+                img{
+                    width: 100%;height: 100%;object-fit: cover;
+                }
+                &:hover .info_bg_box{
+                    opacity: 1;
+                }
+            }
+            &:nth-child(3n + 1){
+                margin-left: 0;
+            }
+            &:nth-child(n + 4){
+                margin-top: 33px;
+            }
+            &:nth-child(1):before{
+                content: ""; background: url(../images/main/ico_sticker_archive02.svg) 100% 100%/ cover no-repeat; width: 54px; height: 57px; display: inline-block; position: absolute; top: -27px; left: 50%; transform: translateX(-50%);z-index: 1;
+            }
+            &:nth-child(6):before{
+                content: ""; background: url(../images/main/ico_sticker_archive03.svg) 100% 100%/ cover no-repeat; width: 48px; height: 66px; display: inline-block; position: absolute; top: -27px; left: 50%; transform: translateX(-50%);z-index: 1;
+            }
+            &:nth-child(8):before{
+                content: ""; background: url(../images/main/ico_sticker_archive04.svg) 100% 100%/ cover no-repeat; width: 65px; height: 65px; display: inline-block; position: absolute; top: -27px; left: 50%; transform: translateX(-50%);z-index: 1;
+            }
+        }
+    }
+    .info_bg_box{
+        position: absolute;top: 0;left: 0;text-align: center;background: rgba(0,0,0,0.6);width: 99.5%;height: 100%; opacity: 0; transition: opacity 0.4s;
+        strong{
+            position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);font-size: 20px;color: #fff;
+        }
+    }
+}
+
+
+/** sticker file **/
+.sti_file{
+    background: #ffd1e9  url(../images/main/bg_sticker_file.jpg) center top repeat-x;
+    .evt_products{
+        margin-top: 207px;
+        + .pagination{
+            border-top:1px solid #000
+        }
+    }
+    .tab-list{
+        position: absolute;width: 899px;left: 50%;transform: translateX(-50%);
+        ul li{
+            width: 153px;height: 156px;display: inline-block;border: 2px solid #000;border-radius: 16px 16px 0 0;background: #fff;text-align: center;box-sizing: border-box; margin-left: 30px; cursor: pointer;
+            &:nth-child(1){
+                margin-left: 0;
+            }
+            span{
+                font-size: 16px;font-weight: 700;padding-top: 104px;display: inline-block;position:relative;
+                &:before {
+                    content: "";display: inline-block;background: url(../images/main/ico_sticker_file01.svg); width: 72px; height: 72px; position: absolute;top: 29px;left: 50%;transform: translateX(-50%);
+                }
+            }
+            &:nth-child(2){
+                span:before {
+                    background: url(../images/main/ico_sticker_file02.svg);
+                }
+            }
+            &:nth-child(3){
+                span:before {
+                    background: url(../images/main/ico_sticker_file03.svg);
+                }
+            }
+            &:nth-child(4){
+                span:before {
+                    background: url(../images/main/ico_sticker_file04.svg);
+                }
+            }
+            &:nth-child(5){
+                span:before {
+                    background: url(../images/main/ico_sticker_file05.svg);
+                }
+            }
+            
+            &.active{
+                height: 187px;border-bottom: 0;background: #ffd1e9;
+                span{
+                    &:before {
+                        background: url(../images/main/ico_sticker_file01_active.svg);
+                    }
+                }
+                &:nth-child(2){
+                    span:before {
+                        background: url(../images/main/ico_sticker_file02_active.svg);
+                    }
+                }
+                &:nth-child(3){
+                    span:before {
+                        background: url(../images/main/ico_sticker_file03_active.svg);
+                    }
+                }
+                &:nth-child(4){
+                    span:before {
+                        background: url(../images/main/ico_sticker_file04_active.svg);
+                    }
+                }
+                &:nth-child(5){
+                    span:before {
+                        background: url(../images/main/ico_sticker_file05_active.svg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** best brands **/
+.best_brands{
+    background-color: #000;
+}
+.best_brands_list_wrap{
+    ul{
+        width: 903px;margin: -10px auto 0;
+
+        &:after{
+            display: block; clear: both; content: "";
+        }
+        li{
+            float: left;width: 216px;height: 216px;margin-left: 10px;margin-top: 10px;
+            a{
+                border-radius: 12px;overflow: hidden;display: inline-block;width: 216px;height: 216px;position:relative;
+                img{
+                    width: 100%;height: 100%;object-fit: cover;
+                }
+                &:hover .info_bg_box{
+                    opacity: 1;
+                }
+            }
+            &:first-child, 
+            &:nth-child(8){
+                width: 441px;height: 441px;
+                a{
+                    width: 441px;height: 441px;
+                }
+            }
+            &:nth-child(8){
+                float: right;
+            }
+        }
+    }
+    .info_bg_box{
+        position: absolute;top: 0;left: 0;text-align: center;background: rgba(0,0,0,0.6);width: 100%;height: 100%; opacity: 0; transition: opacity 0.4s;
+        strong{
+            position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);font-size: 20px;color: #fff;
+        }
+    }
+}

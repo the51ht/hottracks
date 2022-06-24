@@ -5361,3 +5361,383 @@
   -webkit-transition-delay: 0.3s;
           transition-delay: 0.3s;
 }
+
+/***** * 스티커샵 * ****/
+.ht_contents_wrap.sti_mian_wrap {
+  /* 타이틀 */
+  /* ht_cont */
+}
+
+.ht_contents_wrap.sti_mian_wrap .ht_tit_info {
+  text-align: center;
+}
+
+.ht_contents_wrap.sti_mian_wrap .ht_tit_info p {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+  position: relative;
+  margin: -17px auto 20px;
+  padding: 0 33px;
+  background: #fff;
+  border: solid #000;
+  border-width: 2px 2px 3px 2px;
+  border-radius: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 52px;
+  line-height: 48px;
+}
+
+.ht_contents_wrap.sti_mian_wrap .ht_tit_info p:before {
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #000;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  content: "";
+}
+
+.ht_contents_wrap.sti_mian_wrap .ht_tit_info p:after {
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-bottom: 9px solid #fff;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  content: "";
+}
+
+.ht_contents_wrap.sti_mian_wrap .sti_cont {
+  padding: 62px 0;
+}
+
+.ht_contents_wrap.sti_mian_wrap .btn_more_view_box strong {
+  background-color: #fff;
+}
+
+.ht_contents_wrap.sti_mian_wrap .btn_more_view_box strong em:after {
+  margin-top: -11px;
+}
+
+/** sticker archive **/
+.sti_archive {
+  background: #fee581 url(../images/main/bg_sticker_archive.jpg) center top/40px repeat;
+}
+
+.sti_archive_list_wrap {
+  max-width: 890px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sti_archive_list_wrap:before {
+  content: "";
+  background: url(../images/main/ico_sticker_archive01.svg) 100% 100%/cover no-repeat;
+  width: 126px;
+  height: 126px;
+  display: inline-block;
+  position: absolute;
+  top: -108px;
+  right: 92px;
+}
+
+.sti_archive_list_wrap ul:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.sti_archive_list_wrap ul li {
+  width: calc(33.3% - 22px);
+  margin-left: 33px;
+  float: left;
+  position: relative;
+}
+
+.sti_archive_list_wrap ul li a {
+  border: 3px solid #000;
+  width: 273px;
+  height: 273px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sti_archive_list_wrap ul li a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sti_archive_list_wrap ul li a:hover .info_bg_box {
+  opacity: 1;
+}
+
+.sti_archive_list_wrap ul li:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+.sti_archive_list_wrap ul li:nth-child(n + 4) {
+  margin-top: 33px;
+}
+
+.sti_archive_list_wrap ul li:nth-child(1):before {
+  content: "";
+  background: url(../images/main/ico_sticker_archive02.svg) 100% 100%/cover no-repeat;
+  width: 54px;
+  height: 57px;
+  display: inline-block;
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.sti_archive_list_wrap ul li:nth-child(6):before {
+  content: "";
+  background: url(../images/main/ico_sticker_archive03.svg) 100% 100%/cover no-repeat;
+  width: 48px;
+  height: 66px;
+  display: inline-block;
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.sti_archive_list_wrap ul li:nth-child(8):before {
+  content: "";
+  background: url(../images/main/ico_sticker_archive04.svg) 100% 100%/cover no-repeat;
+  width: 65px;
+  height: 65px;
+  display: inline-block;
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.sti_archive_list_wrap .info_bg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  width: 99.5%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.sti_archive_list_wrap .info_bg_box strong {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+/** sticker file **/
+.sti_file {
+  background: #ffd1e9 url(../images/main/bg_sticker_file.jpg) center top repeat-x;
+}
+
+.sti_file .evt_products {
+  margin-top: 207px;
+}
+
+.sti_file .evt_products + .pagination {
+  border-top: 1px solid #000;
+}
+
+.sti_file .tab-list {
+  position: absolute;
+  width: 899px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sti_file .tab-list ul li {
+  width: 153px;
+  height: 156px;
+  display: inline-block;
+  border: 2px solid #000;
+  border-radius: 16px 16px 0 0;
+  background: #fff;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.sti_file .tab-list ul li:nth-child(1) {
+  margin-left: 0;
+}
+
+.sti_file .tab-list ul li span {
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 104px;
+  display: inline-block;
+  position: relative;
+}
+
+.sti_file .tab-list ul li span:before {
+  content: "";
+  display: inline-block;
+  background: url(../images/main/ico_sticker_file01.svg);
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  top: 29px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.sti_file .tab-list ul li:nth-child(2) span:before {
+  background: url(../images/main/ico_sticker_file02.svg);
+}
+
+.sti_file .tab-list ul li:nth-child(3) span:before {
+  background: url(../images/main/ico_sticker_file03.svg);
+}
+
+.sti_file .tab-list ul li:nth-child(4) span:before {
+  background: url(../images/main/ico_sticker_file04.svg);
+}
+
+.sti_file .tab-list ul li:nth-child(5) span:before {
+  background: url(../images/main/ico_sticker_file05.svg);
+}
+
+.sti_file .tab-list ul li.active {
+  height: 187px;
+  border-bottom: 0;
+  background: #ffd1e9;
+}
+
+.sti_file .tab-list ul li.active span:before {
+  background: url(../images/main/ico_sticker_file01_active.svg);
+}
+
+.sti_file .tab-list ul li.active:nth-child(2) span:before {
+  background: url(../images/main/ico_sticker_file02_active.svg);
+}
+
+.sti_file .tab-list ul li.active:nth-child(3) span:before {
+  background: url(../images/main/ico_sticker_file03_active.svg);
+}
+
+.sti_file .tab-list ul li.active:nth-child(4) span:before {
+  background: url(../images/main/ico_sticker_file04_active.svg);
+}
+
+.sti_file .tab-list ul li.active:nth-child(5) span:before {
+  background: url(../images/main/ico_sticker_file05_active.svg);
+}
+
+/** best brands **/
+.best_brands {
+  background-color: #000;
+}
+
+.best_brands_list_wrap ul {
+  width: 903px;
+  margin: -10px auto 0;
+}
+
+.best_brands_list_wrap ul:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.best_brands_list_wrap ul li {
+  float: left;
+  width: 216px;
+  height: 216px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.best_brands_list_wrap ul li a {
+  border-radius: 12px;
+  overflow: hidden;
+  display: inline-block;
+  width: 216px;
+  height: 216px;
+  position: relative;
+}
+
+.best_brands_list_wrap ul li a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.best_brands_list_wrap ul li a:hover .info_bg_box {
+  opacity: 1;
+}
+
+.best_brands_list_wrap ul li:first-child, .best_brands_list_wrap ul li:nth-child(8) {
+  width: 441px;
+  height: 441px;
+}
+
+.best_brands_list_wrap ul li:first-child a, .best_brands_list_wrap ul li:nth-child(8) a {
+  width: 441px;
+  height: 441px;
+}
+
+.best_brands_list_wrap ul li:nth-child(8) {
+  float: right;
+}
+
+.best_brands_list_wrap .info_bg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.best_brands_list_wrap .info_bg_box strong {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+}
