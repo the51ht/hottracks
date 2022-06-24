@@ -5536,7 +5536,7 @@
   z-index: 1;
 }
 
-.info_bg_box {
+.sti_archive_list_wrap .info_bg_box {
   position: absolute;
   top: 0;
   left: 0;
@@ -5549,7 +5549,7 @@
   transition: opacity 0.4s;
 }
 
-.info_bg_box strong {
+.sti_archive_list_wrap .info_bg_box strong {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -5668,7 +5668,7 @@
 
 .best_brands_list_wrap ul {
   width: 903px;
-  margin: -10px auto -10px;
+  margin: -10px auto 0;
 }
 
 .best_brands_list_wrap ul:after {
@@ -5691,6 +5691,7 @@
   display: inline-block;
   width: 216px;
   height: 216px;
+  position: relative;
 }
 
 .best_brands_list_wrap ul li a img {
@@ -5698,6 +5699,10 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.best_brands_list_wrap ul li a:hover .info_bg_box {
+  opacity: 1;
 }
 
 .best_brands_list_wrap ul li:first-child, .best_brands_list_wrap ul li:nth-child(8) {
@@ -5708,4 +5713,31 @@
 .best_brands_list_wrap ul li:first-child a, .best_brands_list_wrap ul li:nth-child(8) a {
   width: 441px;
   height: 441px;
+}
+
+.best_brands_list_wrap ul li:nth-child(8) {
+  float: right;
+}
+
+.best_brands_list_wrap .info_bg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.best_brands_list_wrap .info_bg_box strong {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
 }
