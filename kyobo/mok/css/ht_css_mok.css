@@ -12079,6 +12079,10 @@ body:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -12097,6 +12101,11 @@ body:before {
           box-sizing: border-box;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  -webkit-transition: -webkit-transform .23s;
+  transition: -webkit-transform .23s;
+  transition: transform .23s;
+  transition: transform .23s, -webkit-transform .23s;
+  z-index: 100;
 }
 
 .wrapper.ht_ .header_nosticky_wrapper .header_center {
@@ -12114,7 +12123,7 @@ body:before {
   display: -ms-flexbox;
   display: flex;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 28px;
   letter-spacing: -0.01em;
   -webkit-box-pack: center;
