@@ -186,7 +186,18 @@
     <!-- //header -->
 
 
-
+<script>
+function mcNav(){
+	var tag = ($(window).width() - $('.wrapper').innerWidth()) /2
+	$('.main_menu_list_wrap').stop().animate({scrollLeft:$('.main_menu_list_wrap .menu_list_item').eq(3).offset().left - 10 - tag}, 10);
+}
+$(function(){
+	if(!$('.main_menu_list_wrap').length) return;
+	setTimeout(function() {
+		mcNav();
+	}, 100);
+});
+</script>
 	<!-- main_menu_wrap -->
 	<div class="main_menu_wrap">
 		<div class="main_menu_list_wrap sps sps_scroll_fixed wel_mc">
