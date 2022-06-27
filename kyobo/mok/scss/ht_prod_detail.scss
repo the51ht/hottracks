@@ -6,12 +6,11 @@
 
 
 
-
-@mixin icoMore($top){
+@mixin icoMore($top) {
     &.ico_more {
         padding-right:10px;
         &:before {
-            position:absolute;content:"";top:2px;width:10px;height:18px;background:url('#{$imgUrl}ico/ico_more.png') no-repeat 0 3px;background-size:5px auto;right:-5px;     
+            position:absolute;right:-5px;top:2px;width:10px;height:18px;background:url('#{$imgUrl}ico/ico_more.png') 0 3px/5px auto no-repeat;content:"";
         }   
     }    
 }
@@ -27,39 +26,39 @@
     font-weight:700;
 }
 .btn_block {
-    display:block;text-align:center;display:flex;align-items:center;justify-content:center;width:100%;
+    display:block;width:100%;text-align:center;display:flex;align-items:center;justify-content:center;
 }
 
 /* btn color */
 .btn_default {
-    color:#000;background:#ffffff;border:solid 1px #ccc;
+    color:#000;background:#fff;border:solid 1px #ccc;
     &:hover {
-        background:#F2F2F2
+        background:#f2f2f2;
     }
     &.disabled {
         color:#999;
     }
 }
 .btn_primary {
-    color:#fff;background:#DA2128;
+    background:#da2128;color:#fff;
     &:hover {
-        background:#AC3024;
+        background:#ac3024;
     }
     :disabled,
     &.disabled {
-        background:#DB8880;border-color:#EAEAEA;
+        background:#db8880;border-color:#eaeaea;
     }
 }
 .btn_orange {
-    color:#fff;background:#F96734;
+    background:#f96734;color:#fff;
     &:hover {
         background:#0d6efd;
     }
 }
 .btn_outline_primary {
-    color:#DA2128;border:solid 1px #DA2128;
+    border:solid 1px #da2128;color:#da2128;
     &:hover {
-        background:#FFF4F1;color:#DA2128;
+        background:#fff4f1;color:#da2128;
     }     
     &.disabled {
         background:#fff;color:#fff;
@@ -68,24 +67,24 @@
 .btn_outline_white {
     color:#fff;border:solid 1px #fff;
     &:hover {
-        background:#FFF4F1;color:#fff;
+        background:#fff4f1;color:#fff;
     }     
     &.disabled {
         background:#fff;color:#fff;
     }
 }
 .btn_secondary {
-    color:#fff;background-color:#292929;
+    background-color:#292929;color:#fff;
     &:hover {
-        background:#000000;
+        background:#000;
     }
     &:disabled,
     &.disabled {
-        background:#BEBEBE;cursor:default;
+        background:#bebebe;cursor:default;
     }    
  }
 .btn_lightgrey {
-    color:#fff;background-color:#767675;
+    color:#fff;background-color:#767676;
     &:hover {
         background-color:#0d6efd;
     }    
@@ -104,31 +103,31 @@ button.btn_md_second {
 .btn {
     .txt {
         &.ico_shoppingbag {
-            background:url('#{$imgUrl}ico/ico_black_shoppingbag.png') no-repeat 0 3px;background-size:18px 20px;padding-left:22px;
+            padding-left:22px;background:url('#{$imgUrl}ico/ico_black_shoppingbag.png') 0 3px/18px 20px no-repeat;
         }
         &.ico_bell {
-            background:url('#{$imgUrl}ico/ico_bell.png') no-repeat 0 3px;background-size:18px 20px;padding-left:22px;  
+            padding-left:22px;background:url('#{$imgUrl}ico/ico_bell.png') no-repeat 0 3px/18px 20px no-repeat; 
         }
         &.ico_review {
-            background:url('#{$imgUrl}ico/ico_review.svg') no-repeat 0 3px;background-size:15px auto;padding-left:20px; 
+            padding-left:20px;background:url('#{$imgUrl}ico/ico_review.svg') 0 3px/15px auto no-repeat;
         } 
         &.ico_comment {
-            background:url('#{$imgUrl}ico/ico_comment.svg') no-repeat -3px -5px;background-size:40px auto;padding-left:30px;  
+            padding-left:30px;background:url('#{$imgUrl}ico/ico_comment.svg') -3px -5px/40px auto no-repeat;
         }   
     }
 }
 
 .btn_coupon_download {
-    box-sizing:border-box;width:79px;height:30px;padding:6px 10px 10px 23px;border-radius:4px;font-size:12px;letter-spacing:-.01em;font-weight:500;border:solid 1px #fff;color:#fff;text-align:center;position:relative;
+    position:relative;width:79px;height:30px;padding:6px 10px 10px 23px;border:1px solid #fff;border-radius:4px;box-sizing:border-box;color:#fff;font-size:12px;font-weight:500;letter-spacing:-.01em;text-align:center;
     .ico_white_download {
-        position:absolute !important;left:10px;top:8px;width:10px;height:10px;background:url('#{$imgUrl}ico/ico_white_download.png') no-repeat 0 0;background-size:10px 10px;padding-left:15px;              
+        position:absolute !important;left:10px;top:8px;width:10px;height:10px;padding-left:15px;background:url('#{$imgUrl}ico/ico_white_download.png') 0 0/10px 10px no-repeat;
     }
     .txt {
         display:inline-block;
     }
 }
 .btn_coupon_view {
-    width:79px;height:30px;padding:6px 10px 1px;border-radius:4px;font-size:12px;letter-spacing:-.01em;font-weight:500;border:solid 1px #ccc;color:#000;text-align:center;
+    width:79px;height:30px;padding:6px 10px 1px;border:solid 1px #ccc;border-radius:4px;color:#000;font-size:12px;font-weight:500;text-align:center;letter-spacing:-.01em;
     .txt {
         display:inline-block;
     }
@@ -233,9 +232,9 @@ button.btn_md_second {
 
 /* notice */
 .notice_area {
-    position:relative;padding-left:99px;min-height:99px;margin-bottom:20px;
+    position:relative;min-height:99px;margin-bottom:20px;padding-left:99px;
     .thumnail_notice {
-        width:99px;height:99px;border-radius:4px;overflow:hidden;position:absolute;left:0;top:0;
+        position:absolute;left:0;top:0;width:99px;height:99px;border-radius:4px;overflow:hidden;
     }
     .account_notice {
         float:left;padding-left:10px;
@@ -286,10 +285,10 @@ button.btn_md_second {
         .overlap {
             position:relative;display:inline-flex;vertical-align:middle;margin-left:5px;flex:0 1 auto;width:calc((100% - 10px - 50px)/ 3 * 2);
             .btn:first-child {
-                border-top-right-radius:0;border-bottom-right-radius:0;flex:1;justify-content:center;min-width:auto;padding-left:5px;padding-right:5px;
+                flex:1;justify-content:center;min-width:auto;padding-left:5px;padding-right:5px;border-top-right-radius:0;border-bottom-right-radius:0;
             }
             .btn:last-child {
-                border-top-left-radius:0;border-bottom-left-radius:0;justify-content:center;flex:1;min-width:auto;margin-left:0;padding-left:5px;padding-right:5px;      
+                justify-content:center;flex:1;min-width:auto;margin-left:0;padding-left:5px;padding-right:5px;border-top-left-radius:0;border-bottom-left-radius:0;
             }
         }     
     }
@@ -345,7 +344,7 @@ button.btn_md_second {
                 .tab_item {
                     padding:0 10px;
                     .tab_link {
-                        display:inline-block;padding:10px 0;position:relative;
+                        display:inline-block;position:relative;padding:10px 0;
                         .tab_txt {
                             font-size:15px;
                         }
@@ -361,7 +360,7 @@ button.btn_md_second {
                                 font-weight:700;
                             }
                             &:after {
-                                position:absolute;bottom:-1px;left:0;content:"";width:100%;height:3px;background:#000;
+                                position:absolute;left:0;bottom:-1px;width:100%;height:3px;background:#000;content:"";
                             }
                         }                      
                     }
@@ -371,7 +370,7 @@ button.btn_md_second {
                 display:inline-block;margin-top:8px;
                 .form_sel {
                     select {
-                        appearance:none;outline:0;border:0;padding:0 17px 0 0;height:22px;font-size:14px;line-height:22px;font-weight:500;background:url('#{$imgUrl}ico/arw_select.png') no-repeat right center;background-size:9px 5px;
+                        height:22px;padding:0 17px 0 0;background:url('#{$imgUrl}ico/arw_select.png') right center /9px 5px no-repeat;border:0;font-size:14px;font-weight:500;line-height:22px;appearance:none;outline:0;   
                     }
                 }
             }
@@ -386,40 +385,92 @@ button.btn_md_second {
 .tooltip_wrap {
     position:relative;display:inline-block;height:22px;vertical-align:top;box-sizing:border-box;
 }
-.tooltip_wrap.active .tooltip_inner {opacity:1;-webkit-transform:scaleY(1);transform:scaleY(1);}
-.tooltip_wrap .tooltip_inner {display:block;position:absolute;left:0;top:22px;z-index:10;overflow:hidden;width:calc(100vw - 40px);max-width:335px;padding:19px 19px;margin-top:6px;background-color:#fff;border:1px solid #000;border-radius:10px;text-align:left;box-sizing:border-box;opacity:0;-webkit-transform:scaleY(0);transform:scaleY(0);transition:opacity .3s ease-out;}
-.tooltip_wrap .tooltip_inner .tooltip_header {padding-bottom:16px;box-sizing:border-box;text-align:center;}
-.tooltip_wrap .tooltip_inner .tooltip_header .tooltip_head_title {font-size:15px;line-height:23px;letter-spacing:-.01em;font-weight:500;}
-.tooltip_wrap .tooltip_inner .tooltip_contents {box-sizing:border-box;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_sub_title {color:#000;font-size:14px;line-height:22px;letter-spacing:-.01em;font-weight:700;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_sub_title~.tooltip_desc {margin-top:6px;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc {color:#000;font-size:13px;line-height:19px;letter-spacing:-.01em;font-weight:400;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc~.tooltip_sub_title {margin-top:16px;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc~.tooltip_desc {margin-top:6px;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc .btn_text_link {display:inline;color:inherit;font-size:inherit;line-height:inherit;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc .btn_text_link .text {display:inline;text-decoration:underline;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_info_list {display:block;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_info_list .tooltip_info_item {display:block;color:#000;box-sizing:border-box;}
-.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_info_list .tooltip_info_item~.tooltip_info_item {margin-top:11px;padding-top:13px;border-top:1px solid #eaeaea;}
-.tooltip_wrap .btn_tooltip_close {
-    display:block;position:absolute;right:20px;top:20px;width:20px;height:20px;background-position:center;background-repeat:no-repeat;background-image:url('#{$imgUrl}layout/btn_close.svg');background-size:20px 20px;box-sizing:border-box;
+.tooltip_wrap.active .tooltip_inner {
+    opacity:1;transform:scaleY(1);
 }
-.tooltip_wrap.type_sm {height:16px;}
-.tooltip_wrap.type_sm .btn_tooltip {width:16px;height:16px;}
-.tooltip_wrap.type_sm .btn_tooltip [class^=ico_] {width:16px;height:16px;background-position:center;background-repeat:no-repeat;}
-.tooltip_wrap.type_sm .btn_tooltip .ico_info {background-image:url('#{$imgUrl}btn_tooltip_sm_mok.png');background-size:16px 16px;}
-.tooltip_wrap.type_sm .tooltip_inner {top:16px;}
-.tooltip_wrap.type_info .tooltip_inner {margin-top:15px;border-radius:6px;}
-.tooltip_wrap.right .tooltip_inner {left:auto;right:0;}
-.tooltip_wrap.hide .tooltip_inner {-webkit-transform:scaleY(0);transform:scaleY(0);transition:opacity .3s ease-out,-webkit-transform 0s .3s;transition:opacity .3s ease-out,transform 0s .3s;transition:opacity .3s ease-out,transform 0s .3s,-webkit-transform 0s .3s;}
+.tooltip_wrap .tooltip_inner {
+    display:block;position:absolute;left:0;top:22px;width:calc(100vw - 40px);max-width:335px;padding:19px 19px;margin-top:6px;background-color:#fff;border:1px solid #000;border-radius:10px;text-align:left;box-sizing:border-box;opacity:0;transform:scaleY(0);transition:opacity .3s ease-out;z-index:10;overflow:hidden;
+}
+.tooltip_wrap .tooltip_inner .tooltip_header {
+    padding-bottom:16px;box-sizing:border-box;text-align:center;
+}
+.tooltip_wrap .tooltip_inner .tooltip_header .tooltip_head_title {
+    font-size:15px;font-weight:500;line-height:23px;letter-spacing:-.01em;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents {
+    box-sizing:border-box;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_sub_title {
+    color:#000;font-size:14px;font-weight:700;line-height:22px;letter-spacing:-.01em;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_sub_title~.tooltip_desc {
+    margin-top:6px;}
+
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc {
+    color:#000;font-size:13px;font-weight:400;line-height:19px;letter-spacing:-.01em;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc~.tooltip_sub_title {
+    margin-top:16px;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc~.tooltip_desc {
+    margin-top:6px;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc .btn_text_link {
+    display:inline;color:inherit;font-size:inherit;line-height:inherit;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_desc .btn_text_link .text {
+    display:inline;text-decoration:underline;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_info_list {
+    display:block;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_info_list .tooltip_info_item {
+    display:block;box-sizing:border-box;color:#000;
+}
+.tooltip_wrap .tooltip_inner .tooltip_contents .tooltip_info_list .tooltip_info_item~.tooltip_info_item {
+    margin-top:11px;padding-top:13px;border-top:1px solid #eaeaea;
+}
+.tooltip_wrap .btn_tooltip_close {
+    display:block;position:absolute;right:20px;top:20px;width:20px;height:20px;background:url('#{$imgUrl}layout/btn_close.svg') center/20px no-repeat;box-sizing:border-box;
+}
+.tooltip_wrap.type_sm {
+    height:16px;
+}
+.tooltip_wrap.type_sm .btn_tooltip {
+    width:16px;height:16px;
+}
+.tooltip_wrap.type_sm .btn_tooltip [class^=ico_] {
+    width:16px;height:16px;background-position:center;background-repeat:no-repeat;
+}
+.tooltip_wrap.type_sm .btn_tooltip .ico_info {
+    background-image:url('#{$imgUrl}btn_tooltip_sm_mok.png');background-size:16px 16px;
+}
+.tooltip_wrap.type_sm .tooltip_inner {
+    top:16px;
+}
+.tooltip_wrap.type_info .tooltip_inner {
+    margin-top:15px;border-radius:6px;
+}
+.tooltip_wrap.right .tooltip_inner {
+    left:auto;right:0;
+}
+.tooltip_wrap.hide .tooltip_inner {
+    transform:scaleY(0);transition:opacity .3s ease-out,transform 0s .3s;
+}
 
 /* 툴팁 버튼 */
-.btn_tooltip {width:22px;height:22px;}
-.btn_tooltip [class^=ico_] {display:inline-block;width:22px;height:22px;vertical-align:top;transition:background .2s ease-out;}
-.btn_tooltip .ico_info {background-image:url('#{$imgUrl}ico/ico_info_large.png') !important;background-size:22px 22px;}
+.btn_tooltip {
+    width:22px;height:22px;
+}
+.btn_tooltip [class^=ico_] {
+    display:inline-block;width:22px;height:22px;vertical-align:top;transition:background .2s ease-out;
+}
+.btn_tooltip .ico_info {
+    background-image:url('#{$imgUrl}ico/ico_info_large.png') !important;background-size:22px 22px;
+}
 
 /* 펼침 닫기 메뉴 */
-.auto_overflow_wrap{
+.auto_overflow_wrap {
     .auto_overflow_contents {
         overflow:hidden;
     }
@@ -435,7 +486,7 @@ button.btn_md_second {
     .auto_overflow_contents {
         position:relative;
         &:after {
-            content:"";width:100%;height:15px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 15px);position:absolute;bottom:0;
+            position:absolute;bottom:0;width:100%;height:15px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 15px);content:"";
         }        
     }
     &.active {
@@ -471,25 +522,25 @@ button.btn_md_second {
     padding:0 20px;
 }
 .ht_fold_box_wrap .fold_box .fold_box_header {
-    position:relative;padding:10px 30px 10px 0;cursor:pointer;font-size:16px;line-height:22px;letter-spacing:-.01em;font-weight:700;
+    position:relative;padding:10px 30px 10px 0;font-size:16px;font-weight:700;line-height:22px;letter-spacing:-.01em;cursor:pointer;
 }
 .ht_fold_box_wrap .fold_box .fold_box_header:after {
-    content:"";position:absolute;display:block;width:22px;height:22px;right:0;top:50%;background-image:url('#{$imgUrl}ico/ico_arrow.png');background-size:22px 22px;transform:translateY(-50%) rotate(180deg);
+    display:block;position:absolute;right:0;top:50%;width:22px;height:22px;background-image:url('#{$imgUrl}ico/ico_arrow.png');background-size:22px 22px;transform:translateY(-50%) rotate(180deg);content:"";
 }
 .ht_fold_box_wrap .fold_box .fold_box_header .btn_fold {
     position:absolute;top:0;left:0;width:100%;height:100%;z-index:10;
 }
 .ht_fold_box_wrap .fold_box .fold_box_contents {
-    height:0;overflow:hidden;border-radius:4px;
+    height:0;border-radius:4px;overflow:hidden;
 }
 .ht_fold_box_wrap .fold_box.expanded {
-    background:#fff;border-color:#000;margin-bottom:10px;
+    margin-bottom:10px;background:#fff;border-color:#000;
 }
 .ht_fold_box_wrap .fold_box.expanded .fold_box_header:after {
     transform:translateY(-50%) rotate(0);
 }
 .ht_fold_box_wrap .fold_box.expanded>.fold_box_contents {
-    height:auto;padding-top:20px;padding-bottom:20px;background:#f7f7f7;
+    height:auto;background:#f7f7f7;padding-top:20px;padding-bottom:20px;
 }
 .ht_fold_box_wrap .fold_box.expanded>.fold_box_contents .form_wrap+.btn_wrap {
     margin-top:20px;
@@ -529,33 +580,45 @@ button.btn_md_second {
 }
 
 /* 상단 간격 */
-.mgt10 {margin-top:10px !important;}
-.mgt12 {margin-top:12px !important;}
-.mgt14 {margin-top:14px !important;}
-.mgt20 {margin-top:20px !important;}
-.mgt24 {margin-top:24px !important;}
-.mgt40 {margin-top:40px !important;} 
+.mgt10 {
+    margin-top:10px !important;
+}
+.mgt12 {
+    margin-top:12px !important;
+}
+.mgt14 {
+    margin-top:14px !important;
+}
+.mgt20 {
+    margin-top:20px !important;
+}
+.mgt24 {
+    margin-top:24px !important;
+}
+.mgt40 {
+    margin-top:40px !important;
+} 
 
 /* visual area */
 .visual_wrap {
     position:relative;margin:0 -20px;
 }
 .visual_wrap .swiper-container {
-    width:100%;height:100%;overflow:hidden;margin:0 auto;
+    width:100%;height:100%;margin:0 auto;overflow:hidden;
 }    
 
 .visual_wrap .swiper-pagination-fraction {
-    width:58px;height:25px;padding:0;background:rgba(0, 0, 0, 0.3);border-radius:12px;font-family:'Roboto';font-weight:700;position:absolute;left:50%;transform:translateX(-50%);
+    position:absolute;left:50%;width:58px;height:25px;padding:0;background:rgba(0, 0, 0, 0.3);border-radius:12px;font-family:'Roboto';font-weight:700;transform:translateX(-50%);
     .swiper-pagination-current {
-        font-size:13px;color:#fff;line-height:24px;
+        color:#fff;font-size:13px;line-height:24px;
     }
     .swiper-pagination-total {
-        font-size:13px;color:#ccc;line-height:24px;
+        color:#ccc;font-size:13px;line-height:24px;
     }
 }
 .visual_wrap {
     .swiper-pagination.swiper-pagination-fraction .swiper-pagination-total:before {
-        content:"-";display:inline-block;margin:0 4px 0 3px;color:#ccc;
+        display:inline-block;margin:0 4px 0 3px;color:#ccc;content:"-";
     }
 }
 
@@ -567,19 +630,19 @@ button.btn_md_second {
         &.ico_gohome {
             position:relative;margin-right:10px;
             &:after {
-                content:"";display:inline-block;width:40px;height:40px;position:absolute;left:0;top:0;background:url('#{$imgUrl}ico/ico_gohome.svg') no-repeat 50% 50%;background-size:40px auto;
+                display:inline-block;position:absolute;left:0;top:0;width:40px;height:40px;background:url('#{$imgUrl}ico/ico_gohome.svg') 50% 50%/40px auto no-repeat;content:"";
             }
         }
         &.ico_gomusic {
             position:relative;margin-right:10px;
             &:after {
-                content:"";display:inline-block;width:40px;height:40px;position:absolute;left:0;top:0;background:url('#{$imgUrl}ico/ico_gomusic.svg') no-repeat 50% 50%;background-size:40px auto;
+                display:inline-block;position:absolute;left:0;top:0;width:40px;height:40px;background:url('#{$imgUrl}ico/ico_gomusic.svg') 50% 50%/40px auto no-repeat;content:"";
             }
         }
         &.ico_gobluelay {
             position:relative;margin-right:10px;
             &:after {
-                content:"";display:inline-block;width:40px;height:40px;position:absolute;left:0;top:0;background:url('#{$imgUrl}ico/ico_gobluelay.svg') no-repeat 50% 50%;background-size:40px auto;
+                display:inline-block;position:absolute;left:0;top:0;width:40px;height:40px;background:url('#{$imgUrl}ico/ico_gobluelay.svg') 50% 50%/40px auto no-repeat;content:"";
             }
         }        
     }
@@ -589,7 +652,7 @@ button.btn_md_second {
 .hotpick_area {
     margin:32px 0;
     .hotpickslide_wrap {
-        margin-top:16px;position:relative;overflow:hidden;
+        position:relative;margin-top:16px;overflow:hidden;
         .swiper-container {
             width:100%;height:100%;padding:1px 20px;
             .swiper_control_box {
@@ -609,7 +672,7 @@ button.btn_md_second {
 
 /* hotpick area */
 .hotpickslide_wrap .swiper-pagination-fraction {
-    width:58px;height:25px;background:#707070;border-radius:12px;font-family:'Roboto';font-weight:700;position:absolute;left:50%;transform:translateX(-50%);
+    position:absolute;left:50%;width:58px;height:25px;background:#707070;border-radius:12px;font-family:'Roboto';font-weight:700;transform:translateX(-50%);
     .swiper-pagination-current {
         font-size:13px;color:#fff;
     }
@@ -626,17 +689,17 @@ button.btn_md_second {
             .tit_top {
                 display:flex;justify-content:space-between;margin-bottom:4px;
                 .txt_brand {
-                    font-size:13px;color:#595959;font-weight:400;
+                    color:#595959;font-size:13px;font-weight:400;
                 }
                 .txt_primary {
-                    font-family:"Noto Sans KR",sans-serif;color:#474C98 !important;
+                    font-family:"Noto Sans KR",sans-serif;color:#474c98 !important;
                 }
                 .btn_share {
-                    cursor:pointer;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_share.png') no-repeat 0 0;background-size:18px auto;border:0;border-radius:0;
+                    width:18px;height:18px;background:url('#{$imgUrl}ico/ico_share.png') 0 0/18px auto no-repeat;border:0;border-radius:0;cursor:pointer;
                 }
             }
             .tit_bottom {
-                font-size:18px;font-weight:500;line-height:28px;color:#000;
+                color:#000;font-size:18px;font-weight:500;line-height:28px;
             }
             .tit_bottom_dec {
                 display:-webkit-box;max-height:38px;color:#474c98;font-size:13px;font-weight:400;line-height:19px;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
@@ -645,7 +708,7 @@ button.btn_md_second {
         .rating_score_wrap {
             display:flex;margin-bottom:15px;
             .txt_value {
-                font-size:12px;color:rgb(118,118,118);margin-left:4px;margin-top:1px;
+                margin-top:1px;margin-left:4px;color:#767676;font-size:12px;
                 .txt_score {
                     font-weight:700;
                 }
@@ -666,13 +729,13 @@ button.btn_md_second {
         .sale_price {
             display:block;font-size:22px;
             .txt_tit {
-                font-size:13px;color:#767676;position:relative;top:-3px;
+                position:relative;top:-3px;color:#767676;font-size:13px;
             }            
             .txt_per {
-                font-family:Roboto;font-weight:700;color:#DA2128;font-weight:700;
+                font-family:Roboto;color:#da2128;font-weight:700;
             }
             .txt_value {
-                font-family:Roboto;font-weight:700;font-weight:700;
+                font-family:Roboto;font-weight:700;
             }
             .txt_unit {
                 position:relative;left:-5px;
@@ -691,9 +754,9 @@ button.btn_md_second {
                     position:relative;display:block;padding-right:15px;line-height:35px;
                 }                    
                 .ico_info {
-                    cursor:pointer;display:block;position:absolute;right:0;top:2px;
+                    display:block;position:absolute;right:0;top:2px;cursor:pointer;
                     &:after {
-                        content:"";width:16px;height:16px;background:url('#{$imgUrl}ico/ico_info.png') no-repeat 0 0;background-size:100% auto;position:absolute;right:0;top:0;
+                        position:absolute;right:0;top:0;width:16px;height:16px;background:url('#{$imgUrl}ico/ico_info.png') 0 0/100% auto no-repeat;content:"";
                     }
                 }            
             }
@@ -720,17 +783,17 @@ button.btn_md_second {
     }     
 }
 .coupon_wrap {
-    background:rgb(218, 33, 40);height:62px;display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;padding:0 20px;margin:0 -20px;
+    display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;height:62px;margin:0 -20px;padding:0 20px;background:#da2128;
     .txt_dec {
         width:calc(100% - 81px );color:#fff;font-weight:700;
     } 
 }
 .coupon_wrap_complete {
-    background:#f2f2f2;height:62px;display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;padding:0 20px;margin:0 -20px;
+    display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;height:62px;margin:0 -20px;padding:0 20px;background:#f2f2f2;
     .txt_dec {
         width:calc(100% - 81px );color:#767676;font-weight:700;
         .ico_check {
-            display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_check.svg') no-repeat 0 0;background-size:18px auto;position:relative;top:3px;
+            display:inline-block;position:relative;top:3px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_check.svg') 0 0/18px auto no-repeat;
         }
     } 
     
@@ -748,9 +811,10 @@ button.btn_md_second {
                 .txt_info {
                     position:relative;display:block;padding-right:15px;
                     .ico_info {
-                        cursor:pointer;display:block;position:absolute;right:0;top:2px;
+                        display:block;position:absolute;right:0;top:2px;cursor:pointer;
                         &:after {
-                            content:"";width:16px;height:16px;background:url('#{$imgUrl}ico/ico_info.png') no-repeat 0 0;background-size:100% auto;position:absolute;right:0;top:0;
+                            position:absolute;right:0;top:0;
+                            width:16px;height:16px;background:url('#{$imgUrl}ico/ico_info.png') 0 0/100% auto no-repeat;content:"";
                         }
                     }            
                 }
@@ -775,13 +839,13 @@ button.btn_md_second {
                 }
             }
             &.free_gift {
-                background-color:#F4F4F4;border:solid 1px #000;border-radius:4px;margin-top:14px;padding:12px 19px;
+                margin-top:14px;padding:12px 19px;background-color:#f4f4f4;border:solid 1px #000;border-radius:4px;
                 .txt_dt.col_4 {
                     width:60px;color:#474c98;font-weight:700;
                 }
                 .txt_dd.col_8{
                     width:calc(100% - 60px);
-                    div{
+                    div {
                         width:100%;position:relative;padding-right:44px;
                         p {
                             font-weight:400;
@@ -793,7 +857,7 @@ button.btn_md_second {
                                 position:relative;width:100%;height:100%;object-fit:cover;
                             }
                         }
-                        + div{
+                        + div {
                             margin-top:19px;
                         }
                     }
@@ -822,14 +886,14 @@ button.btn_md_second {
         }
     }
     .zoom_area_wrap {
-        position:relative;max-width:750px;margin:0 auto; overflow:hidden;
+        position:relative;max-width:750px;margin:0 auto;overflow:hidden;
         .zoom_area_content {
             position: relative;overflow:hidden;  
-            .zoom_area img {width:100%}
+            .zoom_area img {
+                width:100%;
+            }
         }
     }
-    
-    
     .info_wrap {
         .list_info {
             display:flex;flex-wrap:wrap;
@@ -841,9 +905,9 @@ button.btn_md_second {
                 .txt_info {
                     position:relative;display:block;padding-right:15px;
                     .ico_info {
-                        cursor:pointer;display:block;position:absolute;right:0;top:2px;
+                        display:block;position:absolute;right:0;top:2px;cursor:pointer;
                         &:after {
-                            content:"";width:16px;height:16px;background:url('#{$imgUrl}ico/ico_info.png') no-repeat 0 0;background-size:100% auto;position:absolute;right:0;top:0;
+                            position:absolute;right:0;top:0;width:16px;height:16px;background:url('#{$imgUrl}ico/ico_info.png') 0 0/100% auto no-repeat;content:"";
                         }
                     }            
                 }
@@ -861,11 +925,11 @@ button.btn_md_second {
         }
     } 
     .infoshort_wrap {
-        padding:12px 0 13px 0;border:solid 1px #eaeaea;border-radius:4px;margin-top:14px;
+        margin-top:14px;padding:12px 0 13px 0;border:solid 1px #eaeaea;border-radius:4px;
         .list_infoshort {
-            font-size:12px;display:flex;justify-content:space-around;
+            display:flex;justify-content:space-around;font-size:12px;
             li {
-                width:calc(100% / 4);text-align:center;border-right:dotted 1px #eaeaea;
+                width:calc(100% / 4);border-right:dotted 1px #eaeaea;text-align:center;
                 .txt_dt,
                 .txt_dd {
                     display:block;
@@ -897,20 +961,20 @@ button.btn_md_second {
             .star.xsmall {
                 display:inline-block;
                 &:after {
-                    content:"";display:inline-block;background:url('#{$imgUrl}guide/empty_star.svg') no-repeat 0 0;background-size:10px 10px;width:10px;height:10px;
+                    display:inline-block;width:10px;height:10px;background:url('#{$imgUrl}guide/empty_star.svg') 0 0/10px 10px no-repeat;content:"";
                 }
             }            
             .star.small {
                 display:inline-block;
                 &:after {
-                    content:"";display:inline-block;background:url('#{$imgUrl}guide/empty_star.svg') no-repeat 0 0;background-size:13px 13px;width:13px;height:13px;
+                    display:inline-block;width:13px;height:13px;background:url('#{$imgUrl}guide/empty_star.svg') 0 0/13px 13px no-repeat;content:"";
                 }
 
             }
             .star.large {
                 display:inline-block;
                 &:after {
-                    content:"";display:inline-block;background:url('#{$imgUrl}guide/empty_star.svg') no-repeat 0 0;background-size:23px 23px;width:23px;height:23px;
+                    display:inline-block;width:23px;height:23px;background:url('#{$imgUrl}guide/empty_star.svg') 0 0/23px 23px no-repeat;content:"";
                 }
             }            
         }
@@ -919,19 +983,19 @@ button.btn_md_second {
             .star.xsmall {
                 display:inline-block;
                 &:after {
-                    content:"";display:inline-block;background:url('#{$imgUrl}guide/filled_star.svg') no-repeat 0 0;background-size:10px 10px;width:10px;height:10px;
+                    display:inline-block;width:10px;height:10px;background:url('#{$imgUrl}guide/filled_star.svg') 0 0/10px 10px no-repeat;content:"";
                 }                              
             }             
             .star.small {
                 display:inline-block;
                 &:after {
-                    content:"";display:inline-block;background:url('#{$imgUrl}guide/filled_star.svg') no-repeat 0 0;background-size:13px 13px;width:13px;height:13px;
+                    display:inline-block;width:13px;height:13px;background:url('#{$imgUrl}guide/filled_star.svg') 0 0/13px 13px no-repeat;content:"";
                 }                              
             } 
             .star.large {
                 display:inline-block;
                 &:after {
-                    content:"";display:inline-block;background:url('#{$imgUrl}guide/filled_star.svg') no-repeat 0 0;background-size:23px 23px;width:23px;height:23px;
+                    display:inline-block;width:23px;height:23px;background:url('#{$imgUrl}guide/filled_star.svg') 0 0/23px 23px no-repeat;content:"";
                 }                              
             }                                                   
         }
@@ -951,7 +1015,7 @@ button.btn_md_second {
                 .score {
                     margin-left:8px;margin-top:-6px;
                     .txt_score {
-                        font-size:24px;font-weight:700;color:#da2128
+                        color:#da2128;font-size:24px;font-weight:700;
                     }
                     .txt_totalscore {
                         font-size:14px;
@@ -983,20 +1047,19 @@ button.btn_md_second {
             }
         }
     }
-
     .msg_box {
         p {
-            text-align:center;font-size:16px;line-height:26px;
+            font-size:16px;line-height:26px;text-align:center;
             .ico_quotation {
                 display:inline-block;position:relative;padding-left:20px;color:#474c98;font-weight:700;
                 &:before {
-                    content:"";display:block;width:16px;height:10px;position:absolute;left:0;top:6px;background:url('#{$imgUrl}ico/ico_quotation.svg');background-size:16px auto;
+                    display:block;position:absolute;left:0;top:6px;width:16px;height:10px;background:url('#{$imgUrl}ico/ico_quotation.svg');background-size:16px auto;content:"";
                 }
             }
             .ico_quotation_emp {
                 display:inline-block;position:relative;padding-left:20px;
                 &:before {
-                    content:"";display:block;width:16px;height:10px;position:absolute;left:0;top:6px;background:url('#{$imgUrl}ico/ico_quotation_emp.svg');background-size:16px auto;
+                    display:block;position:absolute;left:0;top:6px;width:16px;height:10px;background:url('#{$imgUrl}ico/ico_quotation_emp.svg');background-size:16px auto;content:"";
                 }
             }
         }
@@ -1017,7 +1080,7 @@ button.btn_md_second {
                     .font_num {
                         height:21px;padding:0 7px;background:#7a7dc3;border-radius:10px;color:#fff;font-weight:400;line-height:22px;
                         &:before {
-                            position:absolute;left:50%;top:13px;width:10px;height:10px;background:#7a7dc3;border-radius:2px;transform:translateX(-50%) rotate(45deg);content:"";font-weight:500;
+                            position:absolute;left:50%;top:13px;width:10px;height:10px;background:#7a7dc3;border-radius:2px;font-weight:500;transform:translateX(-50%) rotate(45deg);content:"";
                         }
                     }
                 }
@@ -1029,7 +1092,7 @@ button.btn_md_second {
             .txt_per {
                 position:relative;width:4px;height:62px;margin:0 auto;background:#eaeaea;border-radius:3px;overflow:hidden;
                 em {
-                    position:absolute;left:0;bottom:0;width:4px;background:#767675;border-radius:2px;
+                    position:absolute;left:0;bottom:0;width:4px;background:#767676;border-radius:2px;
                 }
             }
             .font_num {
@@ -1045,12 +1108,12 @@ button.btn_md_second {
         .progressbar {
             position:relative;
             .empty_progress {
-                position:absolute;left:0;top:6px;display:block;background:#eaeaea;width:100%;height:4px;border-radius:20px;
+                position:absolute;left:0;top:6px;display:block;width:100%;height:4px;background:#eaeaea;border-radius:20px;
             }
             .filled_progress {
-                position:absolute;left:0;top:6px;height:4px;border-radius:20px;margin:auto;white-space:nowrap;overflow:hidden;background:#767675;
+                position:absolute;left:0;top:6px;height:4px;margin:auto;background:#767676;border-radius:20px;white-space:nowrap;overflow:hidden;
                 &.bg_primary {
-                    background:#DA2128;
+                    background:#da2128;
                 }
                 &.bg_black {
                     background-color:#000;
@@ -1058,7 +1121,7 @@ button.btn_md_second {
             }
         }
         .txt_value {
-            width:35px;font-size:13px;margin-left:12px;display:block;font-weight:700;text-align:end;
+            display:block;width:35px;margin-left:12px;font-size:13px;font-weight:700;text-align:end;
         }
     }
     .tooltip_wrap {
@@ -1073,21 +1136,20 @@ button.btn_md_second {
 
 /* review */
 .slide_review_wrap {
-    position: relative;
-    background:#F4F4F4;padding:0 20px 20px;border:1px solid #000;border-radius:4px;
+    position:relative;padding:0 20px 20px;background:#f4f4f4;border:1px solid #000;border-radius:4px;
     .btn_best_rev {
         display:block;position:absolute;left:0;top:0;width:100%;height:100%;cursor:pointer;
     }
     .review_inner {
         border-bottom:0;
         .review_comment_area {
-            border-top:dotted 1px #D5D5D5;padding-top:15px;
+            padding-top:15px;border-top:dotted 1px #d5d5d5;
         }
     }
     .review_inner {
         padding-top:20px;
         .review_info_area {
-            display:flex;justify-content:flex-start;align-items:center;flex-direction:row;flex-wrap:wrap;margin-bottom:12px;font-size:12px;color:rgb(118, 118, 118);
+            display:flex;justify-content:flex-start;align-items:center;flex-direction:row;flex-wrap:wrap;margin-bottom:12px;color:#767676;font-size:12px;
             .txt_user {
                 display:inline-block;
             }
@@ -1110,80 +1172,50 @@ button.btn_md_second {
                 flex:1;word-break:keep-all;line-height:22px;
             }
             .thumnail_review {
-                display:flex;flex-shrink:0;width:78px;height:78px;overflow:hidden;border-radius:5px;position:relative;margin-left:10px;
+                display:flex;flex-shrink:0;position:relative;width:78px;height:78px;margin-left:10px;border-radius:5px;overflow:hidden;
                 img {
                     width:100%;height:100%;object-fit:cover;
                 }
                 .txt_num {
-                    position:absolute;width:16px;height:16px;bottom:0;right:0;background:#000;color:#fff;border-top-left-radius:5px;border-bottom-left-radius:0;font-size:11px;text-align:center;
+                    position:absolute;right:0;bottom:0;width:16px;height:16px;background:#000;border-top-left-radius:5px;border-bottom-left-radius:0;color:#fff;font-size:11px;text-align:center;
                 }
             }
         } 
         .btn_expand {
-            position:relative;display:inline-block;font-size:13px;color:#767676;cursor:pointer;
+            position:relative;display:inline-block;color:#767676;font-size:13px;cursor:pointer;
             .ico_circle_more {
                 display:inline-block;
                 &:after {
-                    content:"";display:inline-block;position:absolute;top:2px;width:22px;height:22px;background:url('#{$imgUrl}ico/ico_arrow.png') no-repeat 0 0;background-size:22px auto;margin-left:5px;       
+                    display:inline-block;position:absolute;top:2px;width:22px;height:22px;margin-left:5px;background:url('#{$imgUrl}ico/ico_arrow.png') 0 0/22px auto no-repeat;content:"";
                 }   
             }        
         }
-        /*
-        .review_more_area {           
-            margin-bottom:16px;display:flex;justify-content:space-between;
-            .link_more {
-                position:relative;display:inline-block;font-size:13px;color:#595959;
-                @include icoMore(6px);
-            }
-            .review_btn_common {
-                display:flex;
-                font-size:13px;
-                .txt_count {
-                    color:#000;
-                }
-                .btn_reply {
-                    margin-left:16px;
-                    .txt_reply {
-                        color:rgb(118, 118, 118);
-                    }
-                }
-            }
-        }
-        .box_msg {
-            background:#f7f7f7;text-align:center;position:relative;padding:16px 15px;margin-bottom:20px;border-radius:4px;
-            .txt_msg {
-                font-size:13px;color:#767676;
-                &:before {
-                    content:"";display:block;width:17px;height:17px;margin:0 auto 4px;background:url('#{$imgUrl}ico/ico_info.svg') no-repeat 0 0;background-size:17px 17px; 
-                }
-            }
-        }*/
     }     
 }
 .all_qa_area {
     padding:16px 0;
     .all_qa_wrap {
-        border-top:solid 1px #000;margin-top:20px;
+        margin-top:20px;border-top:solid 1px #000;
         .no_review {
-            text-align:center;position:relative;padding:40px 15px;border-radius:4px;border-bottom:solid 1px #eaeaea;
+            position:relative;padding:40px 15px;border-bottom:solid 1px #eaeaea;border-radius:4px;text-align:center;
             .txt_msg {
                 &:before {
-                    content:"";display:block;width:30px;height:30px;margin:0 auto 8px;background:url('#{$imgUrl}ico/ico_info.svg') no-repeat 0 0;background-size:30px 30px;
+                    display:block;width:30px;height:30px;margin:0 auto 8px;background:url('#{$imgUrl}ico/ico_info.svg') 0 0/30px no-repeat;content:"";
                 }
-                font-size:13px;color:#767676;
+                color:#767676;font-size:13px;
             }
         }          
         .review_inner {
-            padding-top:20px;border-bottom:solid 1px #EAEAEA;
+            padding-top:20px;border-bottom:solid 1px #eaeaea;
             .review_info_area {
                 display:flex;justify-content:space-between;
                 .left_area {
-                    display:flex;justify-content:flex-start;align-items:center;flex-direction:row;flex-wrap:wrap;margin-bottom:12px;font-size:12px;color:#767676;
+                    display:flex;justify-content:flex-start;align-items:center;flex-direction:row;flex-wrap:wrap;margin-bottom:12px;color:#767676;font-size:12px;
                     .cmt_type {
-                        display:inline-block;border:1px solid #D5D5D5;border-radius:20px;margin-left:1px;padding:1px 7px;
+                        display:inline-block;margin-left:1px;padding:1px 7px;border:1px solid #d5d5d5;border-radius:20px;
                     }	
                     .txt_user {
-                        margin-left:5px;display:inline-block;
+                        display:inline-block;margin-left:5px;
                     }
                     .txt_date {
                         display:inline-block;
@@ -1205,7 +1237,7 @@ button.btn_md_second {
                         color:#767676;
                     }
                     .txt_primary {
-                        color:#DA2128;
+                        color:#da2128;
                     }
                     .s1 {
                         color:#474c98;
@@ -1222,7 +1254,7 @@ button.btn_md_second {
                 }
             } 
             .box_qa {
-                background:#f7f7f7;padding:20px;margin-bottom:20px;display:none;
+                display:none;margin-bottom:20px;padding:20px;background:#f7f7f7;
                 .question_area {
                     margin-bottom:16px;
                 }
@@ -1230,22 +1262,21 @@ button.btn_md_second {
                     margin-bottom:7px;
                 }
                 .txt_dec {
-                    line-height:22px;
-                    font-size:14px;
+                    font-size:14px;line-height:22px;
                 }
             }
             .box_msg {
-                background:#f7f7f7;text-align:center;position:relative;padding:16px 15px;margin-bottom:20px;border-radius:4px;
+                position:relative;margin-bottom:20px;padding:16px 15px;background:#f7f7f7;border-radius:4px;text-align:center;
                 .txt_msg {
-                    font-size:13px;color:#767676;
+                    color:#767676;font-size:13px;
                     &:before {
-                        content:"";display:block;width:17px;height:17px;margin:0 auto 4px;background:url('#{$imgUrl}ico/ico_info.svg') no-repeat 0 0;background-size:17px 17px;
+                        display:block;width:17px;height:17px;margin:0 auto 4px;background:url('#{$imgUrl}ico/ico_info.svg') 0 0/17px no-repeat;content:"";
                     }
                 }
                 .txt_secret {
-                    font-size:13px;color:#767676;padding-left:22px;position:relative;
+                    position:relative;padding-left:22px;color:#767676;font-size:13px;
                     &:before {
-                        position:absolute;left:0;content:'';display:block;width:17px;height:19px;margin:0 auto 4px;background:url('#{$imgUrl}ico/ico_lock.png') no-repeat 0 0;background-size:17px 19px;
+                        display:block;position:absolute;left:0;width:17px;height:19px;margin:0 auto 4px;background:url('#{$imgUrl}ico/ico_lock.png') 0 0/17px 19px no-repeat;content:'';
                     }
                 }            
             }
@@ -1265,21 +1296,21 @@ button.btn_md_second {
     overflow:hidden;
 }
 .auto_overflow_wrap.active>.auto_overflow_contents {
-    max-height:none!important;
+    max-height:none !important;
 }
 .all_review_area {
     .no_review {
-        text-align:center;position:relative;padding:40px 15px;border-radius:4px;border-bottom:solid 1px #eaeaea;
+        position:relative;padding:40px 15px;border-bottom:solid 1px #eaeaea;border-radius:4px;text-align:center;
         .txt_msg {
-            font-size:13px;color:#767676;
+            color:#767676;font-size:13px;
             &:before {
-                content:"";display:block;width:30px;height:30px;margin:0 auto 8px;background:url('#{$imgUrl}ico/ico_info.svg') no-repeat 0 0;background-size:30px 30px;
+                display:block;width:30px;height:30px;margin:0 auto 8px;background:url('#{$imgUrl}ico/ico_info.svg') 0 0/30px no-repeat;content:"";
             }
         }
     }     
     .auto_overflow_wrap.overflow {
         &.active {
-            margin:0 ;//-20px;
+            margin:0;;
             .auto_overflow_contents {                
                 .review_comment_area {
                     .txt_review {
@@ -1292,21 +1323,21 @@ button.btn_md_second {
                 .photoreview_wrap .swiper-container {
                     width:100%;height:100%;padding:0 20px;
                 }    
-                .photoreview_wrap .swiper-container .swiper-slide img{
+                .photoreview_wrap .swiper-container .swiper-slide img {
                     width:100%;height:100%;max-width:400px;max-height:400px;
                 }
                 .photoreview_wrap .swiper-pagination-fraction {
-                    width:58px;height:25px;padding:0;border-radius:12px;font-family:'Roboto';font-weight:700;position:absolute;left:50%;transform:translateX(-50%);
+                    position:absolute;left:50%;width:58px;height:25px;padding:0;border-radius:12px;font-family:'Roboto';font-weight:700;transform:translateX(-50%);
                     .swiper-pagination-current {
-                        font-size:13px;color:#fff;line-height:24px;
+                        color:#fff;font-size:13px;line-height:24px;
                     }
                     .swiper-pagination-total {
-                        font-size:13px;color:#ccc;line-height:24px;
+                        color:#ccc;font-size:13px;line-height:24px;
                     }
                 }
                 .photoreview_wrap {
                     .swiper-pagination.swiper-pagination-fraction .swiper-pagination-total:before {
-                        content:"-";display:inline-block;margin:0 4px 0 3px;color:#ccc;
+                        display:inline-block;margin:0 4px 0 3px;color:#ccc;content:"-";
                     }
                 }    
             }                
@@ -1318,41 +1349,41 @@ button.btn_md_second {
     .review_inner {
         padding-top:20px;border-bottom:solid 1px #eaeaea;
         .review_info_area {
-            display:flex;justify-content:flex-start;align-items:center;flex-direction:row;flex-wrap:wrap;margin-bottom:12px;font-size:12px;color:rgb(118, 118, 118);	
+            display:flex;justify-content:flex-start;align-items:center;flex-direction:row;flex-wrap:wrap;margin-bottom:12px;color:#767676;font-size:12px;
             .txt_user {
-                margin-left:8px;display:inline-block;
+                display:inline-block;margin-left:8px;
             }
             .txt_date {
                 display:inline-block;
             }
             .btn_report {
-                margin-left:8px;display:inline-block;
+                display:inline-block;margin-left:8px;
             }
             .gap {
                 display:inline-block;font-size:0;text-indent:-9000em;overflow:hidden;
                 &:after {
-                    content:"";display:inline-block;width:1px;height:9px;background-color:#d5d5d5;margin:0 8px;
+                    display:inline-block;width:1px;height:9px;background-color:#d5d5d5;margin:0 8px;content:"";
                 }
             }
         }
         .review_comment_area {
             display:flex;
             .txt_review {
-                overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;height:40px;
+                height:40px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;flex:1;
             }
             .thumnail_review {
-                display:flex;width:78px;height:78px;overflow:hidden;border-radius:5px;position:relative;margin-left:10px;
+                display:flex;position:relative;width:78px;height:78px;margin-left:10px;;border-radius:5px;overflow:hidden;
                 .txt_num {
-                    position:absolute;width:16px;height:16px;bottom:0;right:0;background:#000;color:#fff;border-top-left-radius:5px;border-bottom-left-radius:0;font-size:11px;text-align:center;
+                    position:absolute;width:16px;height:16px;bottom:0;right:0;background:#000;border-top-left-radius:5px;border-bottom-left-radius:0;color:#fff;font-size:11px;text-align:center;
                 }
             }
         } 
         .btn_expand {
-                position:relative;display:inline-block;font-size:13px;color:#767676;cursor:pointer;
+            display:inline-block;position:relative;color:#767676;font-size:13px;cursor:pointer;
             .ico_circle_more {
                 display:inline-block;
                 &:after {
-                    content:"";display:inline-block;position:absolute;top:-2px;width:22px;height:22px;background:url('#{$imgUrl}ico/ico_arrow.png') no-repeat 0 0;background-size:22px auto;margin-left:2px;transform:rotate(180deg);
+                    display:inline-block;position:absolute;top:-2px;width:22px;height:22px;margin-left:2px;background:url('#{$imgUrl}ico/ico_arrow.png') 0 0/22px auto no-repeat;transform:rotate(180deg);content:"";
                 }   
             }  
             &.active {
@@ -1364,41 +1395,12 @@ button.btn_md_second {
             }        
         }
         .review_more_area {
-            margin-bottom:16px;display:flex;justify-content:space-between;
+            display:flex;justify-content:space-between;margin-bottom:16px;
             .link_more {
-                position:relative;display:inline-block;font-size:13px;color:#595959;
+                position:relative;display:inline-block;color:#595959;font-size:13px;
                 @include icoMore(6px);
             }
-            /*.review_btn_common {
-                display:flex;font-size:13px;margin-left:auto;
-                .txt_count {
-                    color:#000;position:relative;top:2px;
-                }
-                .btn_reply {
-                    margin-left:16px;
-                    .txt_reply {
-                        position:relative;top:2px;color:rgb(118, 118, 118);
-                    }
-                }
-            }*/
         }
-        /*
-        .box_msg {
-            background:#f7f7f7;text-align:center;position:relative;padding:16px 15px;margin-bottom:20px;border-radius:4px;
-            .txt_msg {
-                &:before {
-                    content:"";
-                    display:block;width:17px;height:17px;margin:0 auto 4px;background:url('#{$imgUrl}ico/ico_info.svg') no-repeat 0 0;background-size:17px 17px;
-                }
-                font-size:13px;color:#767676;word-break:keep-all;
-            }
-            .txt_secret {
-                font-size:13px;color:#767676;padding-left:22px;position:relative;
-                &:before {
-                    position:absolute;left:0;content:'';display:block;width:17px;height:19px;margin:0 auto 4px;background:url('#{$imgUrl}ico/ico_lock.png') no-repeat 0 0;background-size:17px 19px;
-                }
-            }            
-        }*/
     }  
     .review_inner {
         .auto_overflow_contents {
@@ -1407,19 +1409,19 @@ button.btn_md_second {
                 .review_comment_area {
                     position:relative;
                     .prod_kind {
-                        position:absolute;line-height:20px;font-size:13px;color:#767676;left:0;top:0;
+                        position:absolute;left:0;top:0;color:#767676;font-size:13px;line-height:20px;
                     }
                     .txt_review {
                         margin-bottom:12px;
                     }
                     .prod_kind + .txt_review {
-                        padding-top:32px;height:72px;
+                        height:72px;padding-top:32px;
                     }
                 }
             }
         }
         .auto_overflow_footer {
-            margin-bottom:12px;margin-top: 12px;
+            margin-top:12px;margin-bottom:12px;
         }
     }
 }
@@ -1428,15 +1430,15 @@ button.btn_md_second {
     .gap {
         display:inline-block;font-size:0;text-indent:-9000em;overflow:hidden;
         &::after {
-           content:"";display:inline-block;width:4px;height:9px;background:url('#{$imgUrl}ico/ico_slash.png') no-repeat 0 0;background-size:4px 8px;
+            display:inline-block;width:4px;height:9px;background:url('#{$imgUrl}ico/ico_slash.png') 0 0/4px 8px no-repeat;content:"";
         }    
     }
     .txt_value {
-        font-size:12px;color:rgb(118,118,118);margin-left:6px;
+        margin-left:6px;color:#767676;font-size:12px;
         .ico_quotation {
-            background:url(#{$imgUrl}ico/ico_quotation.svg) no-repeat 0 -1px;background-size:13px 13px;padding-left:13px;margin-left:3px;
+            margin-left:3px;padding-left:13px;background:url(#{$imgUrl}ico/ico_quotation.svg) 0 -1px/13px no-repeat;   
             .txt_reaction {
-                font-size:13px;margin-left:5px;color:#474C98;
+                margin-left:5px;color:#474c98;font-size:13px;
             }
         }
     }
@@ -1447,7 +1449,7 @@ button.btn_md_second {
     .list_item {
         margin:0 -10px;
         .item {
-            display:inline-block;width:50%;padding:0 10px;margin-bottom:24px;
+            display:inline-block;width:50%;margin-bottom:24px;padding:0 10px;
             .figure {
                 position:relative;display:block;width:100%;height:100%;border-radius:4px;overflow:hidden;
             }   
@@ -1456,7 +1458,7 @@ button.btn_md_second {
                     display:block;margin-top:12px;
                 }
                 .txt_desc {
-                    margin-top:4px;display:block;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;-webkit-box-flex:1;flex:1;height:40px            
+                    display:block;height:40px;margin-top:4px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;-webkit-box-flex:1;flex:1;         
                 }
             }
             .price_wrap {
@@ -1464,7 +1466,7 @@ button.btn_md_second {
                 .real_price {
                     display:block;font-size:12px;text-decoration:line-through;
                     .txt_value {
-                        color:#767676;font-family:Roboto;
+                        font-family:Roboto;color:#767676;
                     }
                     .txt_unit {
                         color:#767676;
@@ -1473,20 +1475,20 @@ button.btn_md_second {
                 .sale_price {
                     display:block;font-size:15px;
                     .txt_per {
-                        font-family:Roboto;font-weight:700;color:#DA2128;font-weight:700;
+                        font-family:Roboto;color:#da2128;font-weight:700;
                     }
                     .txt_value {
-                        font-family:Roboto;font-weight:700;font-weight:700;
+                        font-family:Roboto;font-weight:700;
                     }
                 }
             }
             .review_good_wrap {
                 display:flex;justify-content:flex-start;
                 .total_review {
-                    padding-left:20px;position:relative;
+                    position:relative;padding-left:20px;
                     .ico_toal_review {
                         &:after {
-                            content:"";position:absolute;left:0;top:2px;display:inline-block;width:14px;height:15px;background:url('#{$imgUrl}ico/ico_total_review.png') no-repeat 0 0;background-size:14px auto;
+                            display:inline-block;position:absolute;left:0;top:2px;width:14px;height:15px;background:url('#{$imgUrl}ico/ico_total_review.png') 0 0/14px auto no-repeat;content:"";
                         }
                     }
                     .txt_total {
@@ -1496,9 +1498,9 @@ button.btn_md_second {
                 .total_good {
                     margin-left:16px;
                     .ico_total_good {
-                        padding-left:20px;position:relative;
+                        position:relative;padding-left:20px;
                         &:after {
-                            content:"";position:absolute;left:0;top:2px;display:inline-block;width:14px;height:14px;background:url('#{$imgUrl}ico/ico_heart.png') no-repeat 0 0;background-size:14px 14px;
+                            display:inline-block;position:absolute;left:0;top:2px;width:14px;height:14px;background:url('#{$imgUrl}ico/ico_heart.png') 0 0/14px no-repeat;content:"";
                         }
                     }
                     .txt_total {
@@ -1522,17 +1524,17 @@ button.btn_md_second {
                             color:#fff;font-size:13px;line-height:19px;text-align:center;font-weight:700;
                         }
                         .link_replacement {
-                            margin-top:11px;display:inline-block;width:auto;height:24px;padding-right:4px;padding-left:4px;background:#fff;border:solid 1px #ccc;border-radius:4px;font-size:12px;position:relative;
+                            display:inline-block;position:relative;width:auto;height:24px;margin-top:11px;padding-right:4px;padding-left:4px;background:#fff;border:solid 1px #ccc;border-radius:4px;font-size:12px;
                             .ico_more {
                                 display:inline-block;width:5px;height:9px;
                                 &:after {
-                                    content:"";display:inline-block;width:5px;height:9px;position:absolute;right:3px;top:6px;background:url('#{$imgUrl}ico/ico_more.png') no-repeat 0 0;background-size:5px auto;                     
+                                    display:inline-block;position:absolute;right:3px;top:6px;width:5px;height:9px;background:url('#{$imgUrl}ico/ico_more.png') 0 0/5px auto no-repeat;content:"";                 
                                 }
                             }
                         }                                   
                     }    
                     &:after {
-                        content:"";display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.3);
+                        display:block;position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.3);content:"";
                     }
                 }
             }
@@ -1651,7 +1653,7 @@ button.btn_md_second {
                             .sale_price {
                                 display:block;font-size:15px;
                                 .txt_per {
-                                    font-family:Roboto;font-weight:700;color:#DA2128;font-weight:700;
+                                    font-family:Roboto;font-weight:700;color:#da2128;font-weight:700;
                                 }
                                 .txt_value {
                                     font-family:Roboto;font-weight:700;font-weight:700
@@ -1848,7 +1850,7 @@ button.btn_md_second {
                 position:absolute;left:0;top:1px;width:100%;height:100%;text-align:center;z-index:1;overflow:hidden;
             }
             .app_view_btn {   
-                display:inline-flex;opacity:1;line-height:19px;color:#DA2128;font-size:14px;border:1px solid #DA2128;padding:8px 19px 8px;border-radius:20px;margin:3px auto 0 auto;transition:opacity 0.5s;
+                display:inline-flex;opacity:1;line-height:19px;color:#da2128;font-size:14px;border:1px solid #da2128;padding:8px 19px 8px;border-radius:20px;margin:3px auto 0 auto;transition:opacity 0.5s;
             }
         }
         &.active_product {
@@ -1875,7 +1877,7 @@ button.btn_md_second {
         }
     }
     .product_info_area {
-        .tit_wrap .rating_score_wrap{
+        .tit_wrap .rating_score_wrap {
             margin-top:8px;margin-bottom:12px;
         }
     }
@@ -1908,7 +1910,7 @@ button.btn_md_second {
         }
     }
     .product_deliinfo_area .freebie_wrap {
-        background-color:#F4F4F4;border:solid 1px #000;border-radius:4px;position:relative;margin-bottom:20px;padding:16px 20px;
+        background-color:#f4f4f4;border:solid 1px #000;border-radius:4px;position:relative;margin-bottom:20px;padding:16px 20px;
         .figure {
             position:absolute;left:20px;top:46px;transform:translateY(-50%);
         }
@@ -1917,10 +1919,10 @@ button.btn_md_second {
             .title {
                 font-size:14px;font-weight:700;color:#000;
             }
-            &:nth-of-type(1){
+            &:nth-of-type(1) {
                 margin-top:0;
             }
-            span{
+            span {
                 word-break:keep-all;
             }
         }
@@ -1929,7 +1931,7 @@ button.btn_md_second {
         display:flex;flex-flow:row nowrap;justify-content:flex-start;margin-bottom:24px;
         .thumnail_notice {
             width:99px;position:relative;height:0;padding-top:99px;
-            img{
+            img {
                 position:absolute;top:0;left:0;
             }
         }
@@ -1937,10 +1939,10 @@ button.btn_md_second {
             width:calc(100% - 99px);padding-left:16px;
             .txt_tit {
                 display:flex;position:relative;
-                div{
+                div {
                     font-size:15px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-bottom:8px;
                 }
-                img{
+                img {
                   margin-left:3px;
                   &.ico_live {
                       margin-left:8px;width:48px;height :33px;margin-top:-11px;
@@ -1951,12 +1953,12 @@ button.btn_md_second {
                 margin-top:-2px;font-size:13px;line-height:19px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:keep-all;font-weight:700;
             }
             .link_live {
-                display:inline-block;line-height:19px;color:#767675;font-size:12px;font-weight:400;margin-top:13px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+                display:inline-block;line-height:19px;color:#767676;font-size:12px;font-weight:400;margin-top:13px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
             }
         }
     }
     .info_restrict_area {
-        margin-top:8px;padding:20px;background-color:#FFF4F1;display:flex;flex-flow:row nowrap;
+        margin-top:8px;padding:20px;background-color:#fff4f1;display:flex;flex-flow:row nowrap;
         .restrict_icon {
             width:40px;height:40px;margin-right:10px;flex-shrink:0;background:url('#{$imgUrl}ico/restrict_notice.svg') no-repeat center center / 99%;
         }
@@ -2008,15 +2010,15 @@ button.btn_md_second {
 
 /* 팝업 */
 .devide_border {
-    display:block;width:100%;height:1px;padding:0;border:none;background-color:#D5D5D5;margin:24px 0;
+    display:block;width:100%;height:1px;padding:0;border:none;background-color:#d5d5d5;margin:24px 0;
   }
 .coupon_box {
-    width:100%;padding:20px 24px 15px;border:1px solid #D5D5D5;border-radius:10px;position:relative;letter-spacing:-0.01em;
+    width:100%;padding:20px 24px 15px;border:1px solid #d5d5d5;border-radius:10px;position:relative;letter-spacing:-0.01em;
     + .coupon_box {
         margin-top:16px;
     }
     .t_sale {
-        font-size:20px;font-weight:700;color:#DA2128;
+        font-size:20px;font-weight:700;color:#da2128;
     }
     .t_name {
         font-size:14px;font-weight:700;color:#000;
@@ -2031,7 +2033,7 @@ button.btn_md_second {
         margin-top:8px;font-size:11px;color:#767676;
     }
     .btn_coupon_download {
-        height:35px;width:100%;margin-top:17px;padding-top:16px;border:none;border-top:1px dotted #D5D5D5;font-size:13px;font-weight:700;color:#DA2128;
+        height:35px;width:100%;margin-top:17px;padding-top:16px;border:none;border-top:1px dotted #d5d5d5;font-size:13px;font-weight:700;color:#da2128;
         .ico_coupon {
             width:18px;height:18px;margin-right:5px;background:url('#{$imgUrl}guide/ico_coupon_down.svg') no-repeat 50% 50% / 16px;
         }
@@ -2051,7 +2053,7 @@ button.btn_md_second {
         right:-17px;
     }
     &.disabled {
-        background-color:#F2F2F2;
+        background-color:#f2f2f2;
         .t_sale,
         .t_name,
         .t_guide,
@@ -2335,7 +2337,7 @@ button.btn_md_second {
     .caption {
         margin:0 0 0 8px;vertical-align:top;font-size:0;position:relative;
         .val {
-            font-size:20px;line-height:32px;letter-spacing:-.01em;color:#DA2128;font-weight:700;line-height:1;
+            font-size:20px;line-height:32px;letter-spacing:-.01em;color:#da2128;font-weight:700;line-height:1;
         }
         .total {
             padding-top:5px;margin-left:6px;font-size:14px;line-height:22px;letter-spacing:-.01em;color:#767676;font-weight:400;line-height:1;
@@ -2430,7 +2432,7 @@ button.btn_md_second {
 }
 .multi_review_area {
     margin-top:20px;
-    .right_area .form_sel select{
+    .right_area .form_sel select {
       font-size:13px;
     }
 }
@@ -2441,7 +2443,7 @@ button.btn_md_second {
     }
     .badge_line_gray {
         margin:0 8px 0 0;border-radius:10px;background-color:#fff;
-        .text{
+        .text {
             transform:translateY(1px);
         }
     }
@@ -2673,9 +2675,9 @@ button.btn_md_second {
     }
     .review_reply {
         border-top:1px solid #eaeaea;padding:12px 4px 0 4px;margin-top:20px;
-        &.reply_confirmation{
+        &.reply_confirmation {
             padding-bottom: 12px;
-            .reply_list .reply_list_item{
+            .reply_list .reply_list_item {
                 display: inline-block !important;width: 100%;
             }
         }
@@ -2698,7 +2700,7 @@ button.btn_md_second {
             margin-top:12px;
         }
     }
-    .rereply_btn_footer{
+    .rereply_btn_footer {
         padding:0 4px;
     }
     .review_more_btn_wrap {
@@ -2707,10 +2709,10 @@ button.btn_md_second {
 }
 
 /* Q & A */
-.all_qa_wrap{
+.all_qa_wrap {
     .review_inner .review_comment_area {
         padding-bottom:50px;position:relative;
-        .txt_review{
+        .txt_review {
             line-height:20px;
             &.txt_bold {
                 font-weight:700;
@@ -2722,14 +2724,14 @@ button.btn_md_second {
         .ico_circle_more {
             position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') no-repeat center center /20px;transform:rotate(180deg);
         }
-        .btn_expand.btn_up{
+        .btn_expand.btn_up {
             .ico_circle_more {
                 position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') no-repeat center center /20px;transform:rotate(0deg);
             }
         }
     }
-    .review_inner.secret_cmt{
-        .txt_review{
+    .review_inner.secret_cmt {
+        .txt_review {
             position:relative;padding-left:20px;
             &:before {
                 content:"";position:absolute;width:18px;height:18px;left:0;top:0;background:url('#{$imgUrl}ico/ico_lock.png') no-repeat center 1px /14px;
@@ -2753,14 +2755,14 @@ button.btn_md_second {
 }
 
 //장바구니 팝업(옵션 선택)
-.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap{
-    .dialog_header{
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap {
+    .dialog_header {
         padding:0;border:none;
     }
     .dialog_header .close {
         width:25px;height:25px;margin:0 auto;background:url('#{$imgUrl}guide/ico_arrow_down_light.svg') no-repeat center center /23px;
     }
-    .dialog_contents{
+    .dialog_contents {
         margin-top:0;
         .selec_lb {
             margin-bottom:12px;font-weight:500;
@@ -2769,25 +2771,25 @@ button.btn_md_second {
             margin-top:0;
         }
         .title_selec {
-            overflow:hidden;border:1px solid #D5D5D5;border-radius:6px;margin-bottom:8px;color:#767676;
+            overflow:hidden;border:1px solid #d5d5d5;border-radius:6px;margin-bottom:8px;color:#767676;
             &.active {
                 border:1px solid #000;color:#000;
             }
-            .selected_option{
+            .selected_option {
                 position:relative;padding:15px 37px 15px 14px;display:flex;flex-flow:row nowrap;
             }
-            .selec_icon{
+            .selec_icon {
                 position:absolute;display:block;width:10px;height:10px;right:17px;top:50%;margin-top:-5px;background:url('#{$imgUrl}guide/ico_arrow_right_btn.svg') no-repeat 0 center / 97%;transform:rotate(270deg);
             }
-            .selec_icon.open{
+            .selec_icon.open {
                 width:12px;background:url('#{$imgUrl}guide/ico_arrow_right_btn.svg') no-repeat 0 center / 97%;transform:rotate(90deg);
             }
-            .option_ul{
+            .option_ul {
                 max-height:200px;overflow:auto;display:none;border-top:1px solid #000;
-                li{
+                li {
                    height:50px;padding:15px 14px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;align-content:center;
                    &:active,
-                   &:hover{
+                   &:hover {
                        background-color:#F5F5F5;font-weight:500;color:#000;
                    }
                    &.act {
@@ -2815,46 +2817,46 @@ button.btn_md_second {
             }    
             + .selec_lb {
                 margin-top:20px;
-                span{
+                span {
                     color:#767676;font-size:12px;
                 }
             }
         }
-        .buy_info{
+        .buy_info {
             background:#f7f7f7;padding:16px;margin-bottom:16px;
-            .prod_nm{
+            .prod_nm {
                 padding-right:20px;position:relative;word-break:keep-all;margin-bottom:10px;
                 .close {
                     position:absolute;width:15px;height:15px;top:0;right:0;background:url('#{$imgUrl}guide/ico_close_light.svg') no-repeat center center/ 13px;
                 }
             }
-            .prod_count{
+            .prod_count {
                 display:flex;justify-content:flex-start;align-content:center;align-items:center;flex-flow:row nowrap;
-                .input_wrap{
+                .input_wrap {
                     display:flex;justify-content:flex-start;background-color:#fff;width:102px;height:36px;border-radius:6px;border:1px solid #707070;
-                    input{
+                    input {
                         width:52px;outline:none;font-weight:500;text-align:center;
                     }
                 }
-                button{
+                button {
                     display:block;width:45px;height:36px;
                 }
-                .down_btn{
+                .down_btn {
                     background:url('#{$imgUrl}guide/ico_input_down.svg') no-repeat center center/ 12px;
                 }
-                .up_btn{
+                .up_btn {
                     background:url('#{$imgUrl}guide/ico_input_up.svg') no-repeat center center/ 12px;
                 }
-                .cpon{
+                .cpon {
                     position:relative;height:30px;line-height:16px;padding:6px 10px 6px 22px;background-color:#fff;border-radius:6px;border:1px solid #707070;margin-left:8px;font-size:12px;font-weight:500;white-space:nowrap;
                     &.disabled {
-                        color:#D5D5D5;border:1px solid #D5D5D5;
+                        color:#d5d5d5;border:1px solid #d5d5d5;
                         &:before {
                             content:"";position:absolute;width:12px;height:12px;left:8px;top:8px;background:url('#{$imgUrl}guide/ico_coupon_down_gray.svg') no-repeat center center/ 10px;
                         }
                     }
-                    .highlight{
-                        color:#DA2128;margin-right:3px;
+                    .highlight {
+                        color:#da2128;margin-right:3px;
                     }
                     &:before {
                         content:"";position:absolute;width:12px;height:12px;left:8px;top:8px;background:url('#{$imgUrl}guide/ico_coupon_down_black.svg') no-repeat center center/ 10px;
@@ -2866,26 +2868,26 @@ button.btn_md_second {
             }
             + .selec_lb {
                 margin-top:20px;
-                span{
+                span {
                     color:#767676;font-size:12px;
                 }
             }
         }
-        .buy_result{
+        .buy_result {
             display:flex;justify-content:space-between;font-weight:700;padding-bottom:10px;
-            .result em{
-                color:#DA2128;line-height:26px;margin:0 3px;
+            .result em {
+                color:#da2128;line-height:26px;margin:0 3px;
             }
-            .total{
+            .total {
                 font-size:18px;line-height:26px;
-                em{
+                em {
                     margin-right:3px;
                 }
             }
         }
-        .btn_area_apply{
+        .btn_area_apply {
             padding:16px 0 6px 0;
-            button{
+            button {
                 max-width:165px;
             }
         }
@@ -3168,7 +3170,7 @@ button.btn_md_second {
         display:inline-block;position:relative;padding-right:10px;color:#595959;font-size:13px;font-weight:500;line-height:22px;
     }
     .btn_arrow:after {
-        position:absolute;right:0;top:50%;width:5px;height:5px;margin-top:-4px;background:none;border:solid #767675;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
+        position:absolute;right:0;top:50%;width:5px;height:5px;margin-top:-4px;background:none;border:solid #767676;border-width:1px 1px 0 0;transform:rotate(45deg);content:"";overflow:hidden;
     }
 
     .box_msg {
