@@ -70,7 +70,7 @@
 	.evt_products:first-of-type .prod_item:nth-of-type(#{$lank}) .rangking {
 		background-image:url('#{$imgUrl}guide/rank_hot.svg');color:#fff;
 		&.none_icon {
-			.rank_icon{
+			.rank_icon {
 				display:none;
 			}
 		}    
@@ -108,7 +108,7 @@
 			object-fit:contain;left:10%;top:10%;width:80%;height:80%;mix-blend-mode:multiply;
 		}
 		&.ob_19 {
-			transition:none;border:1px solid #000;border-radius:12px;box-sizing:border-box;mix-blend-mode:normal;
+			border:1px solid #000;border-radius:12px;box-sizing:border-box;mix-blend-mode:normal;transition:none;
 		}
 	}
 	a {
@@ -118,8 +118,7 @@
 		font-size:16px;line-height:24px;
 	}
 	.cpon {
-		display:inline-block;padding:3px 9px 2px 9px;border-radius:25px;box-sizing:border-box;font-size:12px;line-height:18px;
-		background-color:#d4ff1a;border-color:#292929;border-style:solid;border-width:2px 2px 3px 2px;font-weight:700;position:absolute;left:10px;top:10px;z-index:3;
+		display:inline-block;position:absolute;left:10px;top:10px;padding:3px 9px 2px 9px;background-color:#d4ff1a;border-color:#292929;border-style:solid;border-width:2px 2px 3px 2px;border-radius:25px;box-sizing:border-box;font-size:12px;font-weight:700;line-height:18px;z-index:3;
 	}
 }
 
@@ -147,8 +146,7 @@
 	&>div {
 		position:absolute;left:0;top:50%;width:100%;padding-top:55px;color:#000;font-size:16px;font-weight:500;line-height:24px;text-align:center;transform:translateY(-50%);
 		&:before {
-			position:absolute;left:50%;top:0;width:44px;height:44px;margin-left:-22px;background:#da2128;border:2px solid #000;box-sizing:border-box;border-radius:50%;
-			color:#fff;font-size:20px;font-weight:700;line-height:41px;text-align:center;overflow:hidden;content:"19";
+			position:absolute;left:50%;top:0;width:44px;height:44px;margin-left:-22px;background:#da2128;border:2px solid #000;border-radius:50%;box-sizing:border-box;color:#fff;font-size:20px;font-weight:700;line-height:41px;text-align:center;overflow:hidden;content:"19";
 		}
 	}
 }
@@ -299,8 +297,12 @@
 		.product_info {
 			width:376px;
 		}
-		.title { line-height:30px;min-height:auto;}
-		.price_line {margin:8px 0 -8px;}
+		.title {
+			min-height:auto;line-height:30px;
+		}
+		.price_line {
+			margin:8px 0 -8px;
+		}
 
 	}
 	.product_pic {
@@ -569,7 +571,7 @@
 }
 .swiper-container-horizontal {
 	.swiper_control,
-	.swiper_control_bk  {
+	.swiper_control_bk {
 		display:block;
 	}
 }

@@ -110,13 +110,14 @@
 
 /*** BEST FAQ ***/
 .cus_faq {
-    position:relative;padding:38px 30px 40px 30px;background-color:#6286FF;border-radius:12px;
+    position:relative;padding:38px 30px 40px 30px;background-color:#6286ff;border-radius:12px;
     .ht_tit04 {
         margin-bottom:15px;color:#fff;
     }
     .btn_txt_more {
         position:absolute;right:30px;top:48px;margin:0;
-        a, button {
+        a,
+        button {
             color:#fff;
             span:after {
                 border-color:#fff;
@@ -161,7 +162,7 @@
 
         }
         .info {
-            position:relative;display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;padding:30px 0 0 18px;max-height:40px;
+            display:-webkit-box;position:relative;max-height:40px;padding:30px 0 0 18px; text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
             &:before {
                 position:absolute;left:0px;top:30px;width:14px;height:19px;font-weight:700;content:"Q.";
             }
@@ -203,8 +204,7 @@
 .cus_info_list {
     display:flex;flex-flow:row nowrap;
     .li {
-        display:inline-block;
-        line-height:22px;
+        display:inline-block;line-height:22px;
         &.c1 {
             position:relative;margin-right:50px;padding-left:20px;font-size:15px;
             &:before {
@@ -222,7 +222,7 @@
             &:before {
                 position:absolute;left:0;top:3px;width:1px;height:14px;border-left:1px dashed #7a7a7a;content:"";
             }
-            strong{
+            strong {
                 display:inline-block;
             }
         }
@@ -422,10 +422,11 @@
     .prod_fold_tit {
         min-height:42px;
     }
-    .fold_view{
+    .fold_view {
         margin-top:18px;border-radius:6px;
         &:after {
-            display:block;content:"";clear:both;}
+            display:block;clear:both;content:"";
+        }
     }
     .fold_tit {
         .tit {
@@ -480,8 +481,8 @@
             display:block;clear:both;content:"";
         }
 
-        .txt{
-            &.qna_prod_tit{
+        .txt {
+            &.qna_prod_tit {
                 width:91%;display:inline-block;margin-top:5px;
                 .tit_prod {
                     margin-top:9px;
@@ -496,7 +497,7 @@
         }
         &.fold_d {
             margin:0 0 40px 0;border-radius:12px;
-            + .fold_question{
+            + .fold_question {
                 margin-top:0;border:0;padding-top:0;
                 &:before {
                     top:0;
@@ -571,14 +572,14 @@
         }
         .s2 {
             margin-bottom:13px;color:#000;font-size:13px;font-weight:500;line-height:19px;display:-webkit-box;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;word-break:keep-all;
-            span{
+            span {
                 font-size:12px;
-                &:nth-child(1){
+                &:nth-child(1) {
                     font-weight:700;
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     position:relative;padding-left:10px;
-                    &:before{
+                    &:before {
                         content:"";display:inline-block;clear:both;border-left:1px solid #ccc;position:absolute;left:3px;top:1px;height:10px;
                     }
                 }
@@ -631,7 +632,7 @@
     }
     .form_sel {
         float:left;
-        .ui-selectmenu-button{
+        .ui-selectmenu-button {
             width:120px;height:38px;
             .ui-selectmenu-icon {
                 top:14px;
@@ -779,12 +780,12 @@
     margin-top:10px;
 }
 
-.tbl_row_wrap .tbl_row+.tbl_row tbody tr{
-    .chk_col_item~.chk_col_item{
+.tbl_row_wrap .tbl_row+.tbl_row tbody tr {
+    .chk_col_item~.chk_col_item {
         margin-top:10px;
     }
-    &:first-child th{
-        &.has_btn_sm.table_ht_tit04{
+    &:first-child th {
+        &.has_btn_sm.table_ht_tit04 {
             padding-bottom:0;
             .ht_tit06{
                 margin-bottom:0;
@@ -792,12 +793,12 @@
         }
     }
 }
-.form_chk.mail_receive_chk{
+.form_chk.mail_receive_chk {
     margin-top:10px;
 }
-.chk_col_list{
-    + .btn_txt_more{
-        margin: -22px 0 0 293px;max-width:400px;float:left;
+.chk_col_list {
+    + .btn_txt_more {
+        float:left;max-width:400px;margin:-22px 0 0 293px;
     }
 }
 
@@ -837,7 +838,7 @@
     float:right;margin-top:-58px;
     strong {
         height:38px;padding:0 12px;font-size:13px;font-weight:400;line-height:38px;
-        em:after{
+        em:after {
             right:3px;width:14px;height:14px;margin-top:-12px;background:url('#{$imgUrl}guide/ico_comment.svg') center/100% no-repeat;
         }
     }
@@ -1008,7 +1009,7 @@
         &:nth-of-type(3n) {
             border-right:none;
         }
-        &:nth-last-of-type( -n + 3 ){
+        &:nth-last-of-type( -n + 3 ) {
             border-bottom:none;
         }
         &:before {
@@ -1048,7 +1049,8 @@
     .align_left {
         padding:19px 30px !important;
     }    
-    th:first-of-type, td:first-of-type {
+    th:first-of-type,
+    td:first-of-type {
         border-right:1px solid #d5d5d5;
     }
     [class^=bul_item_] {
@@ -1075,7 +1077,7 @@
 
 /***** 이전 주문 정보 *****/
 /** 이전 주문 정보 > 목록 페이지들 **/
-.order_his_list_wrap{
+.order_his_list_wrap {
     margin-top:40px;
     .bul_list {
         padding:0 0 40px 0;
@@ -1095,7 +1097,7 @@
         padding:0 0 27px 0;border-bottom:1px solid #eaeaea;
     }
 }
-.input_address_box{
+.input_address_box {
     width:calc(100% - 136px);
     + .input_address_search {
         width:125px;margin-left:9px;
@@ -1106,8 +1108,8 @@
 /** 주문/배송조회 목록, 주문/배송 상세정보, 주문/반품 정보, 주문취소/변경 목록 테이블 **/
 .order_his_table {
     border-top:1px solid #000;
-    table{
-        width: 100%;
+    table {
+        width:100%;
     }
     thead {
         tr {
@@ -1121,7 +1123,7 @@
         }
         td {
             position:relative;padding:20px 0 18px 0;color:#000 !important;font-size:14px !important;font-weight:500 !important;text-align:center;
-            p + span{
+            p + span {
                 display:inline-block;margin-top:4px;color:#767676 !important;font-size:13px !important;
             }
             .btn_order_area {
@@ -1134,8 +1136,8 @@
                 strong {
                     height:24px;font-size:12px;line-height:24px;padding:0 5px;border-radius:4px;
                 }
-                &:disabled{
-                    strong{
+                &:disabled {
+                    strong {
                         color:#999;
                     }
                     em {
@@ -1145,7 +1147,7 @@
             }
             button.btn_sm {
                 width:87px;padding:0 10px 1px;font-weight:400;
-                + .btn_sm{
+                + .btn_sm {
                     margin-top:5px;
                 }
             }
@@ -1157,7 +1159,7 @@
             }
         }
         .order_thumb_prod {
-            width:78px;height:78px;background-color:#f7f7f7;border-radius:6px;overflow:hidden;margin:0 auto;
+            width:78px;height:78px;margin:0 auto;background-color:#f7f7f7;border-radius:6px;overflow:hidden;
             img {
                 width:100%;height:100%;object-fit:cover;
             }
@@ -1187,7 +1189,7 @@
 /* order_processing_wrap : 주문처리 안내 */
 .order_processing_wrap {
     display:table;width:100%;margin-top:60px;padding:40px;background:#f7f7f7;border-radius:12px;box-sizing:border-box;text-align:center;
-    &:after{
+    &:after {
         clear:both;display:block;content:"";
     }
 }
@@ -1195,7 +1197,7 @@
     display:block;font-size:15px;
 }
 .order_processing_box {
-    box-sizing:border-box;display:table-cell;vertical-align:top;
+    display:table-cell;box-sizing:border-box;vertical-align:top;
     ul {
         display:inline-block;margin-top:18px;
         &:after {
@@ -1203,7 +1205,7 @@
         }
         li {
             position:relative;float:left;width:79px;padding-right:75px;text-align:center;
-            strong{
+            strong {
                 display:block;margin-top:12px;
             }
             span {
@@ -1242,13 +1244,13 @@
     display:table-cell;box-sizing:border-box;vertical-align:top;
     + .order_re_ex {
         position:relative;padding-left:80px;
-        &:before{
+        &:before {
             position:absolute;left:40px;top:0;width:1px;height:100%;border-left:1px dashed #d5d5d5;content:"";
         }
     }
     ul {
         margin-top:18px;
-        &:after{
+        &:after {
             display:block;clear:both;content:"";
         }
         li {
@@ -1262,7 +1264,7 @@
             &:before {
                 display:inline-block;width:78px;height:78px;background-color:#fff; background-size:44px 44px;background-position:50% 50%;background-repeat:no-repeat;border:1px solid #eaeaea;border-radius:50%;box-sizing:border-box;content:"";
             }
-            &:last-child:after{
+            &:last-child:after {
                 background:initial;
             }
             &:after {
@@ -1295,10 +1297,10 @@
 .order_re_ex_tit {
     font-size:15px;
 }
-.order_re_wrap{
+.order_re_wrap {
     width:52.5%;text-align:left;
 }
-.order_ex_wrap{
+.order_ex_wrap {
     width:47.5%;text-align:left;
 }
 
@@ -1353,7 +1355,7 @@
     .cus_order_bold {
         margin-bottom:20px;color:#000;font-size:14px;font-weight:500;
         dd {
-            strong{
+            strong {
                 margin-top:0;font-size:16px;font-weight:700;
             }
         }
@@ -1363,21 +1365,21 @@
     }
     .btn_more_view_box {
         margin:0 0 10px 10px;
-        em:after{
+        em:after {
             right:3px;width:4px;height:4px;margin-top:-7px;border-color:#767676;
         }
-        strong{
-            height:24px;font-size:12px;line-height:24px;padding:0 3px;border-radius:4px;
+        strong {
+            height:24px;padding:0 3px;border-radius:4px;font-size:12px;line-height:24px;
         }
     }
-    .pay_case_full{
-        dt{
-            flex: 0 0 34%;
+    .pay_case_full {
+        dt {
+            flex:0 0 34%;
         }
-        dd{
-            max-width: 194px;flex: 0 0 66%;line-height: 20px;
-            p{
-                font-size: 12px;font-weight: 400;color: #767676;line-height: 18px;margin-top: 6px;
+        dd {
+            max-width:194px;flex:0 0 66%;line-height:20px;
+            p {
+                font-size:12px;font-weight:400;color:#767676;line-height:18px;margin-top:6px;
             }
         }
 
@@ -1468,11 +1470,11 @@
 
 .info_text_box.info_text_box_bott {
     margin-top:60px;
-    .btn_set_space_between{
+    .btn_set_space_between {
         justify-content:space-between;
         .btn_more_view_box_ty02 {
             background:#fff;
-            strong{
+            strong {
                 height:23px;padding:0 1px 0 5px;font-size:12px;line-height:23px;
             }
             em:after {
@@ -1501,10 +1503,10 @@
             th {
                 padding:12px 0 8px;
             }
-            td{
+            td {
                 border-top:1px solid #eaeaea;
             }
-            .td_item_left{
+            .td_item_left {
                 padding-left:6px;padding-right:0;
             }
         }
@@ -1522,16 +1524,16 @@
             > td:last-child {
                 border-bottom-right-radius:6px;
             }
-            .td_form_chk{
+            .td_form_chk {
                 text-align:right;
                 .form_chk, .form_rdo {
                     width:22px;
                 }
             }
-            .td_item_left{
+            .td_item_left {
                 padding-left:24px;
             }
-            td{
+            td {
                 border-top:0;
             }
         }
@@ -1539,7 +1541,7 @@
             padding-bottom:0;border-bottom:0;
             .form_sel {
                 float:initial;
-                .ui-selectmenu-button{
+                .ui-selectmenu-button {
                     width:70px;
                 }
             }
@@ -1548,28 +1550,30 @@
 }
 
 /* 세금계산서 신청 > 세금계산서 신청 내역 팝업 */
-.ht_tbl_row_wrap table.ht_tbl_row .tr_text_left{
-    text-align: left;
+.ht_tbl_row_wrap table.ht_tbl_row .tr_text_left {
+    text-align:left;
     th, td {
         font-weight:500;
     }
 }
 .info_text_box_h {
-    ul{
+    ul {
         &:after {
-            display:block;clear:both;content: "";
+            display:block;clear:both;content:"";
         }
         li {
             float:left;width:calc(48% - 15px);margin-top:0 !important;
-            &:nth-child(n + 3){
+            &:nth-child(n + 3) {
                 margin-top:6px !important;
             }
-            &:nth-child(2n){
+            &:nth-child(2n) {
                 margin-left:29px;
             }
         }
     }
 }
+
+
 
 
 

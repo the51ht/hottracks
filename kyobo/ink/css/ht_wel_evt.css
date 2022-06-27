@@ -263,7 +263,7 @@
   line-height: 24px;
 }
 
-/***  또 다른 혜택 ***/
+/*** 또 다른 혜택 ***/
 /* bnf_card_area_top */
 .bnf_card_area_top {
   display: -webkit-box;
@@ -846,9 +846,9 @@
 }
 
 .pickup_notice_area {
-  padding: 0 20px;
   width: 708px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .pickup_notice_bubble {
@@ -1217,8 +1217,8 @@
 .dialog_wrapper .ui-dialog .dialog_wrap.btm_wel_wrap .dialog_contents .pop_belt_banner {
   position: relative;
   height: 120px;
-  overflow: hidden;
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.btm_wel_wrap .dialog_contents .pop_belt_banner > img {
@@ -1227,29 +1227,29 @@
 
 .dialog_wrapper .ui-dialog .dialog_wrap.btm_wel_wrap .dialog_contents .evt_pop_content {
   display: block;
-  width: calc(100% - 138px);
-  padding-left: 78px;
   position: absolute;
-  z-index: 2;
   left: 60px;
   top: calc(50% + 5px);
+  width: calc(100% - 138px);
+  padding-left: 78px;
+  color: #000;
+  text-align: left;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  text-align: left;
-  color: #000;
+  z-index: 2;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.btm_wel_wrap .dialog_contents .evt_pop_content .tag_wrap {
   position: absolute;
-  top: 5px;
   left: 0;
+  top: 5px;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.btm_wel_wrap .dialog_contents .evt_pop_content .tag_wrap .tag_item {
-  color: #ffffff;
   padding: 4px 16px;
-  background-color: #000000;
-  border: 1px solid #000000;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
   font-size: 14px;
   font-weight: 700;
   line-height: 19px;
@@ -1257,19 +1257,18 @@
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.btm_wel_wrap .dialog_contents .evt_pop_content .main_msg {
-  font-size: 24px;
   color: #000;
+  font-size: 24px;
   line-height: 35px;
   font-weight: 700;
   letter-spacing: -0.7px;
-  letter-spacing: -0.24px;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.btm_wel_wrap .dialog_contents .evt_pop_content .sub_txt {
-  font-size: 16px;
-  color: #000;
-  line-height: 24px;
   margin-top: 3px;
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: -0.16px;
 }
 
@@ -1290,34 +1289,42 @@
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .evt_pop_img {
+  position: relative;
+  height: 0;
+  padding-top: 144%;
   border-radius: 16px 16px 0 0;
   overflow: hidden;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .evt_pop_img img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .tag_wrap .tag_item {
-  color: #ffffff;
   padding: 3px 15px 2px 12px;
   background-color: #000;
   border: 1px solid #000;
+  color: #fff;
   font-size: 11px;
   font-weight: 700;
   line-height: 15px;
-  letter-spacing: -0.011px;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .evt_pop_content {
-  position: absolute;
-  top: 65px;
-  left: 0;
-  text-align: left;
   display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 65px;
   padding: 0 32px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-align: left;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_contents.img_pop .evt_pop_content .main_msg {
@@ -1353,18 +1360,18 @@
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_footer.no_margin_top button.btn_line_white {
+  position: relative;
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
   color: #767676;
   font-size: 14px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  margin: 0;
-  position: relative;
-  background: none;
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
-  border-radius: 0;
-  border: none;
 }
 
 .dialog_wrapper .ui-dialog .dialog_wrap.dialog_wrap_wel .dialog_footer.no_margin_top button.btn_line_white:first-of-type:before {

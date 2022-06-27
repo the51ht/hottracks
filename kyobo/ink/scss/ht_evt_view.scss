@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-    Event
+    Eventg {
 */
 @import "_mixins.scss";
 
@@ -151,14 +151,14 @@
         }
         .sub_txt {
             width:100%;margin-top:12px;color:#595959;line-height:19px;text-align:center;
-            &+ .main_msg{
+            &+ .main_msg {
                 margin-top: 0;
             }
         }
         .main_msg {
             font-size:20px;font-weight:700;line-height:32px;text-align:center;letter-spacing:-0.2px;margin-top: 12px;
         }
-        .sub_txt_s{
+        .sub_txt_s {
             font-size: 12px;color: #767676;text-align: center;
         }
     }
@@ -306,7 +306,7 @@
 .mdl004_banner {
     .option_box {display:none;position:absolute;right:calc(50% - 600px);bottom:20px;z-index:1;
         .btn_all {
-            display:block;position:absolute;right:5px;top:0;width:36px;height:36px;background:url('#{$imgUrl}guide/ico_plus_w.svg') no-repeat 50%/ 11px;z-index:10;
+            display:block;position:absolute;right:5px;top:0;width:36px;height:36px;background:url('#{$imgUrl}guide/ico_plus_w.svg') 50%/ 11px no-repeat;z-index:10;
         }
     }
     .swiper-pagination.swiper-pagination-fraction {
@@ -322,10 +322,10 @@
             display:block;width:36px;height:36px;border-radius:50%;
         }
         .btn_play {
-            background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_play.svg') no-repeat 50% / 8px;
+            background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_play.svg') 50% / 8px no-repeat;
         }
         .btn_pause {
-            background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_pause.svg') no-repeat 50% / 6px;
+            background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_pause.svg') 50% / 6px no-repeat;
         }
         &.play {
             .btn_play {
@@ -484,7 +484,7 @@
     }
     .rullet_circle {
         width:600px;height:600px;border-radius:50%;transform-origin:center;
-        &>img{
+        &>img {
             width:100%;
         }
     }
@@ -605,7 +605,7 @@
     clear:both;height:24px;margin-top:10px;
     .emoji {
         position:relative;float:left;width:24px;height:24px;margin-right:10px;border-radius:50%;overflow:hidden;cursor:pointer;transition:all 0.4s;
-        img{
+        img {
             width:100%;object-fit:cover;
         }
         &.off {

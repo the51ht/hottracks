@@ -292,8 +292,8 @@
 }
 
 .pop_hero_inner .hero_banner_box .img img {
-  height: 100%;
   max-width: auto;
+  height: 100%;
 }
 
 .pop_hero_inner .hero_banner_box .txt {
@@ -651,7 +651,7 @@
   }
 }
 
-/*** 핫트랙스 라이브 :.wel_live ***/
+/*** 핫트랙스 라이브 : .wel_live ***/
 .wel_live {
   padding: 65px 0 75px 0;
   background-color: #000;
@@ -1486,7 +1486,7 @@
   width: 300px;
   height: 528px;
   margin-right: -965px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/img_wel_encore_right_bg.svg") no-repeat right/100%;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/img_wel_encore_right_bg.svg") right/100% no-repeat;
   content: "";
 }
 
@@ -1536,8 +1536,8 @@
 /* wel_md_pick_cont */
 .wel_md_pick_cont {
   position: relative;
-  margin: 0 auto 0 auto;
   width: 1540px;
+  margin: 0 auto 0 auto;
 }
 
 .wel_md_pick_cont .swiper-container {
@@ -1553,9 +1553,9 @@
 }
 
 .wel_md_pick_cont .swiper-slide.swiper-slide-active {
+  width: 604px !important;
   -webkit-transform: scale(1);
           transform: scale(1);
-  width: 604px !important;
   z-index: 2;
 }
 
@@ -1673,14 +1673,6 @@
 
 .md_pick_box .product_info {
   position: relative;
-  margin: 14px -10px 0 204px;
-  background: #fff;
-  border: solid #000;
-  border-width: 2px 2px 3px 2px;
-  border-radius: 40px;
-  color: #000;
-  font-weight: 700;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1694,18 +1686,25 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 0;
   display: inline-block;
+  width: 260px;
+  margin: 14px -10px 0 204px;
+  height: 52px;
+  padding-top: 0;
+  background: #fff;
+  border: solid #000;
+  border-width: 2px 2px 3px 2px;
+  border-radius: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  text-align: center;
-  width: 260px;
-  height: 52px;
+  color: #000;
   font-size: 20px;
-  padding-top: 0;
+  font-weight: 700;
   line-height: 48px;
+  text-align: center;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+  opacity: 0;
 }
 
 .md_pick_box .product_info:before {
@@ -1803,13 +1802,13 @@
 .wel_search .ht_tit_big {
   position: relative;
   margin-bottom: 0;
-  font-size: 30px;
-  line-height: 32px;
-  font-family: 'Gmarket Sans';
-  font-weight: 500;
-  z-index: 0;
-  text-align: center;
   padding-left: 53px;
+  font-family: 'Gmarket Sans';
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  z-index: 0;
 }
 
 .wel_search .ht_tit_big:before {
@@ -1836,12 +1835,12 @@
 .wel_search_list .swiper-slide {
   width: 100%;
   height: 38px;
+  margin-bottom: 17px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 26px;
   font-weight: 500;
   line-height: 38px;
-  margin-bottom: 17px;
 }
 
 .wel_search_list .swiper-slide:last-child {
@@ -1870,10 +1869,10 @@
 .wel_search_list .swiper-slide p {
   position: relative;
   padding: 0 30px 0 42px;
+  font-size: 24px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-size: 24px;
 }
 
 .wel_search_list .swiper-slide i {
@@ -1890,8 +1889,8 @@
   right: 8px;
   top: 50%;
   content: "";
-  transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .wel_search_list .swiper-slide i.rk_up:after {
@@ -1985,14 +1984,14 @@
 
 /* wel_search_cont : 활성화 */
 .wel_search_cont {
+  position: relative;
   max-width: 582px;
+  min-height: 60px;
   margin: 15px auto 0;
+  background: #fff;
+  border: 4px solid #000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 60px;
-  background: #fff;
-  position: relative;
-  border: 4px solid #000;
 }
 
 .wel_search_cont.on {
@@ -2012,14 +2011,14 @@
 }
 
 .wel_search_cont02 {
+  position: relative;
+  min-height: 60px;
   max-width: 582px;
   margin: 15px auto 0;
+  background: #fff;
+  border: 4px solid #000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-height: 60px;
-  background: #fff;
-  position: relative;
-  border: 4px solid #000;
 }
 
 /*** 지금, 이 상품을 : .wel_now ***/
@@ -3838,12 +3837,10 @@
 
 .mus_mc_chart_cont .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -4302,9 +4299,9 @@
 }
 
 .mus_mc_new_album_cont .swiper-wrapper .swiper-slide .evt_products.row_dir .prod_item .product_pic {
+  float: left;
   width: 151px;
   padding-top: 150px;
-  float: left;
 }
 
 .mus_mc_new_album_cont .swiper-wrapper .swiper-slide .evt_products.row_dir .prod_item .product_info {
@@ -4861,8 +4858,8 @@
 
 .mus_mc_classic_msg .s1 {
   position: relative;
-  font-family: 'Gmarket Sans';
   color: #292929;
+  font-family: 'Gmarket Sans';
   font-size: 28px;
   font-weight: 700;
   line-height: 32px;
@@ -4870,7 +4867,6 @@
 
 .mus_mc_classic_msg .s1 p {
   display: inline-block;
-  position: relative;
   position: relative;
   text-align: left;
 }

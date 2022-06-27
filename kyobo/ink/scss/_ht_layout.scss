@@ -98,7 +98,7 @@ body {
     a, button {
         display:block;position:relative;font-size:13px;font-weight:400;line-height:17px;cursor:pointer;text-align:left;
     }
-    &> li  {
+    &> li {
         position:relative;padding-right:10px;border-bottom:1px solid #eaeaea;
         &:not(.view_all):before {
             position:absolute;right:0;top:15px;width:10px;height:19px;background:url('#{$imgUrl}guide/ico_arrow.svg') center/7px no-repeat;content:"";
@@ -141,7 +141,7 @@ body {
     .lnb_2dep {
         padding:3px 20px 3px 8px;line-height:19px;letter-spacing:-1px;
         &:before {
-            content:"";position:absolute;left:2px;top:10px;width:2px;height:2px;border-radius:50%;background-color:#767676;
+            position:absolute;left:2px;top:10px;width:2px;height:2px;border-radius:50%;background-color:#767676;content:"";
         }
     }
     .dep3 {
@@ -156,7 +156,7 @@ body {
 .search_btn_area {
     margin-top:15px;
     .search_btn {
-        display:flex;flex-flow:row nowrap;justify-content:flex-start;align-content:center;align-items:center;width:100%;padding:12px;padding-right:5px;margin-top:15px;border:0;border-radius:6px;background-color:#292929;font-size:13px;font-weight:500;line-height:19px;text-align:left;color:#fff;outline:0;transition:background 0.4s;
+        display:flex;flex-flow:row nowrap;justify-content:flex-start;align-content:center;align-items:center;width:100%;margin-top:15px;padding:12px 5px 12px 12px;background-color:#292929;border:0;border-radius:6px;color:#fff;font-size:13px;font-weight:500;line-height:19px;text-align:left;outline:0;transition:background 0.4s;
         &:hover {
             background-color:#000;
         }
@@ -173,7 +173,7 @@ body {
             background-image:url('#{$imgUrl}layout/ico_pen.svg');
         }
         .brand_count {
-            background-color:#fff;margin-left:6px;margin-bottom:-1px;padding:4px 6px 3px 6px;border-radius:19px;color:#000;font-size:12px;font-weight:700;line-height:12px;
+            margin-bottom:-1px;margin-left:6px;padding:4px 6px 3px 6px;background-color:#fff;border-radius:19px;color:#000;font-size:12px;font-weight:700;line-height:12px;
         }
     }
 }
@@ -394,7 +394,7 @@ body {
         &.ed {
             margin-right:0;
         }
-        button{
+        button {
             position:relative;margin-left:13px;color:#595959;
             &:before {
                 position:absolute;left:-10px;top:6px;width:1px;height:7px;background-color:#eaeaea;content:"";
@@ -402,7 +402,7 @@ body {
             &.active{
                 color:#000;font-weight:700;
             }
-            &:first-child{
+            &:first-child {
                 margin-left:0;
                 &:before {
                     display:none;
@@ -418,10 +418,10 @@ body {
 }
 
 /* Date Sort 영역 */
-.date_select_warp{
-    float: left;margin-top: 7px;
-    button{
-        font-weight: 700;font-size: 20px;line-height: 26px;
+.date_select_warp {
+    float:left;margin-top:7px;
+    button {
+        font-weight:700;font-size:20px;line-height:26px;
     }
 }
 
@@ -444,10 +444,7 @@ body {
 .evt_menu {
     display:flex;position:relative;margin-bottom:0 !important;padding-top:30px;padding-bottom:15px;font-size:14px;justify-content:space-between;z-index:3;
     .left_txt_sum {
-        flex-shrink:0;
-        line-height:20px;
-        letter-spacing:-0.01em;
-        color:#595959;
+        flex-shrink:0;line-height:20px;color:#595959;
     }
     a:last-of-type:after {
         display:none;
@@ -464,7 +461,7 @@ body {
             padding-right:0;
         }
         &:after {
-            display:block;position:absolute;right:-1px;top:5px;width:1px;height:8px;background-color:rgb(213, 213, 213);content:'';
+            display:block;position:absolute;right:-1px;top:5px;width:1px;height:8px;background-color:#d5d5d5;content:'';
         }
     }
     .active {
@@ -504,3 +501,4 @@ body {
 
 
 
+ 
