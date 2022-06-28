@@ -1780,3 +1780,63 @@ $(function(){
 
 
 
+
+
+
+
+
+/* 추후 위치 이동 */
+function setSearchInputNew(wrap, input) {
+    wrap = wrap || '.form_ip_search';
+    input = input || '.form_ip';
+
+    var searchWrap, searchIp, clearBtn;
+
+    if($(wrap).length > 0){
+        $(wrap).each(function(){
+            searchWrap = $(this);
+            searchIp = $(this).find(input);
+            clearBtn = $(this).find('.btn_ip_clear');
+
+            if(searchIp.val().length > 0 ) searchWrap.addClass('value');
+
+            clearBtn.off('click').on('click', function(){
+                searchWrap = $(this).closest(wrap);
+                searchWrap.find(input).val('').focus();
+                searchWrap.removeClass('value');
+
+            })
+
+            searchIp.on({
+                'propertychange change input paste': function () {
+                    searchWrap = $(this).closest(wrap);
+                    if($(this).val().length > 0 ) {
+                        searchWrap.addClass('value');
+                    } else{
+                        searchWrap.removeClass('value');
+                    }
+                },
+                'focusin': function () {
+                    searchWrap = $(this).closest(wrap);
+
+                    if (!searchWrap.hasClass('focus')) searchWrap.addClass('focus');
+                },
+                'focusout': function () {
+                    searchWrap = $(this).closest(wrap);
+
+                    if (searchWrap.hasClass('focus')) searchWrap.removeClass('focus');
+                }
+            });
+        });
+
+    }
+}
+
+$(function(){
+    setSearchInputNew();
+});
+
+
+
+
+
