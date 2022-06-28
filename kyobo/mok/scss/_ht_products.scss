@@ -207,6 +207,19 @@
 }
 
 
+
+/* 이미지 리사이징 */
+.ob_contain {
+	left:10% !important;top:10% !important;;width:80% !important;height:80% !important;object-fit:contain !important;
+	&.ob_19 {
+		left:0 !important;top:0 !important;width:100% !important;height:100% !important;object-fit:cover !important;mix-blend-mode:normal !important;
+	}
+}
+.ob_19 {
+	object-fit:cover !important;mix-blend-mode:normal !important;border:1px solid #000;border-radius:8px;
+}
+
+
 //스왑 기능 없을때
 .nonswipe {
 	padding-right:0px !important;
@@ -562,7 +575,14 @@
 	.product_pic:before {
 		display:none;
 	}
+	.product_info {
+		width:100% !important;margin-left:0 !important;
+	}
+	.prod_item {
+		margin-left:0 !important;
+	}
 }
+
 .show_bubble {
 	display:block;
 }
@@ -585,7 +605,7 @@
 			}
         }
         .rank_icon {
-            width:10px;height:15px;margin-left:2px;margin-top:-1px;
+            display:none;
 		}
         .rank {
             display:block;letter-spacing:-0.03em;
@@ -602,6 +622,13 @@
         &.same .rank_icon:before {
             content:"";position:absolute;width:7px;height:2px;right:14px;background-color:#000;top:50%;left:0;margin-top:-2px;
         }
+		&.down,
+		&.up,
+		&.same {
+			.rank_icon {
+				display:block;width:10px;height:15px;margin-left:2px;margin-top:-1px;
+			}
+		}
     }
     @for $lank from 1 through 5 {
         .prod-wrapper:first-of-type .prod_item:nth-of-type(#{$lank}) .rangking {
@@ -614,8 +641,10 @@
             .rank {
                 display:block;
 			}
+			/*
             .rank_icon {
-                display:block;width:10px;}
+                display:block;width:10px;
+			}*/
             &.down .rank_icon {
                 background:url('#{$imgUrl}guide/rank_hot_down.svg') no-repeat center center / 9px;
 

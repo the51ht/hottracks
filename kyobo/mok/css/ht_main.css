@@ -28,7 +28,7 @@ $imgUrl : "../images/";*/
   top: 0;
   width: 25px;
   height: 25px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_plus_w.svg") no-repeat 50%/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_plus_w.svg") 50%/9px no-repeat;
   z-index: 10;
 }
 
@@ -58,11 +58,11 @@ $imgUrl : "../images/";*/
 }
 
 .wel_hero_banner .play_pause_box .btn_play {
-  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_play.svg") no-repeat 50%/7px;
+  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_play.svg") 50%/7px no-repeat;
 }
 
 .wel_hero_banner .play_pause_box .btn_pause {
-  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_pause.svg") no-repeat 50%/5px;
+  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_pause.svg") 50%/5px no-repeat;
 }
 
 .wel_hero_banner .play_pause_box.play .btn_play {
@@ -505,11 +505,10 @@ $imgUrl : "../images/";*/
   left: 50%;
   bottom: -38px;
   width: 100%;
-  text-align: left;
-  z-index: 2;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   text-align: center;
+  z-index: 2;
 }
 
 .wel_today .wel_today_balloon span {
@@ -534,10 +533,10 @@ $imgUrl : "../images/";*/
   border-bottom: 8px solid #000;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  content: "";
-  z-index: 2;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  content: "";
+  z-index: 2;
 }
 
 .wel_today .wel_today_balloon span:after {
@@ -549,10 +548,10 @@ $imgUrl : "../images/";*/
   border-bottom: 8px solid #d4ff1a;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  content: "";
-  z-index: 2;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  content: "";
+  z-index: 2;
 }
 
 /* wel_today_cont */
@@ -571,6 +570,7 @@ $imgUrl : "../images/";*/
 }
 
 .wel_today_cont .swiper-slide:before {
+  display: none;
   position: absolute;
   right: -26%;
   bottom: 125px;
@@ -578,13 +578,12 @@ $imgUrl : "../images/";*/
   height: 28%;
   background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/wel_tod_banner_bubble.svg") no-repeat center/95%;
   content: '';
-  z-index: 3;
   opacity: 0;
   -webkit-transform: translateY(15px) rotate(15deg);
           transform: translateY(15px) rotate(15deg);
   -webkit-transition: all 0.1s 0s;
   transition: all 0.1s 0s;
-  display: none;
+  z-index: 3;
 }
 
 .wel_today_cont .swiper-slide.swiper-slide-active {
@@ -1895,14 +1894,12 @@ $imgUrl : "../images/";*/
 
 .li_ty .li .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   mix-blend-mode: multiply;
 }
 
@@ -2426,9 +2423,9 @@ $imgUrl : "../images/";*/
   position: absolute;
   right: 8px;
   top: 50%;
-  content: "";
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  content: "";
 }
 
 .wel_search_list .swiper-slide i.rk_up:after {
@@ -3623,12 +3620,12 @@ $imgUrl : "../images/";*/
 
 .wel_category_cont .swiper-slide .curation_box .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: auto;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wel_category_cont .swiper-slide .curation_box .txt {
@@ -3703,14 +3700,12 @@ $imgUrl : "../images/";*/
 
 .li_resp_ty .li .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .li_resp_ty .li:first-child {
@@ -4003,7 +3998,6 @@ $imgUrl : "../images/";*/
   padding-top: 100%;
   background: #f7f7f7;
   border-radius: 8px;
-  overflow: hidden;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
   -webkit-transform: scale(0.7);
@@ -4012,18 +4006,17 @@ $imgUrl : "../images/";*/
   transition: -webkit-transform 0.4s 0s;
   transition: transform 0.4s 0s;
   transition: transform 0.4s 0s, -webkit-transform 0.4s 0s;
+  overflow: hidden;
 }
 
 .mus_mc_reserved_cont .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .mus_mc_reserved_cont .img:before {
@@ -4521,14 +4514,12 @@ $imgUrl : "../images/";*/
 
 .mus_mc_order_box .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .mus_mc_order_box .img:before {
@@ -4851,10 +4842,10 @@ $imgUrl : "../images/";*/
   width: 118px;
   height: 80px;
   background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/main/ico_mus_mc_fan_cont.svg") center/100% no-repeat;
-  content: "";
   opacity: 0;
   -webkit-transform: translateY(15px);
           transform: translateY(15px);
+  content: "";
   -webkit-transition: all 0.4s 0s;
   transition: all 0.4s 0s;
 }
@@ -4920,14 +4911,12 @@ $imgUrl : "../images/";*/
 
 .mus_mc_fan_box .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .mus_mc_fan_box .txt {
@@ -5070,14 +5059,12 @@ $imgUrl : "../images/";*/
 
 .mus_mc_pop_img .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .mus_mc_pop_img .txt {
@@ -5323,14 +5310,12 @@ $imgUrl : "../images/";*/
 
 .mus_mc_lpshop_cont .swiper-slide .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .mus_mc_lpshop_cont .swiper-slide:first-child {
@@ -5389,8 +5374,8 @@ $imgUrl : "../images/";*/
   width: 100%;
   height: 100%;
   border: 2px solid #000;
-  content: "";
   opacity: 0;
+  content: "";
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
@@ -5505,7 +5490,9 @@ $imgUrl : "../images/";*/
   bottom: 4px !important;
 }
 
-.mus_mc_special_cont .company, .mus_mc_special_cont .title, .mus_mc_special_cont .final_price {
+.mus_mc_special_cont .company,
+.mus_mc_special_cont .title,
+.mus_mc_special_cont .final_price {
   color: #fff;
   font-size: 12px;
   line-height: 18px;
@@ -5651,7 +5638,7 @@ $imgUrl : "../images/";*/
           transition-delay: 0.3s;
 }
 
-/** 이사 예정 **/
+/** cont_wrap **/
 .cont_wrap .mdl_selec_list_wrap:last-child {
   padding-bottom: 0;
 }
