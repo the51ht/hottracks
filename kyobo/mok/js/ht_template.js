@@ -1569,7 +1569,7 @@ function musSpecial(){
         slidesPerView: 3,
         spaceBetween: 15,
         slidesPerGroup: 3,
-        loop: true,
+        loop:false,
         loopFillGroupWithBlank:false,
         loopsSlide:1,
         /*

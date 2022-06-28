@@ -1303,7 +1303,7 @@ function musSpecial(){
         slidesPerView: 3,
         spaceBetween: 36,
         slidesPerGroup: 3,
-        loop: true,
+        loop:false,
         loopsSlide:3,
         navigation: {
             nextEl: '.mus_mc_special_cont .swiper-button-next',
