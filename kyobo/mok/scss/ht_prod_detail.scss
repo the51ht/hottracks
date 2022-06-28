@@ -93,7 +93,7 @@
     cursor:pointer;
 }
 
-/*btn size*/
+/* btn size */
 a.btn_md_second, 
 button.btn_md_second {
     height:36px;padding:9px 0 8px 1px;border-radius:4px;font-size:13px;line-height:19px;letter-spacing:-.01em;
@@ -1566,25 +1566,66 @@ button.btn_md_second {
 }
 
 /* 불릿 아이템 */
-[class^=bul_item_] {position:relative;font-size:14px;line-height:22px;letter-spacing:-.01em;color:#595959;font-weight:400;}
-[class^=bul_item_]+[class^=bul_item_] {margin-top:8px;}
-[class^=bul_item_] .bul_list {margin-top:10px;}
-[class^=bul_item_] .btn_text_link {display:inline;color:inherit;font-size:inherit;line-height:inherit;}
-[class^=bul_item_] .btn_text_link .text {display:inline;text-decoration:underline;}
-[class^=bul_item_].font_size_xs {font-size:13px;line-height:19px;letter-spacing:-.01em;/*TODO :디자인 수급 후 수정*/}
-[class^=bul_item_].font_size_xs+.font_size_xs {margin-top:6px;}
-[class^=bul_item_].font_size_xs .bul_list {margin-top:6px;}
-[class^=bul_item_].font_size_xxs {padding-left:6px;font-size:12px;line-height:18px;letter-spacing:-.01em;}
-[class^=bul_item_].font_size_xxs:before {width:2px;height:2px;}
-[class^=bul_item_].font_size_xxs+.font_size_xxs {margin-top:4px;}
-[class^=bul_item_].font_size_xxs .bul_list {margin-top:4px;}
-[class^=bul_item_].colBlack {color:#000;}
-.bul_item_dot {padding-left:9px;.txt_primary {  color:#474c98 !important;}}
-.bul_item_dot:before {content:"";display:block;position:absolute;left:0;top:7px;width:3px;height:3px;border-radius:50%;background-color:#767676;}
-.bul_item_asterisk {color:#767676;padding-left:8px;}
-.bul_item_asterisk:before {content:"*";color:#474c98;position:absolute;left:0;}
-.bul_item_branch {padding-left:11px;}
-.bul_item_branch:before {content:"";display:block;position:absolute;left:0;top:5px;width:6px;height:6px;background-position:center;background-repeat:no-repeat;background-image:url('#{$imgUrl}bul_branch_mok.png');background-size:6px 6px;}
+[class^=bul_item_] {
+    position:relative;color:#595959;font-size:14px;font-weight:400;line-height:22px;letter-spacing:-.01em;
+}
+[class^=bul_item_]+[class^=bul_item_] {
+    margin-top:8px;
+}
+[class^=bul_item_] .bul_list {
+    margin-top:10px;
+}
+[class^=bul_item_] .btn_text_link {
+    display:inline;color:inherit;font-size:inherit;line-height:inherit;
+}
+[class^=bul_item_] .btn_text_link .text {
+    display:inline;text-decoration:underline;
+}
+[class^=bul_item_].font_size_xs {
+    font-size:13px;line-height:19px;letter-spacing:-.01em;/*TODO :디자인 수급 후 수정*/
+}
+[class^=bul_item_].font_size_xs+.font_size_xs {
+    margin-top:6px;
+}
+[class^=bul_item_].font_size_xs .bul_list {
+    margin-top:6px;
+}
+[class^=bul_item_].font_size_xxs {
+    padding-left:6px;font-size:12px;line-height:18px;letter-spacing:-.01em;
+}
+[class^=bul_item_].font_size_xxs:before {
+    width:2px;height:2px;
+}
+[class^=bul_item_].font_size_xxs+.font_size_xxs {
+    margin-top:4px;
+}
+[class^=bul_item_].font_size_xxs .bul_list {
+    margin-top:4px;
+}
+[class^=bul_item_].colBlack {
+    color:#000;
+}
+.bul_item_dot {
+    padding-left:9px;
+    .txt_primary {
+        color:#474c98 !important;
+    }
+}
+.bul_item_dot:before {
+    display:block;position:absolute;left:0;top:7px;width:3px;height:3px;border-radius:50%;background-color:#767676;content:"";
+}
+.bul_item_asterisk {
+    color:#767676;padding-left:8px;
+}
+.bul_item_asterisk:before {
+    position:absolute;left:0;color:#474c98;content:"*";
+}
+.bul_item_branch {
+    padding-left:11px;
+}
+.bul_item_branch:before {
+    display:block;position:absolute;left:0;top:5px;width:6px;height:6px;;background:url('#{$imgUrl}bul_branch_mok.png') center/6px no-repeat;content:"";
+}
 
 
 .hotpickslide_wrap {
@@ -1600,12 +1641,12 @@ button.btn_md_second {
 }
 .hotpickslide_wrap {
     .swiper-pagination-fraction {
-        font-size:0;padding:3px 0;background:rgba(0,0,0,0.3);
+        padding:3px 0;background:rgba(0,0,0,0.3);font-size:0;
     }    
 }
 .photoreview_wrap {
     .swiper-pagination-fraction {
-        font-size:0;padding:3px 0;background:rgba(0,0,0,.3);
+        padding:3px 0;background:rgba(0,0,0,.3);font-size:0;
     }
 }
 
@@ -1613,18 +1654,18 @@ button.btn_md_second {
 .item_replacement {
     float:left;width:100%;margin-bottom:24px;
     .replacement_wrap {
-        background:#fff4f1;padding:12px 0 32px 0;margin:0 -10px;position:relative;
+        position:relative;margin:0 -10px;padding:12px 0 32px 0;background:#fff4f1;
         &:after {
-            content:"";position:absolute;left:20px;top:-11px;width:24px;height:12px;display:inline-block;background:url('#{$imgUrl}ico/ico_arrow_pink.png');background-size:24px auto;
+            display:inline-block;position:absolute;left:20px;top:-11px;width:24px;height:12px;background:url('#{$imgUrl}ico/ico_arrow_pink.png');background-size:24px auto;content:"";
         }
         .tit_con_area {
             padding-left:20px;
         }
         .list_replacement_outer {
             .list_replacement {
-                display:flex;overflow-x:scroll;width:auto;padding-left:20px;
+                display:flex;width:auto;padding-left:20px;overflow-x:scroll;
                 li {
-                    width:140px;margin-right:16px;display:inline-block;
+                    display:inline-block;width:140px;margin-right:16px;
                     a {
                         display:block;
                         .figure {
@@ -1636,7 +1677,7 @@ button.btn_md_second {
                                 display:block;margin-top:12px;
                             }
                             .txt_desc {
-                                margin-top:4px;display:block;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;-webkit-box-flex:1;flex:1;                               
+                                display:block;margin-top:4px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;-webkit-box-flex:1;flex:1;                               
                             }
                         }
                         .price_wrap {
@@ -1653,20 +1694,20 @@ button.btn_md_second {
                             .sale_price {
                                 display:block;font-size:15px;
                                 .txt_per {
-                                    font-family:Roboto;font-weight:700;color:#da2128;font-weight:700;
+                                    color:#da2128;font-family:Roboto;font-weight:700;
                                 }
                                 .txt_value {
-                                    font-family:Roboto;font-weight:700;font-weight:700
+                                    font-family:Roboto;font-weight:700;
                                 }
                             }
                         }
                         .review_good_wrap {
                             display:flex;justify-content:flex-start;width:140px;
                             .total_review {
-                                padding-left:20px;position:relative;
+                                position:relative;padding-left:20px;
                                 .ico_toal_review {
                                     &:after {
-                                        content:"";position:absolute;left:0;top:2px;display:inline-block;width:14px;height:15px;background:url('#{$imgUrl}ico/ico_total_review.png') no-repeat 0 0;background-size:14px auto;
+                                        display:inline-block;position:absolute;left:0;top:2px;width:14px;height:15px;background:url('#{$imgUrl}ico/ico_total_review.png') 0 0/14px auto no-repeat;content:"";
                                     }
                                 }
                                 .txt_total {
@@ -1678,7 +1719,7 @@ button.btn_md_second {
                                 .ico_total_good {
                                     padding-left:20px;position:relative;
                                     &:after {
-                                        content:"";position:absolute;left:0;top:2px;display:inline-block;width:14px;height:14px;background:url('#{$imgUrl}ico/ico_heart.png') no-repeat 0 0;background-size:14px 14px;
+                                        display:inline-block;position:absolute;left:0;top:2px;width:14px;height:14px;background:url('#{$imgUrl}ico/ico_heart.png') 0 0/14px 14px no-repeat;content:"";
                                     }           
                                 }
                                 .txt_total {
@@ -1702,18 +1743,16 @@ button.btn_md_second {
     }
 }
 .btn_more_area {
-    padding-top:20px;display:flex;justify-content:center;padding-bottom:20px;
+    display:flex;justify-content:center;padding-bottom:20px;padding-top:20px;
     .btn_expand {
-        position:relative;display:inline-block;font-size:13px;color:#767676;
-        cursor:pointer;
+        position:relative;display:inline-block;color:#767676;font-size:13px;cursor:pointer;
         .txt {
-            font-size:15px;color:#767676;
-            font-weight:500;
+            color:#767676;font-size:15px;font-weight:500;
         }
         .ico_circle_more {
             display:inline-block;
             &:after {
-                content:"";display:inline-block;position:absolute;top:-2px;width:24px;height:24px;background:url('#{$imgUrl}ico/ico_arrow_large.png') no-repeat 0 0;background-size:24px auto;margin-left:2px;
+                display:inline-block;position:absolute;top:-2px;width:24px;height:24px;margin-left:2px;background:url('#{$imgUrl}ico/ico_arrow_large.png') no-repeat 0 0/24px auto no-repeat;content:"";
             }
         }
         &.active {
@@ -1737,7 +1776,7 @@ button.btn_md_second {
 
 /* 도서산간 배송메세지 */
 .info_all_area {
-    border-radius:4px;background-color:#f7f7f7;padding:20px;margin-top:8px;
+    margin-top:8px;padding:20px;background-color:#f7f7f7;border-radius:4px;
     &:first-of-type {
         margin-top:0;
     }
@@ -1749,63 +1788,63 @@ button.btn_md_second {
     .tit_subin_area {
         margin-bottom:10px;
         .tit {
-            font-size:14px;font-weight:700;position:relative;
+            position:relative;font-size:14px;font-weight:700;
             .ico_buble {
                 &:after {
-                    content:"";display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_buble.svg') no-repeat 0 0;background-size:18px auto;position:relative;top:3px;                    
+                    display:inline-block;position:relative;top:3px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_buble.svg') 0 0/18px auto no-repeat;content:"";   
                 }
             }
             .ico_reservation {
                 &:after {
-                    content:"";display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_reservation.svg') no-repeat 0 0;background-size:18px auto;position:relative;top:3px;                      
+                    display:inline-block;position:relative;top:3px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_reservation.svg') 0 0/18px auto no-repeat;content:"";        
                 }
             }
             .ico_reservation_heart {
                 &:after {
-                    content:"";display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_reservation_heart.svg') no-repeat 0 0;background-size:16px auto;position:relative;top:5px;
+                    display:inline-block;position:relative;top:5px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_reservation_heart.svg') 0 0/16px auto no-repeat;content:"";
                 }
             }
             .ico_addinfo {
                 &:after {
-                    content:"";display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_addinfo.svg') no-repeat 0 0;background-size:18px auto;position:relative;top:3px;                      
+                    display:inline-block;position:relative;top:3px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_addinfo.svg') 0 0/18px auto no-repeat;content:"";           
                 }
             }            
             .ico_poster {
                 &:after {
-                    content:'';display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_poster.svg') no-repeat 0 0;background-size:18px auto;position:relative;top:3px;     
+                    display:inline-block;position:relative;top:3px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_poster.svg') 0 0/18px auto no-repeat;content:"";
                 }
             }
             .ico_army {
                 &:after {
-                    content:"";display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_army.svg') no-repeat 0 0;background-size:18px auto;position:relative;top:3px;
+                    display:inline-block;position:relative;top:3px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_army.svg') 0 0/18px auto no-repeat;content:"";
                 }
 
             }
             .ico_mountain {
                 &:after {
-                    content:"";display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_mountain.svg') no-repeat 0 -1px;background-size:18px auto;position:relative;top:3px;                      
+                    display:inline-block;position:relative;top:3px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_mountain.svg') 0 -1px/18px auto no-repeat;content:"";         
                 }
             }
             .ico_overseas {
                 &:after {
-                    content:'';display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_overseas.svg') no-repeat 0 0;background-size:16px auto;position:relative;top:3px; 
+                    display:inline-block;position:relative;top:3px;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_overseas.svg') 0 0/16px auto no-repeat;content:"";
                 }
             }
         }
     }          
     .txt_dec {
-        font-size:13px;color:#595959;line-height:19px;word-break:keep-all;
+        color:#595959;font-size:13px;line-height:19px;word-break:keep-all;
         .txt_strong {
             margin-bottom:8px;
         }
         .gap {
             display:inline-block;font-size:0;text-indent:-9000em;overflow:hidden;  
             &:after {
-                content:"";display:inline-block;width:1px;height:9px;background-color:#d5d5d5;margin:0 4px;position:relative;top:10px;
+                display:inline-block;position:relative;top:10px;width:1px;height:9px;background-color:#d5d5d5;margin:0 4px;content:"";
             }
         }  
         .txt_primary {
-            color:#474C98 !important;margin-left:4px;
+            margin-left:4px;color:#474C98 !important;
         }
         .txt_strong {
             margin-left:0;
@@ -1819,20 +1858,19 @@ button.btn_md_second {
     .txt_dec {
         position:relative;padding-left:27px;font-size:13px;
         &:after {
-            position:absolute;left:0;top:-4px;content:"";width:26px;height:26px;display:inline-block;background:url('#{$imgUrl}ico/ico_zoomin.svg') no-repeat 0 -3px;background-size:26px 26px;
+            display:inline-block;position:absolute;left:0;top:-4px;width:26px;height:26px;background:url('#{$imgUrl}ico/ico_zoomin.svg') 0 -3px/26px no-repeat;content:"";
         }
     }
 }
 
-/* 20220102*/
 .arrow-up {
-    width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid black;
+    width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #000;
 }
 .soldoutslide_wrap:after {  
-    content:"";display:block;position:absolute;left:0;top:0;width:100%;height:20px;background:#fff url('#{$imgUrl}ico/arrow_pink.png') no-repeat 0 0;background-size:24px auto;
+    display:block;position:absolute;left:0;top:0;width:100%;height:20px;background:#fff url('#{$imgUrl}ico/arrow_pink.png') 0 0/24px auto no-repeat;content:"";
 }
 .clearfix:after {
-    content:"";display:table;clear:both;
+    display:table;clear:both;content:"";
 }
 
 .ht_ {
@@ -1850,7 +1888,7 @@ button.btn_md_second {
                 position:absolute;left:0;top:1px;width:100%;height:100%;text-align:center;z-index:1;overflow:hidden;
             }
             .app_view_btn {   
-                display:inline-flex;opacity:1;line-height:19px;color:#da2128;font-size:14px;border:1px solid #da2128;padding:8px 19px 8px;border-radius:20px;margin:3px auto 0 auto;transition:opacity 0.5s;
+                display:inline-flex;margin:3px auto 0 auto;padding:8px 19px 8px;border:1px solid #da2128;border-radius:20px;color:#da2128;font-size:14px;line-height:19px;opacity:1;transition:opacity 0.5s;
             }
         }
         &.active_product {
@@ -1862,7 +1900,7 @@ button.btn_md_second {
             }
             .header_center {
                 .page_title {
-                    height:auto;opacity:1;display:flex;font-size:14px;font-weight:500;color:#000;transition:opacity 0.5s;
+                    display:flex;height:auto;color:#000;font-size:14px;font-weight:500;opacity:1;transition:opacity 0.5s;
                     span {
                         display:inline-block;width:calc(100% - 38px);text-overflow:ellipsis;overflow:hidden;white-space:nowrap;
                     }
@@ -1895,29 +1933,29 @@ button.btn_md_second {
         }
     }   
     .adult_alarm {
-        padding:13px 25px;background-color:#292929;display:flex;flex-flow:row nowrap;
+        display:flex;flex-flow:row nowrap;padding:13px 25px;background-color:#292929;
         .restrict_icon {
-            width:40px;height:40px;margin-right:5px;flex-shrink:0;background:url('#{$imgUrl}ico/restrict_adult.svg') no-repeat center center / 43px;
+            width:40px;height:40px;margin-right:5px;background:url('#{$imgUrl}ico/restrict_adult.svg') center / 43px no-repeat;flex-shrink:0;
         }
         .restrict_txt {
-            word-break:keep-all;font-size:13px;line-height:20px;font-weight:500;color:#fff;
+            color:#fff;font-size:13px;font-weight:500;line-height:20px;word-break:keep-all;
         }
     }  
     .cpon_bubble {
-        position:relative;display:table-cell;color:#fff;background-color:#000;font-size:12px;line-height:17px;padding:8px 16px 8px 10px;border-radius:50px;
+        position:relative;display:table-cell;padding:8px 16px 8px 10px;border-radius:50px;background-color:#000;color:#fff;font-size:12px;line-height:17px;
         &:before {
-            content:"";position:absolute;border-top:7px solid #000;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid transparent;transform:rotate(-180deg);z-index:10;left:16px;top:-12px;
+            position:absolute;left:16px;top:-12px;border-top:7px solid #000;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid transparent;transform:rotate(-180deg);z-index:10;content:"";
         }
     }
     .product_deliinfo_area .freebie_wrap {
-        background-color:#f4f4f4;border:solid 1px #000;border-radius:4px;position:relative;margin-bottom:20px;padding:16px 20px;
+        position:relative;margin-bottom:20px;padding:16px 20px;background-color:#f4f4f4;border:solid 1px #000;border-radius:4px;
         .figure {
             position:absolute;left:20px;top:46px;transform:translateY(-50%);
         }
         .txt_desc {
-            padding-left:50px;font-size:13px;margin-top:16px;color:#292929;
+            padding-left:50px;color:#292929;font-size:13px;margin-top:16px;
             .title {
-                font-size:14px;font-weight:700;color:#000;
+                color:#000;font-size:14px;font-weight:700;
             }
             &:nth-of-type(1) {
                 margin-top:0;
@@ -1930,7 +1968,7 @@ button.btn_md_second {
     .notice_area_alarm {
         display:flex;flex-flow:row nowrap;justify-content:flex-start;margin-bottom:24px;
         .thumnail_notice {
-            width:99px;position:relative;height:0;padding-top:99px;
+            position:relative;width:99px;height:0;padding-top:99px;
             img {
                 position:absolute;top:0;left:0;
             }
@@ -1940,27 +1978,27 @@ button.btn_md_second {
             .txt_tit {
                 display:flex;position:relative;
                 div {
-                    font-size:15px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-bottom:8px;
+                    margin-bottom:8px;font-size:15px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
                 }
                 img {
-                  margin-left:3px;
-                  &.ico_live {
-                      margin-left:8px;width:48px;height :33px;margin-top:-11px;
-                  }
+                    margin-left:3px;
+                    &.ico_live {
+                        width:48px;height:33px;margin-top:-11px;margin-left:8px;
+                    }
                 }
             }
             .txt_desc {
-                margin-top:-2px;font-size:13px;line-height:19px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:keep-all;font-weight:700;
+                display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;word-break:keep-all;margin-top:-2px;font-size:13px;font-weight:700;line-height:19px;
             }
             .link_live {
-                display:inline-block;line-height:19px;color:#767676;font-size:12px;font-weight:400;margin-top:13px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+                display:inline-block;margin-top:13px;color:#767676;font-size:12px;font-weight:400;line-height:19px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
             }
         }
     }
     .info_restrict_area {
-        margin-top:8px;padding:20px;background-color:#fff4f1;display:flex;flex-flow:row nowrap;
+        display:flex;flex-flow:row nowrap;margin-top:8px;padding:20px;background-color:#fff4f1;
         .restrict_icon {
-            width:40px;height:40px;margin-right:10px;flex-shrink:0;background:url('#{$imgUrl}ico/restrict_notice.svg') no-repeat center center / 99%;
+            width:40px;height:40px;margin-right:10px;background:url('#{$imgUrl}ico/restrict_notice.svg') center center / 99% no-repeat;flex-shrink:0;
         }
         .restrict_txt {
             font-size:13px;line-height:20px;word-break:keep-all;
@@ -1989,7 +2027,7 @@ button.btn_md_second {
                 }
                 &.ob_contain {
                     img {
-                        object-fit:contain;left: 10%;top:10%; width:80%;height: 80%;
+                        object-fit:contain;left:10%;top:10%;width:80%;height:80%;
                     }
                 }   
             }
@@ -2010,41 +2048,40 @@ button.btn_md_second {
 
 /* 팝업 */
 .devide_border {
-    display:block;width:100%;height:1px;padding:0;border:none;background-color:#d5d5d5;margin:24px 0;
+    display:block;width:100%;height:1px;margin:24px 0;padding:0;background-color:#d5d5d5;border:none;
   }
 .coupon_box {
-    width:100%;padding:20px 24px 15px;border:1px solid #d5d5d5;border-radius:10px;position:relative;letter-spacing:-0.01em;
+    position:relative;width:100%;padding:20px 24px 15px;border:1px solid #d5d5d5;border-radius:10px;letter-spacing:-0.01em;
     + .coupon_box {
         margin-top:16px;
     }
     .t_sale {
-        font-size:20px;font-weight:700;color:#da2128;
+        color:#da2128;font-size:20px;font-weight:700;
     }
     .t_name {
-        font-size:14px;font-weight:700;color:#000;
+        color:#000;font-size:14px;font-weight:700;
     }
     .t_guide {
-        margin-top:6px;font-size:12px;color:#767676;
+        margin-top:6px;color:#767676;font-size:12px;
     }
     .t_date {
-        font-size:12px;color:#767676;
+        color:#767676;font-size:12px;
     }
     .t_help {
-        margin-top:8px;font-size:11px;color:#767676;
+        margin-top:8px;color:#767676;font-size:11px;
     }
     .btn_coupon_download {
-        height:35px;width:100%;margin-top:17px;padding-top:16px;border:none;border-top:1px dotted #d5d5d5;font-size:13px;font-weight:700;color:#da2128;
+        width:100%;height:35px;margin-top:17px;padding-top:16px;border:none;border-top:1px dotted #d5d5d5;color:#da2128;font-size:13px;font-weight:700;
         .ico_coupon {
-            width:18px;height:18px;margin-right:5px;background:url('#{$imgUrl}guide/ico_coupon_down.svg') no-repeat 50% 50% / 16px;
+            width:18px;height:18px;margin-right:5px;background:url('#{$imgUrl}guide/ico_coupon_down.svg') 50% 50% / 16px no-repeat;
         }
         .ico_coupon_end {
-            width:18px;height:18px;margin-right:5px;background:url('#{$imgUrl}guide/ico_coupon_end.svg') no-repeat 50% 50% / 14px;
+            width:18px;height:18px;margin-right:5px;background:url('#{$imgUrl}guide/ico_coupon_end.svg') 50% 50% / 14px no-repeat;
         }
     }
     &::before,
     &::after {
-        content:'';
-        display:block;width:21px;height:21px;border:1px solid #d5d5d5;border-radius:50%;background-color:#fff;position:absolute;top:138px;
+        display:block;position:absolute;top:138px;width:21px;height:21px;background-color:#fff;border:1px solid #d5d5d5;border-radius:50%;content:'';
     }
     &::before {
         left:-17px;
@@ -2067,7 +2104,7 @@ button.btn_md_second {
 
 /* 단순 정보성 텍스트 */
 .info_text {
-    font-size:14px;line-height:22px;letter-spacing:-0.01em;color:#595959;
+    color:#595959;font-size:14px;line-height:22px;letter-spacing:-0.01em;
     .btn_text_link {
         display:inline;color:inherit;font-size:inherit;line-height:inherit;
         .text {
@@ -2088,9 +2125,8 @@ button.btn_md_second {
             margin-top:16px;
         }
     }
-
     &.font_size_def {
-        font-size:15px;line-height:23px;letter-spacing:-0.01em;color:#000;font-weight:500;margin-bottom:13px;word-break:keep-all;
+        margin-bottom:13px;color:#000;font-size:15px;font-weight:500;line-height:23px;letter-spacing:-0.01em;word-break:keep-all;
     }
     + .info_text {
         margin-top:14px;
@@ -2104,12 +2140,12 @@ button.btn_md_second {
     /* 섬네일 사이즈 별 */
     &:after {
         // content:"전시 템플릿 정의 후 작업";
-        position:absolute;display:inline-block;color:#fff;width:100%;height:100%;left:0;top:0;background-color:rgba(255, 0, 0, 0.5);pointer-events:none;
+        display:inline-block;position:absolute;left:0;top:0;color:#fff;width:100%;height:100%;background-color:rgba(255, 0, 0, 0.5);pointer-events:none;
     }
     &.vertical_type {
         width:134px;
         .thumbnail_area {
-            display:block;overflow:hidden;width:100%;min-height:10px;box-sizing:border-box;border:1px solid #eaeaea;background-color:#eaeaea;
+            display:block;overflow:hidden;width:100%;min-height:10px;background-color:#eaeaea;border:1px solid #eaeaea;box-sizing:border-box;
             .link_thumbnail {
                 display:block;width:100%;
                 img {
@@ -2125,18 +2161,18 @@ button.btn_md_second {
                     text-align:center;
                 }
                 .info_product_name {
-                    font-size:12px;line-height:18px;letter-spacing:-0.01em;display:block;overflow:hidden;max-height:36px;line-height:18px;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
+                    display:block;max-height:36px;font-size:12px;line-height:18px;letter-spacing:-0.01em;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
                     .link_text {
                         font-size:12px;line-height:18px;letter-spacing:-0.01em;text-align:center;
                     }
                 }
             }
             .info_product_name {
-                font-size:14px;line-height:22px;letter-spacing:-0.01em;color:#000;display:block;overflow:hidden;max-height:44px;line-height:22px;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
+                display:block;max-height:44px;color:#000;font-size:14px;line-height:22px;letter-spacing:-0.01em;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
                 .link_text {
-                    display:block;width:100%;font-size:14px;line-height:22px;letter-spacing:-0.01em;color:#000;
+                    display:block;width:100%;color:#000;font-size:14px;line-height:22px;letter-spacing:-0.01em;
                     &.multi_ellipsis {
-                        display:block;overflow:hidden;max-height:46px;line-height:23px;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
+                        display:block;max-height:46px;line-height:23px;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
                     }
                 }
             }
@@ -2144,15 +2180,15 @@ button.btn_md_second {
                 margin-top:5px;
                 .info_author,
                 .info_publication {
-                    display:inline-block;font-size:12px;line-height:18px;letter-spacing:-0.01em;font-weight:400;color:#595959;
+                    display:inline-block;color:#595959;font-size:12px;font-weight:400;line-height:18px;letter-spacing:-0.01em;
                     &.multi_ellipsis {
-                        display:block;overflow:hidden;max-height:38px;line-height:19px;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
+                        display:block;max-height:38px;line-height:19px;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
                     }
                 }
                 [class^=info_] + [class^=info_] {
                     position:relative;padding-left:6px;
                     &:before {
-                        content:"";position:absolute;left:0;top:8px;display:block;width:2px;height:2px;border-radius:50%;background-color:#595959;
+                        display:block;position:absolute;left:0;top:8px;width:2px;height:2px;border-radius:50%;background-color:#595959;content:"";
                     }
                 }
             }
@@ -2162,16 +2198,16 @@ button.btn_md_second {
                     display:inline-block;font-size:13px;line-height:19px;letter-spacing:-0.01em;
                 }
                 .price_dc {
-                    font-weight:700;color:#3c9a17;font-family:Roboto, sans-serif;
+                    color:#3c9a17;font-family:Roboto;font-weight:700;
                 }
                 .price_amount {
-                    font-weight:400;color:#000;
+                    color:#000;font-weight:400;
                     strong {
-                        font-weight:700;color:#000;font-family:Roboto, sans-serif;
+                        color:#000;font-family:Roboto;font-weight:700;
                     }
                 }
                 .price_point {
-                    font-size:12px;line-height:18px;letter-spacing:-0.01em;font-weight:400;color:#595959;font-family:Roboto, sans-serif;
+                    color:#595959;font-family:Roboto;font-size:12px;font-weight:400;line-height:18px;letter-spacing:-0.01em;
                 }
             }
         }
@@ -2182,23 +2218,23 @@ button.btn_md_second {
     &.horizontal_type {
         display:flex;justify-content:flex-start;align-items:center;flex-direction:row;width:auto;min-width:250px;min-height:10px;
         .thumbnail_area {
-            flex-shrink:0;display:block;overflow:hidden;width:84px;min-height:10px;box-sizing:border-box;border:1px solid #eaeaea;background-color:#eaeaea;flex-shrink:0;
+            flex-shrink:0;display:block;width:84px;min-height:10px;background-color:#eaeaea;border:1px solid #eaeaea;box-sizing:border-box;flex-shrink:0;overflow:hidden;
             .link_thumbnail {
                 display:block;width:100%;
                 img {
-                    display:block;width:100%;height: 100%;object-fit: cover;
+                    display:block;width:100%;height:100%;object-fit:cover;
                 }
             }
         }
         .info_area {
-            display:block;width:auto;box-sizing:border-box;padding-left:12px;
+            display:block;width:auto;padding-left:12px;box-sizing:border-box;
             .info_product_number {
-                font-size:13px;line-height:19px;letter-spacing:-0.01em;font-weight:400;font-family:Roboto, sans-serif;color:#595959;
+                color:#595959;font-family:Roboto;font-size:13px;font-weight:400;line-height:19px;
             }
             .info_product_name {
-                font-size:13px;line-height:19px;letter-spacing:-0.01em;font-weight:500;color:#000;display:block;overflow:hidden;max-height:42px;line-height:19px;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
+                display:block;color:#000;font-size:13px;font-weight:500;line-height:19px;overflow:hidden;max-height:42px;line-height:19px;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
                 .link_text {
-                    display:block;width:100%;font-size:13px;line-height:19px;letter-spacing:-0.01em;font-weight:500;color:#000;
+                    display:block;width:100%;color:#000;font-size:13px;font-weight:500;line-height:19px;
                     &.multi_ellipsis {
                         display:block;overflow:hidden;max-height:46px;line-height:23px;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
                     }
@@ -2208,34 +2244,34 @@ button.btn_md_second {
                 margin-top:5px;
                 .info_author,
                 .info_publication {
-                    display:inline-block;font-size:12px;line-height:18px;letter-spacing:-0.01em;font-weight:400;color:#595959;
+                    display:inline-block;color:#595959;font-size:12px;font-weight:400;line-height:18px;
                     &.multi_ellipsis {
-                        display:block;overflow:hidden;max-height:38px;line-height:19px;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
+                        display:block;max-height:38px;line-height:19px;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;text-overflow:-o-ellipsis-lastline;white-space:normal;
                     }
                 }
                 [class^=info_] + [class^=info_] {
                     position:relative;padding-left:6px;
                     &:before {
-                        content:"";position:absolute;left:0;top:8px;display:block;width:2px;height:2px;border-radius:50%;background-color:#595959;
+                        display:block;position:absolute;left:0;top:8px;width:2px;height:2px;background-color:#595959;border-radius:50%;content:"";
                     }
                 }
             }
             .info_price {
                 margin-top:20px;
                 [class^=price_] {
-                    display:inline-block;font-size:13px;line-height:19px;letter-spacing:-0.01em;
+                    display:inline-block;font-size:13px;line-height:19px;
                 }
                 .price_dc {
-                    font-weight:700;color:#3c9a17;font-family:Roboto, sans-serif;
+                    color:#3c9a17;font-family:Roboto;font-weight:700;
                 }
                 .price_amount {
-                    font-weight:400;color:#000;
+                    color:#000;font-weight:400;
                     strong {
-                        font-weight:700;color:#000;font-family:Roboto, sans-serif;
+                        color:#000;font-family:Roboto;font-weight:700;
                     }
                 }
                 .price_point {
-                    font-size:12px;line-height:18px;letter-spacing:-0.01em;font-weight:400;color:#595959;font-family:Roboto, sans-serif;
+                    color:#595959;font-family:Roboto;font-size:12px;font-weight:400;line-height:18px;letter-spacing:-0.01em;
                 }
             }
             .rating-container {
@@ -2266,12 +2302,12 @@ button.btn_md_second {
     }
     .explan_text_list {
         .explan_title {
-            display:block;margin-bottom:7px;font-size:13px;line-height:19px;letter-spacing:-0.01em;color:#000;font-weight:500;
+            display:block;margin-bottom:7px;color:#000;font-size:13px;font-weight:500;line-height:19px;letter-spacing:-0.01em;
         }
         .explan_desc {
-            display:block;font-size:13px;line-height:19px;letter-spacing:-0.01em;color:#767676;
+            display:block;color:#767676;font-size:13px;line-height:19px;letter-spacing:-0.01em;
             ~ .explan_title {
-                border-top:1px solid #eaeaea;margin-top:16px;padding-top:14px;
+                margin-top:16px;padding-top:14px;border-top:1px solid #eaeaea;
             }
         }
     }
@@ -2284,7 +2320,7 @@ button.btn_md_second {
     &.type_divide {
         padding:0;background-color:#fff;border:1px solid #eaeaea;
         .box_header {
-            border-radius:16px 16px 0 0;padding:19px 23px;border-bottom:1px solid #eaeaea;background-color:#f7f7f7;
+            padding:19px 23px;background-color:#f7f7f7;border-bottom:1px solid #eaeaea;border-radius:16px 16px 0 0;
             .right_box {
                 margin-left:auto;font-size:0;
             }
@@ -2321,26 +2357,26 @@ button.btn_md_second {
         .empty-stars .star {
             margin:0 2px;
             .glyphicon-star-empty:before {
-                content:"";display:inline-block;width:22px;height:22px;background-image:url('#{$imgUrl}guide/empty_star.svg');background-size:22px 22px;
+                display:inline-block;width:22px;height:22px;background-image:url('#{$imgUrl}guide/empty_star.svg');background-size:22px 22px;content:"";
             }
         }
         .filled-stars .star {
             margin:0 2px;
             .glyphicon-star:before {
-                content:"";display:inline-block;width:22px;height:22px;background-size:22px 22px;
+                display:inline-block;width:22px;height:22px;background-size:22px 22px;content:"";
             }
         }
         .form_rating {
-            color:#000;font-size:13px;line-height:19px;letter-spacing:-0.01em;font-family:Roboto, sans-serif;outline:0;
+            color:#000;font-family:Roboto;font-size:13px;line-height:19px;letter-spacing:-0.01em;outline:0;
         }
     }
     .caption {
-        margin:0 0 0 8px;vertical-align:top;font-size:0;position:relative;
+        position:relative;margin:0 0 0 8px;vertical-align:top;font-size:0;
         .val {
-            font-size:20px;line-height:32px;letter-spacing:-.01em;color:#da2128;font-weight:700;line-height:1;
+            color:#da2128;font-size:20px;font-weight:700;line-height:32px;letter-spacing:-.01em;line-height:1;
         }
         .total {
-            padding-top:5px;margin-left:6px;font-size:14px;line-height:22px;letter-spacing:-.01em;color:#767676;font-weight:400;line-height:1;
+            margin-left:6px;padding-top:5px;color:#767676;font-size:14px;font-weight:400;line-height:22px;letter-spacing:-.01em;line-height:1;
             &:before {
                 content:"/";
             }
@@ -2351,14 +2387,13 @@ button.btn_md_second {
         .empty-stars .star {
             margin:0 2px;
             .glyphicon-star-empty:before {
-                content:"";
-                display:inline-block;width:18px;height:18px;background-repeat:no-repeat;background-position:center;background-size:18px 18px;
+                display:inline-block;width:18px;height:18px;background-position:center;background-size:18px 18px;background-repeat:no-repeat;content:"";
             }
         }
         .filled-stars .star {
             margin:0 2px;
             .glyphicon-star:before {
-                content:"";display:inline-block;width:18px;height:18px;background-repeat:no-repeat;background-position:center;background-image:url('#{$imgUrl}guide/filled_star.svg');background-size:18px 18px;
+                display:inline-block;width:18px;height:18px;background:url('#{$imgUrl}guide/filled_star.svg') center/18px no-repeat;content:"";
             }
         }
     }
@@ -2367,14 +2402,13 @@ button.btn_md_second {
         .empty-stars .star {
             margin:0 2px 0 1px;
             .glyphicon-star-empty:before {
-                content:"";
-                display:inline-block;width:13px;height:13px;background-repeat:no-repeat;background-position:center;background-image:url('#{$imgUrl}guide/empty_star.svg');background-size:13px 13px;
+                display:inline-block;width:13px;height:13px;background:url('#{$imgUrl}guide/empty_star.svg') center/13px no-repeat;content:"";
             }
         }
         .filled-stars .star {
             margin:0 2px 0 1px;
             .glyphicon-star:before {
-                content:"";display:inline-block;width:13px;height:13px;background-image:url('#{$imgUrl}guide/filled_star.svg');background-repeat:no-repeat;background-position:center;background-size:13px 13px;
+                display:inline-block;width:13px;height:13px;background:url('#{$imgUrl}guide/filled_star.svg') center/13px no-repeat;content:"";
             }
         }
     }
@@ -2383,14 +2417,14 @@ button.btn_md_second {
         .empty-stars .star {
             margin:0 6px;
             .glyphicon-star-empty:before {
-                content:"";display:inline-block;width:40px;height:40px;background-repeat:no-repeat;background-position:center;background-image:url('#{$imgUrl}guide/empty_star.svg');background-size:40px 40px;
+                display:inline-block;width:40px;height:40px;background:url('#{$imgUrl}guide/empty_star.svg') center/40px no-repeat;content:"";
             }
         }
         .filled-stars .star {
             margin:0 6px;
             .glyphicon-star:before {
                 content:"";
-                display:inline-block;width:40px;height:40px;background-repeat:no-repeat;background-position:center;background-image:url('#{$imgUrl}guide/filled_star.svg');background-size:40px 40px;
+                display:inline-block;width:40px;height:40px;background:url('#{$imgUrl}guide/filled_star.svg') center/40px no-repeat;content:"";
             }
         }
     }
@@ -2399,10 +2433,10 @@ button.btn_md_second {
         .label {
             padding:0;border-radius:0;font-size:0;
             .val {
-                font-size:20px;line-height:32px;letter-spacing:-0.01em;color:#3c9a17;font-weight:700;line-height:1;
+                color:#3c9a17;font-size:20px;font-weight:700;line-height:32px;line-height:1;
             }
             .total {
-                padding-top:5px;font-size:14px;line-height:22px;letter-spacing:-0.01em;color:#767676;line-height:1;
+                padding-top:5px;color:#767676;font-size:14px;line-height:22px;letter-spacing:-0.01em;line-height:1;
                 &:before {
                     content:"/";
                 }
@@ -2422,27 +2456,27 @@ button.btn_md_second {
         .label {
             padding:0;border-radius:0;font-size:0;
             .val {
-                font-size:20px;line-height:32px;letter-spacing:-0.01em;color:#3c9a17;font-weight:700;line-height:1;
+                color:#3c9a17;font-size:20px;font-weight:700;line-height:32px;line-height:1;
             }
         }
     }
     .total_score {
-        display:inline-block;margin:7px 0 0 1px;font-size:14px;line-height:22px;letter-spacing:-0.01em;color:#767676;line-height:1;vertical-align:top;
+        display:inline-block;margin:7px 0 0 1px;color:#767676;font-size:14px;line-height:22px;line-height:1;vertical-align:top;
     }
 }
 .multi_review_area {
     margin-top:20px;
     .right_area .form_sel select {
-      font-size:13px;
+        font-size:13px;
     }
 }
 .review_user_info {
-    display:flex;justify-content:flex-start;align-items:center;font-size:12px;line-height:18px;letter-spacing:-.01em;color:#767676;margin-bottom:11px;flex-wrap:wrap;
+    display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;margin-bottom:11px;color:#767676;font-size:12px;line-height:18px;letter-spacing:-.01em;
     .gap {
-        display:inline-block;font-size:0;width:1px;height:9px;background-color:#d5d5d5;margin:0 6px;
+        display:inline-block;width:1px;height:9px;background-color:#d5d5d5;margin:0 6px;font-size:0;
     }
     .badge_line_gray {
-        margin:0 8px 0 0;border-radius:10px;background-color:#fff;
+        margin:0 8px 0 0;background-color:#fff;border-radius:10px;
         .text {
             transform:translateY(1px);
         }
@@ -2470,8 +2504,7 @@ button.btn_md_second {
         max-width:100% !important;
     }
     .auto_overflow_contents {
-        max-height:78px;
-        overflow:hidden;
+        max-height:78px;overflow:hidden;
     }
     .auto_overflow_footer {
         display:none;
@@ -2494,7 +2527,7 @@ button.btn_md_second {
         .auto_overflow_contents {
             position:relative;border-bottom:1px solid #eaeaea;
             &:after {
-                content:"";position:absolute;display:block;bottom:0;left:0;width:100%;height:10px;background-color:#fff;
+                position:absolute;display:block;left:0;bottom:0;width:100%;height:10px;background-color:#fff;content:"";
             }
         }
         .tbl_col_wrap {
@@ -2505,7 +2538,7 @@ button.btn_md_second {
         .auto_overflow_contents {
             position:relative;
             &:after {
-                content:"";width:100%;height:15px;background:linear-gradient(180deg, rgba(255, 255, 255, 0), #fff 15px);position:absolute;bottom:0;
+                position:absolute;bottom:0;width:100%;height:15px;background:linear-gradient(180deg, rgba(255, 255, 255, 0), #fff 15px);content:"";
             }
         }
         &.active .auto_overflow_contents:after {
@@ -2516,15 +2549,15 @@ button.btn_md_second {
 
 /* 상품/리뷰 컨텐츠 공통 사용 */
 .review_quotes_text {
-    display:inline-block;position:relative;padding-left:18px;color:#595959;font-size:13px;line-height:19px;letter-spacing:-0.01em;font-weight:500;vertical-align:top;
+    display:inline-block;position:relative;padding-left:18px;color:#595959;font-size:13px;font-weight:500;line-height:19px;letter-spacing:-0.01em;vertical-align:top;
     &:before {
-        content:"";position:absolute;left:0;top:2px;width:13px;height:13px;background-image:url('#{$imgUrl}guide/ico_quotes.svg');background-size:13px 13px;
+        position:absolute;left:0;top:2px;width:13px;height:13px;background-image:url('#{$imgUrl}guide/ico_quotes.svg');background-size:13px 13px;content:"";
     }
 }
 .review_klover_text {
-    display:inline-block;position:relative;padding-left:19px;color:#000;font-size:13px;line-height:19px;letter-spacing:-0.01em;font-weight:700;vertical-align:top;
+    display:inline-block;position:relative;padding-left:19px;color:#000;font-size:13px;font-weight:700;line-height:19px;letter-spacing:-0.01em;vertical-align:top;
     &:before {
-        content:"";position:absolute;left:0;top:4px;width:13px;height:13px;background-image:url('#{$imgUrl}guide/filled_star.svg');background-size:13px 13px;
+        position:absolute;left:0;top:4px;width:13px;height:13px;background-image:url('#{$imgUrl}guide/filled_star.svg');background-size:13px 13px;content:"";
     }
 }
 .review_klover_box {
@@ -2537,12 +2570,12 @@ button.btn_md_second {
 /* 리뷰 */
 .all_review_wrap {
     .all_review_list .all_review_item {
-        border-bottom:1px solid #eaeaea;padding:20px 4px;box-sizing:border-box;
+        padding:20px 4px;border-bottom:1px solid #eaeaea;box-sizing:border-box;
         .review_middle .review_middle_box .auto_overflow_wrap {
             .auto_overflow_contents {
                 max-height:86px;
-                .auto_overflow_inner .info_text {
-                    margin-bottom:13px;display:block;overflow:hidden;max-height:88px;line-height:22px;-webkit-box-orient:vertical;-webkit-line-clamp:4;text-overflow:-o-ellipsis-lastline;white-space:normal;color:#000;
+                .auto_overflow_inner .info_text {    
+                    display:block;max-height:88px;margin-bottom:13px;color:#000;line-height:22px;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:4;text-overflow:-o-ellipsis-lastline;white-space:normal;
                 }
             }
             &.active .auto_overflow_contents .auto_overflow_inner .info_text {
@@ -2567,32 +2600,16 @@ button.btn_md_second {
                 margin-left:auto;
                 .btn_like {
                     .ico_like {
-                        width:20px;height:20px;background-position:center;background-repeat:no-repeat;background-image:url('#{$imgUrl}guide/ico_like.svg');background-size:20px 20px;margin-right:4px;
+                        width:20px;height:20px;margin-right:4px;background:url('#{$imgUrl}guide/ico_like.svg') center/20px no-repeat;
                     }
                     &.active .ico_like {
                         background-image:url('#{$imgUrl}guide/ico_like_pre.svg');background-size:20px 20px;
                     }
                     .like_cont {
-                        position:relative;font-size:13px;line-height:19px;letter-spacing:-0.01em;display:inline-block;vertical-align:middle;
+                        display:inline-block;position:relative;font-size:13px;line-height:19px;vertical-align:middle;
                     }
                 }
-                /*.btn_reply {
-                    margin-left:12px;
-                    &.active {
-                        .ico_reply {
-                            background-image:url('#{$imgUrl}guide/ico_reply_pre.svg');background-size:20px 20px;
-                        }
-                        .text_reply {
-                            color:#000;
-                        }
-                    }
-                    .ico_reply {
-                        width:20px;height:20px;background-position:center;background-repeat:no-repeat;background-image:url('#{$imgUrl}guide/ico_reply.svg');background-size:20px 20px;margin-right:4px;
-                    }
-                    .text_reply {
-                        position:relative;font-size:13px;line-height:19px;letter-spacing:-0.01em;color:#767676;display:inline-block;vertical-align:middle;
-                    }
-                }*/
+
             }
         }
         &.thumbnail .review_middle .review_middle_box .auto_overflow_wrap {
@@ -2601,12 +2618,12 @@ button.btn_md_second {
                 .auto_overflow_inner {
                     display:flex;justify-content:space-between;flex-direction:row;
                     .info_text {
-                        padding-right:20px;display:block;display:-webkit-box;overflow:hidden;max-height:88px;line-height:22px;-webkit-box-orient:vertical;-webkit-line-clamp:4;text-overflow:-o-ellipsis-lastline;white-space:normal;
+                        display:block;display:-webkit-box;overflow:hidden;max-height:88px;padding-right:20px;line-height:22px;-webkit-box-orient:vertical;-webkit-line-clamp:4;text-overflow:-o-ellipsis-lastline;white-space:normal;
                     }
                     .review_thumb {
                         position:relative;width:78px;height:78px;
                         .thumb_cont {
-                            display:block;width:16px;height:16px;line-height:16px;position:absolute;bottom:0;right:0;background-color:rgba(0, 0, 0, 0.85);color:#fff;text-align:center;font-size:11px;border-radius:6px 0 6px 0;
+                            display:block;position:absolute;bottom:0;right:0;width:16px;height:16px;background-color:rgba(0, 0, 0, 0.85);border-radius:6px 0 6px 0;color:#fff;font-size:11px;line-height:16px;text-align:center;
                         }
                     }
                 }
@@ -2635,25 +2652,25 @@ button.btn_md_second {
             }
         }
         &.spoilers .review_middle .spoilers_text_box {
-            height:62px;background-color:#f7f7f7;color:#767676;display:flex;justify-content:center;align-items:center;flex-direction:row;font-size:13px;line-height:19px;letter-spacing:-0.01em;border-radius:6px;margin-bottom:12px;
+            display:flex;justify-content:center;align-items:center;flex-direction:row;height:62px;margin-bottom:12px;background-color:#f7f7f7;border-radius:6px;color:#767676;font-size:13px;line-height:19px;letter-spacing:-0.01em;
             .text_spoilers:before {
-                content:"";display:inline-block;width:17px;height:19px;background-image:url('#{$imgUrl}ico_locker_mok.png');background-size:17px 19px;vertical-align:sub;margin-right:6px;
+                display:inline-block;width:17px;height:19px;margin-right:6px;background-image:url('#{$imgUrl}ico_locker_mok.png');background-size:17px 19px;vertical-align:sub;content:"";
             }
             .btn_xxs {
-                width:20px;height:20px;border:0;background-color:rgba(0, 0, 0, 0);background-image:url('#{$imgUrl}ico_spo_more_mok.png');background-size:20px 20px;margin-left:4px;
+                width:20px;height:20px;margin-left:4px;background-color:rgba(0, 0, 0, 0);background-image:url('#{$imgUrl}ico_spo_more_mok.png');background-size:20px 20px;border:0;
             }
         }
         &.reply .review_reply {
-            border-top:1px solid #eaeaea;padding-top:10px;margin-top:20px;
+            margin-top:20px;padding-top:10px;border-top:1px solid #eaeaea;
             .byte_check_wrap {
                 &.show {
                     display:block;
                 }
             }
             .reply_list .reply_list_item {
-                position:relative;padding:20px 20px 24px 37px;box-sizing:border-box;background-color:#f7f7f7;margin-top:12px;border-radius:10px;
+                position:relative;margin-top:12px;padding:20px 20px 24px 37px;background-color:#f7f7f7;border-radius:10px;box-sizing:border-box;
                 .review_user_info:before {
-                    content:"";display:inline-block;width:8px;height:9px;background-image:url('#{$imgUrl}guide/arw_reply.svg');background-size:8px 9px;position:absolute;top:24px;left:20px;
+                    display:inline-block;position:absolute;top:24px;left:20px;width:8px;height:9px;background-image:url('#{$imgUrl}guide/arw_reply.svg');background-size:8px 9px;content:"";
                 }
                 .info_text {
                     color:#000;
@@ -2664,21 +2681,21 @@ button.btn_md_second {
             }
         }
         &.report_wrap .review_middle .report_text_box {
-            background-color:#f7f7f7;border-radius:6px;padding:37px 0 16px;text-align:center;box-sizing:border-box;margin-top:16px;margin-bottom:12px;position:relative;
+            position:relative;margin-top:16px;margin-bottom:12px;padding:37px 0 16px;background-color:#f7f7f7;border-radius:6px;box-sizing:border-box;text-align:center;
             .info_text {
                 color:#767676;
                 &:before {
-                    content:"";display:inline-block;width:17px;height:17px;background-image:url('#{$imgUrl}ico_exclamation_gray_sm_mok.png');background-size:17px 17px;vertical-align:middle;margin-right:2px;position:absolute;top:16px;left:50%;transform:translateX(-50%);
+                    display:inline-block;position:absolute;top:16px;left:50%;width:17px;height:17px;margin-right:2px;background-image:url('#{$imgUrl}ico_exclamation_gray_sm_mok.png');background-size:17px 17px;vertical-align:middle;transform:translateX(-50%);content:"";
                 }
             }
         }
     }
     .review_reply {
-        border-top:1px solid #eaeaea;padding:12px 4px 0 4px;margin-top:20px;
+        margin-top:20px;padding:12px 4px 0 4px;border-top:1px solid #eaeaea;
         &.reply_confirmation {
             padding-bottom: 12px;
             .reply_list .reply_list_item {
-                display: inline-block !important;width: 100%;
+                display:inline-block !important;width:100%;
             }
         }
         .byte_check_wrap {
@@ -2688,9 +2705,9 @@ button.btn_md_second {
             }
         }
         .reply_list .reply_list_item {
-            position:relative;padding:20px 40px;box-sizing:border-box;background-color:#f7f7f7;margin-top:12px;border-radius:10px;
+            position:relative;margin-top:12px;padding:20px 40px;background-color:#f7f7f7;border-radius:10px;box-sizing:border-box;
             .review_user_info:before {
-                content:"";display:inline-block;width:8px;height:9px;background-image:url('#{$imgUrl}guide/arw_reply.svg');background-size:8px 9px;position:absolute;top:24px;left:20px;
+                display:inline-block;position:absolute;top:24px;left:20px;width:8px;height:9px;background-image:url('#{$imgUrl}guide/arw_reply.svg');background-size:8px 9px;content:"";
             }
             .info_text {
                 color:#000;
@@ -2711,7 +2728,7 @@ button.btn_md_second {
 /* Q & A */
 .all_qa_wrap {
     .review_inner .review_comment_area {
-        padding-bottom:50px;position:relative;
+        position:relative;padding-bottom:50px;
         .txt_review {
             line-height:20px;
             &.txt_bold {
@@ -2719,14 +2736,14 @@ button.btn_md_second {
             }
         }
         .btn_expand {
-            position:absolute;bottom:20px;left:0;
+            position:absolute;left:0;bottom:20px;
         }
         .ico_circle_more {
-            position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') no-repeat center center /20px;transform:rotate(180deg);
+            position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') center center /20px no-repeat;transform:rotate(180deg);
         }
         .btn_expand.btn_up {
             .ico_circle_more {
-                position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') no-repeat center center /20px;transform:rotate(0deg);
+                position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') center center /20px no-repeat;transform:rotate(0deg);
             }
         }
     }
@@ -2734,7 +2751,7 @@ button.btn_md_second {
         .txt_review {
             position:relative;padding-left:20px;
             &:before {
-                content:"";position:absolute;width:18px;height:18px;left:0;top:0;background:url('#{$imgUrl}ico/ico_lock.png') no-repeat center 1px /14px;
+                position:absolute;left:0;top:0;width:18px;height:18px;background:url('#{$imgUrl}ico/ico_lock.png') center 1px /14px no-repeat;content:"";
             }
         }
     }
@@ -2760,7 +2777,7 @@ button.btn_md_second {
         padding:0;border:none;
     }
     .dialog_header .close {
-        width:25px;height:25px;margin:0 auto;background:url('#{$imgUrl}guide/ico_arrow_down_light.svg') no-repeat center center /23px;
+        width:25px;height:25px;margin:0 auto;background:url('#{$imgUrl}guide/ico_arrow_down_light.svg') center /23px no-repeat;
     }
     .dialog_contents {
         margin-top:0;
@@ -2771,26 +2788,26 @@ button.btn_md_second {
             margin-top:0;
         }
         .title_selec {
-            overflow:hidden;border:1px solid #d5d5d5;border-radius:6px;margin-bottom:8px;color:#767676;
+            margin-bottom:8px;border:1px solid #d5d5d5;border-radius:6px;color:#767676;overflow:hidden;
             &.active {
                 border:1px solid #000;color:#000;
             }
             .selected_option {
-                position:relative;padding:15px 37px 15px 14px;display:flex;flex-flow:row nowrap;
+                display:flex;flex-flow:row nowrap;position:relative;padding:15px 37px 15px 14px;
             }
             .selec_icon {
-                position:absolute;display:block;width:10px;height:10px;right:17px;top:50%;margin-top:-5px;background:url('#{$imgUrl}guide/ico_arrow_right_btn.svg') no-repeat 0 center / 97%;transform:rotate(270deg);
+                display:block;position:absolute;right:17px;top:50%;width:10px;height:10px;margin-top:-5px;background:url('#{$imgUrl}guide/ico_arrow_right_btn.svg') 0 center / 97% no-repeat;transform:rotate(270deg);
             }
             .selec_icon.open {
-                width:12px;background:url('#{$imgUrl}guide/ico_arrow_right_btn.svg') no-repeat 0 center / 97%;transform:rotate(90deg);
+                width:12px;background:url('#{$imgUrl}guide/ico_arrow_right_btn.svg') 0 center / 97% no-repeat;transform:rotate(90deg);
             }
             .option_ul {
-                max-height:200px;overflow:auto;display:none;border-top:1px solid #000;
+                display:none;max-height:200px;border-top:1px solid #000;overflow:auto;
                 li {
                    height:50px;padding:15px 14px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center;align-content:center;
                    &:active,
                    &:hover {
-                       background-color:#F5F5F5;font-weight:500;color:#000;
+                       background-color:#f5f5f5;color:#000;font-weight:500;
                    }
                    &.act {
                     background-color:#f7f7f7;
@@ -2799,7 +2816,7 @@ button.btn_md_second {
                 .price {
                     position:relative;margin-right:10px;font-weight:500;
                     &:before {
-                        content :"원";position:absolute;top:0;right:-13px;
+                        position:absolute;top:0;right:-13px;content :"원";
                     }
                 }
             } 
@@ -2823,47 +2840,47 @@ button.btn_md_second {
             }
         }
         .buy_info {
-            background:#f7f7f7;padding:16px;margin-bottom:16px;
+            margin-bottom:16px;padding:16px;background:#f7f7f7;
             .prod_nm {
-                padding-right:20px;position:relative;word-break:keep-all;margin-bottom:10px;
+                position:relative;margin-bottom:10px;padding-right:20px;word-break:keep-all;
                 .close {
-                    position:absolute;width:15px;height:15px;top:0;right:0;background:url('#{$imgUrl}guide/ico_close_light.svg') no-repeat center center/ 13px;
+                    position:absolute;right:0;top:0;width:15px;height:15px;background:url('#{$imgUrl}guide/ico_close_light.svg') center/ 13px no-repeat;
                 }
             }
             .prod_count {
                 display:flex;justify-content:flex-start;align-content:center;align-items:center;flex-flow:row nowrap;
                 .input_wrap {
-                    display:flex;justify-content:flex-start;background-color:#fff;width:102px;height:36px;border-radius:6px;border:1px solid #707070;
+                    display:flex;justify-content:flex-start;width:102px;height:36px;background-color:#fff;border-radius:6px;border:1px solid #707070;
                     input {
-                        width:52px;outline:none;font-weight:500;text-align:center;
+                        width:52px;font-weight:500;text-align:center;outline:none;
                     }
                 }
                 button {
                     display:block;width:45px;height:36px;
                 }
                 .down_btn {
-                    background:url('#{$imgUrl}guide/ico_input_down.svg') no-repeat center center/ 12px;
+                    background:url('#{$imgUrl}guide/ico_input_down.svg') center/ 12px no-repeat;
                 }
                 .up_btn {
-                    background:url('#{$imgUrl}guide/ico_input_up.svg') no-repeat center center/ 12px;
+                    background:url('#{$imgUrl}guide/ico_input_up.svg') center/ 12px no-repeat;
                 }
                 .cpon {
-                    position:relative;height:30px;line-height:16px;padding:6px 10px 6px 22px;background-color:#fff;border-radius:6px;border:1px solid #707070;margin-left:8px;font-size:12px;font-weight:500;white-space:nowrap;
+                    position:relative;height:30px;margin-left:8px;padding:6px 10px 6px 22px;background-color:#fff;border:1px solid #707070;border-radius:6px;font-size:12px;font-weight:500;line-height:16px;white-space:nowrap;
                     &.disabled {
-                        color:#d5d5d5;border:1px solid #d5d5d5;
+                        border:1px solid #d5d5d5;color:#d5d5d5;
                         &:before {
-                            content:"";position:absolute;width:12px;height:12px;left:8px;top:8px;background:url('#{$imgUrl}guide/ico_coupon_down_gray.svg') no-repeat center center/ 10px;
+                            position:absolute;left:8px;top:8px;width:12px;height:12px;background:url('#{$imgUrl}guide/ico_coupon_down_gray.svg') center/ 10px no-repeat;content:"";
                         }
                     }
                     .highlight {
                         color:#da2128;margin-right:3px;
                     }
                     &:before {
-                        content:"";position:absolute;width:12px;height:12px;left:8px;top:8px;background:url('#{$imgUrl}guide/ico_coupon_down_black.svg') no-repeat center center/ 10px;
+                        position:absolute;left:8px;top:8px;width:12px;height:12px;background:url('#{$imgUrl}guide/ico_coupon_down_black.svg') center/ 10px no-repeat;content:"";
                     }
                 }
                 .price {
-                   font-weight:700;font-size:16px;margin-left:auto;
+                    margin-left:auto;font-weight:700;font-size:16px;
                 }
             }
             + .selec_lb {
@@ -2874,9 +2891,9 @@ button.btn_md_second {
             }
         }
         .buy_result {
-            display:flex;justify-content:space-between;font-weight:700;padding-bottom:10px;
+            display:flex;justify-content:space-between;padding-bottom:10px;font-weight:700;
             .result em {
-                color:#da2128;line-height:26px;margin:0 3px;
+                margin:0 3px;color:#da2128;line-height:26px;
             }
             .total {
                 font-size:18px;line-height:26px;
@@ -2952,7 +2969,7 @@ button.btn_md_second {
     padding:0;
 }
 .sps.sps_scroll_fixed {
-    position:relative;max-width:750px;;width:100%;box-sizing:border-box; background:none;
+    position:relative;max-width:750px;;width:100%;background:none;box-sizing:border-box;
     /*&:after {
         position: absolute;left:0;bottom:0;width:100%;height:1px;background-color:#d5d5d5;content:"";
     }*/
@@ -3054,7 +3071,7 @@ button.btn_md_second {
                 }
             }
             .txt_value {
-                position:relative;padding-left:18px;color:#474C98;font-size:13px;font-weight:500;
+                position:relative;padding-left:18px;color:#474c98;font-size:13px;font-weight:500;
                 &:before {
                     display:block;position:absolute;left:0;top:2px;width:13px;height:9px;background:url('#{$imgUrl}ico/ico_quotation.svg') center/100% no-repeat;content:"";
                 }
@@ -3121,8 +3138,6 @@ button.btn_md_second {
             }
         }
     }
-
-
 
     .review_btn_common {
         position:absolute;right:2px;bottom:0;color:#767676;font-size:13px;line-height:19px;
@@ -3203,7 +3218,6 @@ button.btn_md_second {
             }
         }
     }
-
     .byte_check_wrap + .reply_list {
         margin-top:20px;
         &:first-child {
@@ -3211,7 +3225,6 @@ button.btn_md_second {
             
         }
     }
-
     .byte_check_wrap:not([style*="display:none"]):not([style*="display: none"]) + .reply_list {
         margin-top:12px;
         .reply_list_item {
@@ -3221,7 +3234,6 @@ button.btn_md_second {
             } 
         }
     }
-
     .byte_check_wrap {
         transition:border 0.4s;
         &.on {
@@ -3285,8 +3297,7 @@ button.btn_md_second {
         overflow-x:inherit !important;margin:24px 0 0 !important;
     }
     .multi_review_area {
-        position:relative;
-        margin:0 ;
+        position:relative;margin:0 ;
         .fold_ty {
             padding:0 20px;
             .li {
@@ -3299,6 +3310,12 @@ button.btn_md_second {
           
     }
 }
+
+
+
+
+
+
 
 
 

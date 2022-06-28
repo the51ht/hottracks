@@ -52,7 +52,7 @@
 		display:inline-block;position:relative;font-size:20px;vertical-align:top;
 	}
 	.rank_icon {
-		display:inline-block;position:relative;top:8px;width:15px;height:18px;background:center/14px 18px no-repeat;
+		display:none;
 	}
 	&.up .rank_icon {
 		background-image:url('#{$imgUrl}guide/rank_noraml_up.svg');
@@ -63,6 +63,13 @@
 	&.same .rank_icon {
 		&:before {
 			position:absolute;left:4px;top:50%;width:6px;height:2px;margin-top:-1px;background-color:#000;content:"";
+		}
+	}
+	&.down,
+	&.up,
+	&.same {
+		.rank_icon {
+			display:inline-block;position:relative;top:8px;width:15px;height:18px;background-position:center;background-size:14px 18px;background-repeat:no-repeat;
 		}
 	}
 }
