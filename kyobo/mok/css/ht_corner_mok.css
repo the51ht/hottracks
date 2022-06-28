@@ -5,16 +5,17 @@
 /*
 $imgUrl : "../images/";*/
 /*$fontUrl :"http://image.kyobobook.co.kr/newimages/giftshop_new/resources/font/";*/
+/* 구분선 */
 .devide_hr,
 .divide_hr,
 .devide_underline_thin {
   display: block;
   width: 100%;
   height: 8px;
-  padding: 0;
-  border: none;
-  background-color: #f7f7f7;
   margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  border: none;
 }
 
 .divide_hr {
@@ -35,15 +36,14 @@ $imgUrl : "../images/";*/
   background-color: #f7f7f7;
 }
 
-/*=========================== TOD 메뉴 메인 (오늘만 특가)============================*/
+/***** * TOD 메뉴 메인 (오늘만 특가) * ******/
+/* 상품 공통 상단 패딩 */
 .tit + .prod-wrapper.evt_products {
   padding-top: 0;
 }
 
+/* 메인 메뉴 */
 .tod_menu_wrap {
-  position: relative;
-  z-index: 10;
-  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,47 +51,51 @@ $imgUrl : "../images/";*/
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  position: relative;
+  background-color: #fff;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .tod_menu_wrap .tod_menu {
   display: block;
   width: 50%;
-  line-height: 21px;
+  padding: 15px 10px;
+  color: rgba(0, 0, 0, 0.2);
   font-size: 15px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.2);
+  line-height: 21px;
   text-align: center;
-  padding: 15px 10px;
 }
 
 .tod_menu_wrap .tod_menu.active {
-  color: #000;
   position: relative;
+  color: #000;
 }
 
 .tod_menu_wrap .tod_menu.active:before {
-  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 2px;
   background-color: #000;
+  content: "";
 }
 
+/* 타이머 배너 영역 */
 .tod_full_banner {
   position: relative;
-  text-align: center;
-  background-color: #FFEB01;
   height: 150px;
+  background-color: #ffeb01;
+  text-align: center;
   overflow: hidden;
   z-index: 10;
 }
 
 .tod_full_banner.none_timer {
   padding: 0;
-  background-color: #86CCFF;
+  background-color: #86ccff;
 }
 
 .tod_full_banner img {
@@ -99,23 +103,23 @@ $imgUrl : "../images/";*/
 }
 
 .tod_full_banner img.btm {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
   width: 113px;
   height: 61px;
-  left: 50%;
-  position: absolute;
-  bottom: 0;
-  z-index: 5;
   margin-left: 73px;
+  z-index: 5;
 }
 
 .tod_full_banner .timer {
   position: absolute;
-  font-weight: 900;
-  color: #fff;
-  line-height: 21px;
-  font-size: 16px;
   left: 50%;
   bottom: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 21px;
   -webkit-transform: translateX(-55%);
           transform: translateX(-55%);
   z-index: 10;
@@ -123,23 +127,18 @@ $imgUrl : "../images/";*/
 }
 
 .tod_full_banner .btn_share {
+  position: absolute;
+  right: 20px;
+  top: 20px;
   width: 20px;
   height: 20px;
-  position: absolute;
-  z-index: 10;
-  top: 20px;
-  right: 20px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_tod_share.svg") no-repeat center center/20px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_tod_share.svg") center/20px no-repeat;
   border: 0;
   border-radius: 0;
+  z-index: 10;
 }
 
 .tod_full_banner .holdeal_mail_direct {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 12px;
-  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,6 +152,11 @@ $imgUrl : "../images/";*/
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 12px;
+  z-index: 10;
 }
 
 .tod_full_banner .holdeal_mail_direct span {
@@ -162,22 +166,22 @@ $imgUrl : "../images/";*/
 .tod_full_banner .holdeal_mail_direct .icon {
   width: 18px;
   height: 18px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_tod_bell.svg") no-repeat center center/18px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_tod_bell.svg") center/18px no-repeat;
 }
 
 .tod_full_banner .holdeal_mail_direct .txt {
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
   margin: 0 3px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
 }
 
 .tod_full_banner .holdeal_mail_direct .arrow {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_selec_arrow.svg") no-repeat center center/9px;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
   width: 9px;
   height: 18px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_selec_arrow.svg") center/9px no-repeat;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .hotdeal_product_pic {
@@ -194,13 +198,12 @@ $imgUrl : "../images/";*/
   width: 100%;
 }
 
+/* 더보기 버튼 영역 */
 .btn_more_div {
   margin-top: 20px;
 }
 
 .btn_more_div .more_btn {
-  height: 24px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,6 +219,8 @@ $imgUrl : "../images/";*/
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 24px;
+  margin: 0 auto;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -227,22 +232,21 @@ $imgUrl : "../images/";*/
 }
 
 .btn_more_div .txt {
-  line-height: 24px;
+  margin-right: 3px;
+  color: #767676;
   font-size: 15px;
   font-weight: 500;
+  line-height: 24px;
   letter-spacing: -0.15px;
-  color: #767676;
-  margin-right: 3px;
 }
 
 .btn_more_div .btn_more_icon {
   width: 24px;
   height: 24px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/ico/ico_arrow_large.png") no-repeat 0 0;
-  background-size: 24px auto;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/ico/ico_arrow_large.png") 0 0/24px auto no-repeat;
 }
 
-/*======= 타이머 말풍선 ========*/
+/* 타이머 말풍선 */
 .timer_bubble_area {
   position: fixed;
   bottom: 150px;
@@ -251,43 +255,43 @@ $imgUrl : "../images/";*/
 }
 
 .timer_bubble_area:before {
-  content: "";
   position: absolute;
-  width: 45px;
-  height: 35px;
-  z-index: 72;
   right: 0;
   top: -27px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/tod_timer_bomb.svg") no-repeat center center/contain;
+  width: 45px;
+  height: 35px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/tod_timer_bomb.svg") center/contain no-repeat;
+  content: "";
+  z-index: 72;
 }
 
 .timer_bubble_area .timer_bubble {
   position: relative;
-  color: #fff;
-  background-color: #000;
   padding: 11px 24px 8px 24px;
+  background-color: #000;
   border-radius: 50px;
+  color: #fff;
 }
 
 .timer_bubble_area .timer_bubble span {
   display: block;
-  text-align: center;
-  line-height: 16px;
   font-family: 'Gmarket Sans';
+  line-height: 16px;
+  text-align: center;
 }
 
 .timer_bubble_area .timer_bubble:before {
-  content: "";
   position: absolute;
+  right: 2px;
+  bottom: 0;
   border-top: 9px solid transparent;
   border-left: 0 solid transparent;
   border-right: 9px solid #000;
   border-bottom: 9px solid transparent;
   -webkit-transform: rotate(110deg);
-  transform: rotate(110deg);
+          transform: rotate(110deg);
+  content: "";
   z-index: -1;
-  bottom: 0;
-  right: 2px;
 }
 
 .timer_bubble_area .timer {
@@ -299,6 +303,7 @@ $imgUrl : "../images/";*/
   font-size: 13px;
 }
 
+/* 띠배너 */
 .belt_banner {
   margin-top: 30px;
 }
@@ -307,8 +312,7 @@ $imgUrl : "../images/";*/
   width: 100%;
 }
 
-/*=========================== //TOD 메뉴 메인 (오늘만 특가)============================*/
-/*====================  코너메뉴 베스트, 신상품, 무료 배송 ============================*/
+/***** * 코너메뉴 베스트, 신상품, 무료 배송 * *****/
 .cont_wrap > .tit {
   margin-bottom: 12px;
   padding: 0 20px;
@@ -322,25 +326,28 @@ $imgUrl : "../images/";*/
   margin-bottom: 16px;
 }
 
-/** MD 추천 (코너 메뉴 -신상품) **/
+/** MD 추천 (코너 메뉴 - 신상품) **/
 .ctg_top_swiper {
   margin-bottom: 40px;
+  padding: 34px 0 68px 0;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/md_top_banner_bg.svg") no-repeat;
+  background-size: cover;
 }
 
 .ctg_top_swiper .swiper-slide {
   position: relative;
   width: 217px;
-  border-radius: 12px;
-  overflow: hidden;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   height: auto;
   min-height: 100% !important;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
 }
 
 .ctg_top_swiper .swiper-slide .product_pic {
-  padding-top: 217px;
   margin-bottom: 0;
+  padding-top: 217px;
   border-radius: 8px 8px 0 0;
 }
 
@@ -354,10 +361,10 @@ $imgUrl : "../images/";*/
 }
 
 .ctg_top_swiper .swiper-pagination.out_bottom {
+  bottom: 38px;
   height: auto;
   padding: 0;
   background-color: rgba(0, 0, 0, 0);
-  bottom: 38px;
   line-height: 16px;
 }
 
@@ -375,21 +382,14 @@ $imgUrl : "../images/";*/
   color: rgba(0, 0, 0, 0.6);
 }
 
-.ctg_top_swiper {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/md_top_banner_bg.svg") no-repeat;
-  background-size: cover;
-  padding: 34px 0 68px 0;
-}
-
 .ctg_top_swiper .banner_title {
   padding: 30px 20px 0 20px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/banr_title_bg.svg") no-repeat center top;
-  background-size: auto 83px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/banr_title_bg.svg") center top/auto 83px no-repeat;
 }
 
 .ctg_top_swiper .banner_title .tit {
   height: 37px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/tod_banner_txt_img.png") no-repeat center center/auto;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/tod_banner_txt_img.png") center/auto no-repeat;
 }
 
 .ctg_top_swiper .banner_title .sub {
@@ -398,16 +398,17 @@ $imgUrl : "../images/";*/
 }
 
 .ctg_top_swiper .swiper-slide {
+  background-color: #fff;
   -webkit-box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
 }
 
+/* 업데이트 타이머 */
 .update_txt {
-  padding: 0 20px;
   margin-top: 15px;
-  font-size: 12px;
+  padding: 0 20px;
   color: #767676;
+  font-size: 12px;
 }
 
 .update_txt em {
@@ -421,11 +422,11 @@ $imgUrl : "../images/";*/
 .update_txt .btn_info {
   width: 17px;
   height: 17px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/btn_tooltip_mok.png") no-repeat center center/15px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/btn_tooltip_mok.png") center/15px no-repeat;
 }
 
-/*====================  //코너메뉴 베스트, 신상품, 무료 배송 =========================*/
-/*================================  카테고리 메인 ===================================*/
+/***** * 카테고리 메인* *****/
+/* 상단 메뉴 */
 .ctg_topMenu.depth1 {
   position: static;
   padding: 0;
@@ -434,8 +435,6 @@ $imgUrl : "../images/";*/
 }
 
 .ctg_topMenu.depth1 .inner_wrap {
-  width: 100%;
-  overflow-x: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,21 +442,23 @@ $imgUrl : "../images/";*/
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  width: 100%;
   border-bottom: 1px solid #d5d5d5;
   padding: 0;
+  overflow-x: auto;
 }
 
 .ctg_topMenu.depth1 a {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   display: block;
   position: relative;
-  padding: 0 13px 16px 4px;
-  letter-spacing: -0.15px;
-  color: rgba(0, 0, 0, 0.2);
-  white-space: nowrap;
-  font-size: 14px;
   margin-left: 0;
+  padding: 0 13px 16px 4px;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  letter-spacing: -0.15px;
+  white-space: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .ctg_topMenu.depth1 a:first-of-type {

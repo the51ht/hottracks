@@ -6,11 +6,11 @@
 
 
 
-//구분선
+/* 구분선 */
 .devide_hr,
 .divide_hr,
 .devide_underline_thin {
-	display:block;width:100%;height:8px;padding:0;border:none;background-color:#f7f7f7;margin:0;
+	display:block;width:100%;height:8px;margin:0;padding:0;background-color:#f7f7f7;border:none;
 }
 .divide_hr {
     margin-top:40px;
@@ -22,55 +22,66 @@
 	display:block;border:none;width:100%;height:40px;margin:0;background-color:#f7f7f7;
 }
 
-/*=========================== TOD 메뉴 메인 (오늘만 특가)============================*/
-//상품 공통 상단 패딩
+
+
+
+
+
+
+
+
+
+/***** * TOD 메뉴 메인 (오늘만 특가) * ******/
+/* 상품 공통 상단 패딩 */
 .tit + .prod-wrapper.evt_products {
     padding-top:0;
 }
-//메인 메뉴
+
+/* 메인 메뉴 */
 .tod_menu_wrap {
-    position:relative;z-index:10;background-color:#fff;display:flex;flex-flow:row nowrap;border-top:1px solid rgba(0,0,0,0.2);
+    display:flex;flex-flow:row nowrap;position:relative;background-color:#fff;border-top:1px solid rgba(0,0,0,0.2);z-index:10;
     .tod_menu {
-        display:block;width:50%;line-height:21px;font-size:15px;font-weight:500;color:rgba(0,0,0,0.2);text-align:center;padding:15px 10px;
+        display:block;width:50%;padding:15px 10px;color:rgba(0,0,0,0.2);font-size:15px;font-weight:500;line-height:21px;text-align:center;
         &.active {
-            color:#000;position:relative;
+            position:relative;color:#000;
             &:before {
-                content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background-color:#000;
+                position:absolute;left:0;bottom:0;width:100%;height:2px;background-color:#000;content:"";
             }
         }
     }
 }
-//타이머 배너 영역
+
+/* 타이머 배너 영역 */
 .tod_full_banner {
-    position:relative;text-align:center;background-color:#FFEB01;height:150px;overflow:hidden;z-index:10;
+    position:relative;height:150px;background-color:#ffeb01;text-align:center;overflow:hidden;z-index:10;
     &.none_timer {
-        padding:0;background-color:#86CCFF;
+        padding:0;background-color:#86ccff;
     }
     img {
         height:150px;
         &.btm {
-            width:113px;height:61px;left:50%;position:absolute;bottom:0;z-index:5;margin-left:73px;
+            position:absolute;left:50%;bottom:0;width:113px;height:61px;margin-left:73px;z-index:5;
         }
     }
     .timer {
-        position:absolute;font-weight:900;color:#fff;line-height:21px;font-size:16px;left:50%;bottom:40px;transform:translateX(-55%);z-index:10;letter-spacing:-0.025em;
+        position:absolute;left:50%;bottom:40px;color:#fff;font-size:16px;font-weight:900;line-height:21px;transform:translateX(-55%);z-index:10;letter-spacing:-0.025em;
     }
     .btn_share {
-        width:20px;height:20px;position:absolute;z-index:10;top:20px;right:20px;background:url('#{$imgUrl}guide/ico_tod_share.svg') no-repeat center center/ 20px;border:0;border-radius:0;
+        position:absolute;right:20px;top:20px;width:20px;height:20px;background:url('#{$imgUrl}guide/ico_tod_share.svg') center/ 20px no-repeat;border:0;border-radius:0;z-index:10;  
     }
     .holdeal_mail_direct {
-        position:absolute;width:100%;left:0;bottom:12px;z-index:10;display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;
+        display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;position:absolute;width:100%;left:0;bottom:12px;z-index:10;
         span {
             display:block;
         }
         .icon {
-            width:18px;height:18px;background:url('#{$imgUrl}guide/ico_tod_bell.svg') no-repeat center center/ 18px;
+            width:18px;height:18px;background:url('#{$imgUrl}guide/ico_tod_bell.svg') center/ 18px no-repeat;
         }
         .txt {
-            font-weight:500;font-size:13px;line-height:19px;margin:0 3px;
+            margin:0 3px;font-size:13px;font-weight:500;line-height:19px;
         }
         .arrow {
-            background:url('#{$imgUrl}guide/ico_selec_arrow.svg') no-repeat center center/9px;transform:rotate(-90deg);width:9px;height:18px;
+            width:9px;height:18px;background:url('#{$imgUrl}guide/ico_selec_arrow.svg') center/9px no-repeat;transform:rotate(-90deg);
         }
     }
 }
@@ -80,36 +91,37 @@
         position:absolute;top:0;left:0;width:100%;
     }
 }
-//더보기 버튼 영역
+
+/* 더보기 버튼 영역 */
 .btn_more_div {
 	margin-top:20px;
 	.more_btn {
-		height:24px;margin:0 auto;display:flex;flex-flow:row nowrap;justify-content:space-between;align-content:center;align-items:center;appearance:none;cursor:pointer;
+		display:flex;flex-flow:row nowrap;justify-content:space-between;align-content:center;align-items:center;height:24px;margin:0 auto;appearance:none;cursor:pointer;
 	}
 	.more_btn.hidden {
 		display:none;
 	}
 	.txt {
-		line-height:24px;font-size:15px;font-weight:500;letter-spacing:-0.15px;color:#767676;margin-right:3px;
+        margin-right:3px;color:#767676;font-size:15px;font-weight:500;line-height:24px;letter-spacing:-0.15px;
 	}
 	.btn_more_icon {
-		width:24px;height:24px;background:url('#{$imgUrl}ico/ico_arrow_large.png') no-repeat 0 0;background-size:24px auto;
+		width:24px;height:24px;background:url('#{$imgUrl}ico/ico_arrow_large.png') 0 0/24px auto no-repeat;
 	}
  }
 
-/*======= 타이머 말풍선 ========*/
+/* 타이머 말풍선 */
 .timer_bubble_area {
     position:fixed;bottom:150px;right:12px;z-index:70;
     &:before {
-        content:"";position:absolute;width:45px;height:35px;z-index:72;right:0;top:-27px;background:url('#{$imgUrl}guide/tod_timer_bomb.svg') no-repeat center center/ contain;
+        position:absolute;right:0;top:-27px;width:45px;height:35px;background:url('#{$imgUrl}guide/tod_timer_bomb.svg') center/ contain no-repeat;content:"";z-index:72;
     }
     .timer_bubble {
-        position:relative;color:#fff;background-color:#000;padding:11px 24px 8px 24px;border-radius:50px;
+        position:relative;padding:11px 24px 8px 24px;background-color:#000;border-radius:50px;color:#fff;
         span {
-            display:block;text-align:center;line-height:16px;font-family:'Gmarket Sans';
+            display:block;font-family:'Gmarket Sans';line-height:16px;text-align:center;
         }
         &:before {
-            content:"";position:absolute;border-top:9px solid transparent;border-left:0 solid transparent;border-right:9px solid #000;border-bottom:9px solid transparent;-webkit-transform:rotate(110deg);transform:rotate(110deg);z-index:-1;bottom:0;right:2px;
+            position:absolute;right:2px;bottom:0;border-top:9px solid transparent;border-left:0 solid transparent;border-right:9px solid #000;border-bottom:9px solid transparent;transform:rotate(110deg);content:"";z-index:-1;
         }
     }
     .timer {
@@ -119,16 +131,27 @@
         display:block;font-size:13px;
     }
 }
-//띠배너
+
+/* 띠배너 */
 .belt_banner {
     margin-top:30px;
     & > img {
         width:100%;
     }
 }
-/*=========================== //TOD 메뉴 메인 (오늘만 특가)============================*/
 
-/*====================  코너메뉴 베스트, 신상품, 무료 배송 ============================*/
+
+
+
+
+
+
+
+
+
+
+
+/***** * 코너메뉴 베스트, 신상품, 무료 배송 * *****/
 .cont_wrap {
     &>.tit {
         margin-bottom:12px;padding:0 20px;font-size:20px;font-weight:700;line-height:32px;text-align:left;
@@ -139,13 +162,13 @@
 }
 
 
-/** MD 추천 (코너 메뉴 -신상품) **/
+/** MD 추천 (코너 메뉴 - 신상품) **/
 .ctg_top_swiper {
-    margin-bottom:40px;
+    margin-bottom:40px;padding:34px 0 68px 0;background:url('#{$imgUrl}guide/md_top_banner_bg.svg') no-repeat;background-size:cover;
     .swiper-slide {
-        position:relative;width:217px;border-radius:12px;overflow:hidden;box-sizing:border-box;height:auto;min-height:100% !important;
+        position:relative;width:217px;height:auto;min-height:100% !important;border-radius:12px;box-sizing:border-box;overflow:hidden;
         .product_pic {
-            padding-top:217px;margin-bottom:0;border-radius:8px 8px 0 0;
+            margin-bottom:0;padding-top:217px;border-radius:8px 8px 0 0;
         }
         .product_info {
             padding:12px 20px 20px 20px;background-color:#fff;
@@ -155,7 +178,7 @@
         }
     }
     .swiper-pagination.out_bottom {
-        height:auto;padding:0;background-color:rgba(0,0,0,0);bottom:38px;line-height:16px;
+        bottom:38px;height:auto;padding:0;background-color:rgba(0,0,0,0);line-height:16px;
         .swiper-pagination-current {
             color:#000;line-height:16px;
         }
@@ -166,26 +189,24 @@
             }
         }
     }
-}
-//MD 추천 (코너 메뉴 -신상품) 
-.ctg_top_swiper {
-    background:url('#{$imgUrl}guide/md_top_banner_bg.svg') no-repeat;background-size:cover;padding:34px 0 68px 0;
+
     .banner_title {
-        padding:30px 20px 0 20px;background:url('#{$imgUrl}guide/banr_title_bg.svg') no-repeat center top;background-size:auto 83px;
+        padding:30px 20px 0 20px;background:url('#{$imgUrl}guide/banr_title_bg.svg') center top/auto 83px no-repeat;
         .tit {
-            height:37px;background:url('#{$imgUrl}guide/tod_banner_txt_img.png') no-repeat center center /auto ;
+            height:37px;background:url('#{$imgUrl}guide/tod_banner_txt_img.png') center /auto no-repeat;
         }
         .sub{
             text-align:center;line-height:22px;
         }
     }
     .swiper-slide {
-        box-shadow:1px 1px 7px 3px rgba(0, 0, 0, 0.1);background-color:#fff;
+        background-color:#fff;box-shadow:1px 1px 7px 3px rgba(0, 0, 0, 0.1);
     }
 }
-//업데이트 타이머
+
+/* 업데이트 타이머 */
 .update_txt {
-    padding:0 20px;margin-top:15px;font-size:12px;color:#767676;
+    margin-top:15px;padding:0 20px;color:#767676;font-size:12px;
     em {
         line-height:17px;
     }
@@ -193,21 +214,29 @@
         margin:0 3px;
     }
     .btn_info {
-        width:17px;height:17px;background:url('#{$imgUrl}guide/btn_tooltip_mok.png') no-repeat center center/ 15px;
+        width:17px;height:17px;background:url('#{$imgUrl}guide/btn_tooltip_mok.png') center/ 15px no-repeat;
     }
 }
-/*====================  //코너메뉴 베스트, 신상품, 무료 배송 =========================*/
 
-/*================================  카테고리 메인 ===================================*/
-//상단 메뉴
+
+
+
+
+
+
+
+
+
+/***** * 카테고리 메인* *****/
+/* 상단 메뉴 */
 .ctg_topMenu {
     &.depth1 {
         position:static;padding:0;padding-bottom:-2px;background-color:#fff;
         .inner_wrap {
-            width:100%;overflow-x:auto;display:flex;flex-flow:row nowrap;border-bottom:1px solid #d5d5d5;padding:0;
+            display:flex;flex-flow:row nowrap;width:100%;border-bottom:1px solid #d5d5d5;padding:0;overflow-x:auto;
         }
         a {
-            flex-shrink:0;display:block;position:relative;padding: 0 13px 16px 4px;letter-spacing: -0.15px;color: rgba(0, 0, 0, 0.2);white-space: nowrap;font-size: 14px;margin-left: 0;
+            display:block;position:relative;margin-left:0;padding:0 13px 16px 4px;color:rgba(0, 0, 0, 0.2);font-size:14px;letter-spacing:-0.15px;white-space:nowrap;flex-shrink:0;
             &:first-of-type {
                 margin-left:16px;
             }
@@ -215,7 +244,7 @@
                 padding-right:20px;
             }
             &.active {
-            color:#000;
+                color:#000;
             }
        }
     }
