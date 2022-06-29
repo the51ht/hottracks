@@ -5744,6 +5744,10 @@ button[class^=btn_] .text {
 }
 
 /* 버튼 - 사이즈 */
+button {
+  cursor: pointer;
+}
+
 a.btn_lg, button.btn_lg {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -10675,6 +10679,9 @@ input[type=number] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -10686,9 +10693,6 @@ input[type=number] {
       -ms-flex-direction: row;
           flex-direction: row;
   height: calc(100% + 1px);
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10743,7 +10747,6 @@ input[type=number] {
 }
 
 .tab_wrap .tab_list_wrap .tabs .tab_item .tab_link:after {
-  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -10751,6 +10754,7 @@ input[type=number] {
   width: 100%;
   height: 2px;
   background-color: transparent;
+  content: "";
   -webkit-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
 }
@@ -10759,14 +10763,14 @@ input[type=number] {
   position: relative;
   display: block;
   width: 100%;
-  color: #767676;
-  font-size: 15px;
-  line-height: 23px;
-  letter-spacing: -0.01em;
-  font-weight: 400;
-  font-family: "Noto Sans KR", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #767676;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: -0.01em;
   -webkit-transition: color 0.2s ease-out, font-weight 0.2s ease-out;
   transition: color 0.2s ease-out, font-weight 0.2s ease-out;
 }
@@ -10785,9 +10789,9 @@ input[type=number] {
 }
 
 .tab_wrap .tab_list_wrap .tabs .tab_item.active, .tab_wrap .tab_list_wrap .tabs .tab_item.ui-state-active {
-  z-index: 2;
   margin-bottom: 0;
   padding-bottom: 0;
+  z-index: 2;
 }
 
 .tab_wrap .tab_list_wrap .tabs .tab_item.active .tab_link,
@@ -10802,8 +10806,8 @@ input[type=number] {
 
 .tab_wrap .tab_list_wrap .tabs .tab_item.active .tab_link .tab_text,
 .tab_wrap .tab_list_wrap .tabs .tab_item.ui-state-active .tab_link .tab_text {
-  color: #000;
   font-weight: 700;
+  color: #000;
 }
 
 .tab_wrap .tab_list_wrap .right_area {
@@ -10874,8 +10878,8 @@ input[type=number] {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 1px solid #d5d5d5;
   padding: 0;
+  border: 1px solid #d5d5d5;
   -webkit-transition: background 0.2s ease-out, border-color 0.2s ease-out;
   transition: background 0.2s ease-out, border-color 0.2s ease-out;
 }
@@ -10908,12 +10912,11 @@ input[type=number] {
 .tab_wrap.type_line_primary .tab_list_wrap {
   position: relative;
   height: 44px;
-  border-bottom: none;
   margin-bottom: 24px;
+  border-bottom: none;
 }
 
 .tab_wrap.type_line_primary .tab_list_wrap:after {
-  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -10921,6 +10924,7 @@ input[type=number] {
   width: 100%;
   height: 2px;
   background-color: #5055b1;
+  content: "";
 }
 
 .tab_wrap.type_line_primary .tab_list_wrap .tabs {
@@ -10981,10 +10985,10 @@ input[type=number] {
 }
 
 .tab_wrap.type_tag .tab_list_wrap .tabs {
-  overflow: visible;
   display: block;
   height: auto;
   margin: -3px;
+  overflow: visible;
 }
 
 .tab_wrap.type_tag .tab_list_wrap .tabs .tab_item {
@@ -11026,8 +11030,8 @@ input[type=number] {
 
 .tab_wrap.type_fill_round > .tab_list_wrap {
   height: 44px;
-  border-bottom: none;
   margin-bottom: 30px;
+  border-bottom: none;
 }
 
 .tab_wrap.type_fill_round > .tab_list_wrap > .tabs .tab_item {
@@ -11061,8 +11065,8 @@ input[type=number] {
 }
 
 .tab_wrap.type_fill_round > .tab_list_wrap > .tabs .tab_item.ui-state-active .tab_text {
-  color: #fff;
   font-weight: 700;
+  color: #fff;
 }
 
 .tab_wrap.type_fill_round > .tab_list_wrap > .tabs .tab_item ~ .tab_item {
@@ -11084,12 +11088,14 @@ input[type=number] {
   padding: 0 14px;
 }
 
-/* tab - sm 타입 */
-/* tab - fill 타입 */
-/* tab - line 타입 */
-/* tab - 태그 타입 */
-/* tab - fill round 타입 - 회원(로그인) 사용중 */
-/* tab - 균등형 */
+/* 
+tab - sm 타입
+tab - fill 타입
+tab - line 타입
+tab - 태그 타입
+tab - fill round 타입 - 회원(로그인) 사용중
+tab - 균등형
+*/
 .contents_wrap .contents_inner .tab_wrap:not(.contents_wrap.contents_inner.tab_wrap.type_sm, .contents_wrap.contents_inner.tab_wrap.type_fill, .contents_wrap.contents_inner.tab_wrap.type_fill) .tab_list_wrap .tabs {
   padding: 0;
 }
@@ -11139,16 +11145,16 @@ input[type=number] {
   width: 100%;
   height: 50px;
   padding: 0 14px;
-  color: #000;
-  font-size: 14px;
-  line-height: 48px;
-  letter-spacing: -0.01em;
-  font-family: "Noto Sans KR", sans-serif;
   background-color: #fff;
   border: 1px solid #d5d5d5;
   border-radius: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #000;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  line-height: 48px;
+  letter-spacing: -0.01em;
   -webkit-transition: border-color 0.2s ease-out;
   transition: border-color 0.2s ease-out;
   outline: 0;
@@ -11166,36 +11172,36 @@ input[type=number] {
 }
 
 .datepicker_box .form_datepicker::-webkit-input-placeholder, .datepicker_box .form_datepicker:-ms-input-placeholder, .datepicker_box .form_datepicker::-ms-input-placeholder, .datepicker_box .form_datepicker::-moz-placeholder, .datepicker_box .form_datepicker::-webkit-input-placeholder, .datepicker_box .form_datepicker:-ms-input-placeholder {
-  font-size: inherit;
   color: #767676;
+  font-size: inherit;
 }
 
 .datepicker_box .form_datepicker::-webkit-input-placeholder, .datepicker_box .form_datepicker:-ms-input-placeholder, .datepicker_box .form_datepicker::-ms-input-placeholder, .datepicker_box .form_datepicker::-moz-placeholder, .datepicker_box .form_datepicker::placeholder, .datepicker_box .form_datepicker:-ms-input-placeholder {
-  font-size: inherit;
   color: #767676;
+  font-size: inherit;
 }
 
 .datepicker_box .form_datepicker::-ms-input-placeholder {
   /* Microsoft Edge */
-  font-size: inherit;
   color: #767676;
+  font-size: inherit;
 }
 
 .datepicker_box .ui-datepicker-trigger {
   position: absolute;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   width: 36px;
   height: 36px;
   background: #ff1493;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .slider_item {
   height: 4px;
-  background: #eaeaea;
   margin: 7px 0;
+  background: #eaeaea;
   border-radius: 2px;
 }
 
@@ -11205,13 +11211,13 @@ input[type=number] {
 }
 
 .slider_item .ui-slider-handle {
+  top: -6px;
   width: 16px;
   height: 16px;
   margin-left: -9px;
   background: #fff;
   border: 1px solid #999;
   border-radius: 9px;
-  top: -6px;
 }
 
 .slider_item.text_size_slider {
@@ -11223,30 +11229,30 @@ input[type=number] {
 }
 
 .slider_item.text_size_slider:after {
-  content: "";
-  position: absolute;
   display: inline-block;
+  position: absolute;
+  top: -1px;
   width: 16px;
   height: 32px;
-  border-radius: 17px;
   border: 1px solid transparent;
-  top: -1px;
+  border-radius: 17px;
+  content: "";
 }
 
 .slider_item.text_size_slider:before {
-  content: "";
-  position: absolute;
   display: inline-block;
-  width: 16px;
-  height: 32px;
-  border-radius: 17px;
-  border: 1px solid transparent;
+  position: absolute;
   top: -1px;
   left: -18px;
+  width: 16px;
+  height: 32px;
   background: #5055b1;
+  border-radius: 17px;
+  border: 1px solid transparent;
   border-color: #5055b1;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  content: "";
 }
 
 .slider_item.text_size_slider:after {
@@ -11259,21 +11265,21 @@ input[type=number] {
 }
 
 .slider_item.text_size_slider .ui-slider-range {
+  top: -1px;
+  height: 34px;
   background: #5055b1;
   border-radius: 17px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  height: 34px;
-  top: -1px;
 }
 
 .slider_item.text_size_slider .ui-slider-handle {
+  top: -1px;
   width: 32px;
   height: 32px;
   margin-left: -18px;
-  top: -1px;
   border-color: #ccc;
   border-radius: 17px;
   z-index: 3;
@@ -11317,9 +11323,9 @@ input[type=number] {
 }
 
 .slider_wrap.has_pagination .preview_pagination .pagination_total:before {
-  content: "-";
   display: inline-block;
   margin: 0 4px 0 3px;
+  content: "-";
 }
 
 .slider_wrap.has_pagination .slider_item {
@@ -11330,13 +11336,13 @@ input[type=number] {
 }
 
 .slider_wrap .slider_text {
-  position: absolute;
   display: inline-block;
+  position: absolute;
   font-size: 12px;
   top: 50%;
-  z-index: 2;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 2;
 }
 
 .slider_wrap .slider_text .prefix {
@@ -11396,6 +11402,44 @@ input[type=number] {
   height: 80px !important;
 }
 
+.dialog_wrapper .ui-dialog .dialog_wrap {
+  border-radius: 4px;
+}
+
+.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
+  border-radius: 4px;
+}
+
+.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap {
+  border-radius: 0;
+}
+
+.dialog_wrapper .ui-dialog.dialog_full {
+  width: 100% !important;
+  max-width: 750px;
+  min-width: inherit;
+  margin: 0;
+}
+
+.dialog_wrapper .ui-dialog.dialog_bottom {
+  width: 100% !important;
+  max-width: 750px;
+  min-width: inherit;
+  margin: 0;
+}
+
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap {
+  border-radius: 0;
+}
+
+.byte_check_wrap .form_textarea {
+  padding: 0;
+}
+
+.byte_check_wrap .byte_chack_footer {
+  padding-right: 0;
+}
+
 /** 최근본 상품 **/
 .history_item .prod_area .prod_info_box .prod_price .percent {
   color: #da2128;
@@ -11436,44 +11480,6 @@ input[type=number] {
   background-color: #000;
   border-color: #000;
   color: #fff;
-}
-
-.dialog_wrapper .ui-dialog .dialog_wrap {
-  border-radius: 4px;
-}
-
-.dialog_wrapper .ui-dialog .dialog_wrap.ui-dialog-content {
-  border-radius: 4px;
-}
-
-.dialog_wrapper .ui-dialog.dialog_full .dialog_wrap {
-  border-radius: 0;
-}
-
-.dialog_wrapper .ui-dialog.dialog_full {
-  width: 100% !important;
-  max-width: 750px;
-  min-width: inherit;
-  margin: 0;
-}
-
-.dialog_wrapper .ui-dialog.dialog_bottom {
-  width: 100% !important;
-  max-width: 750px;
-  min-width: inherit;
-  margin: 0;
-}
-
-.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap {
-  border-radius: 0;
-}
-
-.byte_check_wrap .form_textarea {
-  padding: 0;
-}
-
-.byte_check_wrap .byte_chack_footer {
-  padding-right: 0;
 }
 
 /* 3과제 Custom */
@@ -12835,13 +12841,13 @@ body:before {
 }
 
 .wrapper.ht_ .footer_wrapper .notice_type_detail .notice_content .notice_content_text * {
+  display: inline !important;
   margin: 0 !important;
   padding: 0 !important;
   font-size: 13px !important;
   color: #595959 !important;
   font-weight: 400 !important;
   line-height: 19px !important;
-  display: inline-block !important;
 }
 
 .wrapper.ht_ .footer_wrapper .notice_type_detail .notice_content .notice_content_text br {
@@ -14040,6 +14046,7 @@ body:before {
 }
 
 /* Layout */
+/* 상품 카드 공통 영역 */
 .list_evt_area {
   padding-top: 40px;
 }
@@ -14061,12 +14068,12 @@ body:before {
 
 .list_evt_area .thumnail_evt {
   position: relative;
-  padding-top: 57.2%;
   height: 0;
   margin-bottom: 12px;
-  cursor: pointer;
+  padding-top: 57.2%;
   border-radius: 12px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .list_evt_area .thumnail_evt img {
@@ -14090,33 +14097,33 @@ body:before {
 }
 
 .list_evt_area .promotion_end .txt {
-  width: 100%;
-  height: 19px;
   position: absolute;
   top: 50%;
+  width: 100%;
+  height: 19px;
   margin-top: -10px;
 }
 
 .list_evt_area .promotion_end .promotion_status_txt {
+  display: block;
   position: absolute;
-  width: 100%;
-  text-align: center;
   top: 50%;
+  width: 100%;
+  color: #fff;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: center;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  display: block;
-  color: #fff;
-  line-height: 19px;
-  font-size: 13px;
   z-index: 11;
 }
 
 .list_evt_area img {
   position: absolute;
-  width: 100%;
   left: 0;
   top: 0;
   right: 0;
+  width: 100%;
 }
 
 .list_evt_area .txt_account .txt_heading,
@@ -14127,11 +14134,11 @@ body:before {
 }
 
 .list_evt_area .txt_account .txt_heading {
-  line-height: 26px;
-  font-size: 16px;
-  letter-spacing: -0.16px;
   margin-bottom: 4px;
+  font-size: 16px;
   font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.16px;
 }
 
 .list_evt_area .txt_account .txt_heading .discount {
@@ -14141,16 +14148,16 @@ body:before {
 
 .list_evt_area .txt_account .txt_sub {
   margin-bottom: 6px;
-  line-height: 19px;
   font-size: 13px;
+  line-height: 19px;
   letter-spacing: -0.13px;
 }
 
 .list_evt_area .txt_account .txt_period {
-  line-height: 19px;
-  font-size: 13px;
-  letter-spacing: -0.13px;
   color: #595959;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: -0.13px;
 }
 
 .list_evt_area.evt_ty02 .thumnail_evt {
@@ -14169,6 +14176,7 @@ body:before {
   margin-top: 40px;
 }
 
+/*** evt_slider ***/
 .evt_slider {
   padding-top: 20px;
   padding-right: 20px;
@@ -14253,6 +14261,7 @@ body:before {
 }
 
 .evt_slider .discount {
+  display: block !important;
   position: absolute;
   left: -8px;
   top: -18px;
@@ -14265,7 +14274,6 @@ body:before {
   line-height: 48px;
   text-align: center;
   z-index: 10;
-  display: block !important;
 }
 
 .evt_slider .title {
@@ -14310,8 +14318,8 @@ body:before {
 
 .evt_slider.nonswipe .evt_item .img_wrap {
   position: relative;
-  padding-top: 57.2%;
   height: 0;
+  padding-top: 57.2%;
 }
 
 .evt_slider.nonswipe .evt_item .img_wrap img {
@@ -14331,17 +14339,17 @@ body:before {
 
 .list_evt_area .evt_item .discount_icon {
   position: absolute;
-  width: 52px;
-  height: 52px;
-  color: #fff;
-  text-align: center;
-  line-height: 48px;
   left: 12px;
   top: -18px;
-  z-index: 3;
+  width: 52px;
+  height: 52px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") center bottom/52px no-repeat;
+  color: #fff;
   font-size: 12px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") no-repeat center bottom/52px;
   font-weight: 700;
+  text-align: center;
+  line-height: 48px;
+  z-index: 3;
 }
 
 .prod-wrapper,
@@ -14365,8 +14373,8 @@ body:before {
   height: 0;
   margin-bottom: 10px;
   background-color: #f7f7f7;
-  overflow: hidden;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .prod-wrapper .product_pic img,
@@ -14411,7 +14419,7 @@ body:before {
   width: 12px;
   height: 14px;
   margin-top: 0;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_prod_like_icon.svg") no-repeat center center/12px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_prod_like_icon.svg") center/12px no-repeat;
 }
 
 .prod-wrapper .product_pic .evt_good_count .txt,
@@ -14432,7 +14440,7 @@ body:before {
   float: left;
   width: 12px;
   height: 14px;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_prod_like_icon_active.svg") no-repeat center center/12px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ico_prod_like_icon_active.svg") center/12px no-repeat;
 }
 
 .prod-wrapper .company,
@@ -14496,12 +14504,12 @@ body:before {
 
 .prod-wrapper .price_origin,
 .evt_products .price_origin {
+  margin-top: 1px;
   color: #767676;
   font-size: 11px;
   font-weight: 400;
   line-height: 22px;
   text-decoration: line-through;
-  margin-top: 1px;
 }
 
 .prod-wrapper .price_origin.no_discount,
@@ -14576,6 +14584,7 @@ body:before {
   border-radius: 8px;
 }
 
+/* 스왑 기능 없을때 */
 .nonswipe {
   padding-right: 0px !important;
 }
@@ -14596,10 +14605,10 @@ body:before {
 }
 
 .nonswipe .evt_item img {
-  width: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
 }
 
 .nonswipe .discount_rate,
@@ -14786,46 +14795,8 @@ body:before {
   font-weight: 700;
 }
 
-/* 1:1 비율 74*74*/
-.type_xxs .prod_item {
-  width: 74px;
-}
-
-.type_xxs .product_pic {
-  padding-top: 74px;
-  margin-bottom: 2px;
-}
-
-.type_xxs .product_pic .evt_good_count {
-  right: 4px;
-  bottom: 4px;
-}
-
-.type_xxs .title {
-  font-size: 12px;
-  margin-bottom: 4px;
-  min-height: auto;
-}
-
-.type_xxs .badge_line {
-  margin-top: 6px;
-}
-
-.type_xxs .badge_line .badge {
-  margin-top: 2px;
-  height: 17px;
-  line-height: 17px;
-  font-weight: normal;
-  font-size: 8px;
-  padding: 0 4px;
-}
-
-.type_xxs .price_line {
-  font-size: 10px;
-}
-
+/* 상품 개수 2개 이하로 스왑 기능 없을때 */
 .nonswipe {
-  padding-right: 0 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14836,6 +14807,7 @@ body:before {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  padding-right: 0 !important;
 }
 
 .nonswipe .prod_item {
@@ -14848,22 +14820,22 @@ body:before {
 }
 
 .nonswipe .product_pic {
-  padding-top: 100%;
   position: relative;
   margin-bottom: 12px;
+  padding-top: 100%;
 }
 
 .nonswipe .product_pic img {
-  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
 }
 
 .nonswipe .company {
   margin-bottom: 2px;
-  font-size: 12px;
   color: #767676;
+  font-size: 12px;
 }
 
 .nonswipe .title {
@@ -14892,15 +14864,15 @@ body:before {
 }
 
 .nonswipe .price_line .discount_rate {
-  font-weight: 500;
+  margin-right: 5px;
   color: #da2128;
   font-size: 16px;
-  margin-right: 5px;
+  font-weight: 500;
 }
 
 .nonswipe .price_line .final_price {
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .nonswipe .price_line .price_origin {
@@ -14910,11 +14882,12 @@ body:before {
 }
 
 .nonswipe .price_line .price_origin.no_discount {
-  text-decoration: none;
-  font-size: 16px;
   color: #000;
+  font-size: 16px;
+  text-decoration: none;
 }
 
+/* 19세 이상 상품 */
 .adult_prod .product_pic {
   position: relative;
   background-color: #fff;
@@ -14937,6 +14910,7 @@ body:before {
   z-index: 2;
 }
 
+/* evt_products */
 .evt_products {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14965,9 +14939,9 @@ body:before {
 }
 
 .evt_products .product_pic {
+  position: relative;
   width: 100%;
   padding-top: 100%;
-  position: relative;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -14981,7 +14955,6 @@ body:before {
 }
 
 .evt_products .sold_out .product_pic:before {
-  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -14991,6 +14964,7 @@ body:before {
   left: 0;
   z-index: 1;
   overflow: hidden;
+  content: "";
 }
 
 .evt_products .show_replace {
@@ -15049,9 +15023,9 @@ body:before {
 }
 
 .evt_products .prod_item:nth-of-type(2n) .replace_prod_swap:before {
-  content: "";
   position: absolute;
   left: calc(100% - 40px);
+  content: "";
 }
 
 .evt_products .prod_item:nth-of-type(2n+1) .replace_prod_swap {
@@ -15068,8 +15042,6 @@ body:before {
 }
 
 .evt_products.row_dir .prod_item {
-  width: 100%;
-  margin-top: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15085,6 +15057,8 @@ body:before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  margin-top: 24px;
 }
 
 .evt_products.row_dir .prod_item span {
@@ -15136,9 +15110,9 @@ body:before {
 }
 
 .evt_products.row_dir .replace_prod_swap:before {
-  content: "";
   position: absolute;
   left: 40px !important;
+  content: "";
 }
 
 .evt_products.row_dir .replace_prod_swap .mySwiper .swiper-wrapper {
@@ -15158,28 +15132,31 @@ body:before {
   padding-top: 140px;
 }
 
+/* 품절 대체 팝업 */
 .replace_sub_tit {
-  line-height: 18px;
-  font-size: 12px;
-  color: #767676;
-  word-break: keep-all;
-  font-weight: normal;
   margin-bottom: -8px;
+  color: #767676;
+  font-size: 12px;
+  font-weight: 400l;
+  line-height: 18px;
+  word-break: keep-all;
 }
 
+/* 품절 대체 슬라이더 */
 .replace_prod_swap {
-  position: relative;
   display: none;
-  background-color: #f2e3cb;
+  position: relative;
   width: 100vw;
   max-width: 750px;
-  padding: 34px 0 36px 20px;
   margin: 30px -20px 0 -20px;
+  padding: 34px 0 36px 20px;
+  background-color: #f2e3cb;
 }
 
 .replace_prod_swap:before {
-  content: "";
   position: absolute;
+  left: 20px;
+  top: -23px;
   border-top: 12px solid #f2e3cb;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
@@ -15187,8 +15164,7 @@ body:before {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   z-index: 1;
-  left: 20px;
-  top: -23px;
+  content: "";
 }
 
 .replace_prod_swap .swiper {
@@ -15196,10 +15172,10 @@ body:before {
 }
 
 .replace_prod_swap .close_swap {
+  display: block;
   position: absolute;
   top: 35px;
   right: 20px;
-  display: block;
   width: 24px;
   height: 24px;
   background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/btn_dialog_close.svg");
@@ -15258,7 +15234,7 @@ body:before {
   display: block;
 }
 
-/** =============랭킹 뱃지 상품 리스트  ============ */
+/*** 랭킹 뱃지 상품 리스트 ***/
 .list_section {
   position: relative;
 }
@@ -15272,7 +15248,6 @@ body:before {
 }
 
 .list_section .rangking {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15288,16 +15263,17 @@ body:before {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  position: absolute;
+  left: -10px;
+  top: -4px;
   width: 52px;
   height: 50px;
-  text-align: center;
-  line-height: 50px;
-  top: -4px;
-  left: -10px;
-  z-index: 30;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_noraml.svg") center/50px no-repeat;
   color: #000;
   font-weight: 700;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_noraml.svg") no-repeat center center/50px;
+  line-height: 50px;
+  text-align: center;
+  z-index: 30;
 }
 
 .list_section .rangking.none_icon .rank_icon {
@@ -15314,11 +15290,11 @@ body:before {
 }
 
 .list_section .rangking.down .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_noraml_down.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_noraml_down.svg") center/9px no-repeat;
 }
 
 .list_section .rangking.up .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_noraml_up.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_noraml_up.svg") center/9px no-repeat;
 }
 
 .list_section .rangking.same .rank_icon {
@@ -15326,15 +15302,15 @@ body:before {
 }
 
 .list_section .rangking.same .rank_icon:before {
-  content: "";
   position: absolute;
+  right: 14px;
+  left: 0;
+  top: 50%;
   width: 7px;
   height: 2px;
-  right: 14px;
-  background-color: #000;
-  top: 50%;
-  left: 0;
   margin-top: -2px;
+  background-color: #000;
+  content: "";
 }
 
 .list_section .rangking.down .rank_icon, .list_section .rangking.up .rank_icon, .list_section .rangking.same .rank_icon {
@@ -15347,7 +15323,7 @@ body:before {
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(1) .rangking {
   color: #fff;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") no-repeat center center/50px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") center/50px no-repeat;
   border: none;
   /*
             .rank_icon {
@@ -15364,29 +15340,29 @@ body:before {
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(1) .rangking.down .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(1) .rangking.up .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(1) .rangking.same .rank_icon:before {
-  content: "";
   position: absolute;
   width: 7px;
   height: 2px;
   right: 14px;
-  background-color: #fff;
+  left: 0;
   top: 50%;
   margin-top: -2px;
-  left: 0;
+  background-color: #fff;
+  content: "";
   z-index: 20;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(2) .rangking {
   color: #fff;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") no-repeat center center/50px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") center/50px no-repeat;
   border: none;
   /*
             .rank_icon {
@@ -15403,29 +15379,29 @@ body:before {
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(2) .rangking.down .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(2) .rangking.up .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(2) .rangking.same .rank_icon:before {
-  content: "";
   position: absolute;
   width: 7px;
   height: 2px;
   right: 14px;
-  background-color: #fff;
+  left: 0;
   top: 50%;
   margin-top: -2px;
-  left: 0;
+  background-color: #fff;
+  content: "";
   z-index: 20;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(3) .rangking {
   color: #fff;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") no-repeat center center/50px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") center/50px no-repeat;
   border: none;
   /*
             .rank_icon {
@@ -15442,29 +15418,29 @@ body:before {
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(3) .rangking.down .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(3) .rangking.up .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(3) .rangking.same .rank_icon:before {
-  content: "";
   position: absolute;
   width: 7px;
   height: 2px;
   right: 14px;
-  background-color: #fff;
+  left: 0;
   top: 50%;
   margin-top: -2px;
-  left: 0;
+  background-color: #fff;
+  content: "";
   z-index: 20;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(4) .rangking {
   color: #fff;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") no-repeat center center/50px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") center/50px no-repeat;
   border: none;
   /*
             .rank_icon {
@@ -15481,29 +15457,29 @@ body:before {
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(4) .rangking.down .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(4) .rangking.up .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(4) .rangking.same .rank_icon:before {
-  content: "";
   position: absolute;
   width: 7px;
   height: 2px;
   right: 14px;
-  background-color: #fff;
+  left: 0;
   top: 50%;
   margin-top: -2px;
-  left: 0;
+  background-color: #fff;
+  content: "";
   z-index: 20;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(5) .rangking {
   color: #fff;
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") no-repeat center center/50px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/lank_hot.svg") center/50px no-repeat;
   border: none;
   /*
             .rank_icon {
@@ -15520,23 +15496,23 @@ body:before {
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(5) .rangking.down .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_down.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(5) .rangking.up .rank_icon {
-  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") no-repeat center center/9px;
+  background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/rank_hot_up.svg") center/9px no-repeat;
 }
 
 .list_section .prod-wrapper:first-of-type .prod_item:nth-of-type(5) .rangking.same .rank_icon:before {
-  content: "";
   position: absolute;
   width: 7px;
   height: 2px;
   right: 14px;
-  background-color: #fff;
+  left: 0;
   top: 50%;
   margin-top: -2px;
-  left: 0;
+  background-color: #fff;
+  content: "";
   z-index: 20;
 }
 
@@ -15544,8 +15520,7 @@ body:before {
   margin-top: 16px;
 }
 
-/** =============//랭킹 뱃지 상품 리스트  ============ */
-/** =========== 2줄 정렬 상품 리스트 wrapper =======*/
+/*** 2줄 정렬 상품 리스트 wrapper ***/
 .prod_list_wrap {
   position: relative;
   padding: 0 20px;
@@ -15560,17 +15535,17 @@ body:before {
 }
 
 .prod_list_wrap .sub_tit {
-  line-height: 21px;
-  font-weight: 500;
-  font-size: 15px;
   margin: 24px 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 21px;
 }
 
 .prod_list_wrap .prod-wrapper.evt_products {
   padding-top: 0;
 }
 
-/** =========== //2줄 정렬 상품 리스트 wrapper ======*/
+/* 품절 대체 상품 스왑이 있는 항목 */
 .replace_prod .replace_prod_btn {
   display: block;
 }
@@ -15789,15 +15764,13 @@ body:before {
   overflow: hidden;
   position: -webkit-sticky;
   position: sticky;
-  top: 60px;
   left: 0;
+  top: 60px;
   background-color: #f7f7f7;
   z-index: 100;
 }
 
 .ctg_topMenu .inner_wrap {
-  width: 100%;
-  overflow-x: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15805,21 +15778,23 @@ body:before {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  line-height: 21px;
+  width: 100%;
   padding: 22px 20px 20px 20px;
+  line-height: 21px;
+  overflow-x: auto;
 }
 
 .ctg_topMenu a {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   display: block;
   position: relative;
-  letter-spacing: -0.15px;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.2);
-  white-space: nowrap;
   margin-left: 16px;
+  color: rgba(0, 0, 0, 0.2);
   font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.15px;
+  white-space: nowrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .ctg_topMenu a:first-of-type {
@@ -15869,11 +15844,11 @@ body:before {
 }
 
 .menu_sort .btn_sort {
-  line-height: 21px;
-  font-size: 13px;
-  margin-right: 16px;
   position: relative;
+  margin-right: 16px;
   color: #595959;
+  font-size: 13px;
+  line-height: 21px;
 }
 
 .menu_sort .btn_sort.active {
@@ -15886,13 +15861,13 @@ body:before {
 }
 
 .menu_sort .btn_sort:before {
-  content: "";
   position: absolute;
+  left: -10px;
+  top: 6px;
   width: 1px;
   height: 7px;
   background-color: #eaeaea;
-  top: 6px;
-  left: -10px;
+  content: "";
 }
 
 .menu_sort.ty02 {
@@ -16885,11 +16860,11 @@ body:before {
   left: 0;
   top: 50%;
   width: 100%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   font-size: 13px;
   font-weight: 700;
   line-height: 19px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .prod_soldout_msg_txt a {
@@ -17235,7 +17210,7 @@ body:before {
   background-size: 24px 24px;
 }
 
-/* main_menu 임시 */
+/* main_menu */
 .wel_mc {
   border: 0 !important;
   font-size: 15px;
@@ -17302,10 +17277,6 @@ body:before {
   height: 22px;
   margin: 2px 0 0 4px;
   vertical-align: top;
-}
-
-button {
-  cursor: pointer;
 }
 
 /***** Loading *****/
