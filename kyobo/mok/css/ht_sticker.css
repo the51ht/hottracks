@@ -369,6 +369,7 @@ $imgUrl : "../images/";*/
 .best_brands_list_wrap ul {
   width: 100%;
   display: inline-block;
+  margin-bottom: -5px;
 }
 
 .best_brands_list_wrap ul:after {
@@ -454,4 +455,38 @@ $imgUrl : "../images/";*/
 
 .now_is .list_evt_area {
   padding-top: 0;
+}
+
+.sti_mian_wrap .mc_tit,
+.sti_mian_wrap .ht_tit_info {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
+}
+
+.sti_mian_wrap .mc_tit.active,
+.sti_mian_wrap .ht_tit_info.active {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.sti_mian_wrap .evt_products,
+.sti_mian_wrap .sti_archive_list_wrap ul li,
+.sti_mian_wrap .tab-list ul li span,
+.sti_mian_wrap .best_brands_list_wrap ul li,
+.sti_mian_wrap .list_evt_area .evt_item {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
+}
+
+.sti_mian_wrap .evt_products.active,
+.sti_mian_wrap .sti_archive_list_wrap ul li.active,
+.sti_mian_wrap .tab-list ul li span.active,
+.sti_mian_wrap .best_brands_list_wrap ul li.active,
+.sti_mian_wrap .list_evt_area .evt_item.active {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
