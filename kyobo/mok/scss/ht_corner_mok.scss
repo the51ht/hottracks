@@ -271,9 +271,9 @@
 	padding:17px 20px 17px;background-color:#f7f7f7;display:none;
 }
 .ctg_subMenu {
-	display:flex;flex-flow:row wrap;justify-content:flex-start;height:auto;overflow:hidden;max-height: 91px;
+	display:flex;flex-flow:row wrap;justify-content:flex-start;height:auto;overflow:hidden;max-height:91px;
     a {
-		display:block;width:30%;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:16px;margin-left: 15px;font-size:12px;font-weight:normal;line-height:19px;letter-spacing:-0.13px;color:#595959;cursor:pointer;
+		display:block;width:30%;margin-top:16px;margin-left:15px;color:#595959;font-size:12px;font-weight:400;line-height:19px;letter-spacing:-0.13px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;
 		@for $mn from 1 through 3 {
 			&:nth-of-type(#{$mn}) {
 			    margin-top:0;
@@ -287,39 +287,41 @@
         }
     }
     &.menuDown {
-        height:auto;max-height: initial;
+        height:auto;max-height:initial;
     }
 }
 .subMenu_btn_area {
-  display:block;margin-top:13px;height:0px;
-  .subMenu_btn {
-    display:block;width:20px;height:10px;margin:0 auto;background:url('#{$imgUrl}ico/ico_arrow_large.svg') no-repeat center center;background-size:cover;cursor:pointer;
-    &.menuDown {
-      transform:rotate(180deg);
+    display:block;margin-top:13px;height:0px;
+    .subMenu_btn {
+        display:block;width:20px;height:10px;margin:0 auto;background:url('#{$imgUrl}ico/ico_arrow_large.svg') center/cover no-repeat;cursor:pointer;
+        &.menuDown {
+            transform:rotate(180deg);
+        }
     }
-  }
 }
-//슬라이더 영역
+
+/* 슬라이더 영역 */
 .ctg_top_wrap {
     position:relative;padding:40px 0;background-color:#fff;overflow:hidden;
 	.swiper {
 		padding-right:20px;
 	}
-	.md_tab {
-      display:flex;flex-flow:row nowrap;justify-content:center;
-      & + .ctg_top_swiper {
-        padding-top:0;margin-bottom:0;
-      }
-	  .md_anchor {
-		  margin-left:16px;font-size:22px;letter-spacing:-0.022em;line-height:26px;font-weight:700;color:rgba(0,0,0,0.2);
-	   }
-	  .md_anchor:first-of-type {
-		margin-left:0;
-	   }
-	   .md_anchor.active {
-		   color:#000;
-	   }
-	}
+    .md_tab {
+        display:flex;flex-flow:row nowrap;justify-content:center;
+        & + .ctg_top_swiper {
+            padding-top:0;margin-bottom:0;
+        }
+        .md_anchor {
+            margin-left:16px;color:rgba(0,0,0,0.2);font-size:22px;font-weight:700;line-height:26px;letter-spacing:-0.022em;
+        }
+        .md_anchor:first-of-type {
+            margin-left:0;
+        }
+        .md_anchor.active {
+            color:#000;
+        }
+    }
+
 	//MD추천 스와이퍼
 	.ctg_top_swiper {
 		padding-bottom:30px;margin-bottom:30px;background:none;
@@ -327,7 +329,7 @@
 			padding-top:16px;
 		}
 		.swiper-slide {
-			position:relative;width:217px;border-radius:8px;box-sizing:border-box;height:auto;min-height:100% !important;border:2px solid #000;box-shadow:none;overflow:hidden;
+			position:relative;width:217px;height:auto;min-height:100% !important;border:2px solid #000;border-radius:8px;box-shadow:none;box-sizing:border-box;overflow:hidden;
 			.product_pic{
 				padding-top:213px;
                 a {
@@ -336,7 +338,7 @@
 			}
 		}
 		.swiper-pagination.out_bottom {
-			height:auto;padding:0;background-color:#fff;bottom:0px;line-height:16px;
+			bottom:0px;height:auto;padding:0;background-color:#fff;line-height:16px;
 			.swiper-pagination-current {
 				color:#000;line-height:16px;
 			}
@@ -350,13 +352,15 @@
 .sub_menu_wrap + .module_wrap {
     padding:0;padding-top:32px;
 }
-//슬라이더 영역 등록 상품 2개인 경우
+
+/* 슬라이더 영역 등록 상품 2개인 경우 */
 .module7_wrap.minimum_prod {
 	.module_slider_sm li {
 		width:158px;
 	}
 }
-// 띠배너
+
+/* 띠배너 */
 .module_wrap + .wel_belt_banner {
 	position:relative;
     &.wel_cont {
@@ -377,9 +381,10 @@
 		}
 	}
 }
-//스티키 메뉴(스터디 플래너 전체)
+
+/* 스티키 메뉴(스터디 플래너 전체) */
 .ctg_floating_line {
-	position:sticky;padding:10px 0 10px 20px;top:50px;left:0;z-index:20;background-color:#fff;margin-top:30px;
+	position:sticky;left:0;top:50px;margin-top:30px;padding:10px 0 10px 20px;background-color:#fff;z-index:20;
 	span {
 		display:block;
 	}
@@ -387,42 +392,42 @@
 		display:inline-flex;flex-flow:row nowrap;justify-content:flex-start;padding-right:20px;margin-bottom:12px;cursor:pointer;
 	}
 	h3 {
-		font-size:20px;line-height:32px;letter-spacing:-0.02em;font-weight:500;
+		font-size:20px;font-weight:500;line-height:32px;letter-spacing:-0.02em;
 	}
 	.menu_nm_icon {
 		width:12px;height:32px;margin-left:8px;background:url('#{$imgUrl}guide/arrow_down.svg') no-repeat center center / 80%;
 	}
-    &.sub_mn { // 음반 리스트 확장 
+    &.sub_mn {
         margin:0;background-color:#f7f7f7;padding-top:0;padding-bottom:20px;
     }
 }
 .ctg_floating_menues {
-    display:flex;flex-flow:row nowrap;overflow-x:auto;padding:1px 20px 1px 0;
+    display:flex;flex-flow:row nowrap;padding:1px 20px 1px 0;overflow-x:auto;
     &> li,
     &>button { 
-        flex-shrink:0;height:36px;padding:0 14px;border:1px solid #d5d5d5;border-radius:20px;margin-right:4px;font-size:13px;background-color:#fff;color:#767676;letter-spacing:-0.013em;box-sizing:border-box;line-height:36px;
-        cursor:pointer;
+        height:36px;margin-right:4px;padding:0 14px;background-color:#fff;border:1px solid #d5d5d5;border-radius:20px;box-sizing:border-box;color:#767676;font-size:13px;letter-spacing:-0.013em;line-height:36px;flex-shrink:0;cursor:pointer;
         &:last-of-type {
             margin-right:0;
         }
         &.arrow_li {
-            padding-right:35px;background:url('#{$imgUrl}guide/arrow_down.svg') no-repeat right 14px top 50% / 9px;background-color:#fff;
+            padding-right:35px;background:#fff url('#{$imgUrl}guide/arrow_down.svg') right 14px top 50% / 9px no-repeat;
         }
         &.active {
-            color:#fff;background-color:#000;border-color:#000;
+            background-color:#000;border-color:#000;color:#fff;
         }
     }
     li.arrow_li {
         position:relative;
         em {
-            display:none;font-size:11px;color:#fff;position:absolute;background-color:#000;top:8px;right:8px;min-width:18px;height:18px;border-radius:50%;text-align:center;line-height:19px;;
+            display:none;position:absolute;right:8px;top:8px;min-width:18px;height:18px;background-color:#000;border-radius:50%;color:#fff;font-size:11px;line-height:19px;;text-align:center;
         }
         &.checked_status em {
             display:block;
         }
     }
 }
-//상품 리스트 영역
+
+/* 상품 리스트 영역 */
 .ctg_prod_wrap {
 	padding:0 20px;
     & > .tit {
@@ -431,15 +436,15 @@
     .ctg_floating_menues {
         padding-right:0;margin-bottom:24px;
     }
-	.prod_list_info {
-	   margin-top:10px;display:flex;flex-flow:row nowrap;justify-content:space-between;
-       &.type2 {
-           margin-top:20px;
-       }
-       & +.evt_products {
-           padding-top:16px;
-       }
-	}
+    .prod_list_info {
+        display:flex;flex-flow:row nowrap;justify-content:space-between;margin-top:10px;
+        &.type2 {
+            margin-top:20px;
+        }
+        & +.evt_products {
+            padding-top:16px;
+        }
+    }
     .deadline_character_area +.evt_products {
         padding-top:16px;
     } 
@@ -453,26 +458,35 @@
 		display:flex;flex-flow:row nowrap;
 	}
 	.sort_nm {
-		font-weight:500;padding-right:14px;background:url('#{$imgUrl}guide/arrow_down.svg') no-repeat right 0px top 50% / 10px;cursor:pointer;
+		padding-right:14px;background:url('#{$imgUrl}guide/arrow_down.svg') right 0px top 50% / 10px no-repeat;font-weight:500;cursor:pointer;
 	}
 	.ctg_list_icon {
-		margin-left:15px;width:14px;height:19px;background:url('#{$imgUrl}guide/ico_ctg_list_type1.svg') no-repeat center center / 14px;cursor:pointer;
+		width:14px;height:19px;margin-left:15px;background:url('#{$imgUrl}guide/ico_ctg_list_type1.svg') center / 14px no-repeat;cursor:pointer;
 	}
 	.ctg_list_icon.row_list {
-		background:url('#{$imgUrl}guide/ico_ctg_list_type2.svg') no-repeat center center / 14px;
+		background:url('#{$imgUrl}guide/ico_ctg_list_type2.svg') center / 14px no-repeat;
 	}
     .badge {
         font-size:10px;
     }
 }
-//카테고리 기획전 하단 슬라이더
+
+/* 카테고리 기획전 하단 슬라이더 */
 .evt_slider_wrap.evt {
     padding-bottom:0;
 }
-/*================================  //카테고리 메인 ===================================*/
 
-/*==================================  브랜드 메인 =====================================*/
-//브랜드 설명 카드
+
+
+
+
+
+
+
+
+
+/***** * 브랜드 메인 * *****/
+/*브랜드 설명 카드 */
 .brand_card {
     position:relative;padding:30px 20px;background:linear-gradient(to bottom right, #f3b79b 0%, #f41860 100%);color:#fff;overflow:hidden;
     &:before {
@@ -484,21 +498,21 @@
         }
     }
     &:after {
-        clear:both;display:block;content:"";
+        display:block;clear:both;content:"";
     }
     .tit_card_head {
         position:relative;margin-bottom:16px;
         .brand_thumbnail {
-            position:absolute;width:60px;height:60px;bottom:0;right:0;z-index:3;border:2px solid #000;border-radius:50%;box-sizing:border-box;overflow:hidden;
+            position:absolute;right:0;bottom:0;width:60px;height:60px;border:2px solid #000;border-radius:50%;box-sizing:border-box;overflow:hidden;z-index:3;
             img {
-                position:absolute;left:50%;top:50%;width:100%;object-fit: cover;height: 100%;transform:translate(-50%,-50%);
+                position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;
             }
         }
         .brand {
-            font-size:12px;line-height:20px;font-weight: 700;
+            font-size:12px;font-weight:700;line-height:20px;
         }
         .logo {
-            line-height:36px;font-family:'Gmarket Sans';font-weight:900;font-size:36px;color:#fff;text-shadow:-1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black, 5px 4px 1px #000;margin-top: 9px;
+            margin-top:9px;color:#fff;font-family:'Gmarket Sans';font-weight:900;font-size:36px;line-height:36px;text-shadow:-1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 1px 1px 0px black, 5px 4px 1px #000;
         }
         .brand_thumbnail ~ .brand, 
         .brand_thumbnail ~ .logo {
@@ -508,10 +522,10 @@
     .tit_card_body {
         margin-bottom:25px;
         .tit_desc {
-            margin-bottom:4px;line-height:23px;font-weight:400;font-size: 13px;
+            margin-bottom:4px;font-size:13px;font-weight:400;line-height:23px;
         }
         .desc {
-            word-break:keep-all;line-height:20px;font-size:13px;color:#fff;
+            color:#fff;font-size:13px;line-height:20px;word-break:keep-all;
         }
     }
     .tit_card_foot {
@@ -520,12 +534,12 @@
             float:left;margin-right:5px;cursor:pointer;
         }
         .evt_good_count {
-			display:block;padding:5px 12px;height:35px;border-radius:35px;color:#fff;font-size:10px;background-color:#000;z-index:5;
+			display:block;padding:5px 12px;height:35px;background-color:#000;border-radius:35px;color:#fff;font-size:10px;z-index:5;
 			.icon {
-				float:left;width:12px;height:14px;margin-top:-1px;background:url('#{$imgUrl}guide/ico_prod_like_icon.svg') no-repeat center center /12px;
+				float:left;width:12px;height:14px;margin-top:-1px;background:url('#{$imgUrl}guide/ico_prod_like_icon.svg') center /12px no-repeat;
 			}
 			.txt {
-				float:left;margin-left:3px;line-height:14px;font-size: 13px;
+				float:left;margin-left:3px;font-size:13px;line-height:14px;
                 &:empty {
                     margin-left:0;;
                 }
@@ -533,15 +547,16 @@
 		}
         .evt_good_count.active {
             .icon {
-                float:left;width:12px;height:14px;background:url('#{$imgUrl}guide/ico_prod_like_icon_active.svg') no-repeat center center /12px;
+                float:left;width:12px;height:14px;background:url('#{$imgUrl}guide/ico_prod_like_icon_active.svg') center /12px no-repeat;
             }
         }
         .share_btn {
-            width:35px;height:35px;border-radius:50%;background:url('#{$imgUrl}ico/ico_share_white.svg') no-repeat center center /15px;background-color:#000;
+            width:35px;height:35px;border-radius:50%;background:#000 url('#{$imgUrl}ico/ico_share_white.svg') center /15px no-repeat;
         }
     }
 }
-//비디오
+
+/* 비디오 */
 .vodeo_wrap { 
     padding:40px 20px 0 20px;
     .tit {
@@ -568,7 +583,7 @@
     .evt_slider {
         padding-top:12px;
         .evt_item {
-            width:320px;padding :20px 90px 23px 18px;height:auto;min-height:100%;background:url('#{$imgUrl}guide/brand_coupon_bg.svg') no-repeat left top / contain;
+            width:320px;padding :20px 90px 23px 18px;height:auto;min-height:100%;background:url('#{$imgUrl}guide/brand_coupon_bg.svg')left top / contain no-repeat;
         } 
         .cupon_info {
             .discount {
@@ -586,14 +601,23 @@
         }
     }    
 }
-/*================================== //브랜드 메인 ===================================*/
 
-/*=================================== 음반 리스트  ====================================*/
+
+
+
+
+
+
+
+
+
+
+/***** *음반 리스트 * *****/
 .main_cont_wrap {
     .main_tab_menu {
-        position:relative;width:75%;max-width:480px;margin:12px auto 30px auto;text-align:center;white-space:nowrap;background:rgba(0,0,0,0);border:1px solid #d5d5d5;border-radius:50px;border:1px solid #d5d5d5;
+        position:relative;width:75%;max-width:480px;margin:12px auto 30px auto;background:rgba(0,0,0,0);border:1px solid #d5d5d5;border:1px solid #d5d5d5;border-radius:50px;text-align:center;white-space:nowrap;
         &:before {
-            content:"";position:absolute;left:0;top:-1px;width :30%;height:calc(100% + 1px);border-radius:50px;background-color:#000;border:1px solid #000;box-sizing:content-box;transition:left .1s ease-in-out;
+            position:absolute;left:0;top:-1px;width:30%;height:calc(100% + 1px);border-radius:50px;background-color:#000;border:1px solid #000;box-sizing:content-box;transition:left .1s ease-in-out;content:"";
         }
         &.active0:before {
             left:0;width:calc(100% / 3);
@@ -611,7 +635,7 @@
             }
         }
         a {
-            position:relative;display:inline-block;width:calc(100% / 3);margin-left:-4px;font-size:13px;color:#595959;letter-spacing:-0.03em;
+            position:relative;display:inline-block;width:calc(100% / 3);margin-left:-4px;color:#595959;font-size:13px;letter-spacing:-0.03em;
             &:first-of-type {
                 margin:0;
             }
@@ -623,27 +647,35 @@
             }
         }
         .icon {
-            display:inline-block;vertical-align:middle;width:0;height:0;
+            display:inline-block;width:0;height:0;vertical-align:middle;
         }
-        a:nth-child(1) .icon {background:url('#{$imgUrl}guide/ico_mus_main_t01.svg') no-repeat left center  / 20px;}
-        a:nth-child(2) .icon {background:url('#{$imgUrl}guide/muse_menu_active_icon.svg') no-repeat left center  / 20px;}
-        a:nth-child(3) .icon {background:url('#{$imgUrl}guide/ico_mus_main_t03.svg') no-repeat left center  / 20px;}
+        a:nth-child(1) .icon {
+            background:url('#{$imgUrl}guide/ico_mus_main_t01.svg') left center / 20px no-repeat;
+        }
+        a:nth-child(2) .icon {
+            background:url('#{$imgUrl}guide/muse_menu_active_icon.svg') left center / 20px no-repeat;
+        }
+        a:nth-child(3) .icon {
+            background:url('#{$imgUrl}guide/ico_mus_main_t03.svg') left center / 20px no-repeat;
+        }
         .txt {
-            display:inline-block;vertical-align:middle;line-height:44px;
+            display:inline-block;line-height:44px;vertical-align:middle;
         }
     }
 }   
 
- /*=============================== HTR-M-MUS-LIST-001-1.html =================================*/
- .cont_wrap .tit_area {
-    padding:0 20px;display:flex;flex-flow:row nowrap;justify-content:flex-start;align-items:center;align-content:center;margin-bottom:12px;
+
+
+
+.cont_wrap .tit_area {
+    display:flex;flex-flow:row nowrap;justify-content:flex-start;align-items:center;align-content:center;margin-bottom:12px;padding:0 20px;
     .tit {
-        font-size:20px;line-height:32px;font-weight:700;letter-spacing:-0.18px;text-align:left;white-space:nowrap;
+        font-size:20px;font-weight:700;line-height:32px;letter-spacing:-0.18px;text-align:left;white-space:nowrap;
     }
     .sub_tit {
-        margin-left:auto;overflow:hidden;white-space:nowrap;font-weight:700;
+        margin-left:auto;font-weight:700;overflow:hidden;white-space:nowrap;
         .sub {
-            float:left;display:block;margin-right:16px;line-height:32px;white-space:nowrap;color:rgba(0,0,0,0.2);font-size:18px;
+            display:block;float:left;margin-right:16px;color:rgba(0,0,0,0.2);font-size:18px;line-height:32px;white-space:nowrap;
             &:last-of-type {
                 margin-right:0;
             }
@@ -653,36 +685,39 @@
         }
     }
 }
-//리스트 날짜 정보
+
+/* 리스트 날짜 정보 */
 .list_time_info {
-    padding:0 20px;margin-top:20px;
-   .time_info_tit {
+    margin-top:20px;padding:0 20px;
+    .time_info_tit {
        margin-bottom:5px;font-size:16px;
         .date {
-            position:relative;line-height:25px;margin-right:5px;
+            position:relative;margin-right:5px;line-height:25px;
             &:before {
-                content:",";position:absolute;bottom:-3px;right:-3px;z-index:3;
+                position:absolute;bottom:-3px;right:-3px;content:",";z-index:3;
             }
         }
         .sub {
             line-height:25px;
         }
         .btn_info {
-            width:25px;height:25px;background:url('#{$imgUrl}guide/arw_tooltip.png') no-repeat center center/ 20px;
+            width:25px;height:25px;background:url('#{$imgUrl}guide/arw_tooltip.png') center/ 20px no-repeat;
         }
-   }
+    }
     .time_info_sub {
-        line-height:20px;word-break:keep-all;font-size:13px;color:#767676;
+        color:#767676;font-size:13px;line-height:20px;word-break:keep-all;
     }
 }
 
-/*===================================== 음반 리스트 팝업 =================================*/
+
+
+/*** 음반 리스트 팝업 ***/
 .dialog_header.bd_none {
 	border-bottom:1px solid #fff !important;
 	.dialog_title_sub {
-		margin-top:8px;display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;align-content:center;
+		display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;align-content:center;margin-top:8px;
 		.icon_mus {
-			display:block;width:20px;height:20px;margin-right:3px;background:url('#{$imgUrl}guide/mus_pop_sub_tit_icon.svg') no-repeat left center /13px;
+			display:block;width:20px;height:20px;margin-right:3px;background:url('#{$imgUrl}guide/mus_pop_sub_tit_icon.svg') left center /13px no-repeat;
 		}
 		.year,
 		.month,
@@ -693,7 +728,7 @@
 		.rate {
 			position:relative;margin-left:5px;
 			&:before {
-				content:",";position:absolute;left:-5px;bottom:-1px;z-index:3;
+				position:absolute;left:-5px;bottom:-1px;content:",";z-index:3;
 			}
 		}
 	}
@@ -702,26 +737,26 @@
 #ClickCksClose_month .vertical_swap_contents,
 #ClickCksClose_week .vertical_swap_contents,
 #ClickCksClose_day .vertical_swap_contents {
-     background-color:#f7f7f7;height:300px;margin:0;padding:0 20px;position:relative;
-	 &:before {
-		content:"";position:absolute;left:20px;top:100px;width:calc(100% - 40px);height:50px;background-color:#fff;	
+    height:300px;margin:0;padding:0 20px;background-color:#f7f7f7;position:relative;
+	&:before {
+		position:absolute;left:20px;top:100px;width:calc(100% - 40px);height:50px;background-color:#fff;content:"";
 	}
 	.swiper-wrapper.ck_list {
 		height:250px;
 	}
 	.swiper-slide {
-		height:50px;line-height:50px;font-size:16px;text-align:center;
+		height:50px;font-size:16px;line-height:50px;text-align:center;
 		&.swiper-slide-active {
-			font-weight:700;font-size:20px;
+			font-size:20px;font-weight:700;
 		}
 		&.swiper-slide-prev,
 		&.swiper-slide-next {
 			font-size:18px;
 		}
 	}
-	 .type_month {
-		 display:flex;flex-flow:row nowrap;
-		 .chart_date_swap {
+	.type_month {
+		display:flex;flex-flow:row nowrap;
+		.chart_date_swap {
 			&:first-of-type {
 				flex:1 1 auto;padding-right:10px;
 				.swiper-slide {
@@ -734,74 +769,116 @@
 					text-align:left;
 				}
 			}
-		 }
-	 }
-	 .type_week {
+		}
+	}
+	.type_week {
 		display:flex;flex-flow:row nowrap;
 		.chart_date_swap {
-		   &:first-of-type {
-			   flex:3 1 auto;padding-right:10px;
-			   .swiper-slide {
-				text-align:right;
-			   }
-			   .swiper-slide-active {
-				   padding-right:5px
-			   }
-			   .swiper-slide-prev,
-			   .swiper-slide-next {
-			    	padding-right:2px
-			   }
-		   }
-		   &:nth-of-type(2) {
-			flex:3 1 auto;
+            &:first-of-type {
+                flex:3 1 auto;padding-right:10px;
+                .swiper-slide {
+                    text-align:right;
+                }
+                .swiper-slide-active {
+                    padding-right:5px
+                }
+                .swiper-slide-prev,
+                .swiper-slide-next {
+                    padding-right:2px
+                }
 		    }
-		   &:last-of-type {
-			   flex:4 1 auto;padding-left:10px;
-			   .swiper-slide {
-				text-align:left;
-		    	}
-				.swiper-slide-active {
-					padding-left:5px;
-				}
-				.swiper-slide-prev,
-				.swiper-slide-next {
-					padding-left:2px;
-				}
-		    }
+            &:nth-of-type(2) {
+                flex:3 1 auto;
+            }
+            &:last-of-type {
+                flex:4 1 auto;padding-left:10px;
+                .swiper-slide {
+                    text-align:left;
+                }
+                .swiper-slide-active {
+                    padding-left:5px;
+                }
+                .swiper-slide-prev,
+                .swiper-slide-next {
+                    padding-left:2px;
+                }
+            }
 		}
 	}
 	 .dialog_footer.ctg_cks {
-		 margin-top:0;padding:0;background-color:#f7f7f7;
+        margin-top:0;padding:0;background-color:#f7f7f7;
 		.btn_black {
-			 background-color:#000;
+            background-color:#000;
 		}
 	}
 }
 
-/*==================================== HTR-M-MUS-ETC-000.html(팬사인회)====================================*/
+/*** 팬사인회 : AS-IS ***/
 #content {
     padding-bottom:50px;
 }
-.pdb30 { padding-bottom:30px;}
-.banner_basic02 ul.mgt30 {margin-left:10px;margin-right:10px;width :auto;border-top:1px solid #e5e5e5;}
-.banner_basic02 ul.mgt30 li {height:80px;margin-top:20px;width :100%;border-bottom:1px solid #e5e5e5;overflow:hidden;}
-.banner_basic02 ul.mgt30 a {width:100%;float :left;}
-.banner_basic02 ul.mgt30 a span {display:block;margin-left:170px;text-align:left;width :auto;font-size:12px;}
-.banner_basic02 div.bannerIcon img {vertical-align:middle;position:absolute;left:125px;z-index:30;width:35px;}
-.banner_basic02 {position:relative;overflow:hidden;margin:0 10px 0 10px;}
-.banner_basic02 li { background-color:#fff;text-align:center;}
-.banner_basic02 li + li { margin-top:20px;padding-bottom:10px;}
-.banner_basic02 a { background-color:#fff;max-width:100%;text-align:center;padding-bottom:10px;}
-.banner_basic02 a.full { width:100%;}
-.banner_basic02 a img { max-width:100%;}
-.banner_basic02 a .pic_full img { width:100%;}
-.banner_basic02 a .tit { padding-top:12px;white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis;display:inline-block;font-size:14px;color:#010101}
-.banner_basic02 a .txt { padding-top:5px;white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis;display:inline-block;font-size:12px;color:#6a6a6a;height:14px;line-height:14px;}
-.banner_basic02 a .prdt-name {padding-top:12px;white-space:nowrap;font-weight:bold;width:100%;overflow:hidden;text-overflow:ellipsis;display:inline-block;font-size:14px;color:#010101;text-align:center;}
-.banner_basic02 a .price {padding-top:12px;width:100%;display:inline-block;text-align:center;font-size:14px;color:#f51d1d;font-weight:bold;height:14px;}
-.banner_basic02 a .price span { font-size:12px;color:#a2a2a2;text-decoration:line-through;margin-right:10px;}
-.banner_basic.col2 + .banner_basic.col2 {margin:0}
-.paging.mb30 { height:30px;background-color:#fff !important;}
+.pdb30 {
+    padding-bottom:30px;
+}
+.banner_basic02 ul.mgt30 {
+    width:auto;margin-left:10px;margin-right:10px;border-top:1px solid #e5e5e5;
+}
+.banner_basic02 ul.mgt30 li {
+    width:100%;height:80px;margin-top:20px;border-bottom:1px solid #e5e5e5;overflow:hidden;
+}
+.banner_basic02 ul.mgt30 a {
+    float:left;width:100%;
+}
+.banner_basic02 ul.mgt30 a span {
+    display:block;width:auto;margin-left:170px;font-size:12px;text-align:left;
+}
+.banner_basic02 div.bannerIcon img {
+    position:absolute;left:125px;width:35px;vertical-align:middle;z-index:30;
+}
+.banner_basic02 {
+    position:relative;margin:0 10px 0 10px;overflow:hidden;
+}
+.banner_basic02 li {
+    background-color:#fff;text-align:center;
+}
+.banner_basic02 li + li {
+    margin-top:20px;padding-bottom:10px;
+}
+.banner_basic02 a {
+    max-width:100%;padding-bottom:10px;background-color:#fff;text-align:center;
+}
+.banner_basic02 a.full {
+    width:100%;
+}
+.banner_basic02 a img {
+    max-width:100%;
+}
+.banner_basic02 a .pic_full img {
+    width:100%;
+}
+.banner_basic02 a .tit {
+    display:inline-block;padding-top:12px;color:#000;font-size:14px;white-space:nowrap;width:100%;overflow:hidden;text-overflow:ellipsis;
+}
+.banner_basic02 a .txt {
+    display:inline-block;width:100%;height:14px;padding-top:5px;color:#6a6a6a;font-size:12px;line-height:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.banner_basic02 a .prdt-name {
+    display:inline-block;width:100%;padding-top:12px;color:#000;font-size:14px;text-align:center;white-space:nowrap;font-weight:bold;overflow:hidden;text-overflow:ellipsis;
+}
+.banner_basic02 a .price {
+    display:inline-block;width:100%;height:14px;padding-top:12px;color:#f51d1d;font-size:14px;font-weight:bold;text-align:center;
+
+}
+.banner_basic02 a .price span {
+    margin-right:10px;color:#a2a2a2;font-size:12px;text-decoration:line-through;
+}
+.banner_basic.col2 + .banner_basic.col2 {
+    margin:0;
+}
+.paging.mb30 {
+    height:30px;background-color:#fff !important;
+}
+
 
 
 
@@ -862,12 +939,6 @@
 
 
 
-
-
-
-
-
-
 /*** 라이프스타일 : .curation_list ***/
 .curation_list {
     padding:35px 20px 40px 20px;background:#f5ede2 url('#{$imgUrl}main/bg_wel_curation.jpg') center top/32px repeat;overflow:hidden;
@@ -920,12 +991,6 @@
         }
     }
 }
-
-
-
-
-
-
 
 
 
@@ -1020,12 +1085,6 @@
         }
     }
 }
-
-
-
-
-
-
 
 
 
@@ -1235,12 +1294,6 @@
 
 
 
-
-
-
-
-
-
 /*** 큐레이션 상세 : .cur_view ***/
 .cur_view {
     padding:0 0 40px 0;overflow:hidden;
@@ -1283,12 +1336,6 @@
 
 
 
-
-
-
-
-
-
 /*** 더 많은 라이프스타일 큐레이션 보기 : .cur_more_cont ***/
 .cur_more_cont {
     margin-bottom:-60px;;padding:40px 20px !important;background:#f7f7f7;
@@ -1305,12 +1352,6 @@
         }
     }
 }
-
-
-
-
-
-
 
 
 
@@ -1336,24 +1377,12 @@
 
 
 
-
-
-
-
-
-
 /*** 실시간 쇼핑 검색어 ***/
 .cur_search {
     .mc_tit {
         opacity:1;animation:none !important;
     }
 }
-
-
-
-
-
-
 
 
 
@@ -1397,12 +1426,6 @@
 
 
 
-
-
-
-
-
-
 /*** 상품과 기획전을 추천 : .cur_recommend ***/
 .cur_recommend {
     .mc_tit02 {
@@ -1440,12 +1463,6 @@
 
 
 
-
-
-
-
-
-
 /*** 찜한 브랜드 : .cur_brand_select ***/
 .cur_brand_select {
     .mc_tit02 {
@@ -1454,12 +1471,6 @@
         }
     }
 }
-
-
-
-
-
-
 
 
 
@@ -1511,12 +1522,6 @@
         }
     }
 }
-
-
-
-
-
-
 
 
 
@@ -1596,6 +1601,8 @@
 
 
 
+
+
 /***** * 코네메뉴 : 라이브 * *****/
 /*** 라이브 이벤트 당첨자  발표 : .liv_notice ***/
 .liv_notice {
@@ -1622,12 +1629,6 @@
         }
     }
 }
-
-
-
-
-
-
 
 
 
@@ -1695,7 +1696,7 @@
 
 /* alarm_chk02 */
 .alarm_chk02 {
-    position:relative;display:inline-block;width:40px;height:40px;border-radius:50%;margin-left:6px;
+    position:relative;display:inline-block;width:40px;height:40px;margin-left:6px;border-radius:50%;
     input[type="checkbox"] {
         position:absolute;left:0;left:0;width:100%;height:100%;border:0;overflow:hidden;opacity:0;z-index:3;cursor:pointer;
         + label {
@@ -1730,12 +1731,6 @@
 95% {opacity:1;transform:translateY(0%) scale(1);}
 100% {opacity:0;transform:translateY(50%) scale(0.6);}
 }
-
-
-
-
-
-
 
 
 
@@ -1796,12 +1791,6 @@
         }
     }    
 }
-
-
-
-
-
-
 
 
 
@@ -2231,6 +2220,7 @@
 
 
 
+
 /***** * 코너메뉴 : 선물추천 * *****/
 /*** 선물추천 메인 : .gft_main ***/
 /* btn_t_right */
@@ -2440,13 +2430,6 @@
 }
 
 
-
-
-
-
-
-
-
 /*** 선물이 필요한 순간 핫트 하세요 : .gft_need ***/
 .gft_need {
     padding:48px 20px 40px 20px !important;
@@ -2531,12 +2514,6 @@
 
 
 
-
-
-
-
-
-
 /*** 상세 팝업 ***/
 /* pop_view_add */
 .pop_view_add {
@@ -2585,12 +2562,6 @@
 .btn_pop_view_add_cl {
     position:absolute;left:0;top:2px;width:100%;height:25px;background:url('#{$imgUrl}main/btn_pop_view_add_cl.svg') center/25px no-repeat;
 }
-
-
-
-
-
-
 
 
 
@@ -2866,12 +2837,6 @@
         }   
     }
 }
-
-
-
-
-
-
 
 
 
