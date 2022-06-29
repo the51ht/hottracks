@@ -13,6 +13,7 @@ $imgUrl : "../images/";*/
 
 .wel_main_wrap.sti_mian_wrap .ht_tit_info {
   text-align: center;
+  height: 63px;
 }
 
 .wel_main_wrap.sti_mian_wrap .ht_tit_info p {
@@ -33,6 +34,10 @@ $imgUrl : "../images/";*/
   height: 35px;
   line-height: 33px;
   box-sizing: border-box;
+  opacity: 0;
+  margin-top: -20px;
+  -webkit-animation: tool linear 5s infinite;
+          animation: tool linear 5s infinite;
 }
 
 .wel_main_wrap.sti_mian_wrap .ht_tit_info p:before {
@@ -61,6 +66,60 @@ $imgUrl : "../images/";*/
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   content: "";
+}
+
+@-webkit-keyframes tool {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  5% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+  10% {
+    opacity: 1;
+    margin: 8px auto 20px;
+  }
+  80% {
+    opacity: 1;
+    margin: 8px auto 20px;
+  }
+  90% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+}
+
+@keyframes tool {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  5% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+  10% {
+    opacity: 1;
+    margin: 8px auto 20px;
+  }
+  80% {
+    opacity: 1;
+    margin: 8px auto 20px;
+  }
+  90% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -5px;
+  }
 }
 
 .wel_main_wrap.sti_mian_wrap .mc_tit {
