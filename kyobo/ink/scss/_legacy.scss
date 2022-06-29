@@ -355,6 +355,17 @@ button.btn_lg {
 .wrapper .header_wrapper.sps.sps-blw .gnb_search_wrap .logo_box .logo_link {
     background:url('#{$imgUrl}layout/logo.svg') left center/80px 22px no-repeat;
 }
+.wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list {
+    position:relative;max-width:850px;
+    &:after {
+        position:absolute;left:0;top:0;width:5px;height:100%;background-color:#fff;content:"";
+    }
+}
+
+
+
+
+
 .wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list .gnb_item {
     img {
         display:inline-block;height:20px;margin:2px 5px 0 0;vertical-align:top;
@@ -366,9 +377,9 @@ button.btn_lg {
     }
 }
 .wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list .gnb_item .gnb_marker {
-    position:relative;padding-right:6px;
+    position:relative;
     &:after {
-        position:absolute;right:0;top:0;width:4px;height:4px;background-color:#da2128;border-radius:50%;content:"";
+        position:absolute;right:8px;top:0;width:4px;height:4px;background-color:#da2128;border-radius:50%;content:"";
     }
 }
 .wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list .gnb_item .act {
@@ -423,10 +434,6 @@ button.btn_lg {
     top:1px;width:13px;height:13px;background:url('#{$imgUrl}layout/ico_fold_plus.png') center/100% no-repeat;transform:translateY(0);
 }
 
-
-.wrapper .header_wrapper .header_inner .gnb_wrap .gnb_list {
-    max-width:850px;
-}
 
 
 
