@@ -44,7 +44,7 @@
             display:block;width:36px;height:36px;border-radius:50%;
         }
         .btn_play {
-            background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_play.svg') no-repeat 50% / 8px;
+            background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_play.svg') no-repeat 56% / 8px;
         }
         .btn_pause {
             background:rgba(0,0,0,.3) url('#{$imgUrl}guide/ico_pause.svg') no-repeat 50% / 6px;
@@ -266,6 +266,7 @@
 
 /*** 오늘만 특가 :.wel_today ***/
 .wel_today {
+    overflow:hidden;
     &:before,
     &:after {
         position:absolute;content:"";z-index:1;
@@ -1377,6 +1378,9 @@
     &.on {
         .wel_category_tab_inner {
             position:fixed;top:80px;z-index:10;width:1300px;margin:0 -50px;padding:20px 50px;background:#fff;box-sizing:border-box;
+            &:before {
+                position:absolute;left:-300%;bottom:0;width:700%;height:90px;background-color:#fff;content:"";
+            }
             &:after {
                 position:absolute;left:-300%;bottom:0;width:700%;height:1px;background-color:#eaeaea;content:"";
             }

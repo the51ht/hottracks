@@ -423,6 +423,17 @@ button.btn_lg {
   overflow: hidden !important;
 }
 
+/* dialog */
+body.dialog_open {
+  position: static;
+  padding-right: 18px;
+  overflow-y: hidden;
+}
+
+body.dialog_open.ht_mo {
+  padding-right: 0;
+}
+
 /* 웰컴메인 팝업 - 토스트 메시지*/
 .toast_wrap .toast_message {
   display: -webkit-inline-box;
@@ -1443,15 +1454,14 @@ body {
   word-break: keep-all;
   white-space: normal;
   background: #f7f7f7;
-  -ms-touch-action: pan-y;
-      touch-action: pan-y;
+  overflow-y: scroll;
 }
 
 .wrapper {
   max-width: 2560px;
   margin: 0 auto;
   background: #fff;
-  overflow: inherit;
+  overflow: initial;
 }
 
 .wrapper .header_wrapper {
@@ -3007,11 +3017,11 @@ body {
 }
 
 .ht_option_box .play_pause_box .btn_play {
-  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/guide/ico_play.svg") no-repeat 52%/7px;
+  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/guide/ico_play.svg") 54% 52%/7px no-repeat;
 }
 
 .ht_option_box .play_pause_box .btn_pause {
-  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/guide/ico_pause.svg") no-repeat 50%/5px;
+  background: rgba(0, 0, 0, 0.3) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/guide/ico_pause.svg") 50% 52%/5px no-repeat;
 }
 
 .ht_option_box .play_pause_box.play .btn_play {

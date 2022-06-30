@@ -777,9 +777,12 @@ button.btn_md_second {
     margin-top:14px;
 }
 .badge_wrap {
-    margin-bottom:6px;
+    margin-bottom:2px;
     .badge {
-        margin-bottom:2px;
+        margin-bottom:6px;margin-right:6px;
+        &:last-child {
+            margin-right:0;
+        }
     }     
 }
 .coupon_wrap {
@@ -1752,7 +1755,7 @@ button.btn_md_second {
         .ico_circle_more {
             display:inline-block;
             &:after {
-                display:inline-block;position:absolute;top:-2px;width:24px;height:24px;margin-left:2px;background:url('#{$imgUrl}ico/ico_arrow_large.png') no-repeat 0 0/24px auto no-repeat;content:"";
+                display:inline-block;position:absolute;top:-2px;width:24px;height:24px;margin-left:2px;background:url('#{$imgUrl}ico/ico_arrow_large.png') 0/24px auto no-repeat;content:"";
             }
         }
         &.active {
@@ -2739,11 +2742,11 @@ button.btn_md_second {
             position:absolute;left:0;bottom:20px;
         }
         .ico_circle_more {
-            position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') center center /20px no-repeat;transform:rotate(180deg);
+            position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') center /20px no-repeat;transform:rotate(180deg);
         }
         .btn_expand.btn_up {
             .ico_circle_more {
-                position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') center center /20px no-repeat;transform:rotate(0deg);
+                position:relative;width:20px;height:20px;background:url('#{$imgUrl}ico/ico_arrow.png') center /20px no-repeat;transform:rotate(0deg);
             }
         }
     }
