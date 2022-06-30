@@ -157,11 +157,12 @@ $(function(){
 
 $(function(){
     $('.wel_hero_banner .play_pause_box').click(function(){
+        console.log('ssss')
         if ( $(this).hasClass('play') ) {
-            heroSwiper.autoplay.stop();
+            htHeroBannerSwiper.autoplay.stop();
             $(this).removeClass('play').addClass('pause');
         } else {
-            heroSwiper.autoplay.start();
+            htHeroBannerSwiper.autoplay.start();
             $(this).removeClass('pause').addClass('play');
         }
     });
@@ -2533,5 +2534,21 @@ function setSearchInputNew(wrap, input) {
 $(function(){
     setSearchInputNew();
 });
+
+
+
+
+
+$(function(){
+    function htMobile(){
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    if (htMobile()){
+        $('body').addClass('ht_mo')
+    } 
+});
+
+
+
 
 
