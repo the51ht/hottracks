@@ -4316,8 +4316,34 @@ input {
   height: 100%;
   background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/guide/ht_loading.svg") center/100% no-repeat;
   content: "";
-  -webkit-animation: fade both 0.6s 0.2s;
-          animation: fade both 0.6s 0.2s;
+  -webkit-animation: ht_loading both linear infinite 4.5s;
+          animation: ht_loading both linear infinite 4.5s;
+}
+
+@-webkit-keyframes ht_loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes ht_loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
 }
 
 /* Template */
@@ -5138,6 +5164,10 @@ input {
   margin: 40px 15px 0 15px;
 }
 
+.dialog_wrap .evt_products .prod_item .product_pic a {
+  mix-blend-mode: multiply;
+}
+
 .dialog_wrap .price_line {
   font-size: 16px;
   line-height: 24px;
@@ -5147,6 +5177,93 @@ input {
   margin-top: 5px;
   font-size: 13px;
   line-height: 16px;
+}
+
+.dialog_wrap .prod_soldout_msg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  z-index: 4;
+}
+
+.dialog_wrap .prod_soldout_msg_txt {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.dialog_wrap .prod_soldout_msg_txt a {
+  position: absolute;
+  left: 0;
+  top: -300%;
+  width: 100%;
+  height: 700%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.dialog_wrap .prod_soldout_msg_txt .btn_prod_replace_chk {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  margin: 11px auto 0 auto;
+  padding: 0 6px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #000;
+  font-size: 12px;
+  line-height: 22px;
+  z-index: 2;
+}
+
+.dialog_wrap .prod_soldout_msg span {
+  display: inline-block;
+  height: 22px;
+  margin: 11px auto 0 auto;
+  padding: 0 6px;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #000;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.dialog_wrap .mc_end_msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dialog_wrap .evt_slider .evt_item .mc_end_msg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* 팝업내 2단 : type2 */

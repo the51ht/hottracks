@@ -14332,7 +14332,7 @@ body:before {
   font-size: 12px;
   font-weight: 700;
   text-align: center;
-  line-height: 48px;
+  line-height: 52px;
   z-index: 3;
 }
 
@@ -17296,8 +17296,34 @@ body:before {
   height: 100%;
   background: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/mo/guide/ht_loading.svg") center/100% no-repeat;
   content: "";
-  -webkit-animation: fade both 0.6s 0.2s;
-          animation: fade both 0.6s 0.2s;
+  -webkit-animation: ht_loading both linear infinite 4.5s;
+          animation: ht_loading both linear infinite 4.5s;
+}
+
+@-webkit-keyframes ht_loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes ht_loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 1;
+  }
 }
 
 /* Template */
