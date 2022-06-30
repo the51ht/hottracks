@@ -3663,8 +3663,19 @@ button.btn_md_second {
 
 .ht_ .header_wrapper .header_center .page_title img {
   width: 28px;
+  height: 28px;
   margin-right: 10px;
+  background-color: #f5f5f5;
   border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ht_ .header_wrapper .header_center .page_title img.ob_contain {
+  left: 0 !important;
+  top: 0 !important;
+  width: 28px !important;
+  height: 28px !important;
 }
 
 .ht_ .header_wrapper .header_center .app_view {
@@ -4002,13 +4013,20 @@ button.btn_md_second {
      object-fit: cover;
 }
 
+.ht_ .prod_detail_header .visual_wrap .swiper-slide.ob_contain {
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 .ht_ .prod_detail_header .visual_wrap .swiper-slide.ob_contain img {
-  -o-object-fit: contain;
-     object-fit: contain;
   left: 10%;
   top: 10%;
   width: 80%;
   height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .ht_ .prod_detail_contents {
