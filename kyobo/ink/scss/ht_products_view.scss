@@ -24,7 +24,13 @@
     position:sticky;top:140px;float:left;width:640px;
     .swiper-button-prev,
     .swiper-button-next {
-        top:298px;margin-top:0;
+        top:298px;margin-top:0;opacity:0;transition:opacity 0.4s;
+    }
+    &:hover {
+        .swiper-button-prev,
+        .swiper-button-next {
+            opacity:1;
+        }
     }
 }
 
@@ -307,11 +313,11 @@
 		}
 	}
     .badge_line {
-        margin:10px 0 5px 0;
+        margin:2px 0 5px 0;text-align:left;
         .badge {
-            margin-left:8px;
-            &:first-child {
-                margin-left:0;
+            margin:8px 8px 0 0;
+            &:last-child {
+                margin-right:0;
             }
         }
         .badge_ico {
