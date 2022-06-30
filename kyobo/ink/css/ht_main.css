@@ -5366,6 +5366,12 @@
 
 .ht_contents_wrap.sti_mian_wrap .ht_tit_info {
   text-align: center;
+  height: 55px;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 25px;
+  margin-top: -25px;
+  z-index: 0;
 }
 
 .ht_contents_wrap.sti_mian_wrap .ht_tit_info p {
@@ -5385,6 +5391,10 @@
           box-sizing: border-box;
   height: 52px;
   line-height: 48px;
+  opacity: 0;
+  margin-top: -20px;
+  -webkit-animation: tool linear 5s infinite;
+          animation: tool linear 5s infinite;
 }
 
 .ht_contents_wrap.sti_mian_wrap .ht_tit_info p:before {
@@ -5413,6 +5423,66 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   content: "";
+}
+
+@-webkit-keyframes tool {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  5% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+  10% {
+    opacity: 1;
+    margin: 8px auto 20px;
+  }
+  80% {
+    opacity: 1;
+    margin: 8px auto 20px;
+  }
+  90% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+}
+
+@keyframes tool {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  5% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+  10% {
+    opacity: 1;
+    margin: 8px auto 20px;
+  }
+  80% {
+    opacity: 1;
+    margin: 8px auto 20px;
+  }
+  90% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -5px;
+  }
+}
+
+.ht_contents_wrap.sti_mian_wrap .ht_tit_big {
+  text-align: center;
+  position: relative;
+  z-index: 9;
 }
 
 .ht_contents_wrap.sti_mian_wrap .sti_cont {
@@ -5560,6 +5630,11 @@
   background: #ffd1e9 url(../images/main/bg_sticker_file.jpg) center top repeat-x;
 }
 
+.sti_file .ht_tit_big {
+  max-width: 368px;
+  margin: 0 auto 28px;
+}
+
 .sti_file .evt_products {
   margin-top: 207px;
 }
@@ -5642,6 +5717,11 @@
   background-color: #000;
 }
 
+.best_brands .ht_tit_big {
+  max-width: 487px;
+  margin: 0 auto 28px;
+}
+
 .best_brands_list_wrap ul {
   width: 903px;
   margin: -10px auto 0;
@@ -5716,4 +5796,52 @@
           transform: translate(-50%, -50%);
   font-size: 20px;
   color: #fff;
+}
+
+/** Now is **/
+.now_is {
+  padding: 40px 0px;
+}
+
+.now_is .ht_tit_big {
+  max-width: 447px;
+  margin: 0 auto 28px;
+}
+
+.now_is .list_evt_area {
+  padding-top: 0;
+}
+
+.sti_mian_wrap .ht_tit_big,
+.sti_mian_wrap .ht_tit_info {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
+}
+
+.sti_mian_wrap .ht_tit_big.ht_ani,
+.sti_mian_wrap .ht_tit_info.ht_ani {
+  opacity: 1;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.sti_mian_wrap .evt_products,
+.sti_mian_wrap .sti_archive_list_wrap ul li,
+.sti_mian_wrap .tab-list ul li span,
+.sti_mian_wrap .best_brands_list_wrap ul li,
+.sti_mian_wrap .evt_list li {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+  transition: opacity 0.4s 0s;
+}
+
+.sti_mian_wrap .evt_products.ht_ani,
+.sti_mian_wrap .sti_archive_list_wrap ul li.ht_ani,
+.sti_mian_wrap .tab-list ul li span.ht_ani,
+.sti_mian_wrap .best_brands_list_wrap ul li.ht_ani,
+.sti_mian_wrap .evt_list li.ht_ani {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
