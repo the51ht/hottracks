@@ -219,21 +219,17 @@
 <!-- 팝업 : 시스템 점검 중 안내 / popSystem02 -->
 
 
-
-<!--  이미지 팝업(하단) : popImgBn01 --><!-- 22.05.03 전체 구조 변경 -->
-<div id="popImgBn01" class="dialog_wrap btm_wel_wrap" data-class="dialog_bottom">
-	<button type="button" class="btn_dialog_close" data-dialog-close><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
-    <!-- dialog_header -->
-    <div class="dialog_header">
+<!-- 이미지 팝업(전체) : popImgBn01 --><!-- 22.07.01 전체 구조 변경 -->
+<div id="popImgBn01" class="pop_img_bn dialog_bottom">
+    <button type="button" class="btn_dialog_close"><span class="ico_dialog_close"></span><span class="hidden">닫기</span></button>
+    <div class="pop_img_bn_header">
         <span class="form_chk">
             <input id="exChk01" type="checkbox">
             <label for="exChk01">오늘 하루 보지 않기</label>
         </span>
     </div>
-    <!-- //dialog_header -->
-
-	<!-- dialog_contents -->
-	<div class="dialog_contents">
+    
+    <div class="pop_img_bn_content">
         <!-- ht_under_banner -->
         <div class="ht_under_banner">
             <div class="swiper-container">
@@ -285,11 +281,9 @@
             </div>
         </div>
         <!-- //ht_under_banner -->
-
-	</div>
-	<!-- //dialog_contents -->
+    </div>
 </div>
-<!-- //이미지 팝업(하단) : popImgBn01 -->
+<!-- //이미지 팝업(전체) : popImgBn01 --><!-- 22.07.01 전체 구조 변경 -->
 
 
 <!-- 이미지 팝업(전체) : popImgBn02 --><!-- 22.05.03 전체 구조 변경 -->
@@ -363,9 +357,16 @@ function popSystem01(){
 function popSystem02(){
     $('#popSystem02').dialog('open');
 }
+
+// 22.07.01 팝업 변경으로 수정
 function popImgBn01(){
-    $('#popImgBn01').dialog('open');
+    $('#popImgBn01').addClass('open');
 }
+$("#popImgBn01 .ico_dialog_close").on("click", function(){
+    $('#popImgBn01').removeClass("open");
+})
+// 22.07.01 팝업 변경으로 수정
+
 function popImgBn02(){
     $('#popImgBn02').dialog('open');
 }

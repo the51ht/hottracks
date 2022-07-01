@@ -553,72 +553,10 @@
 
 
 
-/* 이미지 팝업(하단) : popImgBm01*/
-.ui-dialog.dialog_bottom {
-    width:100% !important;max-height:calc(100% - 134px) !important;margin:0;transform:translateY(100%);align-self:flex-end;animation:bottomPopAnimation 0.23s cubic-bezier(0.24, 0.6, 0.65, 1.01) forwards;
-}
-@keyframes bottomPopAnimation {
-    0% {transform:translateY(100%);}
-    100% {transform:translateY(0);}
-} 
 
 /* 이미지 팝업 */
 .dialog_wrapper {
     .ui-dialog {
-        // popImg01
-        .dialog_wrap.btm_wel_wrap {
-            width:1200px !important;margin:0 auto;padding:0;border-radius:0;background-color:transparent;
-            .dialog_header {
-                background-color:transparent;padding:0;border-bottom:none;
-                .form_chk input+label {
-                    font-size:13px;line-height:19px;color:#fff;
-                    &:after {
-                        background-image:url('#{$imgUrl}main/ico_checkbox_transparent.svg');
-                    }
-                    &:before {
-                        background-color:transparent;border-color:#fff;
-                    }
-                }
-                .form_chk input:checked + label {
-                    &:after {
-                        background-image:url('#{$imgUrl}main/ico_checkbox_transparent.svg');background-size:10px 7px;
-                    }
-                    &:before {
-                        background-color:#da2128;border-color:#da2128;
-                    }
-                }
-            }
-            .btn_dialog_close {
-                right:0;top:0;
-                .ico_dialog_close {
-                    background-image:url('#{$imgUrl}main/btn_dialog_close_white.svg');
-                }
-            }
-            .dialog_contents {
-                margin-top:12px;padding-bottom:20px;background-color:transparent;
-                .pop_belt_banner {
-                   position:relative;height:120px;border-radius:12px;overflow:hidden;
-                    &>img {
-                        width:100%;
-                    }
-                }
-                .evt_pop_content {
-                   display:block;position:absolute;left:60px;top:calc(50% + 5px);width:calc(100% - 138px);padding-left:78px;color:#000;text-align:left;transform:translateY(-50%);z-index:2;
-                   .tag_wrap {
-                       position:absolute;left:0;top:5px;
-                        .tag_item {
-                            padding:4px 16px;background-color:#000;border:1px solid #000;color:#fff;font-size:14px;font-weight:700;line-height:19px;letter-spacing:-0.14px;
-                        }
-                    }
-                    .main_msg {
-                        color:#000;font-size:24px;line-height:35px;font-weight:700;letter-spacing:-0.7px;
-                    }
-                    .sub_txt {
-                        margin-top:3px;color:#000;font-size:16px;line-height:24px;letter-spacing:-0.16px;
-                    }
-                }
-            }
-        }
         // popImg02
         .dialog_wrap.dialog_wrap_wel { 
             padding:0;
@@ -670,8 +608,51 @@
         }
     }
 }
+//popImgBn01
+/* 이미지 팝업(하단) : popImgBm01*/
+.pop_img_bn.dialog_bottom {
+    animation:bottomPopAnimation 0.23s; bottom: 100%;left: 50%;transform: translateX(-50%);
+ }
+ @keyframes bottomPopAnimation {
+     0% {transform:translate(-50%, 100%);}
+     100% {transform:translate(-50%, 0);}
+ } 
 
-
+.pop_img_bn{
+    width: 1200px;position: fixed;display: none;
+    .btn_dialog_close{
+        right: 0;top: 0;position: absolute;width: 24px;height: 24px;
+        .ico_dialog_close{
+            position: relative;z-index: 3;display: block;width: 24px;height: 24px;background-position: center;background-repeat: no-repeat;background-size: 24px 24px;background-image: url('#{$imgUrl}kyobo/btn_dialog_close@2x.png');
+        }
+    }
+    .pop_img_bn_header{
+        .form_chk input + label{
+            font-size: 13px;line-height: 19px;
+        }
+    }
+    .pop_img_bn_content{
+        margin-top: 12px;padding-bottom: 20px;
+    }
+    .evt_pop_content{
+        display: block;position: absolute;left: 60px;top: calc(50% + 5px);width: calc(100% - 138px);padding-left: 78px;color: #000;text-align: left;transform: translateY(-50%);z-index: 2;
+        .tag_wrap{
+            position: absolute;left: 0;top: 5px;
+            .tag_item{
+                padding: 4px 16px;background-color: #000;border: 1px solid #000;color: #fff;font-size: 14px;font-weight: 700;line-height: 19px;letter-spacing: -0.14px;
+            }
+        }
+        .main_msg{
+            color: #000;font-size: 24px;line-height: 35px;font-weight: 700;letter-spacing: -0.7px;
+        }
+        .sub_txt{
+            margin-top: 3px;color: #000;font-size: 16px;line-height: 24px;letter-spacing: -0.16px;
+        }
+    }
+    &.open{
+        display: inline-block;bottom: 10px;
+    }
+}
 
 
 
