@@ -1244,41 +1244,42 @@
 }
 
 /* 이미지 팝업(하단) : popImgBm01*/
-.pop_img_bn.dialog_bottom {
+.pop_img_bn {
+  width: 100%;
+  position: absolute;
+  display: none;
+  min-width: 1440px;
+  left: 0;
+  bottom: -50%;
   -webkit-animation: bottomPopAnimation 0.23s;
           animation: bottomPopAnimation 0.23s;
-  bottom: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 @-webkit-keyframes bottomPopAnimation {
   0% {
-    -webkit-transform: translate(-50%, 100%);
-            transform: translate(-50%, 100%);
+    bottom: -50%;
   }
   100% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    bottom: 0;
   }
 }
 
 @keyframes bottomPopAnimation {
   0% {
-    -webkit-transform: translate(-50%, 100%);
-            transform: translate(-50%, 100%);
+    bottom: -50%;
   }
   100% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    bottom: 0;
   }
 }
 
-.pop_img_bn {
+.pop_img_bn .pop_img_bn_wrap {
   width: 1200px;
-  position: fixed;
-  display: none;
+  position: relative;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .pop_img_bn .btn_dialog_close {
@@ -1301,14 +1302,20 @@
   background-image: url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/btn_dialog_close@2x.png");
 }
 
+.pop_img_bn .pop_img_bn_header {
+  padding-bottom: 12px;
+  padding-top: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(29%, rgba(255, 255, 255, 0.8)));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 29%);
+}
+
 .pop_img_bn .pop_img_bn_header .form_chk input + label {
   font-size: 13px;
   line-height: 19px;
 }
 
 .pop_img_bn .pop_img_bn_content {
-  margin-top: 12px;
-  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .pop_img_bn .evt_pop_content {
@@ -1360,5 +1367,5 @@
 
 .pop_img_bn.open {
   display: inline-block;
-  bottom: 10px;
+  bottom: 0;
 }
