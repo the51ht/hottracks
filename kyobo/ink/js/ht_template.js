@@ -67,11 +67,11 @@ $(function(){
     //lnb menu
     if($('.ht_lnb_cont > li .dep2').length){
         $('.ht_lnb_cont > li .dep2').closest('li').addClass('link');
-        $('.ht_lnb_cont > li .dep2').closest('li').find('.lnb_1dep').attr('disabled', true);
+        //$('.ht_lnb_cont > li .dep2').closest('li').find('.lnb_1dep').attr('disabled', true);
     }
     if($('.ht_lnb_cont > li .dep3').length){
         $('.ht_lnb_cont > li .dep3').closest('li').addClass('link2');
-        $('.ht_lnb_cont > li .dep3').closest('li').find('.lnb_2dep').attr('disabled', true);
+       //$('.ht_lnb_cont > li .dep3').closest('li').find('.lnb_2dep').attr('disabled', true);
     }
 
     $(document).on('click', '.ht_lnb_cont > li.link', function(e){
