@@ -99,8 +99,11 @@ body {
         display:block;position:relative;font-size:13px;font-weight:400;line-height:17px;cursor:pointer;text-align:left;
     }
     &> li {
-        position:relative;padding-right:10px;border-bottom:1px solid #eaeaea;
-        &:not(.view_all):before {
+        position:relative;padding-right:10px;border-bottom:1px solid #eaeaea;cursor:pointer;
+        /*&:not(.view_all):before {
+            position:absolute;right:0;top:15px;width:10px;height:19px;background:url('#{$imgUrl}guide/ico_arrow.svg') center/7px no-repeat;content:"";
+        }*/
+        &.link:before {
             position:absolute;right:0;top:15px;width:10px;height:19px;background:url('#{$imgUrl}guide/ico_arrow.svg') center/7px no-repeat;content:"";
         }
         &.on {
@@ -116,18 +119,18 @@ body {
         }
     }
     .lnb_1dep {
-        display:flex;position:relative;height:47px;padding:2px 20px 0 2px;box-sizing:border-box;color:#000;flex-direction:column;justify-content:center;
+        display:flex;position:relative;width:100%;height:47px;padding:2px 20px 0 2px;box-sizing:border-box;color:#000;flex-direction:column;justify-content:center;
     }
     .dep2 {
         position:relative;display:none;padding:0 0 10px 0;
         & > li {
             position:relative;padding-right:10px;
-            &:before {
+            &.link2:before {
                 position:absolute;right:-10px;top:0;width:10px;height:23px;background:url('#{$imgUrl}guide/ico_plus.svg') center/ 7px no-repeat ;content:"";
             }
         }
         & > .on {
-            &:before {
+            &.link2:before {
                 background-image:url('#{$imgUrl}guide/ico_minus.svg')
             }
             .lnb_2dep {

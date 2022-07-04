@@ -65,18 +65,28 @@ $(function(){
 /***** LNB *****/
 $(function(){
     //lnb menu
-    $(document).on('click', '.ht_lnb_cont > li', function(e){
-        if($(this).hasClass('view_all') || e.isDefaultPrevented()) return;
+    if($('.ht_lnb_cont > li .dep2').length){
+        $('.ht_lnb_cont > li .dep2').closest('li').addClass('link');
+        $('.ht_lnb_cont > li .dep2').closest('li').find('.lnb_1dep').attr('disabled', true);
+    }
+    if($('.ht_lnb_cont > li .dep3').length){
+        $('.ht_lnb_cont > li .dep3').closest('li').addClass('link2');
+        $('.ht_lnb_cont > li .dep3').closest('li').find('.lnb_2dep').attr('disabled', true);
+    }
 
+    $(document).on('click', '.ht_lnb_cont > li.link', function(e){
+        if($(this).hasClass('view_all') || e.isDefaultPrevented()) return;
+        $('.ht_lnb_cont .dep2 li').removeClass('on');
         if($(this).hasClass('on')) {
             $(this).removeClass('on');
         } else {
             $(this).addClass('on').siblings().removeClass('on');
         }
+        
     });
     //2depth
-    $(document).on('click', '.dep2 > li', function(e){
-        if( e.isDefaultPrevented()) return;
+    $(document).on('click', '.dep2 > li.link2', function(e){
+        if(e.isDefaultPrevented()) return;
         e.preventDefault();
 
         if($(this).hasClass('on')) {
@@ -85,6 +95,10 @@ $(function(){
             $(this).addClass('on').siblings().removeClass('on');
         }
     });
+    $(document).on('click', '.dep2 > li', function(e){
+        e.preventDefault();
+    });
+
     //3depth
     $(document).on('click', '.dep3 > li', function(e){
         e.preventDefault();
