@@ -2989,3 +2989,245 @@
 
 
 
+
+/***** * 스티커샵 * ****/
+.wel_main_wrap.sti_mian_wrap {
+    /* 타이틀 */
+    .ht_tit_info {
+        text-align: center; height: 63px;position: relative;z-index: 0;
+        p {
+            display: inline-block;font-size: 12px;font-weight: 700;text-align: center;color: #000;position: relative;margin:8px auto 20px;padding: 0 13px;background: #fff;border: solid #000;border-width: 2px 2px 3px 2px;border-radius: 40px;box-sizing: border-box;height: 35px;line-height: 33px;box-sizing:border-box;
+            &:before {
+                position:absolute;left:50%;top:-10px;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:0;height:0;border-bottom:9px solid #000;border-left:7px solid transparent;border-right:7px solid transparent;content:"";
+            }
+            &:after {
+                position:absolute;left:50%;top:-7px;transform:translateX(-50%);-webkit-transform:translateX(-50%);width:0;height:0;border-bottom: 8px solid #fff;border-left: 6px solid transparent;border-right: 6px solid transparent;content:"";
+            }
+            opacity: 0; margin-top: -20px; animation: tool linear 5s infinite;
+            @keyframes tool {
+               0% {opacity: 0; margin-top: -20px;}
+               5% {opacity: 0; margin-top: -5px;}
+
+               10% {opacity: 1; margin:8px auto 20px;}
+               80% {opacity: 1; margin:8px auto 20px;}
+
+               90% {opacity: 0; margin-top: -5px;}
+               100% {opacity: 0; margin-top: -5px;}
+            }
+        }
+    }
+    .mc_tit{
+        text-align: center;position: relative;z-index: 9;
+    }
+    /* mc_cont */
+    .sti_cont {
+        padding:62px 0;
+    }
+    .btn_more_view_box strong {
+        background-color: #fff;
+        em:after {
+            margin-top: -11px;
+        }
+    }
+}
+
+
+/** New Sticker **/
+.new_sticker{
+    padding: 40px 20px;
+    .evt_products .prod_item{
+        width: 100%;
+    }
+    .new_sticker_prod_list{
+        margin-right: -20px;
+    }
+}
+
+
+/** sticker archive **/
+.sti_archive {
+    background: #fee581  url(../images/main/bg_sticker_archive.jpg) center top/22px repeat;overflow: hidden;
+}
+.sti_archive_list_wrap {
+    margin: 0 auto;position: relative;
+    &:before {
+        content: "";background: url(../images/main/ico_sticker_archive01.svg) 100% 100%/cover no-repeat;width: 89px;height: 89px;display: inline-block;position: absolute;top: -75px;right: -36px;
+    }
+    ul {
+        &:after {
+            display: block; clear: both;content: "";
+        }
+        li {
+            width: calc(50% - 10px);margin-left: 19px;float:left;position:relative;
+            a {
+                border: 3px solid #000;width: 100%;height: 100%;display: inline-block; box-sizing: border-box;
+                img {
+                    width: 100%;height: 100%;object-fit: cover;
+                }
+            }
+            &:nth-child(2n + 1) {
+                margin-left: 0;
+            }
+            &:nth-child(n + 3) {
+                margin-top: 19px;
+            }
+            &:nth-child(1):before {
+                content: ""; background: url(../images/main/ico_sticker_archive02.svg) 100% 100%/ cover no-repeat;width: 41px; height: 43px; display: inline-block; position: absolute; top: -18px; left: 48%; transform: translateX(-50%);z-index: 1;
+            }
+            &:nth-child(6):before {
+                content: ""; background: url(../images/main/ico_sticker_archive03.svg) 100% 100%/ cover no-repeat;width: 46px;height: 57px;display: inline-block;position: absolute;top: -22px;left: 54%;transform: translateX(-50%);z-index: 1;
+            }
+            &:nth-child(7):before {
+                content: ""; background: url(../images/main/ico_sticker_archive04.svg) 100% 100%/ cover no-repeat;width: 60px;height: 60px;display: inline-block;position: absolute;top: -23px;left: 54%;transform: translateX(-50%);z-index: 1;
+            }
+        }
+    }
+}
+
+
+/** sticker file **/
+.sti_file {
+    background: #ffd1e9 url(../images/main/bg_sticker_file.jpg) center top / 100% 258px repeat-x;
+    .mc_tit{
+        max-width: 223px;margin: 0 auto;
+    }
+    .evt_products {
+        margin-top: 97px;
+        + .pagination {
+            border-top:1px solid #000
+        }
+    }
+    .tab-list {
+        position: absolute;width: 100%;left: 50%;transform: translateX(-50%);text-align: center;
+        ul {
+            display: inline-block;width: 100%;padding: 0 20px;
+            &:after{
+                display: block; clear: both; content: "";
+            }
+            li {
+                width: 20.1%;height: 71px;float: left;border: 1px solid #000;border-radius: 8px 8px 0 0;background: #fff;text-align: center;box-sizing: border-box; margin-left: -1px; cursor: pointer;
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+                span {
+                    font-size: 10px;font-weight: 700;padding-top: 45px;display: inline-block;position:relative;
+                    &:before {
+                        content: "";display: inline-block;background: url(../images/main/ico_sticker_file01_active.svg) 100% / 100% no-repeat; width: 32px; height: 32px; position: absolute;top: 11px;left: 50%;transform: translateX(-50%);
+                    }
+                }
+                &:nth-child(2) {
+                    span:before {
+                        background: url(../images/main/ico_sticker_file02_active.svg) 100% / 100% no-repeat;
+                    }
+                }
+                &:nth-child(3) {
+                    span:before {
+                        background: url(../images/main/ico_sticker_file03_active.svg) 100% / 100% no-repeat;
+                    }
+                }
+                &:nth-child(4) {
+                    span:before {
+                        background: url(../images/main/ico_sticker_file04_active.svg) 100% / 100% no-repeat;
+                    }
+                }
+                &:nth-child(5) {
+                    span:before {
+                        background: url(../images/main/ico_sticker_file05_active.svg) 100% / 100% no-repeat;
+                    }
+                }
+                
+                &.active {
+                    height: 77px;border-bottom: 0;background: #ffd1e9;
+                }
+            }
+        }
+    }
+}
+
+
+/** best brands **/
+.best_brands {
+    background-color: #000;
+    .mc_tit{
+        max-width: 286px; margin:0 auto;
+    }
+}
+.best_brands_list_wrap {
+    ul {
+        width: 100%;display: inline-block;margin-bottom: -5px;
+
+        &:after {
+            display: block; clear: both; content: "";
+        }
+        li {
+            float: left;width: calc(50% - 3px);margin-left: 5px;margin-top: -1px;
+            a {
+                border-radius: 8px;overflow: hidden;display: inline-block;width: 100%;height: 100%;position:relative;
+                img {
+                    width: 100%;height: 100%;object-fit: cover;
+                }
+                &:hover .info_bg_box {
+                    opacity: 1;
+                }
+            }
+            &:nth-child(2),
+            &:nth-child(4),
+            &:nth-child(7),
+            &:nth-child(9){
+                margin-left: 0px;
+            }
+            &:first-child, 
+            &:nth-child(6) {
+                width: 100%;height: 100%; margin-left: 0px;
+                a{
+                    width:100%;height: 100%;
+                }
+            }
+        }
+    }
+    .info_bg_box {
+        position: absolute;top: 0;left: 0;text-align: center;background: rgba(0,0,0,0.6);width: 100%;height: 100%; opacity: 0; transition: opacity 0.4s;
+        strong {
+            position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);font-size: 20px;color: #fff;
+        }
+    }
+}
+
+
+/** Now is **/
+.now_is{
+    padding: 40px 0px;
+    .mc_tit{
+        max-width: 232px; margin:0 auto;
+    }
+    .list_evt_area{
+        padding-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.sti_mian_wrap .mc_tit,
+.sti_mian_wrap .ht_tit_info{
+    opacity:0;transition:opacity 0.4s 0s;
+    &.active {
+        opacity:1;transition-delay:0.1s;
+    }
+}
+.sti_mian_wrap .evt_products,
+.sti_mian_wrap .sti_archive_list_wrap ul li,
+.sti_mian_wrap .tab-list ul li span,
+.sti_mian_wrap .best_brands_list_wrap ul li,
+.sti_mian_wrap .list_evt_area .evt_item{
+    opacity:0;transition:opacity 0.4s 0s;
+    &.active {
+        opacity:1;transition-delay:0.3s;
+    }
+}
