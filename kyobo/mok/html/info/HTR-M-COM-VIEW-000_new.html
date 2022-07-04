@@ -408,40 +408,33 @@ $(function(){
                                     </p>
                                 </div>
                                 <div class="auto_overflow_wrap overflow type_text">
-
-
-
-                                    <!--                                            <iframe title="상품상세설명" src="https://red.lotteon.com/goodsdetail?view=type1-raw&amp;model=itemdetail%2FLE%2F12%2F09%2F29%2F49%2F69%2FDSCRP_LE1209294969" width="100%" height="2000" frameborder="0" allowfullscreen="" scrolling="no" style="overflow: hidden; height: 2647px;"></iframe>-->
-
-
                                     <div class="auto_overflow_contents" style="max-height: 500px;">
                                         <div class="auto_overflow_inner">
-                                            <!--[2022-02-28]: 줌기능 추가로 구조 변경-->
+                                            <!-- zoom_area_wrap -->
                                             <div class="zoom_area_wrap">
                                                 <div class="zoom_area_content">
-                                                    <div class="zoom_area" id="zoomArea">
-                                                        <img src="../../images/temp/@product_detail.png" alt="" >
-                                                        <iframe id="myIframe" title="상품상세설명" src="./iframe.html" width="100%" height="2000" frameborder="0" allowfullscreen="" scrolling="no"></iframe>
+                                                    <div class="zoom_area" id="zoomArea"><!-- 이미지 확대 영역 -->
+                                                        <img src="../../images/temp/@product_detail.png" alt="">
+                                                        <iframe id="myIframe" title="상품상세설명" src="./iframe.html" width="100" height="2000"></iframe><!-- iframe 일 경우 -->
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- //zoom_area_wrap -->
 
-                                            
-                                            <script type="application/javascript">
-
-                                                $('iframe').iFrameSizer({
-                                                    log: true,
-                                                    contentWindowBodyMargin:0,
-                                                    doHeight:true,
-                                                    doWidth:false,
-                                                    interval:250
-                                                });
-
-
-                                            </script>
-                                            <style>
-                                                .auto_overflow_wrap iframe {width:100%;height:100%;border:0;}
-                                            </style>                                       
+<!-- iframe Contents 가 들어갈 경우 -->
+<script src="../../js/jquery.iframeResizer.min.js"></script>
+<script>
+$('.prod_detail_contents iframe').iFrameSizer({
+    log: true,
+    contentWindowBodyMargin:0,
+    doHeight:true,
+    doWidth:false,
+    interval:250
+});
+</script>
+<style>
+.prod_detail_contents iframe {width:100%;height:100%;border:0;overflow:hidden;}
+</style>                                       
 
 
                                             <div class="product_detailinfo_area">
