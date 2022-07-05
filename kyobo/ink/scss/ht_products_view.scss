@@ -987,10 +987,10 @@
 /** .ating_container **/
 .rating_container {
     .rating_stars {
-        position:relative;
+        display:block;position:relative;
         .empty_stars {
             .star {
-                display:inline-block;vertical-align:top;
+                display:inline-block;vertical-align:top;text-align:left;
                 &:after {
                     display:inline-block;background:url('#{$imgUrl}guide/empty_star.svg') 0 0 no-repeat;content:"";
                 }
@@ -1068,7 +1068,7 @@
             margin-top:8px;
         }
         .rating_stars {
-            display:inline-block;vertical-align:top;
+            display:inline-block;vertical-align:top;text-align:left;
         }
         .score {
             display:inline-block;color:#767676;font-size:14px;line-height:20px;
@@ -1094,6 +1094,9 @@
                     width:100%;
                 }
             }
+        }
+        .rating_container {
+            width:66px;
         }
     }
 }
