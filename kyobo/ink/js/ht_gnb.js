@@ -82,7 +82,7 @@ function setHtGnbOp() {
     $ht_gnb.find('#htGnbCate01 .ht_gnb_cont').addClass('chk2');
 }
 $(function(){
-	$('.tab_link').attr('aria-controls', 'tabAnbCategoryHotTracks').click(function(e){
+	$('.gnb_wrap .tab_link').attr('aria-controls', 'tabAnbCategoryHotTracks').click(function(e){
         setHtGnbOp();
 	});
 });

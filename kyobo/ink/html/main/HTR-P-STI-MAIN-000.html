@@ -2971,13 +2971,15 @@
 			<!-- //ht_cont : 히어로배너 -->
 
 
-            <!-- new sticker -->
+
+            <!-- ht_cont : New Sticker -->
 			<div class="ht_cont sti_cont">
 				<div class="contents_inner">
                     <h2 class="ht_tit_big"><img src="../../images/main/tit_new_sticker.svg" alt="New Sticker"></h2>
                     <div class="ht_tit_info">
                         <p class="txt"><span>새로 나왔어요!</span></p>
                     </div>
+
                     <!-- 상품 리스트 -->
 					<ul class="evt_products row_dir"><!-- row type : class="row_dir" -->
 						<!-- prod_item 반복 -->
@@ -3206,22 +3208,26 @@
 					<!-- //pagination -->
 				</div>
 			</div>
-            <!-- //new sticker -->
+            <!-- //ht_cont : New Sticker -->
 
-            <!-- sticker archive -->
+
+
+            <!-- ht_cont : Sticker Archive -->
 			<div class="ht_cont sti_cont sti_archive">
 				<div class="contents_inner">
                     <h2 class="ht_tit_big"><img src="../../images/main/tit_sticker_archive.svg" alt="Sticker Archive"></h2>
                     <div class="ht_tit_info">
                         <p class="txt"><span>예쁜 스티커를 모아모아~</span></p>
                     </div>
+
+					<!-- sti_archive_list_wrap -->
                     <div class="sti_archive_list_wrap">
                         <ul>
                             <li>
                                 <a href="">
                                     <img src="../../images/temp/@img_prod_big02.jpg" alt="">
                                     <div class="info_bg_box">
-                                        <strong class="title">졸리지스튜디오</strong>
+                                        <strong class="title">졸리지스튜디오 졸리지스튜디오</strong>
                                     </div>
                                 </a>
                             </li>
@@ -3291,14 +3297,20 @@
                             </li>
                         </ul>
                     </div>
+					<!-- //sti_archive_list_wrap -->
+
+					<!-- btn_area -->
                     <div class="btn_area">
                         <button class="btn_more_view_box"><strong>SEE MORE<em></em></strong></button>
                     </div>
+					<!-- //btn_area -->
 				</div>
 			</div>
-            <!-- //sticker archive -->
+            <!-- //ht_cont : Sticker Archive -->
 
-            <!-- sticker file -->
+
+
+            <!-- ht_cont : Sticker File -->
 			<div class="ht_cont sti_cont sti_file">
 				<div class="contents_inner">
                     <h2 class="ht_tit_big"><img src="../../images/main/tit_sticker_file.svg" alt="Sticker File"></h2>
@@ -3306,9 +3318,9 @@
                         <p class="txt"><span>내가 찾는 그 스티커를 만나 보세요!</span></p>
                     </div>
 
-                    <div class="tab-list"> 
+                    <div class="tab-list tab_link"> <!-- tab_link :확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
                         <ul>
-                            <li class="active"><span>캐릭터</span></li>
+                            <li class="active"><a href="#"></a><span>캐릭터</span></li>
                             <li><span>컨페티</span></li>
                             <li><span>숫자/알파벳</span></li>
                             <li><span>도형</span></li>
@@ -3316,7 +3328,7 @@
                         </ul>
                     </div>
                     
-                    <div class="tab-content">
+                    <div class="tab_cont on"><!-- tab_link / tab_cont .on : 확인용 - Ajax 처리시 해당 class 삭제 -->
                         <!-- 상품 리스트 -->
                         <ul class="evt_products"><!-- row type : class="row_dir" -->
                             <!-- prod_item 반복 -->
@@ -3647,7 +3659,7 @@
                     
 				</div>
 			</div>
-            <!-- //sticker file -->
+            <!-- //ht_cont : Sticker File -->
 
             <!-- best brands -->
 			<div class="ht_cont sti_cont best_brands">
@@ -3888,10 +3900,11 @@
 	<!-- //Contents -->
 <script>
     // Sticker File Tab
+	/*
     $(".sti_file .tab-list li").on("click", function(){
         $(".sti_file .tab-list li").removeClass("active");
         $(this).addClass("active");
-    });
+    });*/
 </script>
 
 	<!-- Footer -->

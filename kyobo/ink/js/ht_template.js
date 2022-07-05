@@ -171,7 +171,6 @@ $(function(){
 
 $(function(){
     $('.wel_hero_banner .play_pause_box').click(function(){
-        console.log('ssss')
         if ( $(this).hasClass('play') ) {
             htHeroBannerSwiper.autoplay.stop();
             $(this).removeClass('play').addClass('pause');
@@ -183,11 +182,11 @@ $(function(){
 });
 
 function btnHeroListOp(){
-    $('body').css('overflow','hidden');
+    $('body').addClass('hid');
     $('.pop_hero').addClass('on');
 }
 function btnHeroListCl(){
-    $('body').css('overflow','');
+    $('body').removeClass('hid')
     $('.pop_hero').addClass('off');
     setTimeout(function(){
         $('.pop_hero').removeClass('off').removeClass('on');
