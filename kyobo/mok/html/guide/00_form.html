@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-<meta name="msapplication-TileColor" content="#da2128">
+<meta name="msapplication-TileColor" content="#000">
 <meta property="og:title" content="핫트랙스">
 <meta property="og:description" content="">
 <meta property="og:type" content="website">
@@ -66,7 +66,7 @@
             <a href="javascript:history.back();" class="btn_header_back"><span class="hidden">뒤로</span></a>
         </div>
         <div class="header_right">
-            <a href="#" class="btn_header_cart">
+            <a href="#none" class="btn_header_cart">
                 <span class="hidden">장바구니</span>
                 <span class="count">99</span>
             </a>
@@ -76,12 +76,14 @@
 
     <!-- cont_wrap -->
     <section class="cont_wrap">
-        <div class="mc_cont">
+        <h3 class="tit" style="padding-top: 20px;">
+            1. TAB
+        </h3>
+        <div class="mc_cont" style="padding:0 20px;">
             <h3 class="tit" style="padding-top: 20px;">
-                1. TAB
-                <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
+                <strong style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
                     TAB - 기본
-                </p>
+                </strong>
             </h3>
             <!-- tab_swiper -->
             <div class="tab_swiper tab_ty ty04 tab_link"><!-- tab_link 확인용 - Ajax 처리 필요없을 시 해당 class 삭제 -->
@@ -106,7 +108,7 @@
             <!-- //tab_swiper -->
 
             <h3 class="tit" style="padding-top: 20px;">
-                <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
+                <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
                     TAB - 기본 (항목이 길 경우)
                 </p>
             </h3>
@@ -193,28 +195,13 @@
                             <span>팝</span>
                         </a>
                     </li>
-                    <li class="swiper-slide">
-                        <a href="#n">
-                            <span>클래식</span>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#n">
-                            <span>팝</span>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#n">
-                            <span>클래식</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
             <!-- //tab_swiper -->
 
 
             <h3 class="tit" style="padding-top: 20px;">
-                <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
+                <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
                     TAB - 기본 2줄
                 </p>
             </h3>
@@ -247,7 +234,7 @@
 
 
             <h3 class="tit" style="padding-top: 20px;">
-                <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
+                <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
                     TAB - 슬라이드
                 </p>
             </h3>
@@ -279,22 +266,8 @@
 
 
             <h3 class="tit" style="padding-top: 20px;">
-                <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
-                    TAB - 텍스트(소팅메뉴)
-                </p>
-            </h3>
-            <!-- 소팅 메뉴 -->
-            <div class="sort_tab scroll_box">
-                <a href="#a" class=""><span>최신순</span></a>
-                <a href="#a" class="active"><span>인기순</span></a>
-                <a href="#a"><span>마감임박순</span></a>
-            </div>
-            <!-- //소팅 메뉴 -->
-
-
-            <h3 class="tit" style="padding-top: 20px;">
-                <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
-                    TAB - 텍스트2
+                <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
+                    TAB - 텍스트1
                 </p>
             </h3>
             <div class="ctg_top_wrap">
@@ -307,7 +280,7 @@
 
 
             <h3 class="tit" style="padding-top: 20px;">
-                <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
+                <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
                     TAB - 텍스트2
                 </p>
             </h3>
@@ -320,25 +293,53 @@
                 <a href="#a"><span>이벤트</span></a>
             </div>
             <!-- //이벤트 메뉴 영역 -->
+
+
+            <h3 class="tit" style="padding-top: 20px;">
+                <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
+                    TAB - 텍스트(소팅메뉴)1
+                </p>
+            </h3>
+            <!-- 소팅 메뉴 -->
+            <div class="menu_sort ty02">
+                <button type="button" class="btn_sort active">많이 구매한 상품</button>
+                <button type="button" class="btn_sort">리뷰가 많은 상품</button>
+                <button type="button" class="btn_sort">많이 찜한 상품</button>
+            </div>
+            <!-- //소팅 메뉴 -->
+
+
+            <h3 class="tit" style="padding-top: 20px;">
+                <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
+                    TAB - 텍스트(소팅메뉴)2
+                </p>
+            </h3>
+            <!-- 소팅 메뉴 -->
+            <div class="sort_tab scroll_box">
+                <a href="#a" class=""><span>최신순</span></a>
+                <a href="#a" class="active"><span>인기순</span></a>
+                <a href="#a"><span>마감임박순</span></a>
+            </div>
+            <!-- //소팅 메뉴 -->
         </div>
 
 
         <h3 class="tit" style="padding-top: 20px;">
-            <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
+            <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
                 TAB - BG Gray
             </p>
         </h3>
         <!-- 탑메뉴 -->
         <div class="ctg_topMenu">
             <div class="inner_wrap">
-                <a href="#" class="active">전체</a>
-                <a href="#">디자인 문구</a>
-                <a href="#">필기구</a>
-                <a href="#">오피스</a>
-                <a href="#">디지털/자동차</a>
-                <a href="#">가전</a>
-                <a href="#">유아동 용품</a>
-                <a href="#">오피스</a>
+                <a href="#none" class="active">전체</a>
+                <a href="#none">디자인 문구</a>
+                <a href="#none">필기구</a>
+                <a href="#none">오피스</a>
+                <a href="#none">디지털/자동차</a>
+                <a href="#none">가전</a>
+                <a href="#none">유아동 용품</a>
+                <a href="#none">오피스</a>
             </div>
         </div>
         <!-- //탑메뉴 -->
@@ -348,13 +349,13 @@
         <!-- ctg_topMenu -->
         <div class="ctg_topMenu include_sub">
             <div class="inner_wrap">
-                <a href="#" class="active">전체</a>
-                <a href="#">가요</a>
-                <a href="#">POP</a>
-                <a href="#">ROCK</a>
-                <a href="#">JAZZ</a>
-                <a href="#">O.S.T/MUSICAL</a>
-                <a href="#">NEW AGE</a>
+                <a href="#none" class="active">전체</a>
+                <a href="#none">가요</a>
+                <a href="#none">POP</a>
+                <a href="#none">ROCK</a>
+                <a href="#none">JAZZ</a>
+                <a href="#none">O.S.T/MUSICAL</a>
+                <a href="#none">NEW AGE</a>
             </div>
             <div class="ctg_floating_line sub_mn">
                 <div class="ctg_floating_menues">
@@ -372,70 +373,86 @@
 
 
         <h3 class="tit" style="padding-top: 20px;">
-            <p style="margin-top:10px;color:#767676;font-size:14px;font-weight:500;line-height:24px;">
+            <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
+                TAB - 1, 2, 3 Depth
+            </p>
+        </h3>
+        <!-- 1depth 메뉴 -->
+		<div class="ctg_topMenu depth1">
+			<div class="inner_wrap">
+				<a href="#none" class="active">디자인 문구</a>
+				<a href="#none">필기구</a>
+				<a href="#none">오피스</a>
+				<a href="#none">디지털/자동차</a>
+				<a href="#none">가전</a>
+				<a href="#none">유아동 용품</a>
+				<a href="#none">오피스</a>
+			</div>
+		</div> 
+		<!-- //1depth 메뉴 -->
+
+		<!-- 2depth 메뉴 -->
+		<div class="ctg_topMenu depth2">
+			<div class="inner_wrap">
+				<a href="#none" class="active depth3_none">전체</a>
+				<a href="#none">다이어리/스케줄러</a>
+				<a href="#none">캘린더/만년</a>
+				<a href="#none">디지털/자동차</a>
+				<a href="#none">노트/메모</a>
+				<a href="#none">포토앨범</a>
+				<a href="#none">달력/포스터</a>
+			</div>
+		</div> 
+		<!-- //2depth 메뉴-->
+
+		<!-- 3depth 메뉴-->
+		<div class="sub_menu_wrap">
+			<div class="ctg_subMenu">
+				<a href="#none" class="active">전체</a>
+				<a href="#none">비즈니스 플래너</a>
+				<a href="#none">만년 다이어리</a>
+				<a href="#none">디지털/자동차</a>
+				<a href="#none">노트/메모</a>
+				<a href="#none">포토앨범</a>
+				<a href="#none">달력/포스터</a>
+				<a href="#none">노트/메모</a>
+				<a href="#none">포토앨범</a>
+				<a href="#none">달력/포스터</a>
+				<a href="#none">노트/메모</a>
+				<a href="#none">포토앨범</a>
+				<a href="#none">달력/포스터</a>
+			</div>
+			<div class="subMenu_btn_area">
+				<button type="button" class="subMenu_btn"></button>
+			</div>   
+		</div>
+		<!-- //3depth 메뉴-->	
+
+
+
+        <h3 class="tit" style="padding-top: 20px;">
+            <p style="margin-top:10px;color:#000;font-size:14px;font-weight:700;line-height:24px;">
                 TAB - Box type
             </p>
         </h3>
-        <!-- moudule 002 -->
-        <hr class="devide_underline_thin">
-        <section class="evt_mdl2_wrap">
-          <!--앵커 메뉴 모둘 타입 1-->
-            <ul class="evt_mdl2_menu">
-                <li class="active">
-                    <a href="#">순간을 장면으로<br> 기록하세요.</a>
-                </li>
-                <li>
-                    <a href="#">기록과 아카이빙을<br> 위한 다이어리</a>
-                </li>
-            </ul>
-        </section>
-        <hr class="devide_underline_thin">
-        <section class="evt_mdl2_wrap">
-          <ul class="evt_mdl2_menu">
-            <li class="active  tab_link">
-                <a href="#">순간을 장면으로<br> 기록하세요.</a>
-            </li>
-            <li>
-                <a href="#">기록과 아카이빙을<br> 위한 다이어리</a>
-            </li>
-            <li>
-                <a href="#">Be On :D 할인쿠폰</a>
-            </li>
-          </ul>
-        </section>
-        <hr class="devide_underline_thin">
-        <section class="evt_mdl2_wrap">
-          <ul class="evt_mdl2_menu">
-            <li class="active  tab_link">
-                <a href="#">순간을 장면으로<br> 기록하세요.</a>
-            </li>
-            <li>
-                <a href="#">기록과 아카이빙을<br> 위한 다이어리</a>
-            </li>
-            <li>
-                <a href="#">Be On :D 할인쿠폰</a>
-            </li>
-            <li>
-                <a href="#">별별일상<br>응모하기</a>
-            </li>
-          </ul>
-        </section>
-        <!-- //moudule 002 -->
-
-
-
-
-
+        <!-- tab_nav -->
+        <div class="tab_nav_area mt">
+            <a href="#n" class="active">쇼핑몰 이용상담</a><!-- 활성화 class="active" -->
+            <a href="#n">영업점 이용상담</a>
+        </div>
+        <!-- //tab_nav-->
     </section>
-    <hr class="devide_underline_thin">
 
+    <section class="cont_wrap">
+        <hr class="devide_underline_thin">
 
+        <h3 class="tit" style="padding-top: 20px;">
+            2. Form
+        </h3>
+        <div class="mc_cont" style="padding:0 20px;">
 
-
-
-
-
-
+        </div>
+    </section>
 </div>
 <!-- //wrapper -->
 
