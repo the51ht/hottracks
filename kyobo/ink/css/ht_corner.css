@@ -5273,7 +5273,7 @@
 }
 
 .sti_file .evt_products {
-  margin-top: 207px;
+  margin-top: 50px;
 }
 
 .sti_file .evt_products + .pagination {
@@ -5281,11 +5281,8 @@
 }
 
 .sti_file .tab-list {
-  position: absolute;
-  width: 899px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  position: relative;
+  width: 100%;
 }
 
 .sti_file .tab-list ul {
@@ -5296,15 +5293,12 @@
 .sti_file .tab-list ul li {
   width: 153px;
   height: 156px;
-  display: inline-block;
-  border: 2px solid #000;
-  border-radius: 16px 16px 0 0;
-  background: #fff;
   text-align: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 30px;
+  margin-left: 32px;
   cursor: pointer;
+  display: inline-block;
 }
 
 .sti_file .tab-list ul li:nth-child(1) {
@@ -5322,7 +5316,6 @@
 .sti_file .tab-list ul li span:before {
   content: "";
   display: inline-block;
-  background: url(../images/main/ico_sticker_file01_active.svg);
   width: 72px;
   height: 72px;
   position: absolute;
@@ -5332,23 +5325,38 @@
           transform: translateX(-50%);
 }
 
-.sti_file .tab-list ul li:nth-child(2) span:before {
+.sti_file .tab-list ul li .tab_sti_file01 span:before {
+  background: url(../images/main/ico_sticker_file01_active.svg);
+}
+
+.sti_file .tab-list ul li .tab_sti_file02 span:before {
   background: url(../images/main/ico_sticker_file02_active.svg);
 }
 
-.sti_file .tab-list ul li:nth-child(3) span:before {
+.sti_file .tab-list ul li .tab_sti_file03 span:before {
   background: url(../images/main/ico_sticker_file03_active.svg);
 }
 
-.sti_file .tab-list ul li:nth-child(4) span:before {
+.sti_file .tab-list ul li .tab_sti_file04 span:before {
   background: url(../images/main/ico_sticker_file04_active.svg);
 }
 
-.sti_file .tab-list ul li:nth-child(5) span:before {
+.sti_file .tab-list ul li .tab_sti_file05 span:before {
   background: url(../images/main/ico_sticker_file05_active.svg);
 }
 
-.sti_file .tab-list ul li.active {
+.sti_file .tab-list ul li a {
+  width: 100%;
+  height: 156px;
+  display: block;
+  border: 2px solid #000;
+  border-radius: 16px 16px 0 0;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sti_file .tab-list ul li a.on {
   height: 187px;
   border-bottom: 0;
   background: #ffd1e9;

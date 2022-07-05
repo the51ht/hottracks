@@ -3105,39 +3105,46 @@
                 display: block; clear: both; content: "";
             }
             li {
-                width: 20.1%;height: 71px;float: left;border: 1px solid #000;border-radius: 8px 8px 0 0;background: #fff;text-align: center;box-sizing: border-box; margin-left: -1px; cursor: pointer;
+                width: 20.1%;height: 71px;float: left;text-align: center;box-sizing: border-box; margin-left: -1px; cursor: pointer;
                 &:nth-child(1) {
                     margin-left: 0;
                 }
                 span {
                     font-size: 10px;font-weight: 700;padding-top: 45px;display: inline-block;position:relative;
                     &:before {
-                        content: "";display: inline-block;background: url(../images/main/ico_sticker_file01_active.svg) 100% / 100% no-repeat; width: 32px; height: 32px; position: absolute;top: 11px;left: 50%;transform: translateX(-50%);
+                        content: "";display: inline-block; width: 32px; height: 32px; position: absolute;top: 11px;left: 50%;transform: translateX(-50%);
                     }
                 }
-                &:nth-child(2) {
+                .tab_sti_file01{
+                    span:before{
+                        background: url(../images/main/ico_sticker_file01_active.svg) 100% / 100% no-repeat;
+                    }
+                }
+                .tab_sti_file02 {
                     span:before {
                         background: url(../images/main/ico_sticker_file02_active.svg) 100% / 100% no-repeat;
                     }
                 }
-                &:nth-child(3) {
+                .tab_sti_file03 {
                     span:before {
                         background: url(../images/main/ico_sticker_file03_active.svg) 100% / 100% no-repeat;
                     }
                 }
-                &:nth-child(4) {
+                .tab_sti_file04 {
                     span:before {
                         background: url(../images/main/ico_sticker_file04_active.svg) 100% / 100% no-repeat;
                     }
                 }
-                &:nth-child(5) {
+                .tab_sti_file05 {
                     span:before {
                         background: url(../images/main/ico_sticker_file05_active.svg) 100% / 100% no-repeat;
                     }
                 }
-                
-                &.active {
-                    height: 77px;border-bottom: 0;background: #ffd1e9;
+                a{
+                    width: 100%;height: 71px;display: block;border: 1px solid #000;border-radius: 8px 8px 0 0;background: #fff;box-sizing: border-box;
+                    &.on {
+                        height: 77px;border-bottom: 0;background: #ffd1e9;
+                    }
                 }
             }
         }
