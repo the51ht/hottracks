@@ -90,23 +90,28 @@ $(function(){
 	});
 
 
-    if($('.visual_wrap').find('.swiper-slide').length > 1) {
-		var visualSwiper = new CustomSwiper('.visual_wrap .swiper-container', {
-			slidesPerView: '1',	
-			speed: 500,
-			pagination: {
-				el: $('.visual_wrap').find('.swiper-pagination')[0],
-				type: 'fraction',
-				formatFractionCurrent: function (number) {
-					return KyoboHottracks.mok.setPrependZero(number, 2);
-				},
-				formatFractionTotal: function (number) {
-					return KyoboHottracks.mok.setPrependZero(number, 2);
-				},
-			}
-		});	
-    } 
 
+	var visualSwiper = new CustomSwiper('.visual_wrap .swiper-container', {
+		slidesPerView: '1',	
+		speed: 500,
+		pagination: {
+			el: $('.visual_wrap').find('.swiper-pagination')[0],
+			type: 'fraction',
+			formatFractionCurrent: function (number) {
+				return KyoboHottracks.mok.setPrependZero(number, 2);
+			},
+			formatFractionTotal: function (number) {
+				return KyoboHottracks.mok.setPrependZero(number, 2);
+			},
+		}
+	});	
+
+
+/* 제품상세 iframe 처리 */
+$(function() {
+	if(!$('.prod_detail_contents iframe').length) return;
+	$('.prod_detail_contents iframe').attr('scrolling', 'yes');
+});	
 
 	
 	
