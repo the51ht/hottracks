@@ -1195,7 +1195,9 @@ function musFan(){
             prevEl: '.mus_mc_fan_cont .swiper-button-prev',
         },
     };
-    musFanSwiper = new Swiper($target.get(), slideOption);
+    if($target.find('.swiper-slide').length > 1) {
+        musFanSwiper = new Swiper($target.get(), slideOption);
+    }    
 }
 
 $(function(){
@@ -2085,7 +2087,7 @@ function prodView(){
         thumbs: {
             swiper: prodViewThumb
         },
-        loop: true,
+        loop: false,
         speed: 600,
         loopAdditionalSlides: 1
     });
