@@ -1437,7 +1437,9 @@ function musFan(){
 			}
 		}
     };
-    musFanSwiper = new Swiper($target.get(), slideOption);
+    if($target.find('.swiper-slide').length > 1) {
+        musFanSwiper = new Swiper($target.get(), slideOption);
+    } 
 }
 
 $(function(){
