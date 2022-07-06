@@ -89,65 +89,25 @@ $(function(){
 		$('.prod_recommend .dialog_wrap .btn_show_all_list').focus();
 	});
 
-	var visualSwiper = new CustomSwiper('.visual_wrap .swiper-container', {
-		slidesPerView: '1',	
-		speed: 500,
-		pagination: {
-			el: $('.visual_wrap').find('.swiper-pagination')[0],
-			type: 'fraction',
-			formatFractionCurrent: function (number) {
-				return KyoboHottracks.mok.setPrependZero(number, 2);
-			},
-			formatFractionTotal: function (number) {
-				return KyoboHottracks.mok.setPrependZero(number, 2);
-			},
-		}
-	});
-	
-	/*
-	var hotpickSwiper = new CustomSwiper('.hotpickslide_wrap .swiper-container', {
-		slidesPerView: 'auto',
-		speed: 500,
-		spaceBetween: 10,
-		pagination: {
-			el: $('.hotpickslide_wrap').find('.swiper_control_box .swiper-pagination')[0],
-		},
-	});
-	
 
-		
-	var photoreviewSwiper = new CustomSwiper('.photoreviewSlide-01 .swiper-container', {
-		slidesPerView: 'auto',
-		speed: 500,
-		spaceBetween: 10,
-		centeredSlides: true,
-		pagination: {
-			el: $('.photoreviewSlide-01').find('.swiper-pagination')[0],
-			type: 'fraction',
-			formatFractionCurrent: function (number) {
-				return KyoboHottracks.mok.setPrependZero(number, 2);
-			},
-			formatFractionTotal: function (number) {
-				return KyoboHottracks.mok.setPrependZero(number, 2);
-			},
-		}
-	});
-	var photoreview02Swiper = new CustomSwiper('.photoreviewSlide-02 .swiper-container', {
-		slidesPerView: 'auto',
-		speed: 500,
-		spaceBetween: 10,
-		centeredSlides: true,
-		pagination: {
-			el: $('.photoreviewSlide-02').find('.swiper-pagination')[0],
-			type: 'fraction',
-			formatFractionCurrent: function (number) {
-				return KyoboHottracks.mok.setPrependZero(number, 2);
-			},
-			formatFractionTotal: function (number) {
-				return KyoboHottracks.mok.setPrependZero(number, 2);
-			},
-		}
-	});*/
+    if($('.visual_wrap').find('.swiper-slide').length > 1) {
+		var visualSwiper = new CustomSwiper('.visual_wrap .swiper-container', {
+			slidesPerView: '1',	
+			speed: 500,
+			pagination: {
+				el: $('.visual_wrap').find('.swiper-pagination')[0],
+				type: 'fraction',
+				formatFractionCurrent: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+				formatFractionTotal: function (number) {
+					return KyoboHottracks.mok.setPrependZero(number, 2);
+				},
+			}
+		});	
+    } 
+
+
 	
 	
 $(function(){
