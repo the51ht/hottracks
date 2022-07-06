@@ -1557,14 +1557,20 @@ function livReplaySwiper(){
     $target.each(function (index, element) {
         var $parent = $(this).parent('.liv_replay_wrap');
         var slideOption = {
-            spaceBetween: 0,
-            observer: true,
-            observeParents: true,
-            slidesPerView:'auto',
+            spaceBetween: 36,
+            //observer: true,
+            //observeParents: true,
+            slidesPerView:5,
             slidesPerGroup: 5,
             loop: true,
-            // loopsSlide:1,
-            autoHeight: true,
+            loopFillGroupWithBlank:true,
+            slideToClickedSlide: true,
+            loopsSlide:3,
+            //autoHeight: true,
+            /*
+            centeredSlides:false,
+            loopedSlides: 1,
+        watchSlidesVisibility: false,*/
             speed:1000,
             navigation: {
                 nextEl: $($parent).find('.swiper-button-next'),
