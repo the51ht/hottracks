@@ -1567,7 +1567,7 @@ function livReplaySwiper(){
             observeParents: true,
             slidesPerView:5,
             slidesPerGroup: 5,
-            loop: true,
+            loop: false,
             // loopsSlide:1,
             autoHeight: true,
             speed:1000,
