@@ -1056,6 +1056,14 @@
                 br {
                     display:none;
                 }
+                br::after {
+                    content:"ssss";
+                }
+                span {
+                    &:before {
+                        display:inline-block;content:"#";
+                    }
+                }
             }
             &:nth-child(1) {
                 position:absolute;left:50%;width:560px;height:730px;margin:0 auto;border:2px solid #000;transform:translateX(-50%);
