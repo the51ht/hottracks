@@ -317,7 +317,7 @@ function welCuration(){
     curationImg.controller.control = curationThumb;
     curationThumb.controller.control = curationImg;
 }
-
+/* 큐레이션 이미지 규격화 - 해당 부분 사용안함
 function welCurationSize() {
 	var curSize = document.querySelectorAll('.wel_curation_cont .curation_box');
 	for (var i = 0; i < curSize.length; ++i) {
@@ -332,16 +332,16 @@ function welCurationSize() {
 		} 
 	}
 }
-
+*/
 $(function(){
     if(!$('.wel_curation_cont').length) return;
     if($('.curation_img').find('.swiper-slide').length > 1) {
         welCuration();
     }
     welCurationSize();
-    window.onload = function(){
+    /*window.onload = function(){
         welCurationSize();  
-    }
+    }*/
     
 });
 
