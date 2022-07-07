@@ -342,7 +342,6 @@ $(function(){
     /*window.onload = function(){
         welCurationSize();  
     }*/
-    
 });
 
 function curation_btn(val){
