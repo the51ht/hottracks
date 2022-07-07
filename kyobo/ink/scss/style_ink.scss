@@ -3833,10 +3833,17 @@ button {
 	height: 100%;
 	border-radius: 100%;
 	box-sizing: border-box;
+    display: inline-block;
+	background-size: 48px 48px;
+	background: url('#{$imgUrl}guide/ico_history_empty.png');
+	
 }
 .wrapper .floating_wrapper .btn_history .img_box img {
 	display: block;
-	width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
 }
 .wrapper .floating_wrapper .btn_history .count {
 	position: absolute;
