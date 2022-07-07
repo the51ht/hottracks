@@ -1011,6 +1011,11 @@ $(function(){
     if(!$('.wel_category_banner').length) return;
     wel_category_banner();
 });
+$(function(){
+    $('.wel_category_tab a').on('click', function(e) {
+        $('html, body').stop().animate({scrollTop: $('.wel_category_tab').offset().top - 100 }, 400 );
+    });
+})
 
 
 
@@ -1557,10 +1562,10 @@ function livReplaySwiper(){
     $target.each(function (index, element) {
         var $parent = $(this).parent('.liv_replay_wrap');
         var slideOption = {
-            spaceBetween: 0,
+            spaceBetween: 36,
             observer: true,
             observeParents: true,
-            slidesPerView:'auto',
+            slidesPerView:5,
             slidesPerGroup: 5,
             loop: true,
             // loopsSlide:1,
