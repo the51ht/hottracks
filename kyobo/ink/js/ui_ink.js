@@ -234,7 +234,8 @@ KyoboBookPub.ink = (function () {
 				headerFixedOffset = 80;
 			}
 			// 윙배너 sps set
-			_flyMenuEl.attr('data-sps-offset', headerFixedOffset);
+			//_flyMenuEl.attr('data-sps-offset', headerFixedOffset);
+			_flyMenuEl.attr('data-sps-offset', 121);
 		}
 
 		setFloatingScrollPos();
