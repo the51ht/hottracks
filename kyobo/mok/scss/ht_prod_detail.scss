@@ -3026,9 +3026,22 @@ button.btn_md_second {
             padding:20px 4px 20px 4px;
             &.on {
                 .fold_tit {
-                    .txt_len, .txt_len1, .txt_len2, .txt_len3 {
+                    .txt_len,
+                    .txt_len1,
+                    .txt_len2,
+                    .txt_len3 {
                         display:block;max-height:inherit;
                     }   
+                    .tit {
+                        > div {
+                            * {
+                                display:block !important;
+                            }
+                            br {
+                                display:block !important;
+                            }
+                        }
+                    }
                 }   
                 .prod_thumb {
                     display:none;
@@ -3104,6 +3117,9 @@ button.btn_md_second {
                 }
                 img, 
                 table {
+                    display:none !important;
+                }
+                br {
                     display:none !important;
                 }
             }

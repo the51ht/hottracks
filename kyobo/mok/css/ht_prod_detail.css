@@ -6054,9 +6054,20 @@ button.btn_md_second {
   padding: 20px 4px 20px 4px;
 }
 
-.multi_review_area .fold_ty .li.on .fold_tit .txt_len, .multi_review_area .fold_ty .li.on .fold_tit .txt_len1, .multi_review_area .fold_ty .li.on .fold_tit .txt_len2, .multi_review_area .fold_ty .li.on .fold_tit .txt_len3 {
+.multi_review_area .fold_ty .li.on .fold_tit .txt_len,
+.multi_review_area .fold_ty .li.on .fold_tit .txt_len1,
+.multi_review_area .fold_ty .li.on .fold_tit .txt_len2,
+.multi_review_area .fold_ty .li.on .fold_tit .txt_len3 {
   display: block;
   max-height: inherit;
+}
+
+.multi_review_area .fold_ty .li.on .fold_tit .tit > div * {
+  display: block !important;
+}
+
+.multi_review_area .fold_ty .li.on .fold_tit .tit > div br {
+  display: block !important;
 }
 
 .multi_review_area .fold_ty .li.on .prod_thumb {
@@ -6203,6 +6214,10 @@ button.btn_md_second {
 
 .multi_review_area .fold_tit .tit > div img,
 .multi_review_area .fold_tit .tit > div table {
+  display: none !important;
+}
+
+.multi_review_area .fold_tit .tit > div br {
   display: none !important;
 }
 
