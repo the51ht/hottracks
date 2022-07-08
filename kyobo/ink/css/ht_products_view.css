@@ -2095,9 +2095,19 @@
   border-bottom: 0;
 }
 
-.fold_ty .li.on .fold_tit .txt_len, .fold_ty .li.on .fold_tit .txt_len1, .fold_ty .li.on .fold_tit .txt_len3 {
+.fold_ty .li.on .fold_tit .txt_len,
+.fold_ty .li.on .fold_tit .txt_len1,
+.fold_ty .li.on .fold_tit .txt_len3 {
   display: block;
   max-height: inherit;
+}
+
+.fold_ty .li.on .fold_tit .tit > div * {
+  display: block !important;
+}
+
+.fold_ty .li.on .fold_tit .tit > div br {
+  display: block !important;
 }
 
 .fold_ty .li.on .fold_btn span:after {
@@ -2330,7 +2340,12 @@
   font-family: 'Roboto', 'Noto Sans KR' !important;
 }
 
-.fold_tit .tit > div img {
+.fold_tit .tit > div img,
+.fold_tit .tit > div table {
+  display: none !important;
+}
+
+.fold_tit .tit > div br {
   display: none !important;
 }
 
@@ -2850,6 +2865,14 @@
   position: static;
   margin-top: 20px;
   text-align: right;
+}
+
+.dialog_wrapper .fold_tit .tit > div * {
+  display: block !important;
+}
+
+.dialog_wrapper .fold_tit .tit > div br {
+  display: block !important;
 }
 
 /*** prod_tab ***/
