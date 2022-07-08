@@ -658,6 +658,14 @@ $(function(){
 });
 
 
+
+
+
+
+
+
+
+
 /* 다이나믹 메세지 */
 $.fn.feScrollDynamicGet = function(){
     var offset = $(window).scrollTop() + $(window).height() * 0.7;
@@ -683,9 +691,8 @@ function feScrollDynamic(){
 $(function(){
     if(!$('.character_sc_chk').length) return;
     $(window).on('scroll', feScrollDynamic);
+    feScrollDynamic();
 });
-
-
 
 
 
