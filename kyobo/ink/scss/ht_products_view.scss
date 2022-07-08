@@ -1213,9 +1213,21 @@
         }
         &.on {
             .fold_tit {
-                .txt_len, .txt_len1, .txt_len3 {
+                .txt_len,
+                .txt_len1,
+                .txt_len3 {
                     display:block;max-height:inherit;
                 }   
+                .tit {
+                    > div {
+                        * {
+                            display:block !important;
+                        }
+                        br {
+                            display:block !important;
+                        }
+                    }
+                }
             }       
             .fold_btn {
                 span {
@@ -1314,11 +1326,15 @@
     .tit {
         color:#000;font-size:14px;font-weight:400;line-height:22px;//border:1px solid red;max-height:66px;overflow:hidden;
         > div {
-            *{
+            * {
                 display: inline !important;margin: 0 !important;padding: 0 !important;font-size: 14px !important;color: #000 !important;line-height: 22px !important;background-color: initial !important;text-decoration: initial !important;font-style: normal !important;font-weight: 400 !important;border: none !important;font-family:'Roboto', 'Noto Sans KR' !important;
             }
-            img{
-                display: none !important;
+            img, 
+            table {
+                display:none !important;
+            }
+            br {
+                display:none !important;
             }
         }
     }
@@ -1572,6 +1588,20 @@
     .review_btn_common {
         position:static;margin-top:20px;text-align:right;
     } 
+
+    .fold_tit {
+        .tit {
+
+            > div {
+                * {
+                    display:block !important;
+                }
+                br {
+                    display:block !important;
+                }
+            }
+        }
+    }
 }
 
 
