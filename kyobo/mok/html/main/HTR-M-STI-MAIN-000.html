@@ -11,7 +11,7 @@
 <meta property="og:image" content="../../images/guide/sns.jpg">
 <link rel="shortcut icon" href="../../images/guide/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../../images/guide/apple-touch-icon.png">
-<title>핫트랙스</title>
+<title>스티커샵 : 핫트랙스</title>
 
 <!-- Plug-In css -->
 <link rel="stylesheet" href="../../vendors/lib/jquery-ui-1.12.1/jquery-ui.min.css" />
@@ -198,18 +198,7 @@
     <!-- //header -->
 
 
-<script>
-function mcNav(){
-	var tag = ($(window).width() - $('.wrapper').innerWidth()) /2
-	$('.main_menu_list_wrap').stop().animate({scrollLeft:$('.main_menu_list_wrap .menu_list_item').eq(3).offset().left - 10 - tag}, 10);
-}
-$(function(){
-	if(!$('.main_menu_list_wrap').length) return;
-	setTimeout(function() {
-		mcNav();
-	}, 100);
-});
-</script>
+
 	<!-- main_menu_wrap -->
 	<div class="main_menu_wrap">
 		<div class="main_menu_list_wrap sps sps_scroll_fixed wel_mc">
@@ -244,7 +233,7 @@ $(function(){
 		<section class="contents_wrap">
 
 			<!-- 메인 컨텐츠 -->
-			<div class="wel_main_wrap sti_mian_wrap">
+			<div class="wel_main_wrap sti_mian_wrap"><!-- 스티커샵 메인 class="sti_mian_wrap" -->
 				<!-- mc_cont : 히어로배너 -->
 				<div class="mc_cont wel_hero">
 					<h2 class="hidden">히어로배너</h2>
@@ -278,8 +267,8 @@ $(function(){
 											<p class="img"><img src="../../images/temp/@img_wel_hero_banner02.jpg" alt=""></p>
 											<div class="txt">
 												<ul>
-													<li class="s1" style="color:#0e1df4;">멀리 안나가<br>매일 홈트</li>
-													<li class="s2" style="color:#0e1df4;">매일 하루 30분만 투자해요<br>힘내라고 다이어트 응원쿠폰</li>
+													<li class="s1" style="color:#000;">멀리 안나가<br>매일 홈트</li>
+													<li class="s2" style="color:#000;">매일 하루 30분만 투자해요<br>힘내라고 다이어트 응원쿠폰</li>
 												</ul>
 											</div>
 										</a>
@@ -327,8 +316,8 @@ $(function(){
 											<p class="img"><img src="../../images/temp/@img_wel_hero_banner02.jpg" alt=""></p>
 											<div class="txt">
 												<ul>
-													<li class="s1" style="color:#0e1df4;">멀리 안나가<br>매일 홈트</li>
-													<li class="s2" style="color:#0e1df4;">매일 하루 30분만 투자해요<br>힘내라고 다이어트 응원쿠폰</li>
+													<li class="s1" style="color:#000;">멀리 안나가<br>매일 홈트</li>
+													<li class="s2" style="color:#0000;">매일 하루 30분만 투자해요<br>힘내라고 다이어트 응원쿠폰</li>
 												</ul>
 											</div>
 										</a>
@@ -344,8 +333,6 @@ $(function(){
 					<!-- //pop_hero : 히어로 배너 리스트 -->
 				</div>
 				<!-- //mc_cont : 히어로배너 -->
-
-
 
 
 				<!-- mc_cont : New Sticker -->
@@ -460,7 +447,6 @@ $(function(){
 
 
 
-
 				<!-- mc_cont : Sticker Archive -->
 				<div class="mc_cont sti_archive">
                     <h2 class="mc_tit"><img src="../../images/main/tit_sticker_archive.svg" alt="Sticker Archive"></h2>
@@ -517,7 +503,6 @@ $(function(){
                     </div>
 				</div>
 				<!-- //mc_cont : Sticker Archive -->
-
 
 
 
@@ -795,7 +780,6 @@ $(function(){
 
 
 
-
                 <!-- mc_cont : Best Brands -->
                 <div class="mc_cont best_brands">
                     <h2 class="mc_tit"><img src="../../images/main/tit_best_brands.svg" alt="Best Brands"></h2>
@@ -868,7 +852,6 @@ $(function(){
 
 
 
-
                 <!-- mc_cont : Now is -->
                 <div class="mc_cont now_is">
                     <h2 class="mc_tit"><img src="../../images/main/tit_now_is.svg" alt="Now is"></h2>
@@ -936,8 +919,7 @@ $(function(){
                 </div>
                 <!-- //mc_cont : Now is -->
 
-
-
+                
 
 				<!-- mc_cont : 광고배너 -->
 				<div class="mc_cont wel_belt02">
@@ -966,165 +948,38 @@ $(function(){
 
 
     <!-- footer -->
-	<footer class="footer_wrapper">
-
-		<!-- 웰컴메인형 푸터 -->
-		<div class="notice_type_detail">
-			<!-- ctg_topMenu -->
-			<div class="ctg_topMenu include_sub">
-				<div class="inner_wrap">
-					<a href="#none" id="notice" class="active">공지사항</a>
-					<a href="#none" id="winner" class="">당첨자 발표</a>
-				</div>
-			</div>
-			<!-- //ctg_topMenu -->
-
-            <!-- 공지사항 -->
-			<div class="notice_content notice on">
-				<a href="javascript:alert('공지사항 목록');" class="notice_more"><span class="hidden">공지사항 더보기</span></a>
-				<a href="javascript:alert('공지사항 상세');" class="">
-					<strong class="notice_content_tit">우체국택배 접수 중지로 지로 인한 배송 및 주문 불가인한 배송 및 주문 불가 안내</strong>
-					<p class="notice_content_text">
-						<!--최근 택배사 파업으로 고객님들께 불편을 드려 죄송합니다. 일시적으로 타 택배사(우체국 택배)를 통해 대체 발송하고 있으나 물량 증가에 따른 접수 일시적으로 타 택배사(우체국 택배)를 통해 대체 발송하고 있으나 물량 증가에 따른 접수-->
-						최근 택배사 파업으로
-					</p>
-					<span class="notice_date">2021.12.13</span>
-				</a>
-			</div>
-            <!-- //공지사항 -->
-
-            <!-- 당첨자발표 -->
-			<div class="notice_content winner">
-				<a href="javascript:alert('당첨자발표 목록');" class="notice_more"><span class="hidden">당첨자발표 더보기</span></a>
-				<a href="javascript:alert('당첨자발표 상세');" class="">
-					<strong class="notice_content_tit">[비즈니스] &lt;골프다이제스트 2월호&gt; 출간 이벤트 당첨자 발표<span class="ico_new"></span></strong>
-					<p class="notice_content_text">
-						증가에 따른 접수 일시적으로 타 택배사(우체국 택배)를 통해 대체 발송하고 있으나 물량 증가에 따른 접 증가에 따른 접수 일시적으로 타 택배사(우체국 택배)를 통해 대체 발송하고 있으나 물량 증가에 따른 접 증가에 따른 접수 일시적으로 타 택배사(우체국 택배)를 통해 대체 발송하고 있으나 물량 증가에 따른 접수
-					</p>
-					<span class="notice_date">2021.12.13</span>
-				</a>
-			</div>
-            <!-- //당첨자발표 -->
-		</div>
-		<!-- 웰컴메인형 푸터 -->
-
-
-        <!-- footer_body -->
-		<div class="footer_body">
-			<div class="logo_box">
-				<a href="#" class="logo_link">
-					<img src="../../images/layout/img_logo_kyobo_footer_mok.png" alt="">
-				</a>
-			</div>
-
-			<div class="ht_fold_box_wrap">
-				<ul class="fold_box_list">
-					<li class="fold_box">
-						<div class="fold_box_header">사업자정보 <button type="button" class="btn_fold"><span class="hidden">컨텐츠 열기</span></button></div>
-						<div class="fold_box_contents">
-							<div class="panel_outer">
-								<div class="footer_info_box">
-									<div class="info_text_multi">
-										<span class="info_text">교보문고</span>
-										<span class="gap">|</span>
-										<address class="info_text">대표이사 : 안병현</address>
-									</div>
-									<span class="info_text">서울특별시 종로구 종로 1</span>
-									<span class="info_text">사업자등록번호 : 102-81-11670</span>
-									<span class="info_text"><strong>대표전화 : 1544-1900</strong></span>
-									<span class="info_text">FAX : 0502-987-5711(지역번호 공통)</span>
-									<span class="info_text">
-										<span class="text_inner">서울특별시 통신판매업신고번호 : 제 653호</span>
-										<a href="#" class="btn_footer_link">사업자정보확인</a>
-										<a href="#" class="btn_footer_link">구매안전서비스</a>
-									</span>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-
-			<div class="footer_menu_box">
-				<!-- 22.06.17 메뉴 수정 -->
-				<ul class="footer_menu_list">
-					<li class="footer_menu_item"><a href="#" class="footer_menu_link">로그인</a></li>
-					<li class="footer_menu_item"><a href="#" class="footer_menu_link">회원가입</a></li>
-					<li class="footer_menu_item"><a href="#" class="footer_menu_link">APP 다운</a></li>
-					<li class="footer_menu_item"><a href="#" class="footer_menu_link">PC 버전</a></li>
-				</ul>
-				<ul class="footer_menu_list menu_list_bottom">
-					<li class="footer_menu_item"><a href="#" class="footer_menu_link">이용약관</a></li>
-					<li class="footer_menu_item privacy"><a href="#" class="footer_menu_link">개인정보처리방침</a></li>
-					<li class="footer_menu_item"><a href="#" class="footer_menu_link">고객센터</a></li>
-					<li class="footer_menu_item"><a href="#" class="footer_menu_link">대량구매</a></li>
-				</ul>
-				<!-- //22.06.17 메뉴 수정 -->
-			</div>
-
-			<div class="family_site_box">
-				<button type="button" class="btn_family_site"><span class="text">Family Site</span></button>
-				<ul class="family_site_list">
-					<li class="family_site_item"><a target="_blank" href="https://www.kyobo.co.kr/webdocs/view.jsp?screenId=SCOCONLM001&biztype=main" class="family_site_link">교보생명</a></li>
-					<li class="family_site_item"><a target="_blank" href="http://www.kyobobook.co.kr" class="family_site_link">교보문고</a></li>
-					<li class="family_site_item"><a target="_blank" href="http://www.kyobotrade.com" class="family_site_link">교보증권</a></li>
-					<li class="family_site_item"><a target="_blank" href="http://www.kico.co.kr/home;jsessionid=76EE714203E614AFEEE48256CAF2E341" class="family_site_link">교보정보통신</a></li>
-					<li class="family_site_item"><a target="_blank" href="https://www.kyoborealco.co.kr/" class="family_site_link">교보리얼코</a></li>
-					<li class="family_site_item"><a target="_blank" href="http://www.kyoboitm.co.kr/" class="family_site_link">교보악사자산운용</a></li>
-					<li class="family_site_item"><a target="_blank" href="https://www.lifeplanet.co.kr/startmain/main.dev/" class="family_site_link">교보라이프플래닛생명</a></li>
-					<li class="family_site_item"><a target="_blank" href="https://www.kcasonsa.co.kr/" class="family_site_link">KCA 손해사정</a></li>
-					<li class="family_site_item"><a target="_blank" href="https://www.kcase.co.kr/" class="family_site_link">KCA 서비스</a></li>
-					<li class="family_site_item"><a target="_blank" href="https://www.kyobotrust.co.kr/" class="family_site_link">교보자산신탁주식회사</a></li>
-					<li class="family_site_item"><a target="_blank" href="https://www.daesan.or.kr/" class="family_site_link">대산문화재단</a></li>
-					<li class="family_site_item"><a target="_blank" href="https://www.kbedu.or.kr/" class="family_site_link">교보교육재단</a></li>
-					<li class="family_site_item"><a target="_blank" href="https://www.dsa.or.kr/" class="family_site_link">대산농촌재단</a></li>
-					<li class="family_site_item"><a target="_blank" href="http://www.kyoboacademy.co.kr/" class="family_site_link">교보아카데미</a></li>
-				</ul>
-			</div>
-
-			<div class="copyright_box">
-				<div class="sns_share_box"><!-- as-is onclick 방식으로 우선반영합니다. -->
-					<button class="btn_sns_share insta" onclick="linkToInstagram('home');return false;"><span class="hidden">instagram 공유</span></button>
-					<button class="btn_sns_share fb" onclick="winOpen('https://www.facebook.com/HOTTRACKSFRIEND/');return false;"><span class="hidden">facebook 공유</span></button>
-                    <button class="btn_sns_share youtube" onclick="winOpen3('https://www.youtube.com/channel/UCqQkoRX4rN-RCbBqVPUv3Hg?newPop=chromeYes');return false;"><span class="hidden">youtube 공유</span></button>
-                    <button class="btn_sns_share twt" onclick="goTwitter('모바일핫트랙스', 'http://m.hottracks.co.kr/');return false;"><span class="hidden">twitter 공유</span></button>
-                    <button class="btn_sns_share blog" onclick="winOpen3('https://hottracks91.blog.me?newPop=chromeYes');return false;"><span class="hidden">blog 공유</span></button>
-				</div>
-				<div class="copyright">© KYOBO BOOK CENTRE</div>
-			</div>
-			<!-- //mc_cont : 광고배너 -->
-		</div>
-		<!-- //footer_body -->
-	</footer>
+    <footer class="footer_wrapper">
+        <div style="height:300px;background-color:#fff;;border-top:1px solid #d5d5d5;color:#000;font-size:20px;font-weight:700;line-height:300px;text-align:center;">Footer</div>
+    </footer>
     <!-- //footer -->
 
 
-	<!-- docker_wrapper -->
-	<section class="docker_wrapper">
-		<!-- 탑버튼 -->
-		<div class="floating_wrapper">
-			<a href="#top" class="btn_go_top"><span class="hidden">최상위 화면으로</span></a>
-		</div>
-		<!-- //탑버튼 -->
+    <!-- docker_wrapper -->
+    <section class="docker_wrapper">
+        <!-- 탑버튼 -->
+        <div class="floating_wrapper">
+            <a href="#top" class="btn_go_top"><span class="hidden">최상위 화면으로</span></a>
+        </div>
+        <!-- //탑버튼 -->
 
-		<!-- docker_list -->
-		<ul class="docker_list">
-			<li class="docker_item"><a href="#" class="btn_docker_home"><span class="hidden">홈</span></a></li>
-			<li class="docker_item"><a href="#" class="btn_docker_search"><span class="hidden">검색</span></a></li>
-			<li class="docker_item my"><!-- 로그인 시 class="login" 추가 -->
-				<a href="#" class="btn_docker_my">
-					<span class="img_box">
-						<img src="http://image.kyobobook.co.kr/ink/html/ux/next/mok/assets/common/temporary/temp_docker_login_mok.png" alt="마이룸 임시이미지" />
-					</span>
-					<span class="hidden">마이룸</span>
-				</a>
-			</li>
-			<li class="docker_item"><a href="#" class="btn_docker_history"><span class="hidden">최근본상품</span></a></li>
-			<li class="docker_item"><a href="../guide/HTR-M-COM-CAT-001.html" class="btn_docker_menu"><span class="hidden">전체메뉴</span></a></li>
-		</ul>
-		<!-- //docker_list -->
-	</section>
-	<!-- //docker_wrapper -->
+        <!-- docker_list -->
+        <ul class="docker_list">
+            <li class="docker_item"><a href="#" class="btn_docker_home"><span class="hidden">홈</span></a></li>
+            <li class="docker_item"><a href="#" class="btn_docker_search"><span class="hidden">검색</span></a></li>
+            <li class="docker_item my"><!-- 로그인 시 class="login" 추가 -->
+                <a href="#" class="btn_docker_my">
+                    <span class="img_box">
+                        <img src="http://image.kyobobook.co.kr/ink/html/ux/next/mok/assets/common/temporary/temp_docker_login_mok.png" alt="마이룸 임시이미지" />
+                    </span>
+                    <span class="hidden">마이룸</span>
+                </a>
+            </li>
+            <li class="docker_item"><a href="#" class="btn_docker_history"><span class="hidden">최근본상품</span></a></li>
+            <li class="docker_item"><a href="../guide/HTR-M-COM-CAT-001.html" class="btn_docker_menu"><span class="hidden">전체메뉴</span></a></li>
+        </ul>
+        <!-- //docker_list -->
+    </section>
+    <!-- //docker_wrapper -->
 </div>
 <!-- //wrapper -->
 
