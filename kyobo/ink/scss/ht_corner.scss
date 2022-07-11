@@ -2613,7 +2613,7 @@
             &:after {
                 position:absolute;left:50%;top:-9px;width:0;height:0;border-bottom:9px solid #fff;border-left:5px solid transparent;border-right:5px solid transparent;transform:translateX(-50%);content:"";
             }
-            opacity:0;margin-top:-20px;animation:tool linear 5s infinite;
+            margin-top:-20px;opacity:0;animation:tool linear 5s infinite;
             @keyframes tool {
                0% {opacity:0;margin-top:-20px;}
                5% {opacity:0;margin-top:-5px;}
@@ -2624,7 +2624,7 @@
             }
         }
     }
-    .ht_tit_big{
+    .ht_tit_big {
         position:relative;text-align:center;z-index:9;
     }
     .sti_cont {
@@ -2710,47 +2710,44 @@
         position:relative;width:100%;
         ul {
             font-size:0;text-align:center;
-            li {
-                display:inline-block;width:153px;height:156px;margin-left:32px;box-sizing:border-box;text-align:center;cursor:pointer;
-                &:nth-child(1) {
-                    margin-left:0;
+        }
+        li {
+            display:inline-block;width:151px;height:156px;margin:0 17px;box-sizing:border-box;text-align:center;cursor:pointer;
+            span {
+                display:inline-block;position:relative;padding-top:104px;font-size:16px;font-weight:700;
+                &:before {
+                    display:inline-block;position:absolute;top:29px;left:50%;width:72px;height:72px;transform:translateX(-50%);content:"";
                 }
-                span {
-                    display:inline-block;position:relative;padding-top:104px;font-size:16px;font-weight:700;
-                    &:before {
-                        display:inline-block;position:absolute;top:29px;left:50%;width:72px;height:72px;transform:translateX(-50%);content:"";
-                    }
+            }
+            .tab_sti_file01{
+                span:before{
+                    background:url(#{$imgUrl}main/ico_sticker_file01_active.svg);
                 }
-                .tab_sti_file01{
-                    span:before{
-                        background:url(#{$imgUrl}main/ico_sticker_file01_active.svg);
-                    }
+            }
+            .tab_sti_file02 {
+                span:before {
+                    background:url(#{$imgUrl}main/ico_sticker_file02_active.svg);
                 }
-                .tab_sti_file02 {
-                    span:before {
-                        background:url(#{$imgUrl}main/ico_sticker_file02_active.svg);
-                    }
+            }
+            .tab_sti_file03 {
+                span:before {
+                    background:url(#{$imgUrl}main/ico_sticker_file03_active.svg);
                 }
-                .tab_sti_file03 {
-                    span:before {
-                        background:url(#{$imgUrl}main/ico_sticker_file03_active.svg);
-                    }
+            }
+            .tab_sti_file04 {
+                span:before {
+                    background:url(#{$imgUrl}main/ico_sticker_file04_active.svg);
                 }
-                .tab_sti_file04 {
-                    span:before {
-                        background:url(#{$imgUrl}main/ico_sticker_file04_active.svg);
-                    }
+            }
+            .tab_sti_file05 {
+                span:before {
+                    background:url(#{$imgUrl}main/ico_sticker_file05_active.svg);
                 }
-                .tab_sti_file05 {
-                    span:before {
-                        background:url(#{$imgUrl}main/ico_sticker_file05_active.svg);
-                    }
-                }
-                a {
-                    display:block;width:100%;height:156px;background:#fff;border:2px solid #000;border-radius:16px 16px 0 0;box-sizing:border-box;
-                    &.on {
-                        height:187px;border-bottom:0;background:#ffd1e9;
-                    }
+            }
+            a {
+                display:block;width:100%;height:156px;background:#fff;border:solid #000;border-width:2px 2px 0 2px;border-radius:16px 16px 0 0;box-sizing:border-box;transition:background 0.4s;
+                &.on {
+                    height:187px;border-bottom:0;background:#ffd1e9;
                 }
             }
         }
@@ -2798,7 +2795,7 @@
     .info_bg_box {
         position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);text-align:center;opacity:0;transition:opacity 0.4s;
         strong {
-            position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);color:#fff;font-size:20px;
+            position:absolute;left:50%;top:50%;color:#fff;font-size:20px;transform:translate(-50%, -50%);
         }
     }
 }

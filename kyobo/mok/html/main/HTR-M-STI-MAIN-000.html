@@ -335,7 +335,7 @@
 				<!-- //mc_cont : 히어로배너 -->
 
 
-				<!-- mc_cont : New Sticker -->
+				<!-- mc_cont : New Sticker / function - newStickerProd();-->
 				<div class="mc_cont new_sticker">
                     <h2 class="mc_tit"><img src="../../images/main/tit_new_sticker.svg" alt="New Sticker"></h2>
                     <div class="ht_tit_info">
@@ -454,6 +454,7 @@
                         <p class="txt"><span>예쁜 스티커를 모아모아~</span></p>
                     </div>
 
+                    <!-- sti_archive_list_wrap -->
 					<div class="sti_archive_list_wrap">
                         <ul>
                             <li>
@@ -498,9 +499,13 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- //sti_archive_list_wrap -->
+
+                    <!-- btn_area -->
                     <div class="btn_area">
                         <button class="btn_more_view_box"><strong>SEE MORE<em></em></strong></button>
                     </div>
+                    <!-- //btn_area -->
 				</div>
 				<!-- //mc_cont : Sticker Archive -->
 
@@ -513,6 +518,7 @@
                         <p class="txt"><span>내가 찾는 그 스티커를 만나 보세요!</span></p>
                     </div>
 
+                    <!-- tab-list -->
                     <div class="tab-list tab_link"> 
                         <ul>
                             <li><a href="#none" class="tab_sti_file01 on"><span>캐릭터</span></a></li>
@@ -522,8 +528,10 @@
                             <li><a href="#none" class="tab_sti_file05"><span>스티커팩</span></a></li>
                         </ul>
                     </div>
+                    <!-- //tab-list -->
 
-					<div class="tab-content">
+					<!-- tab_cont -->
+                    <div class="tab_cont on"><!-- tab_link / tab_cont .on : 확인용 - Ajax 처리시 해당 class 삭제 -->
                         <!-- 상품 리스트 -->
                         <ul class="prod-wrapper evt_products"><!-- 2단 class="row_dir" -->
                             <!-- prod_item 반복 -->
@@ -548,11 +556,11 @@
                                             <span class="final_price">9,234,000</span>
                                             <span class="price_origin">9,200,000</span>
                                         </div>
-                                        <div class="badge_line">
+                                        <!--<div class="badge_line">
                                             <span class="badge rounded badge_primary_evt">쿠폰</span>
                                             <span class="badge rounded badge_default_evt">사은품</span>
                                             <span class="badge rounded badge_default_evt">무료배송</span>
-                                        </div>
+                                        </div>-->
                                     </a>
                                 </div>
                                 <!-- //product_info -->
@@ -577,11 +585,6 @@
                                             <span class="discount_rate">15%</span>
                                             <span class="final_price">9,234,000</span>
                                             <span class="price_origin">9,200,000</span>
-                                        </div>
-                                        <div class="badge_line">
-                                            <span class="badge rounded badge_primary_evt">쿠폰</span>
-                                            <span class="badge rounded badge_default_evt">사은품</span>
-                                            <span class="badge rounded badge_default_evt">무료배송</span>
                                         </div>
                                     </a>
                                 </div>
@@ -612,11 +615,6 @@
                                             <span class="discount_rate">15%</span>
                                             <span class="final_price">9,234,000</span>
                                             <span class="price_origin">9,200,000</span>
-                                        </div>
-                                        <div class="badge_line">
-                                            <span class="badge rounded badge_primary_evt">쿠폰</span>
-                                            <span class="badge rounded badge_default_evt">사은품</span>
-                                            <span class="badge rounded badge_default_evt">무료배송</span>
                                         </div>
                                     </a>
                                 </div>
@@ -760,11 +758,6 @@
                                             <span class="final_price">9,234,000</span>
                                             <span class="price_origin">9,200,000</span>
                                         </div>
-                                        <div class="badge_line">
-                                            <span class="badge rounded badge_primary_evt">쿠폰</span>
-                                            <span class="badge rounded badge_default_evt">사은품</span>
-                                            <span class="badge rounded badge_default_evt">무료배송</span>
-                                        </div>
                                     </a>
                                 </div>
                                 <!-- //product_info -->
@@ -773,8 +766,11 @@
                         </ul>
                         <!-- //상품 리스트-->
                     </div>
+                    <!-- //tab_cont -->
 
+                    <!-- btn_more_view -->
                     <button class="btn_more_view"><span>더보기</span></button>
+                    <!-- //btn_more_view -->
 				</div>
 				<!-- //mc_cont : Sticker File -->
 
@@ -791,62 +787,64 @@
                     <div class="best_brands_list_wrap">
                         <ul>
                             <li>
-                                <a href="">
-                                    <img src="../../images/temp/@img_prod06.jpg" alt="">
+                                <a href="#n">
+                                    <img src="../../images/temp/@img_prod01.jpg" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <img src="../../images/temp/@img_prod05.jpg" alt="">
+                                <a href="#n">
+                                    <img src="../../images/temp/@img_prod02.jpg" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <img src="../../images/temp/@img_prod06.jpg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
+                                <a href="#n">
                                     <img src="../../images/temp/@img_prod03.jpg" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="#n">
+                                    <img src="../../images/temp/@img_prod04.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
                                     <img src="../../images/temp/@img_prod05.jpg" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="#n">
                                     <img src="../../images/temp/@img_prod06.jpg" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="#n">
+                                    <img src="../../images/temp/@img_prod01.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
+                                    <img src="../../images/temp/@img_prod02.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#n">
                                     <img src="../../images/temp/@img_prod03.jpg" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <img src="../../images/temp/@img_prod02.jpg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../../images/temp/@img_prod02.jpg" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../../images/temp/@img_prod02.jpg" alt="">
+                                <a href="#n">
+                                    <img src="../../images/temp/@img_prod04.jpg" alt="">
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <!-- //best_brands_list_wrap -->
 
+                    <!-- btn_area -->
                     <div class="btn_area">
                         <button class="btn_more_view_box"><strong>SEE MORE<em></em></strong></button>
                     </div>
+                    <!-- //btn_area -->
                 </div>
                 <!-- //mc_cont : Best Brands -->
 
@@ -866,10 +864,9 @@
                             <div class="discount_icon">~25%</div>
                             <a href="javascript:alert('제품상세 상단썸네일영역');">
                                 <div class="thumnail_evt">
-                                    <img src="../../images/temp/@evt_thumnail_06.png" class="bd_img" alt="">
+                                    <img src="../../images/temp/@evt_thumnail_01.png" class="bd_img" alt="">
                                 </div>
                             </a>
-
                             <a href="javascript:alert('제품상세s');">
                                 <div class="txt_account">
                                     <h3 class="txt_heading">제3회 라이징스타 공모전 최종 수상작 발표!</h3>
@@ -884,10 +881,9 @@
                             <div class="discount_icon">~25%</div>
                             <a href="javascript:alert('제품상세 상단썸네일영역');">
                                 <div class="thumnail_evt">
-                                    <img src="../../images/temp/@evt_thumnail_06.png" class="bd_img" alt="">
+                                    <img src="../../images/temp/@evt_thumnail_02.png" class="bd_img" alt="">
                                 </div>
                             </a>
-
                             <a href="javascript:alert('제품상세s');">
                                 <div class="txt_account">
                                     <h3 class="txt_heading">제3회 라이징스타 공모전 최종 수상작 발표!</h3>
@@ -900,10 +896,24 @@
                             <div class="discount_icon">~25%</div>
                             <a href="javascript:alert('제품상세 상단썸네일영역');">
                                 <div class="thumnail_evt">
-                                    <img src="../../images/temp/@evt_thumnail_06.png" class="bd_img" alt="">
+                                    <img src="../../images/temp/@evt_thumnail_03.png" class="bd_img" alt="">
                                 </div>
                             </a>
-
+                            <a href="javascript:alert('제품상세s');">
+                                <div class="txt_account">
+                                    <h3 class="txt_heading">제3회 라이징스타 공모전 최종 수상작 발표!</h3>
+                                    <p class="txt_sub">최종 수상작 발표 (대상/우수상/참가상)</p>
+                                    <p class="txt_period">2021.11.04 ~ 2021.11.15</p>
+                                </div>      
+                            </a>                                      
+                        </div>
+                        <div class="evt_item">
+                            <div class="discount_icon">~25%</div>
+                            <a href="javascript:alert('제품상세 상단썸네일영역');">
+                                <div class="thumnail_evt">
+                                    <img src="../../images/temp/@evt_thumnail_04.png" class="bd_img" alt="">
+                                </div>
+                            </a>
                             <a href="javascript:alert('제품상세s');">
                                 <div class="txt_account">
                                     <h3 class="txt_heading">제3회 라이징스타 공모전 최종 수상작 발표!</h3>
@@ -915,7 +925,9 @@
                     </div> 
                     <!-- //이벤트 기획전 리스트 -->
 
+                    <!-- btn_more_view -->
                     <button class="btn_more_view"><span>더보기</span></button>
+                    <!-- //btn_more_view -->
                 </div>
                 <!-- //mc_cont : Now is -->
 
@@ -982,39 +994,6 @@
     <!-- //docker_wrapper -->
 </div>
 <!-- //wrapper -->
-
-<script>
-    /* Sticker File Tab */
-    $(".sti_file .tab-list li").on("click", function(){
-        $(".sti_file .tab-list li").removeClass("active");
-        $(this).addClass("active");
-    });
-    
-
-
-    /* New Sticker */
-    function newStickerProd(){
-        var $target = $('.new_sticker_prod_list .swiper-container');
-        var slideOption = {
-            observer: true,
-            observeParents: true,
-            slidesPerView:2.35,
-            centeredSlides: false,
-            loop: false,
-            spaceBetween: 20,
-            grid: {
-                rows: 1,
-            },
-            speed: 700,
-        };
-        musNewAlbumSwiper = new Swiper($target.get(), slideOption);
-    }
-
-    $(function(){
-        if(!$('.new_sticker_prod_list').length) return;
-        newStickerProd();
-    });
-</script>
 </body>
 </html>
 

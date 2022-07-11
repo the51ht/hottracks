@@ -1607,6 +1607,41 @@ $(function(){
 
 
 
+
+
+
+/*** 스티커샵 ***/
+/* New Sticker */
+function newStickerProd(){
+    var $target = $('.new_sticker_prod_list .swiper-container');
+    var slideOption = {
+        observer: true,
+        observeParents: true,
+        slidesPerView:'auto',
+        centeredSlides: false,
+        loop: false,
+        spaceBetween:0,
+        speed: 700,
+    };
+    if($target.find('.swiper-slide').length > 2) {
+        musNewAlbumSwiper = new Swiper($target.get(), slideOption);
+    }
+}
+
+$(function(){
+    if(!$('.new_sticker_prod_list').length) return;
+    newStickerProd();
+});
+
+
+
+
+
+
+
+
+
+
 /* 팝업내 상단 이동 */
 $(function(){
     var _btnPopTop = $('.btn_pop_top');
