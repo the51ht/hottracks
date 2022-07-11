@@ -92,6 +92,22 @@
                 .s2 span {
                     animation:fade both 0.4s 0.8s;
                 }
+                .banner_badge{
+                    > span{
+                         animation:txtTop both 0.4s 0.4s;
+                     }
+                     + .s1 {
+                         span {
+                             animation:txtTop both 0.4s 0.6s;
+                             &:nth-child(2) {
+                                 animation-delay:0.8s;
+                             }
+                         }
+                         + .s2 span {
+                             animation:fade both 0.4s 1s;
+                         }
+                     }
+                 }
             }
         }
     }
@@ -135,6 +151,21 @@
         }
         .s2 {
             margin-top:14px;font-size:24px;font-weight:500;line-height:34px;opacity:0.8;
+        }
+        .banner_badge{
+            display: inline-block;
+            &:after{
+                display: block; clear: both; content: "";
+            }
+            span{
+                float:left;padding: 9px 19px;background-color: #FC3F4B;border: 3px solid #fff;border-radius: 30px;box-sizing: border-box;font-size: 20px;font-weight: 700;line-height: 18px;
+                &+ span{
+                    margin-left: 6px;
+                }
+            }
+            &+ .s1{
+                margin-top: 12px;
+            }
         }
     }
 }
@@ -198,6 +229,17 @@
     .txt {
         span {
             display:block;position:relative;opacity:1;
+        }
+        .banner_badge{
+            span{
+                font-size: 11px;padding:2px 12px 1px;border: 2px solid #fff;
+                &+ span{
+                    margin-left: 3px;
+                }
+            }
+            + .s1 {
+                margin-top: 0px;
+            }
         }
     }
 }

@@ -34,12 +34,17 @@
                         }
                     }
                     .evt_pop_content {
-                        display:inline-block;position:absolute;left:0;top:42px;margin:0 25px;text-align:left;
+                        display:inline-block;position:absolute;left:0;top:42px;margin:0 25px;text-align:left;width: calc(100% - 50px);
                         .main_msg {
-                            width:100%;margin-top:10px;color:#000;font-size:24px;font-weight:700;line-height:30px;
+                            width:100%;margin-top:0px;color:#000;font-size:24px;font-weight:700;line-height:30px;
                         }
                         .sub_txt {
                             margin-top:10px;color:#000;font-size:13px;line-height:18px;opacity:0.8;
+                        }
+                        .tag_wrap{
+                            + .main_msg{
+                                margin-top: 10px;
+                            }
                         }
                     }
                     .tag_wrap {

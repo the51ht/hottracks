@@ -126,6 +126,26 @@
           animation: fade both 0.4s 0.8s;
 }
 
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .banner_badge > span {
+  -webkit-animation: txtTop both 0.4s 0.4s;
+          animation: txtTop both 0.4s 0.4s;
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .banner_badge + .s1 span {
+  -webkit-animation: txtTop both 0.4s 0.6s;
+          animation: txtTop both 0.4s 0.6s;
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .banner_badge + .s1 span:nth-child(2) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .banner_badge + .s1 + .s2 span {
+  -webkit-animation: fade both 0.4s 1s;
+          animation: fade both 0.4s 1s;
+}
+
 .wel_hero_banner .swiper-slide:first-child:nth-last-child(1) .hero_banner_box .txt .s1 span {
   -webkit-animation: txtTop both 0.4s 0.4s;
           animation: txtTop both 0.4s 0.4s;
@@ -207,6 +227,37 @@
   font-weight: 500;
   line-height: 34px;
   opacity: 0.8;
+}
+
+.hero_banner_box .txt .banner_badge {
+  display: inline-block;
+}
+
+.hero_banner_box .txt .banner_badge:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.hero_banner_box .txt .banner_badge span {
+  float: left;
+  padding: 9px 19px;
+  background-color: #FC3F4B;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.hero_banner_box .txt .banner_badge span + span {
+  margin-left: 6px;
+}
+
+.hero_banner_box .txt .banner_badge + .s1 {
+  margin-top: 12px;
 }
 
 /* 히어로 팝업 */
@@ -321,6 +372,20 @@
   display: block;
   position: relative;
   opacity: 1;
+}
+
+.pop_hero_inner .txt .banner_badge span {
+  font-size: 11px;
+  padding: 2px 12px 1px;
+  border: 2px solid #fff;
+}
+
+.pop_hero_inner .txt .banner_badge span + span {
+  margin-left: 3px;
+}
+
+.pop_hero_inner .txt .banner_badge + .s1 {
+  margin-top: 0px;
 }
 
 .btn_pop_hero_cl {

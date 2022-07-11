@@ -100,6 +100,26 @@ $imgUrl : "../images/";*/
           animation: fade both 0.4s 0.8s;
 }
 
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .banner_badge > span {
+  -webkit-animation: txtTop both 0.4s 0.4s;
+          animation: txtTop both 0.4s 0.4s;
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .banner_badge + .s1 span {
+  -webkit-animation: txtTop both 0.4s 0.6s;
+          animation: txtTop both 0.4s 0.6s;
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .banner_badge + .s1 span:nth-child(2) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.wel_hero_banner .swiper-slide-active .hero_banner_box .txt .banner_badge + .s1 + .s2 span {
+  -webkit-animation: fade both 0.4s 1s;
+          animation: fade both 0.4s 1s;
+}
+
 .wel_hero_banner .swiper-slide:first-child:nth-last-child(1) .hero_banner_box .txt .s1 span {
   -webkit-animation: txtTop both 0.4s 0.4s;
           animation: txtTop both 0.4s 0.4s;
@@ -180,6 +200,37 @@ $imgUrl : "../images/";*/
   font-weight: 700;
   line-height: 18px;
   opacity: 0.8;
+}
+
+.hero_banner_box .txt .banner_badge {
+  display: inline-block;
+}
+
+.hero_banner_box .txt .banner_badge:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.hero_banner_box .txt .banner_badge span {
+  float: left;
+  padding: 4px 12px;
+  background-color: #FC3F4B;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.hero_banner_box .txt .banner_badge span + span {
+  margin-left: 3px;
+}
+
+.hero_banner_box .txt .banner_badge + .s1 {
+  margin-top: 3px;
 }
 
 /* 히어로 팝업 */
