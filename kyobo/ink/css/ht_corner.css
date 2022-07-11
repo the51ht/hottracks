@@ -2332,12 +2332,12 @@
 }
 
 .liv_txt_list .title {
+  width: 50%;
   margin-bottom: 12px;
   font-size: 38px;
   font-weight: 700;
   line-height: 50px;
   letter-spacing: -1px;
-  width: 50%;
 }
 
 .liv_txt_list .sub_title {
@@ -5023,26 +5023,21 @@
 .sti_mian_wrap {
   margin-top: 0;
   /* 타이틀 */
-  /* ht_cont */
 }
 
 .sti_mian_wrap .ht_tit_info {
-  text-align: center;
-  height: 55px;
   position: relative;
-  z-index: 0;
-  margin-bottom: 25px;
+  height: 55px;
   margin-top: -25px;
+  margin-bottom: 25px;
+  text-align: center;
   z-index: 0;
 }
 
 .sti_mian_wrap .ht_tit_info p {
   display: inline-block;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: #000;
   position: relative;
+  height: 52px;
   margin: -17px auto 20px;
   padding: 0 33px;
   background: #fff;
@@ -5051,8 +5046,11 @@
   border-radius: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 52px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 48px;
+  text-align: center;
   opacity: 0;
   margin-top: -20px;
   -webkit-animation: tool linear 5s infinite;
@@ -5063,13 +5061,13 @@
   position: absolute;
   left: 50%;
   top: -12px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   width: 0;
   height: 0;
   border-bottom: 10px solid #000;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   content: "";
 }
 
@@ -5077,13 +5075,13 @@
   position: absolute;
   left: 50%;
   top: -9px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   width: 0;
   height: 0;
   border-bottom: 9px solid #fff;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   content: "";
 }
 
@@ -5142,13 +5140,13 @@
 }
 
 .sti_mian_wrap .ht_tit_big {
-  text-align: center;
   position: relative;
+  text-align: center;
   z-index: 9;
 }
 
 .sti_mian_wrap .sti_cont {
-  padding: 62px 0;
+  padding: 60px 0;
 }
 
 .sti_mian_wrap .btn_more_view_box strong {
@@ -5159,26 +5157,26 @@
   margin-top: -11px;
 }
 
-/*** Sticker Archive : . ***/
+/*** Sticker Archive : .sti_archive ***/
 .sti_archive {
   background: #fee581 url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/bg_sticker_archive.jpg) center top/40px repeat;
 }
 
 .sti_archive_list_wrap {
+  position: relative;
   max-width: 890px;
   margin: 0 auto;
-  position: relative;
 }
 
 .sti_archive_list_wrap:before {
-  content: "";
-  background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/ico_sticker_archive01.svg) 100% 100%/cover no-repeat;
-  width: 126px;
-  height: 126px;
   display: inline-block;
   position: absolute;
   top: -108px;
   right: 92px;
+  width: 126px;
+  height: 126px;
+  background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/ico_sticker_archive01.svg) 100% 100%/cover no-repeat;
+  content: "";
 }
 
 .sti_archive_list_wrap ul:after {
@@ -5188,17 +5186,17 @@
 }
 
 .sti_archive_list_wrap ul li {
+  position: relative;
+  float: left;
   width: calc(33.3% - 22px);
   margin-left: 33px;
-  float: left;
-  position: relative;
 }
 
 .sti_archive_list_wrap ul li a {
-  border: 3px solid #000;
+  display: inline-block;
   width: 273px;
   height: 273px;
-  display: inline-block;
+  border: 3px solid #000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -5222,56 +5220,46 @@
   margin-top: 33px;
 }
 
-.sti_archive_list_wrap ul li:nth-child(1):before {
-  content: "";
-  background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/ico_sticker_archive02.svg) 100% 100%/cover no-repeat;
-  width: 54px;
-  height: 57px;
+.sti_archive_list_wrap ul li:before {
   display: inline-block;
   position: absolute;
   top: -27px;
   left: 50%;
+  background: 100%/cover no-repeat;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 1;
+}
+
+.sti_archive_list_wrap ul li:nth-child(1):before {
+  width: 54px;
+  height: 57px;
+  background-image: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/ico_sticker_archive02.svg);
+  content: "";
 }
 
 .sti_archive_list_wrap ul li:nth-child(6):before {
-  content: "";
-  background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/ico_sticker_archive03.svg) 100% 100%/cover no-repeat;
   width: 48px;
   height: 66px;
-  display: inline-block;
-  position: absolute;
-  top: -27px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 1;
+  background-image: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/ico_sticker_archive03.svg);
+  content: "";
 }
 
 .sti_archive_list_wrap ul li:nth-child(8):before {
-  content: "";
-  background: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/ico_sticker_archive04.svg) 100% 100%/cover no-repeat;
   width: 65px;
   height: 65px;
-  display: inline-block;
-  position: absolute;
-  top: -27px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 1;
+  background-image: url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/ico_sticker_archive04.svg);
+  content: "";
 }
 
 .sti_archive_list_wrap .info_bg_box {
   position: absolute;
   top: 0;
   left: 0;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
   width: 99.5%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
   opacity: 0;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
@@ -5281,13 +5269,13 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  color: #fff;
+  font-size: 20px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 20px;
-  color: #fff;
 }
 
-/** sticker file **/
+/*** Sticker File : .sti_file ***/
 .sti_file {
   background: #ffd1e9 url(http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/main/bg_sticker_file.jpg) center top repeat-x;
 }
@@ -5316,14 +5304,14 @@
 }
 
 .sti_file .tab-list ul li {
+  display: inline-block;
   width: 153px;
   height: 156px;
-  text-align: center;
+  margin-left: 32px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 32px;
+  text-align: center;
   cursor: pointer;
-  display: inline-block;
 }
 
 .sti_file .tab-list ul li:nth-child(1) {
@@ -5331,23 +5319,23 @@
 }
 
 .sti_file .tab-list ul li span {
-  font-size: 16px;
-  font-weight: 700;
-  padding-top: 104px;
   display: inline-block;
   position: relative;
+  padding-top: 104px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .sti_file .tab-list ul li span:before {
-  content: "";
   display: inline-block;
-  width: 72px;
-  height: 72px;
   position: absolute;
   top: 29px;
   left: 50%;
+  width: 72px;
+  height: 72px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  content: "";
 }
 
 .sti_file .tab-list ul li .tab_sti_file01 span:before {
@@ -5371,12 +5359,12 @@
 }
 
 .sti_file .tab-list ul li a {
+  display: block;
   width: 100%;
   height: 156px;
-  display: block;
+  background: #fff;
   border: 2px solid #000;
   border-radius: 16px 16px 0 0;
-  background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -5387,7 +5375,7 @@
   background: #ffd1e9;
 }
 
-/** best brands **/
+/*** Best Brands : .best_brands ***/
 .best_brands {
   background-color: #000;
 }
@@ -5412,17 +5400,17 @@
   float: left;
   width: 216px;
   height: 216px;
-  margin-left: 10px;
   margin-top: 10px;
+  margin-left: 10px;
 }
 
 .best_brands_list_wrap ul li a {
-  border-radius: 12px;
-  overflow: hidden;
   display: inline-block;
+  position: relative;
   width: 216px;
   height: 216px;
-  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .best_brands_list_wrap ul li a img {
@@ -5452,12 +5440,12 @@
 
 .best_brands_list_wrap .info_bg_box {
   position: absolute;
-  top: 0;
   left: 0;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  top: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
   opacity: 0;
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
@@ -5469,11 +5457,11 @@
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 20px;
   color: #fff;
+  font-size: 20px;
 }
 
-/** Now is **/
+/*** Now is : .now_is ***/
 .now_is {
   padding: 40px 0px;
 }
@@ -5487,6 +5475,7 @@
   padding-top: 0;
 }
 
+/*** 모션 인터렉션 : 스티커샵 ***/
 .sti_mian_wrap .ht_tit_big,
 .sti_mian_wrap .ht_tit_info {
   opacity: 0;
