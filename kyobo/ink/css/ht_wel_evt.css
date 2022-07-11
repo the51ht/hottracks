@@ -1289,22 +1289,27 @@
 .pop_img_bn .btn_dialog_close {
   position: absolute;
   right: 0;
-  top: 0;
-  width: 24px;
-  height: 24px;
+  top: -8px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
 }
 
 .pop_img_bn .btn_dialog_close .ico_dialog_close {
   position: relative;
   display: block;
-  width: 35px;
-  height: 35px;
-  margin-top: -7px;
-  margin-left: -12px;
-  background: rgba(255, 255, 255, 0.4) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/btn_dialog_close@2x.png") center/24px no-repeat;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.75) url("http://image.kyobobook.co.kr/newimages/giftshop_new/resources/images/pc/kyobo/btn_dialog_close@2x.png") center/24px no-repeat;
   border-radius: 50%;
   z-index: 3;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.pop_img_bn .btn_dialog_close:hover .ico_dialog_close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .pop_img_bn .pop_img_bn_header {
