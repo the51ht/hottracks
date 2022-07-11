@@ -156,7 +156,7 @@
     .brad_thumb {
         position:absolute;left:0;top:0;width:70px;height:70px;background-color:#fff;border-radius:50%;border:2px solid #000;box-sizing:border-box;overflow:hidden;
         img {
-            width:100%;height:100%;object-fit: contain;
+            width:100%;height:100%;object-fit:contain;
         }
     }
     .logo {
@@ -614,7 +614,7 @@
         .swiper-container {
             width:calc(100% - 60px);padding:0 30px 0 0;
             .swiper-slide {
-                overflow: initial;
+                overflow:initial;
                 &:before {
                     position:absolute;left:0;top:0;width:100%;height:100%;background:#fff;border:initial;box-shadow:15px 10px 20px -2px rgba(0,0,0,0.16);box-sizing:border-box;border-radius:12px;content:"";
                 }
@@ -1259,7 +1259,7 @@
         }
     }
     .title {
-        margin-bottom:12px;font-size:38px;font-weight:700;line-height:50px;letter-spacing:-1px;width: 50%;
+        width:50%;margin-bottom:12px;font-size:38px;font-weight:700;line-height:50px;letter-spacing:-1px;
     }
     .sub_title {
         color:rgba(0,0,0,0.8);font-size:20px;font-weight:500;line-height:34px;
@@ -1363,7 +1363,7 @@
             }
         }
         .liv_link {
-            display:block;position: absolute;left:0;top:0;width:100%;height:100%;background-color:#000;opacity:0;z-index:2;
+            display:block;position:absolute;left:0;top:0;width:100%;height:100%;background-color:#000;opacity:0;z-index:2;
         }
     }
     .wel_live_time {
@@ -1442,7 +1442,7 @@
     .img_thumb {
         float:left;width:60px;height:60px;background:rgba(0,0,0,0.2);border-radius:4px;overflow:hidden;
         img {
-            width:100%;
+            width:100%;height:100%;object-fit:cover;
         }
     }
     .info_thumb {
@@ -2229,7 +2229,7 @@
         strong {
             position:relative;font-size:30px;line-height:40px;letter-spacing:-0.3px;
             &:before {
-                display:inline-block;position:absolute;top:-67px;width:50px;height:50px;background:url('#{$imgUrl}main/ico_cur_curation02.svg') no-repeat;background-size:contain;content:"";  
+                display:inline-block;position:absolute;top:-67px;width:50px;height:50px;background:url('#{$imgUrl}main/ico_cur_curation02.svg') no-repeat;background-size:contain;content:"";
             }
         }
         p {
@@ -2604,151 +2604,152 @@
     margin-top:0;
     /* 타이틀 */
     .ht_tit_info {
-        text-align: center;height: 55px;position: relative;z-index: 0;margin-bottom: 25px;margin-top: -25px;z-index: 0;
+        position:relative;height:55px;margin-top:-25px;margin-bottom:25px;text-align:center;;z-index:0;
         p {
-            display: inline-block;font-size:20px;font-weight:700;text-align:center;color:#000;position:relative;margin:-17px auto 20px;padding: 0 33px;background:#fff;border:solid #000;border-width:2px 2px 3px 2px;border-radius:40px;box-sizing:border-box;height:52px;line-height:48px;
+            display:inline-block;position:relative;height:52px;margin:-17px auto 20px;padding:0 33px;background:#fff;border:solid #000;border-width:2px 2px 3px 2px;border-radius:40px;box-sizing:border-box;color:#000;font-size:20px;font-weight:700;line-height:48px;text-align:center;
             &:before {
-                position:absolute;left:50%;top:-12px;transform:translateX(-50%);width:0;height:0;border-bottom:10px solid #000;border-left:6px solid transparent;border-right:6px solid transparent;content:"";
+                position:absolute;left:50%;top:-12px;width:0;height:0;border-bottom:10px solid #000;border-left:6px solid transparent;border-right:6px solid transparent;transform:translateX(-50%);content:"";
             }
             &:after {
-                position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-bottom:9px solid #fff;border-left:5px solid transparent;border-right:5px solid transparent;content:"";
+                position:absolute;left:50%;top:-9px;width:0;height:0;border-bottom:9px solid #fff;border-left:5px solid transparent;border-right:5px solid transparent;transform:translateX(-50%);content:"";
             }
-            opacity: 0; margin-top: -20px; animation: tool linear 5s infinite;
+            opacity:0;margin-top:-20px;animation:tool linear 5s infinite;
             @keyframes tool {
-               0% {opacity: 0; margin-top: -20px;}
-               5% {opacity: 0; margin-top: -5px;}
-
-               10% {opacity: 1; margin:8px auto 20px;}
-               80% {opacity: 1; margin:8px auto 20px;}
-
-               90% {opacity: 0; margin-top: -5px;}
-               100% {opacity: 0; margin-top: -5px;}
+               0% {opacity:0;margin-top:-20px;}
+               5% {opacity:0;margin-top:-5px;}
+               10% {opacity:1;margin:8px auto 20px;}
+               80% {opacity:1;margin:8px auto 20px;}
+               90% {opacity:0;margin-top:-5px;}
+               100% {opacity:0;margin-top:-5px;}
             }
         }
     }
     .ht_tit_big{
-        text-align: center;position: relative;z-index: 9;
+        position:relative;text-align:center;z-index:9;
     }
-    /* ht_cont */
     .sti_cont {
-        padding:62px 0;
+        padding:60px 0;
     }
     .btn_more_view_box strong {
-        background-color: #fff;
+        background-color:#fff;
         em:after {
-            margin-top: -11px;
+            margin-top:-11px;
         }
     }
 }
 
 
 
-/*** Sticker Archive : . ***/
+/*** Sticker Archive : .sti_archive ***/
 .sti_archive {
-    background: #fee581  url(#{$imgUrl}main/bg_sticker_archive.jpg) center top/40px repeat;
+    background:#fee581 url(#{$imgUrl}main/bg_sticker_archive.jpg) center top/40px repeat;
 }
 .sti_archive_list_wrap {
-    max-width: 890px;margin: 0 auto;position: relative;
+    position:relative;max-width:890px;margin:0 auto;
     &:before {
-        content: "";background: url(#{$imgUrl}main/ico_sticker_archive01.svg) 100% 100%/cover no-repeat;width: 126px;height: 126px;display: inline-block;position: absolute;top: -108px;right: 92px;
+        display:inline-block;position:absolute;top:-108px;right:92px;width:126px;height:126px;background:url(#{$imgUrl}main/ico_sticker_archive01.svg) 100% 100%/cover no-repeat;content:"";
     }
     ul {
         &:after {
-            display: block; clear: both;content: "";
+            display:block;clear:both;content:"";
         }
         li {
-            width: calc(33.3% - 22px);margin-left: 33px;float:left;position:relative;
+            position:relative;float:left;width:calc(33.3% - 22px);margin-left:33px;
             a {
-                border: 3px solid #000;width: 273px;height: 273px;display: inline-block; box-sizing: border-box;
+                display:inline-block;width:273px;height:273px;border:3px solid #000;box-sizing:border-box;
                 img {
-                    width: 100%;height: 100%;object-fit: cover;
+                    width:100%;height:100%;object-fit:cover;
                 }
                 &:hover .info_bg_box {
-                    opacity: 1;
+                    opacity:1;
                 }
             }
             &:nth-child(3n + 1) {
-                margin-left: 0;
+                margin-left:0;
             }
             &:nth-child(n + 4) {
-                margin-top: 33px;
+                margin-top:33px;
+            }
+            &:before {
+                display:inline-block;position:absolute;top:-27px;left:50%;background:100%/cover no-repeat;transform:translateX(-50%);z-index:1;                
             }
             &:nth-child(1):before {
-                content: ""; background: url(#{$imgUrl}main/ico_sticker_archive02.svg) 100% 100%/ cover no-repeat; width: 54px; height: 57px; display: inline-block; position: absolute; top: -27px; left: 50%; transform: translateX(-50%);z-index: 1;
+                width:54px;height:57px;background-image:url(#{$imgUrl}main/ico_sticker_archive02.svg);content:"";            
             }
             &:nth-child(6):before {
-                content: ""; background: url(#{$imgUrl}main/ico_sticker_archive03.svg) 100% 100%/ cover no-repeat; width: 48px; height: 66px; display: inline-block; position: absolute; top: -27px; left: 50%; transform: translateX(-50%);z-index: 1;
+                width:48px;height:66px;background-image:url(#{$imgUrl}main/ico_sticker_archive03.svg);content:"";       
             }
             &:nth-child(8):before {
-                content: ""; background: url(#{$imgUrl}main/ico_sticker_archive04.svg) 100% 100%/ cover no-repeat; width: 65px; height: 65px; display: inline-block; position: absolute; top: -27px; left: 50%; transform: translateX(-50%);z-index: 1;
+                width:65px;height:65px;background-image:url(#{$imgUrl}main/ico_sticker_archive04.svg);content:"";       
             }
         }
     }
     .info_bg_box {
-        position: absolute;top: 0;left: 0;text-align: center;background: rgba(0,0,0,0.6);width: 99.5%;height: 100%; opacity: 0; transition: opacity 0.4s;
+        position:absolute;top:0;left:0;width:99.5%;height:100%;background:rgba(0,0,0,0.6);text-align:center;opacity:0;transition:opacity 0.4s;
         strong {
-            position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);font-size: 20px;color: #fff;
+            position:absolute;left:50%;top:50%;color:#fff;font-size:20px;transform:translate(-50%, -50%);
         }
     }
 }
 
 
-/** sticker file **/
+
+/*** Sticker File : .sti_file ***/
 .sti_file {
-    background: #ffd1e9  url(#{$imgUrl}main/bg_sticker_file.jpg) center top repeat-x;
-    .ht_tit_big{
-        max-width: 368px;margin: 0 auto 28px;
+    background:#ffd1e9 url(#{$imgUrl}main/bg_sticker_file.jpg) center top repeat-x;
+    .ht_tit_big {
+        max-width:368px;margin:0 auto 28px;
     }
     .evt_products {
-        margin-top: 50px;
+        margin-top:50px;
         + .pagination {
             border-top:1px solid #000
         }
     }
     .tab-list {
-        position: relative;width: 100%;
+        position:relative;width:100%;
         ul {
-            font-size: 0;text-align: center;
+            font-size:0;text-align:center;
             li {
-                width: 153px;height: 156px;text-align: center;box-sizing: border-box; margin-left: 32px; cursor: pointer;display: inline-block;
+                display:inline-block;width:153px;height:156px;margin-left:32px;box-sizing:border-box;text-align:center;cursor:pointer;
                 &:nth-child(1) {
-                    margin-left: 0;
+                    margin-left:0;
                 }
                 span {
-                    font-size: 16px;font-weight: 700;padding-top: 104px;display: inline-block;position:relative;
+                    display:inline-block;position:relative;padding-top:104px;font-size:16px;font-weight:700;
                     &:before {
-                        content: "";display: inline-block;width: 72px; height: 72px; position: absolute;top: 29px;left: 50%;transform: translateX(-50%);
+                        display:inline-block;position:absolute;top:29px;left:50%;width:72px;height:72px;transform:translateX(-50%);content:"";
                     }
                 }
                 .tab_sti_file01{
                     span:before{
-                        background: url(#{$imgUrl}main/ico_sticker_file01_active.svg);
+                        background:url(#{$imgUrl}main/ico_sticker_file01_active.svg);
                     }
                 }
                 .tab_sti_file02 {
                     span:before {
-                        background: url(#{$imgUrl}main/ico_sticker_file02_active.svg);
+                        background:url(#{$imgUrl}main/ico_sticker_file02_active.svg);
                     }
                 }
                 .tab_sti_file03 {
                     span:before {
-                        background: url(#{$imgUrl}main/ico_sticker_file03_active.svg);
+                        background:url(#{$imgUrl}main/ico_sticker_file03_active.svg);
                     }
                 }
                 .tab_sti_file04 {
                     span:before {
-                        background: url(#{$imgUrl}main/ico_sticker_file04_active.svg);
+                        background:url(#{$imgUrl}main/ico_sticker_file04_active.svg);
                     }
                 }
                 .tab_sti_file05 {
                     span:before {
-                        background: url(#{$imgUrl}main/ico_sticker_file05_active.svg);
+                        background:url(#{$imgUrl}main/ico_sticker_file05_active.svg);
                     }
                 }
-                a{
-                    width: 100%;height: 156px;display: block;border: 2px solid #000;border-radius: 16px 16px 0 0;background: #fff;box-sizing: border-box;
+                a {
+                    display:block;width:100%;height:156px;background:#fff;border:2px solid #000;border-radius:16px 16px 0 0;box-sizing:border-box;
                     &.on {
-                        height: 187px;border-bottom: 0;background: #ffd1e9;
+                        height:187px;border-bottom:0;background:#ffd1e9;
                     }
                 }
             }
@@ -2757,72 +2758,67 @@
 }
 
 
-/** best brands **/
+
+/*** Best Brands : .best_brands ***/
 .best_brands {
-    background-color: #000;
+    background-color:#000;
     .ht_tit_big{
-        max-width: 487px;margin: 0 auto 28px;
+        max-width:487px;margin:0 auto 28px;
     }
 }
 .best_brands_list_wrap {
     ul {
-        width: 903px;margin: -10px auto 0;
-
+        width:903px;margin:-10px auto 0;
         &:after {
-            display: block; clear: both; content: "";
+            display:block;clear:both;content:"";
         }
         li {
-            float: left;width: 216px;height: 216px;margin-left: 10px;margin-top: 10px;
+            float:left;width:216px;height:216px;margin-top:10px;margin-left:10px;
             a {
-                border-radius: 12px;overflow: hidden;display: inline-block;width: 216px;height: 216px;position:relative;
+                display:inline-block;position:relative;width:216px;height:216px;border-radius:12px;overflow:hidden;
                 img {
-                    width: 100%;height: 100%;object-fit: cover;
+                    width:100%;height:100%;object-fit:cover;
                 }
                 &:hover .info_bg_box {
-                    opacity: 1;
+                    opacity:1;
                 }
             }
             &:first-child, 
             &:nth-child(8) {
-                width: 441px;height: 441px;
+                width:441px;height:441px;
                 a{
-                    width: 441px;height: 441px;
+                    width:441px;height:441px;
                 }
             }
             &:nth-child(8) {
-                float: right;
+                float:right;
             }
         }
     }
     .info_bg_box {
-        position: absolute;top: 0;left: 0;text-align: center;background: rgba(0,0,0,0.6);width: 100%;height: 100%; opacity: 0; transition: opacity 0.4s;
+        position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);text-align:center;opacity:0;transition:opacity 0.4s;
         strong {
-            position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);font-size: 20px;color: #fff;
+            position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);color:#fff;font-size:20px;
         }
     }
 }
 
 
-/** Now is **/
+
+/*** Now is : .now_is ***/
 .now_is{
-    padding: 40px 0px;
+    padding:40px 0px;
     .ht_tit_big{
-        max-width: 447px;margin: 0 auto 28px;
+        max-width:447px;margin:0 auto 28px;
     }
     .list_evt_area{
-        padding-top: 0;
+        padding-top:0;
     }
 }
 
 
 
-
-
-
-
-
-
-
+/*** 모션 인터렉션 : 스티커샵 ***/
 .sti_mian_wrap .ht_tit_big,
 .sti_mian_wrap .ht_tit_info{
     opacity:0;transition:opacity 0.4s 0s;
@@ -2840,3 +2836,12 @@
         opacity:1;transition-delay:0.3s;
     }
 }
+
+
+
+
+
+
+
+
+
