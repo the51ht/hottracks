@@ -286,25 +286,25 @@ function htUnderBanner(){
                 }
             }
         };
+        var htUnderBannerSwiper = []
         if($parent.find('.swiper-slide').length > 1) {
-            htUnderBannerSwiper = new Swiper(this, slideOption);
+            htUnderBannerSwiper[index] = new Swiper('.ht_under_idx_' + index + ' .swiper-container', slideOption);
         }
+        $('.ht_under_idx_' + index).find('.play_pause_box').click(function(){
+            if ( $(this).hasClass('play') ) {
+                htUnderBannerSwiper[index].autoplay.stop();
+                $(this).removeClass('play').addClass('pause');
+            } else {
+                htUnderBannerSwiper[index].autoplay.start();
+                $(this).removeClass('pause').addClass('play');
+            }
+        });
 	});
 }
 
 $(function(){
     if(!$('.ht_under_banner').length) return;
     htUnderBanner();
-
-    $('.ht_under_banner .play_pause_box').click(function(){
-        if ( $(this).hasClass('play') ) {
-            htUnderBannerSwiper .autoplay.stop();
-            $(this).removeClass('play').addClass('pause');
-        } else {
-            htUnderBannerSwiper .autoplay.start();
-            $(this).removeClass('pause').addClass('play');
-        }
-    });
 });
 
 

@@ -438,8 +438,11 @@ body.dialog_open {
   overflow-y: hidden;
 }
 
+body.dialog_open .wrapper .fly_menu_wrapper {
+  right: 10px;
+}
+
 body.dialog_open .wrapper .floating_wrapper,
-body.dialog_open .wrapper .fly_menu_wrapper,
 body.dialog_open .wrapper .fly_menu_wrapper.sps-blw {
   right: 28px;
 }
@@ -459,8 +462,11 @@ body.hid {
   overflow-y: hidden;
 }
 
+body.hid .wrapper .fly_menu_wrapper {
+  right: 10px;
+}
+
 body.hid .wrapper .floating_wrapper,
-body.hid .wrapper .fly_menu_wrapper,
 body.hid .wrapper .fly_menu_wrapper.sps-blw {
   right: 28px;
 }
@@ -664,10 +670,10 @@ body.hid.ht_mo .wrapper .fly_menu_wrapper.sps-blw {
      object-fit: cover;
 }
 
-@media only screen and (min-width: 2560px) {
+@media only screen and (min-width: 2561px) {
   .wrapper .fly_menu_wrapper.sps-blw,
   .wrapper .floating_wrapper {
-    right: calc(50% - 1270px);
+    right: calc(50% - 1270px) !important;
   }
 }
 
