@@ -343,8 +343,10 @@ button.btn_lg {
 /* dialog */
 body.dialog_open {
 	position:static;padding-right:18px;overflow-y:hidden;
+    .wrapper .fly_menu_wrapper {
+        right:10px;
+    }
     .wrapper .floating_wrapper,
-    .wrapper .fly_menu_wrapper,
     .wrapper .fly_menu_wrapper.sps-blw {
         right:28px;
     }
@@ -359,8 +361,10 @@ body.dialog_open {
 }
 body.hid {
     padding-right:18px;overflow-y:hidden;
+    .wrapper .fly_menu_wrapper {
+        right:10px;
+    }
     .wrapper .floating_wrapper,
-    .wrapper .fly_menu_wrapper,
     .wrapper .fly_menu_wrapper.sps-blw {
         right:28px;
     }
@@ -492,10 +496,10 @@ body.hid {
 
 
 
-@media only screen and (min-width:2560px) {
+@media only screen and (min-width:2561px) {
     .wrapper .fly_menu_wrapper.sps-blw,
     .wrapper .floating_wrapper {
-        right:calc(50% - 1270px);
+        right:calc(50% - 1270px) !important;
     }
 }
 

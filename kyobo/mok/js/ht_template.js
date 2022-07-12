@@ -338,7 +338,6 @@ $(function(){
     if($('.curation_img').find('.swiper-slide').length > 1) {
         welCuration();
     }
-    welCurationSize();
     /*window.onload = function(){
         welCurationSize();  
     }*/
