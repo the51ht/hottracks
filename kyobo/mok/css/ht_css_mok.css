@@ -13504,18 +13504,35 @@ body:before {
 
 .category_menu .menu_list ul {
   width: 50%;
-  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+.category_menu .menu_list ul:last-child {
+  border-right: 0;
+}
+
 .category_menu .menu_list ul:first-child {
-  border-left: 0;
+  border-right: 1px solid #f2f2f2;
+}
+
+.category_menu .menu_list ul:first-child li:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: calc(-100% - 2px);
+  bottom: -1px;
+  width: calc(100% + 1px);
+  height: 1px;
+  background: #f2f2f2;
 }
 
 .category_menu .menu_list ul li {
   padding: 8px 20px;
   border-bottom: 1px solid #f2f2f2;
+  min-height: 77px;
+  position: relative;
 }
 
 .category_menu .menu_list ul li:first-child {

@@ -988,12 +988,18 @@ body {
     .menu_list {
         display:flex;position:relative;margin-bottom:-1px;padding:0;border-top:1px solid #f2f2f2;
         ul {
-            width:50%;border-left:1px solid #f2f2f2;box-sizing:border-box;
+            width:50%;border-right:1px solid #f2f2f2;box-sizing:border-box;
+            &:last-child {
+                border-right:0;
+            }
             &:first-child {
-                border-left:0;
+                border-right:1px solid #f2f2f2;
+                li:after{
+                    content: "";display: inline-block;position: absolute;right: calc(-100% - 2px);bottom: -1px;width: calc(100% + 1px);height: 1px;background: #f2f2f2;
+                }
             }
             li {
-                padding:8px 20px;border-bottom:1px solid #f2f2f2;
+                padding:8px 20px;border-bottom:1px solid #f2f2f2; min-height: 77px; position:relative;
                 &:first-child {
                     border-top:0;
                 }
