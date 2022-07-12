@@ -288,65 +288,70 @@
 <!-- //이미지 팝업(하단) : popImgBn01 --><!-- 22.07.01 전체 구조 변경 -->
 
 
-<!-- 이미지 팝업(전체) : popImgBn02 --><!-- 22.05.03 전체 구조 변경 -->
-<div id="popImgBn02" class="dialog_wrap dialog_wrap_wel img_pop_wrap" data-class="dialog_sm"><!-- class="img_pop_wrap 추가" -->
-    <!-- dialog_contents -->
-    <div class="dialog_contents evt_pop_cotent no_margin_top img_pop"><!-- class="img_pop 추가" -->
-        <!-- ht_mkt_pop -->
-        <div class="ht_mkt_pop">
-            <div class="swiper-container">
-                <!-- swiper-wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- swiper-slide 반복 -->
-                    <div class="swiper-slide">
-                        <a href="#n">
-                            <div class="evt_pop_img">
-                                <img src="../../images/temp/@img_wel_pop_holiday_full.jpg" alt="">
-                            </div>
-                    
-                            <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
-                                <div class="tag_wrap">
-                                    <span class="tag_item">10%</span>
+<!-- 이미지 팝업(전체) : popImgBn02 --><!-- 22.07.12 전체 구조 변경 -->
+<div id="popImgBn02" class="pop_img_full">
+    <div class="pop_img_full_wrap">
+        <!-- pop_img_full_contents -->
+        <div class="pop_img_full_contents">
+            <!-- ht_mkt_pop -->
+            <div class="ht_mkt_pop">
+                <div class="swiper-container">
+                    <!-- swiper-wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- swiper-slide 반복 -->
+                        <div class="swiper-slide">
+                            <a href="#n">
+                                <div class="evt_pop_img">
+                                    <img src="../../images/temp/@img_wel_pop_holiday_full.jpg" alt="">
                                 </div>
-                                <div class="main_msg">
-                                    배송비 걱정 없이<br>쇼핑하는 거 어떠세요?
+                        
+                                <div class="evt_pop_content"><!--  이미지로만 들어갈 경우 해당 영역 비 노출 -->
+                                    <div class="tag_wrap">
+                                        <span class="tag_item">10%</span>
+                                    </div>
+                                    <div class="main_msg">
+                                        배송비 걱정 없이<br>쇼핑하는 거 어떠세요?
+                                    </div>
+                                    <div class="sub_txt">
+                                        설 선물 맛집 핫트랙스에서<br>새해 복 가득 담아 선물하세요
+                                    </div>
                                 </div>
-                                <div class="sub_txt">
-                                    설 선물 맛집 핫트랙스에서<br>새해 복 가득 담아 선물하세요
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- //swiper-slide 반복 -->
+                            </a>
+                        </div>
+                        <!-- //swiper-slide 반복 -->
 
-                    <div class="swiper-slide">
-                        <a href="#n">
-                            <div class="evt_pop_img">
-                                <img src="../../images/temp/@img_wel_pop_holiday_full02.jpg" alt="">
-                            </div>
-                        </a>
+                        <div class="swiper-slide">
+                            <a href="#n">
+                                <div class="evt_pop_img">
+                                    <img src="../../images/temp/@img_wel_pop_holiday_full02.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
                     </div>
+                    <!-- //swiper-wrapper -->
                 </div>
-                <!-- //swiper-wrapper -->
-            </div>
 
-            <!-- swiper_control -->
-            <div class="swiper_control_bk">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <!-- swiper_control -->
+                <div class="swiper_control_bk">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- //swiper_control -->
             </div>
-            <!-- //swiper_control -->
+            <!-- //ht_mkt_pop -->
         </div>
-        <!-- //ht_mkt_pop -->
-    </div>
-    <!-- //dialog_contents -->
+        <!-- //pop_img_full_contents -->
 
-    <!-- dialog_footer -->
-    <div class="dialog_footer no_margin_top">
-        <button type="button" class="btn_lg btn_line_white" data-dialog-close><span class="text">오늘은 그만보기</span></button>
-        <button type="button" class="btn_lg btn_line_white" data-dialog-close><span class="text">닫기</span></button>
+        <!-- pop_img_full_bott -->
+        <div class="pop_img_full_bott">
+            <button type="button" class="btn_lg btn_line_white td_close_pop"><span class="text">오늘은 그만보기</span></button>
+            <button type="button" class="btn_lg btn_line_white close_pop"><span class="text">닫기</span></button>
+        </div>
+        <!-- //pop_img_full_bott -->
     </div>
-    <!-- //dialog_footer -->
+
+    <div class="pop_dim">
+    </div>
 </div>
 <!-- //이미지 팝업 : popImgBn02 -->
 
@@ -367,11 +372,15 @@ function popImgBn01(){
 $("#popImgBn01 .ico_dialog_close").on("click", function(){
     $('#popImgBn01').removeClass("open");
 })
-// 22.07.01 팝업 변경으로 수정
 
+// 22.07.12 팝업 변경으로 수정
 function popImgBn02(){
-    $('#popImgBn02').dialog('open');
+    $('#popImgBn02').addClass('open');
 }
+$("#popImgBn02 .close_pop, #popImgBn02 .td_close_pop").on("click", function(){
+    $('#popImgBn02').removeClass("open");
+})
+
 $(function(){
     //popImgBn02()
 });
