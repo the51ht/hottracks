@@ -376,9 +376,11 @@ $("#popImgBn01 .ico_dialog_close").on("click", function(){
 // 22.07.12 팝업 변경으로 수정
 function popImgBn02(){
     $('#popImgBn02').addClass('open');
+    $('body').addClass('hid');
 }
 $("#popImgBn02 .close_pop, #popImgBn02 .td_close_pop").on("click", function(){
     $('#popImgBn02').removeClass("open");
+    $('body').removeClass('hid');
 })
 
 $(function(){
