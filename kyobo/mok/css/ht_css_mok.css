@@ -15897,19 +15897,55 @@ body:before {
 /*** Banner ***/
 /** 솔로 배너 **/
 .solo_banner {
-  padding: 32px 0 0 0;
+  position: relative;
+  height: 0;
+  margin: 32px 0 0 0;
+  padding-top: 26.27%;
+  overflow: hidden;
+}
+
+.solo_banner a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .solo_banner img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .prod_solo_banner {
+  position: relative;
+  height: 0;
   margin: 32px 0 8px 0;
+  padding-top: 26.27%;
+  overflow: hidden;
+}
+
+.prod_solo_banner a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .prod_solo_banner img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .row_dir .prod_solo_banner {
