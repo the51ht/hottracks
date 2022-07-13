@@ -566,7 +566,7 @@
   background-color: #bebebe;
 }
 
-/*** 상품평 작성 : .wel_review ***/
+/*** 상품평 작성 :.wel_review ***/
 .wel_review .ht_tit_big02 {
   margin-bottom: 16px;
   font-family: 'Gmarket Sans';
@@ -662,7 +662,7 @@
   text-align: center;
 }
 
-/*** 반응최고 이벤트 : .wel_reaction ***/
+/*** 반응최고 이벤트 :.wel_reaction ***/
 .wel_review + .wel_reaction .contents_inner:before {
   position: absolute;
   left: 0;
@@ -1295,22 +1295,19 @@
 
 /* 이미지 팝업(전체) : popImgBm02*/
 .pop_img_full {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
+  min-width: 1440px;
   height: calc(100vh - 20px);
   padding: 10px 0;
   overflow-y: hidden;
-  min-width: 1440px;
   -webkit-box-align: center;
   -ms-flex-align: center;
       align-items: center;
   z-index: 1001;
-  display: none;
 }
 
 .pop_img_full.open {
@@ -1320,24 +1317,24 @@
 }
 
 .pop_img_full .pop_img_full_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 400px;
   height: auto;
-  position: absolute;
   max-height: 750px;
   margin: 0 auto;
   border: none;
   color: #000;
-  top: 50%;
-  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 100;
 }
 
 .pop_img_full .pop_img_full_wrap .pop_img_full_contents {
+  background: #fff;
   border-radius: 16px 16px 0 0;
   overflow: hidden;
-  background: #fff;
 }
 
 .pop_img_full .evt_pop_content {
@@ -1352,20 +1349,20 @@
 }
 
 .pop_img_full .evt_pop_content .main_msg {
-  font-size: 28px;
-  color: #000;
   width: 100%;
-  line-height: 36px;
-  font-weight: 700;
   margin-top: 0px;
+  color: #000;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
   letter-spacing: -0.7px;
 }
 
 .pop_img_full .evt_pop_content .sub_txt {
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.8);
-  line-height: 18px;
   margin-top: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .pop_img_full .evt_pop_img {
@@ -1396,23 +1393,23 @@
 }
 
 .pop_img_full .pop_img_full_bott {
-  background-color: #fff;
-  border-radius: 0 0 16px 16px;
-  overflow: hidden;
-  margin-top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 0;
+  background-color: #fff;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
 }
 
 .pop_img_full .pop_img_full_bott .btn_lg {
   position: relative;
   border: none;
+  border-radius: 0;
   color: #767676;
   font-size: 14px;
   -webkit-transition: background 0.4s;
   transition: background 0.4s;
-  border-radius: 0;
 }
 
 .pop_img_full .pop_img_full_bott .btn_lg:active, .pop_img_full .pop_img_full_bott .btn_lg:focus, .pop_img_full .pop_img_full_bott .btn_lg:hover {
@@ -1420,25 +1417,25 @@
 }
 
 .pop_img_full .pop_img_full_bott .btn_lg:first-of-type:before {
-  content: "";
   position: absolute;
+  left: 100%;
+  top: 50%;
   width: 1px;
   height: 14px;
   background-color: #d5d5d5;
-  left: 100%;
-  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  content: "";
 }
 
 .pop_img_full .pop_dim {
   position: absolute;
-  top: 0;
   left: 0;
-  background: #000;
-  opacity: 0.5;
+  top: 0;
   width: 100%;
   height: 100%;
+  background: #000;
+  opacity: 0.5;
 }
 
 .pop_img_full .swiper_control_bk .swiper-button-prev,

@@ -254,7 +254,7 @@
 
 
 
-/*** 상품평 작성 : .wel_review ***/
+/*** 상품평 작성 :.wel_review ***/
 .wel_review {
     .ht_tit_big02 {
         margin-bottom:16px;font-family:'Gmarket Sans';font-weight:500;line-height:50px;letter-spacing:-1px;
@@ -303,7 +303,7 @@
 }
 
 
-/*** 반응최고 이벤트 : .wel_reaction ***/
+/*** 반응최고 이벤트 :.wel_reaction ***/
 .wel_review + .wel_reaction .contents_inner {
     &:before {
         position:absolute;left:0;top:-60px;width:100%;height:1px;background:#eaeaea;content:"";
@@ -553,10 +553,8 @@
 
 
 
-
-//popImgBn01
 /* 이미지 팝업(하단) : popImgBm01*/
-.pop_img_bn{
+.pop_img_bn {
     display:none;position:fixed;left:0;bottom:-50%;width:100%;min-width:1440px;animation:bottomPopAnimation 0.23s;
     @keyframes bottomPopAnimation {
         0% {bottom:-50%;}
@@ -617,26 +615,26 @@
     }
 }
 
-//popImgBn02
+
 /* 이미지 팝업(전체) : popImgBm02*/
 .pop_img_full{
-    display: flex;position: fixed;top: 0;left: 0;width: 100%;height: calc(100vh - 20px);padding: 10px 0;overflow-y: hidden;min-width: 1440px;-webkit-box-align: center;align-items: center;z-index: 1001;display: none;
-    &.open{
-        display: flex;
+    display:none;position:fixed;left:0;top:0;width:100%;min-width:1440px;height:calc(100vh - 20px);padding:10px 0;overflow-y:hidden;-webkit-box-align:center;align-items:center;z-index:1001;
+    &.open {
+        display:flex;
     }
-    .pop_img_full_wrap{
-        width: 400px;height: auto;position: absolute;max-height: 750px;margin: 0 auto;border: none;color: #000;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 100;
-        .pop_img_full_contents{
-            border-radius: 16px 16px 0 0;overflow: hidden;background: #fff;
+    .pop_img_full_wrap {
+        position:absolute;left:50%;top:50%;width:400px;height:auto;max-height:750px;margin:0 auto;border:none;color:#000;transform:translate(-50%, -50%);z-index:100;
+        .pop_img_full_contents {
+            background:#fff;border-radius:16px 16px 0 0;overflow:hidden;
         }
     }
-    .evt_pop_content{
-        display: inline-block;position: absolute;left: 0;top: 65px;padding: 0 32px;box-sizing: border-box;text-align: left;
-        .main_msg{
-            font-size: 28px;color: #000;width: 100%;line-height: 36px;font-weight: 700;margin-top: 0px;letter-spacing: -0.7px;
+    .evt_pop_content {
+        display:inline-block;position:absolute;left:0;top:65px;padding:0 32px;box-sizing:border-box;text-align:left;
+        .main_msg {
+            width:100%;margin-top:0px;color:#000;font-weight:700;font-size:28px; line-height:36px;letter-spacing:-0.7px;
         }
-        .sub_txt{
-            font-size: 13px;color: rgba(0, 0, 0, 0.8);line-height: 18px;margin-top: 15px;
+        .sub_txt {
+            margin-top:15px;color:rgba(0, 0, 0, 0.8);font-size:13px;line-height:18px;
         }
     }
     .evt_pop_img {
@@ -647,28 +645,28 @@
     }
     .tag_wrap {
         .tag_item {
-            padding: 3px 15px 2px 12px;background-color: #000;border: 1px solid #000;color: #fff;font-size: 11px;font-weight: 700;line-height: 15px;
+            padding:3px 15px 2px 12px;background-color:#000;border:1px solid #000;color:#fff;font-size:11px;font-weight:700;line-height:15px;
         }
         + .main_msg {
-            margin-top: 12px;
+            margin-top:12px;
         }
     }
     .pop_img_full_bott{
-        background-color: #fff;border-radius: 0 0 16px 16px;overflow: hidden;margin-top: 0;display: flex;
+        display:flex;margin-top:0;background-color:#fff;border-radius:0 0 16px 16px;overflow:hidden;
         .btn_lg{
-            position: relative;border: none;color: #767676;font-size: 14px;transition: background 0.4s;border-radius: 0;
+            position:relative;border:none;border-radius:0;color:#767676;font-size:14px;transition:background 0.4s;
             &:active,
             &:focus,
             &:hover {
                 background:#f4f4f4;
             }
             &:first-of-type:before {
-                content: "";position: absolute;width: 1px;height: 14px;background-color: #d5d5d5;left: 100%;top: 50%;transform: translateY(-50%);
+                position:absolute;left:100%;top:50%;width:1px;height:14px;background-color:#d5d5d5;transform:translateY(-50%);content:"";
             }
         }
     }
-    .pop_dim{
-        position: absolute;top: 0;left: 0;background: #000;opacity: 0.5;width: 100%;height: 100%;
+    .pop_dim {
+        position:absolute;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.5;
     }
     .swiper_control_bk {
         .swiper-button-prev, 
