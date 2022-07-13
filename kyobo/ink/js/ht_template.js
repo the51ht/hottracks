@@ -691,7 +691,7 @@ function feScrollDynamic(){
 $(function(){
     if(!$('.character_sc_chk').length) return;
     $(window).on('scroll', feScrollDynamic);
-    feScrollDynamic();
+     //feScrollDynamic();
 });
 
 
