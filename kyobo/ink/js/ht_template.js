@@ -2583,7 +2583,7 @@ $(function(){
 
 
 
-
+/*
 $(function(){
     if(!$('.ht_lnb').length) return;
 	$(window).resize(ht_lnb).resize();
@@ -2607,4 +2607,4 @@ $(function(){
 		});
         
 	}
-});
+});*/
