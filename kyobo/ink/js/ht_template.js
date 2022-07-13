@@ -2583,28 +2583,4 @@ $(function(){
 
 
 
-/*
-$(function(){
-    if(!$('.ht_lnb').length) return;
-	$(window).resize(ht_lnb).resize();
-	function ht_lnb(){
-		function scrollEvent() {
-		 	var locS =  $(window).scrollTop();
-            var locA1 = $('.ht_sub_area').innerHeight() -  $('.ht_lnb').innerHeight() + $(window).height();
-            //var locA1 = $('.ht_sub_area').innerHeight() -  $('.ht_lnb').innerHeight() - $(window).height() - 233;
-            if( locS < locA1) {
-                $('.ht_lnb').removeClass('chk');
-            } else {
-                $('.ht_lnb').addClass('chk');
-               
-                
-            }
-            console.log(locS)
-            console.log(locA1)
-		}
-		$(window).scroll(function() {
-			scrollEvent();
-		});
-        
-	}
-});*/
+
