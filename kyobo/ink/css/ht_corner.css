@@ -2184,6 +2184,7 @@
 
 .cor_live_banner .liv_txt_list .title {
   color: #fff;
+  width: 100%;
 }
 
 .cor_live_banner .liv_txt_list .title span {
@@ -2192,6 +2193,7 @@
 
 .cor_live_banner .liv_txt_list .sub_title {
   color: rgba(255, 255, 255, 0.8);
+  width: 100%;
 }
 
 .cor_live_banner .liv_txt_list .sub_title span {
@@ -2338,6 +2340,12 @@
   font-weight: 700;
   line-height: 50px;
   letter-spacing: -1px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: keep-all;
 }
 
 .liv_txt_list .sub_title {
@@ -2346,6 +2354,12 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 34px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: keep-all;
 }
 
 .liv_txt_list .liv_btn_area {
