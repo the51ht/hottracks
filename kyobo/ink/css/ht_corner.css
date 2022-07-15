@@ -4420,6 +4420,128 @@
   content: "";
 }
 
+.cur_detail .cur_detail_txt strong span {
+  display: block;
+  position: relative;
+}
+
+.cur_detail .cur_detail_txt strong span em {
+  display: inline-block;
+  position: relative;
+}
+
+.cur_detail .cur_detail_txt strong span em i {
+  position: relative;
+  font-style: normal;
+}
+
+.cur_detail .cur_detail_txt strong span em:before {
+  position: absolute;
+  left: -2px;
+  top: 26px;
+  width: calc(100% + 4px);
+  height: 14px;
+  background: #fffe58;
+  content: "";
+  z-index: 0;
+  -webkit-animation: pointLineA both ease-in infinite 8s;
+          animation: pointLineA both ease-in infinite 8s;
+}
+
+.cur_detail .cur_detail_txt strong span:nth-child(2) em:before {
+  -webkit-animation: pointLineA2 both ease-in infinite 8s;
+          animation: pointLineA2 both ease-in infinite 8s;
+}
+
+.cur_detail .cur_detail_txt strong span:nth-child(3) em:before {
+  -webkit-animation: pointLineA3 both ease-in infinite 8s;
+          animation: pointLineA3 both ease-in infinite 8s;
+}
+
+@-webkit-keyframes pointLineA {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@keyframes pointLineA {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@-webkit-keyframes pointLineA2 {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: 0;
+  }
+  14% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@keyframes pointLineA2 {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: 0;
+  }
+  14% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@-webkit-keyframes pointLineA3 {
+  0% {
+    width: 0;
+  }
+  14% {
+    width: 0;
+  }
+  21% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@keyframes pointLineA3 {
+  0% {
+    width: 0;
+  }
+  14% {
+    width: 0;
+  }
+  21% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
 .cur_detail .cur_detail_txt p {
   margin-top: 20px;
   font-size: 16px;

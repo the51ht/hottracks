@@ -496,8 +496,8 @@ $(function(){
 
 /***** From *****/
 /*** Tab ***/
-$(function(){
-    $.fn.tabTy = function(){
+function fnTabTy(){
+	$.fn.tabTy = function(){
         $.each(this, function(i,v){
             $(v).closest('.tab_link').find('a').removeClass('on');
             $(v).addClass('on');
@@ -509,12 +509,14 @@ $(function(){
     };
     $('.tab_link a').click(function(){    
         $(this).tabTy();
-        return false;
     });
     $('.tap_prod_link a').click(function(){    
         ht_CurDetailJs.getCrtProdList($('.tab_swiper .swiper-wrapper .swiper-slide .on'));
         return false;
     });
+}
+$(function(){
+	fnTabTy();
 });
 
 
@@ -1711,6 +1713,15 @@ $(function(){
 
 
 /**** 큐레이션 ****/
+/* 큐레이션 상세 타이틀 */
+$(function(){
+    if(!$('.cur_detail_txt').length) return;
+    $('.cur_detail_txt strong').lettering('lines');
+    $('.cur_detail_txt span').wrapInner('<em><i></i></em>');
+});
+
+
+
 /* 이럴 땐, 이런 상품 */
 function curProdA(){
     var $target = $('.cur_prod_swiper_area .swiper-container');

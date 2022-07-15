@@ -2234,6 +2234,45 @@
             &:before {
                 display:inline-block;position:absolute;top:-67px;width:50px;height:50px;background:url('#{$imgUrl}main/ico_cur_curation02.svg') no-repeat;background-size:contain;content:"";
             }
+            span {
+                display:block;position:relative;
+                em {
+                    display:inline-block;position:relative;
+                    i {
+                        position:relative;font-style:normal;
+                    }
+                    &:before {
+                        position:absolute;left:-2px;top:26px;width:calc(100% + 4px);height:14px;background:#fffe58;content:"";z-index:0;animation:pointLineA both ease-in infinite 8s;
+                    }
+                }
+                &:nth-child(2) {
+                    em:before {
+                        animation:pointLineA2 both ease-in infinite 8s;
+                    }
+                }
+                &:nth-child(3) {
+                    em:before {
+                        animation:pointLineA3 both ease-in infinite 8s;
+                    }
+                }
+            }
+            @keyframes pointLineA {
+                0% {width:0;}
+                7% {width:calc(100% + 4px);}
+                100% {width:calc(100% + 4px);}
+            }
+            @keyframes pointLineA2 {
+                0% {width:0;}
+                7% {width:0;}
+                14% {width:calc(100% + 4px);}
+                100% {width:calc(100% + 4px);}
+            }
+            @keyframes pointLineA3 {
+                0% {width:0;}
+                14% {width:0;}
+                21% {width:calc(100% + 4px);}
+                100% {width:calc(100% + 4px);}
+            }
         }
         p {
             margin-top:20px;font-size:16px;line-height:24px;letter-spacing:-0.16px;

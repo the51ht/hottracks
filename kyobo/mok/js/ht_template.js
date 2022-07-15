@@ -1073,6 +1073,15 @@ $(function(){
 
 
 
+/* 큐레이션 상세 타이틀 */
+$(function(){
+    if(!$('.cur_view_txt').length) return;
+    $('.cur_view_txt .cur_tit strong').lettering('lines');
+    $('.cur_view_txt .cur_tit span').wrapInner('<em><i></i></em>');
+});
+
+
+
 /* 이럴 땐? 이런상품 */
 function curProdSwiper(){
     var $target = $('.cur_prod_img');

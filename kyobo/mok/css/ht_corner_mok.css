@@ -2658,16 +2658,36 @@ $imgUrl : "../images/";*/
   position: relative;
 }
 
-.cur_view_txt .cur_tit span {
-  display: inline-block;
+.cur_view_txt .cur_tit strong {
+  display: block;
   position: relative;
+  /*padding-left:16px;*/
   color: #000;
   font-size: 20px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 30px;
+  /*&:before {
+                position:absolute;left:0;top:0;display:inline-block;content:"#";
+            }*/
 }
 
-.cur_view_txt .cur_tit span:before {
+.cur_view_txt .cur_tit span {
+  display: block;
+  position: relative;
+}
+
+.cur_view_txt .cur_tit span em {
+  display: inline-block;
+  position: relative;
+}
+
+.cur_view_txt .cur_tit span em i {
+  position: relative;
+  font-style: normal;
+  z-index: 2;
+}
+
+.cur_view_txt .cur_tit span em:after {
   position: absolute;
   left: -2px;
   top: 16px;
@@ -2676,12 +2696,110 @@ $imgUrl : "../images/";*/
   background: #fffe58;
   content: "";
   z-index: 0;
-  -webkit-animation: pointLine both ease-in infinite 3.5s;
-          animation: pointLine both ease-in infinite 3.5s;
+  -webkit-animation: pointLineA both ease-in infinite 8s;
+          animation: pointLineA both ease-in infinite 8s;
 }
 
-.cur_view_txt .cur_tit em {
+.cur_view_txt .cur_tit span:nth-child(1) em:before {
   position: relative;
+  display: inline-block;
+  content: "#";
+  margin-right: 4px;
+  z-index: 2;
+}
+
+.cur_view_txt .cur_tit span:nth-child(2) em:after {
+  -webkit-animation: pointLineA2 both ease-in infinite 8s;
+          animation: pointLineA2 both ease-in infinite 8s;
+}
+
+.cur_view_txt .cur_tit span:nth-child(3) em:after {
+  -webkit-animation: pointLineA3 both ease-in infinite 8s;
+          animation: pointLineA3 both ease-in infinite 8s;
+}
+
+@-webkit-keyframes pointLineA {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@keyframes pointLineA {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@-webkit-keyframes pointLineA2 {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: 0;
+  }
+  14% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@keyframes pointLineA2 {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: 0;
+  }
+  14% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@-webkit-keyframes pointLineA3 {
+  0% {
+    width: 0;
+  }
+  14% {
+    width: 0;
+  }
+  21% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
+}
+
+@keyframes pointLineA3 {
+  0% {
+    width: 0;
+  }
+  14% {
+    width: 0;
+  }
+  21% {
+    width: calc(100% + 4px);
+  }
+  100% {
+    width: calc(100% + 4px);
+  }
 }
 
 .cur_view_txt .cur_tit + p {
@@ -2727,6 +2845,10 @@ $imgUrl : "../images/";*/
   font-size: 14px;
   font-weight: 700;
   content: "#";
+}
+
+.tag_li a br {
+  display: none;
 }
 
 /*** 맞춤추천 비로그인 : .cur_join_msg ***/

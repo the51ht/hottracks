@@ -1322,14 +1322,55 @@
     margin:37px 20px 0 20px;font-size:14px;line-height:22px;
     .cur_tit {
         position:relative;
+        strong {
+            display:block;position:relative;/*padding-left:16px;*/color:#000;font-size:20px;font-weight:700;line-height:30px;
+            /*&:before {
+                position:absolute;left:0;top:0;display:inline-block;content:"#";
+            }*/
+        }
         span {
-            display:inline-block;position:relative;color:#000;font-size:20px;font-weight:700;line-height:26px;
-            &:before {
-                position:absolute;left:-2px;top:16px;width:calc(100% + 4px);height:14px;background:#fffe58;content:"";z-index:0;animation:pointLine both ease-in infinite 3.5s;
+            display:block;position:relative;
+            em {
+                display:inline-block;position:relative;
+                i {
+                    position:relative;font-style:normal;z-index:2;
+                }
+                &:after {
+                    position:absolute;left:-2px;top:16px;width:calc(100% + 4px);height:14px;background:#fffe58;content:"";z-index:0;animation:pointLineA both ease-in infinite 8s;
+                }
+            }
+            &:nth-child(1) {
+                em:before {
+                    position:relative;display:inline-block;content:"#";margin-right:4px;z-index:2;
+                }
+            }
+            &:nth-child(2) {
+                em:after {
+                    animation:pointLineA2 both ease-in infinite 8s;
+                }
+            }
+            &:nth-child(3) {
+                em:after {
+                    animation:pointLineA3 both ease-in infinite 8s;
+                }
             }
         }
-        em {
-            position:relative;
+        @keyframes pointLineA {
+            0% {width:0;}
+            7% {width:calc(100% + 4px);}
+            100% {width:calc(100% + 4px);}
+        }
+        @keyframes pointLineA2 {
+            0% {width:0;}
+            7% {width:0;}
+            14% {width:calc(100% + 4px);}
+            100% {width:calc(100% + 4px);}
+        }
+        @keyframes pointLineA3 {
+            0% {width:0;}
+            14% {width:0;}
+            21% {width:calc(100% + 4px);}
+            100% {width:calc(100% + 4px);}
         }
     }
     .cur_tit + p {
@@ -1352,6 +1393,9 @@
         display:inline-block;position:relative;height:45px;margin:8px 5px 0 0;padding:0 20px 0 32px;background:#fff;border:1px solid #ccc;border-radius:30px;box-sizing:border-box;color:#000;font-size:12px;line-height:45px;
         &:before {
             position:absolute;left:20px;top:0;color:#5055b1;font-size:14px;font-weight:700;content:"#";
+        }
+        br {
+            display:none;
         }
     }
 }
