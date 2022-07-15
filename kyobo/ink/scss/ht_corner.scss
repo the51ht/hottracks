@@ -8,7 +8,7 @@
 
 /***** 오늘만 특가 *****/
 .tod_full_banner {
-    position:relative;margin-bottom:60px;padding-bottom:0;background:#ffeb01;z-index:10;
+    position:relative;margin-top:-42px;margin-bottom:60px;padding-bottom:0;background:#ffeb01;z-index:10;
     .time_bar {
         position:absolute;left:49.5%;top:183px;width:215px;color:#fff;font-family:'Gmarket Sans';font-size:26px;font-weight:700;line-height:78px;text-align:center;transform:translateX(-50%);
     }
@@ -34,6 +34,9 @@
             background-color:initial;
         }
     }
+}
+.ht_tit_nav + .tod_full_banner {
+    margin-top:0;
 }
 
 
@@ -1221,7 +1224,7 @@
     .liv_prod_img {
         position:absolute;right:100px;top:50%;width:300px;height:450px;background-color:#000;border-radius:12px;transform:translateY(-50%);overflow:hidden;
         .prod_img {
-            position:relative;
+            position:relative;cursor:pointer;
             img {
                 width:300px;height:450px;object-fit:cover;
             }

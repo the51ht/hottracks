@@ -42,7 +42,7 @@ function htSetPrependZero(number, digits) {
 
 
 
-/* 본문 바로가기 */
+/***** 본문 바로가기 *****/
 $(function(){
     if(!$('.ht_contents_wrap').length) return;
     if($('.ht_sub_area').length){
