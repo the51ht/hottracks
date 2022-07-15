@@ -1,3 +1,11 @@
+/*
+    핫트랙스 GNB
+*/
+
+
+
+
+
 /* HT GNB */
 function setHtGnb() {
     var $ht_gnb = $('.gnb_hottracks_area');
