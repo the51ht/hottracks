@@ -2,14 +2,20 @@
  * name : ui_product_mok.js
  * desc : 상품 공통 자바스크립트
  * writer : glim
- * create : 2021/11/26
  * update :
  * -
  */
+/*
+    핫트랙스 Mobile Products UI Script : 내용정리
+*/
+
+
+
+
+
 $(function(){
 	setProdDetailAnchor();
 	reviewTabAnchor();
-
 	setProdTitleMoreBtn();
 	toggleRadioTextArea();
 
@@ -17,16 +23,15 @@ $(function(){
 		'dialogopen': function() {
 			reviewAnimation(0);
 		},
-
 		'dialogclose': function() {
 			reviewAnimation(1);
 		},
 	});
+
+
     
 	// 상품정보 헤더 노출
-	
 	$(window).on('scroll', function(){  
-
 		var visualImgHeight = $('.prod_detail_header .visual_wrap').outerHeight(true);
 		var tgPosition = $(window).scrollTop();
 		var headerWrap = $('#headerWrapper');
@@ -35,8 +40,10 @@ $(function(){
 			headerWrap.addClass('active_product');
 		} else {
 			headerWrap.removeClass('active_product');
-		}0.
+		}
 	});
+	
+
 
 	// 리뷰 내 리뷰 썸네일 swiper
 	$(".review_swiper .swiper-container").each(function (index, element) {
@@ -65,9 +72,10 @@ $(function(){
 		});
 	});
 
+
+
 	// 추천 팝업 스와이퍼
 	var prodRecommendSwiper;
-
 	prodRecommendSwiper = new CustomSwiper('.prod_recommend_list_wrap .swiper-container', {
 		slidesPerView: '1',
 		loop: true,
@@ -79,6 +87,8 @@ $(function(){
 			}
 		}
 	});
+
+
 
 	// 추천 팝업 전체보기, 전체닫기 버튼
 	$('.prod_recommend .dialog_wrap .btn_show_all_list').on('click', function(event) {
@@ -107,26 +117,26 @@ $(function(){
 	});	
 
 
-/* 제품상세 iframe 처리 */
-$(function() {
-	if(!$('.prod_detail_contents iframe').length) return;
-	$('.prod_detail_contents iframe').attr('scrolling', 'yes');
-});	
+	/* 제품상세 iframe 처리 */
+	$(function() {
+		if(!$('.prod_detail_contents iframe').length) return;
+		$('.prod_detail_contents iframe').attr('scrolling', 'yes');
+	});	
 
 	
 	
-$(function(){
-    if(!$('.hotpickslide_wrap').length) return;
-    prodPickBanner();
-});
+	$(function(){
+		if(!$('.hotpickslide_wrap').length) return;
+		prodPickBanner();
+	});
 
 
 
+	$(function(){
+		//if(!$('.photoreview_wrap').length) return;
+		prodReviewBanner();
+	});
 
-$(function(){
-    //if(!$('.photoreview_wrap').length) return;
-    prodReviewBanner();
-});
 
 
 	$(document).on('click', '.product_area .btn_expand', function(){ 
@@ -139,6 +149,8 @@ $(function(){
 	 	}
 	});
 	
+
+
 	//Q & A 펼치기 닫기
 	$(document).on('click', '.all_qa_wrap .btn_expand', function(){
 		if($(this).hasClass('btn_up')) {
@@ -148,8 +160,9 @@ $(function(){
 		}
 		$(this).parents('.review_inner').addClass('active');
 		$(this).addClass('btn_up').children('.txt').text('접기');
-
 	});
+
+
 
 	//별점 영역 선택 시 하단 리뷰 영역으로 이동
 	$(document).on('click', '.rating_score_wrap .rating_container', function(){
@@ -157,6 +170,8 @@ $(function(){
 		var fixedHeight = $('.tab_list_wrap').height(); 
 		$('html, body').scrollTop( reviewTop - fixedHeight );
 	})
+
+
 
 	//카테고리 상품 리스트 찜하기 토글
 	$(document).on('click', '.module_wrap .evt_good_count', function(){
@@ -167,12 +182,12 @@ $(function(){
 		}
 	});
 
+
+
 	//대댓글 5개까지만 노출 후 전체 노출
 	prodDetailCmtShow(true);
-
 	function prodDetailCmtShow(bool){
 		var reCmtEA = $('.all_review_wrap .review_reply .reply_list').children('.reply_list_item').length;
-
 		if(bool){
 			for(var i=0; i<reCmtEA; i++){
 				if(i> 4) $('.all_review_wrap .review_reply .reply_list').children('.reply_list_item').eq(i).css('display', 'none');
@@ -180,16 +195,17 @@ $(function(){
 		}else{
 			$('.all_review_wrap .review_reply .reply_list').children('.reply_list_item').css('display', 'block');
 		}
-	
 	}
+
 	$(document).on('click', '.btn_expand.reply_cmt', function(){
 		if($(this).hasClass('active')) prodDetailCmtShow(false);
 		else prodDetailCmtShow(true);
 	});
 	
+
+
 	//장바구니, 구매하기 버튼 하단 팝업 시 노출
     footTabCustom();
-
 	$('button[data-foot-btn]').click(function(){
 		footTabCustom(true);
 	});
@@ -209,26 +225,33 @@ $(function(){
 		} 
 	}
 
+
+
 	//장바구니 팝업 상세 내용 닫기
 	$(document).on('click', '.buy_info .close', function(){
 		$(this).closest('.buy_info').css('display', 'none');
 	});
 	
+
+
     //쿠폰 다운 받기 토스트 메시지
 	$(document).on('click', '.dialog_wrap .dialog_contents .buy_info .cpon',  toastBtn);
 	function toastBtn(){
         KyoboHottracks.mok.setToastMessage('상품 쿠폰을 다운로드 받았습니다.', 3000);
     }
 
+
+
     //textarea focus 효과
 	$(document).on('focus', '.mycomment_box textarea, .byte_check_wrap textarea', function(){
 		$(this).parent().addClass('focus');
 	});
-
 	$(document).on('blur', '.mycomment_box textarea, .byte_check_wrap textarea', function(){
 		$(this).parent().removeClass('focus');
 	});
 
+
+	
     //textarea 20자 제한 효과
 	$(document).on('keyup', '.mycomment_box textarea', function(){
 		if($(this).val().length > 20){
@@ -237,6 +260,8 @@ $(function(){
 			$(this).parent().removeClass('notice');
 		}
 	});
+
+
 
 	//셀렉트 박스 커스텀
 	$(document).on('click', '.selected_option', function(){
@@ -258,6 +283,8 @@ $(function(){
 			$(arrowIcon).removeClass('open'); 
 		}
 	});
+
+
 
 	//옵션 선택
 	$(document).on('click', '.option_ul > li', function(){
@@ -300,6 +327,9 @@ $(function(){
 		};
 	});*/
 });
+
+
+
 
 // 상품상세 앵커탭 기능
 function setProdDetailAnchor(){
@@ -370,6 +400,8 @@ function setProdDetailAnchor(){
 			tabObserver.observe(target, {attributes: true});
 		});
 
+
+
 		// 상세 해더영역 이미지 하단 class 값 변경 Observer
 		var prodHeaderObserver = new MutationObserver(function (mutations) {
 			mutations.forEach(function (mutation) {
@@ -416,6 +448,8 @@ function reviewTabAnchor() {
 	}
 }
 
+
+
 // 상품 상세 상단 타이틀 더보기 버튼 - 한 개만 노출 되도록
 function setProdTitleMoreBtn() {
 	var overflowEl, overflowElCnt;
@@ -430,6 +464,8 @@ function setProdTitleMoreBtn() {
 		});
 	}
 }
+
+
 
 // radio 클릭 시 textarea 노출
 function toggleRadioTextArea() {
@@ -456,6 +492,8 @@ function toggleRadioTextArea() {
 		});
 	}
 }
+
+
 
 /**
  * 리뷰팝업 트랜지션 전용 스크립트
@@ -497,6 +535,8 @@ function toggleRadioTextArea() {
 	}
 }
 
+
+
 /**
  * 별점 컴포넌트 생성
  */
@@ -530,6 +570,8 @@ function setStarRating() {
 	});
 }
 
+
+
 /* 제품상세 : 리뷰 */
 function prodReviewBanner(){
     var $target = $('.photoreview_wrap .swiper-container');
@@ -559,6 +601,8 @@ function prodReviewBanner(){
         }
 	});
 }
+
+
 
 /* 베스트 리뷰 */
 function prodPickBanner(){
