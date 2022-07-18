@@ -106,11 +106,15 @@ $(function(){
     </div>
     <div class="dialog_contents" style="padding-bottom:62px;">
         <div class="selec_lb">옵션선택</div>
-        <div class="title_selec">
+        <div class="title_selec" id="tag">
             <span class="selected_option">
                 <em class="txt">디자인을 선택하세요</em><em class="selec_icon"></em>
             </span>
             <ul class="option_ul">
+                <li class="disabled"><!-- 품절일 경우 -->
+                    <span class="prod_name">01. 훈제 오리지널 10+1팩 [품절]</span>         
+                    <span class="price">12,400</span>
+                </li>
                 <li data-val="1">
                     <span class="prod_name">01. 훈제 오리지널 10+1팩</span>         
                     <span class="price">12,400</span>
@@ -137,11 +141,27 @@ $(function(){
                 </li>
             </ul>
         </div>
+        <button onclick="selReset();" class="btn_sm btn_black" style="margin:5px 0 20px 0;">초기화</button>
+<script>
+function selReset() {
+    //$('#tag .selected_option .txt').attr('data-val','');
+    $('#tag .selected_option .txt').removeAttr('data-val');
+    $('#tag .selected_option .txt').text('디자인을 선택하세요');
+    $('#tag .option_ul li').removeClass('act');
+}
+</script>
+        
         <div class="title_selec">
             <span class="selected_option"> 
                 <em class="txt">각인 서체를 선택하세요</em><em class="selec_icon"></em>
             </span>
             <ul class="option_ul">
+                <li class="disabled"><!-- 품절일 경우 -->
+                    <span class="prod_name">필기체</span>              
+                    <span class="img_type">
+                        <img src="../../images/temp/@font_sample1.svg" alt="">
+                    </span>
+                </li>
                 <li data-val="1">
                     <span class="prod_name">필기체</span>         
                     <span class="img_type">

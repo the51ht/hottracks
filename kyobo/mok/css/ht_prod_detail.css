@@ -5697,6 +5697,7 @@ button.btn_md_second {
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec .option_ul li {
+  position: relative;
   height: 50px;
   padding: 15px 14px;
   display: -webkit-box;
@@ -5714,6 +5715,7 @@ button.btn_md_second {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  overflow: hidden;
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec .option_ul li:active, .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec .option_ul li:hover {
@@ -5724,6 +5726,17 @@ button.btn_md_second {
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec .option_ul li.act {
   background-color: #f7f7f7;
+}
+
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec .option_ul li.disabled {
+  background-color: #fff;
+  color: #ccc;
+  font-weight: 400;
+}
+
+.dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec .option_ul li span {
+  position: relative;
+  z-index: 0;
 }
 
 .dialog_wrapper .ui-dialog.dialog_bottom .dialog_wrap.option_pop_wrap .dialog_contents .title_selec .option_ul .price {

@@ -370,14 +370,6 @@
 																	<li>단, 쿠폰 또는 마일리지, 통합포인트 사용 시 예상적립금이 변동될 수 있습니다.<br>(주문취소나 반품시에는 적립된 통합포인트가 다시 차감됩니다.)</li>
 																</ul>
 															</li>
-															<li class="bul_item_dot">
-																3만원이상 구매시 회원등급별 2~4% 추가적립!
-																<ul class="bul_item_line">
-																	<li>회원등급이 플래티넘, 골드, 실버 등급의 경우 추가적립 됩니다.</li>
-																	<li>추가적립은 실결제액 기준(쿠폰 및 마일리지, 통합포인트, e교환권 사용액 제외) 3만원 이상일 경우 적립됩니다.</li>
-																	<li>주문 후 취소,반품분의 통합포인트는 단품별로 회수되며, 반품으로 인해 결제잔액이 3만원 미만으로 변경될 경우 추가 통합포인트는 전액 회수될 수 있습니다.</li>
-																</ul>
-															</li>
 														</ul>
 														<!-- //bul_list -->
 													</div>
@@ -542,29 +534,23 @@
 								<!-- ht_option_list -->
 								<ul class="ht_option_list">
 									<li class="li">
-										<p class="option_msg">옵션을 선택하면, 쿠폰을 받아 결제 시 사용할 수 있어요.</p>
+										<p class="option_msg">옵션을 선택하면, 쿠폰을 받아 결제 시 사용할 수 있어요.</p><!-- 22.04.15 수정 -->
 									</li>
 									<li class="li">
 										<!-- form_sel -->
 										<div class="form_sel w_full">
-											<select id="tag">
+											<select id="aaa">
 												<option>디자인을 선택하세요</option>
 												<option>옵션 1</option>
 												<option>옵션 2</option>
-												<option>옵션 3</option>
-												<option disabled>품절일 경우 [품절]</option>
+												<option data-class="check_color">옵션 3</option>
+												<option class="disabled" disabled>품절일 경우</option>
 											</select>
 										</div>
 										<!-- //form_sel -->
-										<button onclick="selReset();" class="btn_sm btn_black" style="margin-top:5px;">초기화</button>
-									</li>
-<script>
-function selReset() {
-	$('#tag option:eq(0)').prop('selected', true);
-	$('#tag').selectmenu('refresh');
-}
-</script>
 
+										<button onclick="selReset();">초기화</button>
+									</li>
 									<li class="li">
 										<!-- form_sel -->
 										<div class="form_sel w_full">
@@ -584,6 +570,36 @@ function selReset() {
 										</div>
 										<!-- //form_sel -->
 									</li>
+<script>
+$(function(){
+	$.widget( "custom.iconselectmenu", $.ui.selectmenu, {
+		_renderItem: function( ul, item ) {
+			var li = $( "<li>" ),
+				wrapper = $( "<div>", { text: item.label } );
+			if ( item.disabled ) {
+				li.addClass( "ui-state-disabled" );
+			} else if( item.element.attr( "data-class" )){
+				li.addClass(item.element.attr( "data-class" ));
+			}
+			return li.append( wrapper ).appendTo( ul );
+		}
+	});
+
+	$('#aaa').selectmenu('destroy').iconselectmenu();
+});
+function selReset() {
+	/*$('#aaa').selectmenu('destroy');
+	$('#aaa option:eq(0)').prop('selected', true);
+	$('#aaa').selectmenu();*/
+
+
+	$('#aaa').selectmenu("index", 0);
+	//$('#aaa option:eq(0)').prop('selected', true);
+	//$('#aaa').iconselectmenu();
+}
+</script>
+										
+
 									<li class="li">
 										<!-- form_sel -->
 										<div class="form_sel w_full">
@@ -756,7 +772,7 @@ function btnSelectChk(val){
 										<!-- form_sel -->
 										<div class="form_sel w_full">
 											<!-- select_li_form -->
-											<div class="select_li_form" id="tag2">
+											<div class="select_li_form">
 												<button type="button" class="select_li_op" onclick="btnSelectLi(this);"><span>디자인을 선택하세요</span></button>
 												<!-- select_li_view -->
 												<div class="select_li_view">
@@ -800,12 +816,6 @@ function btnSelectChk(val){
 																	<strong>어반 화이트(그리드)</strong>
 																</label>
 															</li>
-															<li>
-																<input type="radio" name="selecy_li_txt" disabled>
-																<label>
-																	<strong>품절일 경우 [품절]</strong>
-																</label>
-															</li>
 														</ul>
 														<!-- //select_li_list -->
 
@@ -839,15 +849,8 @@ function btnSelectChk(val){
 											<!-- //select_li_form -->
 										</div>
 										<!-- //form_sel -->
-										<button onclick="selReset2();" class="btn_sm btn_black" style="margin-top:5px;">초기화2</button>
 									</li>
 									<!-- //22.04 각인서비스 추가 -->
-<script>
-function selReset2() {
-	$('#tag2 input').prop('checked', false);
-	$('#tag2 .select_li_op span').text('디자인을 선택하세요');
-}
-</script>
 
 									<li class="li">
 										<!-- custom_scroll_wrap : .sc_option -->
