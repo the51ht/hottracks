@@ -2053,6 +2053,7 @@ function cusFaqBanner(){
             observeParents: true,
             slidesPerView: 4,
             slidesPerGroup: 4,
+            loopFillGroupWithBlank : true,
             loop: true,
             loopsSlide: 1,
             speed: 1000,
