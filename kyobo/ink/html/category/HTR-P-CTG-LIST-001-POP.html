@@ -207,20 +207,34 @@ $(function(){
 
 
 <script>
-//부모 탭 tabTy 함수와 충돌되어서  tabSubTy로 컨트롤
 $(function(){
 	$.fn.tabSubTy = function(){
-			$.each(this, function(i,v){
+		$.each(this, function(i,v){
 			$(v).closest('.tab_sub_link').find('a').removeClass('on');
 			$(v).addClass('on');
 			var s = $(v).attr('href');
 			$(s).parent().find('.pen_cont').removeClass('on');
 			$(s).addClass('on');
-
 		});
 	};
 	$('.tab_sub_link a').click(function(){    
 		$(this).tabSubTy();
+		$('.pop_cont_inner').find('.simplebar-content-wrapper').stop().animate({scrollTop:0}, 100);
+		return false;
+	});
+
+	$.fn.tabTitTy = function(){
+		$.each(this, function(i,v){
+			$(v).closest('.tab_menu_a').find('a').removeClass('on');
+			$(v).addClass('on');
+			var s = $(v).attr('href');
+            $(s).parent().find('.tab_cont').removeClass('on');
+			$(s).addClass('on');
+		});
+	};
+	$('.pen_pop_wrap .tab_menu_a a').click(function(){    
+		$(this).tabTitTy();
+		$('.pop_cont_inner').find('.simplebar-content-wrapper').stop().animate({scrollTop:0}, 100);
 		return false;
 	});
 })
@@ -238,7 +252,7 @@ $(function(){
     <!-- dialog_contents -->
     <div class="dialog_contents pen_pop_wrap">
         <!-- tab_menu_a -->
-		<div class="tab_menu_a tab_link">
+		<div class="tab_menu_a">
             <a href="#t01" class="on">만년필 브랜드 스토리</a><!-- 활성화 class="on" -->
             <a href="#t02">만년필 사용법</a>
             <a href="#t03">각인 서비스</a>
