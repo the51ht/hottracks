@@ -1368,6 +1368,7 @@ function musSpecial(){
         speed: 700,
     };
 
+    $parent.removeClass('swiper-on');
     if($parent.find('.swiper-slide').length > 3) {
         musSpecialSwiper = new Swiper($target.get(), slideOption);
         $parent.addClass('swiper-on');
