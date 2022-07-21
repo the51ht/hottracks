@@ -399,12 +399,18 @@
 
 /*** 모듈 011 영역 (rullet) ***/
  .rullet_wrap {
-    position:relative;
+    position:relative;background:center/cover no-repeat;min-height:94.6vw;
     &>img {
         width:100%;
     }
+    .bg_img {
+        position:relative;text-align:center;
+        img {
+			width:100%;opacity:0;
+        }
+    }
 	.rullet {
-		position:absolute;left:50%;top:50%;width:84%;transform:translate(-50%, -50%);
+		position:absolute;left:50%;top:50%;width:84%;border-radius:50%;box-shadow:8px 10px 12px rgba(0,0,0,0.16);transform:translate(-50%, -50%);
 	}
     .rullet_circle {
        position:relative;
@@ -422,7 +428,11 @@
         position:absolute;left:50%;bottom:7%;width:45%;height:50px;transform:translateX(-50%);
     }
 }
-
+@media only screen and (min-width:750px) {
+	.rullet_wrap {
+        min-height:710px;
+    }
+}
 
 
 /*** 모듈 012 영역 (calender) ***/

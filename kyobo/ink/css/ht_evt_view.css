@@ -635,19 +635,30 @@
 
 /* rullet_wrap */
 .rullet_wrap {
-  padding: 124px 0 136px 0;
+  position: relative;
+  min-height: 670px;
   background: center no-repeat;
 }
 .rullet_wrap > img {
   width: 100%;
 }
-.rullet_wrap .rullet {
+.rullet_wrap .bg_img {
   position: relative;
+  text-align: center;
+}
+.rullet_wrap .bg_img img {
+  opacity: 0;
+}
+.rullet_wrap .rullet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   width: 600px;
   height: 600px;
   margin: 0 auto;
   border-radius: 50%;
   box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.16);
+  transform: translate(-50%, -50%);
 }
 .rullet_wrap .rullet_circle {
   width: 600px;

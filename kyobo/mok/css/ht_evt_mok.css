@@ -686,15 +686,27 @@ $imgUrl : "../images/";*/
 /*** 모듈 011 영역 (rullet) ***/
 .rullet_wrap {
   position: relative;
+  background: center/cover no-repeat;
+  min-height: 94.6vw;
 }
 .rullet_wrap > img {
   width: 100%;
+}
+.rullet_wrap .bg_img {
+  position: relative;
+  text-align: center;
+}
+.rullet_wrap .bg_img img {
+  width: 100%;
+  opacity: 0;
 }
 .rullet_wrap .rullet {
   position: absolute;
   left: 50%;
   top: 50%;
   width: 84%;
+  border-radius: 50%;
+  box-shadow: 8px 10px 12px rgba(0, 0, 0, 0.16);
   transform: translate(-50%, -50%);
 }
 .rullet_wrap .rullet_circle {
@@ -723,6 +735,11 @@ $imgUrl : "../images/";*/
   transform: translateX(-50%);
 }
 
+@media only screen and (min-width: 750px) {
+  .rullet_wrap {
+    min-height: 710px;
+  }
+}
 /*** 모듈 012 영역 (calender) ***/
 .calender_wrap {
   position: relative;
