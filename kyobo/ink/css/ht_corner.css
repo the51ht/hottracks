@@ -781,12 +781,18 @@
   padding: 0px;
   background: none;
 }
+.gft_slide_view.len4 .evt_products .prod_item {
+  -webkit-animation: wel_prod2 both 0.4s;
+          animation: wel_prod2 both 0.4s;
+}
 .gft_slide_view.len2 {
   margin-top: 40px;
 }
 .gft_slide_view.len2 .evt_products .prod_item {
   width: calc(50% - 36px);
   margin: 40px 18px 0 18px;
+  -webkit-animation: wel_prod2 both 0.4s;
+          animation: wel_prod2 both 0.4s;
 }
 .gft_slide_view .prod_item:nth-child(10n+1) {
   -webkit-animation-delay: 0.2s !important;
@@ -842,6 +848,26 @@
   0% {
     opacity: 0;
     transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes wel_prod2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes wel_prod2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
   }
   100% {
     opacity: 1;

@@ -3560,11 +3560,12 @@ $imgUrl : "../images/";*/
 }
 .liv_detail .img img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: auto;
-  transform: translate(-50%, -50%);
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .liv_detail .liv_timeline_marker {
   margin: 0;
@@ -4238,9 +4239,15 @@ $imgUrl : "../images/";*/
 .gft_slide_view.len3 .prod_list .txt {
   display: none;
 }
+.gft_slide_view.len2 .prod_list .li {
+  -webkit-animation: wel_prod2 both 0.4s;
+          animation: wel_prod2 both 0.4s;
+}
 .gft_slide_view.len1 .prod_list .li {
   width: calc(100% - 20px);
   margin: 20px 10px 0 10px;
+  -webkit-animation: wel_prod2 both 0.4s;
+          animation: wel_prod2 both 0.4s;
 }
 .gft_slide_view li:nth-child(10n+1) {
   -webkit-animation-delay: 0.2s !important;

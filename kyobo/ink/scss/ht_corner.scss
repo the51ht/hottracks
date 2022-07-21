@@ -527,13 +527,16 @@
         }
         .evt_products {
             margin:0px -18px 0 -18px;padding:0px;background:none;
+            .prod_item {
+                animation:wel_prod2 both 0.4s;
+            }
         }
     }
     &.len2 {
         margin-top:40px;
         .evt_products {
             .prod_item {
-                width:calc(50% - 36px);margin:40px 18px 0 18px;
+                width:calc(50% - 36px);margin:40px 18px 0 18px;animation:wel_prod2 both 0.4s;
             }
         }
     }
@@ -571,6 +574,10 @@
     }
     @keyframes wel_prod {
         0% {opacity:0;transform:scale(0.5);}
+        100% {opacity:1;transform:scale(1);}
+    }
+    @keyframes wel_prod2 {
+        0% {opacity:0;transform:scale(0.95);}
         100% {opacity:1;transform:scale(1);}
     }
 }
