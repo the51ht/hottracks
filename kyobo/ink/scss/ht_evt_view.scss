@@ -43,7 +43,7 @@
         display:inline-block;width:35px;height:35px;margin-bottom:-8px;margin-left:5px;background:url('#{$imgUrl}guide/hotdeal_shine.svg') center/32px no-repeat;
     }
     .timer_area {
-        display:inline-block;position:absolute;right:0;top:-4px;padding:14px 9px 9px 48px;background-color:#d4ff1a;border-radius:35px;z-index:1;
+        display:inline-block;position:absolute;right:0;top:-4px;min-width:154px;padding:14px 0 9px 48px;background-color:#d4ff1a;border-radius:35px;box-sizing:border-box;z-index:1;
         &:before {
             position:absolute;left:7px;top:-23px;width:62px;height:65px;background:url('#{$imgUrl}guide/timer_bomb.svg') center/61px no-repeat;content:"";z-index:2;
         }
@@ -261,13 +261,13 @@
 .mdl001 {
     padding:20px 0 30px 0;background:#fff;font-size:14px;line-height:22px;z-index:9;
     .sub_tit {
-        margin-bottom:8px;color:#767676;font-weight:700;
+        margin-bottom:8px;padding-right:110px;color:#767676;font-weight:700;
     }
     .ht_tit03 {
-        text-indent:-2px;
+        padding-right:110px;text-indent:-2px;
     }
     .period {
-        margin-top:4px;
+        margin-top:4px;padding-right:80px;
     }
     .box_circle {
         position:absolute;right:0;top:0;
