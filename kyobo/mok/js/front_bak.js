@@ -468,7 +468,8 @@ KyoboHottracks.mok = KyoboHottracks.mok || (function () {
 						// 팝업 닫기 시, 기존 스크롤 위치로 이동위해 현재 스크롤값 저장(상단 이동 막기)
 						if($('.ui-dialog-content:visible').length === 0){
 							var scrollTop = $(document).scrollTop();
-							$('body').css({'top': (scrollTop * -1),}).addClass('dialog_open');
+							//$('body').css({'top': (scrollTop * -1),}).addClass('dialog_open'); // 22.07 HT 삭제
+							$('body').addClass('dialog_open');
 						}
 
 						// 팝업 2개 이상 노출 시 z-index 지정(팝업 위 팝업 미구현시 삭제)
@@ -500,7 +501,7 @@ KyoboHottracks.mok = KyoboHottracks.mok || (function () {
 						// 팝업 닫기 시, 기존 스크롤 위치로 이동(상단 이동 막기)
 						if( $('.ui-dialog-content:visible' ).length === 0 ) {
 							$(containerId).removeClass('dialog_open').removeAttr('style');
-							$(window).scrollTop(parseInt(scrollTopPos) * -1);
+							//$(window).scrollTop(parseInt(scrollTopPos) * -1);  // 22.07 HT 삭제
 						}
 					},
 				});
