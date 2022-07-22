@@ -1095,7 +1095,7 @@ KyoboBookPub.ink = (function () {
 
 				selectMenuOption = {};
 				selectClass = '';
-				selectPosition = {my: 'left top', at: 'left bottom'};
+				selectPosition = {my: 'left top', at: 'left bottom', collision: 'none'};
 
 				if (isArwType){
 					selectPosition = {my: 'right top+6', at: 'right bottom'};
