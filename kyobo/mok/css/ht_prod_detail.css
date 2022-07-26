@@ -5366,15 +5366,6 @@ button.btn_md_second {
   background-color: #eaeaea;
   content: "";
 }
-.multi_review_area .review_reply > .byte_check_wrap.hidden {
-  margin: 7px 4px 0 4px;
-}
-.multi_review_area .review_reply > .byte_check_wrap.hidden .reply_list_item:first-child {
-  margin-top: 0px;
-}
-.multi_review_area .review_reply > .byte_check_wrap .reply_list_item:first-child {
-  margin-top: 12px;
-}
 .multi_review_area .byte_check_wrap + .reply_list {
   margin-top: 20px;
 }
@@ -5382,6 +5373,15 @@ button.btn_md_second {
   margin-top: 0;
   padding-top: 12px;
   border-top: 1px solid #eaeaea;
+}
+.multi_review_area .byte_check_wrap.hidden {
+  margin: 7px 4px 0 4px;
+}
+.multi_review_area .byte_check_wrap.hidden + ul[class^=reply_list] .reply_list_item:first-child {
+  margin-top: 0px;
+}
+.multi_review_area .byte_check_wrap + ul[class^=reply_list] .reply_list_item:first-child {
+  margin-top: 12px;
 }
 .multi_review_area .byte_check_wrap {
   transition: border 0.4s;
