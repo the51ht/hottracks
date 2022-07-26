@@ -5366,6 +5366,9 @@ button.btn_md_second {
   background-color: #eaeaea;
   content: "";
 }
+.multi_review_area .review_reply > .byte_check_wrap.hidden {
+  margin: 6px 4px 0 4px;
+}
 .multi_review_area .byte_check_wrap + .reply_list {
   margin-top: 20px;
 }
@@ -5374,10 +5377,10 @@ button.btn_md_second {
   padding-top: 12px;
   border-top: 1px solid #eaeaea;
 }
-.multi_review_area .byte_check_wrap:not([style*="display:none"]):not([style*="display:none"]) + .reply_list {
+.multi_review_area .byte_check_wrap:not([style*="display:none"]):not([style*="display:none"]) + ul[class^=reply_list] {
   margin-top: 12px;
 }
-.multi_review_area .byte_check_wrap:not([style*="display:none"]):not([style*="display:none"]) + .reply_list .reply_list_item:first-child {
+.multi_review_area .byte_check_wrap:not([style*="display:none"]):not([style*="display:none"]) + ul[class^=reply_list] .reply_list_item:first-child {
   padding-top: 0;
   border: 0;
 }

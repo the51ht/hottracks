@@ -3268,6 +3268,9 @@ button.btn_md_second {
             &:before {
                 position:absolute;left:-4px;top:-13px;width:calc(100% + 8px);height:1px;background-color:#eaeaea;content:"";
             }
+            &.hidden{
+                margin:6px 4px 0 4px;
+            }
         }
     }
     .byte_check_wrap + .reply_list {
@@ -3277,7 +3280,7 @@ button.btn_md_second {
             
         }
     }
-    .byte_check_wrap:not([style*="display:none"]):not([style*="display:none"]) + .reply_list {
+    .byte_check_wrap:not([style*="display:none"]):not([style*="display:none"]) + ul[class^=reply_list] {
         margin-top:12px;
         .reply_list_item {
             &:first-child {
