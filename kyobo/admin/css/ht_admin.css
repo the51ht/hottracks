@@ -932,7 +932,6 @@ div.cate-list + select {
 #body div.list-type table.table {
   border-top: 1px solid #202020;
   border-bottom: 0;
-  table-layout: fixed;
 }
 #body div.list-type table.table thead tr th {
   color: #767676;
@@ -1078,10 +1077,6 @@ div.cate-list + select {
 }
 #body div table.table tbody tr p img {
   margin-bottom: 2px;
-  width: 100% !important;
-  height: 100% !important;
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
 }
 
 #contents-area .list-type table {
@@ -1124,6 +1119,18 @@ table span.button a, table span.button button, table span.button input {
   box-sizing: border-box !important;
   font-family: Roboto, "Noto Sans KR" !important;
   line-height: 26px !important;
+}
+
+select[name=moduleId] + span.button + span.button[style*="float:right;"] a {
+  color: #fff;
+  background: #000 !important;
+  border-radius: 6px;
+  padding: 0 15px !important;
+  line-height: 36px !important;
+  height: 36px !important;
+  border: 1px solid #000 !important;
+  margin-left: 5px !important;
+  font-weight: 700;
 }
 
 h4 + select {
@@ -1726,6 +1733,10 @@ table#eventMasterlist tbody tr.tgt {
 /* 추가 부분 */
 #body div.list-type.btn_type table.table tbody tr td {
   padding: 5px !important;
+}
+
+#body div.list-type.btn_type table.table {
+  table-layout: fixed;
 }
 
 #body div.list-type.btn_type table.table tbody tr td .button {

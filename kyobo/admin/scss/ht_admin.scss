@@ -557,7 +557,7 @@ div.cate-list + select {
 
 
 #body div.list-type table.table {
-    border-top: 1px solid #202020;border-bottom: 0;table-layout:fixed; // 수정
+    border-top: 1px solid #202020;border-bottom: 0;
     thead tr {
         th{
             color: #767676;font-weight: 500;padding: 15px 0; border-bottom:1px solid #D5D5D5; border-top: 1px solid #202020;  //수정
@@ -653,7 +653,7 @@ div.cate-list + select {
         }
         p{
             img{
-                margin-bottom: 2px;width: 100%!important;height: 100%!important;object-fit: cover!important;
+                margin-bottom: 2px;
             }
         }
     }
@@ -686,7 +686,9 @@ table {
         height:30px !important;padding:0 10px !important;background:#fff !important;border:1px solid #000 !important;border-radius:5px;;box-sizing:border-box !important;font-family: Roboto,"Noto Sans KR" !important;line-height:26px !important;
     }
 }
-
+select[name="moduleId"] + span.button + span.button[style*="float:right;"] a{
+    color: #fff;background: #000 !important;border-radius: 6px;padding: 0 15px !important;line-height: 36px !important;height: 36px !important;border: 1px solid #000 !important;margin-left: 5px !important;font-weight: 700;
+}
 h4 + select{
     margin-bottom: 14px !important;
 }
@@ -1028,6 +1030,9 @@ table#eventMasterlist tbody tr.tgt {
 /* 추가 부분 */
 #body div.list-type.btn_type table.table tbody tr td {
     padding:5px !important;
+}
+#body div.list-type.btn_type table.table  {
+    table-layout:fixed;
 }
 #body div.list-type.btn_type table.table tbody tr td .button {
     height:auto !important;
