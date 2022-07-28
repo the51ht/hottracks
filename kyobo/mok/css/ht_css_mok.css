@@ -11672,7 +11672,7 @@ body:before {
   position: relative;
   min-height: 64px;
   margin: 32px 20px 4px 20px;
-  padding: 8px 65px;
+  padding: 8px 50px;
   background: linear-gradient(-45deg, #936dfc, #fa9BF5 40%, #fa9BF5 50%, #936dfc);
   border-radius: 8px;
   box-sizing: border-box;
@@ -11708,6 +11708,13 @@ body:before {
 .all_menu_banner p {
   position: relative;
   padding-top: 4px;
+}
+.all_menu_banner p span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 @-webkit-keyframes visual_txt {

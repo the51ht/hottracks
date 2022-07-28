@@ -1145,7 +1145,7 @@ body {
 
 /*** all_menu_banner ***/
 .all_menu_banner {
-    display:flex;width:calc(100% - 40px);justify-content:center;align-items:center;position:relative;min-height:64px;margin:32px 20px 4px 20px;padding:8px 65px;background:linear-gradient(-45deg, #936dfc, #fa9BF5 40%, #fa9BF5 50%, #936dfc);border-radius:8px;box-sizing:border-box;color:#fff;font-size:14px;font-weight:700;line-height:22px;text-align:center;word-wrap:break-word;word-break:keep-all;white-space:normal;animation:visual_txt both infinite 6s;
+    display:flex;width:calc(100% - 40px);justify-content:center;align-items:center;position:relative;min-height:64px;margin:32px 20px 4px 20px;padding:8px 50px;background:linear-gradient(-45deg, #936dfc, #fa9BF5 40%, #fa9BF5 50%, #936dfc);border-radius:8px;box-sizing:border-box;color:#fff;font-size:14px;font-weight:700;line-height:22px;text-align:center;word-wrap:break-word;word-break:keep-all;white-space:normal;animation:visual_txt both infinite 6s;
     &:before {
         position:absolute;left:13px;top:-18px;width:63px;height:72px;background:url('#{$imgUrl}guide/ico_all_menu_banner03.svg') center/100% no-repeat;content:"";
     }
@@ -1154,6 +1154,9 @@ body {
     }
     p {
         position:relative;padding-top:4px;
+        span{
+            overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;
+        }
     }
 }
 
