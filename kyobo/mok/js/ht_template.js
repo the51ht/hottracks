@@ -692,18 +692,14 @@ $(function(){
 	function resizeBox(){
 		function scrollEvent() {
 		 	var locS =  $(window).scrollTop();
-            var locA0 = $('.wel_category_tab').offset().top - $('.main_menu_wrap').height() - 261;
-            var locA1 = $('.wel_category_tab').offset().top - $('.main_menu_wrap').height() - 61;
+            var locA1 = $('.wel_category_tab').offset().top - $('.main_menu_wrap').height() - 15
 
-            if( locS < locA0) {
-                $('.sticky_tab a').eq(0).removeClass('on');
-            } else if (locS >= locA0, locS < locA1){
-                $('.wel_category_tab').removeClass('on');
-                $('.sticky_tab a').removeClass('on');
-                $('.sticky_tab a').eq(0).addClass('on');
-            } else {
+            if(locS > locA1){
                 $('.wel_category_tab').addClass('on');
+            } else {
+                $('.wel_category_tab').removeClass('on');
             }
+            $('.sticky_tab a').eq(0).addClass('on');
 		}
 		$(window).scroll(function() {
 			scrollEvent();
